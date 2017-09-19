@@ -1,0 +1,177 @@
+# Materialist
+fallen_empire_1 = {
+	graphical_culture = "fallen_empire_02"
+	initializer = "fallen_1_1"
+	
+	create_country_effect = {
+		create_species = {
+			name = random
+			class = random
+			portrait = random
+			traits = random
+			extra_trait_points = 2
+			allow_negative_traits = no
+		}
+		create_country = {
+			name = random
+			type = fallen_empire
+			ignore_initial_colony_error = yes
+			authority = random
+			civics = {
+				civic = civic_lethargic_leadership
+				civic = civic_empire_in_decline
+			}
+			species = last_created
+			ethos = {
+				ethic = ethic_fanatic_materialist
+			}
+			flag = random
+			effect = {
+				set_country_flag = fallen_empire_1	
+				add_minerals = 5000
+				add_energy = 5000		
+				# must initialize global designs here
+				add_global_ship_design = "NAME_Alpha"
+				add_global_ship_design = "NAME_Beta"
+				add_global_ship_design = "NAME_Gamma"
+				add_global_ship_design = "NAME_Theta"
+				add_global_ship_design = "NAME_Tau"
+				add_global_ship_design = "NAME_Omega"
+				add_global_ship_design = "NAME_Sigma"			
+			}
+		}
+	}
+}
+# Spiritualist
+fallen_empire_2 = {
+	graphical_culture = "fallen_empire_01"
+	initializer = "fallen_2"
+	
+	create_country_effect = {
+		create_species = {
+			name = random
+			class = random
+			portrait = random
+			traits = random
+			extra_trait_points = 2
+			allow_negative_traits = no
+		}
+		create_country = {
+			name = random
+			type = fallen_empire
+			ignore_initial_colony_error = yes
+			authority = random
+			civics = {
+				civic = civic_lethargic_leadership
+				civic = civic_empire_in_decline
+			}
+			species = last_created
+			ethos = {
+				ethic = ethic_fanatic_spiritualist
+			}			
+			flag = random
+			effect = {
+				set_country_flag = fallen_empire_2
+				add_minerals = 5000
+				add_energy = 5000								
+				# must initialize global designs here
+				add_global_ship_design = "NAME_Eternal"
+				add_global_ship_design = "NAME_Avatar"
+				add_global_ship_design = "NAME_Zealot"
+				add_global_ship_design = "NAME_Penitent"
+				add_global_ship_design = "NAME_Bulwark"
+				add_global_ship_design = "NAME_Faith"
+				add_global_ship_design = "NAME_Pilgrim"
+			}
+		}
+	}
+}
+# Xenophile
+fallen_empire_3 = {
+	graphical_culture = "fallen_empire_03"
+	initializer = "fallen_3"
+	
+	create_country_effect = {
+		create_species = {
+			name = random
+			class = random
+			portrait = random
+			traits = random
+			extra_trait_points = 2
+			allow_negative_traits = no
+		}
+		create_country = {
+			name = random
+			type = fallen_empire
+			ignore_initial_colony_error = yes
+			authority = random
+			civics = {
+				civic = civic_lethargic_leadership
+				civic = civic_empire_in_decline
+			}
+			species = last_created
+			ethos = {
+				ethic = ethic_fanatic_xenophile
+			}			
+			flag = random
+			effect = {
+				set_country_flag = fallen_empire_3
+				add_minerals = 5000
+				add_energy = 5000								
+				# must initialize global designs here
+				add_global_ship_design = "NAME_Keeper"
+				add_global_ship_design = "NAME_Custodian"
+				add_global_ship_design = "NAME_Warden"
+				add_global_ship_design = "NAME_Watcher"
+				add_global_ship_design = "NAME_Sentinel"
+				add_global_ship_design = "NAME_Seeder"
+				add_global_ship_design = "NAME_Builder"
+			}
+		}
+	}
+}
+# Xenophobe
+fallen_empire_4 = {
+	graphical_culture = "fallen_empire_04"
+	initializer = "fallen_4"
+	
+	create_country_effect = {
+		create_species = {
+			name = random
+			class = random
+			portrait = random
+			traits = random
+			extra_trait_points = 2
+			allow_negative_traits = no
+			effect = { save_global_event_target_as = fallen_4_species }
+		}
+		create_country = {
+			name = random
+			type = fallen_empire
+			ignore_initial_colony_error = yes
+			authority = random
+			civics = {
+				civic = civic_lethargic_leadership
+				civic = civic_empire_in_decline
+			}
+			species = last_created
+			ethos = {
+				ethic = ethic_fanatic_xenophobe
+			}			
+			flag = random
+			effect = {
+				set_country_flag = fallen_empire_4
+				add_minerals = 5000
+				add_energy = 5000						
+				# must initialize global designs here
+				add_global_ship_design = "NAME_Imperium"
+				add_global_ship_design = "NAME_Supremacy"
+				add_global_ship_design = "NAME_Glory"
+				add_global_ship_design = "NAME_Reaper"
+				add_global_ship_design = "NAME_Devastator"
+				add_global_ship_design = "NAME_Servitor"
+				add_global_ship_design = "NAME_Destiny"				
+			}
+		}
+	}
+}

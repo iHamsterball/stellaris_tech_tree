@@ -1,0 +1,105 @@
+
+@cost = 56
+
+tr_discovery_adopt = {
+	cost = { unity = @cost }
+	modifier = {
+		shipsize_research_station_build_cost_mult = -0.33
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 5
+			years_passed < 10
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_materialist
+		}			
+	}
+}
+
+tr_discovery_finish = {
+	modifier = {
+		all_technology_research_speed = 0.10
+		ascension_perks_add = 1
+	}
+}
+
+tr_discovery_to_boldly_go = {
+	cost = { unity = @cost }
+	modifier = {
+		ship_anomaly_fail_risk = -0.10
+		ship_anomaly_generation_chance_mult = 0.15
+	}
+	
+	ai_weight = {
+		factor = 5000	# AI should prefer this one first, more useful early
+	}
+}
+
+tr_discovery_planetary_survey_corps = {
+	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_discovery_to_boldly_go
+	}
+	# Bonus implementation see action.54.
+	
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_discovery_science_division = {
+	cost = { unity = @cost }
+	modifier = {
+		leader_scientist_influence_cost = -0.33
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_discovery_polytechnic_education = {
+	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_discovery_science_division
+	}
+	
+	on_enabled = {
+		every_owned_leader = {
+			add_skill = 1
+		}
+		every_pool_leader = {
+			add_skill = 1
+		}
+	}
+	
+	modifier = {
+		leader_skill_levels = 1
+	}
+	
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_discovery_faith_in_science = {
+	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_discovery_polytechnic_education
+	}
+	on_enabled = {
+		set_country_flag = faith_in_science
+	}
+	
+	ai_weight = {
+		factor = 5000
+	}
+}
