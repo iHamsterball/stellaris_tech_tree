@@ -11,7 +11,7 @@ import codecs
 import json
 import operator
 import re
-import ruamel.yaml as yaml
+import yaml
 import sys
 from game_objects import Army, ArmyAttachment, BuildablePop, Building, \
     Component, Edict, Policy, Resource, SpaceportModule, Technology, \
@@ -197,17 +197,17 @@ def localized_strings():
                 if len(quote_instances) > 2:
                     second = quote_instances[1]
                     line = line[0:second] \
-                           + line[second:last].replace(u'"', ur'\"') \
+                           + line[second:last].replace(u'"', r'\"') \
                            + line[last:]
 
             not_yaml += line
 
-        still_not_yaml = re.sub(ur'£\w+  |§[A-Z!]', '', not_yaml)
+        still_not_yaml = re.sub(r'£\w+  |§[A-Z!]', '', not_yaml)
         resembles_yaml = re.sub(r'(?<=\w):\d (?=")', ': ', still_not_yaml)
         actual_yaml = re.sub(r'^[ \t]+', '  ', resembles_yaml, flags=re.M)
 
         file_data = yaml.load(actual_yaml, Loader=yaml.Loader)
-        loc_map = file_data['l_english']
+        loc_map = file_data['l_polish']
         loc_data.update(loc_map)
 
     return loc_data
@@ -267,11 +267,11 @@ for directory in directories:
     tile_blocker_file_paths = get_file_paths(tile_blocker_file_paths,
                                                  tile_blocker_dir)
 
-    loc_dir = path.join(directory, 'localisation/english')
+    loc_dir = path.join(directory, 'localisation/polish')
     loc_file_paths += [path.join(loc_dir, filename) for filename
                        in listdir(loc_dir)
                        if path.isfile(path.join(loc_dir, filename))
-                       and filename.endswith('l_english.yml')
+                       and filename.endswith('l_polish.yml')
                        and not has_skip_term.search(filename)]
 
 loc_data = localized_strings()
@@ -316,49 +316,49 @@ parsed_scripts = {
 }
 
 armies = [Army(entry, loc_data) for entry in parsed_scripts['army']
-          if not entry.keys()[0].startswith('@')]
+          if not next(iter(entry)).startswith('@')]
 army_attachments = [ArmyAttachment(entry, loc_data)
                     for entry
                     in parsed_scripts['army_attachment']
-                    if not entry.keys()[0].startswith('@')]
+                    if not next(iter(entry)).startswith('@')]
 buildable_pops = [BuildablePop(entry, loc_data)
                   for entry
                   in parsed_scripts['buildable_pop']
-                  if not entry.keys()[0].startswith('@')]
+                  if not next(iter(entry)).startswith('@')]
 buildings = [Building(entry, loc_data)
              for entry
              in parsed_scripts['building']
-             if not entry.keys()[0].startswith('@')]
-components = [Component(entry.values()[0], loc_data)
+             if not next(iter(entry)).startswith('@')]
+components = [Component(next(iter(entry.values())), loc_data)
               for entry
               in parsed_scripts['component']
-              if not entry.keys()[0].startswith('@')]
-edicts = [Edict(entry.values()[0], loc_data)
+              if not next(iter(entry)).startswith('@')]
+edicts = [Edict(next(iter(entry.values())), loc_data)
           for entry
           in parsed_scripts['edict']
-          if not entry.keys()[0].startswith('@')]
+          if not next(iter(entry)).startswith('@')]
 policies = [Policy(entry, loc_data)
             for entry
             in parsed_scripts['policy']
-            if not entry.keys()[0].startswith('@')]
+            if not next(iter(entry)).startswith('@')]
 resources = [Resource(entry, loc_data)
              for entry
              in parsed_scripts['resource']
-             if not entry.keys()[0].startswith('@')]
+             if not next(iter(entry)).startswith('@')]
 spaceport_modules = [SpaceportModule(entry, loc_data)
                      for entry
                      in parsed_scripts['spaceport_module']
-                     if not entry.keys()[0].startswith('@')]
+                     if not next(iter(entry)).startswith('@')]
 tile_blockers = [TileBlocker(entry, loc_data)
                  for entry
                  in parsed_scripts['tile_blocker']
-                 if not entry.keys()[0].startswith('@')]
+                 if not next(iter(entry)).startswith('@')]
 at_vars = {}
 technologies = []
 
 for entry in parsed_scripts['technology']:
-    if entry.keys()[0].startswith('@'):
-        at_var = entry.keys()[0]
+    if next(iter(entry)).startswith('@'):
+        at_var = next(iter(entry))
         at_vars[at_var] = entry[at_var]
         continue
 

@@ -6,14 +6,14 @@ class Component:
 
     def _key(self, component_data):
         return next(iter(
-            subkey for subkey in component_data if subkey.keys()[0] == 'key'
+            subkey for subkey in component_data if list(subkey)[0] == 'key'
         ))['key']
 
     def _prerequisites(self, component_data):
         try:
             prerequisites = next(iter(
                 subkey for subkey in component_data
-                if subkey.keys()[0] == 'prerequisites'
+                if list(subkey)[0] == 'prerequisites'
             ))['prerequisites']
         except (StopIteration):
             prerequisites = []

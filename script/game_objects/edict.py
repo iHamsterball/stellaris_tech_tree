@@ -6,14 +6,14 @@ class Edict:
 
     def _name(self, edict_data):
         return next(iter(
-            subkey for subkey in edict_data if subkey.keys()[0] == 'name'
+            subkey for subkey in edict_data if list(subkey)[0] == 'name'
         ))['name']
 
     def _prerequisites(self, edict_data):
         try:
             prerequisites = next(iter(
                 subkey for subkey in edict_data
-                if subkey.keys()[0] == 'prerequisites'
+                if list(subkey)[0] == 'prerequisites'
             ))['prerequisites']
         except (StopIteration):
             prerequisites = []
