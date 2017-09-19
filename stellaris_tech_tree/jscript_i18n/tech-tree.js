@@ -70,7 +70,7 @@ $(document).ready(function() {
 });
 
 function generateTechTree(locale, version) {
-  $.getJSON('/techs?locale=' + locale + '&version=' + version, 'techs.json', function(techData) {
+  $.getJSON('techs?locale=' + locale + '&version=' + version, 'techs.json', function(techData) {
     let techs = techData.filter(function(tech) {
       return Object.keys(tech)[0].search(/^@\w+$/) == -1;
     }).map(function(tech) {
