@@ -3,7 +3,7 @@ import sys
 
 class Policy:
     def __init__(self, policy, loc_data):
-        self.key = policy.keys()[0]
+        self.key = list(policy)[0]
         self.name = loc_data.get('policy_' + self.key, self.key)
         self._loc_data = loc_data
 
@@ -13,7 +13,7 @@ class Policy:
     def _options(self, policy_data, loc_data):
         return [Option(entry['option'], loc_data)
                 for entry in policy_data
-                if entry.keys()[0] == 'option']
+                if list(entry)[0] == 'option']
 
 
 class Option:
@@ -24,7 +24,7 @@ class Option:
 
     def _name(self, option_data, loc_data):
         unlocalized = next(iter(
-            subkey for subkey in option_data if subkey.keys()[0] == 'name'
+            subkey for subkey in option_data if list(subkey)[0] == 'name'
         ))['name']
 
         return loc_data[unlocalized]
@@ -33,7 +33,7 @@ class Option:
         try:
             prerequisites = next(iter(
                 subkey for subkey in option_data
-                if subkey.keys()[0] == 'prerequisites'
+                if list(subkey)[0] == 'prerequisites'
             ))['prerequisites']
         except (StopIteration):
             prerequisites = []

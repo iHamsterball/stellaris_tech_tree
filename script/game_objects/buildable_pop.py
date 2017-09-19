@@ -2,7 +2,7 @@ import re
 
 class BuildablePop:
     def __init__(self, buildable_pop, loc_data):
-        self.key = buildable_pop.keys()[0]
+        self.key = list(buildable_pop)[0]
 
         def localize(string):
             localized = loc_data[string] if type(string) is str \
@@ -22,7 +22,7 @@ class BuildablePop:
         try:
             prerequisites = next(iter(
                 subkey for subkey in buildable_pop_data
-                if subkey.keys()[0] == 'prerequisites'
+                if list(subkey)[0] == 'prerequisites'
             ))['prerequisites']
         except (StopIteration):
             prerequisites = []

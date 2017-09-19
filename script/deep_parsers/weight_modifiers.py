@@ -2,7 +2,7 @@
 
 from pprint import pprint
 import re
-import ruamel.yaml as yaml
+import yaml
 import sys
 
 localization_map = {}
@@ -16,15 +16,15 @@ def parse(modifier, loc_data):
 
     try:
         factor = next(iter(key for key in modifier
-                           if key.keys()[0] == 'factor'))['factor']
+                           if list(key)[0] == 'factor'))['factor']
         adjustment = _localize_factor(factor)
     except StopIteration:
         add = next(iter(line for line in modifier
-                        if line.keys()[0] == 'add'))['add']
+                        if list(line)[0] == 'add'))['add']
         adjustment = _localize_add(add)
 
     unparsed_conditions = [line for line in modifier \
-                           if line.keys()[0] not in ['factor', 'add']]
+                           if list(line)[0] not in ['factor', 'add']]
     if len(unparsed_conditions) > 1:
         unparsed_conditions = [{'AND': unparsed_conditions}]
 
@@ -34,14 +34,13 @@ def parse(modifier, loc_data):
 
     yaml_output = yaml.dump({adjustment: conditions}, indent=4,
                             default_flow_style=False,
-                            allow_unicode=True).decode('utf-8')
-    pseudo_yaml = re.sub(ur'(\xd7[\d.]+):\n\s*- ', r'(\1)',
+                            allow_unicode=True)
+    pseudo_yaml = re.sub(r'(\xd7[\d.]+):\n\s*- ', r'(\1)',
                          yaml_output).replace('- ', u'• ')
     return pseudo_yaml
 
-
 def _parse_condition(condition):
-    key = condition.keys()[0]
+    key = next(iter(condition))
     value = condition[key]
     return globals()['_localize_' + key.lower()](value)
 
@@ -66,6 +65,10 @@ def _localize_has_not_ethic(value):
 def _localize_has_civic(value):
     civic = localization_map[value]
     return 'Has {} Government Civic'.format(civic)
+
+def _localize_has_valid_civic(value):
+    civic = localization_map[value]
+    return 'Has {} Goverment Civic'.format(civic)
 
 def _localize_has_ascension_perk(value):
     perk = localization_map[value]
@@ -229,7 +232,7 @@ def _localize_research_leader(values, negated=False):
 
     localized_conditions = []
     for condition in values[1:]:
-        key = condition.keys()[0]
+        key = list(condition)[0]
         value = condition[key]
         localized_condition = {
             'has_trait': lambda: _localize_has_expertise(value),
@@ -323,6 +326,8 @@ def _localize_has_resource(value):
 
     return 'Has {} {} {}'.format(operator, amount, localized_resource)
 
+def _localize_has_any_megastructure_in_empire(value):
+    return 'Has any megastructure in empire'
 
 def _localize_always(value):
     return 'Always' if value == 'yes' else 'Never'
@@ -344,7 +349,7 @@ def _localize_nor(values):
 
 
 def _localize_not(value):
-    key = value[0].keys()[0]
+    key = list(value[0])[0]
     nested_value = value[0][key]
 
     if key == 'OR':
@@ -367,7 +372,7 @@ def _operator_and_value(data):
         operator = {
             '>': 'greater than',
             '<': 'less than'
-        }[data.keys()[0]]
-        value = data.values()[0]
+        }[list(data)[0]]
+        value = next(iter(data.values()))
 
     return operator, value

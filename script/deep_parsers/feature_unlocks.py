@@ -53,7 +53,7 @@ class FeatureUnlocks:
     def _modifiers(self, tech_data):
 
         def localize(modifier):
-            key = modifier.keys()[0]
+            key = list(modifier)[0]
             value = ('{:+.0%}'.format(modifier[key])
                      if modifier[key] < 1
                      or int(modifier[key]) != modifier[key]
@@ -97,12 +97,12 @@ class FeatureUnlocks:
                                 # Give up.
                                 localized = {key: value}
 
-            return '{}: {}'.format(localized.keys()[0], localized.values()[0])
+            return '{}: {}'.format(next(iter(localized)), next(iter(localized.values())))
 
         try:
             acquired_modifiers = [localize(modifier) for modifier in next(iter(
                 attribute for attribute in tech_data
-                if attribute.keys()[0] == 'modifier'
+                if list(attribute)[0] == 'modifier'
             ))['modifier']]
         except (StopIteration):
             acquired_modifiers = []
@@ -124,9 +124,9 @@ class FeatureUnlocks:
         try:
             unlock_types = [unlock_type for unlock_type in next(iter(
                 attribute for attribute in tech_data
-                if attribute.keys()[0] == 'prereqfor_desc'
+                if list(attribute)[0] == 'prereqfor_desc'
             ))['prereqfor_desc']]
-            feature_unlocks = [localize(unlock.values()[0][0]['title'])
+            feature_unlocks = [localize(list(unlock.values())[0][0]['title'])
                                for unlock in unlock_types]
         except (StopIteration):
             feature_unlocks = []
@@ -140,7 +140,7 @@ class FeatureUnlocks:
                 for feature_flag
                 in next(iter(
                     attribute for attribute in tech_data
-                    if attribute.keys()[0] == 'feature_flags'
+                    if list(attribute)[0] == 'feature_flags'
                 ))['feature_flags']
             ]
         except (StopIteration):
