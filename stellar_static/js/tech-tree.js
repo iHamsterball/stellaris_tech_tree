@@ -64,10 +64,10 @@ let locale_map = {
   'ru': 'ru'
 };
 
-$(document).ready(function() {
-  generateTechTree(locale_map[document.querySelector('option[selected]').value], 'banks');
+function loadTech(version) {
+  generateTechTree(locale_map[document.querySelector('option[selected]').value], version);
   lazyLoadImg(100);
-});
+}
 
 function generateTechTree(locale, version) {
   $.getJSON('techs?locale=' + locale + '&version=' + version, 'techs.json', function(techData) {
