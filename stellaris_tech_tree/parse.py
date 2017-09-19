@@ -193,7 +193,7 @@ def localized_strings(loc_file_paths, locale):
                 if len(quote_instances) > 2:
                     second = quote_instances[1]
                     line = line[0:second] \
-                           + line[second:last].replace(u'"', r'\"') \
+                           + line[second:last].replace(r'"', r'\"') \
                            + line[last:]
 
             not_yaml += line
@@ -201,7 +201,7 @@ def localized_strings(loc_file_paths, locale):
         still_not_yaml = re.sub(r'£\w+  |§[A-Z!]', '', not_yaml)
         resembles_yaml = re.sub(r'(?<=\w):\d (?=")', ': ', still_not_yaml)
         need_escape_yaml = re.sub(r'^[ \t]+', '  ', resembles_yaml, flags=re.M)
-        actual_yaml = re.sub(r'\\[^\'\"\\abenvtrfox]', r'\\\\', need_escape_yaml)
+        actual_yaml = re.sub(r'(?<![\\])\\(?![\'\"abenvtrfox])', r'\\\\', need_escape_yaml)
 
         file_data = yaml.load(actual_yaml, Loader=yaml.Loader)
         loc_map = file_data[locale_postfix[locale]]
