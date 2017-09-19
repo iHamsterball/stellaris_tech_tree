@@ -72,9 +72,9 @@ building_guardian_dragon_shrine = {
 	cost = {
 		minerals = @b0cost
 	}
-	
-	produced_resources = {
-		unity = 15
+
+	planet_modifier = {
+		pop_happiness = 0.1
 	}
 
 	potential = {
@@ -118,9 +118,9 @@ building_guardian_dragon_monument = {
 	cost = {
 		minerals = @b0cost
 	}
-	
-	produced_resources = {
-		unity = 15
+
+	planet_modifier = {
+		pop_happiness = 0.1
 	}
 	
 	potential = {
@@ -162,10 +162,13 @@ building_stellarite_trophy = {
 	
 	cost = { 
 		minerals = 2500
-	}	
-	
-	produced_resources = {
-		unity = 15
+	}
+	planet_modifier = {
+		pop_happiness = 0.05
+	}
+
+	country_modifier = {
+		pop_happiness = 0.05
 	}
 	
 	potential = {
@@ -204,10 +207,11 @@ building_artist = {
 	planet_unique = yes
 	
 	produced_resources = {
-		unity = 10
+		unity = 3
 	}
 
 	planet_modifier = {
+		pop_happiness = 0.10
 		planet_migration_all_pull = 0.50		
 	}
 	
@@ -394,6 +398,10 @@ building_artist_patron = {
 	empire_unique = yes
 
 	requires_pop = yes
+
+	planet_modifier = {
+		pop_happiness = 0.1
+	}
 	
 	produced_resources = {
 		unity = 6

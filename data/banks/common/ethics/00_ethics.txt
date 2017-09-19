@@ -97,7 +97,6 @@ ethic_authoritarian = {
 		trigger = {
 			any_owned_planet = {
 				any_owned_pop = {
-					is_robot_pop = no
 					is_enslaved = yes
 				}
 			}
@@ -237,11 +236,9 @@ ethic_authoritarian = {
 		}
 		modifier = {
 			factor = 1.5
-			is_enslaved = no
 			from = {
 				any_owned_pop = {
 					is_same_species = root
-					is_robot_pop = no
 					is_enslaved = yes
 				}
 			}
@@ -252,13 +249,11 @@ ethic_authoritarian = {
 				NOT = {
 					any_owned_pop = {
 						is_same_species = root
-						is_robot_pop = no
 						is_enslaved = yes
 					}				
 				}
 				any_owned_pop = {
 					NOT = { is_same_species = root }
-					is_robot_pop = no
 					is_enslaved = yes
 				}
 			}
@@ -288,7 +283,6 @@ ethic_fanatic_egalitarian = {
 		ETHIC_ONLY_DEMOCRACY
 		ETHIC_ALLOW_UTOPIA
 		ETHIC_DISALLOW_POVERTY
-		ETHIC_DISALLOW_MIGRATION_CONTROL
 	}	
 	
 	country_modifier = {
@@ -313,7 +307,6 @@ ethic_egalitarian = {
 	tags = {
 		ETHIC_NEVER_AUTOCRACY
 		ETHIC_ALLOW_UTOPIA
-		ETHIC_DISALLOW_MIGRATION_CONTROL
 	}		
 	
 	country_modifier = {
@@ -390,7 +383,6 @@ ethic_egalitarian = {
 		trigger = {
 			any_owned_planet = {
 				any_owned_pop = {
-					is_robot_pop = no
 					is_enslaved = yes
 				}
 			}
@@ -554,7 +546,6 @@ ethic_egalitarian = {
 			is_enslaved = no
 			from = {
 				any_owned_pop = {
-					is_robot_pop = no
 					is_enslaved = yes
 				}
 			}
@@ -631,7 +622,6 @@ ethic_xenophobe = {
 			}
 		}
 	}
-
 	
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_FACTION_POS
@@ -645,13 +635,6 @@ ethic_xenophobe = {
 				has_faction = isolationist
 			}		
 		}		
-	}
-	
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_FANATIC_PURIFIERS_POS
-		trigger = {
-			has_valid_civic = civic_fanatic_purifiers
-		}
 	}
 	
 	pop_attraction_tag = {
@@ -702,7 +685,6 @@ ethic_xenophobe = {
 			any_owned_planet = {
 				any_owned_pop = {
 					not = { is_same_species = root }
-					is_robot_pop = no
 					is_enslaved = yes
 				}
 			}
@@ -716,7 +698,6 @@ ethic_xenophobe = {
 				NOT = { is_same_species = root }
 				any_owned_pop = {
 					is_enslaved = yes
-					is_robot_pop = no
 					is_same_species = root
 				}
 			}
@@ -749,7 +730,6 @@ ethic_xenophobe = {
 				any_owned_pop = {
 					not = { is_same_species = root }
 					is_enslaved = no
-					is_being_purged = no
 					is_sentient = yes
 					is_robot_pop = no
 				}
@@ -836,10 +816,6 @@ ethic_xenophobe = {
 			has_ethic = ethic_fanatic_xenophobe
 		}
 		modifier = {
-			factor = 1.5
-			has_valid_civic = civic_fanatic_purifiers
-		}
-		modifier = {
 			factor = 0.75
 			any_relation = {
 				has_migration_access = root
@@ -868,7 +844,6 @@ ethic_xenophobe = {
 				NOT = { is_same_species = root }
 				any_owned_pop = {
 					is_enslaved = yes
-					is_robot_pop = no
 					is_same_species = root
 				}
 			}
@@ -920,11 +895,9 @@ ethic_xenophobe = {
 		modifier = {
 			factor = 2.0
 			is_enslaved = no
-			is_being_purged = no
 			from = {
 				any_owned_pop = {
 					not = { is_same_species = root }
-					is_robot_pop = no
 					is_enslaved = yes
 				}
 			}
@@ -932,13 +905,11 @@ ethic_xenophobe = {
 		modifier = {
 			factor = 0.5
 			is_enslaved = no
-			is_being_purged = no
 			from = {
 				any_owned_pop = {
 					not = { is_same_species = root }
 					is_robot_pop = no
 					is_enslaved = no
-					is_being_purged = no
 				}
 			}
 		}			
@@ -1117,7 +1088,6 @@ ethic_xenophile = {
 				NOT = { is_same_species = root }
 				any_owned_pop = {
 					is_enslaved = yes
-					is_robot_pop = no
 					is_same_species = root
 				}
 			}
@@ -1222,7 +1192,6 @@ ethic_xenophile = {
 				NOT = { is_same_species = root }
 				any_owned_pop = {
 					is_enslaved = yes
-					is_robot_pop = no
 					is_same_species = root
 				}
 			}
@@ -1236,7 +1205,7 @@ ethic_xenophile = {
 				observation_outpost = {
 					has_mission = native_indoctrination		
 				}
-				observation_outpost_owner = { has_ethic = ethic_fanatic_xenophile }
+				observation_outpost_owner = { has_ethic = ethic_fanatic_pacifist }
 			}
 		}
 		modifier = {
@@ -1247,7 +1216,7 @@ ethic_xenophile = {
 				observation_outpost = {
 					has_mission = native_indoctrination		
 				}
-				observation_outpost_owner = { has_ethic = ethic_xenophile }
+				observation_outpost_owner = { has_ethic = ethic_pacifist }
 			}
 		}		
 	}
@@ -2199,13 +2168,6 @@ ethic_materialist = {
 	}	
 	
 	pop_attraction_tag = {
-		desc = POP_ATTRACTION_MECHANIST_POS
-		trigger = {
-			has_valid_civic = civic_mechanists
-		}
-	}
-	
-	pop_attraction_tag = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
 			exists = ruler
@@ -2294,29 +2256,6 @@ ethic_materialist = {
 				}
 			}
 		}
-		# Effects of indoctrination mission
-		modifier = {
-			factor = 10
-			is_country_type = primitive
-			capital_scope = {
-				has_observation_outpost = yes
-				observation_outpost = {
-					has_mission = native_indoctrination		
-				}
-				observation_outpost_owner = { has_ethic = ethic_fanatic_materialist }
-			}
-		}
-		modifier = {
-			factor = 5
-			is_country_type = primitive
-			capital_scope = {
-				has_observation_outpost = yes
-				observation_outpost = {
-					has_mission = native_indoctrination		
-				}
-				observation_outpost_owner = { has_ethic = ethic_materialist }
-			}
-		}			
 		modifier = {
 			factor = 2
 			NOR = {
@@ -2338,11 +2277,7 @@ ethic_materialist = {
 		modifier = {
 			factor = 3
 			has_ethic = ethic_fanatic_materialist
-		}
-		modifier = {
-			factor = 1.25
-			has_valid_civic = civic_mechanists
-		}	
+		}		
 		modifier = {
 			factor = 0.5
 			is_country_type = default
@@ -2425,14 +2360,11 @@ ethic_hive_mind = {
 	country_modifier = {
 		country_resource_influence_add = 1
 		country_resource_unity_mult = 0.20
-		pop_environment_tolerance = 0.10
-		pop_growth_speed = 0.25
 	}
 	
 	tags = {
 		ETHIC_HIVE_MIND_NO_TUTORIAL
 		ETHIC_HIVE_MIND_AUTHORITY
-		ETHIC_ALLOW_FULL_BOMBARDMENT
 		ETHIC_HIVE_MIND_IMMORTAL_RULER
 		ETHIC_HIVE_MIND_NO_FACTIONS
 		ETHIC_HIVE_MIND_DOMESTIC_POP_SURVIVAL
@@ -2443,7 +2375,7 @@ ethic_hive_mind = {
 	}
 	
 	random_weight = {
-		value = 75
+		value = 50
 		modifier = {
 			factor = 0
 			OR = {

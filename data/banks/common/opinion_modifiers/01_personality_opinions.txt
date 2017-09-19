@@ -15,26 +15,11 @@ opinion_from_personality = {
 	}
 }
 
-opinion_devouring_swarm = {	
-	trigger = {
-		is_country_type = default
-		OR = {
-			has_valid_civic = "civic_hive_devouring_swarm"
-			from = { has_valid_civic = "civic_hive_devouring_swarm" }
-		}
-	}
-	opinion = {
-		modifier = {
-			add = -1000	
-		}		
-	}
-}
-
 opinion_fanatic_purifiers_vs_xeno = {
 	opinion = {
 		modifier = {
 			add = -1000
-			has_valid_civic = civic_fanatic_purifiers
+			has_civic = civic_fanatic_purifiers
 			NOT = { is_same_species = FROM }		
 		}		
 	}
@@ -44,8 +29,8 @@ opinion_both_fanatic_purifiers = {
 	opinion = {
 		modifier = {
 			add = 200
-			has_valid_civic = civic_fanatic_purifiers
-			FROM = { has_valid_civic = civic_fanatic_purifiers }	
+			has_civic = civic_fanatic_purifiers
+			FROM = { has_civic = civic_fanatic_purifiers }	
 			is_same_species = FROM			
 		}	
 	}
@@ -56,8 +41,8 @@ opinion_fanatic_purifiers = {
 		modifier = {
 		 	add = -1000
 			is_country_type = default
-			NOT = { has_valid_civic = civic_fanatic_purifiers }
-			FROM = { has_valid_civic = civic_fanatic_purifiers }		
+			NOT = { has_civic = civic_fanatic_purifiers }
+			FROM = { has_civic = civic_fanatic_purifiers }		
 		}	
 	}
 }
@@ -153,6 +138,32 @@ opinion_desecrated_holy_world = {
 	}
 }
 
+# Desecrated Tomb World
+opinion_desecrated_tomb_world = {
+	opinion = {
+		modifier = {
+			add = -50
+			has_ai_personality = fallen_empire_spiritualist
+			FROM = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				OR = {
+					any_owned_planet = {
+						is_planet_class = pc_nuked
+					}
+					any_subject = {
+						any_owned_planet = {
+							has_modifier = "holy_planet"
+						}					
+					}					
+				}
+			}
+		}	
+	}
+}
+
 # Fallen Empire doesn't like you researching AI
 opinion_researching_ai = {
 	opinion = {
@@ -235,7 +246,6 @@ opinion_encroaching_borders = {
 			add = -200
 			has_ai_personality = fallen_empire_xenophobe
 			from = {
-				is_country_type = default
 				OR = {
 					any_owned_planet = {
 						is_capital = no
@@ -245,7 +255,7 @@ opinion_encroaching_borders = {
 						is_ship_class = shipclass_outpost_station
 						distance_to_empire = {
 							who = root
-							distance = 75
+							distance = 100
 						}									
 					}	
 				}	

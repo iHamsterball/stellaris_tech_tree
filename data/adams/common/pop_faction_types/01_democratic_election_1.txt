@@ -1,0 +1,93 @@
+##############################
+# Democratic Election Faction
+##############################
+# Minor factions to provide election candidates
+
+democratic_election_faction_1 = {
+	election_header = "GFX_faction_header_yellow"
+	
+	unique = yes
+
+	parameters = {
+		empire = {
+			type = country
+			valid_objects = {
+				is_same_value = root
+			}
+		}
+	}
+
+	on_create = {
+		set_name = random
+	}
+	
+	hidden = yes
+	max_support = 1
+	
+	is_potential = {
+		has_election_type = democratic
+		count_pop_factions = {
+			limit = {
+				NOR = {
+					is_pop_faction_type = "democratic_election_faction_1"
+					is_pop_faction_type = "democratic_election_faction_2"
+				}
+			}
+			count < 1
+		}
+	}
+	
+	can_join_faction = {
+		is_enslaved = no
+		is_being_purged = no
+		has_culture_shock = no
+		NOT = { has_trait = trait_nerve_stapled }
+		owner = {
+			count_pop_factions = {
+				limit = {
+					NOR = {
+						is_pop_faction_type = "democratic_election_faction_1"
+						is_pop_faction_type = "democratic_election_faction_2"
+					}
+				}
+				count < 1
+			}
+		}
+	}
+	
+	attraction = {
+		base = 100
+		modifier = {
+			factor = 0
+			owner = {
+				count_pop_factions = {
+					limit = {
+						NOR = {
+							is_pop_faction_type = "democratic_election_faction_1"
+							is_pop_faction_type = "democratic_election_faction_2"
+						}
+					}
+					count > 0
+				}
+			}
+		}
+	}
+	
+	leader = {
+		base = 100
+		modifier = {
+			factor = 0
+			owner = {
+				count_pop_factions = {
+					limit = {
+						NOR = {
+							is_pop_faction_type = "democratic_election_faction_1"
+							is_pop_faction_type = "democratic_election_faction_2"
+						}
+					}
+					count > 0
+				}
+			}
+		}
+	}
+}

@@ -12,10 +12,6 @@ hostile_init_01 = {
 			factor = 0.1
 			NOT = { is_in_cluster = resource_cluster_1 }
 		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
 	}
 	
 	max_instances = 1
@@ -68,152 +64,152 @@ hostile_init_01 = {
 			limit = { is_star = no }
 			event_target:crystal_country = {
 				create_fleet = {
-					name = "NAME_Sapphire_Lurkers"
+					name = "Sapphire Lurkers"
 					effect = {
 						set_owner = event_target:crystal_country
 						create_ship = {
 							name = ""
-							design = "NAME_Large_Crystal_Entity_Blue"
+							design = "Large Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Large_Crystal_Entity_Blue"
+							design = "Large Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Large_Crystal_Entity_Blue"
+							design = "Large Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Large_Crystal_Entity_Blue"
+							design = "Large Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Large_Crystal_Entity_Blue"
+							design = "Large Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Large_Crystal_Entity_Blue"
+							design = "Large Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Large_Crystal_Entity_Blue"
+							design = "Large Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Medium_Crystal_Entity_Blue"
+							design = "Medium Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Medium_Crystal_Entity_Blue"
+							design = "Medium Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Medium_Crystal_Entity_Blue"
+							design = "Medium Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Medium_Crystal_Entity_Blue"
+							design = "Medium Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Medium_Crystal_Entity_Blue"
+							design = "Medium Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Medium_Crystal_Entity_Blue"
+							design = "Medium Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Medium_Crystal_Entity_Blue"
+							design = "Medium Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Medium_Crystal_Entity_Blue"
+							design = "Medium Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Medium_Crystal_Entity_Blue"
+							design = "Medium Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						set_location = PREVPREV
 						set_fleet_stance = aggressive
@@ -237,10 +233,6 @@ hostile_init_02 = {
 			factor = 0
 			NOT = { is_in_cluster = resource_cluster_1 }
 		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
 	}
 	
 	flags = { hostile_system blue2_system }
@@ -301,64 +293,64 @@ hostile_init_02 = {
 			if = {
 				limit = { exists = event_target:blue2_trigger_3 }
 				create_fleet = {
-					name = "NAME_Sapphire_Lurkers"
+					name = "Sapphire Lurkers"
 					effect = {
 						set_owner = event_target:crystal_country
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}						
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						set_location = event_target:blue2_trigger_3
 						set_fleet_stance = aggressive
@@ -370,44 +362,44 @@ hostile_init_02 = {
 			if = {
 				limit = { exists = event_target:blue2_trigger_2 }
 				create_fleet = {
-					name = "NAME_Sapphire_Lurkers"
+					name = "Sapphire Lurkers"
 					effect = {
 						set_owner = event_target:crystal_country
 						create_ship = {
 							name = ""
-							design = "NAME_Medium_Crystal_Entity_Blue"
+							design = "Medium Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Medium_Crystal_Entity_Blue"
+							design = "Medium Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Medium_Crystal_Entity_Blue"
+							design = "Medium Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}						
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						set_location = event_target:blue2_trigger_2
 						set_fleet_stance = aggressive
@@ -419,44 +411,44 @@ hostile_init_02 = {
 			if = {
 				limit = { exists = event_target:blue2_trigger_1 }
 				create_fleet = {
-					name = "NAME_Sapphire_Lurkers"
+					name = "Sapphire Lurkers"
 					effect = {
 						set_owner = event_target:crystal_country
 						create_ship = {
 							name = ""
-							design = "NAME_Medium_Crystal_Entity_Blue"
+							design = "Medium Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Medium_Crystal_Entity_Blue"
+							design = "Medium Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Medium_Crystal_Entity_Blue"
+							design = "Medium Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Small_Crystal_Entity_Blue"
+							design = "Small Crystal Entity Blue"
 						}
 						set_location = event_target:blue2_trigger_1
 						set_fleet_stance = aggressive
@@ -480,10 +472,6 @@ hostile_init_03 = {
 		#	factor = 0
 		#	NOT = { is_in_cluster = resource_cluster_1 }
 		#}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
 	}
 
 	max_instances = 1
@@ -547,52 +535,52 @@ hostile_init_03 = {
 		}
 		event_target:crystal_country = {
 			create_fleet = {
-				name = "NAME_Emerald_Roamers"
+				name = "Emerald Roamers"
 				effect = {
 					set_owner = event_target:crystal_country
 					create_ship = {
 						name = ""
-						design = "NAME_Large_Crystal_Entity_Green"
+						design = "Large Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Green"
+						design = "Medium Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Green"
+						design = "Medium Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Green"
+						design = "Small Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Green"
+						design = "Small Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Green"
+						design = "Small Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Green"
+						design = "Small Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Green"
+						design = "Small Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Green"
+						design = "Small Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Green"
+						design = "Small Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Green"
+						design = "Small Crystal Entity Green"
 					}
 					set_location = event_target:green_trigger_3
 					set_fleet_stance = aggressive
@@ -649,10 +637,6 @@ hostile_init_04 = {
 			factor = 0
 			NOT = { is_in_cluster = resource_cluster_1 }
 		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
 	}
 	
 	flags = { hostile_system green2_system }
@@ -712,28 +696,28 @@ hostile_init_04 = {
 		event_target:crystal_country = {
 			save_event_target_as = green2_owner
 			create_fleet = {
-				name = "NAME_Emerald_Roamers"
+				name = "Emerald Roamers"
 				effect = {
 					set_owner = event_target:crystal_country
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Green"
+						design = "Small Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Green"
+						design = "Small Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Green"
+						design = "Small Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Green"
+						design = "Small Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Green"
+						design = "Small Crystal Entity Green"
 					}
 					set_location = event_target:green2_trigger_3
 					set_fleet_stance = aggressive
@@ -776,28 +760,28 @@ hostile_init_04 = {
 				}
 			}
 			create_fleet = {
-				name = "NAME_Emerald_Roamers"
+				name = "Emerald Roamers"
 				effect = {
 					set_owner = event_target:crystal_country
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Green"
+						design = "Medium Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Green"
+						design = "Medium Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Green"
+						design = "Medium Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Green"
+						design = "Small Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Green"
+						design = "Small Crystal Entity Green"
 					}
 					set_location = event_target:green2_trigger_1
 					set_fleet_stance = aggressive
@@ -840,36 +824,36 @@ hostile_init_04 = {
 				}
 			}
 			create_fleet = {
-				name = "NAME_Emerald_Roamers"
+				name = "Emerald Roamers"
 				effect = {
 					set_owner = event_target:crystal_country
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Green"
+						design = "Medium Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Green"
+						design = "Small Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Green"
+						design = "Small Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Green"
+						design = "Small Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Green"
+						design = "Small Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Green"
+						design = "Small Crystal Entity Green"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Green"
+						design = "Small Crystal Entity Green"
 					}
 					set_location = event_target:green2_trigger_2
 					set_fleet_stance = aggressive
@@ -926,10 +910,6 @@ hostile_init_05 = {
 			factor = 0
 			NOT = { is_in_cluster = resource_cluster_1 }
 		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
 	}
 	
 	flags = { hostile_system red_system }
@@ -1004,20 +984,20 @@ hostile_init_05 = {
 		event_target:crystal_country = {
 			save_event_target_as = red_crystals
 			create_fleet = {
-				name = "NAME_Ruby_Stack"
+				name = "Ruby Stack"
 				effect = {
 					set_owner = event_target:crystal_country
 					create_ship = {
 						name = ""
-						design = "NAME_Large_Crystal_Entity_Red"
+						design = "Large Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Large_Crystal_Entity_Red"
+						design = "Large Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Large_Crystal_Entity_Red"
+						design = "Large Crystal Entity Red"
 					}
 					set_location = event_target:red_trigger_1
 					set_fleet_stance = aggressive
@@ -1033,24 +1013,24 @@ hostile_init_05 = {
 				}
 			}
 			create_fleet = {
-				name = "NAME_Ruby_Stack"
+				name = "Ruby Stack"
 				effect = {
 					set_owner = event_target:crystal_country
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					set_location = event_target:red_trigger_2
 					set_fleet_stance = aggressive
@@ -1066,52 +1046,52 @@ hostile_init_05 = {
 				}
 			}
 			create_fleet = {
-				name = "NAME_Ruby_Stack"
+				name = "Ruby Stack"
 				effect = {
 					set_owner = event_target:crystal_country
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					set_location = event_target:red_trigger_3
 					set_fleet_stance = aggressive
@@ -1127,44 +1107,44 @@ hostile_init_05 = {
 				}
 			}
 			create_fleet = {
-				name = "NAME_Ruby_Stack"
+				name = "Ruby Stack"
 				effect = {
 					set_owner = event_target:crystal_country
 					create_ship = {
 						name = ""
-						design = "NAME_Large_Crystal_Entity_Red"
+						design = "Large Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Large_Crystal_Entity_Red"
+						design = "Large Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Large_Crystal_Entity_Red"
+						design = "Large Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					set_location = event_target:red_trigger_4
 					set_fleet_stance = aggressive
@@ -1194,10 +1174,6 @@ hostile_init_06 = {
 			factor = 0
 			NOT = { is_in_cluster = resource_cluster_1 }
 		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
 	}
 	
 	max_instances = 1
@@ -1281,116 +1257,116 @@ hostile_init_06 = {
 		event_target:crystal_country = {
 			save_event_target_as = red2_crystals
 			create_fleet = {
-				name = "NAME_Ruby_Swarm"
+				name = "Ruby Swarm"
 				effect = {
 					set_owner = event_target:crystal_country
 					create_ship = {
-						name = "NAME_Kappa"
-						design = "NAME_Large_Crystal_Entity_Red"
+						name = "Kappa"
+						design = "Large Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Large_Crystal_Entity_Red"
+						design = "Large Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					set_location = event_target:red2_trigger_1
 					set_fleet_stance = aggressive
@@ -1406,68 +1382,68 @@ hostile_init_06 = {
 				}
 			}
 			create_fleet = {
-				name = "NAME_Ruby_Swarm"
+				name = "Ruby Swarm"
 				effect = {
 					set_owner = event_target:crystal_country
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					set_location = event_target:red2_trigger_2
 					set_fleet_stance = aggressive
@@ -1483,104 +1459,104 @@ hostile_init_06 = {
 				}
 			}
 			create_fleet = {
-				name = "NAME_Ruby_Swarm"
+				name = "Ruby Swarm"
 				effect = {
 					set_owner = event_target:crystal_country
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					set_location = event_target:red2_trigger_3
 					set_fleet_stance = aggressive
@@ -1596,88 +1572,88 @@ hostile_init_06 = {
 				}
 			}
 			create_fleet = {
-				name = "NAME_Ruby_Swarm"
+				name = "Ruby Swarm"
 				effect = {
 					set_owner = event_target:crystal_country
 					create_ship = {
 						name = ""
-						design = "NAME_Large_Crystal_Entity_Red"
+						design = "Large Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Large_Crystal_Entity_Red"
+						design = "Large Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Large_Crystal_Entity_Red"
+						design = "Large Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Large_Crystal_Entity_Red"
+						design = "Large Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Large_Crystal_Entity_Red"
+						design = "Large Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Large_Crystal_Entity_Red"
+						design = "Large Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Large_Crystal_Entity_Red"
+						design = "Large Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Large_Crystal_Entity_Red"
+						design = "Large Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Large_Crystal_Entity_Red"
+						design = "Large Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Large_Crystal_Entity_Red"
+						design = "Large Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Large_Crystal_Entity_Red"
+						design = "Large Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Medium_Crystal_Entity_Red"
+						design = "Medium Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					create_ship = {
 						name = ""
-						design = "NAME_Small_Crystal_Entity_Red"
+						design = "Small Crystal Entity Red"
 					}
 					set_location = event_target:red2_trigger_4
 					set_fleet_stance = aggressive
@@ -1708,10 +1684,6 @@ hostile_init_07 = {
 			factor = 0
 			NOT = { is_in_cluster = resource_cluster_1 }
 		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
 	}
 
 	max_instances = 1
@@ -1747,12 +1719,12 @@ hostile_init_07 = {
 			event_target:crystal_country = {
 				save_event_target_as = elite1_owner
 				create_fleet = {
-					name = "NAME_Crystal_Nidus"
+					name = "Crystal Nidus"
 					effect = {
 						set_owner = event_target:crystal_country
 						create_ship = {
-							name = "NAME_Crystal_Nidus"
-							design = "NAME_Crystal_Nidus"
+							name = "Crystal Nidus"
+							design = "Crystal Nidus"
 						}
 						set_location = {
 							target = prevprev
@@ -1765,28 +1737,28 @@ hostile_init_07 = {
 					}
 				}
 				create_fleet = {
-					name = "NAME_Ruby_Guardians"
+					name = "Ruby Guardians"
 					effect = {
 						set_owner = event_target:crystal_country
 						while = {
 							count = 5
 							create_ship = {
 								name = ""
-								design = "NAME_Large_Crystal_Entity_Red_Elite"
+								design = "Large Crystal Entity Red Elite"
 							}
 						}
 						while = {
 							count = 9
 							create_ship = {
 								name = ""
-								design = "NAME_Medium_Crystal_Entity_Red_Elite"
+								design = "Medium Crystal Entity Red Elite"
 							}
 						}
 						while = {
 							count = 19
 							create_ship = {
 								name = ""
-								design = "NAME_Small_Crystal_Entity_Red_Elite"
+								design = "Small Crystal Entity Red Elite"
 							}
 						}
 						set_location = {
@@ -1800,28 +1772,28 @@ hostile_init_07 = {
 					}
 				}
 				create_fleet = {
-					name = "NAME_Topaz_Guardians"
+					name = "Topaz Guardians"
 					effect = {
 						set_owner = event_target:crystal_country
 						while = {
 							count = 2
 							create_ship = {
 								name = ""
-								design = "NAME_Large_Crystal_Entity_Yellow_Elite"
+								design = "Large Crystal Entity Yellow Elite"
 							}
 						}
 						while = {
 							count = 14
 							create_ship = {
 								name = ""
-								design = "NAME_Medium_Crystal_Entity_Yellow_Elite"
+								design = "Medium Crystal Entity Yellow Elite"
 							}
 						}
 						while = {
 							count = 16
 							create_ship = {
 								name = ""
-								design = "NAME_Small_Crystal_Entity_Yellow_Elite"
+								design = "Small Crystal Entity Yellow Elite"
 							}
 						}
 						set_location = {
@@ -1835,28 +1807,28 @@ hostile_init_07 = {
 					}
 				}
 				create_fleet = {
-					name = "NAME_Sapphire_Guardians"
+					name = "Sapphire Guardians"
 					effect = {
 						set_owner = event_target:crystal_country
 						while = {
 							count = 4
 							create_ship = {
 								name = ""
-								design = "NAME_Large_Crystal_Entity_Blue_Elite"
+								design = "Large Crystal Entity Blue Elite"
 							}
 						}
 						while = {
 							count = 8
 							create_ship = {
 								name = ""
-								design = "NAME_Medium_Crystal_Entity_Blue_Elite"
+								design = "Medium Crystal Entity Blue Elite"
 							}
 						}
 						while = {
 							count = 20
 							create_ship = {
 								name = ""
-								design = "NAME_Small_Crystal_Entity_Blue_Elite"
+								design = "Small Crystal Entity Blue Elite"
 							}
 						}
 						set_location = {
@@ -1870,28 +1842,28 @@ hostile_init_07 = {
 					}
 				}
 				create_fleet = {
-					name = "NAME_Emerald_Guardians"
+					name = "Emerald Guardians"
 					effect = {
 						set_owner = event_target:crystal_country
 						while = {
 							count = 6
 							create_ship = {
 								name = ""
-								design = "NAME_Large_Crystal_Entity_Green_Elite"
+								design = "Large Crystal Entity Green Elite"
 							}
 						}
 						while = {
 							count = 10
 							create_ship = {
 								name = ""
-								design = "NAME_Medium_Crystal_Entity_Green_Elite"
+								design = "Medium Crystal Entity Green Elite"
 							}
 						}
 						while = {
 							count = 16
 							create_ship = {
 								name = ""
-								design = "NAME_Small_Crystal_Entity_Green_Elite"
+								design = "Small Crystal Entity Green Elite"
 							}
 						}
 						set_location = {
@@ -1931,10 +1903,6 @@ hostile_init_08 = {
 			factor = 0.1
 			NOT = { is_in_cluster = resource_cluster_2 }
 		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
 	}
 	
 	flags = { hostile_system void_system }
@@ -2010,7 +1978,7 @@ hostile_init_08 = {
 						set_owner = event_target:cloud_country
 						create_ship = {
 							name = ""
-							design = "NAME_Cloud_Entity"
+							design = "Cloud Entity"
 						}
 						set_location = PREVPREV
 						set_fleet_stance = aggressive
@@ -2034,10 +2002,6 @@ hostile_init_09 = {
 			factor = 0
 			NOT = { is_in_cluster = resource_cluster_2 }
 		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
 	}
 
 	flags = { hostile_system void2_system }
@@ -2082,19 +2046,19 @@ hostile_init_09 = {
 						set_owner = event_target:cloud_country
 						create_ship = {
 							name = ""
-							design = "NAME_Cloud_Entity"
+							design = "Cloud Entity"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Cloud_Entity"
+							design = "Cloud Entity"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Cloud_Entity"
+							design = "Cloud Entity"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Cloud_Entity"
+							design = "Cloud Entity"
 						}
 						set_location = event_target:voidhome_star
 						set_fleet_stance = aggressive
@@ -2103,24 +2067,24 @@ hostile_init_09 = {
 					}
 				}
 				create_fleet = {
-					name = "NAME_Chasmal_Horde"
+					name = "Chasmal Horde"
 					effect = {
 						set_owner = event_target:cloud_country
 						create_ship = {
 							name = ""
-							design = "NAME_Cloud_Entity"
+							design = "Cloud Entity"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Cloud_Entity"
+							design = "Cloud Entity"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Cloud_Entity"
+							design = "Cloud Entity"
 						}
 						create_ship = {
 							name = ""
-							design = "NAME_Cloud_Entity"
+							design = "Cloud Entity"
 						}
 						set_location = event_target:voidhome_star
 						set_fleet_stance = aggressive
@@ -2144,10 +2108,6 @@ hostile_init_10 = {
 			factor = 0
 			NOT = { is_in_cluster = resource_cluster_3 }
 		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
 	}
 	
 	flags = { hostile_system amoeba_1_system }
@@ -2190,14 +2150,14 @@ hostile_init_10 = {
 							count = 7
 							create_ship = {
 								name = ""
-								design = "NAME_Small_Space_Organism_Zebra"
+								design = "Small Space Organism Zebra"
 							}
 						}
 						while = {
 							count = 2
 							create_ship = {
 								name = ""
-								design = "NAME_Large_Space_Organism_Zebra"
+								design = "Large Space Organism Zebra"
 							}
 						}
 						set_formation_scale = 3.0
@@ -2223,10 +2183,6 @@ hostile_init_10_small_amoeba_pack = {
 			factor = 0.1
 			NOT = { is_in_cluster = resource_cluster_3 }
 		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
 	}
 	
 	flags = { hostile_system amoeba_2_system }
@@ -2269,14 +2225,14 @@ hostile_init_10_small_amoeba_pack = {
 							count = 8
 							create_ship = {
 								name = ""
-								design = "NAME_Small_Space_Organism_Teal"
+								design = "Small Space Organism Teal"
 							}
 						}
 						while = {
 							count = 2
 							create_ship = {
 								name = ""
-								design = "NAME_Large_Space_Organism_Teal"
+								design = "Large Space Organism Teal"
 							}
 						}
 						set_location = PREVPREV
@@ -2301,10 +2257,6 @@ hostile_init_11 = {
 			factor = 0
 			NOT = { is_in_cluster = resource_cluster_3 }
 		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
 	}
 	
 	flags = { hostile_system amoeba_3_system }
@@ -2356,14 +2308,14 @@ hostile_init_11 = {
 							count = 7
 							create_ship = {
 								name = ""
-								design = "NAME_Small_Space_Organism_Orange"
+								design = "Small Space Organism Orange"
 							}
 						}
 						while = {
 							count = 3
 							create_ship = {
 								name = ""
-								design = "NAME_Large_Space_Organism_Orange"
+								design = "Large Space Organism Orange"
 							}
 						}
 						set_location = PREVPREV
@@ -2519,10 +2471,6 @@ hostile_init_12 = {
 			factor = 0.1
 			NOT = { is_in_cluster = resource_cluster_4 }
 		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
 	}
 	
 	flags = { hostile_system drone_system_1 }
@@ -2574,11 +2522,7 @@ hostile_init_12 = {
 	init_effect = {
 		create_drone_country = yes
 		random_system_planet = {
-			limit = { 
-				has_deposit_for = shipclass_mining_station
-				is_star = no
-				NOT = { is_planet_class = pc_gas_giant }
-			}
+			limit = { has_deposit_for = shipclass_mining_station }
 			orbital_deposit_tile = {
 				clear_deposits = yes
 				add_deposit = d_immense_mineral_deposit
@@ -2593,14 +2537,14 @@ hostile_init_12 = {
 							count = 10
 							create_ship = {
 								name = ""
-								design = "NAME_Ancient_Mining_Drone"
+								design = "Ancient Mining Drone"
 							}
 						}
 						while = {
 							count = 4
 							create_ship = {
 								name = ""
-								design = "NAME_Ancient_Combat_Drone"
+								design = "Ancient Combat Drone"
 							}
 						}
 						set_location = PREVPREV
@@ -2637,10 +2581,6 @@ hostile_init_12_mining_drones = {
 			factor = 0
 			NOT = { is_in_cluster = resource_cluster_4 }
 		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
 	}
 	
 	flags = { hostile_system drone_system_2 }
@@ -2692,11 +2632,7 @@ hostile_init_12_mining_drones = {
 	init_effect = {
 		create_drone_country = yes
 		random_system_planet = {
-			limit = { 
-				has_deposit_for = shipclass_mining_station
-				is_star = no
-				NOT = { is_planet_class = pc_gas_giant }
-			}
+			limit = { has_deposit_for = shipclass_mining_station }
 			orbital_deposit_tile = {
 				clear_deposits = yes
 				add_deposit = d_enormous1_mineral_deposit
@@ -2711,21 +2647,21 @@ hostile_init_12_mining_drones = {
 							count = 8
 							create_ship = {
 								name = ""
-								design = "NAME_Ancient_Mining_Drone"
+								design = "Ancient Mining Drone"
 							}
 						}
 						while = {
 							count = 4
 							create_ship = {
 								name = ""
-								design = "NAME_Ancient_Combat_Drone"
+								design = "Ancient Combat Drone"
 							}
 						}
 						while = {
 							count = 2
 							create_ship = {
 								name = ""
-								design = "NAME_Ancient_Destroyer"
+								design = "Ancient Destroyer"
 							}
 						}
 						set_location = PREVPREV
@@ -2762,10 +2698,6 @@ hostile_init_12_drone_destroyer = {
 			factor = 0
 			NOT = { is_in_cluster = resource_cluster_4 }
 		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
 	}
 	
 	flags = { hostile_system drone_destroyer_system }
@@ -2825,21 +2757,21 @@ hostile_init_12_drone_destroyer = {
 			event_target:drone_country = {
 				save_event_target_as = mining_drones
 				create_fleet = {
-					name = "NAME_Asset_Protection_Unit"
+					name = "Asset Protection Unit"
 					effect = {
 						set_owner = event_target:drone_country
 						while = {
 							count = 7
 							create_ship = {
 								name = ""
-								design = "NAME_Ancient_Combat_Drone"
+								design = "Ancient Combat Drone"
 							}
 						}
 						while = {
 							count = 3
 							create_ship = {
 								name = ""
-								design = "NAME_Ancient_Destroyer"
+								design = "Ancient Destroyer"
 							}
 						}
 						set_location = PREVPREV
@@ -2876,10 +2808,6 @@ hostile_init_13 = {
 			factor = 0
 			NOT = { is_in_cluster = resource_cluster_4 }
 		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
 	}
 	
 	flags = { hostile_system drone_system_3 }
@@ -3044,14 +2972,14 @@ hostile_init_13 = {
 							count = 10
 							create_ship = {
 								name = ""
-								design = "NAME_Ancient_Mining_Drone"
+								design = "Ancient Mining Drone"
 							}
 						}
 						while = {
 							count = 3
 							create_ship = {
 								name = ""
-								design = "NAME_Ancient_Combat_Drone"
+								design = "Ancient Combat Drone"
 							}
 						}
 						set_location = PREVPREV
@@ -3080,10 +3008,6 @@ hostile_init_14 = {
 			factor = 0
 			NOT = { is_in_cluster = resource_cluster_4 }
 		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
 	}
 
 	max_instances = 1
@@ -3114,21 +3038,21 @@ hostile_init_14 = {
 
 		init_effect = {
 			create_fleet = {
-				name = "NAME_Mining_Corps"
+				name = "Mining Corps"
 				effect = {
 					set_owner = event_target:drone_country
 					while = {
 						count = 12
 						create_ship = {
 							name = ""
-							design = "NAME_Ancient_Mining_Drone"
+							design = "Ancient Mining Drone"
 						}
 					}
 					while = {
 						count = 3
 						create_ship = {
 							name = ""
-							design = "NAME_Ancient_Combat_Drone"
+							design = "Ancient Combat Drone"
 						}
 					}
 					set_location = {
@@ -3143,14 +3067,14 @@ hostile_init_14 = {
 				}
 			}
 			create_fleet = {
-				name = "NAME_Asset_Protection_Unit"
+				name = "Asset Protection Unit"
 				effect = {
 					set_owner = event_target:drone_country
 					while = {
 						count = 10
 						create_ship = {
 							name = ""
-							design = "NAME_Ancient_Destroyer"
+							design = "Ancient Destroyer"
 						}
 					}
 					set_location = {
@@ -3174,12 +3098,12 @@ hostile_init_14 = {
 					add_deposit = d_enormous3_mineral_deposit
 				}
 				create_fleet = {
-					name = "NAME_Central_Processing"
+					name = "Central Processing"
 					effect = {
 						set_owner = event_target:drone_country
 						create_ship = {
-							name = "NAME_Ore_Grinder"
-							design = "NAME_Drone_Home_Base"
+							name = "Ore Grinder"
+							design = "Drone Home Base"
 							graphical_culture = "drone"
 						}
 						set_location = prev
@@ -3237,10 +3161,6 @@ hostile_init_15 = {
 			factor = 0.1
 			NOT = { is_in_cluster = resource_cluster_5 }
 		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
 	}
 
 	flags = { tiyanki_home_system }
@@ -3295,20 +3215,20 @@ hostile_init_15 = {
 			event_target:tiyanki_country = {
 				save_event_target_as = tiyanki_country2
 				create_fleet = {
-					name = "NAME_Tiyanki_Space_Whale"
+					name = "Tiyanki Space Whale"
 					effect = {
 						set_owner = event_target:tiyanki_country
 						create_ship = {
-							name = "NAME_Cow"
-							design = "NAME_Tiyanki_Cow"
+							name = "Cow"
+							design = "Tiyanki Cow"
 						}
 						create_ship = {
-							name = "NAME_Bull"
-							design = "NAME_Tiyanki_Bull"
+							name = "Bull"
+							design = "Tiyanki Bull"
 						}
 						create_ship = {
-							name = "NAME_Calf"
-							design = "NAME_Tiyanki_Calf"
+							name = "Calf"
+							design = "Tiyanki Calf"
 						}
 						set_location = event_target:giant
 						set_fleet_stance = passive
@@ -3363,10 +3283,6 @@ hostile_init_16 = {
 			factor = 0
 			NOT = { is_in_cluster = resource_cluster_0 }
 		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
 	}
 
 	flags = { pirate_system pirate_1 }
@@ -3400,26 +3316,26 @@ hostile_init_16 = {
 			create_pirate_country = yes
 			
 			create_fleet = {
-				name = "NAME_Pirate_Hideout"
+				name = "Pirate Hideout"
 				effect = {
 					set_owner = event_target:pirate_country
 					create_ship = {
 						name = random
-						design = "NAME_Pirate_Hideout"
+						design = "Pirate Hideout"
 						graphical_culture = "pirate_01"
 					}
 					set_location = prev
 				}
 			}
 			create_fleet = {
-				name = "NAME_Lookouts"
+				name = "Lookouts"
 				effect = {
 					set_owner = event_target:pirate_country
 					while = {
 						count = 12
 						create_ship = {
 							name = random
-							design = "NAME_Brigand"
+							design = "Brigand"
 							graphical_culture = "pirate_01"
 						}
 					}
@@ -3427,7 +3343,7 @@ hostile_init_16 = {
 						count = 20
 						create_ship = {
 							name = random
-							design = "NAME_Skull"
+							design = "Skull"
 							graphical_culture = "pirate_01"
 						}
 					}
@@ -3462,10 +3378,6 @@ hostile_init_17 = {
 			factor = 0.1
 			NOT = { is_in_cluster = resource_cluster_0 }
 		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
 	}
 
 	flags = { pirate_system pirate_2 }
@@ -3521,7 +3433,7 @@ hostile_init_17 = {
 							count = 3
 							create_ship = {
 								name = random
-								design = NAME_Reaver
+								design = Reaver
 								graphical_culture = "pirate_01"
 							}
 						}
@@ -3529,7 +3441,7 @@ hostile_init_17 = {
 							count = 3
 							create_ship = {
 								name = random
-								design = NAME_Hunter
+								design = Hunter
 								graphical_culture = "pirate_01"
 							}
 						}
@@ -3537,7 +3449,7 @@ hostile_init_17 = {
 							count = 3
 							create_ship = {
 								name = random
-								design = NAME_Vagabond
+								design = Vagabond
 								graphical_culture = "pirate_01"
 							}
 						}
@@ -3545,7 +3457,7 @@ hostile_init_17 = {
 							count = 3
 							create_ship = {
 								name = random
-								design = "NAME_Corsair"
+								design = "Corsair"
 								graphical_culture = "pirate_01"
 							}
 						}
@@ -3553,7 +3465,7 @@ hostile_init_17 = {
 							count = 3
 							create_ship = {
 								name = random
-								design = "NAME_Marauder"
+								design = "Marauder"
 								graphical_culture = "pirate_01"
 							}
 						}
@@ -3561,7 +3473,7 @@ hostile_init_17 = {
 							count = 2
 							create_ship = {
 								name = random
-								design = "NAME_Black_Earl"
+								design = "Black Earl"
 								graphical_culture = "pirate_01"
 							}
 						}
@@ -3590,10 +3502,6 @@ hostile_init_18 = {
 			factor = 0
 			NOT = { is_in_cluster = resource_cluster_0 }
 		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
 	}
 
 	max_instances = 1
@@ -3661,7 +3569,7 @@ hostile_init_18 = {
 			#}
 
 			create_fleet = {
-				name = "NAME_Old_Guard"
+				name = "Old Guard"
 				effect = {
 					set_owner = event_target:pirate_country
 					set_fleet_flag = pirate_home_system_fleet
@@ -3669,7 +3577,7 @@ hostile_init_18 = {
 						count = 1
 						create_ship = {
 							name = random
-							design = "NAME_Pirate_Galleon"
+							design = "Pirate Galleon"
 							graphical_culture = "pirate_01"
 						}
 					}
@@ -3677,7 +3585,7 @@ hostile_init_18 = {
 					#	count = 4
 					#	create_ship = {
 					#		name = random
-					#		design = "NAME_Black_Earl"
+					#		design = "Black Earl"
 					#		graphical_culture = "pirate_01"
 					#	}
 					#}
@@ -3685,7 +3593,7 @@ hostile_init_18 = {
 					#	count = 4
 					#	create_ship = {
 					#		name = random
-					#		design = "NAME_Corsair"
+					#		design = "Corsair"
 					#		graphical_culture = "pirate_01"
 					#	}
 					#}
@@ -3693,7 +3601,7 @@ hostile_init_18 = {
 					#	count = 2
 					#	create_ship = {
 					#		name = random
-					#		design = "NAME_Marauder"
+					#		design = "Marauder"
 					#		graphical_culture = "pirate_01"
 					#	}
 					#}
@@ -3711,7 +3619,7 @@ hostile_init_18 = {
 			}
 
 			create_fleet = {
-				name = "NAME_Scarred_Veterans"
+				name = "Scarred Veterans"
 				effect = {
 					set_owner = event_target:pirate_country
 					set_fleet_flag = pirate_home_system_fleet
@@ -3719,7 +3627,7 @@ hostile_init_18 = {
 						count = 6
 						create_ship = {
 							name = random
-							design = "NAME_Corsair"
+							design = "Corsair"
 							graphical_culture = "pirate_01"
 						}
 					}
@@ -3727,7 +3635,7 @@ hostile_init_18 = {
 						count = 10
 						create_ship = {
 							name = random
-							design = "NAME_Marauder"
+							design = "Marauder"
 							graphical_culture = "pirate_01"
 						}
 					}
@@ -3735,7 +3643,7 @@ hostile_init_18 = {
 						count = 20
 						create_ship = {
 							name = random
-							design = "NAME_Black_Earl"
+							design = "Black Earl"
 							graphical_culture = "pirate_01"
 						}
 					}
@@ -3743,7 +3651,7 @@ hostile_init_18 = {
 						count = 4
 						create_ship = {
 							name = random
-							design = "NAME_Skull"
+							design = "Skull"
 							graphical_culture = "pirate_01"
 						}
 					}
@@ -3761,11 +3669,11 @@ hostile_init_18 = {
 			}
 
 			create_fleet = {
-				name = "NAME_Young_Blood"
+				name = "Young Blood"
 				effect = {
 					set_owner = event_target:pirate_country
 					create_ship_design = {
-						design = "NAME_Reaver"
+						design = Reaver
 						ftl = warp
 					}
 					while = {
@@ -3777,7 +3685,7 @@ hostile_init_18 = {
 						}
 					}
 					create_ship_design = {
-						design = "NAME_Hunter"
+						design = Hunter
 						ftl = warp
 					}
 					while = {
@@ -3789,7 +3697,7 @@ hostile_init_18 = {
 						}
 					}
 					create_ship_design = {
-						design = "NAME_Vagabond"
+						design = Vagabond
 						ftl = warp
 					}
 					while = {

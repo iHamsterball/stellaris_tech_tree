@@ -40,23 +40,14 @@ difficulty_hard_ai = {
 	navy_size_mult = 0.5
 }
 
-difficulty_normal_ai = {
-}
-
-# For non-playable empires, scales to galaxy size
-difficulty_scaled_insane = {
+# For Fallen Empires
+difficulty_insane_special = {
 	ship_weapon_damage = 1.0
 	ship_hitpoints_mult = 1.0
 	ship_shield_hp_mult = 1.0
 }
 
-difficulty_scaled_hard = {
-	ship_weapon_damage = 0.75
-	ship_hitpoints_mult = 0.75
-	ship_shield_hp_mult = 0.75
-}
-
-difficulty_scaled_normal = {
+difficulty_hard_special = {
 	ship_weapon_damage = 0.5
 	ship_hitpoints_mult = 0.5
 	ship_shield_hp_mult = 0.5
@@ -123,11 +114,7 @@ overcrowding = {
 
 occupation = {
 	pop_happiness = -0.30
-	pop_growth_speed = -0.5
-}
-
-pop_was_enslaved = {
-	pop_happiness = -0.10	
+	pop_growth_req_mult = 1.00
 }
 
 pop_enslaved = {
@@ -144,7 +131,6 @@ pop_enslaved = {
 pop_enslaved_domestic = {
 	pop_happiness = -0.10
 	pop_owner_happiness = 0.1
-	tile_resource_food_mult = 0.10
 	tile_resource_minerals_mult = -0.25
 	tile_resource_energy_mult = -0.25
 	tile_resource_physics_research_mult = -0.5
@@ -234,7 +220,7 @@ pop_owner_happiness = {
 }
 
 pop_planet_terraforming = {
-	pop_happiness = -0.2
+	pop_happiness = -1.0
 }
 
 pop_saved_from_slavery = {
@@ -246,7 +232,7 @@ pop_saved_from_purge = {
 } 
 
 pop_recently_conquered = {
-	pop_happiness = -0.4
+	pop_happiness = -0.25
 } 
 
 pop_angry_subterranean = {
@@ -301,7 +287,7 @@ dangerous_wildlife = {
 
 weak_magnetic_field = {
 	pop_environment_tolerance = -0.05
-	pop_growth_speed = -0.05
+	pop_growth_req_mult = 0.05
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_weak_magnetic_field.dds"
 	icon_frame = 3
@@ -397,7 +383,7 @@ titanic_life = {
 }
 
 eat_the_titans = {
-	tile_resource_food_mult = 0.5 #So much food!
+	tile_resource_food_mult = 1 #So much food!
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_titanic_life.dds"
 	icon_frame = 1
@@ -420,8 +406,8 @@ natural_beauty = {
 
 atmospheric_aphrodisiac = {
 	pop_environment_tolerance = 0.05
-	pop_growth_speed = 0.10
-	pop_government_ethic_attraction = -0.20
+	pop_growth_req_mult = -0.10
+	pop_government_ethic_attraction = -0.10
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_atmospheric_aphrodisiac.dds"
 	icon_frame = 1
@@ -430,7 +416,7 @@ atmospheric_aphrodisiac = {
 atmospheric_hallucinogen = {
 	pop_happiness = 0.10
 	tile_resource_society_research_mult = 0.10
-	pop_government_ethic_attraction = -0.30
+	pop_government_ethic_attraction = -0.10
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_atmospheric_hallucinogen.dds"
 	icon_frame = 2
@@ -507,6 +493,7 @@ capital = {
 
 # Multiplied by the distance from the Capital solar system
 # Distance 650 is about edge-to-edge in a 600 system map
+# 1.0 is 100% chance (checked every 10 years, and when a new Pop appears)
 distance_from_capital = {
 	pop_government_ethic_attraction = -0.001
 }
@@ -716,7 +703,10 @@ assist_research = {
 	icon_frame = 1
 }
 
-faith_in_science = {
+assist_research_explorer = {
+	tile_resource_physics_research_mult = 0.10
+	tile_resource_society_research_mult = 0.10
+	tile_resource_engineering_research_mult = 0.10
 	pop_happiness = 0.10
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_assist_research.dds"
@@ -756,7 +746,6 @@ holy_planet = {
 terraforming_candidate = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
-	important = yes			# if present on a planet, show the planet's nameplate
 }
 
 disconnected_from_sector = {
@@ -1041,15 +1030,69 @@ sponsored_rebels = {
 }
 
 puppet_government = {
-	pop_government_ethic_attraction = 0.25
+	pop_government_ethic_attraction = 0.1
 }
 
-ai_strength = {
+swarm_strength_insane = {
+	ship_weapon_damage = 3
+	ship_hitpoints_mult = 3
+}
+
+swarm_strength_hard = {
+	ship_weapon_damage = 2
+	ship_hitpoints_mult = 2
+}
+
+swarm_strength = {
+	ship_weapon_damage = 1.5
+	ship_hitpoints_mult = 1.5
+}
+
+exd_strength_insane = {
+	ship_weapon_damage = 3
+	ship_hitpoints_mult = 3
+}
+
+exd_strength_hard = {
+	ship_weapon_damage = 2
+	ship_hitpoints_mult = 2
+}
+
+exd_strength = {
+	ship_weapon_damage = 1.5
+	ship_hitpoints_mult = 1.5
+}
+
+ai_strength_insane = {
+	ship_weapon_damage = 3
+	ship_hitpoints_mult = 3
+	tile_resource_minerals_mult = 15
+	tile_resource_energy_mult = 15
+	tile_resource_physics_research_mult = 10
+	tile_resource_society_research_mult = 10
+	tile_resource_engineering_research_mult = 10
+	navy_size_mult = 1.5
+}
+
+ai_strength_hard = {
+	ship_weapon_damage = 2
+	ship_hitpoints_mult = 2
 	tile_resource_minerals_mult = 10
 	tile_resource_energy_mult = 10
 	tile_resource_physics_research_mult = 5
 	tile_resource_society_research_mult = 5
 	tile_resource_engineering_research_mult = 5
+	navy_size_mult = 1
+}
+
+ai_strength = {
+	ship_weapon_damage = 1.5
+	ship_hitpoints_mult = 1.5
+	tile_resource_minerals_mult = 6
+	tile_resource_energy_mult = 6
+	tile_resource_physics_research_mult = 3
+	tile_resource_society_research_mult = 3
+	tile_resource_engineering_research_mult = 3
 	navy_size_mult = 1
 }
 

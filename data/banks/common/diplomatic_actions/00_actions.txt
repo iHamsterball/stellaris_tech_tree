@@ -42,28 +42,20 @@ action_offer_peace = {
 action_offer_trade_deal = {
 	requires_recipient_independence = no
 	requires_actor_independence = no
-	possible = {		
+	possible = {
 		custom_tooltip = {
 			fail_text = "requires_target_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from
-				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+				NOT = { has_civic = civic_fanatic_purifiers	}
 			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
 			OR = {
-				is_same_species = from
-				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+				is_same_species = from			
+				from = { NOT = { has_civic = civic_fanatic_purifiers } }
 			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_target_not_devouring_swarm"
-			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
-		}
-		custom_tooltip = {
-			fail_text = "requires_actor_not_devouring_swarm"
-			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
 		}
 	}
 }
@@ -107,23 +99,15 @@ action_form_defensive_pact = {
 			fail_text = "requires_target_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from
-				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+				NOT = { has_civic = civic_fanatic_purifiers	}
 			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from			
-				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+				from = { NOT = { has_civic = civic_fanatic_purifiers } }
 			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_target_not_devouring_swarm"
-			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
-		}
-		custom_tooltip = {
-			fail_text = "requires_actor_not_devouring_swarm"
-			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
 		}
 	}
 }
@@ -147,23 +131,15 @@ action_form_non_aggression_pact = {
 			fail_text = "requires_target_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from
-				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+				NOT = { has_civic = civic_fanatic_purifiers	}
 			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from			
-				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+				from = { NOT = { has_civic = civic_fanatic_purifiers } }
 			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_target_not_devouring_swarm"
-			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
-		}
-		custom_tooltip = {
-			fail_text = "requires_actor_not_devouring_swarm"
-			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
 		}
 	}
 }
@@ -240,23 +216,15 @@ action_guarantee_independence = {
 			fail_text = "requires_target_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from
-				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+				NOT = { has_civic = civic_fanatic_purifiers	}
 			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from			
-				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+				from = { NOT = { has_civic = civic_fanatic_purifiers } }
 			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_target_not_devouring_swarm"
-			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
-		}
-		custom_tooltip = {
-			fail_text = "requires_actor_not_devouring_swarm"
-			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
 		}
 	}
 }
@@ -294,23 +262,15 @@ action_support_independence = {
 			fail_text = "requires_target_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from
-				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+				NOT = { has_civic = civic_fanatic_purifiers	}
 			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from			
-				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+				from = { NOT = { has_civic = civic_fanatic_purifiers } }
 			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_target_not_devouring_swarm"
-			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
-		}
-		custom_tooltip = {
-			fail_text = "requires_actor_not_devouring_swarm"
-			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
 		}
 	}
 }
@@ -336,14 +296,14 @@ action_form_migration_pact = {
 			fail_text = "requires_target_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from
-				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+				NOT = { has_civic = civic_fanatic_purifiers	}
 			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from			
-				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+				from = { NOT = { has_civic = civic_fanatic_purifiers } }
 			}
 		}
 		custom_tooltip = {
@@ -380,23 +340,15 @@ action_offer_federation_association_status = {
 			fail_text = "requires_target_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from
-				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+				NOT = { has_civic = civic_fanatic_purifiers	}
 			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from			
-				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+				from = { NOT = { has_civic = civic_fanatic_purifiers } }
 			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_target_not_devouring_swarm"
-			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
-		}
-		custom_tooltip = {
-			fail_text = "requires_actor_not_devouring_swarm"
-			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
 		}
 	}
 }
@@ -425,19 +377,11 @@ action_ask_for_federation_association_status = {
 	possible = {
 		custom_tooltip = {
 			fail_text = "requires_target_not_fanatic_purifiers"
-			NOT = { has_valid_civic = civic_fanatic_purifiers	}
+			NOT = { has_civic = civic_fanatic_purifiers	}
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
-			from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
-		}
-		custom_tooltip = {
-			fail_text = "requires_target_not_devouring_swarm"
-			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
-		}
-		custom_tooltip = {
-			fail_text = "requires_actor_not_devouring_swarm"
-			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
+			from = { NOT = { has_civic = civic_fanatic_purifiers } }
 		}
 	}
 }
@@ -474,23 +418,15 @@ action_invite_to_federation = {
 			fail_text = "requires_target_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from
-				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+				NOT = { has_civic = civic_fanatic_purifiers	}
 			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from			
-				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+				from = { NOT = { has_civic = civic_fanatic_purifiers } }
 			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_target_not_devouring_swarm"
-			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
-		}
-		custom_tooltip = {
-			fail_text = "requires_actor_not_devouring_swarm"
-			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
 		}
 	}
 }
@@ -510,19 +446,11 @@ action_kick_from_federation = {
 	possible = {
 		custom_tooltip = {
 			fail_text = "requires_target_not_fanatic_purifiers"
-			NOT = { has_valid_civic = civic_fanatic_purifiers	}
+			NOT = { has_civic = civic_fanatic_purifiers	}
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
-			from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
-		}
-		custom_tooltip = {
-			fail_text = "requires_target_not_devouring_swarm"
-			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
-		}
-		custom_tooltip = {
-			fail_text = "requires_actor_not_devouring_swarm"
-			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
+			from = { NOT = { has_civic = civic_fanatic_purifiers } }
 		}
 	}
 }
@@ -540,23 +468,15 @@ action_ask_to_join_federation = {
 			fail_text = "requires_target_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from
-				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+				NOT = { has_civic = civic_fanatic_purifiers	}
 			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from			
-				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+				from = { NOT = { has_civic = civic_fanatic_purifiers } }
 			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_target_not_devouring_swarm"
-			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
-		}
-		custom_tooltip = {
-			fail_text = "requires_actor_not_devouring_swarm"
-			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
 		}
 	}
 }
@@ -585,23 +505,15 @@ action_open_borders = {
 			fail_text = "requires_target_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from
-				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+				NOT = { has_civic = civic_fanatic_purifiers	}
 			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from			
-				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+				from = { NOT = { has_civic = civic_fanatic_purifiers } }
 			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_target_not_devouring_swarm"
-			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
-		}
-		custom_tooltip = {
-			fail_text = "requires_actor_not_devouring_swarm"
-			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
 		}
 	}
 }
@@ -637,23 +549,15 @@ action_demand_vassalization = {
 			fail_text = "requires_target_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from
-				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+				NOT = { has_civic = civic_fanatic_purifiers	}
 			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from			
-				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+				from = { NOT = { has_civic = civic_fanatic_purifiers } }
 			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_target_not_devouring_swarm"
-			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
-		}
-		custom_tooltip = {
-			fail_text = "requires_actor_not_devouring_swarm"
-			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
 		}
 	}
 }
@@ -673,23 +577,15 @@ action_demand_protectorate = {
 			fail_text = "requires_target_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from
-				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+				NOT = { has_civic = civic_fanatic_purifiers	}
 			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from			
-				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+				from = { NOT = { has_civic = civic_fanatic_purifiers } }
 			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_target_not_devouring_swarm"
-			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
-		}
-		custom_tooltip = {
-			fail_text = "requires_actor_not_devouring_swarm"
-			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
 		}
 	}
 }
@@ -709,23 +605,15 @@ action_demand_tributary = {
 			fail_text = "requires_target_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from
-				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+				NOT = { has_civic = civic_fanatic_purifiers	}
 			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from			
-				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+				from = { NOT = { has_civic = civic_fanatic_purifiers } }
 			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_target_not_devouring_swarm"
-			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
-		}
-		custom_tooltip = {
-			fail_text = "requires_actor_not_devouring_swarm"
-			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
 		}
 	}
 }
@@ -788,19 +676,11 @@ action_ask_to_become_vassalized = {
 	possible = {
 		custom_tooltip = {
 			fail_text = "requires_target_not_fanatic_purifiers"
-			NOT = { has_valid_civic = civic_fanatic_purifiers	}
+			NOT = { has_civic = civic_fanatic_purifiers	}
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
-			from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
-		}
-		custom_tooltip = {
-			fail_text = "requires_target_not_devouring_swarm"
-			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
-		}
-		custom_tooltip = {
-			fail_text = "requires_actor_not_devouring_swarm"
-			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
+			from = { NOT = { has_civic = civic_fanatic_purifiers } }
 		}
 	}
 }
@@ -817,23 +697,15 @@ action_ask_to_become_protectorate = {
 			fail_text = "requires_target_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from
-				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+				NOT = { has_civic = civic_fanatic_purifiers	}
 			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from			
-				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+				from = { NOT = { has_civic = civic_fanatic_purifiers } }
 			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_target_not_devouring_swarm"
-			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
-		}
-		custom_tooltip = {
-			fail_text = "requires_actor_not_devouring_swarm"
-			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
 		}
 	}
 }
@@ -850,23 +722,15 @@ action_ask_to_become_tributary = {
 			fail_text = "requires_target_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from
-				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+				NOT = { has_civic = civic_fanatic_purifiers	}
 			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from			
-				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+				from = { NOT = { has_civic = civic_fanatic_purifiers } }
 			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_target_not_devouring_swarm"
-			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
-		}
-		custom_tooltip = {
-			fail_text = "requires_actor_not_devouring_swarm"
-			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
 		}
 	}
 }

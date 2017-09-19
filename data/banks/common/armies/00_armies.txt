@@ -171,23 +171,6 @@ robotic_army = {
 	
 	prerequisites = { "tech_droid_workers" }
 }
-robotic_defense_army = {
-	robotic = yes
-	defensive = yes
-	damage = 0.96
-	health = 1.70
-	time = 60
-	maintenance = 0.23
-	icon_frame = 4
-	has_species = no
-	
-	cost = {
-		minerals = 50
-		energy = 8
-	}
-	
-	prerequisites = { "tech_droid_workers" }
-}
 
 # Synthetic Armies
 android_army = {
@@ -202,24 +185,6 @@ android_army = {
 	cost = {
 		minerals = 150
 		energy = 20
-	}
-	
-	prerequisites = { "tech_synthetic_workers" }
-}
-
-android_defense_army = {
-	robotic = yes
-	defensive = yes
-	damage = 1.70
-	health = 2.17
-	time = 80
-	maintenance = 0.45
-	icon_frame = 4
-	has_species = no
-	
-	cost = {
-		minerals = 75
-		energy = 10
 	}
 	
 	prerequisites = { "tech_synthetic_workers" }
@@ -447,7 +412,6 @@ titanic_assault_army = {
 	maintenance = 1.0
 	icon_frame = 8
 	assault = yes
-	has_species = no
 	
 	cost = {
 		minerals = 250
@@ -455,6 +419,14 @@ titanic_assault_army = {
 	}
 	
 	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
 		custom_tooltip = {
 			text = titanic_troop_limit_tooltip
 			planet = { has_planet_flag = titanic_life_can_build }
@@ -507,7 +479,6 @@ titanic_guardian_army = {
 	time = 5
 	maintenance = 1.0
 	icon_frame = 8
-	has_species = no
 	
 	potential = {
 		always = no
@@ -522,7 +493,6 @@ shroud_army = {
 	time = 5
 	maintenance = -1
 	icon_frame = 9
-	has_species = no
 	
 	potential = {
 		always = no

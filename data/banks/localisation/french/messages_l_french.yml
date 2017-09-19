@@ -288,14 +288,14 @@
  MESSAGE_ENEMY_VASSAL_ENTER_WAR:0 "Entrée en guerre d'une dépendance ennemie"
  MESSAGE_ENEMY_VASSAL_ENTER_WAR_DESC:1 "La $ENEMY|Y$, dépendance de l'ennemi, est entrée en guerre contre nous."
  MESSAGE_ENEMY_LEAVES_WAR:0 "Retrait d'un ennemi"
- MESSAGE_ENEMY_LEAVES_WAR_DESC:1 "La $ENEMY|Y$ ayant été vassalisée ou annexée par la $OVERLORD|Y$, elle s'est retirée du conflit."
+ MESSAGE_ENEMY_LEAVES_WAR_DESC:1 "La $ENEMY$ ayant été vassalisée ou annexée par la $OVERLORD|Y$, elle s'est retirée du conflit."
  
  ####################################
  # Fleet Detected
  ####################################
- MESSAGE_FLEET_DETECTED_WE:0 "La flotte §H$FLEET$§! de $WHO|Y$ se dirige droit vers le système de §Y$TARGET$ !§!"
+ MESSAGE_FLEET_DETECTED_WE:0 "La flotte §H$FLEET$§! de $WHO|Y$ se dirige droit vers le système de §Y$TARGET$ !"
  MESSAGE_FLEET_DETECTED_MESSAGE_TYPE_TITLE:0 "Flotte détectée"
- MESSAGE_OBJECT_DETECTED_WE:0 "Un objet non identifié a été détecté dans le système de §Y$TARGET$ !§!"
+ MESSAGE_OBJECT_DETECTED_WE:0 "Un objet non identifié a été détecté dans le système de §Y$TARGET$ !"
  MESSAGE_OBJECT_DETECTED_MESSAGE_TYPE_TITLE:0 "Objet non identifié détecté"
 
  ####################################
@@ -476,5 +476,3 @@
  MESSAGE_MEGASTRUCTURE_UPGRADED:1 "Amélioration de la mégastructure de type $MEGASTRUCTURE|H$ du système de $SYSTEM|H$ terminée."
  FLEET_BUILD_ORDER_CANCELLED_MESSAGE_TYPE_TITLE:0 "$AUTO_EXPLORE_CANCELLED_MESSAGE_TYPE_TITLE$"
  MESSAGE_FLEET_BUILD_ORDER_CANCELLED_MESSAGE:0 "Notre $FLEET|H$ n'a pas pu construire la $STATION|H$ du système de $SYSTEM|H$. Les ressources ont été remises en réserve."
- WAR_DEMANDS_2:0 "Ces exigences ont été formulées :\n"
- WAR_DEMANDS_2_NONE:0 "Aucune exigence n'a été formulée."

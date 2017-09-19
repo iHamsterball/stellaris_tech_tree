@@ -7,11 +7,7 @@ ap_engineered_evolution = {
 			country_event = { id = utopia.2700 }
 		}
 	}
-	possible = {
-		custom_tooltip = {
-			fail_text = "synthetic_empire_biological_ascension"
-			NOT = { has_trait = trait_mechanical }
-		}	
+	possible = {		
 		custom_tooltip = {
 			fail_text = "requires_ascension_perks_1"
 			num_ascension_perks > 0
@@ -54,10 +50,6 @@ ap_evolutionary_mastery = {
 	}
 	possible = {
 		custom_tooltip = {
-			fail_text = "synthetic_empire_biological_ascension"
-			NOT = { has_trait = trait_mechanical }
-		}
-		custom_tooltip = {
 			fail_text = "requires_ascension_perks_3"
 			num_ascension_perks > 2
 		}
@@ -95,17 +87,8 @@ ap_the_flesh_is_weak = {
 	}
 	modifier = {
 		country_robot_maintenance_mult = -0.15
-		country_robot_build_speed_mult = 0.25
 	}	
-	possible = {
-		custom_tooltip = {
-			fail_text = "synthetic_empire_synthetic_ascension"
-			NOT = { has_trait = trait_mechanical }
-		}
-		custom_tooltip = {
-			fail_text = "hive_mind_biological_ascension_only2"
-			NOT = { has_authority = auth_hive_mind }
-		}
+	possible = {		
 		custom_tooltip = {
 			fail_text = "requires_ascension_perks_1"
 			num_ascension_perks > 0
@@ -121,6 +104,10 @@ ap_the_flesh_is_weak = {
 		custom_tooltip = {
 			fail_text = "requires_not_ap_mind_over_matter"
 			NOT = { has_ascension_perk = ap_mind_over_matter }
+		}
+		custom_tooltip = {
+			fail_text = "hive_mind_biological_ascension_only2"
+			NOT = { has_authority = auth_hive_mind }
 		}
 	}
 	
@@ -144,17 +131,8 @@ ap_synthetic_evolution = {
 	}
 	modifier = {
 		country_robot_maintenance_mult = -0.25
-		country_robot_build_speed_mult = 0.25
 	}		
 	possible = {
-		custom_tooltip = {
-			fail_text = "synthetic_empire_synthetic_ascension"
-			NOT = { has_trait = trait_mechanical }
-		}
-		custom_tooltip = {
-			fail_text = "hive_mind_biological_ascension_only2"
-			NOT = { has_authority = auth_hive_mind }
-		}
 		custom_tooltip = {
 			fail_text = "requires_ascension_perks_3"
 			num_ascension_perks > 2
@@ -174,6 +152,10 @@ ap_synthetic_evolution = {
 		custom_tooltip = {
 			fail_text = "requires_finished_cybernetics_project"
 			NOT = { has_special_project = FLESH_IS_WEAK_PROJECT }
+		}
+		custom_tooltip = {
+			fail_text = "hive_mind_biological_ascension_only2"
+			NOT = { has_authority = auth_hive_mind }
 		}
 	}
 	
@@ -196,15 +178,7 @@ ap_mind_over_matter = {
 		}
 		add_research_option = tech_telepathy
 	}
-	possible = {	
-		custom_tooltip = {
-			fail_text = "synthetic_empire_psionic_ascension"
-			NOT = { has_trait = trait_mechanical }
-		}
-		custom_tooltip = {
-			fail_text = "hive_mind_biological_ascension_only1"
-			NOT = { has_authority = auth_hive_mind }
-		}
+	possible = {		
 		custom_tooltip = {
 			fail_text = "requires_ascension_perks_1"
 			num_ascension_perks > 0
@@ -220,6 +194,10 @@ ap_mind_over_matter = {
 		custom_tooltip = {
 			fail_text = "requires_not_ap_the_flesh_is_weak"
 			NOT = { has_ascension_perk = ap_the_flesh_is_weak }
+		}
+		custom_tooltip = {
+			fail_text = "hive_mind_biological_ascension_only1"
+			NOT = { has_authority = auth_hive_mind }
 		}
 	}
 	
@@ -243,20 +221,16 @@ ap_transcendence = {
 	}
 	possible = {
 		custom_tooltip = {
-			fail_text = "synthetic_empire_psionic_ascension"
-			NOT = { has_trait = trait_mechanical }
-		}
-		custom_tooltip = {
-			fail_text = "hive_mind_biological_ascension_only1"
-			NOT = { has_authority = auth_hive_mind }
-		}
-		custom_tooltip = {
 			fail_text = "requires_ascension_perks_3"
 			num_ascension_perks > 2
 		}
 		custom_tooltip = {
 			fail_text = "requires_ap_mind_over_matter"
 			has_ascension_perk = ap_mind_over_matter
+		}
+		custom_tooltip = {
+			fail_text = "hive_mind_biological_ascension_only1"
+			NOT = { has_authority = auth_hive_mind }
 		}
 	}
 	
@@ -272,10 +246,7 @@ ap_transcendence = {
 }
 
 ap_world_shaper = {
-	on_enabled = {
-		give_technology = { message = no tech = tech_atmospheric_manipulation }
-	}
-	possible = {
+	possible = {		
 		custom_tooltip = {
 			fail_text = "requires_technology_terrestrial_sculpting"
 			has_technology = tech_terrestrial_sculpting
@@ -385,7 +356,8 @@ ap_master_builders = {
 		}
 	}
 	modifier = {
-		megastructure_build_speed_mult = 1
+		megastructure_build_speed_mult = 0.33
+		mod_megastructure_build_cost_mult = -0.25
 	}
 	
 	potential = {

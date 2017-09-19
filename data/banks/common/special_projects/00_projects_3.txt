@@ -44,7 +44,7 @@ special_project = {
 	requirements = {
 		shipclass_science_ship = 1
 		leader = scientist
-		skill = 2
+		skill > 1
 	}
 	
 	on_success = {
@@ -71,7 +71,7 @@ special_project = {
 	requirements = {
 		shipclass_science_ship = 1
 		leader = scientist
-		skill = 2
+		skill > 1
 	}
 
 	on_success = {
@@ -95,7 +95,7 @@ special_project = {
 #	requirements = {
 #		shipclass_science_ship = 1
 #		leader = scientist
-#		skill = 2
+#		skill > 1
 #	}
 #
 #	on_success = {
@@ -120,7 +120,7 @@ special_project = {
 	requirements = {
 		shipclass_science_ship = 1
 		leader = scientist
-		skill = 2
+		skill > 1
 	}
 
 	on_success = {
@@ -143,7 +143,7 @@ special_project = {
 	requirements = {
 		shipclass_science_ship = 1
 		leader = scientist
-		skill = 2
+		skill > 1
 	}
 
 	on_success = {
@@ -269,7 +269,7 @@ special_project = {
 	requirements = {
 		shipclass_science_ship = 1
 		leader = scientist
-		skill = 2
+		skill > 1
 	}
 
 	on_success = {
@@ -344,7 +344,7 @@ special_project = {
 	requirements = {
 		shipclass_military = 2
 		#leader = admiral
-		#skill = 2
+		#skill > 1
 	}
 
 	on_success = {
@@ -373,7 +373,7 @@ special_project = {
 	requirements = {
 		shipclass_science_ship = 1
 		leader = scientist
-		skill = 3
+		skill > 2
 	}
 
 	on_success = {
@@ -384,7 +384,8 @@ special_project = {
 # Master's Writings - Politics
 special_project = {
 	key = "MASTERS_WRITINGS_POLITICS"
-	cost = 500
+	#cost = 0
+	days_to_research = 200
 	tech_department = society_technology
 	timelimit = -1
 	picture = GFX_evt_star_chart
@@ -410,7 +411,8 @@ special_project = {
 # Master's Writings - Politics
 special_project = {
 	key = "MASTERS_WRITINGS_PHILOSOPHY"
-	cost = 500
+	#cost = 0
+	days_to_research = 200
 	tech_department = society_technology
 	timelimit = -1
 	picture = GFX_evt_star_chart
@@ -436,7 +438,8 @@ special_project = {
 # Master's Writings - Diplomacy
 special_project = {
 	key = "MASTERS_WRITINGS_DIPLOMACY"
-	cost = 500
+	#cost = 0
+	days_to_research = 200
 	tech_department = society_technology
 	timelimit = -1
 	picture = GFX_evt_star_chart
@@ -462,7 +465,8 @@ special_project = {
 # Master's Writings - War
 special_project = {
 	key = "MASTERS_WRITINGS_WAR"
-	cost = 500
+	#cost = 0
+	days_to_research = 200
 	tech_department = society_technology
 	timelimit = -1
 	picture = GFX_evt_small_space_battle
@@ -501,7 +505,7 @@ special_project = {
 		shipclass_military = 3
 		#shipclass_science_ship = 1
 		#leader = admiral
-		#skill = 2
+		#skill > 1
 		#has_trait = leader_trait_trickster
 	}
 
@@ -543,7 +547,8 @@ special_project = {
 # Giant ocean buried ship
 special_project = {
 	key = "ANCIENT_OCEAN_SHIP"
-	cost = 1000
+	#cost = 0
+	days_to_research = 200
 	tech_department = engineering_technology
 	timelimit = -1
 	location = no

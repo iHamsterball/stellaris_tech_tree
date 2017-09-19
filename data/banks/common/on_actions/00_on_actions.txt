@@ -155,13 +155,11 @@ on_planet_attackers_win = {
 		techrisk.4
 		colony.114
 		crisis.201
-		crisis.219
 		action.8
 		action.14
 		colony.158
 		crisis.2400
 		action.51
-		factions.12
 	}
 }
 
@@ -175,7 +173,7 @@ on_planet_attackers_lose = {
 }
 
 # Triggers country_event for the defender upon victory
-# Root = country, planet owner
+# This = country, planet owner
 # From = country, attack leader
 # FromFrom = planet
 on_planet_defenders_win = {
@@ -242,12 +240,6 @@ on_entering_system = {
 		guardian.2061
 		guardian.3202
 		guardian.2105
-		utopia.2010
-		utopia.2012
-		utopia.2014
-		utopia.2016
-		precursor.2101
-		precursor.2102
 	}
 	random_events = {
 		100 = 0
@@ -309,17 +301,13 @@ on_survey = {
 		action.12
 		tutorial.50
 		tutorial.55
-		precursor.101
 		precursor.102
-		precursor.601
 		precursor.602
-		precursor.1101
 		precursor.1102
-		precursor.1601
 		precursor.1602
-		#precursor.2102
-		#precursor.2200
-		#precursor.2201
+		precursor.2102
+		precursor.2200
+		precursor.2201
 		guardian.2010
 		action.54
 	}
@@ -341,7 +329,6 @@ on_survey = {
 # FromFrom = Fleet of the science ship that surveyed it, if any
 on_planet_surveyed = {
 	events = {
-		action.33
 		action.46
 		country.259
 	}
@@ -354,6 +341,7 @@ on_planet_surveyed = {
 on_system_survey = {
 	events = {
 		tutorial.18
+		action.33
 	}
 }
 
@@ -394,7 +382,7 @@ on_colonized = {
 		crisis.203
 		anomaly.4171
 		tutorial.27
-		tutorial.444 #Increase num_colonies variable
+		tutorial.444 #Increase num_colonies variable	
 		#factions.105 # Colonialists New Colony
 		akx.9499
 		#action.55
@@ -529,7 +517,6 @@ on_fleet_destroyed_perp = {
 		akx.9318
 		akx.10030
 		factions.330
-		factions.10
 	}
 	random_events = {
 		300 = 0
@@ -686,7 +673,6 @@ on_purge_complete = {
 		# mandate.131
 		action.21 # Opinion effect on other empires
 		utopia.180 # Gain resources for fanatic purifiers civic
-		utopia.181 # Gain resources for devouring swarm
 	}
 }
 
@@ -759,7 +745,6 @@ on_post_communications_established = {
 		tutorial.60
 		tutorial.61
 		tutorial.62
-		factions.11
 	}
 }
 
@@ -787,8 +772,8 @@ on_leader_level_up = {
 # This = Country
 on_ruler_set = {
 	events = {
-		action.47	# Remove election-filler leaders when ruler is set
-		mandate.1	# "ruler X elected, check situation log for their mandate"=
+		action.47
+		mandate.1	# "ruler X elected, check sitch log for their mandate"
 	}
 }
 
@@ -805,9 +790,9 @@ on_ruler_removed = {
 # This = Country
 on_ruler_back_to_pre_ruler_class = {
 	events = {
-		utopia.2511	# leader gets cyborg trait for their normal leader class
-		utopia.2561	# leader gets synthetic trait for their normal leader class
-		utopia.2653	# leader gets psionic trait for their normal leader class
+		utopia.2511
+		utopia.2561
+		utopia.2653
 	}
 }
 
@@ -867,8 +852,7 @@ on_ship_designed = {
 on_war_beginning = {
 	events = {
 		action.41
-		#diplomatic.1002
-		factions.13
+		diplomatic.1002
 	}
 }
 
@@ -877,7 +861,6 @@ on_war_beginning = {
 # From = Main Winner
 on_war_ended = {
 	events = {
-		fallen_empires.14
 	}
 }
 
@@ -944,14 +927,6 @@ on_emergency_ftl = {
 		10 = leader.12
 		10 = leader.13
 		10 = leader.14
-	}
-}
-
-#A building construction has been completed.
-# This = Army
-# From = Planet
-on_army_recruited = {
-	events = {
 	}
 }
 
@@ -1218,13 +1193,11 @@ on_leave_alliance = {
 	}
 }
 
-#This = destroyed country
-#From = optional, destroyer (country)
+#This = Country scope
 on_country_destroyed = {
 	events = {
 		crisis.210
 		crisis.1270
-		action.61
 	}
 }
 
@@ -1281,17 +1254,15 @@ on_megastructure_upgraded = {
 on_colony_1_year_old = {
 	events = {
 		### Planet Modifiers - 9
-		#colony_mod.1 # Irradiated
-		#colony_mod.2 # Titanic Life
-		#colony_mod.3 # Unstable Tectonics
-		#colony_mod.4 # Asteroid Belt
-		#colony_mod.5 # Atmospheric Hallucinogen
-		#colony_mod.12 # Asteroid Impacts
-		#colony_mod.14 # Asteroid Impacts - Good
-		#colony_mod.16 # Strong Magnetic Field - Good
-		#colony_mod.17 # Strong Magnetic Field - Bad
-		#colony_mod.121 # Gatekeeper for Asteroid Impacts
-		colony_mod.161 # Gatekeeper for modifier colony events
+		colony_mod.1 # Irradiated
+		colony_mod.2 # Titanic Life
+		colony_mod.3 # Unstable Tectonics
+		colony_mod.4 # Asteroid Belt
+		colony_mod.5 # Atmospheric Hallucinogen
+		colony_mod.12 # Asteroid Impacts
+		colony_mod.14 # Asteroid Impacts - Good
+		colony_mod.16 # Strong Magnetic Field - Good
+		colony_mod.17 # Strong Magnetic Field - Bad
 	}
 
 	random_events = {
@@ -1353,7 +1324,7 @@ on_colony_2_years_old = {
 		6 = colony.180 # Asteroid Sighted
 		3 = colony.2001 # Trouble in Paradise
 		15 = colony.2005 # Submerged Cruiser
-		
+		3 = colony.2010 # A Change of Heart
 		15 = colony.2015 # Odd Factory
 		15 = colony.2025 # What Separates Us
 		15 = colony.2030 # Assassination
@@ -1440,12 +1411,6 @@ on_colony_4_years_old = {
 }
 
 on_colony_5_years_old = {
-	random_events = {
-		300 = 0
-		
-		# Colony Events
-		3 = colony.2010 # A Change of Heart
-	}
 }
 
 on_colony_6_years_old = {
@@ -1467,9 +1432,9 @@ on_colony_10_years_old = {
 # scope: country, from: leader
 on_leader_spawned = {
 	events = {
-		utopia.2510	# New Leaders Get Cyborg Trait
-		utopia.2560	# New Leaders Get Synthetic Trait
-		utopia.2651	# New Leaders Get Psionic Trait
+		utopia.2510
+		utopia.2560
+		utopia.2651
 		utopia.6000 # hive mind ruler gets hive mind trait to make them immortal
 	}
 	random_events = {

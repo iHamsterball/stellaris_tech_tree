@@ -146,8 +146,6 @@
  01_FALLEN_EMPIRE_PATRONIZING_DOW_ACCEPT:0 "Ах, глупые дети! Мы научим вас."
  01_FALLEN_EMPIRE_ANGRY_DOW_SELECT:0 "Только представьте себе галактику, где [From.GetSpeciesNamePlural] не существуют."
  01_FALLEN_EMPIRE_ANGRY_DOW_ACCEPT:0 "Вы - не более чем межзвездные сорняки. Пора вырвать вас из нашего сада."
- 01_AWAKENED_EMPIRE_DOW_ACCEPT:0 "Мы собирались разобраться с вашей мелкой империей позже. Впрочем, можно сделать это и сейчас, хуже не будет."
- 02_AWAKENED_EMPIRE_DOW_ACCEPT:0 "Неужели вы, [From.GetSpeciesNamePlural], так жаждете умереть? Пусть будет так."
  
  # AI Personality-based replies
  # Honorbound Warriors
@@ -671,7 +669,7 @@
  03_OFFER_TRADE_DEAL_ACCEPT:0 "Рассмотрев ваше торговое предложение, [Root.GetRulerTitle] [Root.GetRulerName] его принимает."
  04_OFFER_TRADE_DEAL_ACCEPT:0 "Эта сделка кажется нам честной. Мы принимаем предложение."
  05_OFFER_TRADE_DEAL_ACCEPT:0 "Ваши условия нам подходят. [Root.GetName] принимает ваше торговое предложение."
- 06_OFFER_TRADE_DEAL_ACCEPT:0 "Очень хорошо, но [Root.GetName] принимает ваше торговое предложение."
+ 06_OFFER_TRADE_DEAL_ACCEPT:0 "Возможно, мы об этом пожалеем, но [Root.GetName] принимает ваше торговое предложение."
  07_OFFER_TRADE_DEAL_ACCEPT:0 "Мы можем отличить хорошее предложение от плохого! [Root.GetName] принимает ваши условия."
  08_OFFER_TRADE_DEAL_ACCEPT:0 "После долгих размышлений [Root.GetRulerTitle] [Root.GetRulerName] принимает ваше торговое предложение."
  01_OFFER_TRADE_DEAL_REFUSE:0 "Ну уж нет! [Root.GetRulerTitle] [Root.GetRulerName] никогда на это не согласится."
@@ -827,7 +825,7 @@
  02_END_RIVALRY_PATRONIZING:0 "Значит, истерика прошла?"
  01_END_RIVALRY_ANGRY:0 "Будет ли конец вашему мучительному безрассудству, [From.GetSpeciesName]?"
  02_END_RIVALRY_ANGRY:0 "Умоляй о прощении, примитивное существо, и, ВОЗМОЖНО, мы им тебя удостоим."
- 01_END_RIVALRY_PROPOSE:0 "Давайте прекратим это бессмысленное соперничество."
+ 01_END_RIVALRY_PROPOSE:0 "Вы не намереваетесь прекратить свою подлую кампанию?"
  01_END_RIVALRY_ACCEPT_FRIENDLY:0 "Мы постараемся вас простить, так как мы друзья."
  02_END_RIVALRY_ACCEPT_FRIENDLY:0 "Если уж на то пошло, мы до сих не понимаем, почему вообще вы сочли нашу империю своим соперником..."
  03_END_RIVALRY_ACCEPT_FRIENDLY:0 "Забыть ваше предательство будет трудно. Но мы все равно рады."
@@ -1198,3 +1196,5 @@
  01_ASK_BECOME_SATELLITE_PROPOSE:0 "Мы хотели бы быть уверенными, что наши будущие знания в надежных руках. Может ли [From.GetName] принять нас как сателлита?"
  01_ASK_BECOME_SATELLITE_ACCEPT:0 "Мы проследим, чтобы ваши открытия служили прогрессу в правильном направлении. Уже завтра галактика станет более безопасным местом."
  01_ASK_BECOME_SATELLITE_REFUSE:0 "Мы не знаем, как поступать с исследованиями, которые проводят [From.GetAdj]. [Root.GetName] не может принять вас как сателлита."
+ 01_AWAKENED_EMPIRE_DOW_ACCEPT:0 "Мы планировали иметь дело с вашей маленькой империи позже. В этом вопросе, теперь столь же хорошее время любому."
+ 02_AWAKENED_EMPIRE_DOW_ACCEPT:0 "Вы [From.GetSpeciesNamePlural] дие действительно хотят умереть? Пусть так и будет."

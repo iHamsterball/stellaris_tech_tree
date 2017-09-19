@@ -84,7 +84,7 @@ opinion_repugnant_species = {
 	opinion = {
 		base = 0
 		modifier = {
-			add = -25
+			add = -15
 			FROM = {
 				OR = {
 					is_country_type = default
@@ -99,25 +99,23 @@ opinion_repugnant_species = {
 					NOT = { is_same_species = root }
 				}	
 			}
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
 			NOT = {
-				AND = {
-					exists = ruler
-					ruler = {
-						species = {
-							has_trait = "trait_repugnant"
-						}
-						NOT = { is_same_species = root }
-					}
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
 				}
+				exists = ruler
+				ruler = {
+					species = {
+						has_trait = "trait_repugnant"
+					}
+					NOT = { is_same_species = root }
+				}				
 			}
 		}
 		modifier = {
-			add = -10
+			add = -5
 			FROM = {
 				OR = {
 					is_country_type = default
@@ -153,7 +151,7 @@ opinion_charismatic_species = {
 	opinion = {
 		base = 0
 		modifier = {
-			add = 25
+			add = 15
 			FROM = {
 				exists = ruler
 				ruler = {
@@ -215,6 +213,15 @@ opinion_policy_slavery = {
 			has_ethic = "ethic_fanatic_egalitarian"
 			allows_slavery = no
 			
+			FROM = {
+				allows_slavery = yes
+			}
+		}
+
+		modifier = {
+			add = 10
+			allows_slavery = no
+
 			FROM = {
 				allows_slavery = yes
 			}
@@ -460,13 +467,13 @@ opinion_xenophobia = {
 		
 		modifier = {
 			add = -20
-			NOT = { has_valid_civic = civic_fanatic_purifiers } #handled elsewhere
+			NOT = { has_civic = civic_fanatic_purifiers } #handled elsewhere
 			has_ethic = "ethic_xenophobe"
 			NOT = { is_same_species_class = FROM }
 		}
 		modifier = {
 			add = -10
-			NOT = { has_valid_civic = civic_fanatic_purifiers } #handled elsewhere
+			NOT = { has_civic = civic_fanatic_purifiers } #handled elsewhere
 			has_ethic = "ethic_xenophobe"
 			is_same_species_class = FROM
 			NOT = { is_same_species = FROM }
@@ -474,7 +481,7 @@ opinion_xenophobia = {
 		}
 		modifier = {
 			add = -5
-			NOT = { has_valid_civic = civic_fanatic_purifiers } #handled elsewhere
+			NOT = { has_civic = civic_fanatic_purifiers } #handled elsewhere
 			has_ethic = "ethic_xenophobe"
 			is_same_species_class = FROM
 			NOT = { is_same_species = FROM }
@@ -483,13 +490,13 @@ opinion_xenophobia = {
 		
 		modifier = {
 			add = -40
-			NOT = { has_valid_civic = civic_fanatic_purifiers } #handled elsewhere
+			NOT = { has_civic = civic_fanatic_purifiers } #handled elsewhere
 			has_ethic = "ethic_fanatic_xenophobe"
 			NOT = { is_same_species_class = FROM }
 		}
 		modifier = {
 			add = -20
-			NOT = { has_valid_civic = civic_fanatic_purifiers } #handled elsewhere
+			NOT = { has_civic = civic_fanatic_purifiers } #handled elsewhere
 			has_ethic = "ethic_fanatic_xenophobe"
 			is_same_species_class = FROM
 			NOT = { is_same_species = FROM }
@@ -497,7 +504,7 @@ opinion_xenophobia = {
 		}
 		modifier = {
 			add = -10
-			NOT = { has_valid_civic = civic_fanatic_purifiers } #handled elsewhere
+			NOT = { has_civic = civic_fanatic_purifiers } #handled elsewhere
 			has_ethic = "ethic_fanatic_xenophobe"
 			is_same_species_class = FROM
 			NOT = { is_same_species = FROM }
@@ -1186,7 +1193,7 @@ opinion_was_in_trade = {
 		base = -1
 	}
 	
-	min = -200
+	min = -50
 	
 	decay = {
 		base = 2
@@ -2318,7 +2325,6 @@ triggered_opinion_imperial_authority = {
 triggered_opinion_both_hive_mind = {
 	trigger = {
 		has_ethic = ethic_hive_mind
-		NOT = { has_valid_civic = "civic_hive_devouring_swarm" }
 		FROM = {
 			has_ethic = ethic_hive_mind
 		}

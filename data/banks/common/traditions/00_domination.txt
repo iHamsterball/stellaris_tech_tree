@@ -4,9 +4,6 @@ tr_domination_adopt = {
 	cost = { unity = @cost }
 	
 	# bonus: reduce all subjugation wargoal costs (see 00_subject_war_demands.txt)
-	modifier = {
-		country_subject_acceptance_add = 20
-	}
 	
 	ai_weight = {
 		factor = 20		

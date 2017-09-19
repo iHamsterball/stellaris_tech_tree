@@ -865,7 +865,7 @@ pc_pulsar = {
 pc_ringworld_habitable = {
 	ringworld = yes
 	entity = "ringworld_habitable_entity"
-	picture = pc_ringworld
+	picture = pc_gaia
 	tile_set = pc_gaia
 	outliner_planet_type = special
 	icon_frame = 21
@@ -875,7 +875,6 @@ pc_ringworld_habitable = {
 	atmosphere_color 		= hsv { 0.0 0.0 1.0 }		#DONE
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
-	show_city = yes
 	city_color_lut = "gfx/portraits/misc/colorcorrection_continental.dds"
 	extra_orbit_size = 0
 	extra_planet_count = 0
@@ -1006,7 +1005,6 @@ pc_habitat = {
 	atmosphere_color 		= hsv { 0.0 0.0 1.0 }		#DONE
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
-	show_city = no
 	city_color_lut = "gfx/portraits/misc/colorcorrection_continental.dds"
 	extra_orbit_size = 0
 	extra_planet_count = 0
@@ -1063,7 +1061,6 @@ random_list = {
 	name = "rl_habitable_special"
 	planets = {
 		"pc_gaia"
-		"pc_nuked"
 	}
 }
 
@@ -1076,6 +1073,8 @@ random_list = {
 		"pc_barren_cold"
 		"pc_toxic"
 		"pc_frozen"
+		"pc_nuked"
+		"pc_infested"
 	}
 }
 

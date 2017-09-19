@@ -776,14 +776,6 @@ anomaly_category = {
 				is_planet_class = pc_gas_giant
 			}
 		}
-		modifier = {
-			factor = 0
-			from.owner = { has_country_flag = spawned_shadowplay }
-		}
-	}
-
-	on_spawn = {
-		from.owner = { set_country_flag = spawned_shadowplay }
 	}
 
 	on_success = {

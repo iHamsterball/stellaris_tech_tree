@@ -181,7 +181,6 @@ country_edict = {
 	}
 	
 	potential = {
-		NOT = { has_country_flag = synthetic_empire }
 		OR = {
 			allows_slavery = yes
 			has_technology = "tech_robotic_workers"
@@ -433,7 +432,7 @@ country_edict = {
 country_edict = {
 	name = "super_sensors"
 	modifier = {
-		planet_sensor_range_mult = 1
+		planet_sensor_range_mult = 0.25
 	}
 	
 	influence_cost = 1

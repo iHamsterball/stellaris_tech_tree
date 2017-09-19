@@ -125,14 +125,11 @@ dominion = {
 			limit = { has_ethic = "ethic_authoritarian" }
 			country_remove_ethic = "ethic_authoritarian"
 		}
-		if = {
-			limit = { NOT = { has_authority = "auth_hive_mind" } }
-			country_add_ethic = "ethic_fanatic_spiritualist"
-			country_add_ethic = "ethic_authoritarian"	
-			change_government = {
-				authority = random
-				civics = random
-			}			
+		country_add_ethic = "ethic_fanatic_spiritualist"
+		country_add_ethic = "ethic_authoritarian"	
+		change_government = {
+			authority = random
+			civics = random
 		}
 	}
 }

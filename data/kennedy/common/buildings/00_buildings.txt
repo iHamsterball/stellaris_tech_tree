@@ -1,0 +1,2858 @@
+# Do not remove or rename this
+
+# Possible Variables for Buildings:
+# strategic_resource: strategic resource, deprecated, strategic resource used by the building.
+# allow: trigger to check for allowing construction of building.
+# prerequisites: Tech requirements for building.
+# empire_unique: boolean, can only build one if set to true.
+# cost: resource table, cost of building.
+# is_orbital: boolean, can only be built in orbital station.
+# modifier: modifier, deprecated, applies a modifier to planet.
+# base_buildtime: int, number of days for construction.
+# requires_pop, boolean, building will require a pop for production.
+# required_resources, resource table, required resources for production.
+# produced_resources, resource table, produced resources in production.
+# upgrades, buildings list, buildings this building can upgrade into.
+# is_listed, boolean, toggles if this building is shown in the non-upgrade buildable list.
+# planet_unique, toggles if one can build multiple of this type on a single planet.
+# ai_weight, weight for AI, default is set to one, weight set to 0 means that AI will never build it
+
+#
+# BALANCE
+# can change the time and cost of all common buildings with these variables below
+
+@b0time = 120
+@b0cost = 30
+@b0effect = 1
+@b0upkeep = 0.5
+
+@b1time = 210
+@b1cost = 60
+@b1effect = 2
+@b1upkeep = 1
+
+@b2time = 180
+@b2cost = 90
+@b2effect = 3
+@b2upkeep = 1.5
+
+@b3time = 180
+@b3cost = 120
+@b3effect = 4
+@b3upkeep = 2
+
+@b4time = 180
+@b4cost = 150
+@b4effect = 5
+@b4upkeep = 2.5
+
+@b5time = 180
+@b5cost = 180
+@b5effect = 8
+@b5upkeep = 3
+
+@science1 = 1
+@science2 = 2
+@science3 = 3
+@science4 = 4
+@science5 = 6
+
+#
+#	ENERGY
+#
+
+building_basic_power_plant = {
+	base_buildtime = @b0time
+	
+	cost = {
+		minerals = @b0cost
+	}
+	
+	produced_resources = {
+		energy = 2
+	}
+	
+	upgrades = {
+		building_power_plant_1
+	}
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_power_plant_1 = {
+	base_buildtime = @b1time
+	
+	cost = {
+		minerals = @b1cost
+	}
+	
+	produced_resources = {
+		energy = 3
+	}
+	
+	upgrades = {
+		building_power_plant_2
+	}
+	
+	prerequisites = {
+		"tech_power_plant_1"
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+}
+
+building_power_plant_2 = {
+	base_buildtime = @b2time
+	is_listed = no
+	
+	cost = {
+		minerals = @b2cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		energy = 4
+	}
+	
+	upgrades = {
+		building_power_plant_3
+	}
+
+	prerequisites = {
+		"tech_power_plant_2"
+	}		
+}
+
+building_power_plant_3 = {
+	base_buildtime = @b3time
+	is_listed = no
+	
+	cost = {
+		minerals = @b3cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		energy = 5
+	}
+	
+	upgrades = {
+		building_power_plant_4
+	}
+	
+	prerequisites = {
+		"tech_power_plant_3"
+	}	
+}
+
+building_power_plant_4 = {
+	base_buildtime = @b4time
+	is_listed = no
+	
+	cost = {
+		minerals = @b4cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		energy = 6
+	}
+	
+	upgrades = {
+		building_power_plant_5
+	}
+	
+	prerequisites = {
+		"tech_power_plant_4"
+	}	
+}
+
+building_power_plant_5 = {
+	base_buildtime = @b5time
+	is_listed = no
+	
+	cost = {
+		minerals = @b4cost
+	}
+	
+	potential = {
+		planet = { is_capital = yes }
+	}
+	
+	destroy_if = {
+		planet = { is_capital = no }
+	}	
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_3"
+			planet = {
+				has_building = "building_capital_3"
+			}
+		}
+	}
+	
+	produced_resources = {
+		energy = 8
+	}
+	
+	prerequisites = {
+		"tech_power_plant_4"
+	}	
+}
+
+betharian_power_plant_1 = {
+	base_buildtime = @b1time
+	icon = "building_betharian_power_plant_1"
+	
+	cost = {
+		minerals = @b1cost
+	}
+	
+	produced_resources = {
+		energy = 6
+	}
+	
+	upgrades = {
+		betharian_power_plant_2
+	}
+	
+	prerequisites = {
+		"tech_mine_betharian"
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requires_building_capital_1"
+				planet = {
+					OR = {
+						has_building = "building_capital_1"
+						has_building = "building_capital_2"
+						has_building = "building_capital_3"
+					}
+				}
+			}
+			custom_tooltip_fail = {
+				text = "requires_betharian_stone"
+				tile = {
+					has_resource = {
+						type = sr_betharian
+						amount > 0
+					}
+				}
+			}
+		}
+	}
+}
+
+betharian_power_plant_2 = {
+	base_buildtime = @b2time
+	is_listed = no
+	icon = "building_betharian_power_plant_1"
+	
+	cost = {
+		minerals = @b2cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		energy = 8
+	}
+	
+	upgrades = {
+		betharian_power_plant_3
+	}
+
+	prerequisites = {
+			"tech_power_plant_2"
+	}
+}
+
+betharian_power_plant_3 = {
+	base_buildtime = @b3time
+	is_listed = no
+	icon = "building_betharian_power_plant_1"
+	
+	cost = {
+		minerals = @b3cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		energy = 10
+	}
+	
+	upgrades = {
+		betharian_power_plant_4
+	}
+
+	prerequisites = {
+			"tech_power_plant_3"
+	}
+}
+
+betharian_power_plant_4 = {
+	base_buildtime = @b4time
+	is_listed = no
+	icon = "building_betharian_power_plant_1"
+	
+	cost = {
+		minerals = @b4cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		energy = 12
+	}
+	
+	prerequisites = {
+			"tech_power_plant_4"
+	}
+}
+
+building_power_hub_1 = {
+	base_buildtime = @b2time
+	planet_unique = yes
+	
+	cost = {
+		minerals = 150
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "requires_power_hub_absence"
+			planet = {
+				NOT = {
+					has_building = "building_akx_worm_1"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		energy = 3
+	}
+	
+	planet_modifier  = {
+		tile_resource_energy_mult = 0.10
+	}
+	
+	upgrades = {
+		building_power_hub_2
+	}
+	
+	prerequisites = {
+		"tech_power_hub_1"
+	}
+}
+
+building_power_hub_2 = {
+	base_buildtime = @b3time
+	is_listed = no
+	planet_unique = yes
+	
+	cost = {
+		minerals = 200
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "requires_power_hub_absence"
+			planet = {
+				NOT = {
+					has_building = "building_akx_worm_1"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		energy = 6
+	}
+	
+	planet_modifier  = {
+		tile_resource_energy_mult = 0.20
+	}
+	
+	prerequisites = {
+		"tech_power_hub_2"
+	}
+}
+
+#
+#	FOOD
+#
+
+building_basic_farm = {
+	tags = { hydroponics_farm }
+
+	base_buildtime = @b0time
+	
+	cost = {
+		minerals = @b0cost
+	}
+	
+	produced_resources = {
+		food = @b0effect
+	}
+	
+	required_resources = {
+		energy = @b0upkeep
+	}
+	
+	upgrades = {
+		building_hydroponics_farm_1
+	}
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_hydroponics_farm_1 = {
+	tags = { hydroponics_farm }
+
+	base_buildtime = @b1time
+	
+	cost = {
+		minerals = @b1cost
+	}
+	
+	produced_resources = {
+		food = @b1effect
+	}
+	
+	required_resources = {
+		energy = @b1upkeep
+	}
+	
+	upgrades = {
+		building_hydroponics_farm_2
+	}	
+
+	prerequisites = {
+		"tech_eco_simulation"
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}		
+}
+
+building_hydroponics_farm_2 = {
+	tags = { hydroponics_farm }
+
+	base_buildtime = @b2time
+	is_listed = no
+	
+	cost = {
+		minerals = @b2cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		food = @b2effect
+	}
+	
+	required_resources = {
+		energy = @b2upkeep
+	}
+	
+	upgrades = {
+		building_hydroponics_farm_3
+	}	
+	
+	prerequisites = {
+		"tech_hydroponics"
+	}	
+}
+
+building_hydroponics_farm_3 = {
+	tags = { hydroponics_farm }
+
+	base_buildtime = @b3time
+	is_listed = no
+	
+	cost = {
+		minerals = @b3cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		food = @b3effect
+	}	
+	
+	required_resources = {
+		energy = @b3upkeep
+	}
+	
+	upgrades = {
+		building_hydroponics_farm_4
+	}	
+	
+	prerequisites = {
+		"tech_gene_crops"
+	}	
+}
+
+building_hydroponics_farm_4 = {
+	tags = { hydroponics_farm }
+
+	base_buildtime = @b4time
+	is_listed = no
+	
+	cost = {
+		minerals = @b4cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		food = @b4effect
+	}	
+	
+	required_resources = {
+		energy = @b4upkeep
+	}
+	
+	upgrades = {
+		building_hydroponics_farm_5
+	}	
+	
+	prerequisites = {
+		"tech_nano_vitality_crops"
+	}	
+}
+
+building_hydroponics_farm_5 = {
+	tags = { hydroponics_farm }
+
+	base_buildtime = @b5time
+	is_listed = no
+	
+	cost = {
+		minerals = @b5cost
+	}
+	
+	potential = {
+		planet = { is_capital = yes }
+	}
+	
+	destroy_if = {
+		planet = { is_capital = no }
+	}	
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_3"
+			planet = {
+				has_building = "building_capital_3"
+			}
+		}
+	}
+	
+	produced_resources = {
+		food = @b5effect
+	}
+	
+	required_resources = {
+		energy = @b5upkeep
+	}
+	
+	prerequisites = {
+		"tech_nano_vitality_crops"
+	}
+}
+
+#
+#	MINERALS
+#
+
+building_mineral_silo_1 = {
+	base_buildtime = @b1time
+	planet_unique = yes
+	
+	cost = {
+		minerals = @b1cost
+	}
+	
+	country_modifier = {
+		max_minerals = 2000
+	}
+	
+	adjacency_bonus = {
+		resource_minerals_add = 1
+	}
+	
+	upgrades = {
+		building_mineral_silo_2
+	}		
+}
+
+building_mineral_silo_2 = {
+	base_buildtime = @b2time
+	icon = "building_mineral_silo_1"
+	planet_unique = yes
+	
+	is_listed = no
+	
+	cost = {
+		minerals = @b2cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	country_modifier = {
+		max_minerals = 3000
+	}
+	
+	adjacency_bonus = {
+		resource_minerals_add = 1
+	}
+	
+	prerequisites = {
+		"tech_mineral_processing_1"
+	}
+	
+	upgrades = {
+		building_mineral_silo_3
+	}	
+}
+
+building_mineral_silo_3 = {
+	base_buildtime = @b3time
+	icon = "building_mineral_silo_1"
+	planet_unique = yes
+	
+	is_listed = no
+	
+	cost = {
+		minerals = @b3cost
+	}	
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	country_modifier = {
+		max_minerals = 4000
+	}
+	
+	adjacency_bonus = {
+		resource_minerals_add = 1
+	}
+	
+	prerequisites = {
+		"tech_mineral_processing_2"
+	}
+}
+
+
+building_basic_mine = {
+	tags = { mining_network }
+
+	base_buildtime = @b0time
+	
+	cost = {
+		minerals = @b0cost
+	}
+	
+	produced_resources = {
+		minerals = @b0effect
+	}
+	
+	required_resources = {
+		energy = @b0upkeep
+	}	
+	
+	upgrades = {
+		building_mining_network_1
+	}
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_mining_network_1 = {
+	tags = { mining_network }
+
+	base_buildtime = @b1time
+	
+	cost = {
+		minerals = @b1cost
+	}
+	
+	produced_resources = {
+		minerals = @b1effect
+	}
+	
+	required_resources = {
+		energy = @b1upkeep
+	}
+	
+	upgrades = {
+		building_mining_network_2
+	}	
+	
+	prerequisites = {
+		"tech_basic_industry"
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+}
+
+building_mining_network_2 = {
+	tags = { mining_network }
+
+	base_buildtime = @b2time
+	is_listed = no
+	
+	cost = {
+		minerals = @b2cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		minerals = @b2effect
+	}
+	
+	required_resources = {
+		energy = @b2upkeep
+	}
+	
+	upgrades = {
+		building_mining_network_3
+	}	
+	
+	prerequisites = {
+		"tech_mining_network_2"
+	}	
+}
+
+building_mining_network_3 = {
+	tags = { mining_network }
+
+	base_buildtime = @b3time
+	is_listed = no
+	
+	cost = {
+		minerals = @b3cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		minerals = @b3effect
+	}
+	
+	required_resources = {
+		energy = @b3upkeep
+	}
+	
+	upgrades = {
+		building_mining_network_4
+	}	
+	
+	prerequisites = {
+		"tech_mining_network_3"
+	}	
+}
+
+building_mining_network_4 = {
+	tags = { mining_network }
+
+	base_buildtime = @b4time
+	is_listed = no
+	
+	cost = {
+		minerals = @b4cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		minerals = @b4effect
+	}
+	
+	required_resources = {
+		energy = @b4upkeep
+	}
+	
+	upgrades = {
+		building_mining_network_5
+	}	
+	
+	prerequisites = {
+		"tech_mining_network_4"
+	}	
+}
+
+building_mining_network_5 = {
+	tags = { mining_network }
+
+	base_buildtime = @b5time
+	is_listed = no
+	
+	cost = {
+		minerals = @b5cost
+	}
+	
+	potential = {
+		planet = { is_capital = yes }
+	}
+
+	destroy_if = {
+		planet = { is_capital = no }
+	}	
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_3"
+			planet = {
+				has_building = "building_capital_3"
+			}
+		}
+	}
+	
+	produced_resources = {
+		minerals = @b5effect
+	}
+	
+	required_resources = {
+		energy = @b5upkeep
+	}
+	
+	prerequisites = {
+		"tech_mining_network_4"
+	}	
+}
+
+building_mineral_processing_plant_1 = {
+	base_buildtime = @b2time
+	planet_unique = yes
+	
+	cost = {
+		minerals = 150
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		minerals = 2
+	}
+	
+	planet_modifier  = {
+		tile_resource_minerals_mult = 0.10
+	}
+	
+	required_resources = {
+		energy = 2
+	}
+	
+	upgrades = {
+		building_mineral_processing_plant_2
+	}
+	
+	prerequisites = {
+		"tech_mineral_processing_1"
+	}
+}
+
+building_mineral_processing_plant_2 = {
+	base_buildtime = @b3time
+	is_listed = no
+	planet_unique = yes
+	
+	cost = {
+		minerals = 200
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		minerals = 4
+	}
+	
+	planet_modifier  = {
+		tile_resource_minerals_mult = 0.20
+	}
+	
+	required_resources = {
+		energy = 3
+	}
+	
+	prerequisites = {
+		"tech_mineral_processing_2"
+	}
+}
+
+#
+# BASIC SCIENCE
+#
+
+building_basic_science_lab_1 = {
+	base_buildtime = @b1time
+	
+	cost = {
+		minerals = @b1cost
+	}
+	
+	produced_resources = {
+		engineering_research = @science1
+		physics_research = @science1
+		society_research = @science1
+	}
+	
+	required_resources = {
+		energy = @b1upkeep
+	}
+	
+	upgrades = {
+		building_engineering_facility_1
+		building_physics_lab_1
+		building_biolab_1
+	}	
+	
+	prerequisites = {
+		"tech_basic_science_lab_1"
+	}	
+}
+
+#
+#	ENGINEERING
+#
+
+building_engineering_facility_1 = {
+	base_buildtime = @b2time
+	is_listed = no
+	
+	cost = {
+		minerals = @b2cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		engineering_research = @science2
+		physics_research = @science1
+		society_research = @science1
+	}
+	
+	required_resources = {
+		energy = @b2upkeep
+	}
+	
+	upgrades = {
+		building_engineering_facility_2
+	}	
+	
+	prerequisites = {
+		"tech_engineering_lab_1"
+	}
+}
+
+building_engineering_facility_2 = {
+	base_buildtime = @b3time
+	is_listed = no
+	
+	cost = {
+		minerals = @b3cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		engineering_research = @science3
+		physics_research = @science1
+		society_research = @science1
+	}
+	
+	required_resources = {
+		energy = @b3upkeep
+	}
+	
+	upgrades = {
+		building_engineering_facility_3
+	}	
+	
+	prerequisites = {
+		"tech_engineering_lab_2"
+	}	
+}
+
+building_engineering_facility_3 = {
+	base_buildtime = @b4time
+	is_listed = no
+	
+	cost = {
+		minerals = @b4cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		engineering_research = @science4
+		physics_research = @science1
+		society_research = @science1
+	}
+	
+	required_resources = {
+		energy = @b4upkeep
+	}
+	
+	upgrades = {
+		building_engineering_facility_4
+	}	
+	
+	prerequisites = {
+		"tech_engineering_lab_3"
+	}	
+}
+
+building_engineering_facility_4 = {
+	base_buildtime = @b5time
+	is_listed = no
+	
+	cost = {
+		minerals = @b5cost
+	}
+	
+	potential = {
+		planet = { is_capital = yes }
+	}
+	
+	destroy_if = {
+		planet = { is_capital = no }
+	}	
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_3"
+			planet = {
+				has_building = "building_capital_3"
+			}
+		}
+	}
+	
+	produced_resources = {
+		engineering_research = @science5
+		physics_research = @science1
+		society_research = @science1
+	}
+	
+	required_resources = {
+		energy = @b5upkeep
+	}
+	
+	prerequisites = {
+		"tech_engineering_lab_3"
+	}	
+}
+
+#
+#	PHYSICS
+#
+
+building_physics_lab_1 = {
+	base_buildtime = @b2time
+	is_listed = no
+	
+	cost = {
+		minerals = @b2cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		engineering_research = @science1
+		physics_research = @science2
+		society_research = @science1
+	}
+	
+	required_resources = {
+		energy = @b2upkeep
+	}
+	
+	upgrades = {
+		building_physics_lab_2
+	}	
+	
+	prerequisites = {
+		"tech_physics_lab_1"
+	}	
+}
+
+building_physics_lab_2 = {
+	base_buildtime = @b3time
+	is_listed = no
+	
+	cost = {
+		minerals = @b3cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		engineering_research = @science1
+		physics_research = @science3
+		society_research = @science1
+	}
+	
+	required_resources = {
+		energy = @b3upkeep
+	}
+	
+	upgrades = {
+		building_physics_lab_3
+	}
+	
+	prerequisites = {
+		"tech_physics_lab_2"
+	}	
+}
+
+building_physics_lab_3 = {
+	base_buildtime = @b4time
+	is_listed = no
+	
+	cost = {
+		minerals = @b4cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		engineering_research = @science1
+		physics_research = @science4
+		society_research = @science1
+	}
+	
+	required_resources = {
+		energy = @b4upkeep
+	}
+	
+	upgrades = {
+		building_physics_lab_4
+	}
+	
+	prerequisites = {
+		"tech_physics_lab_3"
+	}	
+}
+
+building_physics_lab_4 = {
+	base_buildtime = @b5time
+	is_listed = no
+	
+	cost = {
+		minerals = @b5cost
+	}
+	
+	potential = {
+		planet = { is_capital = yes }
+	}
+	
+	destroy_if = {
+		planet = { is_capital = no }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_3"
+			planet = {
+				has_building = "building_capital_3"
+			}
+		}
+	}
+	
+	produced_resources = {
+		engineering_research = @science1
+		physics_research = @science5
+		society_research = @science1
+	}
+	
+	required_resources = {
+		energy = @b5upkeep
+	}
+	
+	prerequisites = {
+		"tech_physics_lab_3"
+	}	
+}
+
+#
+#	SOCIETY
+#
+
+building_biolab_1 = {
+	base_buildtime = @b2time
+	is_listed = no
+	
+	cost = {
+		minerals = @b2cost
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		engineering_research = @science1
+		physics_research = @science1
+		society_research = @science2
+	}
+	
+	required_resources = {
+		energy = @b2upkeep
+	}
+	
+	upgrades = {
+		building_biolab_2
+	}
+	
+	prerequisites = {
+		"tech_biolab_1"
+	}	
+}
+
+building_biolab_2 = {
+	base_buildtime = @b3time
+	is_listed = no
+	
+	cost = {
+		minerals = @b3cost
+	}	
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+
+	produced_resources = {
+		engineering_research = @science1
+		physics_research = @science1
+		society_research = @science3
+	}
+	
+	required_resources = {
+		energy = @b3upkeep
+	}
+	
+	upgrades = {
+		building_biolab_3
+	}
+	
+	prerequisites = {
+		"tech_biolab_2"
+	}	
+}
+
+building_biolab_3 = {
+	base_buildtime = @b4time
+	is_listed = no
+	
+	cost = {
+		minerals = @b4cost
+	}	
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		engineering_research = @science1
+		physics_research = @science1
+		society_research = @science4
+	}
+	
+	required_resources = {
+		energy = @b4upkeep
+	}
+	
+	upgrades = {
+		building_biolab_4
+	}
+	
+	prerequisites = {
+		"tech_biolab_3"
+	}	
+}
+
+building_biolab_4 = {
+	base_buildtime = @b5time
+	is_listed = no
+	
+	cost = {
+		minerals = @b5cost
+	}
+	
+	potential = {
+		planet = { is_capital = yes }
+	}
+	
+	destroy_if = {
+		planet = { is_capital = no }
+	}	
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_3"
+			planet = {
+				has_building = "building_capital_3"
+			}
+		}
+	}
+	
+	produced_resources = {
+		engineering_research = @science1
+		physics_research = @science1
+		society_research = @science5
+	}
+	
+	required_resources = {
+		energy = @b5upkeep
+	}
+	
+	prerequisites = {
+		"tech_biolab_3"
+	}	
+}
+
+
+#
+# OTHER
+#
+
+# Colony Shelter
+building_colony_shelter = {
+	base_buildtime = 180
+	
+	cost = {
+	}
+	
+	planet_modifier = {
+		pop_ethic_shift = -0.05
+	}
+	
+	potential = {
+		planet = {
+			NOT = {
+				has_building = building_colony_shelter
+				has_building = building_capital_1
+				has_building = building_capital_2
+				has_building = building_capital_3
+			}
+		}
+	}
+	
+	allow = {
+		always = yes
+	}
+	
+	planet_unique = yes
+	capital = yes
+	level = 0
+	
+	produced_resources = {
+		food = 2
+	}
+	
+	upgrades = {
+		building_capital_1
+	}
+	
+	ai_replace = no
+}
+
+# Planetary Administration
+building_capital_1 = {
+	base_buildtime = 360
+	
+	cost = {
+		minerals = 350
+	}
+	
+	planet_modifier = {
+		pop_ethic_shift = -0.15
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_pops_5"
+			planet = {
+				count_pops = {
+					count > 4
+					limit = {
+						is_colony_pop = yes
+					}
+				}
+			}
+		}
+	}
+	
+	planet_unique = yes
+	capital = yes
+	level = 1
+	
+	produced_resources = {
+		food = 3
+		minerals = 3
+	}
+	
+	adjacency_bonus = {
+		resource_minerals_add = 1
+		resource_food_add = 1
+		resource_energy_add = 1
+	}
+	
+	upgrades = {
+		building_capital_2
+	}
+	
+	prerequisites = {
+		"tech_planetary_government"
+	}
+
+	ai_replace = no
+}
+
+# Planetary Capital
+building_capital_2 = {
+	base_buildtime = 720
+	is_listed = no
+	
+	cost = {
+		minerals = 500
+	}
+	
+	planet_modifier = {
+		pop_ethic_shift = -0.15
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_pops_10"
+			planet = {
+				count_pops = {
+					count > 9
+					limit = {
+						is_colony_pop = yes
+					}
+				}
+			}
+		}
+	}
+	
+	planet_unique = yes
+	capital = yes
+	level = 2
+	
+	produced_resources = {
+		food = 4
+		minerals = 4
+	}
+	
+	adjacency_bonus = {
+		resource_minerals_add = 2
+		resource_food_add = 2
+		resource_energy_add = 2
+	}
+	
+	upgrades = {
+		building_capital_3
+	}
+	
+	prerequisites = {
+		"tech_colonial_centralization"
+	}	
+	
+	ai_replace = no
+}
+
+# Empire Capital-Complex
+building_capital_3 = {
+	base_buildtime = 1080
+	is_listed = no
+	
+	cost = {
+		minerals = 1000
+	}
+	
+	planet_modifier = {
+		pop_ethic_shift = -0.15
+	}
+	
+	potential = {
+		planet = { is_capital = yes }
+	}
+	
+	destroy_if = {
+		planet = { is_capital = no }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_pops_15"
+			planet = {
+				count_pops = {
+					count > 14
+					limit = {
+						is_colony_pop = yes
+					}
+				}
+			}
+		}
+	}
+
+	planet_unique = yes
+	capital = yes
+	empire_unique = yes
+	level = 3
+	
+	produced_resources = {
+		food = 5
+		minerals = 5
+		influence = 1
+	}
+	
+	adjacency_bonus = {
+		resource_minerals_add = 3
+		resource_food_add = 3
+		resource_energy_add = 3
+	}
+	
+	prerequisites = {
+		"tech_galactic_administration"
+	}
+
+	ai_replace = no	
+}
+
+# Clone Vats are required to build Clone Armies
+building_clone_vats = {
+	base_buildtime = 360	
+	planet_unique = yes
+	
+	cost = {
+		minerals = 200
+	}
+	
+	produced_resources = {
+		society_research = 4
+	}
+	
+	required_resources = {
+		energy = 2
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	prerequisites = {
+		"tech_cloning"
+	}
+	
+	ai_special_building = yes
+	
+	ai_allow = {
+		AND = {
+			fromfrom = {
+				NOT = {
+					any_owned_planet = {
+						has_building = building_clone_vats
+					}
+				}
+				has_technology = tech_cloning
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			from = {
+				any_pop = {
+					is_enslaved = yes
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 7000
+		modifier = {
+			weight = 0
+			from = {
+				owner = {
+					NOT = {
+						has_technology = tech_cloning
+						OR = {
+							has_ethic = ethic_militarist
+							has_ethic = ethic_fanatic_militarist
+						}
+					}
+				}
+				NOT = { has_building = building_clone_vats }
+			}
+		}
+	}
+}
+
+# Grants additional fortification strength to planets
+building_planetary_shield_generator = {
+	icon = "building_shield_generator"
+	base_buildtime = 360	
+	planet_unique = yes
+	
+	cost = {
+		minerals = 350
+	}
+	
+	planet_modifier = {
+		planet_fortification_strength = 0.5
+	}	
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	prerequisites = {
+		"tech_planetary_shield_generator"
+	}
+	
+	ai_special_building = yes
+
+	ai_allow = {
+		fromfrom = {
+			has_technology = tech_planetary_shield_generator
+		}
+	}
+	
+	ai_weight = {
+		weight = 7000
+	}
+}
+
+## Slave Processing Facility is required to build Slave Armies
+## They also improve the output of Enslaved Pops on the planet
+building_slave_processing = {
+	base_buildtime = 720
+	planet_unique = yes
+	
+	cost = {
+		minerals = 350
+	}
+	
+	planet_modifier = {
+		slave_production_output = 0.1
+		slave_food_output = 0.1
+	}	
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_slave_facility"
+			planet = {
+				owner = {
+					NOT = { has_policy_flag = slavery_not_allowed }
+				}
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_neural_implants"
+	}
+	
+	ai_special_building = yes
+	
+	ai_allow = {
+		OR = {
+			AND = {
+				fromfrom = {
+					NOT = {
+						any_owned_planet = {
+							has_building = building_slave_processing
+						}
+					}
+					has_ai_personality_behaviour = slaver
+					has_technology = tech_neural_implants
+					OR = {
+						has_ethic = ethic_collectivist
+						has_ethic = ethic_fanatic_collectivist
+					}
+				}
+			}
+		}
+		
+	}
+	
+	ai_weight = {
+		weight = 7000	
+		modifier = {
+			weight = 0
+			from = {
+				owner = {
+					NOT = {
+						has_ai_personality_behaviour = slaver
+						OR = {
+							has_ethic = ethic_collectivist
+							has_ethic = ethic_fanatic_collectivist
+						}
+					}
+				}
+				NOT = { has_building = building_slave_processing }
+			}
+		}	
+	}
+}
+
+# Grand Mausoleum
+building_grand_mausoleum = {
+	base_buildtime = 1000
+	built_for_ruler = yes
+	planet_unique = yes
+	
+	cost = { 
+		minerals = 200
+	}  
+	
+	planet_modifier = {
+		pop_ethic_shift = -0.2
+	}
+	
+	potential = {
+		planet = {
+			exists = owner
+			owner = {
+				OR = {
+					has_government = divine_mandate
+					has_government = transcendent_empire
+				}
+			}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = building_grand_mausoleum_allowed_tooltip
+			exists = ruler
+			ruler = {
+				NOT = { has_leader_flag = built_monument }
+			}
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	on_queued = {
+		ruler = {
+			set_leader_flag = built_monument
+		}
+	}
+	
+	on_unqueued = {
+		ruler = {
+			remove_leader_flag = built_monument
+		}
+	}
+	
+	ai_special_building = yes
+
+	ai_allow = {
+		from = {
+			ethos < 0.7
+		}
+	}
+	
+	ai_weight = {
+		weight = 7000
+		modifier = {
+			weight = 0
+			from = {
+				ethos > 0.95
+				NOT = { has_building = building_grand_mausoleum }
+			}
+		}
+	}
+}
+
+# Royal Gardens
+building_royal_gardens = {
+	base_buildtime = 720
+	built_for_ruler = yes
+	planet_unique = yes
+	
+	cost = { 
+		minerals = 200 
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.10
+	}
+	
+	potential = {
+		planet = {
+			owner = {
+				OR = {
+					has_government = enlightened_monarchy
+					has_government = irenic_monarchy
+				}
+			}
+		}
+	}
+	
+	allow = {
+		exists = ruler
+		ruler = {
+			NOT = { has_leader_flag = built_monument }
+		}
+	}
+	
+	on_queued = {
+		ruler = {
+			set_leader_flag = built_monument
+		}
+	}
+	
+	on_unqueued = {
+		ruler = {
+			remove_leader_flag = built_monument
+		}
+	}
+	
+	ai_special_building = yes
+	
+	ai_allow = {
+		from = {
+			happiness_planet < 50
+		}
+	}
+	
+	ai_weight = {
+		weight = 7000
+		modifier = {
+			weight = 0
+			from = {
+				happiness_planet > 0.70
+				NOT = { has_building = building_royal_gardens }
+			}
+		}	
+	}
+}
+
+####################################
+### Strategic resource buildings ###
+####################################
+
+
+
+###############################
+### Planet Unique buildings ###
+###############################
+
+building_clinic = {
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+		minerals = 150
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_not_homeworld"
+			planet = {
+				NOT = { has_modifier = "capital" }
+			}
+		}		
+	}
+	
+	required_resources = {
+		energy = 1
+	}
+	
+	produced_resources = {
+		food = 2
+	}
+	
+	planet_modifier = {
+		pop_environment_tolerance = 0.05
+	}
+	
+	prerequisites = {
+		"tech_frontier_health"
+	}
+	
+	upgrades = {
+		building_hospital
+	}
+	
+	ai_weight = {
+		weight = 2
+		modifier = {
+			weight = 0
+			from = {
+				OR = {
+					is_planet_class = pc_gaia
+					is_planet_class = pc_ringworld_habitable
+				}
+				NOT = { has_building = building_clinic }
+			}
+		}		
+	}
+}
+
+
+building_hospital = {
+	base_buildtime = 180
+	planet_unique = yes
+	is_listed = no
+	
+	cost = {
+		minerals = 200
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip = {
+				text = "requirement_not_homeworld"
+				planet = {
+					NOT = { has_modifier = "capital" }
+				}
+			}
+			custom_tooltip = {
+				text = "requires_building_capital_2"
+				planet = {
+					OR = {
+						has_building = "building_capital_2"
+						has_building = "building_capital_3"
+					}
+				}
+			}
+		}
+	}
+	
+	required_resources = {
+		energy = 2
+	}
+	
+	produced_resources = {
+		food = 4
+	}
+	
+	planet_modifier = {
+		pop_environment_tolerance = 0.10
+	}
+	
+	prerequisites = {
+		"tech_frontier_hospital"
+	}
+	
+	ai_weight = {
+		weight = 10
+		modifier = {
+			weight = 0
+			from = {
+				OR = {
+					is_planet_class = pc_gaia
+					is_planet_class = pc_ringworld_habitable
+				}
+				NOT = { has_building = building_hospital }
+			}
+		}		
+	}
+}
+
+building_military_academy = {
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+		minerals = 200
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	required_resources = {
+		energy = 1
+	}
+
+	army_modifier = {
+		army_damage_mult = 0.10
+	}
+	
+	planet_modifier = {
+		planet_army_build_speed_mult = 0.25
+	}
+	
+	prerequisites = {
+		"tech_centralized_command"
+	}
+	
+	ai_special_building = yes
+	
+	ai_allow = {
+		NOT = {
+			fromfrom = {
+				any_owned_planet = {
+					any_tile = {
+						has_building = building_military_academy
+					}
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 5000
+		modifier = {
+			weight = 0
+			from = { 
+				sector_controlled = yes 
+				NOT = { has_building = building_military_academy }
+			}
+		}	
+	}
+}
+
+building_paradise_dome = {
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+		minerals = 200
+	}
+	
+	required_resources = {
+		energy = 2
+	}
+	
+	produced_resources = {
+		food = 2
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.10
+		pop_environment_tolerance = 0.05
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	prerequisites = {
+		"tech_paradise_dome"
+	}
+	
+	ai_special_building = yes
+	
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			weight = 0
+			from = {
+				happiness_planet > 0.90
+				NOT = { has_building = building_paradise_dome }
+			}
+		}	
+	}
+}
+
+building_xeno_zoo = {
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+		minerals = 200
+	}
+	
+	required_resources = {
+		energy = 1
+	}
+	
+	produced_resources = {		
+		society_research = 2
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.10
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requires_building_capital_1"
+				planet = {
+					OR = {
+						has_building = "building_capital_1"
+						has_building = "building_capital_2"
+						has_building = "building_capital_3"
+					}
+				}
+			}
+			custom_tooltip_fail = {
+				text = "requires_alien_pets"
+				tile = {
+					has_resource = {
+						type = sr_alien_pets
+						amount > 0
+					}
+				}
+			}
+		}
+	}
+	
+	prerequisites = {
+		"tech_alien_life_studies"
+	}
+	
+	ai_special_building = yes
+
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			weight = 0
+			from = {
+				happiness_planet > 0.90
+				NOT = { has_building = building_xeno_zoo }
+			}
+		}	
+	}
+}
+
+building_hyper_entertainment_forum = {
+	base_buildtime = 720
+	planet_unique = yes
+	
+	cost = {
+		minerals = 500
+	}
+	
+	required_resources = {
+		energy = 6
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.15
+		planet_migration_all_pull = 0.50
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	prerequisites = {
+		"tech_hyper_entertainment_forum"
+	}
+	
+	ai_special_building = yes
+	
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			weight = 0
+			from = {
+				happiness_planet > 0.90
+				NOT = { has_building = building_hyper_entertainment_forum }
+			}
+		}	
+	}
+}
+
+building_monument_purity = {
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+		minerals = 200
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.10
+	}
+	
+	prerequisites = {
+		"tech_purity_campaigns"
+	}
+	
+	ai_special_building = yes
+	
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			weight = 0
+			from = {
+				happiness_planet > 0.90
+				NOT = { has_building = building_monument_purity }
+			}
+		}
+		modifier = {
+			factor = 0
+			from = {
+				owner = {
+					NOR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+					}
+				}
+				NOT = { has_building = building_monument_purity }
+			}
+		}
+	}
+}
+
+building_virtual_combat_arena = {
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+		minerals = 200
+	}
+	
+	required_resources = {
+		energy = 3
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.05
+		pop_ethic_shift = -0.05
+	}
+
+	army_modifier = {
+		army_damage_mult = 0.10
+	}
+	
+	ai_special_building = yes
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	prerequisites = {
+		"tech_virtual_combat_arena"
+	}
+	
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			weight = 0
+			from = {
+				happiness_planet > 0.90
+				NOT = { has_building = building_virtual_combat_arena }
+			}
+		}	
+	}
+}
+
+building_symbol_unity = {
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+		minerals = 200
+	}
+	
+	planet_modifier = {
+		pop_ethic_shift = -0.10
+	}
+	
+	prerequisites = {
+		"tech_symbol_unity"
+	}
+	
+	ai_special_building = yes
+	
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0
+			from = {
+				owner = {
+					NOR = {
+						has_ethic = ethic_spiritualist
+						has_ethic = ethic_fanatic_spiritualist
+					}
+				}
+				NOT = { has_building = building_symbol_unity }
+			}
+		}
+	}
+}
+
+building_visitor_center = {
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+		minerals = 200
+	}
+	
+	required_resources = {
+		energy = 2
+	}
+	
+	planet_modifier = {
+		pop_environment_tolerance = 0.05
+		pop_xenophobia = -0.10
+		planet_migration_xeno_pull = 0.50
+	}
+	
+	prerequisites = {
+		"tech_visitor_center"
+	}
+	
+	ai_special_building = yes
+	
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0
+			from = {
+				owner = {
+					NOR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				NOT = { has_building = building_visitor_center }
+			}
+		}
+	}
+}
+
+########################
+### Empire Unique buildings ###
+########################
+
+building_galactic_stock_exchange = {
+	base_buildtime = 360
+	empire_unique = yes
+	
+	cost = {
+		minerals = 500
+		influence = 100
+	}
+	
+	required_resources = {
+		energy = 3
+	}
+	
+	produced_resources = {
+		energy = 1
+	}
+	
+	potential = {
+		planet = { is_capital = yes }
+	}
+
+	destroy_if = {
+		planet = { is_capital = no }
+	}	
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_3"
+			planet = {
+				has_building = "building_capital_3"
+			}
+		}
+	}
+	
+	country_modifier = {
+		tile_resource_energy_mult = 0.10
+	}
+	
+	prerequisites = {
+		"tech_galactic_markets"
+	}
+	
+	ai_special_building = yes
+	
+	ai_weight = {
+		weight = 7000	
+	}
+}
+
+building_ministry_benevolence = {
+	base_buildtime = 720
+	empire_unique = yes
+	
+	cost = {
+		minerals = 500
+		influence = 100
+	}
+	
+	required_resources = {
+		energy = 7
+	}
+	
+	country_modifier = {
+		pop_ethic_shift = -0.15
+	}
+	
+	potential = {
+		planet = { is_capital = yes }
+	}
+
+	destroy_if = {
+		planet = { is_capital = no }
+	}	
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_3"
+			planet = {
+				has_building = "building_capital_3"
+			}
+		}
+	}
+	
+	prerequisites = {
+		"tech_galactic_benevolence"
+	}
+	
+	ai_special_building = yes
+	
+	ai_weight = {
+		weight = 7000	
+	}
+}
+
+building_institute = {
+	base_buildtime = 720
+	empire_unique = yes
+	
+	cost = {
+		minerals = 500
+		influence = 100
+	}
+	
+	produced_resources = {
+		engineering_research = 5
+		physics_research = 5
+		society_research = 5
+	}
+	
+	required_resources = {
+		energy = 10
+	}
+	
+	country_modifier = {
+		all_technology_research_speed = 0.05
+	}
+	
+	potential = {
+		planet = { is_capital = yes }
+	}
+
+	destroy_if = {
+		planet = { is_capital = no }
+	}	
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	prerequisites = {
+		"tech_global_research_initiative"
+	}
+	
+	ai_special_building = yes
+	
+	ai_weight = {
+		weight = 7000	
+	}
+}

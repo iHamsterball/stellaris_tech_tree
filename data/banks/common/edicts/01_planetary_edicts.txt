@@ -86,6 +86,11 @@ planet_edict = {
 	length = 3600
 	
 	potential = {
+		owner = {
+			NOT = {
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
 	}
 	
 	allow = {
@@ -227,7 +232,7 @@ planet_edict = {
 	influence_cost = @standardEdictCost
 	length = 3600
 	modifier = {
-		pop_government_ethic_attraction = 0.30
+		pop_government_ethic_attraction = 0.3
 	}
 	
 	potential = {
@@ -281,7 +286,7 @@ planet_edict = {
 	influence_cost = @standardEdictCost
 	length = 3600
 	modifier = {
-		tile_resource_food_mult = 0.30
+		pop_happiness = 0.10
 	}
 	
 	potential = {
@@ -360,7 +365,7 @@ planet_edict = {
 	influence_cost = @standardEdictCost
 	length = 3600
 	modifier = {
-		tile_resource_unity_mult = 0.20
+		tile_resource_unity_mult = 0.2
 	}
 	
 	potential = {
@@ -384,8 +389,8 @@ planet_edict = {
 	influence_cost = @standardEdictCost
 	length = 3600
 	modifier = {
-		tile_resource_unity_mult = 0.10
-		pop_government_ethic_attraction = 0.10
+		tile_resource_food_mult = 0.10
+		pop_growth_req_mult = -0.20
 	}
 	
 	potential = {
@@ -446,7 +451,7 @@ planet_edict = {
 	length = 36000
 	modifier = {
 		pop_happiness = 0.10
-		pop_growth_speed = 0.10
+		pop_growth_req_mult = -0.10
 		tile_resource_unity_mult = 0.15
 	}
 	
@@ -465,5 +470,5 @@ planet_edict = {
 			factor = 0
 			num_pops < 10
 		}		
-	}
+	}	
 }

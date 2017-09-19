@@ -1,0 +1,1855 @@
+# variables:
+# parameters, data containing the specifics, eg which planet we're talking about
+# warscore_cost, scripted value, root is target country, amount of warscore required to push this demand
+# potential, trigger, root and from are main attackers and defenders, war is fromfrom, decides if this demand is listed
+# possible, trigger, root and from are main attackers and defenders, war is fromfrom, fromfromfrom is the target country, decides if this demand can go through
+# proposable, trigger, root and from are main attackers and defenders, war is fromfrom, fromfromfrom is the target country, decides if this demand is ok to propose
+# demandable, trigger, root and from are main attackers and defenders, war is fromfrom, fromfromfrom is the target country, decides if you can send a peace offer demanding ( not surrendering ) the demand.
+# effect, effect, root and main are main attacker and defender, war is fromfrom, fromfromfrom is the target country, effect which executes when the demand is accepted
+# execution_order, integer, defines in which order demands are executed, lower is higher priority, having the same execution order will make the first defined one higher prio
+# monthly_warscore, a descriptor on monthly wargoal score
+#	amount, scripted value, root and from are main attackers and defenders, war is fromfrom, fromfromfrom is the target country
+#   valid, trigger, root and from are main attackers and defenders, war is fromfrom, fromfromfrom is the target country
+
+
+vassalize_country = {
+	is_conquest_type = yes
+	execution_order = 1
+	
+	parameters = {
+		country = {
+			type = country
+		}
+	}
+	
+	warscore_cost = {
+		base = 40
+		
+		modifier = {
+			factor = 2.0
+			NOT = { 
+				parameter:country = {
+					is_same_value = from 
+				}
+			}
+		}		
+
+		scaled_modifier = {
+			scope = parameter:country
+			add = 8
+			calc = planets_in_country
+		}		
+
+		scaled_modifier = {
+			scope = parameter:country
+			add = 0.2
+			calc = pop_count
+		}
+
+		scaled_modifier = {
+			scope = parameter:country
+			div = 0.05
+			calc = planets_in_country
+		}		
+		
+		modifier = {
+			factor = 0.5
+			parameter:country = {
+				exists = overlord
+			}
+		}
+		
+		modifier = {
+			factor = 1.5
+			has_ethic = "ethic_pacifist"
+		}
+	
+		modifier = {
+			factor = 2.0
+			has_ethic = "ethic_fanatic_pacifist"
+		}		
+		
+		modifier = {
+			factor = 0.9
+			has_ethic = "ethic_militarist"
+		}
+	
+		modifier = {
+			factor = 0.8
+			has_ethic = "ethic_fanatic_militarist"
+		}	
+
+		# Ruler Trait - Warlike
+		modifier = {
+			factor = 0.95
+			custom_tooltip = {
+				text = "war_demand_trait_warlike"
+				exists = ruler
+				ruler = { has_trait = trait_ruler_warlike }
+			}
+		}
+
+		# Ruler Trait - Expansionist
+		modifier = {
+			factor = 0.9
+			custom_tooltip = {
+				text = "war_demand_trait_expansionist"
+				exists = ruler
+				ruler = { has_trait = trait_ruler_expansionist }
+			}
+		}
+
+		# Tech - Galactic Ambitions
+		modifier = {
+			factor = 0.95
+			custom_tooltip = {
+				text = "war_demand_tech_galactic_ambitions"
+				has_technology = tech_galactic_ambitions
+			}
+		}
+
+		# Tech - Manifest Destiny
+		modifier = {
+			factor = 0.95
+			custom_tooltip = {
+				text = "war_demand_tech_manifest_destiny"
+				has_technology = tech_manifest_destiny
+			}
+		}		
+	}
+
+	potential = {
+		OR = {
+			is_subject = no
+			NOT = {
+				overlord = {
+					is_same_value = from
+				}
+			}
+		}
+		is_country_type = default
+		parameter:country = { 
+			is_country_type = default
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_not_opponent"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								is_war_participant = {
+									who = prevprev
+									side = prev
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						would_join_war = {
+							attacker = root
+							defender = from
+							side = from
+						}
+					}
+					
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_no_overlords"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								count_war_participants = {
+									side = root
+									limit = {
+										parameter:country = {
+											OR = {
+												can_be_subject = {
+													overlord = prev
+													subject_type = vassal
+												}
+												AND = {
+													is_proposing_war_demands = no
+													can_be_subject = {
+														overlord = prev
+														subject_type = protectorate
+													}
+												}
+											}
+										}
+									}
+									count > 0
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						count_potential_war_participants = {
+							attacker = root
+							defender = from
+							side = from
+
+							limit = {
+								parameter:country = {
+									can_be_subject = {
+										overlord = root
+										subject_type = vassal
+									}
+								}
+							}
+
+							count > 0
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_missing_tech_all"
+			any_country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						fromfrom = {
+							is_war_participant = {
+								who = prev
+								side = root
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						would_join_war = {
+							attacker = root
+							defender = from
+							side = root
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_wrong_type"
+			parameter:country = {
+				is_country_type = default 
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_cede_planet_no_vassals"
+			NOT = { exists = overlord }
+		}
+	}
+	
+	possible = {
+		hidden:parameter:country = {
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_liberated"
+				war_demand_counter = {
+					type = liberated_or_vassalized
+					value < 1
+				}
+			}
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_no_planets"
+				war_demand_counter = {
+					type = num_owned_planets
+					value > 0
+				}
+			}
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_no_vassals_of_vassals"
+				NOT = { exists = overlord }
+			}
+		}
+	}
+	
+	proposable = {
+		custom_tooltip_fail = {
+			text = "war_demand_war_philosophy"
+			has_policy_flag = unrestricted_wars	
+		}	
+	
+		parameter:country = {
+			can_be_subject = {
+				overlord = fromfromfrom
+				subject_type = vassal
+			}
+		}
+	}
+	
+	effect = {
+		add_threat = {
+			who = fromfromfrom
+			amount = 2 # scales to pops
+		}		
+		parameter:country = {		
+			set_subject_of = {
+				who = fromfromfrom
+				subject_type = vassal
+			}
+		}
+	}
+	
+	counters = {
+		liberated_or_vassalized = {
+			context = parameter:country
+			value = { base = 1 }
+		}
+	}
+	
+	ai_weight = {
+		base = 1000
+		
+		modifier = {
+			factor = 0.5
+			NOT = { 
+				parameter:country = {
+					is_same_value = from 
+				}
+			}
+		}	
+		
+		modifier = {
+			factor = 0
+			NOT = { this = { is_domineering_to = parameter:country } }
+		}
+	}
+}
+
+protectorate_country = {
+	is_conquest_type = yes
+	execution_order = 1
+	
+	parameters = {
+		country = {
+			type = country
+		}
+	}
+	
+	warscore_cost = {
+		base = 40
+		
+		modifier = {
+			factor = 2.0
+			NOT = { 
+				parameter:country = {
+					is_same_value = from 
+				}
+			}
+		}
+
+		scaled_modifier = {
+			scope = parameter:country
+			add = 8
+			calc = planets_in_country
+		}		
+
+		scaled_modifier = {
+			scope = parameter:country
+			add = 0.3
+			calc = pop_count
+		}
+
+		scaled_modifier = {
+			scope = parameter:country
+			div = 0.05
+			calc = planets_in_country
+		}		
+		
+		modifier = {
+			factor = 0.5
+			parameter:country = {
+				exists = overlord
+			}
+		}
+		
+		modifier = {
+			factor = 1.5
+			has_ethic = "ethic_pacifist"
+		}
+	
+		modifier = {
+			factor = 2.0
+			has_ethic = "ethic_fanatic_pacifist"
+		}		
+		
+		modifier = {
+			factor = 0.9
+			has_ethic = "ethic_militarist"
+		}
+	
+		modifier = {
+			factor = 0.8
+			has_ethic = "ethic_fanatic_militarist"
+		}
+
+		# Ruler Trait - Warlike
+		modifier = {
+			factor = 0.95
+			custom_tooltip = {
+				text = "war_demand_trait_warlike"
+				exists = ruler
+				ruler = { has_trait = trait_ruler_warlike }
+			}
+		}
+
+		# Ruler Trait - Expansionist
+		modifier = {
+			factor = 0.9
+			custom_tooltip = {
+				text = "war_demand_trait_expansionist"
+				exists = ruler
+				ruler = { has_trait = trait_ruler_expansionist }
+			}
+		}
+
+		# Tech - Galactic Ambitions
+		modifier = {
+			factor = 0.95
+			custom_tooltip = {
+				text = "war_demand_tech_galactic_ambitions"
+				has_technology = tech_galactic_ambitions
+			}
+		}
+
+		# Tech - Manifest Destiny
+		modifier = {
+			factor = 0.95
+			custom_tooltip = {
+				text = "war_demand_tech_manifest_destiny"
+				has_technology = tech_manifest_destiny
+			}
+		}		
+	}
+
+	potential = {
+		OR = {
+			is_subject = no
+			NOT = {
+				overlord = {
+					is_same_value = from
+				}
+			}
+		}
+		is_country_type = default
+		parameter:country = { 
+			is_country_type = default
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_protectorate_country_not_opponent"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								is_war_participant = {
+									who = prevprev
+									side = prev
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						would_join_war = {
+							attacker = root
+							defender = from
+							side = from
+						}
+					}
+					
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_protectorate_country_no_overlords"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								count_war_participants = {
+									side = root
+									limit = {
+										parameter:country = {
+											OR = {
+												can_be_subject = {
+													overlord = prev
+													subject_type = protectorate
+												}
+												AND = {
+													is_proposing_war_demands = no
+													can_be_subject = {
+														overlord = prev
+														subject_type = vassal
+													}
+												}
+											}
+										}
+									}
+									count > 0
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						count_potential_war_participants = {
+							attacker = root
+							defender = from
+							side = from
+
+							limit = {
+								parameter:country = {
+									can_be_subject = {
+										overlord = root
+										subject_type = protectorate
+									}
+								}
+							}
+
+							count > 0
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_protectorate_country_missing_tech_all"
+			any_country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						fromfrom = {
+							is_war_participant = {
+								who = prev
+								side = root
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						would_join_war = {
+							attacker = root
+							defender = from
+							side = root
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_protectorate_country_wrong_type"
+			parameter:country = {
+				is_country_type = default 
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_cede_planet_no_vassals"
+			NOT = { exists = overlord }
+		}
+	}
+	
+	possible = {
+		hidden:parameter:country = {
+			custom_tooltip_fail = {
+				text = "war_demand_protectorate_country_liberated"
+				war_demand_counter = {
+					type = liberated_or_vassalized
+					value < 1
+				}
+			}
+			custom_tooltip_fail = {
+				text = "war_demand_protectorate_country_no_planets"
+				war_demand_counter = {
+					type = num_owned_planets
+					value > 0
+				}
+			}
+		}
+		hidden:fromfromfrom = {
+			custom_tooltip_fail = {
+				text = "war_demand_protectorate_country_no_vassals_of_vassals"
+				NOT = { exists = overlord }
+			}
+		}
+	}
+	
+	proposable = {	
+		custom_tooltip_fail = {
+			text = "war_demand_war_philosophy"
+			has_policy_flag = unrestricted_wars	
+		}		
+	
+		parameter:country = {
+			can_be_subject = {
+				overlord = fromfromfrom
+				subject_type = protectorate
+			}
+		}
+	}
+	
+	effect = {
+		add_threat = {
+			who = fromfromfrom
+			amount = 1 # scales to pops
+		}	
+		parameter:country = {
+			set_subject_of = {
+				who = fromfromfrom
+				subject_type = protectorate
+			}
+		}
+	}
+	
+	counters = {
+		liberated_or_vassalized = {
+			context = parameter:country
+			value = { base = 1 }
+		}
+	}
+	
+	ai_weight = {
+		base = 1000
+		
+		modifier = {
+			factor = 0.5
+			NOT = { 
+				parameter:country = {
+					is_same_value = from 
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			is_country_type = fallen_empire
+		}		
+		
+		modifier = {
+			factor = 0
+			NOT = { this = { is_domineering_to = parameter:country } }
+		}
+	}
+}
+
+make_tributary = {
+	execution_order = 1
+	is_conquest_type = yes
+	
+	parameters = {
+		country = {
+			type = country
+		}
+	}
+	
+	warscore_cost = {
+		base = 20
+
+		scaled_modifier = {
+			scope = parameter:country
+			add = 8
+			calc = planets_in_country
+		}		
+
+		scaled_modifier = {
+			scope = parameter:country
+			add = 0.3
+			calc = pop_count
+		}
+
+		scaled_modifier = {
+			scope = parameter:country
+			div = 0.05
+			calc = planets_in_country
+		}
+		
+		modifier = {
+			factor = 1.5
+			has_ethic = "ethic_pacifist"
+		}
+	
+		modifier = {
+			factor = 2.0
+			has_ethic = "ethic_fanatic_pacifist"
+		}		
+		
+		modifier = {
+			factor = 0.9
+			has_ethic = "ethic_militarist"
+		}
+	
+		modifier = {
+			factor = 0.8
+			has_ethic = "ethic_fanatic_militarist"
+		}
+	}
+
+	potential = {
+		OR = {
+			is_subject = no
+			NOT = {
+				overlord = {
+					is_same_value = from
+				}
+			}
+		}
+		is_country_type = default
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_wrong_type"
+			parameter:country = {
+				is_country_type = default 
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_not_opponent"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								is_war_participant = {
+									who = prevprev
+									side = prev
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						would_join_war = {
+							attacker = root
+							defender = from
+							side = from
+						}
+					}
+					
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_overlord_in_war"
+			OR = {
+				NOT = {
+					exists = parameter:country.overlord
+				}
+				AND = {
+					exists = fromfrom
+					fromfrom = {
+						NOT = {
+							is_war_participant = {
+								who = parameter:country.overlord
+								side = root
+							}
+						}
+					}
+				}
+				AND = {
+					NOT = { exists = fromfrom }
+					parameter:country.overlord = {
+						NOT = {
+							would_join_war = {
+								attacker = root
+								defender = from
+								side = root
+							}
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_no_overlords"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								count_war_participants = {
+									side = root
+									limit = {
+										NOT = { exists = overlord }
+										parameter:country = {
+											can_be_subject = {
+												overlord = prev
+												subject_type = "tributary"
+											}
+										}
+									}
+									count > 0
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						count_potential_war_participants = {
+							attacker = root
+							defender = from
+							side = root
+
+							limit = {
+								NOT = { exists = overlord }
+								parameter:country = {
+									can_be_subject = {
+										overlord = prev
+										subject_type = "tributary"
+									}
+								}
+							}
+
+							count > 0
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	possible = {
+		fromfromfrom = {
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_no_vassals_of_vassals"
+				NOT = { exists = overlord }
+			}
+		}
+		hidden:parameter:country = {
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_liberated"
+				war_demand_counter = {
+					type = liberated_or_vassalized
+					value < 1
+				}
+			}
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_no_planets"
+				war_demand_counter = {
+					type = num_owned_planets
+					value > 0
+				}
+			}
+		}
+	}
+	
+	proposable = {
+		custom_tooltip_fail = {
+			text = "war_demand_war_philosophy"
+			has_policy_flag = unrestricted_wars	
+		}	
+	
+		parameter:country = {
+			can_be_subject = {
+				overlord = fromfromfrom
+				subject_type = "tributary"
+			}
+		}
+	}
+	
+	effect = {
+		add_threat = {
+			who = fromfromfrom
+			amount = 1 # scales to pops
+		}
+		parameter:country = {
+			set_subject_of = {
+				who = fromfromfrom
+				subject_type = "tributary"
+			}
+			fromfromfrom = {
+				guarantee_country = {
+					target = prev
+					free_guarantee_days = 3650
+				}
+			}
+		}
+	}
+	
+	counters = {
+		liberated_or_vassalized = {
+			context = parameter:country
+			value = { base = 1 }
+		}
+	}
+	
+	ai_weight = {
+		base = 100
+		
+		modifier = {
+			factor = 0.5
+			NOT = { 
+				parameter:country = {
+					is_same_value = from 
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = { this = { is_domineering_to = parameter:country } }
+		}
+	}
+}
+
+make_thrall = {
+	execution_order = 1
+	is_conquest_type = yes
+	
+	parameters = {
+		country = {
+			type = country
+		}
+	}
+	
+	warscore_cost = {
+		base = 20
+
+		scaled_modifier = {
+			scope = parameter:country
+			add = 8
+			calc = planets_in_country
+		}		
+
+		scaled_modifier = {
+			scope = parameter:country
+			add = 0.3
+			calc = pop_count
+		}
+
+		scaled_modifier = {
+			scope = parameter:country
+			div = 0.05
+			calc = planets_in_country
+		}
+		
+		modifier = {
+			factor = 0.33
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+
+	potential = {
+		OR = {
+			is_subject = no
+			NOT = {
+				overlord = {
+					is_same_value = from
+				}
+			}
+		}
+		is_country_type = awakened_fallen_empire		
+		parameter:country = {
+			is_country_type = default 
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_not_opponent"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								is_war_participant = {
+									who = prevprev
+									side = prev
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						would_join_war = {
+							attacker = root
+							defender = from
+							side = from
+						}
+					}
+					
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_overlord_in_war"
+			OR = {
+				NOT = {
+					exists = parameter:country.overlord
+				}
+				AND = {
+					exists = fromfrom
+					fromfrom = {
+						NOT = {
+							is_war_participant = {
+								who = parameter:country.overlord
+								side = root
+							}
+						}
+					}
+				}
+				AND = {
+					NOT = { exists = fromfrom }
+					parameter:country.overlord = {
+						NOT = {
+							would_join_war = {
+								attacker = root
+								defender = from
+								side = root
+							}
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_no_overlords"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								count_war_participants = {
+									side = root
+									limit = {
+										NOT = { exists = overlord }
+										parameter:country = {
+											can_be_subject = {
+												overlord = prev
+												subject_type = "thrall"
+											}
+										}
+									}
+									count > 0
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						count_potential_war_participants = {
+							attacker = root
+							defender = from
+							side = root
+
+							limit = {
+								NOT = { exists = overlord }
+								parameter:country = {
+									can_be_subject = {
+										overlord = prev
+										subject_type = "thrall"
+									}
+								}
+							}
+
+							count > 0
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	possible = {
+		fromfromfrom = {
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_no_vassals_of_vassals"
+				NOT = { exists = overlord }
+			}
+		}
+		hidden:parameter:country = {
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_liberated"
+				war_demand_counter = {
+					type = liberated_or_vassalized
+					value < 1
+				}
+			}
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_no_planets"
+				war_demand_counter = {
+					type = num_owned_planets
+					value > 0
+				}
+			}
+		}
+	}
+	
+	proposable = {
+		parameter:country = {
+			can_be_subject = {
+				overlord = fromfromfrom
+				subject_type = "thrall"
+			}
+		}
+	}
+	
+	effect = {
+		add_threat = {
+			who = fromfromfrom
+			amount = 1 # scales to pops
+		}
+		parameter:country = {
+			set_subject_of = {
+				who = fromfromfrom
+				subject_type = "thrall"
+			}
+		}
+	}
+	
+	counters = {
+		liberated_or_vassalized = {
+			context = parameter:country
+			value = { base = 1 }
+		}
+	}
+	
+	ai_weight = {
+		base = 1000
+		
+		modifier = {
+			factor = 0.5
+			NOT = { 
+				parameter:country = {
+					is_same_value = from 
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = { has_ai_personality = awakened_fallen_empire_xenophobe }
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = { this = { is_domineering_to = parameter:country } }
+		}
+	}
+}
+
+make_dominion = {
+	execution_order = 1
+	is_conquest_type = yes
+	
+	parameters = {
+		country = {
+			type = country
+		}
+	}
+	
+	warscore_cost = {
+		base = 20
+
+		scaled_modifier = {
+			scope = parameter:country
+			add = 8
+			calc = planets_in_country
+		}		
+
+		scaled_modifier = {
+			scope = parameter:country
+			add = 0.3
+			calc = pop_count
+		}
+
+		scaled_modifier = {
+			scope = parameter:country
+			div = 0.05
+			calc = planets_in_country
+		}
+		
+		modifier = {
+			factor = 0.33
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+
+	potential = {
+		OR = {
+			is_subject = no
+			NOT = {
+				overlord = {
+					is_same_value = from
+				}
+			}
+		}
+		is_country_type = awakened_fallen_empire		
+		parameter:country = {
+			is_country_type = default 
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_not_opponent"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								is_war_participant = {
+									who = prevprev
+									side = prev
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						would_join_war = {
+							attacker = root
+							defender = from
+							side = from
+						}
+					}
+					
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_overlord_in_war"
+			OR = {
+				NOT = {
+					exists = parameter:country.overlord
+				}
+				AND = {
+					exists = fromfrom
+					fromfrom = {
+						NOT = {
+							is_war_participant = {
+								who = parameter:country.overlord
+								side = root
+							}
+						}
+					}
+				}
+				AND = {
+					NOT = { exists = fromfrom }
+					parameter:country.overlord = {
+						NOT = {
+							would_join_war = {
+								attacker = root
+								defender = from
+								side = root
+							}
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_no_overlords"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								count_war_participants = {
+									side = root
+									limit = {
+										NOT = { exists = overlord }
+										parameter:country = {
+											can_be_subject = {
+												overlord = prev
+												subject_type = "dominion"
+											}
+										}
+									}
+									count > 0
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						count_potential_war_participants = {
+							attacker = root
+							defender = from
+							side = root
+
+							limit = {
+								NOT = { exists = overlord }
+								parameter:country = {
+									can_be_subject = {
+										overlord = prev
+										subject_type = "dominion"
+									}
+								}
+							}
+
+							count > 0
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	possible = {
+		fromfromfrom = {
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_no_vassals_of_vassals"
+				NOT = { exists = overlord }
+			}
+		}
+		hidden:parameter:country = {
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_liberated"
+				war_demand_counter = {
+					type = liberated_or_vassalized
+					value < 1
+				}
+			}
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_no_planets"
+				war_demand_counter = {
+					type = num_owned_planets
+					value > 0
+				}
+			}
+		}
+	}
+	
+	proposable = {
+		parameter:country = {
+			can_be_subject = {
+				overlord = fromfromfrom
+				subject_type = "dominion"
+			}
+		}
+	}
+	
+	effect = {
+		add_threat = {
+			who = fromfromfrom
+			amount = 1 # scales to pops
+		}
+		parameter:country = {
+			set_subject_of = {
+				who = fromfromfrom
+				subject_type = "dominion"
+			}
+		}
+	}
+	
+	counters = {
+		liberated_or_vassalized = {
+			context = parameter:country
+			value = { base = 1 }
+		}
+	}
+	
+	ai_weight = {
+		base = 1000
+		
+		modifier = {
+			factor = 0.5
+			NOT = { 
+				parameter:country = {
+					is_same_value = from 
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = { has_ai_personality = awakened_fallen_empire_spiritualist }
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = { this = { is_domineering_to = parameter:country } }
+		}
+	}
+}
+
+make_signatory = {
+	execution_order = 1
+	is_conquest_type = yes
+	
+	parameters = {
+		country = {
+			type = country
+		}
+	}
+	
+	warscore_cost = {
+		base = 20
+
+		scaled_modifier = {
+			scope = parameter:country
+			add = 8
+			calc = planets_in_country
+		}		
+
+		scaled_modifier = {
+			scope = parameter:country
+			add = 0.3
+			calc = pop_count
+		}
+
+		scaled_modifier = {
+			scope = parameter:country
+			div = 0.05
+			calc = planets_in_country
+		}
+		
+		modifier = {
+			factor = 0.33
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+
+	potential = {
+		OR = {
+			is_subject = no
+			NOT = {
+				overlord = {
+					is_same_value = from
+				}
+			}
+		}
+		is_country_type = awakened_fallen_empire		
+		parameter:country = {
+			is_country_type = default 
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_not_opponent"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								is_war_participant = {
+									who = prevprev
+									side = prev
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						would_join_war = {
+							attacker = root
+							defender = from
+							side = from
+						}
+					}
+					
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_overlord_in_war"
+			OR = {
+				NOT = {
+					exists = parameter:country.overlord
+				}
+				AND = {
+					exists = fromfrom
+					fromfrom = {
+						NOT = {
+							is_war_participant = {
+								who = parameter:country.overlord
+								side = root
+							}
+						}
+					}
+				}
+				AND = {
+					NOT = { exists = fromfrom }
+					parameter:country.overlord = {
+						NOT = {
+							would_join_war = {
+								attacker = root
+								defender = from
+								side = root
+							}
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_no_overlords"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								count_war_participants = {
+									side = root
+									limit = {
+										NOT = { exists = overlord }
+										parameter:country = {
+											can_be_subject = {
+												overlord = prev
+												subject_type = "signatory"
+											}
+										}
+									}
+									count > 0
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						count_potential_war_participants = {
+							attacker = root
+							defender = from
+							side = root
+
+							limit = {
+								NOT = { exists = overlord }
+								parameter:country = {
+									can_be_subject = {
+										overlord = prev
+										subject_type = "signatory"
+									}
+								}
+							}
+
+							count > 0
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	possible = {
+		fromfromfrom = {
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_no_vassals_of_vassals"
+				NOT = { exists = overlord }
+			}
+		}
+		hidden:parameter:country = {
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_liberated"
+				war_demand_counter = {
+					type = liberated_or_vassalized
+					value < 1
+				}
+			}
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_no_planets"
+				war_demand_counter = {
+					type = num_owned_planets
+					value > 0
+				}
+			}
+		}
+	}
+	
+	proposable = {
+		parameter:country = {
+			can_be_subject = {
+				overlord = fromfromfrom
+				subject_type = "signatory"
+			}
+		}
+	}
+	
+	effect = {
+		add_threat = {
+			who = fromfromfrom
+			amount = 1 # scales to pops
+		}
+		parameter:country = {
+			set_subject_of = {
+				who = fromfromfrom
+				subject_type = "signatory"
+			}				
+		}
+	}
+	
+	counters = {
+		liberated_or_vassalized = {
+			context = parameter:country
+			value = { base = 1 }
+		}
+	}
+	
+	ai_weight = {
+		base = 1000
+		
+		modifier = {
+			factor = 0.5
+			NOT = { 
+				parameter:country = {
+					is_same_value = from 
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = { has_ai_personality = awakened_fallen_empire_xenophile }
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = { this = { is_domineering_to = parameter:country } }
+		}
+	}
+}
+
+make_satellite = {
+	execution_order = 1
+	is_conquest_type = yes
+	
+	parameters = {
+		country = {
+			type = country
+		}
+	}
+	
+	warscore_cost = {
+		base = 20
+
+		scaled_modifier = {
+			scope = parameter:country
+			add = 8
+			calc = planets_in_country
+		}		
+
+		scaled_modifier = {
+			scope = parameter:country
+			add = 0.3
+			calc = pop_count
+		}
+
+		scaled_modifier = {
+			scope = parameter:country
+			div = 0.05
+			calc = planets_in_country
+		}
+		
+		modifier = {
+			factor = 0.33
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+
+	potential = {
+		OR = {
+			is_subject = no
+			NOT = {
+				overlord = {
+					is_same_value = from
+				}
+			}
+		}
+		is_country_type = awakened_fallen_empire		
+		parameter:country = {
+			is_country_type = default 
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_not_opponent"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								is_war_participant = {
+									who = prevprev
+									side = prev
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						would_join_war = {
+							attacker = root
+							defender = from
+							side = from
+						}
+					}
+					
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_overlord_in_war"
+			OR = {
+				NOT = {
+					exists = parameter:country.overlord
+				}
+				AND = {
+					exists = fromfrom
+					fromfrom = {
+						NOT = {
+							is_war_participant = {
+								who = parameter:country.overlord
+								side = root
+							}
+						}
+					}
+				}
+				AND = {
+					NOT = { exists = fromfrom }
+					parameter:country.overlord = {
+						NOT = {
+							would_join_war = {
+								attacker = root
+								defender = from
+								side = root
+							}
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_no_overlords"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								count_war_participants = {
+									side = root
+									limit = {
+										NOT = { exists = overlord }
+										parameter:country = {
+											can_be_subject = {
+												overlord = prev
+												subject_type = "satellite"
+											}
+										}
+									}
+									count > 0
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						count_potential_war_participants = {
+							attacker = root
+							defender = from
+							side = root
+
+							limit = {
+								NOT = { exists = overlord }
+								parameter:country = {
+									can_be_subject = {
+										overlord = prev
+										subject_type = "satellite"
+									}
+								}
+							}
+
+							count > 0
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	possible = {
+		fromfromfrom = {
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_no_vassals_of_vassals"
+				NOT = { exists = overlord }
+			}
+		}
+		hidden:parameter:country = {
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_liberated"
+				war_demand_counter = {
+					type = liberated_or_vassalized
+					value < 1
+				}
+			}
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_no_planets"
+				war_demand_counter = {
+					type = num_owned_planets
+					value > 0
+				}
+			}
+		}
+	}
+	
+	proposable = {
+		parameter:country = {
+			can_be_subject = {
+				overlord = fromfromfrom
+				subject_type = "satellite"
+			}
+		}
+	}
+	
+	effect = {
+		add_threat = {
+			who = fromfromfrom
+			amount = 1 # scales to pops
+		}
+		parameter:country = {
+			set_subject_of = {
+				who = fromfromfrom
+				subject_type = "satellite"
+			}			
+		}
+	}
+	
+	counters = {
+		liberated_or_vassalized = {
+			context = parameter:country
+			value = { base = 1 }
+		}
+	}
+	
+	ai_weight = {
+		base = 1000
+		
+		modifier = {
+			factor = 0.5
+			NOT = { 
+				parameter:country = {
+					is_same_value = from 
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = { has_ai_personality = awakened_fallen_empire_materialist }
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = { this = { is_domineering_to = parameter:country } }
+		}
+	}
+}

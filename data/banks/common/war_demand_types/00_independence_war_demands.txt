@@ -173,7 +173,7 @@ liberate_country = {
 			custom_tooltip = {
 				fail_text = "war_demand_liberate_country_already_vassalized"
 				war_demand_counter = {
-					type = subjugated
+					type = liberated_or_vassalized
 					value < 1
 				}
 			}
@@ -200,10 +200,6 @@ liberate_country = {
 	}
 	
 	counters = {
-		liberated = {
-			context = parameter:country
-			value = { base = 1 }
-		}
 		liberated_or_vassalized = {
 			context = parameter:country
 			value = { base = 1 }

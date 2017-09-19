@@ -95,100 +95,100 @@ humiliate = {
 	}
 }
 
-#open_borders = {
-#	execution_order = 1
-#	
-#	parameters = {
-#		country = {
-#			type = country
-#		}
-#	}
-#	
-#	warscore_cost = {
-#		base = 10
-#	}
-#
-#	potential = {
-#		OR = {
-#			is_subject = no
-#			NOT = {
-#				overlord = {
-#					is_same_value = from
-#				}
-#			}
-#		}	
-#		custom_tooltip = {
-#			fail_text = "war_demand_vassalize_country_not_opponent"
-#			parameter:country = {
-#				OR = {
-#					AND = {
-#						exists = fromfrom
-#						from = {
-#							from = {
-#								is_war_participant = {
-#									who = prevprev
-#									side = prev
-#								}
-#							}
-#						}
-#					}
-#					AND = {
-#						NOT = { exists = fromfrom }
-#						would_join_war = {
-#							attacker = root
-#							defender = from
-#							side = from
-#						}
-#					}
-#					
-#				}
-#			}
-#		}		
-#	}
-#	
-#	possible = {
-#		is_country_type = default
-#		hidden:parameter:country = {
-#			is_country_type = default
-#		}
-#		hidden:parameter:country = {
-#			custom_tooltip = {
-#				fail_text = "war_demand_open_borders_no_planets"
-#				war_demand_counter = {
-#					type = num_owned_planets
-#					value > 0
-#				}
-#			}
-#		}
-#	}
-#	
-#	proposable = {
-#		always = yes
-#	}
-#	
-#	effect = {	
-#		parameter:country = {
-#			set_closed_borders = {
-#				who = fromfromfrom
-#				status = no	
-#				forced = 10
-#			}
-#		}		
-#	}
-#	
-#	counters = {
-#		num_country_wargoals = {
-#			context = parameter:country
-#			value = {
-#				base = 1
-#			}
-#		}	
-#	}		
-#	
-#	ai_weight = {
-#		base = 0
-#	}
-#}
+open_borders = {
+	execution_order = 1
+	
+	parameters = {
+		country = {
+			type = country
+		}
+	}
+	
+	warscore_cost = {
+		base = 10
+	}
+
+	potential = {
+		OR = {
+			is_subject = no
+			NOT = {
+				overlord = {
+					is_same_value = from
+				}
+			}
+		}	
+		custom_tooltip = {
+			fail_text = "war_demand_vassalize_country_not_opponent"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								is_war_participant = {
+									who = prevprev
+									side = prev
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						would_join_war = {
+							attacker = root
+							defender = from
+							side = from
+						}
+					}
+					
+				}
+			}
+		}		
+	}
+	
+	possible = {
+		is_country_type = default
+		hidden:parameter:country = {
+			is_country_type = default
+		}
+		hidden:parameter:country = {
+			custom_tooltip = {
+				fail_text = "war_demand_open_borders_no_planets"
+				war_demand_counter = {
+					type = num_owned_planets
+					value > 0
+				}
+			}
+		}
+	}
+	
+	proposable = {
+		always = yes
+	}
+	
+	effect = {	
+		parameter:country = {
+			set_closed_borders = {
+				who = fromfromfrom
+				status = no	
+				forced = 10
+			}
+		}		
+	}
+	
+	counters = {
+		num_country_wargoals = {
+			context = parameter:country
+			value = {
+				base = 1
+			}
+		}	
+	}		
+	
+	ai_weight = {
+		base = 0
+	}
+}
 
 stop_atrocity = {
 	execution_order = 1
@@ -226,7 +226,7 @@ stop_atrocity = {
 		}	
 		parameter:country = {
 			NOT = { has_ethic = "ethic_hive_mind" }
-			NOT = { has_valid_civic = civic_fanatic_purifiers }
+			NOT = { has_civic = civic_fanatic_purifiers }
 			OR = {
 				allows_slavery = yes
 				allows_purge = yes

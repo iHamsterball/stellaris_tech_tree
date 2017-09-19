@@ -1,0 +1,522 @@
+#Tooltips will be generated from these rules when they fail. Use of custom_tooltip is recommended
+#There are still multiple hard-coded rules that apply in addition to these.
+#If rules here evaluate to true, there might still be other rules that make the action unavailable.
+#If a rule here evaluates to false the action will become unavailable
+
+#Root = country
+#This = species
+species_has_citizenship = {
+	OR = {
+		has_citizenship_type = { type = citizenship_full country = root }
+		has_citizenship_type = { type = citizenship_caste_system country = root }
+	}
+}
+
+#Root = country
+#This = pop
+#also evaluates true if pop_can_live_planet is false on current planet
+can_auto_migrate_pop = {
+	root = { is_country_type = default }
+	is_sentient = yes
+	is_enslaved = no
+	is_being_purged = no
+	has_migration_control = no
+	is_robot_pop = no
+	NOT = { has_modifier = recently_migrated }
+	NOT = { has_modifier = recent_refugee }
+}
+
+#Root = planet
+#This = pop
+pop_can_live_on_planet = {
+	OR = {
+		root = { NOT = { habitability = { who = prev value < 0.4 } } }
+		AND = {
+			has_citizenship_type = { type = citizenship_purge }
+			NOT = { has_purge_type = { type = purge_displacement } }
+		}		
+	}
+	OR = {
+		is_robot_pop = yes
+		AND = {
+			exists = owner
+			owner = { NOT = { is_country_type = default } }
+		}
+		AND = {
+			has_citizenship_type = { type = citizenship_purge }
+			NOT = { has_purge_type = { type = purge_displacement } }
+		}
+		AND = {
+			OR = {
+				NOT = { has_citizenship_type = { type = citizenship_purge } }
+				NOT = { has_purge_type = { type = purge_displacement } }
+			}
+			OR = {
+				# everyone may live in sectors
+				planet = { sector_controlled = yes }
+
+				# citizens may always live in core worlds
+				OR = {
+					has_citizenship_type = { type = citizenship_full }
+					has_citizenship_type = { type = citizenship_caste_system }
+				}
+
+				# core_worlds_all / hive minds let everyone live in core worlds
+				AND = {
+					exists = owner
+					OR = {
+						owner = { has_policy_flag = core_worlds_all }
+						owner = { has_authority = auth_hive_mind }
+					}				
+				}
+
+				# core_worlds_citizens_and_slaves lets slaves live in core worlds
+				AND = {
+					exists = owner
+					has_citizenship_type = { type = citizenship_slavery }
+					owner = { has_policy_flag = core_worlds_citizens_and_slaves }
+				}
+			}
+		}
+	}
+}
+
+#Root = country
+#This = pop
+pop_can_flee_to_country = {
+	root = { is_country_type = default }
+	NOT = { root = { has_policy_flag = refugees_not_allowed } }
+	OR = {
+		has_citizenship_type = { type = citizenship_full country = root }
+		has_citizenship_type = { type = citizenship_caste_system country = root }
+		AND = {
+			has_citizenship_type = { type = citizenship_limited country = root }
+			has_citizenship_type = { type = citizenship_caste_system_limited country = root }
+			root = { has_policy_flag = refugees_allowed }
+		}
+	}
+}
+
+#Root = country
+#This = pop
+can_vote_in_democratic_election = {
+	has_citizenship_rights = yes
+}
+
+
+#Root = country
+#This = pop
+can_generate_leader_from_pop = {
+	has_citizenship_rights = yes
+	OR = {
+		is_robot_pop = no
+		root = { has_technology = tech_synthetic_leaders }
+	}
+}
+
+#Root = country
+#This = species
+can_generate_leader_from_species = {
+	is_sentient = yes
+	OR = {
+		root = { has_technology = tech_synthetic_leaders }
+		NOR = {
+			is_species = "ROBOT_POP_SPECIES_1"
+			is_species = "ROBOT_POP_SPECIES_2"
+			is_species = "ROBOT_POP_SPECIES_3"
+		}		
+	}
+	OR = {	
+		has_citizenship_type = { type = citizenship_full country = root }
+		has_citizenship_type = { type = citizenship_caste_system country = root }
+	}
+}
+
+#Root = country
+#This = pop
+can_generate_military_leader_from_pop = {
+	can_be_military_leader = yes
+	OR = {
+		is_robot_pop = no
+		root = { has_technology = tech_synthetic_leaders }
+	}	
+}
+
+#Root = species
+#This = planet
+can_generate_army_from_planet = {
+	any_owned_pop = {
+		is_same_species = root
+		can_be_soldier = yes
+	}
+}
+
+# Root = species
+# This = country
+can_generate_army_from_species = {
+	root = {
+		OR = {
+			has_military_service_type = { type = military_service_full country = prev }
+			has_military_service_type = { type = military_service_limited country = prev }
+		}	
+	}
+}
+
+#Root = country, attacker
+#This = country, target
+#This rule is a condition for taking hostile actions towards neutral targets. Such as landing troops or attacking their fleets
+can_take_hostile_actions = {
+	if = {
+		limit = { 
+			ROOT = {
+				has_policy_flag = first_contact_attack_not_allowed
+			}
+			NOT = {
+				is_hostile = ROOT
+				has_communications = ROOT
+			}
+		}
+		custom_tooltip = {
+			text = "CAN_TAKE_HOSTILE_ACTION_FIRST_CONTACT_PROTOCOL"
+			always = no
+		}
+		else = {
+			if = {
+				limit = {
+					AND = {
+						NOT = { has_country_flag = hostile_to_nomads }
+						ROOT = {
+							is_country_type = nomad
+						}
+					}
+				}
+				custom_tooltip = {
+					text = "CAN_TAKE_HOSTILE_ACTION_FIRST_CONTACT_PROTOCOL"
+					always = no
+				}
+				else = {
+					#attacking primitives with non-interference
+					if = {
+						limit = {
+							ROOT = { 
+								OR = { 
+									has_policy_flag = interference_passive 
+									has_policy_flag = interference_active
+								}
+							}
+							is_primitive = yes
+						}
+						custom_tooltip = {
+							text = "CAN_TAKE_HOSTILE_ACTION_NATIVE_INTERFERENCE"
+							always = no
+						}
+						else = {
+							if = {
+								limit = {
+									is_primitive = yes
+									capital_scope = {
+										any_country = {
+											NOT = { is_same_value = root }
+											any_planet_within_border = {
+												is_same_value = prevprev
+											}
+										}
+									}
+								}
+								custom_tooltip = {
+									text = "CAN_TAKE_HOSTILE_ACTION_NATIVE_OTHER_BORDERS"
+									always = no
+								}
+								else = {
+									always = yes
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Root = country, attacker
+#This = country, target
+#This rule is a condition for declaring war
+can_declare_war = {
+	custom_tooltip = {
+		fail_text = "ACTION_DECLARE_WAR_OVERLORD_ON_SUBJECT"
+		NOT = {
+			AND = {
+				OR = {
+					is_subject_type = "vassal"
+					is_subject_type = "protectorate"
+					is_subject_type = "signatory"
+				}
+				overlord = {
+					is_same_value = root
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = root
+			ROOT = {
+				has_policy_flag = no_wars
+				OR = {
+					is_subject = no
+					overlord = {
+						is_same_value = root
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = "CAN_DECLARE_WAR_POLICY"
+			always = no
+		}
+	}
+}
+
+#Root = country
+#This = planet
+can_colonize_planet = {
+	always = yes
+}
+
+#Root = country
+#This = pop
+can_colonize_with_pop = {
+	has_colonization_control = no
+	if = {
+		limit = { 
+			OR = {
+				has_culture_shock = yes
+				is_sentient = no
+			}
+		}
+		custom_tooltip = {
+			always = no
+		}
+		else = {
+			always = yes
+		}
+	}
+}
+
+#Root = country, us
+#This = country, them
+#This rule is a condition for determining if a country is hostile towards another. not to be confused with can_take_hostile_action
+can_be_hostile_towards = {
+	if = {
+		limit = { is_primitive = yes }
+		ROOT = {
+			NOT = { has_policy_flag = interference_passive }
+		}
+		
+		else = {
+			if = {
+				limit = { ROOT = { is_primitive = yes } }
+				NOT = { has_policy_flag = interference_passive }
+			}
+		}
+	}
+}
+
+# Check if a player can resettle a pop to a tile on another planet
+# This = Pop
+# From = Country
+# FromFrom = Target tile, optional
+can_resettle_pop = {
+	custom_tooltip = {
+		text = "RESETTLE_POP_IS_GROWING"
+		exists = this
+		is_growing = no
+	}
+	custom_tooltip = {
+		text = "RESETTLEMENT_POLICY_DISABLED"
+		OR = {
+			FROM = {
+				has_policy_flag = resettlement_allowed
+			}
+			FROM = {
+				has_ethic = "ethic_hive_mind"
+			}
+			AND = {
+				exists = this
+				OR = {
+					has_trait = trait_robotic_1 # allow if non-sentient robot
+					has_trait = trait_robotic_2 # allow if non-sentient robot
+					is_enslaved = yes # allow if enslaved
+				}
+			}
+		}
+	}
+}
+
+# This = Planet
+can_resettle_pop_planet = {
+	is_controlled_by = owner
+	custom_tooltip = {
+		text = "RESETTLE_PLANET_UNDER_COLONIZATION"
+		exists = this
+		is_under_colonization = no
+	}
+}
+
+# Checks if a pop can procreate
+# This = Pop
+can_pop_procreate = {
+	is_sentient = yes
+	is_being_purged = no
+	has_population_control = no
+}
+
+# Checks if a growing pop should be killed
+# This = Pop
+should_kill_growing_pop = {
+	has_population_control = yes
+}
+
+# Checks if a crisis event exists
+# This = Gamestate
+exists_any_crisis = {	
+	has_global_flag = galactic_crisis_happened
+}
+
+#This rule is a condition for bombarding planets
+#Root = fleet, potential attacker
+#From = planet, potential target
+can_orbital_bombard = {
+	exists = FROM.OWNER
+	OR = {
+		AND = {
+			ROOT.OWNER = {
+				NOT = { has_communications = FROM.OWNER }
+			}
+			FROM.OWNER = {
+				NOT = { is_country_type = primitive }
+			}
+		}
+		AND = {
+			ROOT.OWNER = {
+				NOR = {
+					has_policy_flag = interference_passive
+					has_policy_flag = interference_active
+				}
+			}
+			FROM.OWNER = { is_country_type = primitive }
+		}
+		ROOT.OWNER = { is_at_war_with = FROM.CONTROLLER }
+		FROM = { is_planet_class = pc_infested }
+		FROM.CONTROLLER = { is_country_type = swarm }
+		ROOT.OWNER = {
+			OR = {
+				is_country_type = extradimensional
+				is_country_type = extradimensional_2
+				is_country_type = extradimensional_3
+				is_country_type = swarm
+			}
+		}
+	}
+}
+
+# Check if private colony ships are available
+# root: country
+colony_ship_rushed = {
+	has_tradition = tr_prosperity_trans_stellar_corporations
+}
+
+#Check if it is possible to build orbital stations on this planet
+#this: planet
+#root: country
+can_planet_support_orbital_station = {
+	custom_tooltip = {
+		fail_text = "ORBITAL_STATION_ALREADY_EXISTS"
+		has_any_megastructure = no
+		NOT = {
+			AND = {
+				NOT = { is_planet_class = pc_ringworld_habitable }
+				has_planet_flag = has_megastructure
+			}	
+		}
+	}
+}
+
+# Check if full sensor range in entire galaxy 
+# root: country
+has_full_sensor_range = {
+	OR = {
+		has_megastructure = spy_orb_4
+		has_megastructure = spy_orb_restored
+	}
+}
+
+# Determines if notification messages should be sent after a ground combat
+# this: planet
+# from: winner
+# root: loser
+show_notification_for_ground_combat = {
+	NOT = { 
+		has_planet_flag = slave_revolt
+		has_planet_flag = revolt_in_progress
+	}
+}
+
+# Determines if the "per_neighbor_rival" static modifier should be applied to an empire
+# this: country
+should_apply_neighbor_rival_modifier = {
+	has_tradition = tr_supremacy_great_game
+}
+
+#Root: Rebelling against country
+#This: Rebel country
+are_rebels_hostile = {
+	is_country_type = rebel	#Rebels change country type after taking their initial planet (action.30)
+}
+
+#Root: planet
+should_colony_be_destroyed_on_pc_change = {
+	is_planet_class = pc_infested
+}
+
+#Root: country
+has_policies_for_support_stance = {
+	NOT = {
+		is_country_type = swarm
+	}
+}
+
+# Is the given fleet the portal for given extradimensional country
+# root: country (ED)
+# this: fleet
+is_extradimensional_portal = {
+	is_ship_size = dimensional_portal_ed
+	owner = {
+		OR = {
+			is_same_value = root
+			OR = {
+				AND = {
+					root = { is_country_type = extradimensional }
+					is_same_value = event_target:portal_holder_1
+				}
+				AND = {
+					root = { is_country_type = extradimensional_2 }
+					is_same_value = event_target:portal_holder_2
+				}
+				AND = {
+					root = { is_country_type = extradimensional_3 }
+					is_same_value = event_target:portal_holder_3
+				}
+			}
+		}
+	}
+}
+
+# Is the given fleet an anchor for given extradimensional country
+# root: country (ED)
+# this: fleet
+is_extradimensional_anchor = {
+	is_ship_size = anchor_station
+	owner = { is_same_value = root }
+}

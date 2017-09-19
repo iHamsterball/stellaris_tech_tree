@@ -23,8 +23,10 @@
 @titan_collision_radius = 15
 
 @build_block_radius_none = 0
-@build_block_radius_civilian = 20
-@build_block_radius_military = 200
+@build_block_radius_tiny = 10
+@build_block_radius_small = 70
+@build_block_radius_medium = 90
+@build_block_radius_large = 110
 
 
 # Dragon Test
@@ -74,7 +76,7 @@ enclave_station = {
 	section_slots = { "mid" = { locator = "station" } }
 	num_target_locators = 0
 	is_space_station = yes
-	build_block_radius = @build_block_radius_civilian
+	build_block_radius = @build_block_radius_tiny
 	
 	class = shipclass_military_station
 	is_designable = no
@@ -178,7 +180,7 @@ station_xl = {
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 5
 	is_space_station = yes
-	build_block_radius = @build_block_radius_civilian
+	build_block_radius = @build_block_radius_tiny
 	
 	class = shipclass_military_station
 	is_designable = no
@@ -199,7 +201,7 @@ station_l = {
 	section_slots = { "mid" = { locator = "station" } }
 	num_target_locators = 2
 	is_space_station = yes
-	build_block_radius = @build_block_radius_civilian
+	build_block_radius = @build_block_radius_tiny
 	
 	class = shipclass_military_station
 	is_designable = no
@@ -219,7 +221,7 @@ station_m = {
 	section_slots = { "mid" = { locator = "station" } }
 	num_target_locators = 2
 	is_space_station = yes
-	build_block_radius = @build_block_radius_civilian
+	build_block_radius = @build_block_radius_tiny
 	
 	class = shipclass_military_station
 	is_designable = no
@@ -239,7 +241,7 @@ station_s = {
 	section_slots = { "mid" = { locator = "station" } }
 	num_target_locators = 1
 	is_space_station = yes
-	build_block_radius = @build_block_radius_civilian
+	build_block_radius = @build_block_radius_tiny
 	
 	class = shipclass_military_station
 	is_designable = no
@@ -259,7 +261,7 @@ station_xs = {
 	section_slots = { "mid" = { locator = "station" } }
 	num_target_locators = 1
 	is_space_station = yes
-	build_block_radius = @build_block_radius_civilian
+	build_block_radius = @build_block_radius_tiny
 	
 	class = shipclass_military_station
 	is_designable = no
@@ -288,7 +290,7 @@ dimensional_horror = {
 	}
 	num_target_locators = 4
 	is_space_station = no
-	build_block_radius = @build_block_radius_military
+	build_block_radius = @build_block_radius_large
 	icon_frame = 7
 	
 	class = shipclass_military
@@ -342,7 +344,7 @@ homebase = {
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 5
 	is_space_station = yes
-	build_block_radius = @build_block_radius_civilian
+	build_block_radius = @build_block_radius_tiny
 	
 	class = shipclass_military_station
 	is_designable = no
@@ -363,7 +365,7 @@ hive_asteroid = {
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 1
 	is_space_station = yes
-	build_block_radius = @build_block_radius_civilian
+	build_block_radius = @build_block_radius_tiny
 	
 	class = shipclass_military_station
 	is_designable = no

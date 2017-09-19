@@ -1,0 +1,223 @@
+################
+## Tomb World ##
+################
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_desert"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+	}
+}
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_arid"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+	}
+}
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_savannah"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+	}
+}
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_arctic"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+	}
+}
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_tundra"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+	}
+}
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_alpine"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+	}
+}
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_continental"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+	}
+}
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_tropical"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+	}
+}
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_ocean"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+	}
+}
+
+################
+## Gaia World ##
+################
+
+terraform_link = {
+	to = "pc_gaia"
+	from = "pc_desert"
+	
+	energy = 20000
+	duration = 14600
+	
+	condition = {
+		has_technology = "tech_gaia_creation"
+	}
+}
+
+terraform_link = {
+	from = "pc_arid"
+	to = "pc_gaia"
+	
+	energy = 20000
+	duration = 14600
+	
+	condition = {
+		has_technology = "tech_gaia_creation"
+	}
+}
+
+terraform_link = {
+	to = "pc_gaia"
+	from = "pc_savannah"
+	
+	energy = 20000
+	duration = 14600
+	
+	condition = {
+		has_technology = "tech_gaia_creation"
+	}
+}
+
+terraform_link = {
+	to = "pc_gaia"
+	from = "pc_arctic"
+	
+	energy = 20000
+	duration = 14600
+	
+	condition = {
+		has_technology = "tech_gaia_creation"
+	}
+}
+
+terraform_link = {
+	to = "pc_gaia"
+	from = "pc_tundra"
+	
+	energy = 20000
+	duration = 14600
+	
+	condition = {
+		has_technology = "tech_gaia_creation"
+	}
+}
+
+terraform_link = {
+	to = "pc_gaia"
+	from = "pc_alpine"
+	
+	energy = 20000
+	duration = 14600
+	
+	condition = {
+		has_technology = "tech_gaia_creation"
+	}
+}
+
+terraform_link = {
+	to = "pc_gaia"
+	from = "pc_continental"
+	
+	energy = 20000
+	duration = 14600
+	
+	condition = {
+		has_technology = "tech_gaia_creation"
+	}
+}
+
+terraform_link = {
+	to = "pc_gaia"
+	from = "pc_tropical"
+	
+	energy = 20000
+	duration = 14600
+	
+	condition = {
+		has_technology = "tech_gaia_creation"
+	}
+}
+
+terraform_link = {
+	to = "pc_gaia"
+	from = "pc_ocean"
+	
+	energy = 20000
+	duration = 14600
+	
+	condition = {
+		has_technology = "tech_gaia_creation"
+	}
+}

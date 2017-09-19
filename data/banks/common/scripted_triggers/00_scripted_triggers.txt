@@ -45,36 +45,9 @@ is_non_sentient_robot = { # The pop is a non-sentient robot
 	}
 }
 
-is_non_menial_laborer = {
-	is_enslaved = no
-	is_non_sentient_robot = no
-	is_sentient = yes
-}
-
-is_slave_tile_or_planet = {
-	NOR = {
-		AND = {
-			exists = pop
-			pop = { is_non_menial_laborer = yes }
-		}
-		AND = {
-			NOT = { exists = pop }
-			planet = {
-				any_owned_pop = {
-					is_non_menial_laborer = yes
-				}
-			}				
-		}
-	}	
-}
-
 wears_clothes = { # The species uses the portrait that wears clothes
 	OR = {
 		species_portrait = human
-		species_portrait = humanoid_02
-		species_portrait = humanoid_03
-		species_portrait = humanoid_04
-		species_portrait = humanoid_05
 		species_portrait = mam5
 		species_portrait = mam13
 		species_portrait = mam10
@@ -106,7 +79,6 @@ wears_clothes = { # The species uses the portrait that wears clothes
 		species_portrait = rep12
 		species_portrait = rep13
 		species_portrait = rep15
-		species_portrait = rep16
 		species_portrait = avi1
 		species_portrait = avi2
 		species_portrait = avi4
@@ -141,11 +113,6 @@ wears_clothes = { # The species uses the portrait that wears clothes
 		species_portrait = fun8
 		species_portrait = fun9
 		species_portrait = fun10
-		species_portrait = pla6
-		species_portrait = pla7
-		species_portrait = pla8
-		species_portrait = pla9
-		species_portrait = pla10
 	}
 }
 
@@ -205,14 +172,6 @@ uninhabitable_regular_planet = {
 	}
 }
 
-colonizeable_planet = {
-	OR = {
-		is_planet_class = pc_nuked
-		habitable_structure = yes
-		habitable_planet = yes
-	}
-}
-
 habitable_planet = {
 	OR = {
 		is_planet_class = pc_desert
@@ -224,7 +183,6 @@ habitable_planet = {
 		is_planet_class = pc_arctic
 		is_planet_class = pc_alpine
 		is_planet_class = pc_savannah
-		is_planet_class = pc_gaia
 	}
 }
 
@@ -251,7 +209,6 @@ is_guardian_country = {
 
 has_encountered_other_species = {
 	OR = {
-		has_civic = civic_syncretic_evolution
 		num_communications > 0
 		any_owned_pop = {
 			NOT = { is_same_species = prev }
@@ -393,61 +350,5 @@ is_lonely_hive_mind_pop = {
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
 		}
-	}
-}
-
-has_culture_shock = {
-	OR = {
-		has_modifier = culture_shock_stone_age
-		has_modifier = culture_shock_bronze_age 
-		has_modifier = culture_shock_iron_age 
-		has_modifier = culture_shock_late_medieval_age 
-		has_modifier = culture_shock_renaissance_age 
-		has_modifier = culture_shock_steam_age 
-		has_modifier = culture_shock_industrial_age 
-		has_modifier = culture_shock_machine_age 
-		has_modifier = culture_shock_atomic_age 
-		has_modifier = culture_shock_early_space_age 
-	}
-}
-
-has_any_megastructure_in_empire = {
-	any_system_within_border = {
-		OR = {
-			has_megastructure = spy_orb_1
-			has_megastructure = spy_orb_2
-			has_megastructure = spy_orb_3
-			has_megastructure = spy_orb_4
-			has_megastructure = think_tank_1
-			has_megastructure = think_tank_2
-			has_megastructure = think_tank_3
-			has_megastructure = think_tank_4
-			has_megastructure = dyson_sphere_1
-			has_megastructure = dyson_sphere_2
-			has_megastructure = dyson_sphere_3
-			has_megastructure = dyson_sphere_4
-			has_megastructure = dyson_sphere_5	
-			has_megastructure = ring_world_2_intermediate
-			has_megastructure = dyson_sphere_ruined
-			has_megastructure = dyson_sphere_restored
-			has_megastructure = spy_orb_ruined
-			has_megastructure = spy_orb_restored
-			has_megastructure = think_tank_ruined
-			has_megastructure = think_tank_restored
-			has_megastructure = ring_world_ruined
-			has_megastructure = ring_world_restored						
-		}
-	}
-}
-
-has_any_tradition_unlocked = {
-	OR = {
-		has_tradition = tr_discovery_adopt
-		has_tradition = tr_diplomacy_adopt
-		has_tradition = tr_domination_adopt
-		has_tradition = tr_expansion_adopt
-		has_tradition = tr_harmony_adopt
-		has_tradition = tr_prosperity_adopt
-		has_tradition = tr_supremacy_adopt
 	}
 }

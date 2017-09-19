@@ -29,7 +29,6 @@ totalitarian = {
 	can_join_faction = {
 		is_enslaved = no
 		is_being_purged = no
-		has_culture_shock = no
 		NOT = { has_trait = trait_nerve_stapled }
 		OR = {
 			has_ethic = ethic_authoritarian
@@ -74,70 +73,10 @@ totalitarian = {
 		desc = "TOTALITARIAN_MONARCHY_DESC"
 
 		fulfilled_effect = 5
-
-		potential = {
-			exists = owner
-			owner = { has_authority = auth_imperial }
-		}
-
-		trigger = {
-			owner = {
-				has_authority = auth_imperial
-			}
-		}
-	}
-
-	demand = {
-		title = "TOTALITARIAN_MONARCHY1"
-		unfulfilled_title = "TOTALITARIAN_NO_MONARCHY"
-		desc = "TOTALITARIAN_MONARCHY_DESC"
-
-		fulfilled_effect = 5
 		unfulfilled_effect = -5
 
 		potential = {
 			exists = owner
-			owner = { has_authority = auth_dictatorial }
-		}
-
-		trigger = {
-			owner = {
-				has_authority = auth_imperial
-			}
-		}
-	}
-
-	demand = {
-		title = "TOTALITARIAN_MONARCHY2"
-		unfulfilled_title = "TOTALITARIAN_NO_MONARCHY"
-		desc = "TOTALITARIAN_MONARCHY_DESC"
-
-		fulfilled_effect = 5
-		unfulfilled_effect = -10
-
-		potential = {
-			exists = owner
-			owner = { has_authority = auth_oligarchic }
-		}
-
-		trigger = {
-			owner = {
-				has_authority = auth_imperial
-			}
-		}
-	}
-
-	demand = {
-		title = "TOTALITARIAN_MONARCHY3"
-		unfulfilled_title = "TOTALITARIAN_NO_MONARCHY"
-		desc = "TOTALITARIAN_MONARCHY_DESC"
-
-		fulfilled_effect = 5
-		unfulfilled_effect = -15
-
-		potential = {
-			exists = owner
-			owner = { has_authority = auth_democratic }
 		}
 
 		trigger = {
@@ -166,12 +105,12 @@ totalitarian = {
 						OR = {
 							has_citizenship_type = {
 								country = root.owner
-								type = citizenship_caste_system
-							}
+								type = citizenship_caste_system						
+							}	
 							has_citizenship_type = {
 								country = root.owner
-								type = citizenship_caste_system_limited
-							}
+								type = citizenship_caste_system_limited					
+							}							
 						}
 					}
 					AND = {
@@ -263,77 +202,6 @@ totalitarian = {
 			}
 		}
 	}
-
-	demand = {
-		title = "TOTALITARIAN_HARMONY"
-		unfulfilled_title = "TOTALITARIAN_NO_HARMONY"
-		desc = "TOTALITARIAN_HARMONY_DESC"
-
-		fulfilled_effect = 2
-		unfulfilled_effect = -5
-
-		potential = {
-			exists = owner
-			owner = {
-				has_any_tradition_unlocked = yes
-			}
-		}
-
-		trigger = {
-			owner = {
-				OR = {
-					has_tradition = tr_harmony_adopt
-					has_tradition = tr_harmony_the_greater_good
-					has_tradition = tr_harmony_kinship
-					has_tradition = tr_harmony_utopian_dream
-					has_tradition = tr_harmony_bulwark_of_harmony
-					has_tradition = tr_harmony_mind_and_body
-				}
-			}
-		}
-	}
-
-	demand = {
-		title = "TOTALITARIAN_EXTRANATIONAL_AUTHORITY"
-		unfulfilled_title = "TOTALITARIAN_NO_EXTRANATIONAL_AUTHORITY"
-		desc = "TOTALITARIAN_EXTRANATIONAL_AUTHORITY_DESC"
-
-		fulfilled_effect = 5
-
-		potential = {
-			exists = owner
-			owner = {
-				num_communications > 2
-			}
-		}
-
-		trigger = {
-			owner = {
-				is_overlord = yes
-			}
-		}
-	}
-
-	demand = {
-		title = "TOTALITARIAN_UNDERLING"
-		unfulfilled_title = "TOTALITARIAN_NOT_UNDERLING"
-		desc = "TOTALITARIAN_UNDERLING_DESC"
-
-		unfulfilled_effect = -10
-
-		potential = {
-			exists = owner
-			owner = {
-				is_subject = yes
-			}
-		}
-
-		trigger = {
-			owner = {
-				is_subject = yes
-			}
-		}
-	}
 	
 	on_create = {
 		pop_faction_event = { id = factions.1 }
@@ -371,7 +239,7 @@ totalitarian = {
 				custom_tooltip = {
 					fail_text = EMBRACE_FACTION_COOLDOWN
 					parameter:empire = {
-						NOT = { has_modifier = embraced_faction_timer }
+						NOT = { has_country_flag = embraced_faction }
 					}
 				}
 				support > 0.20
@@ -392,63 +260,18 @@ totalitarian = {
 				}
 				parameter:empire = {
 					shift_ethic = ethic_authoritarian
+					hidden_effect = { set_timed_country_flag = { flag = embraced_faction days = 7200 } }
 					hidden_effect = {
-						add_modifier = { modifier = embraced_faction_timer days = 3600 }
 						every_pop_faction = {
 							limit = { NOT = { is_same_value = root } }
 							add_modifier = { modifier = embraced_another_faction days = 3600 }
 						}
 					}
 				}
-				hidden_effect = {
-					save_event_target_as = TargetFaction
-					parameter:empire = {
-						every_relation = {
-							limit = {
-								is_ai = no
-								is_country_type = default			
-								has_communications = prev
-							}
-							country_event = { id = factions.2000 }
-						}
-					}				
-				}				
 			}
 			
 			ai_weight = {
-				base = 1
-				modifier = {
-					factor = 0
-					support < 0.50
-					owner = {
-						has_ethic = ethic_authoritarian
-					}
-				}
-				modifier = {
-					factor = 0
-					NOT = { 
-						owner = {
-							exists = ruler
-							ruler = {
-								leader_of_faction = totalitarian
-							}
-						}
-					}
-				}
-				modifier = {
-					factor = 0
-					owner = {
-						count_pop_factions = {
-							limit = {
-								NOR = {
-									is_pop_faction_type = democratic_election_faction_1
-									is_pop_faction_type = democratic_election_faction_2
-								}
-							}
-							count < 4
-						}					
-					}
-				}
+				base = 0
 			}
 		}
 		promote_faction = {

@@ -42,7 +42,7 @@ create_crystal_country = {
 			}
 		}
 		create_country = {
-			name = "NAME_Prism"
+			name = "Prism"
 			type = crystal
 			flag = {
 				icon = {
@@ -73,7 +73,7 @@ create_cloud_country = {
 	if = {
 		limit = { NOT = { exists = event_target:cloud_country } }
 		create_country = {
-			name = "NAME_Enigmatic_Energy"
+			name = "Enigmatic Energy"
 			type = cloud
 			flag = {
 				icon = {
@@ -104,7 +104,7 @@ create_amoeba_country = {
 	if = {
 		limit = { NOT = { exists = event_target:amoeba_country } }
 		create_country = {
-			name = "NAME_Spaceborne_Organics"
+			name = "Spaceborne Organics"
 			type = amoeba
 			flag = {
 				icon = {
@@ -135,7 +135,7 @@ create_drone_country = {
 	if = {
 		limit = { NOT = { exists = event_target:drone_country } }
 		create_country = {
-			name = "NAME_Mineral_Extraction_Operation"
+			name = "Mineral Extraction Operation"
 			type = drone
 			flag = {
 				icon = {
@@ -167,7 +167,7 @@ create_tiyanki_country = {
 	if = {
 		limit = { NOT = { exists = event_target:tiyanki_country } }
 		create_country = {
-			name = "NAME_Placid_Leviathans"
+			name = "Placid Leviathans"
 			type = tiyanki
 			flag = {
 				icon = {
@@ -204,7 +204,7 @@ create_pirate_country = {
 		random_list = {
 			50 = {
 				create_country = {
-					name = "NAME_Privateers"
+					name = "Privateers"
 					name_list = "PRT1"
 					species = random
 					type = pirate
@@ -231,7 +231,7 @@ create_pirate_country = {
 			}
 			50 = {
 				create_country = {
-					name = "NAME_Privateers"
+					name = "Privateers"
 					name_list = "PRT2"
 					species = random
 					type = pirate
@@ -391,15 +391,15 @@ swarm_vanguard = {
 			set_owner = PREV
 			create_ship = {
 				name = random
-				design = "NAME_Swarm_Small"
+				design = "Swarm Small"
 				graphical_culture = "swarm_01"
 			}
 			assign_leader = last_created_leader
 			while = {
-				count = 46
+				count = 6
 				create_ship = {
 					name = random
-					design = "NAME_Swarm_Small"
+					design = "Swarm Small"
 					graphical_culture = "swarm_01"
 				}
 			}
@@ -424,6 +424,9 @@ swarm_brood = {
 				name = random
 				skill = 500
 				set_age = 1125
+				traits = {
+					trait = leader_trait_hive_mind
+				}
 			}
 		}
 		25 = {
@@ -434,6 +437,7 @@ swarm_brood = {
 				skill = 500
 				set_age = 1125
 				traits = {
+					trait = leader_trait_hive_mind
 					trait = leader_trait_hive_affinity
 				}
 			}
@@ -445,15 +449,23 @@ swarm_brood = {
 			set_owner = event_target:prethoryn
 			create_ship = {
 				name = random
-				design = "NAME_Swarm_Queen"
+				design = "Swarm Queen"
 				graphical_culture = "swarm_01"
 			}
 			assign_leader = last_created_leader
 			while = {
-				count = 15
+				count = 5
 				create_ship = {
 					name = random
-					design = "NAME_Swarm_Large"
+					design = "Swarm Large"
+					graphical_culture = "swarm_01"
+				}
+			}
+			while = {
+				count = 3
+				create_ship = {
+					name = random
+					design = "Swarm Carrier"
 					graphical_culture = "swarm_01"
 				}
 			}
@@ -461,15 +473,7 @@ swarm_brood = {
 				count = 13
 				create_ship = {
 					name = random
-					design = "NAME_Swarm_Carrier"
-					graphical_culture = "swarm_01"
-				}
-			}
-			while = {
-				count = 63
-				create_ship = {
-					name = random
-					design = "NAME_Swarm_Small"
+					design = "Swarm Small"
 					graphical_culture = "swarm_01"
 				}
 			}
@@ -477,30 +481,6 @@ swarm_brood = {
 			set_fleet_stance = aggressive
 			set_aggro_range = 500
 			set_aggro_range_measure_from = self
-		}
-	}
-}
-
-swarm_armies = {
-	create_fleet = {
-		name = "NAME_Prethoryn_Armies"
-		effect = {
-			set_owner = event_target:prethoryn
-			while = {
-				count = 10
-				create_army_transport = {
-					ship_name = "NAME_Prethoryn_Transport"
-					graphical_culture = "swarm_01"
-					army_name = "NAME_Prethoryn_Invaders"
-					army_type = "swarm_army"
-					species = event_target:prethoryn_species
-				}
-			}
-			set_location = {
-				target = PREVPREV
-				distance = 20
-				angle = random 
-			}
 		}
 	}
 }
@@ -5869,26 +5849,5 @@ create_cybernetic_species_mod = {
 			}
 			change_species = last_created
 		}
-		every_owned_ship = {
-			limit = {
-				is_ship_class = shipclass_colonizer
-				is_same_species = event_target:changing_species
-			}
-			change_species = last_created
-		}
-	}
-}
-
-set_all_comms_surveyed = {
-	every_country = {
-		limit = {
-			has_communications = from
-		}
-		prev = {
-			surveyed = {
-  				set_surveyed = yes
-   				surveyor = Prev
-   			}
-    	}
 	}
 }

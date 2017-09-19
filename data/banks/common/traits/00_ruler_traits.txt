@@ -303,7 +303,7 @@ trait_ruler_champion_of_the_people = {
 		NOT = { from = { has_ethic = "ethic_hive_mind" } }
 	}
 	modifier = {
-		pop_happiness = 0.05
+		pop_happiness = 0.1
 	}
 	leader_trait = yes
 	leader_class = { ruler }
@@ -390,7 +390,7 @@ leader_trait_fleet_organizer = {
 		NOT = { from = { has_ethic = "ethic_hive_mind" } }
 	}
 	modifier = {
-		navy_size_mult = 0.2
+		navy_size_mult = 0.3
 	}
 	leader_trait = yes
 	leader_class = { ruler }
@@ -406,12 +406,28 @@ leader_trait_nervous = {
 		NOT = { from = { has_ethic = "ethic_hive_mind" } }
 	}
 	modifier = {
-		navy_size_mult = -0.1
+		navy_size_mult = -0.2
 	}
 	leader_trait = yes
 	leader_class = { ruler }
 	prerequisites = { tech_doctrine_fleet_size_2 }
 	opposites = { "leader_trait_fleet_organizer" "leader_trait_unyielding" }
+}
+
+leader_trait_hive_mind = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_fist.dds"
+	potential = {
+		NOT = { from = { has_ethic = "ethic_hive_mind" } }
+	}
+	modifier = {
+		navy_size_add = 40
+	}
+	leader_trait = yes
+	leader_class = { ruler }
+	initial = no
+	randomized = no
 }
 
 leader_trait_reformer = {
@@ -505,5 +521,4 @@ leader_trait_ruler_hive_mind = {
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ruler_hive_mind.dds"
 	
 	immortal_leaders = yes	
-	hide_age = yes
 }

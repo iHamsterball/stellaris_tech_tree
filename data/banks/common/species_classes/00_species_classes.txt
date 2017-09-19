@@ -51,18 +51,8 @@ MAM = {
 	}
 	
 	custom_portraits = {#add additional portraits when customizing species
-		randomized = { 
-			OR = { 
-				host_has_dlc = "Creatures of the Void Portrait Pack"
-				host_has_dlc = "Anniversary Portraits"
-			}
-		}
-		playable = { 
-			OR = {
-				local_has_dlc = "Creatures of the Void Portrait Pack"
-				local_has_dlc = "Anniversary Portraits"
-			}
-		}
+		randomized = { host_has_dlc = "Creatures of the Void Portrait Pack" }
+		playable = { local_has_dlc = "Creatures of the Void Portrait Pack" }
 		portraits = {
 			"mam17"
 		}
@@ -98,13 +88,6 @@ REP = {
 			"rep16"
 		}
 	}
-	custom_portraits = {
-		randomized = { host_has_dlc = "Anniversary Portraits" }
-		playable = { local_has_dlc = "Anniversary Portraits" }
-		portraits = {
-			"rep17"
-		}
-	}
 
 	graphical_culture = reptilian_01
 	move_pop_sound_effect = "reptilian_pops_move"
@@ -136,27 +119,10 @@ AVI = {
 	}
 	
 	custom_portraits = {#add additional portraits when customizing species
-		randomized = { 
-			OR = { 
-				host_has_dlc = "Creatures of the Void Portrait Pack"
-				host_has_dlc = "Anniversary Portraits"
-			}
-		}
-		playable = { 
-			OR = {
-				local_has_dlc = "Creatures of the Void Portrait Pack"
-				local_has_dlc = "Anniversary Portraits"
-			}
-		}
+		randomized = { host_has_dlc = "Creatures of the Void Portrait Pack" } 
+		playable = { local_has_dlc = "Creatures of the Void Portrait Pack" }
 		portraits = {
 			"avi17"
-		}
-	}
-	custom_portraits = {
-		randomized = { host_has_dlc = "Anniversary Portraits" }
-		playable = { local_has_dlc = "Anniversary Portraits" }
-		portraits = {
-			"avi18"
 		}
 	}
 
@@ -196,27 +162,10 @@ ART = {
 			"art16"
 		}
 	}
-	custom_portraits = {
-		randomized = { host_has_dlc = "Anniversary Portraits" }
-		playable = { local_has_dlc = "Anniversary Portraits" }
-		portraits = {
-			"art20"
-		}
-	}
 	
 	custom_portraits = {#add additional portraits when customizing species
-		randomized = { 
-			OR = { 
-				host_has_dlc = "Creatures of the Void Portrait Pack"
-				host_has_dlc = "Anniversary Portraits"
-			}
-		}
-		playable = { 
-			OR = {
-				local_has_dlc = "Creatures of the Void Portrait Pack"
-				local_has_dlc = "Anniversary Portraits"
-			}
-		}
+		randomized = { host_has_dlc = "Creatures of the Void Portrait Pack" }
+		playable = { local_has_dlc = "Creatures of the Void Portrait Pack" }
 		portraits = {
 			"art17"
 		}
@@ -244,18 +193,8 @@ MOL = {
 	}
 	
 	custom_portraits = {#add additional portraits when customizing species
-		randomized = { 
-			OR = { 
-				host_has_dlc = "Creatures of the Void Portrait Pack"
-				host_has_dlc = "Anniversary Portraits"
-			}
-		}
-		playable = { 
-			OR = {
-				local_has_dlc = "Creatures of the Void Portrait Pack"
-				local_has_dlc = "Anniversary Portraits"
-			}
-		}
+		randomized = { host_has_dlc = "Creatures of the Void Portrait Pack" }
+		playable = { local_has_dlc = "Creatures of the Void Portrait Pack" }
 		portraits = {
 			"mol16"
 		}
@@ -293,18 +232,8 @@ FUN = {
 	}
 
 	custom_portraits = {#add additional portraits when customizing species
-		randomized = { 
-			OR = { 
-				host_has_dlc = "Creatures of the Void Portrait Pack"
-				host_has_dlc = "Anniversary Portraits"
-			}
-		}
-		playable = { 
-			OR = {
-				local_has_dlc = "Creatures of the Void Portrait Pack"
-				local_has_dlc = "Anniversary Portraits"
-			}
-		}
+		randomized = { host_has_dlc = "Creatures of the Void Portrait Pack" }
+		playable = { local_has_dlc = "Creatures of the Void Portrait Pack" }
 		portraits = {
 			"fun16"
 		}

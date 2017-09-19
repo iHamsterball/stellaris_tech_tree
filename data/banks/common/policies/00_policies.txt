@@ -75,10 +75,8 @@ war_philosophy = {
 		}
 		
 		valid = {
-			NOR = {
+			NOT = {
 				has_ethic = "ethic_fanatic_pacifist"
-				has_valid_civic = "civic_fanatic_purifiers"
-				has_valid_civic = "civic_hive_devouring_swarm"
 			}
 		}
 		
@@ -112,10 +110,8 @@ war_philosophy = {
 		}
 
 		valid = {
-			NOR = {
+			NOT = {
 				has_ethic = "ethic_fanatic_militarist"
-				has_valid_civic = "civic_fanatic_purifiers"
-				has_valid_civic = "civic_hive_devouring_swarm"
 			}
 		}
 		
@@ -257,11 +253,6 @@ orbital_bombardment = {
 			OR = {
 				has_ethic = "ethic_militarist"
 				has_ethic = "ethic_fanatic_militarist"
-				has_ethic = "ethic_hive_mind"
-				custom_tooltip_success = {
-					text = TRIGGER_FANATIC_PURIFIERS
-					has_valid_civic = "civic_fanatic_purifiers"
-				}			
 			}
 		}
 		
@@ -278,7 +269,6 @@ orbital_bombardment = {
 				OR = {
 					has_ethic = "ethic_fanatic_militarist"
 					has_ethic = "ethic_fanatic_xenophobe"
-					has_valid_civic = "civic_hive_devouring_swarm"
 				}
 			}
 		}
@@ -287,7 +277,7 @@ orbital_bombardment = {
 		name = "orbital_bombardment_armageddon"
 		
 		potential = {
-			has_valid_civic = civic_fanatic_purifiers
+			has_civic = civic_fanatic_purifiers
 		}
 		
 		valid = {
@@ -305,7 +295,7 @@ orbital_bombardment = {
 		AI_weight = {
 			modifier = {
 				factor = 10
-				has_valid_civic = civic_fanatic_purifiers
+				has_civic = civic_fanatic_purifiers
 			}
 		}
 	}
@@ -337,10 +327,8 @@ interference = {
 		valid = {
 			OR = {
 				is_subject_type = signatory
-				NOR = {
+				NOT = {
 					has_ethic = "ethic_fanatic_xenophobe"
-					has_valid_civic = "civic_fanatic_purifiers"
-					has_valid_civic = "civic_hive_devouring_swarm"
 				}
 			}
 		}
@@ -355,11 +343,7 @@ interference = {
 		modifier = {}
 		
 		valid = {
-			NOR = {
-				is_subject_type = signatory				
-				has_valid_civic = "civic_fanatic_purifiers"
-				has_valid_civic = "civic_hive_devouring_swarm"
-			}
+			NOT = { is_subject_type = signatory }
 		}
 		
 		AI_weight = {
@@ -465,10 +449,8 @@ enlightenment = {
 		modifier = {}
 		
 		valid = {
-			NOR = {
-				has_ethic = "ethic_fanatic_xenophobe"				
-				has_valid_civic = "civic_fanatic_purifiers"
-				has_valid_civic = "civic_hive_devouring_swarm"
+			NOT = {
+				has_ethic = "ethic_fanatic_xenophobe"
 			}
 		}
 		
@@ -643,13 +625,6 @@ first_contact_protocol = {
 		on_enabled = {
 			# custom_tooltip = "policy_allow_slavery_effect_disable"
 		}
-		
-		valid = {
-			NOR = {
-				has_valid_civic = "civic_fanatic_purifiers"
-				has_valid_civic = "civic_hive_devouring_swarm"
-			}
-		}
 	}
 	
 	option = {
@@ -794,10 +769,6 @@ artificial_intelligence_policy = {
 				has_valid_ai_personality = yes
 				has_ai_personality_behaviour = robot_exploiter
 			}
-			modifier = {
-				factor = 2
-				has_valid_ai_personality = no	# default to this to prevent starting robots from being purged
-			}			
 			modifier = {
 				factor = 0
 				OR = {
@@ -1111,11 +1082,9 @@ slavery = {
 		
 		valid = {
 			NOT = { is_subject_type = signatory }
-			OR = {
-				has_ethic = ethic_authoritarian
-				has_ethic = ethic_fanatic_authoritarian
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
+			NOR = {
+				has_ethic = "ethic_egalitarian" 
+				has_ethic = "ethic_fanatic_egalitarian" 
 			}
 		}
 		
@@ -1148,7 +1117,7 @@ slavery = {
 purge = {
 	potential = {
 		NOT = { has_ethic = "ethic_hive_mind" }
-		NOT = { has_valid_civic = civic_fanatic_purifiers }
+		NOT = { has_civic = civic_fanatic_purifiers }
 	}
 	
 	option = {
@@ -1216,13 +1185,6 @@ purge = {
 		
 		AI_weight = {
 			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
-			}
 			modifier = {
 				factor = 0
 				has_valid_ai_personality = yes
