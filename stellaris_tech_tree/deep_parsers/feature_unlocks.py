@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from pprint import pprint
+from django.utils.translation import ugettext
 import re
 
 class FeatureUnlocks:
@@ -136,7 +136,7 @@ class FeatureUnlocks:
     def _feature_flags(self, tech_data):
         try:
             feature_flags = [
-                'Unlocks Feature: ' + self._localize('feature_' + feature_flag)
+                ugettext('Unlocks Feature: ') + self._localize('feature_' + feature_flag)
                 for feature_flag
                 in next(iter(
                     attribute for attribute in tech_data
@@ -151,39 +151,39 @@ class FeatureUnlocks:
     def _army_unlocks(self, tech_key):
         unlocked_armies = [army for army in self._armies
                               if tech_key in army.prerequisites]
-        return ['Unlocks Army: {}'.format(army.name)
+        return [ugettext('Unlocks Army: {}').format(army.name)
                 for army in unlocked_armies]
 
     def _army_attachment_unlocks(self, tech_key):
         unlocked_attachments = [attachment for attachment
                                 in self._army_attachments
                                 if tech_key in attachment.prerequisites]
-        return ['Unlocks Attachment: {}'.format(attachment.name)
+        return [ugettext('Unlocks Attachment: {}').format(attachment.name)
                 for attachment in unlocked_attachments]
 
     def _buildable_pop_unlocks(self, tech_key):
         unlocked_buildable_pops = [buildable_pop for buildable_pop
                                    in self._buildable_pops
                                    if tech_key in buildable_pop.prerequisites]
-        return ['Unlocks Buildable Pop: {}'.format(buildable_pop.name)
+        return [ugettext('Unlocks Buildable Pop: {}').format(buildable_pop.name)
                 for buildable_pop in unlocked_buildable_pops]
 
     def _building_unlocks(self, tech_key):
         unlocked_buildings = [building for building in self._buildings
                               if tech_key in building.prerequisites]
-        return ['Unlocks Building: {}'.format(building.name)
+        return [ugettext('Unlocks Building: {}').format(building.name)
                 for building in unlocked_buildings]
 
     def _component_unlocks(self, tech_key):
         unlocked_components = [component for component in self._components
                               if tech_key in component.prerequisites]
-        return ['Unlocks Component: {}'.format(component.name)
+        return [ugettext('Unlocks Component: {}').format(component.name)
                 for component in unlocked_components]
 
     def _edict_unlocks(self, tech_key):
         unlocked_edicts = [edict for edict in self._edicts
                               if tech_key in edict.prerequisites]
-        return ['Unlocks Edict: {}'.format(edict.name)
+        return [ugettext('Unlocks Edict: {}').format(edict.name)
                 for edict in unlocked_edicts]
 
     def _policy_unlocks(self, tech_key):
@@ -198,25 +198,25 @@ class FeatureUnlocks:
                                 for policy in self._policies]
                             for option in options]
 
-        return ['Unlocks Policy: {} - {}'.format(option['policy_name'],
+        return [ugettext('Unlocks Policy: {} - {}').format(option['policy_name'],
                                                  option['name'])
                 for option in unlocked_options]
 
     def _resource_unlocks(self, tech_key):
         unlocked_resources = [resource for resource in self._resources
                               if tech_key in resource.prerequisites]
-        return ['Reveals Resource: {} ([[{}]])'.format(resource.name,
+        return [ugettext('Reveals Resource: {} ([[{}]])').format(resource.name,
                                                        resource.key)
                 for resource in unlocked_resources]
 
     def _spaceport_module_unlocks(self, tech_key):
         unlocked_modules = [module for module in self._spaceport_modules
                             if tech_key in module.prerequisites]
-        return ['Unlocks Module: {}'.format(module.name)
+        return [ugettext('Unlocks Module: {}').format(module.name)
                 for module in unlocked_modules]
 
     def _tile_blocker_unlocks(self, tech_key):
         unlocked_blockers = [blocker for blocker in self._tile_blockers
                              if tech_key in blocker.prerequisites]
-        return ['Clear Blockers: {}'.format(blocker.name)
+        return [ugettext('Clear Blockers: {}').format(blocker.name)
                 for blocker in unlocked_blockers]

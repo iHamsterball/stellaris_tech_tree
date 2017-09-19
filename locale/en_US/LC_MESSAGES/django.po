@@ -8,15 +8,333 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-18 10:26+0000\n"
+"POT-Creation-Date: 2017-09-19 11:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Cother <ihamsterball@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: templates/index.html:10 templates/index.html:21 templates/index.html:25
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:139
+msgid "Unlocks Feature: "
+msgstr "Unlocks Feature: "
+
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:154
+msgid "Unlocks Army: {}"
+msgstr "Unlocks Army: {}"
+
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:161
+msgid "Unlocks Attachment: {}"
+msgstr "Unlocks Attachment: {}"
+
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:168
+msgid "Unlocks Buildable Pop: {}"
+msgstr "Unlocks Buildable Pop: {}"
+
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:174
+msgid "Unlocks Building: {}"
+msgstr "Unlocks Building: {}"
+
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:180
+msgid "Unlocks Component: {}"
+msgstr "Unlocks Component: {}"
+
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:186
+msgid "Unlocks Edict: {}"
+msgstr "Unlocks Edict: {}"
+
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:201
+msgid "Unlocks Policy: {} - {}"
+msgstr "Unlocks Policy: {} - {}"
+
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:208
+msgid "Reveals Resource: {} ([[{}]])"
+msgstr "Reveals Resource: {} ([[{}]])"
+
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:215
+msgid "Unlocks Module: {}"
+msgstr "Unlocks Module: {}"
+
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:221
+msgid "Clear Blockers: {}"
+msgstr "Clear Blockers: {}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:59
+msgid "Has {} Ethic"
+msgstr "Has {} Ethic"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:63
+msgid "Does NOT have {} Ethic"
+msgstr "Does NOT have {} Ethic"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:67
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:71
+msgid "Has {} Government Civic"
+msgstr "Has {} Government Civic"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:75
+msgid "Has {} Ascension Perk"
+msgstr "Has {} Ascension Perk"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:79
+msgid "Has Megatructure {}"
+msgstr "Has Megatructure {}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:83
+msgid "Has {} Policy"
+msgstr "Has {} Policy"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:88
+msgid "Has {} Trait"
+msgstr "Has {} Trait"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:92
+msgid "Has {} Authority"
+msgstr "Has {} Authority"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:96
+msgid "Host does has the {} DLC"
+msgstr "Host does has the {} DLC"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:100
+msgid "Host does NOT have the {} DLC"
+msgstr "Host does NOT have the {} DLC"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:108
+msgid "Has {} Technology"
+msgstr "Has {} Technology"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:117
+msgid "Does NOT have {} Technology"
+msgstr "Does NOT have {} Technology"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:122
+msgid "Has the {} modifier"
+msgstr "Has the {} modifier"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:127
+msgid "Does NOT have the {} modifier"
+msgstr "Does NOT have the {} modifier"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:131
+msgid "Is of the {} country type"
+msgstr "Is of the {} country type"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:135
+msgid "Is ideal class"
+msgstr "Is ideal class"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:140
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:269
+msgid "Is {}"
+msgstr "Is {}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:145
+msgid "Has {}"
+msgstr "Has {}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:149
+msgid "Is a Colony"
+msgstr "Is a Colony"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:150
+msgid "Is NOT a Colony"
+msgstr "Is NOT a Colony"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:154
+msgid "Allows Slavery"
+msgstr "Allows Slavery"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:155
+msgid "Does NOT allow Slavery"
+msgstr "Does NOT allow Slavery"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:159
+msgid "Is in a Federation"
+msgstr "Is in a Federation"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:160
+msgid "Is NOT in a Federation"
+msgstr "Is NOT in a Federation"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:164
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:172
+msgid "Number of owned planets is {} {}"
+msgstr "Number of owned planets is {} {}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:168
+msgid "Number of enslaved planets {} {}"
+msgstr "Number of enslaved planets {} {}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:176
+msgid "Has communications with your Empire"
+msgstr "Has communications with your Empire"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:180
+msgid "Is AI controlled"
+msgstr "Is AI controlled"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:180
+msgid "Is NOT AI controlled"
+msgstr "Is NOT AI controlled"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:187
+msgid "Is of the {} Species"
+msgstr "Is of the {} Species"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:196
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:203
+msgid "Is {} {}"
+msgstr "Is {} {}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:207
+msgid "Pop is enslaved"
+msgstr "Pop is enslaved"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:207
+msgid "Pop is NOT enslaved"
+msgstr "Pop is NOT enslaved"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:212
+msgid "Number of years since game start is {} {}"
+msgstr "Number of years since game start is {} {}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:217
+msgid "Number of years since game start is NOT {} {}"
+msgstr "Number of years since game start is NOT {} {}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:221
+msgid "Has {} country flag"
+msgstr "Has {} country flag"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:225
+msgid "Does NOT have {} country flag"
+msgstr "Does NOT have {} country flag"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:229
+msgid "Research Leader ({})"
+msgstr "Research Leader ({})"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:231
+msgid "NOT "
+msgstr "NOT "
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:252
+msgid "Skill level is {} {}"
+msgstr "Skill level is {} {}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:256
+msgid "Physics"
+msgstr "Physics"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:257
+msgid "Society"
+msgstr "Society"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:258
+msgid "Engineering"
+msgstr "Engineering"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:267
+msgid "Is {} Expert"
+msgstr "Is {} Expert"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:276
+msgid "Any System within Borders"
+msgstr "Any System within Borders"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:280
+msgid "Is in a {} Cluster"
+msgstr "Is in a {} Cluster"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:285
+msgid "Any Country"
+msgstr "Any Country"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:289
+msgid "Any Relation"
+msgstr "Any Relation"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:293
+msgid "Any empire Pop"
+msgstr "Any empire Pop"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:297
+msgid "NOT any owned Pop"
+msgstr "NOT any owned Pop"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:302
+msgid "Any owned Planet"
+msgstr "Any owned Planet"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:307
+msgid "Any Planet"
+msgstr "Any Planet"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:312
+msgid "NOT any owned Planet"
+msgstr "NOT any owned Planet"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:317
+msgid "Any Tile"
+msgstr "Any Tile"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:322
+msgid "Has {} Tile Blocker"
+msgstr "Has {} Tile Blocker"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:327
+msgid "Any Neighbor Country"
+msgstr "Any Neighbor Country"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:335
+msgid "Has {} {} {}"
+msgstr "Has {} {} {}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:338
+msgid "Has any megastructure in empire"
+msgstr "Has any megastructure in empire"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:341
+msgid "Always"
+msgstr "Always"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:341
+msgid "Never"
+msgstr "Never"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:346
+msgid "All of the following"
+msgstr "All of the following"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:351
+msgid "Any of the following"
+msgstr "Any of the following"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:356
+msgid "None of the following"
+msgstr "None of the following"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:377
+msgid "equal to"
+msgstr "equal to"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:381
+msgid "greater than"
+msgstr "greater than"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:382
+msgid "less than"
+msgstr "less than"
+
+#: templates/index.html:10
 msgid "STELLARIS_TECH_TREE"
 msgstr "Stellaris Tech Tree"
+
+#~ msgid "Dominant"
+#~ msgstr "Dominant"
+
+#~ msgid "root"
+#~ msgstr "root"
