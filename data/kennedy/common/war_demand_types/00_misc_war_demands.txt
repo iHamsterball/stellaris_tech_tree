@@ -1,0 +1,451 @@
+# variables:
+# parameters, data containing the specifics, eg which planet we're talking about
+# warscore_cost, scripted value, root is target country, amount of warscore required to push this demand
+# potential, trigger, root and from are main attackers and defenders, war is fromfrom, decides if this demand is listed
+# possible, trigger, root and from are main attackers and defenders, war is fromfrom, fromfromfrom is the target country, decides if this demand can go through
+# proposable, trigger, root and from are main attackers and defenders, war is fromfrom, fromfromfrom is the target country, decides if this demand is ok to propose
+# demandable, trigger, root and from are main attackers and defenders, war is fromfrom, fromfromfrom is the target country, decides if you can send a peace offer demanding ( not surrendering ) the demand.
+# effect, effect, root and main are main attacker and defender, war is fromfrom, fromfromfrom is the target country, effect which executes when the demand is accepted
+# execution_order, integer, defines in which order demands are executed, lower is higher priority, having the same execution order will make the first defined one higher prio
+# monthly_warscore, a descriptor on monthly wargoal score
+#	amount, scripted value, root and from are main attackers and defenders, war is fromfrom, fromfromfrom is the target country
+#   valid, trigger, root and from are main attackers and defenders, war is fromfrom, fromfromfrom is the target country
+
+humiliate = {
+	execution_order = 1
+	
+	parameters = {
+		country = {
+			type = country
+		}
+	}
+	
+	warscore_cost = {
+		base = 10
+	}
+
+	potential = {
+		OR = {
+			is_subject = no
+			NOT = {
+				overlord = {
+					is_same_value = from
+				}
+			}
+		}
+		parameter:country = {
+			is_country = from
+		}		
+	}
+	
+	possible = {	
+		hidden:parameter:country = {
+			custom_tooltip_fail = {
+				text = "war_demand_humiliate_no_planets"
+				war_demand_counter = {
+					type = num_owned_planets
+					value > 0
+				}
+			}
+		}
+	}
+	
+	proposable = {
+		always = yes
+	}
+	
+	effect = {	
+		fromfromfrom = {
+			add_influence = 100
+		}
+		parameter:country = {		
+			add_modifier = { modifier = humiliated days = 3600 }			
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					fromfromfrom = { is_country_type = fallen_empire }
+				}
+				remove_opinion_modifier = { modifier = opinion_refused_fallen_empire_request who = parameter:country }
+				remove_opinion_modifier = { modifier = opinion_refused_fallen_empire_task who = parameter:country }
+				remove_opinion_modifier = { modifier = opinion_failed_fallen_empire_task who = parameter:country }
+				remove_opinion_modifier = { modifier = opinion_majorly_failed_fallen_empire_task who = parameter:country }
+				remove_opinion_modifier = { modifier = opinion_spurned_fallen_empire_gift who = parameter:country }
+				remove_opinion_modifier = { modifier = opinion_refused_fallen_empire_demand who = parameter:country }
+				remove_opinion_modifier = { modifier = opinion_insult who = parameter:country }					
+			}
+		}		
+	}
+	
+	ai_weight = {
+		base = 10
+		modifier = {
+			factor = 100
+			is_country_type = fallen_empire
+		}
+	}
+}
+
+open_borders = {
+	execution_order = 1
+	
+	parameters = {
+		country = {
+			type = country
+		}
+	}
+	
+	warscore_cost = {
+		base = 10
+	}
+
+	potential = {
+		OR = {
+			is_subject = no
+			NOT = {
+				overlord = {
+					is_same_value = from
+				}
+			}
+		}	
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_not_opponent"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								is_war_participant = {
+									who = prevprev
+									side = prev
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						would_join_war = {
+							attacker = root
+							defender = from
+							side = from
+						}
+					}
+					
+				}
+			}
+		}		
+	}
+	
+	possible = {
+		is_country_type = default
+		hidden:parameter:country = {
+			is_country_type = default
+		}
+		hidden:parameter:country = {
+			custom_tooltip_fail = {
+				text = "war_demand_open_borders_no_planets"
+				war_demand_counter = {
+					type = num_owned_planets
+					value > 0
+				}
+			}
+		}
+	}
+	
+	proposable = {
+		always = yes
+	}
+	
+	effect = {	
+		parameter:country = {
+			set_closed_borders = {
+				who = fromfromfrom
+				status = no	
+				forced = 10
+			}
+		}		
+	}
+	
+	ai_weight = {
+		base = 0
+	}
+}
+
+stop_atrocity = {
+	execution_order = 1
+	
+	parameters = {
+		country = {
+			type = country
+		}
+	}
+	
+	warscore_cost = {
+		base = 20
+	}
+
+	potential = {
+		OR = {
+			is_subject = no
+			NOT = {
+				overlord = {
+					is_same_value = from
+				}
+			}
+		}
+		has_policy_flag = slavery_not_allowed
+		has_policy_flag = purge_not_allowed	
+		OR = {
+			has_ethic = ethic_xenophile
+			has_ethic = ethic_fanatic_xenophile
+			has_ethic = ethic_individualist
+			has_ethic = ethic_fanatic_individualist
+			AND = {
+				has_country_flag = fe_task_stop_atrocity
+				parameter:country = { has_country_flag = fe_task_stop_atrocity_target }
+			}
+		}	
+		parameter:country = {
+			OR = {
+				NOT = { has_policy_flag = slavery_not_allowed }
+				NOT = { has_policy_flag = purge_not_allowed }
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_protectorate_country_not_opponent"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								is_war_participant = {
+									who = prevprev
+									side = prev
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						would_join_war = {
+							attacker = root
+							defender = from
+							side = from
+						}
+					}
+					
+				}
+			}
+		}		
+	}
+	
+	possible = {
+		hidden:parameter:country = {
+			custom_tooltip_fail = {
+				text = "war_demand_policy_no_planets"
+				war_demand_counter = {
+					type = num_owned_planets
+					value > 0
+				}
+			}
+		}
+	}
+	
+	proposable = {
+		always = yes
+	}
+	
+	effect = {	
+		fromfromfrom = {
+			add_influence = 100
+	
+			if = {
+				limit = {
+					has_global_flag = fe_task_stop_atrocity_active
+					has_country_flag = fe_task_stop_atrocity
+					parameter:country = { has_country_flag = fe_task_stop_atrocity_target }
+					any_country = { has_country_flag = fe_task_stop_atrocity_origin }
+				}
+				country_event = { id = fallen_empires_tasks.9 }
+			}			
+		}	
+		parameter:country = {		
+			hidden_effect = {
+				set_policy = {
+					policy = slavery
+					option = slavery_not_allowed
+					cooldown = yes
+				}
+				every_subject = {
+					set_policy = {
+						policy = slavery
+						option = slavery_not_allowed
+						cooldown = yes
+					}				
+				}				
+			}		
+		}
+		parameter:country = {		
+			hidden_effect = {
+				set_policy = {
+					policy = purge
+					option = purge_not_allowed
+					cooldown = yes
+				}
+				every_subject = {
+					set_policy = {
+						policy = purge
+						option = purge_not_allowed
+						cooldown = yes
+					}				
+				}
+			}		
+		}	
+	}
+	
+	ai_weight = {
+		base = 10
+	
+		modifier = {
+			factor = 100
+			has_ai_personality = fallen_empire_xenophile
+		}
+	}
+}
+
+abolish_ai = {
+	execution_order = 1
+	
+	parameters = {
+		country = {
+			type = country
+		}
+	}
+	
+	warscore_cost = {
+		base = 20
+	}
+	
+	potential = {
+		OR = {
+			is_subject = no
+			NOT = {
+				overlord = {
+					is_same_value = from
+				}
+			}
+		}
+		OR = {
+			has_policy_flag = ai_outlawed
+			NOT = { has_technology = tech_robotic_workers }
+		}
+		OR = {
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
+			AND = {
+				has_country_flag = fe_task_stop_robots
+				parameter:country = { has_country_flag = fe_task_stop_robots_target }
+			}
+		}	
+		parameter:country = {
+			NOT = { has_policy_flag = ai_outlawed }
+			has_technology = tech_robotic_workers
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_protectorate_country_not_opponent"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								is_war_participant = {
+									who = prevprev
+									side = prev
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						would_join_war = {
+							attacker = root
+							defender = from
+							side = from
+						}
+					}
+					
+				}
+			}
+		}		
+	}
+	
+	possible = {
+		hidden:parameter:country = {
+			custom_tooltip_fail = {
+				text = "war_demand_policy_no_planets"
+				war_demand_counter = {
+					type = num_owned_planets
+					value > 0
+				}
+			}
+		}
+	}
+	
+	proposable = {
+		always = yes
+	}
+	
+	effect = {	
+		fromfromfrom = {
+			add_influence = 100
+	
+			if = {
+				limit = {
+					has_global_flag = fe_task_stop_robots_active
+					has_country_flag = fe_task_stop_robots
+					parameter:country = { has_country_flag = fe_task_stop_robots_target }
+					any_country = { has_country_flag = fe_task_stop_robots_origin }
+				}
+				country_event = { id = fallen_empires_tasks.16 }
+			}			
+		}		
+		parameter:country = {		
+			hidden_effect = {
+				set_policy = {
+					policy = artificial_intelligence_policy
+					option = ai_outlawed
+					cooldown = yes
+				}
+				every_subject = {
+					set_policy = {
+						policy = artificial_intelligence_policy
+						option = ai_outlawed
+						cooldown = yes
+					}				
+				}
+			}		
+		}
+	}
+	
+	ai_weight = {
+		base = 10
+		
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	
+		modifier = {
+			factor = 100
+			has_ai_personality = fallen_empire_materialist
+		}
+	}
+}
+
+

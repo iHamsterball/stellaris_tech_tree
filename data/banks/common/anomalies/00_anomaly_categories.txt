@@ -838,14 +838,6 @@ anomaly_category = {
 			add = 3
 			uninhabitable_regular_planet = yes
 		}
-		modifier = {
-			factor = 0
-			from.owner = { has_country_flag = spawned_battle_uninhabitable_category }
-		}
-	}
-	
-	on_spawn = {
-		from.owner = { set_country_flag = spawned_battle_uninhabitable_category }
 	}
 	
 	on_success = {
@@ -958,14 +950,6 @@ anomaly_category = {
 			add = 3
 			uninhabitable_regular_planet = yes
 		}
-		modifier = {
-			factor = 0
-			from.owner = { has_country_flag = spawned_writing_uninhabitable_category }
-		}
-	}
-
-	on_spawn = {
-		from.owner = { set_country_flag = spawned_writing_uninhabitable_category }
 	}
 	
 	on_success = {
@@ -1035,14 +1019,6 @@ anomaly_category = {
 			add = 3
 			uninhabitable_regular_planet = yes
 		}
-		modifier = {
-			factor = 0
-			from.owner = { has_country_flag = spawned_mountain_uninhabitable_category }
-		}
-	}
-
-	on_spawn = {
-		from.owner = { set_country_flag = spawned_mountain_uninhabitable_category }
 	}
 	
 	on_success = {
@@ -1077,14 +1053,6 @@ anomaly_category = {
 			add = 3
 			uninhabitable_regular_planet = yes
 		}
-		modifier = {
-			factor = 0
-			from.owner = { has_country_flag = spawned_object_uninhabitable_category }
-		}
-	}
-
-	on_spawn = {
-		from.owner = { set_country_flag = spawned_object_uninhabitable_category }
 	}
 	
 	on_success = {
@@ -1237,7 +1205,7 @@ anomaly_category = {
 	
 	spawn_chance = {		
 		modifier = {
-			add = 2
+			add = 1
 			NOT = { has_modifier = terraforming_candidate }
 			OR = {
 				is_planet_class = pc_barren
@@ -1253,39 +1221,5 @@ anomaly_category = {
 	}
 
 	on_critical_fail = {
-	}
-}
-
-# Living Metal
-anomaly_category = {
-	key = "living_metal_category"
-	desc = "living_metal_category_desc"
-	picture = GFX_evt_cold_barren
-	level = 3
-	#risk = 0
-	
-	spawn_chance = {		
-		modifier = {
-			add = 1
-			AND = {
-				OR = {
-					is_planet_class = pc_barren
-					is_planet_class = pc_barren_cold
-					is_asteroid = yes
-				}
-				has_any_strategic_resource = no
-			}
-		}
-	}
-	
-	on_success = {
-	}
-
-	on_fail = {
-		ship_event = { id = anomaly_failure.16 }
-	}
-
-	on_critical_fail = {
-		ship_event = { id = anomaly_failure.1400 }
 	}
 }

@@ -41,7 +41,6 @@ democratic_election_faction_2 = {
 	can_join_faction = {
 		is_enslaved = no
 		is_being_purged = no
-		has_culture_shock = no
 		NOT = { has_trait = trait_nerve_stapled }
 		owner = {
 			count_pop_factions = {

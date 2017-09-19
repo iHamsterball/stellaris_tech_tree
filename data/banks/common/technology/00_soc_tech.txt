@@ -166,12 +166,12 @@ tech_hydroponics = {
 
 #Gene Crops
 tech_gene_crops = {
-	cost = @tier2cost2
+	cost = @tier2cost1
 	area = society
 	tier = 2
 	category = { biology }
 	prerequisites = { "tech_hydroponics" "tech_colonial_centralization"}
-	weight = @tier2weight2
+	weight = @tier2weight1
 	
 	# unlocks farms level 3
 	
@@ -215,12 +215,12 @@ tech_gene_crops = {
 
 #Nano-Vitality Crops
 tech_nano_vitality_crops = {
-	cost = @tier3cost2
+	cost = @tier2cost4
 	area = society
-	tier = 3
+	tier = 2
 	category = { biology }	
 	prerequisites = { "tech_gene_crops" "tech_galactic_administration"}
-	weight = @tier3weight2
+	weight = @tier2weight4
 	
 	# unlocks farms level 4
 	
@@ -367,12 +367,12 @@ tech_biolab_1 = {
 
 #Bio Lab 2
 tech_biolab_2 = {
-	cost = @tier2cost2
+	cost = @tier2cost1
 	area = society
 	tier = 2
 	category = { biology }
 	prerequisites = { "tech_biolab_1" "tech_colonial_centralization"}
-	weight = @tier2weight2
+	weight = @tier2weight1
 	
 	weight_modifier = {
 		modifier = {
@@ -414,12 +414,12 @@ tech_biolab_2 = {
 
 #Bio Lab 3
 tech_biolab_3 = {
-	cost = @tier3cost3
+	cost = @tier3cost1
 	area = society
 	tier = 3
 	category = { biology }	
 	prerequisites = { "tech_biolab_2" "tech_galactic_administration" }
-	weight = @tier3weight3
+	weight = @tier3weight1
 	
 	weight_modifier = {
 		modifier = {
@@ -698,9 +698,8 @@ tech_tomb_world_adaption = {
 	}
 	
 	weight_modifier = {
-		factor = 0.5
 		modifier = {
-			factor = 0.20
+			factor = 0.10
 			NOR = {
 				research_leader = {
 					area = society
@@ -1452,10 +1451,12 @@ tech_terrestrial_sculpting = {
 	
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_new_worlds"
+			factor = 0.33
+			NOT = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_new_worlds"
+				}
 			}
 		}
 		modifier = {
@@ -1477,12 +1478,12 @@ tech_terrestrial_sculpting = {
 }
 
 tech_atmospheric_manipulation = {
-	cost = @tier2cost1
+	cost = @tier2cost2
 	area = society
 	tier = 2
 	category = { new_worlds }
 	prerequisites = { "tech_terrestrial_sculpting" }
-	weight = @tier2weight1
+	weight = @tier2weight2
 	
 	# unlocks additional terraforming-options
 	
@@ -1495,52 +1496,13 @@ tech_atmospheric_manipulation = {
 	
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_new_worlds"
+			factor = 0.33
+			NOT = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_new_worlds"
+				}
 			}
-		}
-		modifier = {
-			factor = 3
-			has_ascension_perk = ap_world_shaper
-		}
-	}
-	
-	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_new_worlds"
-			}
-		}
-	}
-}
-
-tech_ecological_adaptation = {
-	cost = @tier2cost3
-	area = society
-	tier = 2
-	category = { new_worlds }
-	prerequisites = { "tech_atmospheric_manipulation" }
-	weight = @tier2weight3
-	
-	feature_flags = {
-		terraform_inhabited
-	}
-	
-	weight_modifier = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_new_worlds"
-			}
-		}
-		modifier = {
-			factor = 3
-			has_ascension_perk = ap_world_shaper
 		}
 	}
 	
@@ -1560,7 +1522,7 @@ tech_climate_restoration = {
 	area = society
 	tier = 3
 	category = { new_worlds }
-	prerequisites = { "tech_ecological_adaptation" }
+	prerequisites = { "tech_atmospheric_manipulation" }
 	weight = @tier3weight1
 	
 	# unlocks additional terraforming-options
@@ -1574,15 +1536,13 @@ tech_climate_restoration = {
 	
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_new_worlds"
+			factor = 0.33
+			NOT = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_new_worlds"
+				}
 			}
-		}
-		modifier = {
-			factor = 3
-			has_ascension_perk = ap_world_shaper
 		}
 	}
 	
@@ -1619,22 +1579,11 @@ tech_gaia_creation = {
 		factor = 0.1
 		modifier = {
 			factor = 0.33
-			NOR = {
+			NOT = {
 				research_leader = {
 					area = society
 					has_trait = "leader_trait_expertise_new_worlds"
 				}
-				has_ascension_perk = ap_world_shaper
-			}
-		}
-		modifier = {
-			factor = 3
-			has_ascension_perk = ap_world_shaper
-		}
-		modifier = {
-			factor = 2
-			any_owned_planet = {
-				is_planet_class = pc_gaia
 			}
 		}
 	}
@@ -1666,7 +1615,7 @@ tech_genome_mapping = {
 	gateway = biological
 	
 	modifier = {
-		pop_growth_speed = 0.10
+		pop_growth_req_mult = -0.10
 	}
 	
 	weight_modifier = {
@@ -1850,9 +1799,8 @@ tech_gene_banks = {
 	weight = @tier2weight2
 	
 	weight_modifier = {
-		factor = 0.5
 		modifier = {
-			factor = 0.20
+			factor = 0.10
 			NOR = {
 				research_leader = {
 					area = society
@@ -1916,6 +1864,14 @@ tech_gene_seed_purification = {
 			host_has_dlc = "Utopia"
 		}
 		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
 		}
@@ -1964,6 +1920,14 @@ tech_gene_seed_purification = {
 	ai_weight = {
 		factor = 3 #rare tech
 		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
 		}
@@ -1993,7 +1957,14 @@ tech_morphogenetic_field_mastery = {
 	# unlocks xeno-armies
 	
 	weight_modifier = {
-		factor = 0.5
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -2003,7 +1974,7 @@ tech_morphogenetic_field_mastery = {
 			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
-			factor = 0.20
+			factor = 0.10
 			NOR = {
 				research_leader = {
 					area = society
@@ -2049,6 +2020,14 @@ tech_morphogenetic_field_mastery = {
 	
 	ai_weight = {
 		factor = 3 #rare tech
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -2150,7 +2129,6 @@ tech_gene_expressions = {
 	}
 	
 	weight_modifier = {
-		factor = 0.5
 		modifier = {
 			factor = 0.50
 			NOR = {
@@ -2212,7 +2190,6 @@ tech_selected_lineages = {
 	# Modifiers from this tech is added through a policy-option
 		
 	weight_modifier = {
-		factor = 0.5
 		modifier = {
 			factor = 0.50
 			NOR = {
@@ -2227,7 +2204,7 @@ tech_selected_lineages = {
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0
 			OR = {
 				has_ethic = "ethic_egalitarian"
 				has_ethic = "ethic_fanatic_egalitarian"
@@ -2246,6 +2223,20 @@ tech_selected_lineages = {
 			research_leader = {
 				area = society
 				has_trait = "leader_trait_spark_of_genius"
+			}
+		}
+		modifier = {
+			factor = 1.50
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		modifier = {
+			factor = 0.10
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
 			}
 		}
 	}
@@ -2279,9 +2270,8 @@ tech_capacity_boosters = {
 	# Modifiers from this tech is added through a policy-option
 	
 	weight_modifier = {
-		factor = 0.5
 		modifier = {
-			factor = 0.20
+			factor = 0.10
 			NOR = {
 				research_leader = {
 					area = society
@@ -2294,7 +2284,7 @@ tech_capacity_boosters = {
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0
 			OR = {
 				has_ethic = "ethic_egalitarian"
 				has_ethic = "ethic_fanatic_egalitarian"
@@ -2307,12 +2297,28 @@ tech_capacity_boosters = {
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_fanatic_authoritarian
-		}			
+		}		
 		modifier = {
-			factor = 1.50
+			factor = 1.25
 			research_leader = {
 				area = society
 				has_trait = "leader_trait_spark_of_genius"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_level > 4
+			}
+		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				research_leader = {
+					area = society
+					has_level > 2
+				}
 			}
 		}
 	}
@@ -2363,6 +2369,14 @@ tech_doctrine_fleet_size_1 = {
 	weight_modifier = {
 		factor = 3
 		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
 		}
@@ -2381,6 +2395,14 @@ tech_doctrine_fleet_size_1 = {
 	
 	ai_weight = {
 		factor = 3
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -2415,6 +2437,14 @@ tech_doctrine_fleet_size_2 = {
 	weight_modifier = {
 		factor = 3
 		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
 		}
@@ -2433,6 +2463,14 @@ tech_doctrine_fleet_size_2 = {
 	
 	ai_weight = {
 		factor = 3
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -2467,6 +2505,14 @@ tech_doctrine_fleet_size_3 = {
 	weight_modifier = {
 		factor = 3
 		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
 		}
@@ -2485,6 +2531,14 @@ tech_doctrine_fleet_size_3 = {
 	
 	ai_weight = {
 		factor = 3
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -2519,6 +2573,14 @@ tech_doctrine_fleet_size_4 = {
 	weight_modifier = {
 		factor = 3
 		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
 		}
@@ -2537,6 +2599,14 @@ tech_doctrine_fleet_size_4 = {
 	
 	ai_weight = {
 		factor = 3
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -2571,6 +2641,14 @@ tech_doctrine_fleet_size_5 = {
 	weight_modifier = {
 		factor = 3
 		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
 		}
@@ -2589,6 +2667,14 @@ tech_doctrine_fleet_size_5 = {
 	
 	ai_weight = {
 		factor = 3
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -2620,6 +2706,14 @@ tech_interstellar_fleet_traditions = {
 	
 	weight_modifier = {
 		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
 		}
@@ -2637,6 +2731,14 @@ tech_interstellar_fleet_traditions = {
 	}
 	
 	ai_weight = {
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -2668,6 +2770,14 @@ tech_doctrine_fleet_support = {
 	
 	weight_modifier = {
 		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
 		}
@@ -2685,6 +2795,14 @@ tech_doctrine_fleet_support = {
 	}
 	
 	ai_weight = {
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -2726,6 +2844,14 @@ tech_doctrine_command_matrix = {
 			}
 		}
 		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
 		}
@@ -2743,6 +2869,14 @@ tech_doctrine_command_matrix = {
 	}
 	
 	ai_weight = {
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -2776,6 +2910,14 @@ tech_doctrine_refit_standards = {
 	
 	weight_modifier = {
 		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
 		}
@@ -2793,6 +2935,14 @@ tech_doctrine_refit_standards = {
 	}
 	
 	ai_weight = {
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -2828,6 +2978,14 @@ tech_centralized_command = {
 	
 	weight_modifier = {
 		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
 		}
@@ -2845,6 +3003,14 @@ tech_centralized_command = {
 	}
 	
 	ai_weight = {
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -2880,6 +3046,14 @@ tech_combat_training = {
 	
 	weight_modifier = {
 		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
 		}
@@ -2897,6 +3071,14 @@ tech_combat_training = {
 	}
 	
 	ai_weight = {
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -2933,7 +3115,6 @@ tech_psionic_theory = {
 	gateway = psionics
 	
 	weight_modifier = {
-		factor = 0.5
 		modifier = {
 			factor = 0
 			NOR = {
@@ -3024,7 +3205,6 @@ tech_telepathy = {
 	is_reverse_engineerable = no
 	
 	weight_modifier = {
-		factor = 0.5
 		modifier = {
 			factor = 0
 			host_has_dlc = "Utopia"
@@ -3118,7 +3298,6 @@ tech_precognition_interface = {
 	}
 	
 	weight_modifier = {
-		factor = 0.5
 		modifier = {
 			factor = 0
 			host_has_dlc = "Utopia"
@@ -3556,12 +3735,12 @@ tech_planetary_unification = {
 
 #Colonial Centralization
 tech_colonial_centralization = {
-	cost = @tier2cost1
+	cost = @tier1cost4
 	area = society
-	tier = 2
+	tier = 1
 	category = { new_worlds }
 	prerequisites = { "tech_planetary_unification" }
-	weight = @tier2weight1
+	weight = @tier1weight4
 	
 	gateway = capital
 	
@@ -3593,12 +3772,12 @@ tech_colonial_centralization = {
 
 #Galactic Administration
 tech_galactic_administration = {
-	cost = @tier3cost1
+	cost = @tier2cost2
 	area = society
-	tier = 3
+	tier = 2
 	category = { statecraft }
 	prerequisites = { "tech_colonial_centralization" }
-	weight = @tier3weight1
+	weight = @tier2weight2
 	
 	gateway = capital	# unlocks Empire Capital-Complex
 	
@@ -3630,12 +3809,12 @@ tech_galactic_administration = {
 }
 
 tech_galactic_markets = {
-	cost = @tier3cost2
+	cost = @tier2cost3
 	area = society
-	tier = 3
+	tier = 2
 	category = { statecraft }
 	prerequisites = { "tech_galactic_administration" }
-	weight = @tier3weight2
+	weight = @tier2weight3
 	is_rare = yes
 	
 	# unlocks Galactic Stock Exchange empire wonder
@@ -3735,12 +3914,12 @@ tech_subdermal_stimulation = {
 }
 #Galactic Benevolence
 tech_galactic_benevolence = {
-	cost = @tier3cost2
+	cost = @tier2cost2
 	area = society
-	tier = 3
+	tier = 2
 	category = { statecraft }	
 	prerequisites = { "tech_galactic_administration" }
-	weight = @tier3weight2
+	weight = @tier2weight2
 	is_rare = yes
 	
 	# unlocks Ministry of Benevolence empire wonder
@@ -4221,7 +4400,6 @@ tech_will_to_power = {
 	# unlocks spaceport-module: orbital mind control laser
 	
 	weight_modifier = {
-		factor = 0.5
 		modifier = {
 			factor = 0.20
 			NOR = {
@@ -4332,12 +4510,12 @@ tech_heritage_site = {
 }
 
 tech_hypercomms_forum = {
-	cost = @tier2cost2
+	cost = @tier2cost1
 	area = society
 	category = { statecraft }
 	tier = 2
 	prerequisites = { "tech_heritage_site" "tech_colonial_centralization" }
-	weight = @tier2weight2
+	weight = @tier2weight1
 	
 	weight_modifier = {
 		modifier = {
@@ -4361,12 +4539,12 @@ tech_hypercomms_forum = {
 }
 
 tech_autocurating_vault = {
-	cost = @tier3cost2
+	cost = @tier2cost4
 	area = society
 	category = { statecraft }
-	tier = 3
+	tier = 2
 	prerequisites = { "tech_hypercomms_forum" "tech_administrative_ai" "tech_galactic_administration"}
-	weight = @tier3weight2
+	weight = @tier2weight4
 	
 	weight_modifier = {
 		modifier = {
@@ -4389,13 +4567,49 @@ tech_autocurating_vault = {
 	}
 }
 
+# Symbols of Unity
+tech_symbol_unity = {
+	cost = @tier1cost2
+	area = society
+	tier = 1
+	category = { statecraft }
+	prerequisites = { "tech_planetary_government" }
+	weight = @tier1weight2
+	is_rare = yes
+	
+	# unlocks Symbol of Unity planetary wonder
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.33
+			NOT = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_statecraft"
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+}
+
 tech_holographic_rituals = {
-	cost = @tier2cost2
+	cost = @tier2cost1
 	area = society
 	category = { statecraft }
 	tier = 2
 	prerequisites = { "tech_cultural_heritage" "tech_colonial_centralization" }
-	weight = @tier2weight2
+	weight = @tier2weight1
 	
 	weight_modifier = {
 		modifier = {
@@ -4426,12 +4640,12 @@ tech_holographic_rituals = {
 }
 
 tech_transcendent_faith = {
-	cost = @tier3cost2
+	cost = @tier2cost4
 	area = society
 	category = { statecraft }
-	tier = 3
+	tier = 2
 	prerequisites = { "tech_holographic_rituals" "tech_galactic_administration" }
-	weight = @tier3weight2
+	weight = @tier2weight4
 	
 	weight_modifier = {
 		modifier = {

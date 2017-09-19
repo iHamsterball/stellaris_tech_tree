@@ -21,15 +21,6 @@ random_empire_init_01 = {
 	usage = empire_init
 	
 	flags = { empire_home_system }
-
-	init_effect = {
-		every_neighbor_system = {
-			set_star_flag = empire_cluster
-			every_neighbor_system = {
-				set_star_flag = empire_cluster
-			}
-		}
-	}
 	
 	planet = {
 		count = 1
@@ -286,15 +277,6 @@ random_empire_init_02 = {
 	usage = empire_init
 	
 	flags = { empire_home_system }
-
-	init_effect = {
-		every_neighbor_system = {
-			set_star_flag = empire_cluster
-			every_neighbor_system = {
-				set_star_flag = empire_cluster
-			}
-		}
-	}
 		
 	planet = {
 		count = 1
@@ -559,15 +541,6 @@ random_empire_init_03 = {
 	usage = empire_init
 	
 	flags = { empire_home_system }
-
-	init_effect = {
-		every_neighbor_system = {
-			set_star_flag = empire_cluster
-			every_neighbor_system = {
-				set_star_flag = empire_cluster
-			}
-		}
-	}
 		
 	planet = {
 		count = 1
@@ -845,15 +818,6 @@ random_empire_init_04 = {
 	usage = empire_init
 	
 	flags = { empire_home_system }
-
-	init_effect = {
-		every_neighbor_system = {
-			set_star_flag = empire_cluster
-			every_neighbor_system = {
-				set_star_flag = empire_cluster
-			}
-		}
-	}
 		
 	planet = {
 		count = 1
@@ -1090,15 +1054,6 @@ random_empire_init_04 = {
 neighbor_t1 = {
 	class = "rl_standard_stars"
 
-	init_effect = {
-		every_neighbor_system = {
-			set_star_flag = empire_cluster
-			every_neighbor_system = {
-				set_star_flag = empire_cluster
-			}
-		}
-	}
-
 	planet = {
 		count = 1
 		class = star
@@ -1135,15 +1090,6 @@ neighbor_t1 = {
 # Neighbor Tier 1 First Colony
 neighbor_t1_first_colony = {	
 	class = "rl_standard_stars"
-
-	init_effect = {
-		every_neighbor_system = {
-			set_star_flag = empire_cluster
-			every_neighbor_system = {
-				set_star_flag = empire_cluster
-			}
-		}
-	}
 
 	planet = {
 		count = 1
@@ -1236,15 +1182,6 @@ neighbor_t2 = {
 	class = "rl_standard_stars"
 	asteroids_distance = 70
 
-	init_effect = {
-		every_neighbor_system = {
-			set_star_flag = empire_cluster
-			every_neighbor_system = {
-				set_star_flag = empire_cluster
-			}
-		}
-	}
-
 	planet = {
 		count = 1
 		class = star
@@ -1284,15 +1221,6 @@ neighbor_t2 = {
 # Neighbor Tier 2 Second Colony
 neighbor_t2_second_colony = {
 	class = "rl_standard_stars"
-
-	init_effect = {
-		every_neighbor_system = {
-			set_star_flag = empire_cluster
-			every_neighbor_system = {
-				set_star_flag = empire_cluster
-			}
-		}
-	}
 
 	planet = {
 		count = 1

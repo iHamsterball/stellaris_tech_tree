@@ -74,7 +74,7 @@ honorbound_warriors = {
 		robot_exploiter = no
 		robot_liberator = no
 		propagator = no
-		multispecies = yes
+		multispecies = no
 	}
 
 	allow = {
@@ -84,12 +84,11 @@ honorbound_warriors = {
 		OR = {
 			has_ethic = "ethic_spiritualist"
 			has_ethic = "ethic_egalitarian"
-			has_ethic = "ethic_xenophile"
 		}
 	}
 
 	weight_modifier = {
-		weight = 50
+		weight = 100
 	}
 }
 
@@ -220,11 +219,17 @@ erudite_explorers = {
 	allow = {
 		NOT = { is_country_type = fallen_empire }
 		NOT = { is_country_type = awakened_fallen_empire }
-		NOR = {
+		NOT = {
 			has_ethic = "ethic_xenophobe"
 			has_ethic = "ethic_fanatic_xenophobe"
 			has_ethic = "ethic_pacifist"
 			has_ethic = "ethic_fanatic_pacifist"
+		}
+		OR = {
+			has_ethic = "ethic_egalitarian"
+			has_ethic = "ethic_fanatic_egalitarian"
+			has_ethic = "ethic_xenophile"
+			has_ethic = "ethic_fanatic_xenophile"
 		}
 		OR = {
 			has_ethic = "ethic_materialist"
@@ -401,23 +406,34 @@ ruthless_capitalists = {
 	allow = {
 		NOT = { is_country_type = fallen_empire }
 		NOT = { is_country_type = awakened_fallen_empire }
-		NOR = {
-			has_ethic = "ethic_pacifist"
-			has_ethic = "ethic_fanatic_pacifist"
+		NOT = {
+			has_ethic = "ethic_xenophobe"
+			has_ethic = "ethic_fanatic_xenophobe"
 		}
 		OR = {
 			has_ethic = "ethic_militarist"
 			has_ethic = "ethic_fanatic_militarist"
-			NOR = {
-				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"					
-			}		
 		}
-		has_valid_civic = civic_corporate_dominion
+		OR = {
+			has_ethic = "ethic_materialist"
+			has_ethic = "ethic_fanatic_materialist"
+		}
 	}
 
 	weight_modifier = {
-		weight = 100
+		weight = 10
+		modifier = {
+			factor = 1
+			has_trait = "trait_thrifty"
+		}
+		modifier = {
+			factor = 1
+			has_trait = "trait_industrious"
+		}
+		modifier = {
+			factor = 1
+			has_election_type = oligarchy
+		}
 	}
 }
 
@@ -454,8 +470,8 @@ peaceful_traders = {
 		purger = no
 		infiltrator = yes
 		dominator = no
-		robot_exploiter = yes
-		robot_liberator = no
+		robot_exploiter = no
+		robot_liberator = yes
 		propagator = no
 		multispecies = yes
 	}
@@ -463,23 +479,38 @@ peaceful_traders = {
 	allow = {
 		NOT = { is_country_type = fallen_empire }
 		NOT = { is_country_type = awakened_fallen_empire }
+		NOT = {
+			has_ethic = "ethic_xenophobe"
+			has_ethic = "ethic_fanatic_xenophobe"
+		}
 		OR = {
 			has_ethic = "ethic_pacifist"
 			has_ethic = "ethic_fanatic_pacifist"
-			AND = {
-				NOR = {
-					has_ethic = "ethic_militarist"
-					has_ethic = "ethic_fanatic_militarist"
-				}
-				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"				
-			}
-		}		
-		has_valid_civic = civic_corporate_dominion
+		}
+		OR = {
+			has_ethic = "ethic_materialist"
+			has_ethic = "ethic_fanatic_materialist"
+		}
 	}
 
 	weight_modifier = {
-		weight = 100
+		weight = 10
+		modifier = {
+			factor = 2
+			has_ethic = "ethic_fanatic_materialist"
+		}
+		modifier = {
+			factor = 1
+			has_trait = "trait_thrifty"
+		}
+		modifier = {
+			factor = 1
+			has_trait = "trait_industrious"
+		}
+		modifier = {
+			factor = 1
+			has_election_type = oligarchy
+		}
 	}
 }
 
@@ -582,7 +613,6 @@ slaving_despots = {
 		robot_liberator = no
 		propagator = no
 		multispecies = no
-		decadent = yes	# special - resettles slaves to planets lacking them
 	}
 
 
@@ -595,20 +625,18 @@ slaving_despots = {
 			has_ethic = "ethic_xenophobe"
 			has_ethic = "ethic_fanatic_xenophobe"
 		}
-		NOR = {
+		NOT = {
 			has_ethic = "ethic_pacifist"
 			has_ethic = "ethic_fanatic_pacifist"
-			has_ethic = "ethic_xenophile"
-			has_ethic = "ethic_fanatic_xenophile"			
 		}
 		OR = {
-			has_valid_civic = "civic_slaver_guilds"
+			has_civic = "civic_slaver_guilds"
 			has_trait = "trait_decadent"
 		}
 	}
 
 	weight_modifier = {
-		weight = 200
+		weight = 100
 	}
 }
 
@@ -637,8 +665,8 @@ decadent_hierarchy = {
 
 	behaviour = {
 		conqueror = no
-		subjugator = no
-		liberator = no
+		subjugator = yes
+		liberator = yes
 		opportunist = yes
 		slaver = yes
 		uplifter = no
@@ -649,7 +677,6 @@ decadent_hierarchy = {
 		robot_liberator = no
 		propagator = no
 		multispecies = no
-		decadent = yes	# special - resettles slaves to planets lacking them
 	}
 
 
@@ -663,17 +690,15 @@ decadent_hierarchy = {
 		OR = {
 			has_ethic = "ethic_pacifist"
 			has_ethic = "ethic_fanatic_pacifist"
-			has_ethic = "ethic_xenophile"
-			has_ethic = "ethic_fanatic_xenophile"				
-		}		
+		}
 		OR = {
-			has_valid_civic = "civic_slaver_guilds"
+			has_civic = "civic_slaver_guilds"
 			has_trait = "trait_decadent"
 		}
 	}
 
 	weight_modifier = {
-		weight = 200
+		weight = 100
 	}
 }
 
@@ -731,7 +756,7 @@ democratic_crusaders = {
 	}
 
 	weight_modifier = {
-		weight = 50
+		weight = 100
 	}
 }
 
@@ -760,8 +785,8 @@ harmonious_hierarchy = {
 
 	behaviour = {
 		conqueror = no
-		subjugator = no
-		liberator = no
+		subjugator = yes
+		liberator = yes
 		opportunist = no
 		slaver = no
 		uplifter = no
@@ -846,13 +871,11 @@ federation_builders = {
 	allow = {
 		NOT = { is_country_type = fallen_empire }
 		NOT = { is_country_type = awakened_fallen_empire }
-		NOR = {
+		NOT = {
 			has_ethic = "ethic_xenophobe"
 			has_ethic = "ethic_fanatic_xenophobe"
 			has_ethic = "ethic_authoritarian"
 			has_ethic = "ethic_fanatic_authoritarian"
-			has_ethic = "ethic_militarist"
-			has_ethic = "ethic_fanatic_militarist"
 		}
 		OR = {
 			has_ethic = "ethic_fanatic_xenophile"
@@ -873,16 +896,6 @@ federation_builders = {
 					has_ethic = "ethic_fanatic_pacifist"
 				}
 				OR = {
-					has_ethic = "ethic_materialist"
-					has_ethic = "ethic_fanatic_materialist"
-				}
-			}			
-			AND = {
-				OR = {
-					has_ethic = "ethic_pacifist"
-					has_ethic = "ethic_fanatic_pacifist"
-				}
-				OR = {
 					has_ethic = "ethic_xenophile"
 					has_ethic = "ethic_fanatic_xenophile"
 				}
@@ -896,7 +909,7 @@ federation_builders = {
 					has_ethic = "ethic_egalitarian"
 					has_ethic = "ethic_fanatic_egalitarian"
 				}
-			}			
+			}
 		}
 	}
 
@@ -971,7 +984,7 @@ xenophobic_isolationists = {
 		opportunist = yes
 		slaver = yes
 		uplifter = no
-		purger = yes	# uses displace
+		purger = no
 		dominator = no
 		infiltrator = no
 		robot_exploiter = yes
@@ -1079,13 +1092,13 @@ fanatic_purifiers = {
 			}
 			AND = {
 				host_has_dlc = "Utopia"
-				has_valid_civic = "civic_fanatic_purifiers"
+				has_civic = "civic_fanatic_purifiers"
 			}
 		}
 	}
 
 	weight_modifier = {
-		weight = 1000
+		weight = 100
 	}
 }
 
@@ -1196,7 +1209,7 @@ migrating_flock = {
 	}
 
 	weight_modifier = {
-		weight = 50
+		weight = 100
 	}
 }
 

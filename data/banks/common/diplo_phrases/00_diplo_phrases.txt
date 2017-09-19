@@ -6544,10 +6544,7 @@ action_declare_war = {
 			}
 			trigger = {
 				FROM = {
-					OR = {
-						has_ai_personality = evangelising_zealots
-						has_ai_personality = democratic_crusaders
-					}
+					has_ai_personality_behaviour = ideologue
 					NOT = {
 						OR = {
 							has_ethic = ethic_xenophobe
@@ -6904,19 +6901,9 @@ action_declare_war = {
 		}		
 		01_FALLEN_EMPIRE_ANGRY_DOW_ACCEPT = {
 			trigger = {
-				is_angry_to = FROM		
+				is_angry_to = FROM
 			}
-		}
-		01_AWAKENED_EMPIRE_DOW_ACCEPT = {
-			trigger = {
-				is_country_type = awakened_fallen_empire		
-			}
-		}
-		02_AWAKENED_EMPIRE_DOW_ACCEPT = {
-			trigger = {
-				is_country_type = awakened_fallen_empire		
-			}
-		}			
+		}		
 	}
 	propose_vote = {
 		01_DOW_VOTE_PROPOSE = {

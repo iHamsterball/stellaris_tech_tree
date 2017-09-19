@@ -1,0 +1,94 @@
+@cost = 56
+
+tr_prosperity_adopt = {
+	cost = { unity = @cost }
+	modifier = {
+		shipsize_mining_station_build_cost_mult = -0.33
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 5
+			years_passed < 10
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_pacifist
+		}		
+	}
+}
+
+tr_prosperity_finish = {
+	
+	modifier = {	
+		terraforming_cost_mult = -0.33
+		ascension_perks_add = 1
+	}
+}
+
+tr_prosperity_sct = {
+	cost = { unity = @cost }
+	modifier = {
+		spaceport_ship_build_cost_mult = -0.15
+		planet_building_cost_mult = -0.15
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_prosperity_administrative_operations = {
+	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_prosperity_sct
+	}
+	modifier = {
+		planet_building_upkeep_mult = -0.10
+	}
+	
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_prosperity_fleet_logistical_corps = {
+	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_prosperity_sct
+	}
+	
+	modifier = {
+		ship_upkeep_mult = -0.10
+	}
+	
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_prosperity_trans_stellar_corporations = {
+	cost = { unity = @cost }
+	
+	# Bonus implemented in 00_rules.txt (colony_ship_rushed)
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_prosperity_pursuit_of_profit = {
+	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_prosperity_trans_stellar_corporations
+	}
+	
+	ai_weight = {
+		factor = 5000
+	}
+}

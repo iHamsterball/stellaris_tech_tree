@@ -39,12 +39,9 @@ dyson_sphere_0 = {
 			fail_text = "requires_no_habitable_planets"
 			NOT = {
 				any_planet = {
-					AND = {
-						OR = {
-							habitable_planet = yes
-							habitable_structure = yes
-						}
-						NOT = { has_planet_flag = habitat }
+					OR = {
+						habitable_planet = yes
+						habitable_structure = yes
 					}
 				}
 			}
@@ -56,10 +53,6 @@ dyson_sphere_0 = {
 				is_star_class = sc_neutron_star
 				is_star_class = sc_pulsar
 			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_no_existing_megastructure"
-			NOT = { has_any_megastructure = yes }
 		}
 	}
 	
@@ -74,6 +67,10 @@ dyson_sphere_0 = {
 				NOT = { has_anomaly = yes }
 			}
 			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				NOT = { solar_system = { has_any_megastructure = yes } }
+			}
+			custom_tooltip = {
 				fail_text = "requires_no_orbital_station"
 				has_orbital_station = no
 			}
@@ -81,25 +78,7 @@ dyson_sphere_0 = {
 	}
 	
 	ai_weight = {
-		factor = 15
-		
-		modifier = {
-			factor = 0.1
-			has_any_megastructure_in_empire = yes
-		}
-		
-		modifier = {
-			factor = 0.1
-			any_system_within_border = {
-				OR = {
-					has_megastructure = dyson_sphere_1
-					has_megastructure = dyson_sphere_2
-					has_megastructure = dyson_sphere_3
-					has_megastructure = dyson_sphere_4
-					has_megastructure = dyson_sphere_5	
-				}
-			}
-		}
+		factor = 5
 	}
 	
 	on_build_start = {}
@@ -122,8 +101,7 @@ dyson_sphere_1 = {
 		minerals = 40000
 	}
 
-	possible = {
-		from = { has_ascension_perk = ap_galactic_wonders }
+	monthly_production = {
 	}
 }
 
@@ -142,10 +120,6 @@ dyson_sphere_2 = {
 	monthly_production = {
 		energy = 100
 	}
-
-	possible = {
-		from = { has_ascension_perk = ap_galactic_wonders }
-	}
 }
 
 #Partial Dyson Sphere
@@ -162,10 +136,6 @@ dyson_sphere_3 = {
 	}
 	monthly_production = {
 		energy = 200
-	}
-
-	possible = {
-		from = { has_ascension_perk = ap_galactic_wonders }
 	}
 }
 
@@ -184,10 +154,6 @@ dyson_sphere_4 = {
 	monthly_production = {
 		energy = 300
 	}
-
-	possible = {
-		from = { has_ascension_perk = ap_galactic_wonders }
-	}
 }
 
 #Dyson Sphere
@@ -202,14 +168,6 @@ dyson_sphere_5 = {
 	build_cost = {
 		minerals = 40000
 	}
-	monthly_production = {
-		energy = 400
-	}
-
-	possible = {
-		from = { has_ascension_perk = ap_galactic_wonders }
-	}
-
 	on_build_complete = {
 		every_system_planet = {
 			limit = {
@@ -227,63 +185,7 @@ dyson_sphere_5 = {
 			change_pc = pc_barren_cold
 		}		
 	}
-}
-
-# Ruined Dyson Sphere
-dyson_sphere_ruined = {
-	entity = "dyson_sphere_destroyed_entity"
-	portrait = "GFX_megastructure_construction_background"
-
-	potential = {
-		always = no
-	}
-}
-
-# Restored Dyson Sphere
-dyson_sphere_restored = {
-	entity = "dyson_sphere_phase_05_entity"
-	construction_entity = "dyson_sphere_part_4_entity"
-	portrait = "GFX_megastructure_dyson_sphere_background"
-	upgrade_from = {
-		dyson_sphere_ruined
-	}
-	build_time = 3600
-	build_cost = {
-		minerals = 40000
-	}
 	monthly_production = {
 		energy = 400
-	}
-
-	possible = {
-		from = { has_technology = tech_mega_engineering }
-	}
-
-	on_build_start = {
-		fromfrom = {
-			set_graphical_culture = root.from
-		}
-	}
-
-	on_build_complete = {
-		every_system_planet = {
-			limit = {
-				OR = {
-					is_planet_class = pc_molten
-					is_planet_class = pc_toxic
-				}
-			}
-			change_pc = pc_frozen
-		}
-		every_system_planet = {
-			limit = {
-				is_planet_class = pc_barren
-			}
-			change_pc = pc_barren_cold
-		}
-		every_system_ambient_object = { destroy_ambient_object = this }
-		from = {
-			country_event = { id = utopia.2011 }
-		}
 	}
 }

@@ -45,7 +45,6 @@ technologist = {
 	can_join_faction = {
 		is_enslaved = no
 		is_being_purged = no
-		has_culture_shock = no
 		NOT = { has_trait = trait_nerve_stapled }
 		NOR = {
 			has_ethic = ethic_spiritualist
@@ -148,10 +147,6 @@ technologist = {
 			exists = owner
 			owner = {
 				num_communications > 2
-				NOR = {
-					has_country_flag = primitives_can_into_space
-					is_subject = yes
-				}
 			}
 		}
 
@@ -238,62 +233,6 @@ technologist = {
 		pop_faction_event = { id = factions.1 }
 	}
 
-	demand = {
-		title = "TECHNOLOGIST_DISCOVERY"
-		unfulfilled_title = "TECHNOLOGIST_NO_DISCOVERY"
-		desc = "TECHNOLOGIST_DISCOVERY_DESC"
-
-		fulfilled_effect = 2
-		unfulfilled_effect = -5
-
-		potential = {
-			exists = owner
-			owner = {
-				has_any_tradition_unlocked = yes
-			}
-		}
-
-		trigger = {
-			owner = {
-				OR = {
-					has_tradition = tr_discovery_adopt
-					has_tradition = tr_discovery_to_boldly_go
-					has_tradition = tr_discovery_planetary_survey_corps
-					has_tradition = tr_discovery_science_division
-					has_tradition = tr_discovery_polytechnic_education
-					has_tradition = tr_discovery_faith_in_science
-				}
-			}
-		}
-	}
-
-	demand = {
-		title = "TECHNOLOGIST_SECRET_KNOWLEDGE"
-		unfulfilled_title = "TECHNOLOGIST_NO_SECRET_KNOWLEDGE"
-		desc = "TECHNOLOGIST_SECRET_KNOWLEDGE_DESC"
-
-		fulfilled_effect = 5
-
-		potential = {
-			exists = owner
-			owner = {
-				OR = {
-					has_modifier = fallen_empire_gift_databanks
-					has_modifier = curator_insight
-				}
-			}
-		}
-
-		trigger = {
-			owner = {
-				OR = {
-					has_modifier = fallen_empire_gift_databanks
-					has_modifier = curator_insight
-				}
-			}
-		}
-	}
-
 	on_destroy = {
 		if = {
 			limit = {
@@ -326,7 +265,7 @@ technologist = {
 				custom_tooltip = {
 					fail_text = EMBRACE_FACTION_COOLDOWN
 					parameter:empire = {
-						NOT = { has_modifier = embraced_faction_timer }
+						NOT = { has_country_flag = embraced_faction }
 					}
 				}
 				support > 0.20
@@ -347,63 +286,18 @@ technologist = {
 				}				
 				parameter:empire = {
 					shift_ethic = ethic_materialist
+					hidden_effect = { set_timed_country_flag = { flag = embraced_faction days = 7200 } }
 					hidden_effect = {
-						add_modifier = { modifier = embraced_faction_timer days = 3600 }
 						every_pop_faction = {
 							limit = { NOT = { is_same_value = root } }
 							add_modifier = { modifier = embraced_another_faction days = 3600 }
 						}
 					}
 				}
-				hidden_effect = {
-					save_event_target_as = TargetFaction
-					parameter:empire = {
-						every_relation = {
-							limit = {
-								is_ai = no
-								is_country_type = default			
-								has_communications = prev
-							}
-							country_event = { id = factions.2000 }
-						}
-					}				
-				}				
 			}
 			
 			ai_weight = {
-				base = 1
-				modifier = {
-					factor = 0
-					support < 0.50
-					owner = {
-						has_ethic = ethic_materialist
-					}
-				}
-				modifier = {
-					factor = 0
-					NOT = { 
-						owner = {
-							exists = ruler
-							ruler = {
-								leader_of_faction = technologist
-							}
-						}
-					}
-				}
-				modifier = {
-					factor = 0
-					owner = {
-						count_pop_factions = {
-							limit = {
-								NOR = {
-									is_pop_faction_type = democratic_election_faction_1
-									is_pop_faction_type = democratic_election_faction_2
-								}
-							}
-							count < 4
-						}					
-					}
-				}				
+				base = 0
 			}
 		}
 		promote_faction = {

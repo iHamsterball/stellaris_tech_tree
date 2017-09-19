@@ -9,8 +9,6 @@
  MOD_COUNTRY_BORDER_MULT:0 "Пограничный радиус"
  MOD_COUNTRY_ROBOT_MAINTENANCE_MULT:0 "Стоимость содержания роботов"
  MOD_COUNTRY_ROBOT_MAINTENANCE_MULT_DESC:0 "Изменяет расход энергии на содержание поселений роботов."
- MOD_COUNTRY_ROBOT_BUILD_SPEED_MULT:0 "Скорость строительства роботов"
- MOD_COUNTRY_ROBOT_BUILD_SPEED_MULT_DESC:0 "Изменяет скорость, с которой ведется строительство поселений роботов."
  MOD_COUNTRY_INFLUENCE_GAIN_ADD:0 "Ежемесячное влияние"
  MOD_COUNTRY_INFLUENCE_GAIN_MULT:0 "Ежемесячное влияние"
  MOD_COUNTRY_DEFENSIVE_WAR_INFLUENCE_GAIN_ADD:0 "Ежемесячное влияние (оборонительная война)"
@@ -68,7 +66,6 @@
  MOD_COUNTRY_MODIFY_SPECIES_COST_MULT:0 "Стоимость особого проекта по модифицированию расы"
  MOD_COUNTRY_SUBJECT_INTEGRATION_INFLUENCE_COST_MULT:0 "Расход влияния при интеграции подданных"
  MOD_COUNTRY_SUBJECT_INFLUENCE_GAIN_MULT:0 "Влияние от подданных"
- MOD_COUNTRY_SUBJECT_ACCEPTANCE_ADD:0 "Одобрение подчинения"
  MOD_COUNTRY_FACTION_INFLUENCE_MULT:0 "Прирост влияния от фракций"
  MOD_COUNTRY_FACTION_INFLUENCE_ADD:0 "Максимальное влияние от фракций"
  MOD_COUNTRY_CLEAR_BLOCKER_COST_MULT:0 "Стоимость расчистки непригодных квадратов"
@@ -111,8 +108,6 @@
  MOD_POP_FOOD_REQ_DESC:0 "Этот параметр влияет на пищевые потребности всех поселений империи."
  MOD_POP_FOOD_REQ_MULT:0 "$MOD_POP_FOOD_REQ$"
  MOD_POP_FOOD_REQ_MULT_DESC:0 "Этот параметр влияет на пищевые потребности всех поселений империи."
- MOD_POP_GROWTH_SPEED:0 "Скорость прироста"
- MOD_POP_GROWTH_SPEED_DESC:0 "Этот параметр влияет на скорость, с которой растут новые поселения."
  MOD_POP_GROWTH_REQ:0 "Время прироста"
  MOD_POP_GROWTH_REQ_DESC:0 "Этот параметр влияет на количество пищи, требуемой для того, чтобы новое поселение было полностью сформировано."
  MOD_POP_GROWTH_REQ_MULT:0 "Время прироста"
@@ -793,7 +788,6 @@
  opinion_enlightened_us:0 "Просветили нас"
  opinion_destroyed_portal:0 "Уничтожили пространственный портал"
  
- opinion_devouring_swarm:0 "$civic_hive_devouring_swarm$"
  opinion_swarm:0 "Внегалактические захватчики"
  opinion_prey:0 "Добыча"
  
@@ -1194,3 +1188,4 @@
  CYBREX_research_speed_mult:0 "$precursor_research_speed$"
  CYBREX_research_fail_risk_add:0 "$precursor_fail_risk$"
  per_neighbor_rival:0 "Соседи-соперники"
+ MOD_COUNTRY_SUBJECT_ACCEPTANCE_ADD:0 "Принятие подчинения"

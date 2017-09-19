@@ -26,11 +26,10 @@ imperialist = {
 	can_join_faction = {
 		is_enslaved = no
 		is_being_purged = no
-		has_culture_shock = no
 		NOT = { has_trait = trait_nerve_stapled }
 		OR = {
 			has_ethic = ethic_militarist
-			has_ethic = ethic_fanatic_militarist
+			has_ethic = ethic_fanatic_militarist	
 		}
 	}
 	
@@ -142,6 +141,14 @@ imperialist = {
 			exists = owner
 			owner = {
 				num_communications > 2
+				#NOT = {
+				#	count_neighbor_country = {
+				#		limit = {
+				#			is_rival = root.owner
+				#		}
+				#		count > 1
+				#	}
+				#}
 			}
 		}
 		
@@ -237,57 +244,34 @@ imperialist = {
 	}
 
 	demand = {
-		title = "IMPERIALIST_OVERLORD" #Imperial Hegemony
-		unfulfilled_title = "IMPERIALIST_NOT_OVERLORD"
-		desc = "IMPERIALIST_OVERLORD_DESC"
+		title = "IMPERIALIST_DOMINATION_TRADITION"
+		unfulfilled_title = "IMPERIALIST_NO_DOMINATION_TRADITION"
+		desc = "IMPERIALIST_DOMINATION_TRADITION_DESC"
 
 		fulfilled_effect = 5
 
 		potential = {
 			exists = owner
 			owner = {
-				num_communications > 2
-			}
-		}
-
-		trigger = {
-			owner = {
-				is_overlord = yes
-			}
-		}
-	}
-
-	demand = {
-		title = "IMPERIALIST_SLAYER"
-		unfulfilled_title = "IMPRERIALIST_NOT_SLAYER"
-		desc = "IMPERIALIST_SLAYER_DESC"
-
-		fulfilled_effect = 10
-
-		potential = {
-			exists = owner
-			owner = {
-				host_has_dlc = "Leviathans Story Pack"
-				any_country = {
-					OR = {
-						is_country_type = guardian
-						is_country_type = guardian_dragon
-						is_country_type = guardian_stellarite
-						is_country_type = guardian_wraith #
-						is_country_type = guardian_hiver
-						is_country_type = guardian_horror
-						is_country_type = guardian_fortress
-						is_country_type = guardian_dreadnought
-						is_country_type = guardian_sphere
-					}
-					has_communications = prev
+				OR = {
+					has_tradition = "tr_domination_colonial_viceroys"
+					has_tradition = "tr_domination_protection_racket"
+					has_tradition = "tr_domination_star_lords"
+					has_tradition = "tr_domination_fleet_levies"
+					has_tradition = "tr_domination_vassal_acculturation"
 				}
 			}
 		}
 
 		trigger = {
 			owner = {
-				has_country_flag = killed_guardian
+				OR = {
+					has_tradition = "tr_domination_colonial_viceroys"
+					has_tradition = "tr_domination_protection_racket"
+					has_tradition = "tr_domination_star_lords"
+					has_tradition = "tr_domination_fleet_levies"
+					has_tradition = "tr_domination_vassal_acculturation"
+				}
 			}
 		}
 	}
@@ -328,7 +312,7 @@ imperialist = {
 				custom_tooltip = {
 					fail_text = EMBRACE_FACTION_COOLDOWN
 					parameter:empire = {
-						NOT = { has_modifier = embraced_faction_timer }
+						NOT = { has_country_flag = embraced_faction }
 					}
 				}
 				support > 0.20
@@ -338,74 +322,29 @@ imperialist = {
 			}
 
 			effect = {
-				add_modifier = { modifier = embraced_faction days = 3600 }
+				add_modifier = { modifier = embraced_faction days = 7200 }
 				hidden_effect = {
 					if = {
 						limit = {
 							has_modifier = promoted_faction
 						}
 						remove_modifier = promoted_faction
-					}
-				}
-				parameter:empire = {
-					shift_ethic = ethic_militarist
-					hidden_effect = {
-						add_modifier = { modifier = embraced_faction_timer days = 3600 }
-						every_pop_faction = {
-							limit = { NOT = { is_same_value = root } }
-							add_modifier = { modifier = embraced_another_faction days = 3600 }
-						}
-					}
-				}
-				hidden_effect = {
-					save_event_target_as = TargetFaction
-					parameter:empire = {
-						every_relation = {
-							limit = {
-								is_ai = no
-								is_country_type = default			
-								has_communications = prev
-							}
-							country_event = { id = factions.2000 }
-						}
 					}				
 				}				
+				parameter:empire = {
+					shift_ethic = ethic_militarist
+					hidden_effect = { set_timed_country_flag = { flag = embraced_faction days = 7200 } }
+					hidden_effect = {
+						every_pop_faction = {
+							limit = { NOT = { is_same_value = root } }
+							add_modifier = { modifier = embraced_another_faction days = 7200 }
+						}
+					}
+				}
 			}
 			
 			ai_weight = {
-				base = 1
-				modifier = {
-					factor = 0
-					support < 0.50
-					owner = {
-						has_ethic = ethic_militarist
-					}
-				}
-				modifier = {
-					factor = 0
-					NOT = { 
-						owner = {	
-							exists = ruler
-							ruler = {
-								leader_of_faction = imperialist
-							}
-						}
-					}
-				}
-				modifier = {
-					factor = 0
-					owner = {
-						count_pop_factions = {
-							limit = {
-								NOR = {
-									is_pop_faction_type = democratic_election_faction_1
-									is_pop_faction_type = democratic_election_faction_2
-								}
-							}
-							count < 4
-						}					
-					}
-				}				
+				base = 0
 			}
 		}
 		promote_faction = {
@@ -414,14 +353,14 @@ imperialist = {
 			
 			potential = {
 				exists = owner
-				parameter:empire = {
+				parameter:empire = { 
 					NOR = {
 						has_ethic = ethic_militarist
 						has_ethic = ethic_fanatic_militarist
-					}
-					NOR = {
+					}				
+					NOR = { 
 						has_modifier = suppressed_militarist
-						has_modifier = promoted_militarist
+						has_modifier = promoted_militarist 
 					}
 				}
 			}
@@ -460,17 +399,17 @@ imperialist = {
 			ai_weight = {
 				base = 0
 			}
-		}
+		}		
 		suppress_faction = {
 			title = "SUPPRESS_FACTION"
 			description = "SUPPRESS_FACTION_DESC"
 			
 			potential = {
 				exists = owner
-				parameter:empire = {
-					NOR = {
+				parameter:empire = { 
+					NOR = { 
 						has_modifier = suppressed_militarist
-						has_modifier = promoted_militarist
+						has_modifier = promoted_militarist 
 					}
 				}
 			}
@@ -505,6 +444,6 @@ imperialist = {
 			ai_weight = {
 				base = 0
 			}
-		}
+		}		
 	}
 }

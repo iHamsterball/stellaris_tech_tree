@@ -26,7 +26,6 @@ supremacist = {
 	can_join_faction = {
 		is_enslaved = no
 		is_being_purged = no
-		has_culture_shock = no
 		NOT = { has_trait = trait_nerve_stapled }
 		OR = {
 			has_ethic = ethic_xenophobe
@@ -74,15 +73,6 @@ supremacist = {
 			factor = 0
 			NOT = { is_same_species = owner_species }
 		}
-		
-		modifier = {
-			factor = 0
-			OR = {
-				is_species = "ROBOT_POP_SPECIES_1"
-				is_species = "ROBOT_POP_SPECIES_2"
-				is_species = "ROBOT_POP_SPECIES_3"
-			}			
-		}
 	}
 	
 	demand = {
@@ -94,7 +84,7 @@ supremacist = {
 		
 		potential = {
 			exists = owner
-			owner = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+			owner = { NOT = { has_civic = civic_fanatic_purifiers } }
 		}
 		
 		trigger = {
@@ -116,7 +106,7 @@ supremacist = {
 		potential = {
 			exists = owner
 			owner = {
-				NOT = { has_valid_civic = civic_fanatic_purifiers }
+				NOT = { has_civic = civic_fanatic_purifiers }
 				any_relation = {
 					#has_communications = root
 					is_country_type = primitive
@@ -142,7 +132,7 @@ supremacist = {
 		potential = {
 			exists = owner
 			owner = {
-				NOT = { has_valid_civic = civic_fanatic_purifiers }
+				NOT = { has_civic = civic_fanatic_purifiers }
 				any_owned_pop = {
 					NOT = { is_same_species = owner_species }
 					is_robot_pop = no
@@ -169,41 +159,6 @@ supremacist = {
 	}
 
 	demand = {
-		title = "SUPREMACIST_NO_MIGRATION_TREATIES"
-		unfulfilled_title = "SUPREMACIST_MIGRATION_TREATIES"
-		desc = "SUPREMACIST_NO_MIGRATION_TREATIES_DESC"
-
-		unfulfilled_effect = -15
-
-		potential = {
-			exists = owner
-			owner = {
-				NOT = { has_valid_civic = civic_fanatic_purifiers }
-				num_communications > 2
-			}
-		}
-
-		trigger = {
-			owner = {
-				NOT = {
-					any_country = {
-						is_country_type = default
-						has_communications = root.owner
-						OR = {
-							has_diplo_migration_treaty = root.owner
-							root = {
-								owner = {
-									has_diplo_migration_treaty = prevprev
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	demand = {
 		title = "SUPREMACIST_CORE_WORLD_EXCLUSIVITY"
 		unfulfilled_title = "SUPREMACIST_CORE_WORLD_NONEXCLUSIVITY"
 		desc = "SUPREMACIST_CORE_WORLD_EXCLUSIVITY_DESC"
@@ -214,7 +169,7 @@ supremacist = {
 		potential = {
 			exists = owner
 			owner = {
-				NOT = { has_valid_civic = civic_fanatic_purifiers }
+				NOT = { has_civic = civic_fanatic_purifiers }
 				num_species > 1
 				any_owned_pop = {
 					NOR = {
@@ -245,20 +200,24 @@ supremacist = {
 		potential = {
 			exists = owner
 			owner = {
-				NOT = { has_valid_civic = civic_fanatic_purifiers }
+				NOT = { has_civic = civic_fanatic_purifiers }
 				any_relation = {
 					is_country_type = default
-					has_communications = root.owner
+					has_communications = prev
 					NOT = {
-						is_in_federation_with = root.owner
+						is_in_federation_with = prev
 					}
 				}
 			}
 		}
 		
 		trigger = {
-			owner = {
-				has_country_flag = entered_war_as_attacker
+			any_country = {
+				any_war = {
+    				any_attacker = {
+        				is_same_value = root.owner
+    				}
+				}
 			}
 		}
 	}
@@ -273,13 +232,13 @@ supremacist = {
 		potential = {
 			exists = owner
 			owner = {
-				has_valid_civic = civic_fanatic_purifiers
+				has_civic = civic_fanatic_purifiers
 			}
 		}
 		
 		trigger = {
 			owner = {
-				has_valid_civic = civic_fanatic_purifiers
+				has_civic = civic_fanatic_purifiers
 			}
 		}
 	}
@@ -310,71 +269,6 @@ supremacist = {
 						NOT = { is_exact_same_species = root.owner }
 					}
 				}
-			}
-		}
-	}
-
-	demand = {
-		title = "SUPREMACIST_DOMINATION_TRADITION"
-		unfulfilled_title = "SUPREMACIST_NO_DOMINATION_TRADITION"
-		desc = "SUPREMACIST_DOMINATION_TRADITION_DESC"
-
-		fulfilled_effect = 2
-		unfulfilled_effect = -5
-
-		potential = {
-			exists = owner
-			owner = {
-				NOT = { has_valid_civic = civic_fanatic_purifiers }
-				has_any_tradition_unlocked = yes
-			}
-		}
-
-		trigger = {
-			owner = {
-				OR = {
-					has_tradition = "tr_domination_adopt"
-					has_tradition = "tr_domination_colonial_viceroys"
-					has_tradition = "tr_domination_protection_racket"
-					has_tradition = "tr_domination_star_lords"
-					has_tradition = "tr_domination_fleet_levies"
-					has_tradition = "tr_domination_vassal_acculturation"
-				}
-			}
-		}
-	}
-
-	demand = {
-		title = "SUPREMACIST_GIANT_MASSACRE"
-		unfulfilled_title = "SUPREMACIST_NO_GIANT_MASSACRE"
-		desc = "SUPREMACIST_GIANT_MASSACRE_DESC"
-
-		fulfilled_effect = 10
-
-		potential = {
-			exists = owner
-			owner = {
-				host_has_dlc = "Leviathans Story Pack"
-				any_country = {
-					OR = {
-						is_country_type = guardian
-						is_country_type = guardian_dragon
-						is_country_type = guardian_stellarite
-						is_country_type = guardian_wraith
-						is_country_type = guardian_hiver
-						is_country_type = guardian_horror
-						is_country_type = guardian_fortress
-						is_country_type = guardian_dreadnought
-						is_country_type = guardian_sphere
-					}
-					has_communications = prev
-				}
-			}
-		}
-
-		trigger = {
-			owner = {
-				has_country_flag = killed_guardian
 			}
 		}
 	}
@@ -415,7 +309,7 @@ supremacist = {
 				custom_tooltip = {
 					fail_text = EMBRACE_FACTION_COOLDOWN
 					parameter:empire = {
-						NOT = { has_modifier = embraced_faction_timer }
+						NOT = { has_country_flag = embraced_faction }
 					}
 				}
 				support > 0.20
@@ -436,78 +330,18 @@ supremacist = {
 				}
 				parameter:empire = {
 					shift_ethic = ethic_xenophobe
+					hidden_effect = { set_timed_country_flag = { flag = embraced_faction days = 7200 } }
 					hidden_effect = {
-						every_pop_faction = { # embraces xenophobe ethos
-							limit = { is_pop_faction_type = isolationist }
-							add_modifier = { modifier = embraced_faction days = 3600 	}
-							if = {
-								limit = {
-									has_modifier = promoted_faction
-								}
-								remove_modifier = promoted_faction
-							}
-						}
-						add_modifier = { modifier = embraced_faction_timer days = 3600 }
 						every_pop_faction = {
-							limit = {
-								NOR = {
-									is_same_value = root
-									is_pop_faction_type = isolationist # same ethos
-								}
-							}
+							limit = { NOT = { is_same_value = root } }
 							add_modifier = { modifier = embraced_another_faction days = 3600 }
 						}
 					}
 				}
-				hidden_effect = {
-					save_event_target_as = TargetFaction
-					parameter:empire = {
-						every_relation = {
-							limit = {
-								is_ai = no
-								is_country_type = default			
-								has_communications = prev
-							}
-							country_event = { id = factions.2000 }
-						}
-					}				
-				}				
 			}
 			
 			ai_weight = {
-				base = 1
-				modifier = {
-					factor = 0
-					support < 0.50
-					owner = {
-						has_ethic = ethic_xenophobe
-					}
-				}
-				modifier = {
-					factor = 0
-					NOT = { 
-						owner = {
-							exists = ruler
-							ruler = {
-								leader_of_faction = supremacist
-							}
-						}
-					}
-				}
-				modifier = {
-					factor = 0
-					owner = {
-						count_pop_factions = {
-							limit = {
-								NOR = {
-									is_pop_faction_type = democratic_election_faction_1
-									is_pop_faction_type = democratic_election_faction_2
-								}
-							}
-							count < 4
-						}					
-					}
-				}				
+				base = 0
 			}
 		}
 		promote_faction = {
@@ -555,17 +389,6 @@ supremacist = {
 					remove_modifier = promoted_faction
 				}
 				parameter:empire = {
-					hidden_effect = {
-						every_pop_faction = {
-							limit = { is_pop_faction_type = isolationist }
-							if = {
-								limit = {
-									has_modifier = promoted_faction
-								}
-								remove_modifier = promoted_faction
-							}
-						}
-					}
 					remove_modifier = promoted_xenophobe
 				}
 			}
@@ -591,12 +414,6 @@ supremacist = {
 			effect = {
 				add_modifier = { modifier = suppressed_faction days = -1 }
 				parameter:empire = {
-					hidden_effect = {
-						every_pop_faction = {
-							limit = { is_pop_faction_type = isolationist }
-							add_modifier = { modifier = suppressed_faction days = -1 }
-						}
-					}
 					add_modifier = { modifier = suppressed_xenophobe days = -1 }
 				}
 			}
@@ -618,12 +435,6 @@ supremacist = {
 				remove_modifier = suppressed_faction
 				parameter:empire = {
 					remove_modifier = suppressed_xenophobe
-					hidden_effect = {
-						every_pop_faction = {
-							limit = { is_pop_faction_type = isolationist }
-							remove_modifier = suppressed_faction
-						}
-					}
 				}
 			}
 			

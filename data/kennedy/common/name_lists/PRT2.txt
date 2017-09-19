@@ -1,0 +1,98 @@
+﻿### Pirates 2
+### Created by Maximilian Olbers
+PRT2 = {
+	selectable = { always = no }
+	randomized = no
+	
+	### PLANETS
+
+	trigger = {
+		is_pirate = yes
+	}
+
+	ship_names = {
+		generic = {
+			"Pillage and Reconciliation" "An Arrow in Flight" "Gun-to-Head" Megalomanic "Petty Theft" "Grand Larceny" "Pop Up" "A Promise Kept" "Frag Machine" "Unrepentant Camper" "Impersonal Space" "Fallen Pillar" "Motion Tabled" Aimbot "Attack on Freighter" "The Slings" "The Arrows" "Outrageous Fortune" "Thermopylaeic" "Pyrrhic and Proud" "Wiggling Bait" "Shoot for Loot" "Feature Creep" "Creepy Feats" "Tone Deaf Siren" "No Good" "The Worst Thing" "Oh! That's a Pirate" "Science Ship Killer" Ravageoid "Violence-Liker" "Illegal Repercussions" "Shameless Plagiarist" "Dove & Crow" "Alcheringa" "Barnacle Jim" "Charles in Charge" Ganker
+		}
+		
+		corvette = {
+			Jabberwock Boojum Snark
+		}
+		
+		constructor = {
+		}
+		
+		colonizer = {
+		}
+		
+		science = {
+		}
+		
+		destroyer = {
+			"No Piece" "Two Piece" "Three Piece"
+		}
+		
+		cruiser = {
+			Durandal Tycho Leela
+		}
+		
+		battleship = {
+			"Manus Celer Dei" "Fatum Iustum Stultorum" "Strange Aeons" "Red Queen"
+		}
+		
+		mining_station = { 
+			"Ruthless Extractor" "Blood From Stone"
+		}
+		research_station = { }
+		wormhole_station = { }
+		#terraform_station = { }
+		observation_station = { }
+		
+		transport = {
+			"Carry Me Home"
+		}
+		
+		military_station_small = {
+			"Vorpal House" "Morbid Home" "Spacer Alley" "The Big House" "Beyond the Pale" "The Pirate Bulge" "Foul Parish" "Pit of Piracy" "Corsair Court" "The Privateer's Privates" "Buccaneer Bodega" "Rocky Outhouse" "Zero-G Château" "Black Ice" "Just Rewards" "The Heft of Theft" "Predatory Positioning" "Military-Piracy Complex" "Unsafe Harbor" "Kingdom Crumbs"
+		}
+
+		military_station_medium = {
+			"Vorpal House" "Morbid Home" "Spacer Alley" "The Big House" "Beyond the Pale" "The Pirate Bulge" "Foul Parish" "Pit of Piracy" "Corsair Court" "The Privateer's Privates" "Buccaneer Bodega" "Rocky Outhouse" "Zero-G Château" "Black Ice" "Just Rewards" "The Heft of Theft" "Predatory Positioning" "Military-Piracy Complex" "Unsafe Harbor" "Kingdom Crumbs"
+		}
+
+		military_station_large = {
+			"Vorpal House" "Morbid Home" "Spacer Alley" "The Big House" "Beyond the Pale" "The Pirate Bulge" "Foul Parish" "Pit of Piracy" "Corsair Court" "The Privateer's Privates" "Buccaneer Bodega" "Rocky Outhouse" "Zero-G Château" "Black Ice" "Just Rewards" "The Heft of Theft" "Predatory Positioning" "Military-Piracy Complex" "Unsafe Harbor" "Kingdom Crumbs"
+		}	
+	}
+
+	fleet_names = {
+		random_names = {
+			"Black Flag Furore" "Pirates Without Borders" "Incessant Nagging" "Scallywags United" "Disagreeables" "Dishonor Among Thieves" "Prize Rule Breakers" "Sunblasters" "Moonchasers" "Carbon Hounds" "Under Pressure" "Home Team" "Away Team" "Interlopers" "The Persistents" "Piracy Potentiators" "Prank Patrol" "China Plates" "Privateering Enthusiasts" "Raiding Specialists" "Boarding Broncos" "Blue Rogues" "Radical Dreamers" "They Breathe" Orbwalkers
+		}
+	}
+
+	planet_names = {
+	}
+
+
+	### CHARACTERS
+
+	character_names = {
+
+		names1 = {
+			weight = 100
+			first_names_male = {
+			}
+			first_names_female = {
+			}
+			second_names = {			
+			}
+			regnal_first_names_male = {
+			}
+			regnal_first_names_female = {
+			}
+			regnal_second_names = {
+			}
+		}
+	}
+}

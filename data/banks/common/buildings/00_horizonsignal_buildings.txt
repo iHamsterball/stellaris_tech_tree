@@ -75,25 +75,12 @@ building_akx_worm_1 = {
 		energy = 6
 	}
 	
+	#required_resources = {
+	#	energy = @b5upkeep
+	#}
+	
 	prerequisites = {
 		"tech_akx_worm_1"
-	}
-	
-	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}
-	}
-	
-	ai_weight = {
-		factor = 10
 	}
 }
 
@@ -114,12 +101,12 @@ building_akx_worm_2 = {
 	}
 
 	produced_resources = {
-		society_research = 8
+		society_research = 4
 	}
 
 	planet_modifier  = {
 		pop_government_ethic_attraction = 0.05
-		pop_happiness = 0.05
+		pop_happiness = 0.1
 	}
 	
 	required_resources = {
@@ -128,23 +115,6 @@ building_akx_worm_2 = {
 	
 	prerequisites = {
 		"tech_akx_worm_2"
-	}
-	
-	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}
-	}
-	
-	ai_weight = {
-		factor = 10
 	}
 }
 
@@ -165,7 +135,7 @@ building_akx_worm_3 = {
 	}
 
 	produced_resources = {
-		physics_research = 10
+		physics_research = 8
 	}
 
 	planet_modifier  = {
@@ -177,23 +147,6 @@ building_akx_worm_3 = {
 	
 	prerequisites = {
 		"tech_akx_worm_3"
-	}
-	
-	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}
-	}
-	
-	ai_weight = {
-		factor = 10
 	}
 }
 

@@ -62,7 +62,7 @@ special_init_02 = {
 		orbit_distance = 0
 		class = "rl_habitable_normal"
 		orbit_angle = { min = 90 max = 270 }
-		size = { min = 12 max = 25 }
+		size = { min = 15 max = 25 }
 		#tile_blockers = none
 		
 		init_effect = {
@@ -109,85 +109,21 @@ special_init_02 = {
 					last_created_country = {
 						set_graphical_culture = industrial_01
 						random_list = {
-							25 = {
+							25 = { 
 								set_country_flag = industrial_age 
 								set_primitive_age = industrial_age
-								change_country_flag = {
-									icon = {
-										category = "special"
-										file = "primitive.dds"
-									}
-									background= {
-										category = "backgrounds"
-										file = "new_dawn.dds"
-									}
-									colors={
-										"beige"
-										"yellow"
-										"null"
-										"null"
-									}
-								}
 							}
 							25 = { 
 								set_country_flag = machine_age
 								set_primitive_age = machine_age
-								change_country_flag = {
-									icon = {
-										category = "special"
-										file = "primitive.dds"
-									}
-									background= {
-										category = "backgrounds"
-										file = "new_dawn.dds"
-									}
-									colors={
-										"yellow"
-										"orange"
-										"null"
-										"null"
-									}
-								}
 							}
 							25 = { 
 								set_country_flag = atomic_age 
 								set_primitive_age = atomic_age
-								change_country_flag = {
-									icon = {
-										category = "special"
-										file = "primitive.dds"
-									}
-									background= {
-										category = "backgrounds"
-										file = "new_dawn.dds"
-									}
-									colors={
-										"beige"
-										"brown"
-										"null"
-										"null"
-									}
-								}
 							}
 							25 = { 
 								set_country_flag = early_space_age 
 								set_primitive_age = early_space_age
-								change_country_flag = {
-									icon = {
-										category = "special"
-										file = "primitive.dds"
-									}
-									background= {
-										category = "backgrounds"
-										file = "new_dawn.dds"
-									}
-									colors={
-										"grey"
-										"dark_grey"
-										"null"
-										"null"
-									}
-								}
 							}
 						}
 					}
@@ -359,7 +295,7 @@ special_init_02 = {
 								while = {
 									count = 4
 									create_army = {
-										name = "NAME_Industrial_Army"
+										name = "Industrial Army"
 										owner = last_created
 										species = last_created
 										type = "industrial_army"
@@ -374,7 +310,7 @@ special_init_02 = {
 								while = {
 									count = 5
 									create_army = {
-										name = "NAME_Industrial_Army"
+										name = "Industrial Army"
 										owner = last_created
 										species = last_created
 										type = "industrial_army"
@@ -389,7 +325,7 @@ special_init_02 = {
 								while = {
 									count = 4
 									create_army = {
-										name = "NAME_Post-Atomic_Army"
+										name = "Post-Atomic Army"
 										owner = last_created
 										species = last_created
 										type = "postatomic_army"
@@ -404,7 +340,7 @@ special_init_02 = {
 								while = {
 									count = 5
 									create_army = {
-										name = "NAME_Post-Atomic_Army"
+										name = "Post-Atomic Army"
 										owner = last_created
 										species = last_created
 										type = "postatomic_army"
@@ -416,7 +352,7 @@ special_init_02 = {
 										set_owner = last_created_country
 										create_ship = {
 											name = "NAME_Space_Station"
-											design = "NAME_Space_Station"
+											design = "Space Station"
 										}
 										set_location = PREV
 									}
@@ -467,7 +403,7 @@ special_init_02 = {
 					last_created_country = {
 						set_graphical_culture = preindustrial_01
 						random_list = {
-							20 = {
+							20 = { 
 								set_country_flag = stone_age 
 								set_primitive_age = stone_age
 								change_government = {
@@ -477,8 +413,8 @@ special_init_02 = {
 										civic = civic_the_wheel
 									}
 								}
-							}
-							20 = {
+							}						
+							20 = { 
 								set_country_flag = bronze_age 
 								set_primitive_age = bronze_age
 								change_government = {
@@ -488,102 +424,22 @@ special_init_02 = {
 										civic = civic_the_wheel
 									}
 								}
-								change_country_flag = {
-									icon = {
-										category = "special"
-										file = "primitive.dds"
-									}
-									background= {
-										category = "backgrounds"
-										file = "new_dawn.dds"
-									}
-									colors={
-										"green"
-										"dark_green"
-										"null"
-										"null"
-									}
-								}
 							}
-							20 = {
+							20 = { 
 								set_country_flag = iron_age 
 								set_primitive_age = iron_age
-								change_country_flag = {
-									icon = {
-										category = "special"
-										file = "primitive.dds"
-									}
-									background= {
-										category = "backgrounds"
-										file = "new_dawn.dds"
-									}
-									colors={
-										"purple"
-										"dark_purple"
-										"null"
-										"null"
-									}
-								}
 							}
-							20 = {
+							20 = { 
 								set_country_flag = late_medieval_age 
 								set_primitive_age = late_medieval_age
-								change_country_flag = {
-									icon = {
-										category = "special"
-										file = "primitive.dds"
-									}
-									background= {
-										category = "backgrounds"
-										file = "new_dawn.dds"
-									}
-									colors={
-										"light_blue"
-										"blue"
-										"null"
-										"null"
-									}
-								}
 							}
-							20 = {
+							20 = { 
 								set_country_flag = renaissance_age 
 								set_primitive_age = renaissance_age
-								change_country_flag = {
-									icon = {
-										category = "special"
-										file = "primitive.dds"
-									}
-									background= {
-										category = "backgrounds"
-										file = "new_dawn.dds"
-									}
-									colors={
-										"pink"
-										"burgundy"
-										"null"
-										"null"
-									}
-								}
 							}
-							20 = {
+							20 = { 
 								set_country_flag = steam_age 
 								set_primitive_age = steam_age
-								change_country_flag = {
-									icon = {
-										category = "special"
-										file = "primitive.dds"
-									}
-									background= {
-										category = "backgrounds"
-										file = "new_dawn.dds"
-									}
-									colors={
-										"orange"
-										"red"
-										"null"
-										"null"
-									}
-								}
 							}
 						}
 					}
@@ -738,7 +594,7 @@ special_init_02 = {
 							limit = { has_country_flag = stone_age }
 							PREV = {
 								create_army = {
-									name = "NAME_Primitive_Army"
+									name = "Primitive Army"
 									owner = last_created
 									species = last_created
 									type = "primitive_army"
@@ -750,7 +606,7 @@ special_init_02 = {
 							limit = { has_country_flag = bronze_age }
 							PREV = {
 								create_army = {
-									name = "NAME_Primitive_Army"
+									name = "Primitive Army"
 									owner = last_created
 									species = last_created
 									type = "primitive_army"
@@ -764,7 +620,7 @@ special_init_02 = {
 								while = {
 									count = 2
 									create_army = {
-										name = "NAME_Primitive_Army"
+										name = "Primitive Army"
 										owner = last_created
 										species = last_created
 										type = "primitive_army"
@@ -779,7 +635,7 @@ special_init_02 = {
 								while = {
 									count = 3
 									create_army = {
-										name = "NAME_Primitive_Army"
+										name = "Primitive Army"
 										owner = last_created
 										species = last_created
 										type = "primitive_army"
@@ -794,7 +650,7 @@ special_init_02 = {
 								while = {
 									count = 4
 									create_army = {
-										name = "NAME_Primitive_Army"
+										name = "Primitive Army"
 										owner = last_created
 										species = last_created
 										type = "primitive_army"
@@ -809,7 +665,7 @@ special_init_02 = {
 								while = {
 									count = 3
 									create_army = {
-										name = "NAME_Industrial_Army"
+										name = "Industrial Army"
 										owner = last_created
 										species = last_created
 										type = "industrial_army"
@@ -855,7 +711,7 @@ special_init_02 = {
 special_init_03 = {
 	name = "NAME_Sol"
 	class = "sc_g"
-	asteroids_distance = 145
+	asteroids_distance = 120
 
 	flags = { primitive_sol sol }
 	
@@ -878,7 +734,7 @@ special_init_03 = {
 	
 	planet = {
 		class = "pc_toxic"
-		orbit_distance = 25
+		orbit_distance = 20
 		orbit_angle = 125
 		size = 20
 		has_ring = no
@@ -886,7 +742,7 @@ special_init_03 = {
 	
 	planet = {
 		class = "pc_continental"
-		orbit_distance = 25
+		orbit_distance = 20
 		orbit_angle = 120
 		size = 20
 		has_ring = no
@@ -905,9 +761,8 @@ special_init_03 = {
 						portrait = "human"
 						homeworld = THIS
 						traits = {
-							trait = "trait_adaptive"
-							trait = "trait_nomadic"	
-							trait = "trait_wasteful"
+							trait = "trait_quick_learners"
+							trait = "trait_nomadic"
 						}
 					}
 					create_country = {
@@ -1019,7 +874,7 @@ special_init_03 = {
 							set_owner = last_created_country
 							create_ship = {
 								name = "NAME_ISS_II"
-								design = "NAME_Space_Station"
+								design = "Space Station"
 							}
 							set_location = PREV
 						}
@@ -1081,9 +936,9 @@ special_init_03 = {
 						class = "HUM"
 						portrait = "human"
 						traits = {
-							trait = "trait_adaptive"
-							trait = "trait_nomadic"	
-							trait = "trait_wasteful"
+							trait = "trait_quick_learners"
+							trait = "trait_nomadic"
+							#ideal_planet_class = "pc_continental"
 						}
 						homeworld = this
 					}
@@ -1158,31 +1013,31 @@ special_init_03 = {
 						}				
 					}					
 					create_army = {
-						name = "NAME_German_Wehrmacht"
+						name = "German Wehrmacht"
 						owner = last_created
 						species = last_created
 						type = "industrial_army"
 					}
 					create_army = {
-						name = "NAME_Soviet_Red_Army"
+						name = "Soviet Red Army"
 						owner = last_created
 						species = last_created
 						type = "industrial_army"
 					}
 					create_army = {
-						name = "NAME_US_Armed_Forces"
+						name = "US Armed Forces"
 						owner = last_created
 						species = last_created
 						type = "industrial_army"
 					}
 					create_army = {
-						name = "NAME_British_Armed_Forces"
+						name = "British Armed Forces"
 						owner = last_created
 						species = last_created
 						type = "industrial_army"
 					}
 					create_army = {
-						name = "NAME_Imperial_Japanese_Forces"
+						name = "Imperial Japanese Forces"
 						owner = last_created
 						species = last_created
 						type = "industrial_army"
@@ -1237,21 +1092,20 @@ special_init_03 = {
 						}
 					}
 					last_created_country = {
-						capital_scope = { set_name = "NAME_Sol_III" }
+						capital_scope = { set_name = "Sol III" }
 					}
 				}
 				# Medieval
 				25 = {
 					create_species = {
-						name = NAME_Human
-						plural = NAME_Humans
+						name = Human
+						plural = Humans
 						class = "HUM"
 						portrait = "human"
 						homeworld = THIS
 						traits = {
-							trait = "trait_adaptive"
-							trait = "trait_nomadic"	
-							trait = "trait_wasteful"
+							trait = "trait_quick_learners"
+							trait = "trait_nomadic"
 						}
 					}
 					create_country = {
@@ -1300,7 +1154,7 @@ special_init_03 = {
 					while = {
 						count = 3
 						create_army = {
-							name = "NAME_Feudal_Levies"
+							name = "Feudal Levies"
 							owner = last_created
 							species = last_created
 							type = "primitive_army"
@@ -1340,7 +1194,7 @@ special_init_03 = {
 						}
 					}
 					last_created_country = {
-						capital_scope = { set_name = "NAME_Sol_III" }
+						capital_scope = { set_name = "Sol III" }
 					}
 				}
 			}
@@ -1358,7 +1212,7 @@ special_init_03 = {
 	
 	planet = {
 		class = "pc_barren"
-		orbit_distance = 25
+		orbit_distance = 20
 		orbit_angle = 60
 		size = 15
 		has_ring = no
@@ -1367,7 +1221,7 @@ special_init_03 = {
 	
 	planet = {
 		class = "pc_asteroid"
-		orbit_distance = 30
+		orbit_distance = 20
 		orbit_angle = -210
 		size = 5
 		has_ring = no
@@ -1399,7 +1253,7 @@ special_init_03 = {
 	
 	planet = {
 		class = "pc_gas_giant"
-		orbit_distance = 40
+		orbit_distance = 30
 		orbit_angle = -160
 		size = 35
 		has_ring = no
@@ -1438,7 +1292,7 @@ special_init_03 = {
 	
 	planet = {
 		class = "pc_gas_giant"
-		orbit_distance = 25
+		orbit_distance = 20
 		orbit_angle = 170
 		size = 30
 		has_ring = yes
@@ -1456,7 +1310,7 @@ special_init_03 = {
 	
 	planet = {
 		class = "pc_gas_giant"
-		orbit_distance = 25
+		orbit_distance = 20
 		orbit_angle = 125
 		size = 20
 		has_ring = no
@@ -1465,7 +1319,7 @@ special_init_03 = {
 	
 	planet = {
 		class = "pc_gas_giant"
-		orbit_distance = 25
+		orbit_distance = 20
 		orbit_angle = -195
 		size = 20
 		has_ring = no
@@ -1486,7 +1340,7 @@ special_init_03 = {
 special_init_04 = {
 	name = "NAME_Sol"
 	class = "sc_g"
-	asteroids_distance = 140
+	asteroids_distance = 120
 
 	flags = { nuked_sol sol }
 	
@@ -1509,7 +1363,7 @@ special_init_04 = {
 	
 	planet = {
 		class = "pc_toxic"
-		orbit_distance = 25
+		orbit_distance = 20
 		orbit_angle = 125
 		size = 20
 		has_ring = no
@@ -1517,7 +1371,7 @@ special_init_04 = {
 	
 	planet = {
 		class = "pc_nuked"
-		orbit_distance = 25
+		orbit_distance = 20
 		orbit_angle = 120
 		size = 20
 		has_ring = no
@@ -1535,7 +1389,7 @@ special_init_04 = {
 	
 	planet = {
 		class = "pc_barren"
-		orbit_distance = 25
+		orbit_distance = 20
 		orbit_angle = 60
 		size = 15
 		has_ring = no
@@ -1544,7 +1398,7 @@ special_init_04 = {
 	
 	planet = {
 		class = "pc_asteroid"
-		orbit_distance = 30
+		orbit_distance = 20
 		orbit_angle = -210
 		size = 5
 		has_ring = no
@@ -1576,7 +1430,7 @@ special_init_04 = {
 	
 	planet = {
 		class = "pc_gas_giant"
-		orbit_distance = 40
+		orbit_distance = 30
 		orbit_angle = -160
 		size = 35
 		has_ring = no
@@ -1615,7 +1469,7 @@ special_init_04 = {
 	
 	planet = {
 		class = "pc_gas_giant"
-		orbit_distance = 25
+		orbit_distance = 20
 		orbit_angle = 170
 		size = 30
 		has_ring = yes
@@ -1633,7 +1487,7 @@ special_init_04 = {
 	
 	planet = {
 		class = "pc_gas_giant"
-		orbit_distance = 25
+		orbit_distance = 20
 		orbit_angle = 125
 		size = 20
 		has_ring = no
@@ -1642,7 +1496,7 @@ special_init_04 = {
 	
 	planet = {
 		class = "pc_gas_giant"
-		orbit_distance = 25
+		orbit_distance = 20
 		orbit_angle = -195
 		size = 20
 		has_ring = no
@@ -1664,7 +1518,6 @@ special_init_06 = {
 	class = "rl_standard_stars"
 	asteroids_distance = 150
 	usage = misc_system_init
-	usage_odds = 2000000
 	max_instances = 1
 	scaled_spawn_chance = 3	# scales by galaxy size (1000 stars = 10x base)
 	
@@ -1690,7 +1543,7 @@ special_init_06 = {
 	}
 	
 	planet = {
-		name = NAME_Zanaam
+		name = Zanaam
 		count = 1
 		orbit_distance = 30
 		class = "pc_gaia"
@@ -1704,118 +1557,113 @@ special_init_06 = {
 				set_building = "building_zanaam_obelisk"
 			}
 			create_country = {
-				name = "NAME_Guardians_of_Zanaam"
+				name = "Guardians of Zanaam"
 				type = faction
 			}
 			last_created_country = {
 				set_country_flag = zanaam_country
 				create_fleet = {
-					name = "NAME_Guardians_of_Zanaam"
-					settings = { spawn_debris = no }
+					name = "NAME_Guardians of_Zanaam"
 					effect = {
 						set_owner = PREV
-						set_fleet_flag = zanaam_fleet						
+						set_fleet_flag = zanaam_fleet
 						create_ship = {
 							name = "NAME_Defensive_Alpha"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Beta"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Gamma"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Delta"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Epsilon"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Zeta"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Eta"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Theta"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Iota"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Kappa"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Lambda"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Mu"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Nu"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Ksi"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Omicron"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Pi"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Rho"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Sigma"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Tau"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Upsilon"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Phi"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}							
 						create_ship = {
 							name = "NAME_Defensive_Chi"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Psi"
-							design = "NAME_Guardian"
+							design = "Guardian"
 						}
 						create_ship = {
 							name = "NAME_Defensive_Omega"
-							design = "NAME_Guardian"
-						}									
+							design = "Guardian"
+						}					
 						set_location = event_target:zanaam_planet
-						add_modifier = {
-							modifier = sanctuary_power
-							days = -1
-						}							
 					}
 				}
 			}
@@ -1873,19 +1721,19 @@ special_init_07 = {
 		
 		init_effect = {
 			create_country = {
-				name = "NAME_Shardlings"
+				name = "Shardlings"
 				type = faction
 			}
 			last_created_country = {
 				create_fleet = {
-					name = "NAME_Shards_of_Obsidian"
+					name = "NAME_Shards of_Obsidian"
 					effect = {
 						set_owner = PREV
 						while = {
 							count = 10
 							create_ship = {
 								name = "NAME_Shardling"
-								design = "NAME_Small_Crystal_Entity_Blue"
+								design = "Small Crystal Entity Blue"
 							}
 						}
 						set_location = {
@@ -1896,14 +1744,14 @@ special_init_07 = {
 					}
 				}
 				create_fleet = {
-					name = "NAME_Shards_of_Diamond"
+					name = "NAME_Shards of_Diamond"
 					effect = {
 						set_owner = PREV
 						while = {
 							count = 10
 							create_ship = {
 								name = "NAME_Shardling"
-								design = "NAME_Small_Crystal_Entity_Blue"
+								design = "Small Crystal Entity Blue"
 							}
 						}
 						set_location = {
@@ -1914,14 +1762,14 @@ special_init_07 = {
 					}
 				}
 				create_fleet = {
-					name = "NAME_Shards_of_Onyx"
+					name = "NAME_Shards of_Onyx"
 					effect = {
 						set_owner = PREV
 						while = {
 							count = 10
 							create_ship = {
 								name = "NAME_Shardling"
-								design = "NAME_Small_Crystal_Entity_Blue"
+								design = "Small Crystal Entity Blue"
 							}
 						}
 						set_location = {
@@ -1932,14 +1780,14 @@ special_init_07 = {
 					}
 				}
 				create_fleet = {
-					name = "NAME_Shards_of_Sapphire"
+					name = "NAME_Shards of_Sapphire"
 					effect = {
 						set_owner = PREV
 						while = {
 							count = 10
 							create_ship = {
 								name = "NAME_Shardling"
-								design = "NAME_Small_Crystal_Entity_Blue"
+								design = "Small Crystal Entity Blue"
 							}
 						}
 						set_location = {
@@ -2090,7 +1938,7 @@ sanctuary_system = {
 		
 		init_effect = {
 			create_country = {
-				name = "NAME_Sanctuary"
+				name = "Sanctuary"
 				type = faction
 			}
 			last_created_country = {
@@ -2102,7 +1950,7 @@ sanctuary_system = {
 						set_owner = event_target:sanctuary
 						create_ship = {
 							name = "NAME_Administrator"
-							design = "NAME_Sanctuary_Core"
+							design = "Sanctuary Core"
 							graphical_culture = "fallen_empire_03"
 						}
 						set_location = {
@@ -2124,7 +1972,7 @@ sanctuary_system = {
 						set_owner = event_target:sanctuary
 						create_ship = {
 							name = random
-							design = "NAME_Defensive_A_2"
+							design = "Defensive A-2"
 							graphical_culture = "fallen_empire_03"
 						}
 						set_location = {
@@ -2140,7 +1988,7 @@ sanctuary_system = {
 						set_owner = event_target:sanctuary
 						create_ship = {
 							name = random
-							design = "NAME_Defensive_A_2"
+							design = "Defensive A-2"
 							graphical_culture = "fallen_empire_03"
 						}
 						set_location = {
@@ -2156,7 +2004,7 @@ sanctuary_system = {
 						set_owner = event_target:sanctuary
 						create_ship = {
 							name = random
-							design = "NAME_Defensive_A_2"
+							design = "Defensive A-2"
 							graphical_culture = "fallen_empire_03"
 						}
 						set_location = {
@@ -2172,7 +2020,7 @@ sanctuary_system = {
 						set_owner = event_target:sanctuary
 						create_ship = {
 							name = random
-							design = "NAME_Defensive_A_2"
+							design = "Defensive A-2"
 							graphical_culture = "fallen_empire_03"
 						}
 						set_location = {
@@ -2206,7 +2054,7 @@ sanctuary_system = {
 						set_owner = event_target:sanctuary
 						create_ship = {
 							name = random
-							design = "NAME_Defensive_A_1"
+							design = "Defensive A-1"
 							graphical_culture = "fallen_empire_03"
 						}
 						set_location = {
@@ -2290,7 +2138,7 @@ sanctuary_system = {
 					20 = { 
 						set_country_flag = steam_age 
 						set_primitive_age = steam_age
-					}
+					}	
 				}
 			}
 			set_owner = last_created_country
@@ -2465,7 +2313,7 @@ sanctuary_system = {
 					limit = { has_country_flag = stone_age }
 					PREV = {
 						create_army = {
-							name = "NAME_Primitive_Army"
+							name = "Primitive Army"
 							owner = last_created
 							species = last_created
 							type = "primitive_army"
@@ -2477,7 +2325,7 @@ sanctuary_system = {
 					limit = { has_country_flag = bronze_age }
 					PREV = {
 						create_army = {
-							name = "NAME_Primitive_Army"
+							name = "Primitive Army"
 							owner = last_created
 							species = last_created
 							type = "primitive_army"
@@ -2491,7 +2339,7 @@ sanctuary_system = {
 						while = {
 							count = 2
 							create_army = {
-								name = "NAME_Primitive_Army"
+								name = "Primitive Army"
 								owner = last_created
 								species = last_created
 								type = "primitive_army"
@@ -2506,7 +2354,7 @@ sanctuary_system = {
 						while = {
 							count = 3
 							create_army = {
-								name = "NAME_Primitive_Army"
+								name = "Primitive Army"
 								owner = last_created
 								species = last_created
 								type = "primitive_army"
@@ -2521,7 +2369,7 @@ sanctuary_system = {
 						while = {
 							count = 4
 							create_army = {
-								name = "Primitive_Army"
+								name = "Primitive Army"
 								owner = last_created
 								species = last_created
 								type = "primitive_army"
@@ -2536,7 +2384,7 @@ sanctuary_system = {
 						while = {
 							count = 3
 							create_army = {
-								name = "NAME_Industrial_Army"
+								name = "Industrial Army"
 								owner = last_created
 								species = last_created
 								type = "industrial_army"
@@ -2562,7 +2410,7 @@ sanctuary_system = {
 						set_owner = event_target:sanctuary
 						create_ship = {
 							name = random
-							design = "NAME_Defensive_A_2"
+							design = "Defensive A-2"
 							graphical_culture = "fallen_empire_03"
 						}
 						set_location = PREVPREV
@@ -2585,7 +2433,7 @@ sanctuary_system = {
 						set_owner = event_target:sanctuary
 						create_ship = {
 							name = random
-							design = "NAME_Defensive_A_2"
+							design = "Defensive A-2"
 							graphical_culture = "fallen_empire_03"
 						}
 						set_location = PREVPREV
@@ -2612,7 +2460,7 @@ sanctuary_system = {
 						set_owner = event_target:sanctuary
 						create_ship = {
 							name = random
-							design = "NAME_Defensive_A_1"
+							design = "Defensive A-1"
 							graphical_culture = "fallen_empire_03"
 						}
 						set_location = {
@@ -2663,7 +2511,7 @@ sanctuary_system = {
 			}
 			last_created_country = {
 				random_list = {
-					20 = {
+					20 = { 
 						set_country_flag = stone_age 
 						set_primitive_age = stone_age
 						change_government = {
@@ -2674,7 +2522,7 @@ sanctuary_system = {
 							}
 						}
 					}				
-					20 = {
+					20 = { 
 						set_country_flag = bronze_age 
 						set_primitive_age = bronze_age
 						change_government = {
@@ -2684,102 +2532,22 @@ sanctuary_system = {
 								civic = civic_the_wheel
 							}
 						}
-						change_country_flag = {
-							icon = {
-								category = "special"
-								file = "primitive.dds"
-							}
-							background= {
-								category = "backgrounds"
-								file = "new_dawn.dds"
-							}
-							colors={
-								"green"
-								"dark_green"
-								"null"
-								"null"
-							}
-						}
 					}
-					20 = {
+					20 = { 
 						set_country_flag = iron_age 
 						set_primitive_age = iron_age
-						change_country_flag = {
-							icon = {
-								category = "special"
-								file = "primitive.dds"
-							}
-							background= {
-								category = "backgrounds"
-								file = "new_dawn.dds"
-							}
-							colors={
-								"purple"
-								"dark_purple"
-								"null"
-								"null"
-							}
-						}
 					}
-					20 = {
+					20 = { 
 						set_country_flag = late_medieval_age 
 						set_primitive_age = late_medieval_age
-						change_country_flag = {
-							icon = {
-								category = "special"
-								file = "primitive.dds"
-							}
-							background= {
-								category = "backgrounds"
-								file = "new_dawn.dds"
-							}
-							colors={
-								"light_blue"
-								"blue"
-								"null"
-								"null"
-							}
-						}
 					}
-					20 = {
+					20 = { 
 						set_country_flag = renaissance_age 
 						set_primitive_age = renaissance_age
-						change_country_flag = {
-							icon = {
-								category = "special"
-								file = "primitive.dds"
-							}
-							background= {
-								category = "backgrounds"
-								file = "new_dawn.dds"
-							}
-							colors={
-								"pink"
-								"burgundy"
-								"null"
-								"null"
-							}
-						}
 					}
-					20 = {
+					20 = { 
 						set_country_flag = steam_age 
 						set_primitive_age = steam_age
-						change_country_flag = {
-							icon = {
-								category = "special"
-								file = "primitive.dds"
-							}
-							background= {
-								category = "backgrounds"
-								file = "new_dawn.dds"
-							}
-							colors={
-								"orange"
-								"red"
-								"null"
-								"null"
-							}
-						}
 					}
 				}
 			}
@@ -2955,7 +2723,7 @@ sanctuary_system = {
 					limit = { has_country_flag = stone_age }
 					PREV = {
 						create_army = {
-							name = "NAME_Primitive_Army"
+							name = "Primitive Army"
 							owner = last_created
 							species = last_created
 							type = "primitive_army"
@@ -2967,7 +2735,7 @@ sanctuary_system = {
 					limit = { has_country_flag = bronze_age }
 					PREV = {
 						create_army = {
-							name = "NAME_Primitive_Army"
+							name = "Primitive Army"
 							owner = last_created
 							species = last_created
 							type = "primitive_army"
@@ -2981,7 +2749,7 @@ sanctuary_system = {
 						while = {
 							count = 2
 							create_army = {
-								name = "NAME_Primitive_Army"
+								name = "Primitive Army"
 								owner = last_created
 								species = last_created
 								type = "primitive_army"
@@ -2996,7 +2764,7 @@ sanctuary_system = {
 						while = {
 							count = 3
 							create_army = {
-								name = "NAME_Primitive_Army"
+								name = "Primitive Army"
 								owner = last_created
 								species = last_created
 								type = "primitive_army"
@@ -3011,7 +2779,7 @@ sanctuary_system = {
 						while = {
 							count = 4
 							create_army = {
-								name = "NAME_Primitive_Army"
+								name = "Primitive Army"
 								owner = last_created
 								species = last_created
 								type = "primitive_army"
@@ -3026,7 +2794,7 @@ sanctuary_system = {
 						while = {
 							count = 3
 							create_army = {
-								name = "NAME_Industrial_Army"
+								name = "Industrial Army"
 								owner = last_created
 								species = last_created
 								type = "industrial_army"
@@ -3052,7 +2820,7 @@ sanctuary_system = {
 						set_owner = event_target:sanctuary
 						create_ship = {
 							name = random
-							design = "NAME_Defensive_A_2"
+							design = "Defensive A-2"
 							graphical_culture = "fallen_empire_03"
 						}
 						set_location = PREVPREV
@@ -3075,7 +2843,7 @@ sanctuary_system = {
 						set_owner = event_target:sanctuary
 						create_ship = {
 							name = random
-							design = "NAME_Defensive_A_2"
+							design = "Defensive A-2"
 							graphical_culture = "fallen_empire_03"
 						}
 						set_location = PREVPREV
@@ -3102,7 +2870,7 @@ sanctuary_system = {
 						set_owner = event_target:sanctuary
 						create_ship = {
 							name = random
-							design = "NAME_Defensive_A_1"
+							design = "Defensive A-1"
 							graphical_culture = "fallen_empire_03"
 						}
 						set_location = {
@@ -3153,7 +2921,7 @@ sanctuary_system = {
 			}
 			last_created_country = {
 				random_list = {
-					20 = {
+					20 = { 
 						set_country_flag = stone_age 
 						set_primitive_age = stone_age
 						change_government = {
@@ -3164,7 +2932,7 @@ sanctuary_system = {
 							}
 						}
 					}				
-					20 = {
+					20 = { 
 						set_country_flag = bronze_age 
 						set_primitive_age = bronze_age
 						change_government = {
@@ -3174,103 +2942,23 @@ sanctuary_system = {
 								civic = civic_the_wheel
 							}
 						}
-						change_country_flag = {
-							icon = {
-								category = "special"
-								file = "primitive.dds"
-							}
-							background= {
-								category = "backgrounds"
-								file = "new_dawn.dds"
-							}
-							colors={
-								"green"
-								"dark_green"
-								"null"
-								"null"
-							}
-						}
 					}
-					20 = {
+					20 = { 
 						set_country_flag = iron_age 
 						set_primitive_age = iron_age
-						change_country_flag = {
-							icon = {
-								category = "special"
-								file = "primitive.dds"
-							}
-							background= {
-								category = "backgrounds"
-								file = "new_dawn.dds"
-							}
-							colors={
-								"purple"
-								"dark_purple"
-								"null"
-								"null"
-							}
-						}
 					}
-					20 = {
+					20 = { 
 						set_country_flag = late_medieval_age 
 						set_primitive_age = late_medieval_age
-						change_country_flag = {
-							icon = {
-								category = "special"
-								file = "primitive.dds"
-							}
-							background= {
-								category = "backgrounds"
-								file = "new_dawn.dds"
-							}
-							colors={
-								"light_blue"
-								"blue"
-								"null"
-								"null"
-							}
-						}
 					}
-					20 = {
+					20 = { 
 						set_country_flag = renaissance_age 
 						set_primitive_age = renaissance_age
-						change_country_flag = {
-							icon = {
-								category = "special"
-								file = "primitive.dds"
-							}
-							background= {
-								category = "backgrounds"
-								file = "new_dawn.dds"
-							}
-							colors={
-								"pink"
-								"burgundy"
-								"null"
-								"null"
-							}
-						}
 					}
-					20 = {
+					20 = { 
 						set_country_flag = steam_age 
 						set_primitive_age = steam_age
-						change_country_flag = {
-							icon = {
-								category = "special"
-								file = "primitive.dds"
-							}
-							background= {
-								category = "backgrounds"
-								file = "new_dawn.dds"
-							}
-							colors={
-								"orange"
-								"red"
-								"null"
-								"null"
-							}
-						}
-					}
+					}	
 				}
 			}
 			set_owner = last_created_country
@@ -3445,7 +3133,7 @@ sanctuary_system = {
 					limit = { has_country_flag = stone_age }
 					PREV = {
 						create_army = {
-							name = "NAME_Primitive_Army"
+							name = "Primitive Army"
 							owner = last_created
 							species = last_created
 							type = "primitive_army"
@@ -3457,7 +3145,7 @@ sanctuary_system = {
 					limit = { has_country_flag = bronze_age }
 					PREV = {
 						create_army = {
-							name = "NAME_Primitive_Army"
+							name = "Primitive Army"
 							owner = last_created
 							species = last_created
 							type = "primitive_army"
@@ -3471,7 +3159,7 @@ sanctuary_system = {
 						while = {
 							count = 2
 							create_army = {
-								name = "NAME_Primitive_Army"
+								name = "Primitive Army"
 								owner = last_created
 								species = last_created
 								type = "primitive_army"
@@ -3486,7 +3174,7 @@ sanctuary_system = {
 						while = {
 							count = 3
 							create_army = {
-								name = "NAME_Primitive_Army"
+								name = "Primitive Army"
 								owner = last_created
 								species = last_created
 								type = "primitive_army"
@@ -3501,7 +3189,7 @@ sanctuary_system = {
 						while = {
 							count = 4
 							create_army = {
-								name = "NAME_Primitive_Army"
+								name = "Primitive Army"
 								owner = last_created
 								species = last_created
 								type = "primitive_army"
@@ -3516,7 +3204,7 @@ sanctuary_system = {
 						while = {
 							count = 3
 							create_army = {
-								name = "NAME_Industrial_Army"
+								name = "Industrial Army"
 								owner = last_created
 								species = last_created
 								type = "industrial_army"
@@ -3542,7 +3230,7 @@ sanctuary_system = {
 						set_owner = event_target:sanctuary
 						create_ship = {
 							name = random
-							design = "NAME_Defensive_A_2"
+							design = "Defensive A-2"
 							graphical_culture = "fallen_empire_03"
 						}
 						set_location = PREVPREV
@@ -3582,7 +3270,7 @@ sanctuary_system = {
 						set_owner = event_target:sanctuary
 						create_ship = {
 							name = random
-							design = "NAME_Defensive_A_1"
+							design = "Defensive A-1"
 							graphical_culture = "fallen_empire_03"
 						}
 						set_location = {
@@ -3633,7 +3321,7 @@ sanctuary_system = {
 			}
 			last_created_country = {
 				random_list = {
-					20 = {
+					20 = { 
 						set_country_flag = stone_age 
 						set_primitive_age = stone_age
 						change_government = {
@@ -3644,7 +3332,7 @@ sanctuary_system = {
 							}
 						}
 					}				
-					20 = {
+					20 = { 
 						set_country_flag = bronze_age 
 						set_primitive_age = bronze_age
 						change_government = {
@@ -3654,103 +3342,23 @@ sanctuary_system = {
 								civic = civic_the_wheel
 							}
 						}
-						change_country_flag = {
-							icon = {
-								category = "special"
-								file = "primitive.dds"
-							}
-							background= {
-								category = "backgrounds"
-								file = "new_dawn.dds"
-							}
-							colors={
-								"green"
-								"dark_green"
-								"null"
-								"null"
-							}
-						}
 					}
-					20 = {
+					20 = { 
 						set_country_flag = iron_age 
 						set_primitive_age = iron_age
-						change_country_flag = {
-							icon = {
-								category = "special"
-								file = "primitive.dds"
-							}
-							background= {
-								category = "backgrounds"
-								file = "new_dawn.dds"
-							}
-							colors={
-								"purple"
-								"dark_purple"
-								"null"
-								"null"
-							}
-						}
 					}
-					20 = {
+					20 = { 
 						set_country_flag = late_medieval_age 
 						set_primitive_age = late_medieval_age
-						change_country_flag = {
-							icon = {
-								category = "special"
-								file = "primitive.dds"
-							}
-							background= {
-								category = "backgrounds"
-								file = "new_dawn.dds"
-							}
-							colors={
-								"light_blue"
-								"blue"
-								"null"
-								"null"
-							}
-						}
 					}
-					20 = {
+					20 = { 
 						set_country_flag = renaissance_age 
 						set_primitive_age = renaissance_age
-						change_country_flag = {
-							icon = {
-								category = "special"
-								file = "primitive.dds"
-							}
-							background= {
-								category = "backgrounds"
-								file = "new_dawn.dds"
-							}
-							colors={
-								"pink"
-								"burgundy"
-								"null"
-								"null"
-							}
-						}
 					}
-					20 = {
+					20 = { 
 						set_country_flag = steam_age 
 						set_primitive_age = steam_age
-						change_country_flag = {
-							icon = {
-								category = "special"
-								file = "primitive.dds"
-							}
-							background= {
-								category = "backgrounds"
-								file = "new_dawn.dds"
-							}
-							colors={
-								"orange"
-								"red"
-								"null"
-								"null"
-							}
-						}
-					}
+					}				
 				}
 			}
 			set_owner = last_created_country
@@ -3925,7 +3533,7 @@ sanctuary_system = {
 					limit = { has_country_flag = stone_age }
 					PREV = {
 						create_army = {
-							name = "NAME_Primitive_Army"
+							name = "Primitive Army"
 							owner = last_created
 							species = last_created
 							type = "primitive_army"
@@ -3937,7 +3545,7 @@ sanctuary_system = {
 					limit = { has_country_flag = bronze_age }
 					PREV = {
 						create_army = {
-							name = "NAME_Primitive_Army"
+							name = "Primitive Army"
 							owner = last_created
 							species = last_created
 							type = "primitive_army"
@@ -3951,7 +3559,7 @@ sanctuary_system = {
 						while = {
 							count = 2
 							create_army = {
-								name = "NAME_Primitive_Army"
+								name = "Primitive Army"
 								owner = last_created
 								species = last_created
 								type = "primitive_army"
@@ -3966,7 +3574,7 @@ sanctuary_system = {
 						while = {
 							count = 3
 							create_army = {
-								name = "NAME_Primitive_Army"
+								name = "Primitive Army"
 								owner = last_created
 								species = last_created
 								type = "primitive_army"
@@ -3981,7 +3589,7 @@ sanctuary_system = {
 						while = {
 							count = 4
 							create_army = {
-								name = "NAME_Primitive_Army"
+								name = "Primitive Army"
 								owner = last_created
 								species = last_created
 								type = "primitive_army"
@@ -3996,7 +3604,7 @@ sanctuary_system = {
 						while = {
 							count = 3
 							create_army = {
-								name = "NAME_Industrial_Army"
+								name = "Industrial Army"
 								owner = last_created
 								species = last_created
 								type = "industrial_army"
@@ -4022,7 +3630,7 @@ sanctuary_system = {
 						set_owner = event_target:sanctuary
 						create_ship = {
 							name = random
-							design = "NAME_Defensive_A_2"
+							design = "Defensive A-2"
 							graphical_culture = "fallen_empire_03"
 						}
 						set_location = PREVPREV
@@ -4045,7 +3653,7 @@ sanctuary_system = {
 						set_owner = event_target:sanctuary
 						create_ship = {
 							name = random
-							design = "NAME_Defensive_A_2"
+							design = "Defensive A-2"
 							graphical_culture = "fallen_empire_03"
 						}
 						set_location = PREVPREV
@@ -4151,7 +3759,7 @@ com_sol_system = {
 	name = "NAME_Sol"
 	
 	class = "sc_g"
-	asteroids_distance = 140
+	asteroids_distance = 120
 	flags = { sol_system com_sol sol }
 	
 	planet = {
@@ -4175,7 +3783,7 @@ com_sol_system = {
 	planet = {
 		name = "NAME_Venus"
 		class = "pc_toxic"
-		orbit_distance = 25
+		orbit_distance = 20
 		orbit_angle = 125
 		size = 20
 		has_ring = no
@@ -4184,7 +3792,7 @@ com_sol_system = {
 	planet = {
 		name = "NAME_Earth"
 		class = "pc_continental"
-		orbit_distance = 25
+		orbit_distance = 20
 		orbit_angle = 120
 		size = 16
 		starting_planet = yes
@@ -4350,7 +3958,7 @@ com_sol_system = {
 				owner_species = { save_event_target_as = human_species }
 			}
 			create_country = {
-				name = "NAME_United_Nations_of_Earth"
+				name = "United Nations of Earth"
 				authority = auth_democratic
 				civics = {
 					civic = civic_beacon_of_liberty
@@ -4417,7 +4025,7 @@ com_sol_system = {
 	planet = {
 		name = "NAME_Mars"
 		class = "pc_barren"
-		orbit_distance = 25
+		orbit_distance = 20
 		orbit_angle = 60
 		size = 15
 		has_ring = no
@@ -4434,7 +4042,7 @@ com_sol_system = {
 	planet = {
 		name = "NAME_1_Ceres"
 		class = "pc_asteroid"
-		orbit_distance = 30
+		orbit_distance = 20
 		orbit_angle = -210
 		size = 5
 		has_ring = no
@@ -4470,7 +4078,7 @@ com_sol_system = {
 	planet = {
 		name = "NAME_Jupiter"
 		class = "pc_gas_giant"
-		orbit_distance = 40
+		orbit_distance = 30
 		orbit_angle = -160
 		size = 35
 		has_ring = no
@@ -4514,7 +4122,7 @@ com_sol_system = {
 	planet = {
 		name = "NAME_Saturn"
 		class = "pc_gas_giant"
-		orbit_distance = 25
+		orbit_distance = 20
 		orbit_angle = 170
 		size = 30
 		has_ring = yes
@@ -4534,7 +4142,7 @@ com_sol_system = {
 	planet = {
 		name = "NAME_Uranus"
 		class = "pc_gas_giant"
-		orbit_distance = 25
+		orbit_distance = 20
 		orbit_angle = 125
 		size = 20
 		has_ring = no
@@ -4544,7 +4152,7 @@ com_sol_system = {
 	planet = {
 		name = "NAME_Neptune"
 		class = "pc_gas_giant"
-		orbit_distance = 25
+		orbit_distance = 20
 		orbit_angle = -195
 		size = 20
 		has_ring = no
@@ -4820,7 +4428,7 @@ sentinel_system = {
 				homeworld = this
 			}
 			create_country = {
-				name = "NAME_Sentinels"
+				name = "Sentinels"
 				type = sentinels
 				authority = "auth_oligarchic"
 				civics = {
@@ -4898,7 +4506,7 @@ sentinel_system = {
 					create_pop = { species = last_created }
 				}
 			}
-			set_name = "NAME_Sentinel_Alpha"
+			set_name = "Sentinel_Alpha"
 			create_army = {
 				name = random
 				owner = last_created_country
@@ -4920,7 +4528,7 @@ sentinel_system = {
 					set_owner = last_created_country
 					create_ship = {
 						name = "NAME_Sentinel_Base"
-						design = "NAME_Vigil"
+						design = "Vigil"
 					}
 					set_location = {
 						target = PREV
@@ -4934,7 +4542,7 @@ sentinel_system = {
 					set_owner = last_created_country
 					create_ship = {
 						name = "NAME_Fortress_G-12"
-						design = "NAME_Sentinel_1"
+						design = "Sentinel-1"
 						graphical_culture = "mammalian_01"
 					}
 					set_location = {
@@ -4949,7 +4557,7 @@ sentinel_system = {
 					set_owner = last_created_country
 					create_ship = {
 						name = "NAME_Fortress_A-59"
-						design = "NAME_Omega"
+						design = "Omega"
 						graphical_culture = "fallen_empire_01"
 					}
 					set_location = {
@@ -4971,11 +4579,11 @@ sentinel_system = {
 				}
 			}
 			create_fleet = {
-				name = "NAME_Sentinel_Battle_Fleet"
+				name = "NAME_Sentinel Battle_Fleet"
 				effect = {
 					set_owner = last_created_country
 					create_ship_design = {
-						design = "NAME_Starfang"
+						design = "Starfang"
 						ftl = root
 					}
 					while = {
@@ -4986,7 +4594,7 @@ sentinel_system = {
 						}
 					}
 					create_ship_design = {
-						design = "NAME_Voidstalker"
+						design = "Voidstalker"
 						ftl = root
 					}
 					while = {
@@ -4997,7 +4605,7 @@ sentinel_system = {
 						}
 					}
 					create_ship_design = {
-						design = "NAME_Judgment"
+						design = "Judgment"
 						ftl = root
 					}
 					while = {
@@ -5027,8 +4635,8 @@ sentinel_system = {
 				effect = {
 					set_owner = last_created_country
 					create_ship = {
-						name = "NAME_Early_Warning_X-34"
-						design = "NAME_Sentry"
+						name = "NAME_Early Warning_X-34"
+						design = "Sentry"
 					}
 					set_location = {
 						target = PREV
@@ -5048,8 +4656,8 @@ sentinel_system = {
 				effect = {
 					set_owner = last_created_country
 					create_ship = {
-						name = "NAME_Refugee_Site_Alpha"
-						design = "NAME_PR_417"
+						name = "NAME_Refugee Site_Alpha"
+						design = "PR-417"
 						graphical_culture = "pirate_01"
 					}
 					set_location = {
@@ -5065,27 +4673,27 @@ sentinel_system = {
 					set_owner = last_created_country
 					create_ship = {
 						name = "NAME_Gray_Moon"
-						design = "NAME_C1"
+						design = "C1"
 						effect = { set_disabled = yes }
 					}
 					create_ship = {
 						name = "NAME_Princess_Kolos"
-						design = "NAME_C1"
+						design = "C1"
 						effect = { set_disabled = yes }
 					}
 					create_ship = {
 						name = "NAME_Kobyar_Miru"
-						design = "NAME_C2"
+						design = "C2"
 						effect = { set_disabled = yes }
 					}
 					create_ship = {
 						name = "NAME_Deep_Eyes"
-						design = "NAME_C2"
+						design = "C2"
 						effect = { set_disabled = yes }
 					}
 					create_ship = {
 						name = "NAME_Stellar_Queen"
-						design = "NAME_C2"
+						design = "C2"
 						effect = { set_disabled = yes }
 					}
 					set_location = {
@@ -5165,12 +4773,11 @@ crystal_manufactory_system = {
 
 # Trappist System
 trappist_initializer = {
-	name = "NAME_Trappist"
+	name = "Trappist"
 	class = "sc_m"
 	usage = misc_system_init
 	usage_odds = 2000000
 	max_instances = 1
-	scaled_spawn_chance = 10
 	
 	planet = {
 		class = "pc_m_star"

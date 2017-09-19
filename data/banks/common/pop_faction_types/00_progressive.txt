@@ -29,7 +29,6 @@ progressive = {
 	can_join_faction = {
 		is_enslaved = no
 		is_being_purged = no
-		has_culture_shock = no
 		NOT = { has_trait = trait_nerve_stapled }
 		OR = {
 			has_ethic = ethic_egalitarian
@@ -105,25 +104,18 @@ progressive = {
 
 		potential = {
 			exists = owner
-			owner = { has_encountered_other_species = yes }
 		}
 
 		trigger = {
 			owner = {
-				OR = {
-					AND = {
-						has_encountered_other_species = yes
-						has_policy_flag = core_worlds_all
-					}
-					has_encountered_other_species = no
-				}
-				NOT = {
+				NOR = {
+					has_policy_flag = resettlement_allowed
+					NOT = { has_policy_flag = core_worlds_all }
 					any_owned_pop = {
 						has_migration_control = yes
 						is_sentient = yes
 						NOT = { is_non_sentient_robot = yes }
 					}
-					has_policy_flag = resettlement_allowed
 				}
 			}
 		}
@@ -151,11 +143,10 @@ progressive = {
 	}
 
 	demand = {
-		title = "PROGRESSIVE_NO_CASTE"
-		unfulfilled_title = "PROGRESSIVE_CASTE"
-		desc = "PROGRESSIVE_NO_CASTE_DESC"
+		title = "PROGRESSIVE_SLAVERY_BANNED"
+		unfulfilled_title = "PROGRESSIVE_SLAVERY_ALLOWED"
+		desc = "PROGRESSIVE_SLAVERY_BANNED_DESC"
 
-		fulfilled_effect = 5
 		unfulfilled_effect = -15
 
 		potential = {
@@ -164,14 +155,7 @@ progressive = {
 
 		trigger = {
 			owner = {
-				NOT = {
-					any_owned_pop = {
-						has_citizenship_type = {
-							type = citizenship_caste_system
-							country = prev
-						}
-					}
-				}
+				allows_slavery = no
 			}
 		}
 	}
@@ -204,37 +188,38 @@ progressive = {
 		}
 	}
 
-	#demand = {
-	#	title = "PROGRESSIVE_SOCIAL_EQUALITY"
-	#	unfulfilled_title = "PROGRESSIVE_NO_SOCIAL_EQUALITY"
-	#	desc = "PROGRESSIVE_SOCIAL_EQUALITY_DESC"
-#
-	#	unfulfilled_effect = -10
-#
-	#	potential = {
-	#		exists = owner
-	#		owner = {
-	#			num_species > 1
-	#		}
-	#	}
-#
-	#	trigger = {
-	#		owner = {
-	#			NOT = {
-	#				any_owned_pop = {
-	#					NOR = {
-	#						is_sentient = no
-	#						is_robot_pop = yes
-	#						has_citizenship_type = {
-	#							country = root.owner
-	#							type = citizenship_full
-	#						}
-	#					}
-	#				}
-	#			}
-	#		}
-	#	}
-	#}
+	demand = {
+		title = "PROGRESSIVE_SOCIAL_EQUALITY"
+		unfulfilled_title = "PROGRESSIVE_NO_SOCIAL_EQUALITY"
+		desc = "PROGRESSIVE_SOCIAL_EQUALITY_DESC"
+
+		fulfilled_effect = 5
+		unfulfilled_effect = -10
+
+		potential = {
+			exists = owner
+			owner = {
+				num_species > 1
+			}
+		}
+
+		trigger = {
+			owner = {
+				NOT = {
+					any_owned_pop = {
+						NOR = {
+							is_sentient = no
+							is_robot_pop = yes
+							has_citizenship_type = {
+								country = root.owner
+								type = citizenship_full
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 	
 	on_create = {
 		pop_faction_event = { id = factions.1 }
@@ -272,7 +257,7 @@ progressive = {
 				custom_tooltip = {
 					fail_text = EMBRACE_FACTION_COOLDOWN
 					parameter:empire = {
-						NOT = { has_modifier = embraced_faction_timer }
+						NOT = { has_country_flag = embraced_faction }
 					}
 				}
 				support > 0.20
@@ -293,63 +278,18 @@ progressive = {
 				}
 				parameter:empire = {
 					shift_ethic = ethic_egalitarian
+					hidden_effect = { set_timed_country_flag = { flag = embraced_faction days = 7200 } }
 					hidden_effect = {
-						add_modifier = { modifier = embraced_faction_timer days = 3600 }
 						every_pop_faction = {
 							limit = { NOT = { is_same_value = root } }
 							add_modifier = { modifier = embraced_another_faction days = 3600 }
 						}
 					}
 				}
-				hidden_effect = {
-					save_event_target_as = TargetFaction
-					parameter:empire = {
-						every_relation = {
-							limit = {
-								is_ai = no
-								is_country_type = default			
-								has_communications = prev
-							}
-							country_event = { id = factions.2000 }
-						}
-					}				
-				}				
 			}
 			
 			ai_weight = {
-				base = 1
-				modifier = {
-					factor = 0
-					support < 0.50
-					owner = {
-						has_ethic = ethic_egalitarian
-					}
-				}
-				modifier = {
-					factor = 0
-					NOT = { 
-						owner = {
-							exists = ruler
-							ruler = {
-								leader_of_faction = progressive
-							}
-						}
-					}
-				}
-				modifier = {
-					factor = 0
-					owner = {
-						count_pop_factions = {
-							limit = {
-								NOR = {
-									is_pop_faction_type = democratic_election_faction_1
-									is_pop_faction_type = democratic_election_faction_2
-								}
-							}
-							count < 4
-						}					
-					}
-				}				
+				base = 0
 			}
 		}
 		promote_faction = {

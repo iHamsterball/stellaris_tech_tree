@@ -1081,9 +1081,8 @@ tech_space_defense_station_improvement = {
 	}
 	
 	weight_modifier = {
-		factor = 0.5
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			NOR = {
 				research_leader = {
 					area = engineering
@@ -1158,7 +1157,6 @@ tech_powered_exoskeletons = {
 	}
 	
 	ai_weight = {
-		factor = 2
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1207,12 +1205,12 @@ tech_mining_network_2 = {
 
 #Mining Network 3
 tech_mining_network_3 = {
-	cost = @tier2cost2
+	cost = @tier2cost1
 	area = engineering
 	tier = 2
 	category = { industry }
 	prerequisites = { "tech_mining_network_2" "tech_colonial_centralization" }
-	weight = @tier2weight2
+	weight = @tier2weight1
 	
 	modifier = {
 		max_minerals = 1000
@@ -1243,12 +1241,12 @@ tech_mining_network_3 = {
 
 #Mining Network 4
 tech_mining_network_4 = {
-	cost = @tier3cost2
+	cost = @tier2cost4
 	area = engineering
-	tier = 3
+	tier = 2
 	category = { industry }
 	prerequisites = { "tech_mining_network_3" "tech_galactic_administration" }
-	weight = @tier3weight2
+	weight = @tier2weight4
 	
 	modifier = {
 		max_minerals = 1000
@@ -1314,12 +1312,12 @@ tech_mineral_processing_1 = {
 
 #Advanced Mineral Processing
 tech_mineral_processing_2 = {
-	cost = @tier2cost2
+	cost = @tier2cost1
 	area = engineering
 	tier = 2
 	category = { industry }	
 	prerequisites = { "tech_mineral_processing_1" "tech_colonial_centralization" }
-	weight = @tier2weight2
+	weight = @tier2weight1
 		
 	# unlock mineral processing plant 2	
 	modifier = {
@@ -1401,12 +1399,12 @@ tech_engineering_lab_1 = {
 
 #Engineering Lab 2
 tech_engineering_lab_2 = {
-	cost = @tier2cost2
+	cost = @tier2cost1
 	area = engineering
 	tier = 2
 	category = { industry }	
 	prerequisites = { "tech_engineering_lab_1" "tech_colonial_centralization" }
-	weight = @tier2weight2
+	weight = @tier2weight1
 		
 	## unlock engineering lab lvl 2
 	
@@ -1450,12 +1448,12 @@ tech_engineering_lab_2 = {
 
 #Engineering Lab 3
 tech_engineering_lab_3 = {
-	cost = @tier3cost3
+	cost = @tier3cost1
 	area = engineering
 	tier = 3
 	category = { industry }	
 	prerequisites = { "tech_engineering_lab_2" "tech_galactic_administration" }
-	weight = @tier3weight3
+	weight = @tier3weight1
 		
 	## unlock engineering lab lvl 3
 	
@@ -1548,12 +1546,12 @@ tech_robotic_workers = {
 
 #Droids
 tech_droid_workers = {
-	cost = @tier2cost2
+	cost = @tier2cost1
 	area = engineering
 	tier = 2
 	category = { industry }
 	prerequisites = { "tech_robotic_workers" "tech_colonial_centralization" }
-	weight = @tier2weight2
+	weight = @tier2weight1
 	
 	gateway = robotics
 	
@@ -1570,7 +1568,7 @@ tech_droid_workers = {
 		}
 		modifier = {
 			factor = 2
-			has_valid_civic = civic_mechanists
+			has_civic = civic_mechanists
 		}
 		modifier = {
 			factor = 1.25
@@ -1591,7 +1589,7 @@ tech_droid_workers = {
 		}
 		modifier = {
 			factor = 2
-			has_valid_civic = civic_mechanists
+			has_civic = civic_mechanists
 		}
 		modifier = {
 			factor = 1.25
@@ -1617,7 +1615,6 @@ tech_synthetic_workers = {
 	## unlock robot POP lvl 3, robot Army lvl 2
 	
 	weight_modifier = {
-		factor = 0.5
 		modifier = {
 			factor = 0
 			OR = {
@@ -1628,14 +1625,14 @@ tech_synthetic_workers = {
 		}
 		modifier = {
 			factor = 2
-			has_valid_civic = civic_mechanists
+			has_civic = civic_mechanists
 		}
 		modifier = {
 			factor = 4
 			has_ascension_perk = ap_the_flesh_is_weak
 		}
 		modifier = {
-			factor = 0.20
+			factor = 0.10
 			NOR = {
 				research_leader = {
 					area = engineering
@@ -1666,7 +1663,7 @@ tech_synthetic_workers = {
 		}
 		modifier = {
 			factor = 2
-			has_valid_civic = civic_mechanists
+			has_civic = civic_mechanists
 		}
 		modifier = {
 			factor = 2
@@ -1920,9 +1917,8 @@ tech_construction_templates  = {
 	}
 	
 	weight_modifier = {
-		factor = 0.5
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			NOR = {
 				research_leader = {
 					area = engineering
@@ -1974,9 +1970,9 @@ tech_mega_engineering = {
 	}
 	
 	weight_modifier = {
-		factor = 0.25
+		factor = 0.1
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			NOR = {
 				research_leader = {
 					area = engineering
@@ -1986,32 +1982,47 @@ tech_mega_engineering = {
 					area = engineering
 					has_trait = "leader_trait_curator"
 				}
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_maniacal"
-				}				
 			}
 		}
-		modifier = {
-			factor = 2
-			has_ascension_perk = ap_voidborn
-		}		
 		modifier = {
 			factor = 2
 			has_ascension_perk = ap_master_builders
 		}
 		modifier = {
 			factor = 20
-			has_any_megastructure_in_empire = yes
+			any_system_within_border = {
+				OR = {
+					has_megastructure = spy_orb_1
+					has_megastructure = spy_orb_2
+					has_megastructure = spy_orb_3
+					has_megastructure = spy_orb_4
+					has_megastructure = think_tank_1
+					has_megastructure = think_tank_2
+					has_megastructure = think_tank_3
+					has_megastructure = think_tank_4
+					has_megastructure = dyson_sphere_1
+					has_megastructure = dyson_sphere_2
+					has_megastructure = dyson_sphere_3
+					has_megastructure = dyson_sphere_4
+					has_megastructure = dyson_sphere_5	
+					has_megastructure = ring_world_2_intermediate
+					any_planet = {
+						OR = {
+							is_planet_class = pc_ringworld_habitable
+							is_planet_class = pc_ringworld_habitable_damaged					
+							is_planet_class = pc_ringworld_seam
+							is_planet_class = pc_ringworld_seam_damaged
+							is_planet_class = pc_ringworld_tech
+							is_planet_class = pc_ringworld_tech_damaged
+						}
+					}						
+				}
+			}
 		}
-
-		### Enabled for Vanilla so people can repair damaged Ring Worlds
-		#modifier = {
-		#	factor = 0
-		#	NOT = { 
-		#		host_has_dlc = "Utopia" 
-		#	}
-		#}
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Utopia" }
+		}
 	}
 	
 	ai_weight = {

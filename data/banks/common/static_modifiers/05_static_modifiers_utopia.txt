@@ -18,7 +18,7 @@ standardized_colony_ships = {
 }
 
 withdrawal_symptoms = {
-	pop_happiness = -0.1
+	pop_happiness = -0.20
 	tile_resource_food_mult = -0.2
 	tile_resource_minerals_mult = -0.2
 	tile_resource_energy_mult = -0.2
@@ -159,7 +159,7 @@ shroud_neg_armor = {
 }
 
 shroud_neg_growth = {
-	pop_growth_speed = -0.30
+	pop_growth_req_mult = 0.30
 }
 
 shroud_neg_research = {
@@ -192,7 +192,7 @@ covenant_whisperers_in_the_void = {
 }
 
 covenant_composer_of_strands = {
-	pop_growth_speed = 0.15
+	pop_growth_req_mult = -0.15
 	leader_age = 20
 }
 
@@ -330,7 +330,7 @@ slave_hunger_strike = {
 
 slave_riots = {
 	slave_production_output = -100
-	pop_growth_speed = -0.5
+	pop_growth_req_mult = 1
 	planet_army_build_speed_mult = -0.50
 	planet_building_build_speed_mult = -0.50
 	planet_migration_all_pull = -1
@@ -357,10 +357,6 @@ embraced_another_faction = {
 	faction_happiness = -0.1
 }
 
-embraced_faction_timer = {
-	icon = "gfx/interface/icons/modifiers/mod_pop_government_ethic_attraction.dds"
-}
-
 embraced_faction = {
 	faction_happiness = 0.2
 }
@@ -379,7 +375,7 @@ suppressed_xenophobe = {
 }
 
 promoted_xenophobe = {
-	pop_ethic_xenophobe_attraction_mult = 1
+	pop_ethic_xenophobe_attraction_mult = 0.5
 	country_resource_influence_add = -1
 }
 
@@ -389,7 +385,7 @@ suppressed_xenophile = {
 }
 
 promoted_xenophile = {
-	pop_ethic_xenophile_attraction_mult = 1
+	pop_ethic_xenophile_attraction_mult = 0.5
 	country_resource_influence_add = -1
 }
 
@@ -399,7 +395,7 @@ suppressed_spiritualist = {
 }
 
 promoted_spiritualist = {
-	pop_ethic_spiritualist_attraction_mult = 1
+	pop_ethic_spiritualist_attraction_mult = 0.5
 	country_resource_influence_add = -1
 }
 
@@ -409,7 +405,7 @@ suppressed_materialist = {
 }
 
 promoted_materialist = {
-	pop_ethic_materialist_attraction_mult = 1
+	pop_ethic_materialist_attraction_mult = 0.5
 	country_resource_influence_add = -1
 }
 
@@ -419,7 +415,7 @@ suppressed_pacifist = {
 }
 
 promoted_pacifist = {
-	pop_ethic_pacifist_attraction_mult = 1
+	pop_ethic_pacifist_attraction_mult = 0.5
 	country_resource_influence_add = -1
 }
 
@@ -429,7 +425,7 @@ suppressed_militarist = {
 }
 
 promoted_militarist = {
-	pop_ethic_militarist_attraction_mult = 1
+	pop_ethic_militarist_attraction_mult = 0.5
 	country_resource_influence_add = -1
 }
 
@@ -439,7 +435,7 @@ suppressed_egalitarian = {
 }
 
 promoted_egalitarian = {
-	pop_ethic_egalitarian_attraction_mult = 1
+	pop_ethic_egalitarian_attraction_mult = 0.5
 	country_resource_influence_add = -1
 }
 
@@ -449,7 +445,7 @@ suppressed_authoritarian = {
 }
 
 promoted_authoritarian = {
-	pop_ethic_authoritarian_attraction_mult = 1
+	pop_ethic_authoritarian_attraction_mult = 0.5
 	country_resource_influence_add = -1
 }
 
@@ -494,7 +490,7 @@ absorbed_consciousness_5 = {
 }
 
 whisperers_madness = {
-	planet_unrest_add = 100
+	planet_unrest_add = 50
 }
 
 whisperers_psychosis = {

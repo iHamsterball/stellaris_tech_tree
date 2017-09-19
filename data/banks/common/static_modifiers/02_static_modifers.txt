@@ -59,7 +59,7 @@ gas_rich_planet_fo_realz = {
 	icon_frame = 1
 }
 food_rich_planet = {
-	pop_growth_speed = 0.2
+	pop_growth_req_mult = -0.2
 	pop_happiness = 0.1
 	icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
 	icon_frame = 1
@@ -144,16 +144,6 @@ pyramid_wars = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
 	icon_frame = 3
 }
-spiritualist_attraction = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
-	icon_frame = 2
-	pop_ethic_spiritualist_attraction_mult = 1
-}
-materialist_attraction = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
-	icon_frame = 2
-	pop_ethic_materialist_attraction_mult = 1
-}
 ##########################################################################
 # Empire Modifiers
 ##########################################################################
@@ -208,7 +198,7 @@ youthful_people = {
 }
 fertility_virus = {
 	pop_environment_tolerance = -0.20
-	pop_growth_speed = -0.20
+	pop_growth_req_mult = 0.20
 }
 forth_dimension_knowledge = {
 	all_technology_research_speed = 0.15
@@ -229,9 +219,7 @@ alien_genome_research = {
 # Ship Modifiers
 ##########################################################################
 protege_onboard = {
-	ship_anomaly_research_speed_mult = 0.20
-	ship_anomaly_fail_risk = -0.20
-	ship_anomaly_generation_chance_mult = 0.10
+	ship_anomaly_research_speed_mult = 0.2
 }
 ship_survey_boost = {
 	science_ship_survey_speed = 0.15

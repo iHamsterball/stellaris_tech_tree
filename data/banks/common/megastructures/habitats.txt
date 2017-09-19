@@ -32,14 +32,7 @@ habitat_0 = {
 			}
 			custom_tooltip = {
 				fail_text = "requires_no_existing_megastructure"
-				#can_build_megastructure_on_planet = yes
-				NOR = {
-					has_planet_flag = megastructure
-					has_planet_flag = has_megastructure
-					solar_system = {
-						has_star_flag = ring_world_built
-					}
-				}
+				can_build_megastructure_on_planet = yes
 			}
 			custom_tooltip = {
 				fail_text = "requires_no_orbital_station"
@@ -51,7 +44,7 @@ habitat_0 = {
 					who = prev.from
 					status = yes
 				}
-				colonizeable_planet = no	# prevent the spaceport colliding with the habitat
+				habitable_planet = no	# prevent the spaceport colliding with the habitat
 			}
 
  			# balance for habitats
@@ -96,7 +89,6 @@ habitat_0 = {
 					set_surveyed = yes
 					surveyor = FROM
 				}
-				set_all_comms_surveyed = yes
 				while = {
 					limit = {
 						any_tile = { has_blocker = yes }
@@ -115,6 +107,6 @@ habitat_0 = {
 			set_planet_flag = has_megastructure
 		}
 		remove_megastructure = fromfrom
-		from = { country_event =  { id = utopia.61 } }
 	}
+	
 }

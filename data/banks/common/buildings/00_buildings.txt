@@ -91,27 +91,6 @@ building_basic_power_plant = {
 			NOT = { is_planet_class = pc_habitat }	
 		}		
 	}
-	
-	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}
-	}	
-	
-	ai_weight = {
-		factor = 1
-		modifier = {
-			factor = 0.25
-			is_slave_tile_or_planet = yes			
-		}
-	}
 }
 
 building_power_plant_1 = {
@@ -149,27 +128,6 @@ building_power_plant_1 = {
 					has_building = "building_capital_3"
 				}
 			}
-		}
-	}
-	
-	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}			
-	}	
-	
-	ai_weight = {
-		factor = 1
-		modifier = {
-			factor = 0.25
-			is_slave_tile_or_planet = yes		
 		}
 	}
 }
@@ -211,15 +169,7 @@ building_power_plant_2 = {
 
 	prerequisites = {
 		"tech_power_plant_2"
-	}
-	
-	ai_weight = {
-		factor = 1
-		modifier = {
-			factor = 0.25
-			is_slave_tile_or_planet = yes			
-		}
-	}	
+	}		
 }
 
 building_power_plant_3 = {
@@ -258,14 +208,6 @@ building_power_plant_3 = {
 	
 	prerequisites = {
 		"tech_power_plant_3"
-	}	
-	
-	ai_weight = {
-		factor = 1
-		modifier = {
-			factor = 0.25
-			is_slave_tile_or_planet = yes			
-		}
 	}	
 }
 
@@ -306,14 +248,6 @@ building_power_plant_4 = {
 	prerequisites = {
 		"tech_power_plant_4"
 	}	
-	
-	ai_weight = {
-		factor = 1
-		modifier = {
-			factor = 0.25
-			is_slave_tile_or_planet = yes		
-		}
-	}
 }
 
 building_power_plant_5 = {
@@ -353,14 +287,6 @@ building_power_plant_5 = {
 	prerequisites = {
 		"tech_power_plant_4"
 	}	
-	
-	ai_weight = {
-		factor = 1
-		modifier = {
-			factor = 0.25
-			is_slave_tile_or_planet = yes		
-		}
-	}
 }
 
 betharian_power_plant = {
@@ -407,14 +333,6 @@ betharian_power_plant = {
 				}
 			}
 		}
-	}
-	
-	ai_allow = {
-		always = yes
-	}
-	
-	ai_weight = {
-		weight = 10	
 	}
 }
 
@@ -478,25 +396,8 @@ building_power_hub_1 = {
 		"tech_power_hub_1"
 	}
 	
-	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}		
-	}	
-	
 	ai_weight = {
-		factor = 10
-		modifier = {
-			factor = 0.25
-			is_slave_tile_or_planet = yes		
-		}
+		weight = 10	
 	}
 }
 
@@ -557,11 +458,7 @@ building_power_hub_2 = {
 	}
 	
 	ai_weight = {
-		factor = 10
-		modifier = {
-			factor = 0.25
-			is_slave_tile_or_planet = yes		
-		}
+		weight = 10	
 	}
 }
 
@@ -584,7 +481,7 @@ building_basic_farm = {
 	
 	produced_resource_trigger = {
 		modifier = {
-			has_valid_civic = civic_agrarian_idyll
+			has_civic = civic_agrarian_idyll
 			resources = {
 				unity = 1
 			}
@@ -610,23 +507,6 @@ building_basic_farm = {
 			NOT = { is_planet_class = pc_habitat }	
 		}		
 	}
-	
-	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}		
-	}
-
-	ai_weight = {
-		factor = 1
-	}
 }
 
 building_hydroponics_farm_1 = {
@@ -644,7 +524,7 @@ building_hydroponics_farm_1 = {
 	
 	produced_resource_trigger = {
 		modifier = {
-			has_valid_civic = civic_agrarian_idyll
+			has_civic = civic_agrarian_idyll
 			resources = {
 				unity = 1
 			}
@@ -680,23 +560,6 @@ building_hydroponics_farm_1 = {
 				}
 			}
 		}
-	}
-	
-	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}
-	}
-
-	ai_weight = {
-		factor = 1
 	}
 }
 
@@ -735,7 +598,7 @@ building_hydroponics_farm_2 = {
 	
 	produced_resource_trigger = {
 		modifier = {
-			has_valid_civic = civic_agrarian_idyll
+			has_civic = civic_agrarian_idyll
 			resources = {
 				unity = 1
 			}
@@ -789,7 +652,7 @@ building_hydroponics_farm_3 = {
 	
 	produced_resource_trigger = {
 		modifier = {
-			has_valid_civic = civic_agrarian_idyll
+			has_civic = civic_agrarian_idyll
 			resources = {
 				unity = 1
 			}
@@ -843,7 +706,7 @@ building_hydroponics_farm_4 = {
 	
 	produced_resource_trigger = {
 		modifier = {
-			has_valid_civic = civic_agrarian_idyll
+			has_civic = civic_agrarian_idyll
 			resources = {
 				unity = 1
 			}
@@ -860,7 +723,7 @@ building_hydroponics_farm_4 = {
 	
 	prerequisites = {
 		"tech_nano_vitality_crops"
-	}	
+	}
 }
 
 building_hydroponics_farm_5 = {
@@ -899,7 +762,7 @@ building_hydroponics_farm_5 = {
 	
 	produced_resource_trigger = {
 		modifier = {
-			has_valid_civic = civic_agrarian_idyll
+			has_civic = civic_agrarian_idyll
 			resources = {
 				unity = 1
 			}
@@ -943,24 +806,7 @@ building_mineral_silo_1 = {
 	
 	upgrades = {
 		building_mineral_silo_2
-	}
-
-	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}
-	}
-
-	ai_weight = {
-		factor = 1
-	}	
+	}		
 }
 
 building_mineral_silo_2 = {
@@ -1049,7 +895,7 @@ building_mineral_silo_3 = {
 	
 	prerequisites = {
 		"tech_mineral_processing_2"
-	}	
+	}
 }
 
 
@@ -1091,23 +937,6 @@ building_basic_mine = {
 			NOT = { is_planet_class = pc_habitat }	
 		}		
 	}
-	
-	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}
-	}
-
-	ai_weight = {
-		factor = 1
-	}	
 }
 
 building_mining_network_1 = {
@@ -1152,23 +981,6 @@ building_mining_network_1 = {
 				}
 			}
 		}
-	}
-	
-	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}
-	}
-
-	ai_weight = {
-		factor = 1
 	}
 }
 
@@ -1398,21 +1210,8 @@ building_mineral_processing_plant_1 = {
 		"tech_mineral_processing_1"
 	}
 	
-	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}
-	}
-
 	ai_weight = {
-		factor = 10
+		weight = 10	
 	}
 }
 
@@ -1458,6 +1257,10 @@ building_mineral_processing_plant_2 = {
 	prerequisites = {
 		"tech_mineral_processing_2"
 	}
+	
+	ai_weight = {
+		weight = 10	
+	}
 }
 
 #
@@ -1496,26 +1299,6 @@ building_basic_science_lab_1 = {
 	prerequisites = {
 		"tech_basic_science_lab_1"
 	}	
-	
-	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}
-		
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no		
-	}
-
-	ai_weight = {
-		factor = 1
-	}
 }
 
 #
@@ -1566,11 +1349,6 @@ building_engineering_facility_1 = {
 	prerequisites = {
 		"tech_engineering_lab_1"
 	}
-	
-	ai_allow = {
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no	
-	}		
 }
 
 building_engineering_facility_2 = {
@@ -1615,12 +1393,7 @@ building_engineering_facility_2 = {
 	
 	prerequisites = {
 		"tech_engineering_lab_2"
-	}
-
-	ai_allow = {
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no		
-	}		
+	}	
 }
 
 building_engineering_facility_3 = {
@@ -1666,11 +1439,6 @@ building_engineering_facility_3 = {
 	prerequisites = {
 		"tech_engineering_lab_3"
 	}	
-	
-	ai_allow = {
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no	
-	}		
 }
 
 building_engineering_facility_4 = {
@@ -1714,11 +1482,6 @@ building_engineering_facility_4 = {
 	prerequisites = {
 		"tech_engineering_lab_3"
 	}	
-	
-	ai_allow = {
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no
-	}		
 }
 
 #
@@ -1768,12 +1531,7 @@ building_physics_lab_1 = {
 	
 	prerequisites = {
 		"tech_physics_lab_1"
-	}
-
-	ai_allow = {
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no
-	}		
+	}	
 }
 
 building_physics_lab_2 = {
@@ -1818,11 +1576,6 @@ building_physics_lab_2 = {
 	
 	prerequisites = {
 		"tech_physics_lab_2"
-	}
-	
-	ai_allow = {
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no
 	}	
 }
 
@@ -1869,11 +1622,6 @@ building_physics_lab_3 = {
 	prerequisites = {
 		"tech_physics_lab_3"
 	}	
-	
-	ai_allow = {
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no
-	}	
 }
 
 building_physics_lab_4 = {
@@ -1916,12 +1664,7 @@ building_physics_lab_4 = {
 	
 	prerequisites = {
 		"tech_physics_lab_3"
-	}
-
-	ai_allow = {
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no
-	}		
+	}	
 }
 
 #
@@ -1972,11 +1715,6 @@ building_biolab_1 = {
 	prerequisites = {
 		"tech_biolab_1"
 	}	
-	
-	ai_allow = {
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no	
-	}	
 }
 
 building_biolab_2 = {
@@ -2021,11 +1759,6 @@ building_biolab_2 = {
 	
 	prerequisites = {
 		"tech_biolab_2"
-	}
-
-	ai_allow = {
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no	
 	}	
 }
 
@@ -2072,11 +1805,6 @@ building_biolab_3 = {
 	prerequisites = {
 		"tech_biolab_3"
 	}	
-	
-	ai_allow = {
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no	
-	}	
 }
 
 building_biolab_4 = {
@@ -2120,11 +1848,6 @@ building_biolab_4 = {
 	prerequisites = {
 		"tech_biolab_3"
 	}	
-	
-	ai_allow = {
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no	
-	}	
 }
 
 #
@@ -2160,28 +1883,6 @@ building_autochthon_monument = {
 	upgrades = {
 		building_heritage_site
 	}
-	
-	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}
-	}
-
-	ai_weight = {
-		factor = 1
-	}
-	
-	ai_allow = {
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no
-	}	
 }
 
 building_heritage_site = {
@@ -2226,11 +1927,6 @@ building_heritage_site = {
 	
 	upgrades = {
 		building_hypercomms_forum
-	}
-	
-	ai_allow = {
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no	
 	}
 }
 
@@ -2285,9 +1981,8 @@ building_hypercomms_forum = {
 		building_autocurating_vault
 	}
 	
-	ai_allow = {
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no	
+	ai_weight = {
+		weight = 10	
 	}
 }
 
@@ -2304,7 +1999,7 @@ building_temple = {
 	}
 	
 	planet_modifier = {
-		pop_ethic_spiritualist_attraction_mult = 0.2
+		pop_government_ethic_attraction = 0.10
 	}
 	
 	required_resources = {
@@ -2324,33 +2019,14 @@ building_temple = {
 		building_holotemple
 	}
 	
-	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}
-	}
-
 	ai_weight = {
-		factor = 10
-	}
-	
-	ai_allow = {
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no	
+		weight = 10	
 	}
 }
 
 building_holotemple = {
 	base_buildtime = 360
 	planet_unique = yes
-	is_listed = no
 	
 	cost = {
 		minerals = 350
@@ -2361,7 +2037,7 @@ building_holotemple = {
 	}
 	
 	planet_modifier = {
-		pop_ethic_spiritualist_attraction_mult = 0.3
+		pop_government_ethic_attraction = 0.15
 	}
 	
 	required_resources = {
@@ -2399,21 +2075,15 @@ building_holotemple = {
 	prerequisites = {
 		"tech_holographic_rituals"
 	}
-
-	ai_weight = {
-		factor = 10
-	}
 	
-	ai_allow = {
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no
+	ai_weight = {
+		weight = 10	
 	}
 }
 
 building_citadel_of_faith = {
 	base_buildtime = 720
 	empire_unique = yes
-	is_listed = no
 	
 	cost = {
 		minerals = 500
@@ -2424,7 +2094,7 @@ building_citadel_of_faith = {
 	}
 	
 	planet_modifier = {
-		pop_ethic_spiritualist_attraction_mult = 0.4
+		pop_government_ethic_attraction = 0.20
 	}
 	
 	required_resources = {
@@ -2455,14 +2125,9 @@ building_citadel_of_faith = {
 	prerequisites = {
 		"tech_transcendent_faith"
 	}
-
-	ai_weight = {
-		factor = 10
-	}
 	
-	ai_allow = {
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no
+	ai_weight = {
+		weight = 10	
 	}
 }
 
@@ -2704,6 +2369,20 @@ building_capital_3 = {
 		planet = { is_capital = no }
 	}	
 	
+	allow = {
+		custom_tooltip = {
+			text = "requires_pops_15"
+			planet = {
+				count_pops = {
+					count > 14
+					limit = {
+						is_colony_pop = yes
+					}
+				}
+			}
+		}
+	}
+	
 	prerequisites = {
 		"tech_galactic_administration"
 	}
@@ -2753,27 +2432,25 @@ building_clone_vats = {
 	ai_special_building = yes
 	
 	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}
-		
-		fromfrom = {
-			NOT = {
-				any_owned_planet = {
-					has_building = building_clone_vats
+		AND = {
+			fromfrom = {
+				NOT = {
+					any_owned_planet = {
+						has_building = building_clone_vats
+					}
+				}
+				has_technology = tech_cloning
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			from = {
+				any_pop = {
+					is_enslaved = yes
 				}
 			}
 		}
-		
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no	
 	}
 	
 	ai_weight = {
@@ -2835,16 +2512,6 @@ building_planetary_shield_generator = {
 	ai_special_building = yes
 
 	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}
 		fromfrom = {
 			has_technology = tech_planetary_shield_generator
 		}
@@ -2863,15 +2530,6 @@ building_slave_processing = {
 	
 	cost = {
 		minerals = 250
-	}
-	
-	produced_resources = {
-		minerals = 2
-		food = 2
-	}
-	
-	required_resources = {
-		energy = 3
 	}
 	
 	planet_modifier = {
@@ -2901,30 +2559,19 @@ building_slave_processing = {
 		"tech_neural_implants"
 	}
 	
+	ai_special_building = yes
+	
 	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}
 		planet = {
-			OR = {
-				has_building = building_slave_processing
-				count_pops = {
-					limit = { is_enslaved = yes }
-					count > 2
-				}				
+			count_pops = {
+				limit = { is_enslaved = yes }
+				count > 4
 			}
 		}	
 	}
 	
 	ai_weight = {
-		weight = 10
+		weight = 2000
 		modifier = {
 			weight = 0
 			from = {
@@ -2973,11 +2620,11 @@ building_clinic = {
 	}
 	
 	produced_resources = {
-		society_research = 2
+		food = 2
 	}
 	
 	planet_modifier = {
-		pop_growth_speed = 0.1
+		pop_growth_req_mult = -0.05
 	}
 	
 	prerequisites = {
@@ -2988,24 +2635,8 @@ building_clinic = {
 		building_hospital
 	}
 	
-	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}
-		
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no		
-	}
-
 	ai_weight = {
-		factor = 10
+		weight = 10	
 	}
 }
 
@@ -3054,25 +2685,19 @@ building_hospital = {
 	}
 	
 	produced_resources = {
-		society_research = 4
-		unity = 1
+		food = 4
 	}
 	
 	planet_modifier = {
-		pop_growth_speed = 0.2
+		pop_growth_req_mult = -0.10
 	}
 	
 	prerequisites = {
 		"tech_frontier_hospital"
 	}
 	
-	ai_allow = {
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no
-	}
-
 	ai_weight = {
-		factor = 10
+		weight = 10		
 	}
 }
 
@@ -3103,11 +2728,6 @@ building_military_academy = {
 		}
 	}
 	
-	produced_resources = {
-		engineering_research = 2
-		society_research = 2
-	}
-	
 	required_resources = {
 		energy = 1
 	}
@@ -3128,16 +2748,6 @@ building_military_academy = {
 	ai_special_building = yes
 	
 	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}
 		NOT = {
 			fromfrom = {
 				any_owned_planet = {
@@ -3147,9 +2757,6 @@ building_military_academy = {
 				}
 			}
 		}
-		
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no	
 	}
 	
 	ai_weight = {
@@ -3182,7 +2789,7 @@ building_paradise_dome = {
 	}
 	
 	planet_modifier = {
-		pop_happiness = 0.05
+		pop_happiness = 0.10
 	}
 	
 	potential = {
@@ -3205,24 +2812,8 @@ building_paradise_dome = {
 		}
 	}
 	
-	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}
-		
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no	
-	}
-
 	ai_weight = {
-		factor = 10
+		weight = 10	
 	}
 }
 
@@ -3281,9 +2872,9 @@ building_xeno_zoo = {
 	prerequisites = {
 		"tech_alien_life_studies"
 	}
-
+	
 	ai_weight = {
-		factor = 10
+		weight = 10	
 	}
 }
 
@@ -3311,24 +2902,39 @@ building_visitor_center = {
 		pop_environment_tolerance = 0.05
 	}
 	
-	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}
-		
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no			
-	}
-
 	ai_weight = {
-		factor = 10
+		weight = 10	
+	}
+}
+
+building_symbol_unity = {
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+		minerals = 200
+	}
+	
+	produced_resources = {
+		unity = 2
+	}
+	
+	required_resources = {
+		energy = 1
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.05
+	}
+	
+	prerequisites = {
+		"tech_symbol_unity"
+	}
+	
+	ai_special_building = yes
+	
+	ai_weight = {
+		weight = 300
 	}
 }
 
@@ -3345,8 +2951,12 @@ building_galactic_stock_exchange = {
 		influence = 100
 	}
 	
+	required_resources = {
+		energy = 3
+	}
+	
 	produced_resources = {
-		energy = 10
+		energy = 1
 	}
 	
 	potential = {

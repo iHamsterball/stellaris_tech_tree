@@ -238,6 +238,7 @@ civic_inwards_perfection = {
 	random_weight = { base = 1 }
 	modifier = {
 		country_resource_unity_mult = 0.30
+		pop_citizen_happiness = 0.05
 	}
 }
 
@@ -304,18 +305,18 @@ civic_cutthroat_politics = {
 civic_corporate_dominion = {
 	potential = { ethics = { NOT = { value = ethic_hive_mind } } }
 	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_egalitarian
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}
+		}
 		authority = {
 			value = auth_oligarchic
 		}
-		ethics = {
-			NOR = {
-				text = civic_tooltip_not_xenophobe
-				value = ethic_xenophobe
-				value = ethic_fanatic_xenophobe
-			}
-		}		
 	}
-	random_weight = { base = 3 }
+	random_weight = { base = 1 }
 	modifier = {
 		country_resource_energy_mult = 0.10
 	}
@@ -332,7 +333,6 @@ civic_agrarian_idyll = {
 				value = ethic_fanatic_pacifist
 			}
 			NOR = {
-				text = civic_tooltip_not_authoritarian
 				value = ethic_authoritarian
 				value = ethic_fanatic_authoritarian
 			}
@@ -462,9 +462,11 @@ civic_mechanists = {
 			has_global_flag = game_started
 		}
 	}
-	modifier = { country_robot_maintenance_mult = -0.05 }
 
 	description = "civic_tooltip_mechanists_effects"
+	modifier = {
+		country_robot_maintenance_mult = -0.05
+	}
 	#used when starting a new game to give techs and robot pops
 	#see game_start.7 and game_start.8
 }
@@ -505,10 +507,7 @@ civic_fanatic_purifiers = {
 	possible = {
 		ethics = {
 			value = ethic_fanatic_xenophobe
-			OR = {
-				value = ethic_militarist
-				value = ethic_spiritualist
-			}		
+			value = ethic_militarist
 		}
 		civics = {
 			NOR = {
@@ -734,7 +733,7 @@ civic_hive_natural_neural_network = {
 	potential = { ethics = { value = ethic_hive_mind } }
 	random_weight = { base = 1 }
 	modifier = {
-		num_tech_alternatives_add = 1
+		all_technology_research_speed = 0.05
 	}
 }
 
@@ -767,7 +766,6 @@ civic_hive_strength_of_legions = {
 	random_weight = { base = 1 }
 	modifier = {
 		army_damage_mult = 0.20
-		army_upkeep_mult = -0.20
 	}
 }
 
@@ -785,18 +783,5 @@ civic_hive_pooled_knowledge = {
 	modifier = {
 		leader_skill_levels = 1
 		country_leader_pool_size = 1
-	}
-}
-
-civic_hive_devouring_swarm = {
-	potential = { ethics = { value = ethic_hive_mind } }
-	random_weight = { base = 1 }
-	description = "civic_tooltip_devouring_swarm_effects"
-	modifier = {
-		ship_hitpoints_mult = 0.10
-		ship_auto_repair_add = 0.005
-		army_damage_mult = 0.40
-		category_biology_research_speed_mult = 0.20
-		tradition_cost_num_xeno_slaves_mult = -1.00
 	}
 }

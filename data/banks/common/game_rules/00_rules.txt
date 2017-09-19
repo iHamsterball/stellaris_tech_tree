@@ -30,21 +30,10 @@ can_auto_migrate_pop = {
 #This = pop
 pop_can_live_on_planet = {
 	OR = {
-		root = { NOT = { habitability = { who = prev value < 0.4 } } }
-		AND = {
-			has_citizenship_type = { type = citizenship_purge }
-			NOT = { has_purge_type = { type = purge_displacement } }
-		}		
-	}
-	OR = {
 		is_robot_pop = yes
 		AND = {
 			exists = owner
 			owner = { NOT = { is_country_type = default } }
-		}
-		AND = {
-			has_citizenship_type = { type = citizenship_purge }
-			NOT = { has_purge_type = { type = purge_displacement } }
 		}
 		AND = {
 			OR = {
@@ -72,8 +61,8 @@ pop_can_live_on_planet = {
 
 				# core_worlds_citizens_and_slaves lets slaves live in core worlds
 				AND = {
+					is_enslaved = yes
 					exists = owner
-					has_citizenship_type = { type = citizenship_slavery }
 					owner = { has_policy_flag = core_worlds_citizens_and_slaves }
 				}
 			}
@@ -115,24 +104,6 @@ can_generate_leader_from_pop = {
 }
 
 #Root = country
-#This = species
-can_generate_leader_from_species = {
-	is_sentient = yes
-	OR = {
-		root = { has_technology = tech_synthetic_leaders }
-		NOR = {
-			is_species = "ROBOT_POP_SPECIES_1"
-			is_species = "ROBOT_POP_SPECIES_2"
-			is_species = "ROBOT_POP_SPECIES_3"
-		}		
-	}
-	OR = {	
-		has_citizenship_type = { type = citizenship_full country = root }
-		has_citizenship_type = { type = citizenship_caste_system country = root }
-	}
-}
-
-#Root = country
 #This = pop
 can_generate_military_leader_from_pop = {
 	can_be_military_leader = yes
@@ -144,21 +115,10 @@ can_generate_military_leader_from_pop = {
 
 #Root = species
 #This = planet
-can_generate_army_from_planet = {
+can_generate_army_from_species = {
 	any_owned_pop = {
 		is_same_species = root
 		can_be_soldier = yes
-	}
-}
-
-# Root = species
-# This = country
-can_generate_army_from_species = {
-	root = {
-		OR = {
-			has_military_service_type = { type = military_service_full country = prev }
-			has_military_service_type = { type = military_service_limited country = prev }
-		}	
 	}
 }
 
@@ -259,8 +219,7 @@ can_declare_war = {
 		}
 	}
 	if = {
-		limit = {
-			exists = root
+		limit = { 
 			ROOT = {
 				has_policy_flag = no_wars
 				OR = {
@@ -291,7 +250,16 @@ can_colonize_with_pop = {
 	if = {
 		limit = { 
 			OR = {
-				has_culture_shock = yes
+				has_modifier = culture_shock_stone_age
+				has_modifier = culture_shock_bronze_age 
+				has_modifier = culture_shock_iron_age 
+				has_modifier = culture_shock_late_medieval_age 
+				has_modifier = culture_shock_renaissance_age 
+				has_modifier = culture_shock_steam_age 
+				has_modifier = culture_shock_industrial_age 
+				has_modifier = culture_shock_machine_age 
+				has_modifier = culture_shock_atomic_age 
+				has_modifier = culture_shock_early_space_age 
 				is_sentient = no
 			}
 		}
@@ -356,7 +324,6 @@ can_resettle_pop = {
 
 # This = Planet
 can_resettle_pop_planet = {
-	is_controlled_by = owner
 	custom_tooltip = {
 		text = "RESETTLE_PLANET_UNDER_COLONIZATION"
 		exists = this
@@ -372,16 +339,16 @@ can_pop_procreate = {
 	has_population_control = no
 }
 
-# Checks if a growing pop should be killed
-# This = Pop
-should_kill_growing_pop = {
-	has_population_control = yes
-}
-
 # Checks if a crisis event exists
 # This = Gamestate
 exists_any_crisis = {	
 	has_global_flag = galactic_crisis_happened
+}
+
+#Checks if a country can have alien leadership
+#This = country
+primary_leaders_only = {
+	allows_alien_leaders = no
 }
 
 #This rule is a condition for bombarding planets
@@ -435,10 +402,7 @@ can_planet_support_orbital_station = {
 		fail_text = "ORBITAL_STATION_ALREADY_EXISTS"
 		has_any_megastructure = no
 		NOT = {
-			AND = {
-				NOT = { is_planet_class = pc_ringworld_habitable }
-				has_planet_flag = has_megastructure
-			}	
+			has_planet_flag = has_megastructure
 		}
 	}
 }
@@ -446,10 +410,7 @@ can_planet_support_orbital_station = {
 # Check if full sensor range in entire galaxy 
 # root: country
 has_full_sensor_range = {
-	OR = {
-		has_megastructure = spy_orb_4
-		has_megastructure = spy_orb_restored
-	}
+	has_megastructure = spy_orb_4
 }
 
 # Determines if notification messages should be sent after a ground combat
@@ -476,47 +437,6 @@ are_rebels_hostile = {
 }
 
 #Root: planet
-should_colony_be_destroyed_on_pc_change = {
+is_planet_infested = {
 	is_planet_class = pc_infested
-}
-
-#Root: country
-has_policies_for_support_stance = {
-	NOT = {
-		is_country_type = swarm
-	}
-}
-
-# Is the given fleet the portal for given extradimensional country
-# root: country (ED)
-# this: fleet
-is_extradimensional_portal = {
-	is_ship_size = dimensional_portal_ed
-	owner = {
-		OR = {
-			is_same_value = root
-			OR = {
-				AND = {
-					root = { is_country_type = extradimensional }
-					is_same_value = event_target:portal_holder_1
-				}
-				AND = {
-					root = { is_country_type = extradimensional_2 }
-					is_same_value = event_target:portal_holder_2
-				}
-				AND = {
-					root = { is_country_type = extradimensional_3 }
-					is_same_value = event_target:portal_holder_3
-				}
-			}
-		}
-	}
-}
-
-# Is the given fleet an anchor for given extradimensional country
-# root: country (ED)
-# this: fleet
-is_extradimensional_anchor = {
-	is_ship_size = anchor_station
-	owner = { is_same_value = root }
 }

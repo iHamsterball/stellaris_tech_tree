@@ -870,15 +870,3 @@ anomaly = {
 		owner = { NOT = { has_country_flag = SA } }
 	}
 }
-
-# Towel
-anomaly = {
-	event = anomaly.3135
-	category = GEN_DESERT_CAT
-
-	weight = 1
-
-	potential = {
-		owner = { NOT = { has_country_flag = toweled } }
-	}
-}

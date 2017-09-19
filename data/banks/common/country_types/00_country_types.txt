@@ -5,8 +5,7 @@
 #	can_own_empty_planets					#no by default, decides if empty planets belonging to country are automatically removed from the country.
 #	playable = yes							#if this type is available for players. used when listing countries for hot-joining players
 #	has_fortifications = no					#does this type use planetary fortifications?
-# 	randomize_ethos = no					#does this empire have a randomly generated ethos?
-#	shuffle_pop_ethos = no					#if pops belonging to this country type should mutate their ethos every now and then
+#	shuffle_pop_ethos = yes					#if pops belonging to this country type should mutate their ethos every now and then
 #	sub_title = "EXAMPLE_COUNTRY"			#sub title that will be shown for this empire. Like "Example Federation - Fallen Empire"
 #	sub_title_desc = "EXAMPLE_COUNTRY_DESC" #description for the sub title. used in tooltips
 #	needs_survey = yes						#default yes, if yes then planets must be surveyed before they can be colonized
@@ -18,7 +17,6 @@
 #	orbital_bombardment = yes				#default yes, does orbital bombardment
 #	diplomatic_wars = no					#default no, decides if the country needs to declare war to be hostile, only works against countries who also have diplomatic wars toggled on
 #	min_navy_for_wars = 0					#default 0, decides how large a navy this country wants (out of desired size) before declaring any wars
-# 	min_assault_armies_for_wars = 1			#default 1, deciades how many assault armies the country wants before declaring any wars
 # 	share_communications = no				#default yes, decides if they share communciations with anyone you have contact with
 #	relations = no							#default no, this controls whether the country makes us of opinion
 #	fallen_empire = no						#default no, this controls whether the empire uses the special Fallen Empire AI
@@ -80,7 +78,6 @@ default = {
 	counts_for_victory = yes
 	pop_growth = yes
 	playable = yes
-	randomize_ethos = yes
 	shuffle_pop_ethos = yes
 	diplomatic_wars = yes
 	relations = yes
@@ -90,10 +87,8 @@ default = {
 		enabled = yes
 		declare_war = yes
 		min_navy_for_wars = 0.5
-		min_assault_armies_for_wars = 6
 		colonizer = yes
 		internal_policies = yes
-		government = yes
 		traditions = yes
 		construction = yes
 		modules = {
@@ -614,7 +609,7 @@ pirate = {
 }
 
 fallen_empire = {
-	scaled_difficulty_bonuses = 0.5	# scales to galaxy size
+	has_difficulty_bonuses = yes
 	counts_for_victory = yes
 	sub_title = "COUNTRY_FALLEN_EMPIRE"
 	sub_title_desc = "COUNTRY_FALLEN_EMPIRE_DESC"
@@ -632,7 +627,6 @@ fallen_empire = {
 		enabled = yes
 		declare_war = yes
 		min_navy_for_wars = 0.0
-		min_assault_armies_for_wars = 6
 		colonizer = no
 		internal_policies = no
 		construction = no
@@ -723,7 +717,7 @@ fallen_empire = {
 }
 
 awakened_fallen_empire = {
-	scaled_difficulty_bonuses = 1.0	# scales to galaxy size
+	has_difficulty_bonuses = yes
 	counts_for_victory = yes
 	sub_title = "COUNTRY_AWAKENED_FALLEN_EMPIRE"
 	sub_title_desc = "COUNTRY_AWAKENED_FALLEN_EMPIRE_DESC"
@@ -744,10 +738,8 @@ awakened_fallen_empire = {
 		enabled = yes
 		declare_war = yes
 		min_navy_for_wars = 0.2
-		min_assault_armies_for_wars = 6
 		colonizer = yes
 		internal_policies = yes
-		government = no
 		construction = yes
 		tech = no
 		modules = {
@@ -857,8 +849,6 @@ awakened_fallen_empire = {
 				action_ask_to_be_released_subject
 				action_ask_to_join_federation
 				action_invite_to_federation
-				action_leave_federation
-				action_kick_from_federation
 			}
 			can_send = {
 				action_declare_war
@@ -873,8 +863,6 @@ awakened_fallen_empire = {
 				action_demand_signatory
 				action_release_subject
 				action_invite_to_federation
-				action_leave_federation
-				action_kick_from_federation				
 				action_open_borders
 				action_close_borders				
 			}
@@ -884,7 +872,6 @@ awakened_fallen_empire = {
 
 primitive = {
 	can_have_orbital_stations = yes
-	randomize_ethos = yes
 	shuffle_pop_ethos = yes
 
 	ai = {
@@ -919,7 +906,6 @@ rebel = {
 		declare_war = yes
 		colonizer = yes
 		internal_policies = yes
-		government = no
 		construction = yes
 		modules = {
 			military_minister_module
@@ -1032,7 +1018,6 @@ shroud_spirits = {
 #################
 
 swarm = {	
-	scaled_difficulty_bonuses = 3.0	# scales to galaxy size
 	counts_for_victory = yes
 	has_fortifications = yes
 	can_own_empty_planets = yes
@@ -1040,7 +1025,6 @@ swarm = {
 	can_planets_be_attacked = no
 	has_capital = no
 	enforces_borders = no
-	government = no
 	colonizing_title = "COLONIZING_PLANET_SWARM"
 	colonizing_desc = "PLANET_VIEW_UNDER_COLONIZATION_SWARM_DESC"
 	home_system = swarm_invasion_target_1
@@ -1083,7 +1067,6 @@ swarm = {
 }
 
 extradimensional = {
-	scaled_difficulty_bonuses = 3.0	# scales to galaxy size
 	counts_for_victory = yes
 	needs_survey = no
 	can_planets_be_attacked = no
@@ -1132,7 +1115,6 @@ extradimensional = {
 }
 
 extradimensional_2 = {
-	scaled_difficulty_bonuses = 3.0	# scales to galaxy size
 	counts_for_victory = yes
 	needs_survey = no
 	can_planets_be_attacked = no
@@ -1185,7 +1167,6 @@ extradimensional_2 = {
 }
 
 extradimensional_3 = {
-	scaled_difficulty_bonuses = 3.0	# scales to galaxy size
 	counts_for_victory = yes
 	needs_survey = no
 	can_planets_be_attacked = no
@@ -1234,7 +1215,6 @@ extradimensional_3 = {
 }
 
 ai_empire = {
-	scaled_difficulty_bonuses = 3.0	# scales to galaxy size
 	counts_for_victory = yes
 	has_fortifications = yes
 	playable = no
@@ -1244,7 +1224,6 @@ ai_empire = {
 		enabled = yes
 		colonizer = yes
 		internal_policies = yes
-		government = no
 		construction = yes
 		modules = {
 			empire_military_minister_module
@@ -1411,26 +1390,6 @@ cloud = {
 		needs_border_access = no
 		generate_borders = no
 		needs_colony = no
-	}
-	modules = {
-		exclusive_diplomacy_module = {} # Nothing is allowed, but we need this for relationships.
-		basic_technology_module = {}
-	}
-}
-
-portal_holder = {
-	show_in_contacts_list = no
-	has_leaders = no
-	government = no
-	ai = {
-		enabled = no
-	}
-	faction = {
-		hostile = no
-		needs_border_access = no
-		generate_borders = no
-		needs_colony = no
-		auto_delete = no
 	}
 	modules = {
 		exclusive_diplomacy_module = {} # Nothing is allowed, but we need this for relationships.

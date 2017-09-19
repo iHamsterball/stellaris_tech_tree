@@ -29,13 +29,9 @@ cede_planet = {
 			factor = 2.0
 			custom_tooltip = {
 				text = "DEMAND_CEDE_PLANET_NOT_MAIN_DEFENDER"
-				parameter:planet.owner = {
-					NOR = {
+				NOT = { 
+					parameter:planet.owner = {
 						is_same_value = from
-						AND = {
-							is_subject = yes
-							overlord = { is_same_value = from }
-						}
 					}
 				}
 			}
@@ -53,6 +49,11 @@ cede_planet = {
 				is_capital = yes
 			}
 		}
+
+		modifier = { factor = 0.5 	is_country_type = fallen_empire }
+		modifier = { factor = 0.5 	is_country_type = awakened_fallen_empire }
+		modifier = { factor = 0.5	parameter:planet.owner = { is_country_type = fallen_empire } }
+		modifier = { factor = 0.5	parameter:planet.owner = { is_country_type = awakened_fallen_empire } }
 		
 		modifier = {
 			factor = 0.8
@@ -124,12 +125,6 @@ cede_planet = {
 				text = "tr_supremacy_right_of_conquest"
 				has_tradition = tr_supremacy_right_of_conquest
 			}
-		}
-		
-		# Awakened Fallen Empires
-		modifier = {
-			factor = 0.66
-			is_country_type = awakened_fallen_empire
 		}
 	}
 	
@@ -389,16 +384,9 @@ liberate_planet = {
 		
 		modifier = {
 			factor = 2.0
-			custom_tooltip = {
-				text = "DEMAND_CEDE_PLANET_NOT_MAIN_DEFENDER"
+			NOT = { 
 				parameter:planet.owner = {
-					NOR = {
-						is_same_value = from
-						AND = {
-							is_subject = yes
-							overlord = { is_same_value = from }
-						}
-					}
+					is_same_value = from
 				}
 			}
 		}
@@ -415,6 +403,16 @@ liberate_planet = {
 				is_capital = yes
 			}
 		}	
+
+		modifier = {
+			factor = 0.5
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				parameter:planet.owner = { is_country_type = fallen_empire }
+				parameter:planet.owner = { is_country_type = awakened_fallen_empire }
+			}
+		}			
 
 		# Ruler Trait - Warlike
 		modifier = {
@@ -453,26 +451,11 @@ liberate_planet = {
 				has_technology = tech_galactic_campaigns
 			}
 		}
-		
-		# Awakened Fallen Empires
-		modifier = {
-			factor = 0.66
-			is_country_type = awakened_fallen_empire
-		}
 	}
 	
 	potential = {
 		NOT = { has_authority = auth_hive_mind }
-		NOT = { has_valid_civic = civic_fanatic_purifiers }		
-		hidden_trigger = {
-			OR = {
-				is_subject = no
-				is_subject_type = tributary
-				is_subject_type = thrall
-				is_subject_type = dominion
-				is_subject_type = satellite
-			}		
-		}	
+	
 		parameter:planet = {
 			owner = { 
 				NOR = {
@@ -482,7 +465,18 @@ liberate_planet = {
 				}
 			}
 		}	
-		
+	
+		custom_tooltip = {
+			fail_text = "war_demand_cede_planet_no_vassals"
+			OR = {
+				is_subject = no
+				NOT = {
+					overlord = {
+						is_same_value = from
+					}
+				}
+			}
+		}		
 		custom_tooltip = {
 			fail_text = "war_demand_cede_planet_liberation_war"
 			OR = {
@@ -572,15 +566,6 @@ liberate_planet = {
 	}
 	
 	effect = {
-		parameter:planet = {	
-			hidden_effect = {
-				add_threat = {
-					who = fromfromfrom
-					amount = 1.5 # scales to pops
-				}	
-			}
-		}
-	
 		if = {
 			limit = {
 				any_system = {
@@ -747,16 +732,9 @@ abandon_planet = {
 		
 		modifier = {
 			factor = 2.0
-			custom_tooltip = {
-				text = "DEMAND_CEDE_PLANET_NOT_MAIN_DEFENDER"
+			NOT = { 
 				parameter:planet.owner = {
-					NOR = {
-						is_same_value = from
-						AND = {
-							is_subject = yes
-							overlord = { is_same_value = from }
-						}
-					}
+					is_same_value = from
 				}
 			}
 		}
@@ -772,7 +750,17 @@ abandon_planet = {
 			hidden:parameter:planet = {
 				is_capital = yes
 			}
-		}			
+		}	
+
+		modifier = {
+			factor = 0.5
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				parameter:planet.owner = { is_country_type = fallen_empire }
+				parameter:planet.owner = { is_country_type = awakened_fallen_empire }
+			}
+		}				
 		
 		# Ruler Trait - Warlike
 		modifier = {
@@ -811,39 +799,23 @@ abandon_planet = {
 				has_technology = tech_galactic_campaigns
 			}
 		}
-		
-		# Awakened Fallen Empires
-		modifier = {
-			factor = 0.66
-			is_country_type = awakened_fallen_empire
-		}
-	}
-	
-	proposable = {
-		hidden:parameter:planet = {
-			custom_tooltip = {
-				fail_text = "war_demand_cede_or_liberate"
-				war_demand_counter = {
-					type = ceded_or_liberated
-					value < 1
-				}
-			}
-		}
 	}
 	
 	potential = {
 		parameter:planet = {
 			NOT = { is_planet_class = pc_habitat }
-		}	
-		hidden_trigger = {
+		}
+		custom_tooltip = {
+			fail_text = "war_demand_cede_planet_no_vassals"
 			OR = {
 				is_subject = no
-				is_subject_type = tributary
-				is_subject_type = thrall
-				is_subject_type = dominion
-				is_subject_type = satellite
-			}		
-		}						
+				NOT = {
+					overlord = {
+						is_same_value = from
+					}
+				}
+			}
+		}				
 		parameter:planet = {		
 			owner = {
 				OR = {
@@ -877,6 +849,10 @@ abandon_planet = {
 					root = { has_ai_personality = fallen_empire_spiritualist }
 					has_modifier = "holy_planet"
 				}
+				AND = {
+					root = { has_ai_personality = fallen_empire_spiritualist }
+					is_planet_class = pc_nuked
+				}	
 			}
 		}
 		OR = {
@@ -900,6 +876,10 @@ abandon_planet = {
 					}					
 				}			
 			}
+		}
+		war_demand_counter = {
+			type = ceded_or_liberated
+			value < 1
 		}
 	}
 	
@@ -927,7 +907,7 @@ abandon_planet = {
 			hidden_effect = {
 				add_threat = {
 					who = fromfromfrom
-					amount = 2 # scales to pops
+					amount = 1 # scales to pops
 				}				
 			
 				every_owned_pop = {
@@ -954,7 +934,7 @@ abandon_planet = {
 					}	
 				}
 			}
-			destroy_colony = { keep_buildings = no }
+			destroy_colony = yes
 		}			
 	}
 
@@ -995,6 +975,13 @@ abandon_planet = {
 						root = { has_ai_personality = awakened_fallen_empire_spiritualist }
 					}
 					NOT = { has_modifier = "holy_planet" }
+				}
+				OR = {
+					NOR = {
+						root = { has_ai_personality = fallen_empire_spiritualist }
+						root = { has_ai_personality = awakened_fallen_empire_spiritualist }
+					}
+					NOT = { is_planet_class = pc_nuked }
 				}		
 			}
 		}
@@ -1006,7 +993,10 @@ abandon_planet = {
 		
 		modifier = {
 			factor = 100.0
-			parameter:planet = { has_modifier = "holy_planet" }
+			OR = {
+				parameter:planet = { has_modifier = "holy_planet" }
+				parameter:planet = { is_planet_class = pc_nuked }
+			}
 			OR = {
 				has_ai_personality = fallen_empire_spiritualist
 				has_ai_personality = awakened_fallen_empire_spiritualist
@@ -1046,16 +1036,9 @@ dismantle_habitat = {
 		
 		modifier = {
 			factor = 2.0
-			custom_tooltip = {
-				text = "DEMAND_CEDE_PLANET_NOT_MAIN_DEFENDER"
+			NOT = { 
 				parameter:planet.owner = {
-					NOR = {
-						is_same_value = from
-						AND = {
-							is_subject = yes
-							overlord = { is_same_value = from }
-						}
-					}
+					is_same_value = from
 				}
 			}
 		}
@@ -1070,6 +1053,16 @@ dismantle_habitat = {
 			factor = 1.25
 			hidden:parameter:planet = {
 				is_capital = yes
+			}
+		}	
+
+		modifier = {
+			factor = 0.5
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				parameter:planet.owner = { is_country_type = fallen_empire }
+				parameter:planet.owner = { is_country_type = awakened_fallen_empire }
 			}
 		}				
 
@@ -1110,26 +1103,22 @@ dismantle_habitat = {
 				has_technology = tech_galactic_campaigns
 			}
 		}
-		
-		# Awakened Fallen Empires
-		modifier = {
-			factor = 0.66
-			is_country_type = awakened_fallen_empire
-		}		
 	}
 	
 	potential = {
 		parameter:planet = {
 			is_planet_class = pc_habitat
 		}
-		hidden_trigger = {
+		custom_tooltip = {
+			fail_text = "war_demand_cede_planet_no_vassals"
 			OR = {
 				is_subject = no
-				is_subject_type = tributary
-				is_subject_type = thrall
-				is_subject_type = dominion
-				is_subject_type = satellite
-			}		
+				NOT = {
+					overlord = {
+						is_same_value = from
+					}
+				}
+			}
 		}				
 		parameter:planet = {		
 			owner = {
@@ -1164,6 +1153,10 @@ dismantle_habitat = {
 					root = { has_ai_personality = fallen_empire_spiritualist }
 					has_modifier = "holy_planet"
 				}
+				AND = {
+					root = { has_ai_personality = fallen_empire_spiritualist }
+					is_planet_class = pc_nuked
+				}	
 			}
 		}
 		OR = {
@@ -1171,18 +1164,6 @@ dismantle_habitat = {
 			has_ethic = ethic_xenophobe	
 			has_ethic = ethic_fanatic_xenophobe
 		}		
-	}
-	
-	proposable = {
-		hidden:parameter:planet = {
-			custom_tooltip = {
-				fail_text = "war_demand_cede_or_liberate"
-				war_demand_counter = {
-					type = ceded_or_liberated
-					value < 1
-				}
-			}
-		}
 	}
 	
 	possible = {
@@ -1199,7 +1180,11 @@ dismantle_habitat = {
 					}					
 				}			
 			}
-		}	
+		}
+		war_demand_counter = {
+			type = ceded_or_liberated
+			value < 1
+		}
 	}
 	
 	demandable = {
@@ -1226,7 +1211,7 @@ dismantle_habitat = {
 			hidden_effect = {
 				add_threat = {
 					who = fromfromfrom
-					amount = 2 # scales to pops
+					amount = 1 # scales to pops
 				}				
 			
 				every_owned_pop = {
@@ -1253,7 +1238,7 @@ dismantle_habitat = {
 					}	
 				}
 			}
-			destroy_colony = { keep_buildings = no }
+			destroy_colony = yes
 			remove_planet = yes
 		}			
 	}
@@ -1295,6 +1280,13 @@ dismantle_habitat = {
 						root = { has_ai_personality = awakened_fallen_empire_spiritualist }
 					}
 					NOT = { has_modifier = "holy_planet" }
+				}
+				OR = {
+					NOR = {
+						root = { has_ai_personality = fallen_empire_spiritualist }
+						root = { has_ai_personality = awakened_fallen_empire_spiritualist }
+					}
+					NOT = { is_planet_class = pc_nuked }
 				}		
 			}
 		}
@@ -1306,7 +1298,10 @@ dismantle_habitat = {
 		
 		modifier = {
 			factor = 100.0
-			parameter:planet = { has_modifier = "holy_planet" }
+			OR = {
+				parameter:planet = { has_modifier = "holy_planet" }
+				parameter:planet = { is_planet_class = pc_nuked }
+			}
 			OR = {
 				has_ai_personality = fallen_empire_spiritualist
 				has_ai_personality = awakened_fallen_empire_spiritualist

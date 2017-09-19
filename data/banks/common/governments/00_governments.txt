@@ -1,5 +1,5 @@
 #gov_example = {
-#	possible = {}							# Determines if a government name can be chosen. AND trigger, scope: country; valid triggers: has_ethic, has_authority, has_valid_civic; everything else is undefined behavior!
+#	possible = {}							# Determines if a government name can be chosen. AND trigger, scope: country; valid triggers: has_ethic, has_authority, has_civic; everything else is undefined behavior!
 #	weight = {								# scriptable value, scope: country; the (possible) government type with the biggest weight is assigned to the country
 #		base = 100
 #	}
@@ -43,7 +43,6 @@ gov_despotic_empire = {
 # Constitutional Dictatorship
 gov_constitutional_dictatorship = {
 	ruler_title = RT_EXECUTOR
-	ruler_title_female = RT_EXECUTOR_FEMALE
 
 	possible = {
 		has_authority = auth_dictatorial
@@ -57,7 +56,6 @@ gov_constitutional_dictatorship = {
 # Plutocratic Oligarchy
 gov_plutocratic_oligarchy = {
 	ruler_title = RT_HIGH_COMMISSIONER
-	ruler_title_female = RT_HIGH_COMMISSIONER_FEMALE
 
 	possible = {
 		has_authority = auth_oligarchic
@@ -71,7 +69,6 @@ gov_plutocratic_oligarchy = {
 # Representative Democracy
 gov_representative_democracy = {
 	ruler_title = RT_PRESIDENT
-	ruler_title_female = RT_PRESIDENT_FEMALE
 
 	possible = {
 		has_authority = auth_democratic
@@ -141,7 +138,6 @@ gov_theocratic_dictatorship = {
 # Theocratic Oligarchy
 gov_theocratic_oligarchy = {
 	ruler_title = RT_CHIEF_PRECENTOR
-	ruler_title_female = RT_CHIEF_PRECENTOR_FEMALE
 
 	election_candidates = {
 		modifier = {
@@ -170,7 +166,6 @@ gov_theocratic_oligarchy = {
 # Theocratic Republic
 gov_theocratic_republic = {
 	ruler_title = RT_REVERED_ELDER
-	ruler_title_female = RT_REVERED_ELDER_FEMALE
 
 	possible = {
 		has_authority = auth_democratic
@@ -190,14 +185,13 @@ gov_divine_empire = {
 	ruler_title = RT_GOD_EMPEROR
 	ruler_title_female = RT_GOD_EMPRESS
 	heir_title = HT_SAINT
-	heir_title_female = HT_SAINT_FEMALE
 
 	use_regnal_names = yes
 	dynastic_last_names = yes
 
 	possible = {
 		has_authority = auth_imperial
-		has_valid_civic = civic_imperial_cult
+		has_civic = civic_imperial_cult
 	}
 
 	weight = {
@@ -208,7 +202,6 @@ gov_divine_empire = {
 # Holy Tribunal
 gov_holy_tribunal = {
 	ruler_title = RT_HIGH_INQUISITOR
-	ruler_title_female = RT_HIGH_INQUISITOR_FEMALE
 
 	election_candidates = {
 		modifier = {
@@ -223,7 +216,7 @@ gov_holy_tribunal = {
 
 	possible = {
 		has_authority = auth_oligarchic
-		has_valid_civic = civic_exalted_priesthood
+		has_civic = civic_exalted_priesthood
 	}
 
 	weight = {
@@ -260,8 +253,8 @@ gov_star_empire = {
 		modifier = {
 			factor = 1.10
 			OR = {
-				has_valid_civic = civic_distinguished_admiralty
-				has_valid_civic = civic_nationalistic_zeal
+				has_civic = civic_distinguished_admiralty
+				has_civic = civic_nationalistic_zeal
 			}
 		}
 	}
@@ -270,7 +263,6 @@ gov_star_empire = {
 # Military Dictatorship
 gov_military_dictatorship = {
 	ruler_title = RT_GRAND_MARSHAL
-	ruler_title_female = RT_GRAND_MARSHAL_FEMALE
 
 	election_candidates = {
 		modifier = {
@@ -303,8 +295,8 @@ gov_military_dictatorship = {
 		modifier = {
 			factor = 1.10
 			OR = {
-				has_valid_civic = civic_distinguished_admiralty
-				has_valid_civic = civic_nationalistic_zeal
+				has_civic = civic_distinguished_admiralty
+				has_civic = civic_nationalistic_zeal
 			}
 		}
 	}
@@ -313,7 +305,6 @@ gov_military_dictatorship = {
 # Military Junta
 gov_military_junta = {
 	ruler_title = RT_ARCHON
-	ruler_title_female = RT_ARCHON_FEMALE
 
 	election_candidates = {
 		modifier = {
@@ -346,8 +337,8 @@ gov_military_junta = {
 		modifier = {
 			factor = 1.10
 			OR = {			
-				has_valid_civic = civic_distinguished_admiralty
-				has_valid_civic = civic_nationalistic_zeal
+				has_civic = civic_distinguished_admiralty
+				has_civic = civic_nationalistic_zeal
 			}
 		}
 	}
@@ -356,7 +347,6 @@ gov_military_junta = {
 # Military Commissariat
 gov_military_commissariat = {
 	ruler_title = RT_COMMISSARY_GENERAL
-	ruler_title_female = RT_COMMISSARY_GENERAL_FEMALE
 
 	election_candidates = {
 		modifier = {
@@ -394,8 +384,8 @@ gov_military_commissariat = {
 		modifier = {
 			factor = 1.10
 			OR = {			
-				has_valid_civic = civic_distinguished_admiralty
-				has_valid_civic = civic_nationalistic_zeal
+				has_civic = civic_distinguished_admiralty
+				has_civic = civic_nationalistic_zeal
 			}
 		}
 	}
@@ -413,7 +403,7 @@ gov_martial_empire = {
 
 	possible = {
 		has_authority = auth_imperial
-		has_valid_civic = civic_warrior_culture
+		has_civic = civic_warrior_culture
 	}
 
 	weight = {
@@ -442,7 +432,7 @@ gov_martial_dictatorship = {
 
 	possible = {
 		has_authority = auth_dictatorial
-		has_valid_civic = civic_warrior_culture
+		has_civic = civic_warrior_culture
 	}
 
 	weight = {
@@ -453,7 +443,6 @@ gov_martial_dictatorship = {
 # War Council
 gov_war_council = {
 	ruler_title = RT_WARLORD
-	ruler_title_female = RT_WARLORD_FEMALE
 
 	election_candidates = {
 		modifier = {
@@ -471,7 +460,7 @@ gov_war_council = {
 
 	possible = {
 		has_authority = auth_oligarchic
-		has_valid_civic = civic_warrior_culture
+		has_civic = civic_warrior_culture
 	}
 
 	weight = {
@@ -482,7 +471,6 @@ gov_war_council = {
 # Assembly of Clans
 gov_assembly_of_clans = {
 	ruler_title = RT_CLAN_SPEAKER
-	ruler_title_female = RT_CLAN_SPEAKER_FEMALE
 
 	election_candidates = {
 		modifier = {
@@ -500,7 +488,7 @@ gov_assembly_of_clans = {
 
 	possible = {
 		has_authority = auth_democratic
-		has_valid_civic = civic_warrior_culture
+		has_civic = civic_warrior_culture
 	}
 
 	weight = {
@@ -511,7 +499,6 @@ gov_assembly_of_clans = {
 # Citizen Stratocracy
 gov_citizen_stratocracy = {
 	ruler_title = RT_STRATEGOS
-	ruler_title_female = RT_STRATEGOS_FEMALE
 
 	election_candidates = {
 		modifier = {
@@ -529,7 +516,7 @@ gov_citizen_stratocracy = {
 
 	possible = {
 		has_authority = auth_oligarchic
-		has_valid_civic = civic_citizen_service
+		has_civic = civic_citizen_service
 	}
 
 	weight = {
@@ -540,7 +527,6 @@ gov_citizen_stratocracy = {
 # Citizen Republic
 gov_citizen_republic = {
 	ruler_title = RT_CONSUL
-	ruler_title_female = RT_CONSUL_FEMALE
 
 	election_candidates = {
 		modifier = {
@@ -563,7 +549,7 @@ gov_citizen_republic = {
 
 	possible = {
 		has_authority = auth_democratic
-		has_valid_civic = civic_citizen_service
+		has_civic = civic_citizen_service
 	}
 
 	weight = {
@@ -599,7 +585,7 @@ gov_irenic_monarchy = {
 		}
 		modifier = {
 			factor = 1.5
-			has_valid_civic = civic_agrarian_idyll
+			has_civic = civic_agrarian_idyll
 		}
 	}
 }
@@ -607,7 +593,6 @@ gov_irenic_monarchy = {
 # Irenic Dictatorship
 gov_irenic_dictatorship = {
 	ruler_title = RT_SERENE_PROTECTOR
-	ruler_title_female = RT_SERENE_PROTECTOR_FEMALE
 
 	election_candidates = {
 		modifier = {
@@ -644,7 +629,7 @@ gov_irenic_dictatorship = {
 		}
 		modifier = {
 			factor = 1.5
-			has_valid_civic = civic_agrarian_idyll
+			has_civic = civic_agrarian_idyll
 		}
 	}
 }
@@ -652,7 +637,6 @@ gov_irenic_dictatorship = {
 # Irenic Bureaucracy
 gov_irenic_bureaucracy = {
 	ruler_title = RT_COORDINATOR
-	ruler_title_female = RT_COORDINATOR_FEMALE
 
 	election_candidates = {
 		modifier = {
@@ -689,7 +673,7 @@ gov_irenic_bureaucracy = {
 		}
 		modifier = {
 			factor = 1.5
-			has_valid_civic = civic_agrarian_idyll
+			has_civic = civic_agrarian_idyll
 		}
 	}
 }
@@ -697,7 +681,6 @@ gov_irenic_bureaucracy = {
 # Moral Democracy
 gov_moral_democracy = {
 	ruler_title = RT_PRIME_MINISTER
-	ruler_title_female = RT_PRIME_MINISTER_FEMALE
 
 	election_candidates = {
 		modifier = {
@@ -734,7 +717,7 @@ gov_moral_democracy = {
 		}
 		modifier = {
 			factor = 1.5
-			has_valid_civic = civic_agrarian_idyll
+			has_civic = civic_agrarian_idyll
 		}
 	}
 }
@@ -752,7 +735,7 @@ gov_celestial_empire = {
 	possible = {
 		has_authority = auth_imperial
 		has_ethic = ethic_spiritualist
-		has_valid_civic = civic_inwards_perfection
+		has_civic = civic_inwards_perfection
 	}
 
 	weight = {
@@ -765,9 +748,7 @@ gov_celestial_empire = {
 # Despotic Hegemony
 gov_despotic_hegemony = {
 	ruler_title = RT_OVERLORD
-	ruler_title_female = RT_OVERLORD_FEMALE
 	heir_title = HT_DEPUTY_OVERLORD
-	heir_title_female = HT_DEPUTY_OVERLORD_FEMALE
 
 	use_regnal_names = yes
 	dynastic_last_names = yes
@@ -788,7 +769,7 @@ gov_despotic_hegemony = {
 		}
 		modifier = {
 			factor = 1.5
-			has_valid_civic = civic_mechanists
+			has_civic = civic_mechanists
 		}
 	}
 }
@@ -796,7 +777,6 @@ gov_despotic_hegemony = {
 # Totalitarian Regime
 gov_totalitarian_regime = {
 	ruler_title = RT_PRIMARCH
-	ruler_title_female = RT_PRIMARCH_FEMALE
 
 	possible = {
 		has_authority = auth_dictatorial
@@ -814,7 +794,7 @@ gov_totalitarian_regime = {
 		}
 		modifier = {
 			factor = 1.5
-			has_valid_civic = civic_mechanists
+			has_civic = civic_mechanists
 		}
 	}
 }
@@ -840,7 +820,7 @@ gov_executive_committee = {
 		}
 		modifier = {
 			factor = 1.5
-			has_valid_civic = civic_mechanists
+			has_civic = civic_mechanists
 		}
 	}
 }
@@ -848,7 +828,6 @@ gov_executive_committee = {
 # Direct Democracy
 gov_direct_democracy = {
 	ruler_title = RT_CHANCELLOR
-	ruler_title_female = RT_CHANCELLOR_FEMALE
 
 	possible = {
 		has_authority = auth_democratic
@@ -866,7 +845,7 @@ gov_direct_democracy = {
 		}
 		modifier = {
 			factor = 1.5
-			has_valid_civic = civic_mechanists
+			has_civic = civic_mechanists
 		}
 	}
 }
@@ -874,16 +853,14 @@ gov_direct_democracy = {
 # Illuminated Autocracy
 gov_illuminated_autocracy = {
 	ruler_title = RT_PRIMUS
-	ruler_title_female = RT_PRIMUS_FEMALE
 	heir_title = HT_SECUNDUS
-	heir_title_female = HT_SECUNDUS_FEMALE
 
 	use_regnal_names = yes
 	dynastic_last_names = yes
 
 	possible = {
 		has_authority = auth_imperial
-		has_valid_civic = civic_technocracy
+		has_civic = civic_technocracy
 	}
 
 	weight = {
@@ -894,7 +871,6 @@ gov_illuminated_autocracy = {
 # Technocratic Dictatorship
 gov_technocratic_dictatorship = {
 	ruler_title = RT_OVERSEER
-	ruler_title_female = RT_OVERSEER_FEMALE
 
 	election_candidates = {
 		modifier = {
@@ -909,7 +885,7 @@ gov_technocratic_dictatorship = {
 
 	possible = {
 		has_authority = auth_dictatorial
-		has_valid_civic = civic_technocracy
+		has_civic = civic_technocracy
 	}
 
 	weight = {
@@ -920,7 +896,6 @@ gov_technocratic_dictatorship = {
 # Science Directorate
 gov_science_directorate = {
 	ruler_title = RT_DIRECTOR_GENERAL
-	ruler_title_female = RT_DIRECTOR_GENERAL_FEMALE
 
 	election_candidates = {
 		modifier = {
@@ -935,7 +910,7 @@ gov_science_directorate = {
 
 	possible = {
 		has_authority = auth_oligarchic
-		has_valid_civic = civic_technocracy
+		has_civic = civic_technocracy
 	}
 
 	weight = {
@@ -946,7 +921,6 @@ gov_science_directorate = {
 # Rational Consensus
 gov_rational_consensus = {
 	ruler_title = RT_FIRST_SPEAKER
-	ruler_title_female = RT_FIRST_SPEAKER_FEMALE
 
 	election_candidates = {
 		modifier = {
@@ -961,7 +935,7 @@ gov_rational_consensus = {
 
 	possible = {
 		has_authority = auth_democratic
-		has_valid_civic = civic_technocracy
+		has_civic = civic_technocracy
 	}
 
 	weight = {
@@ -974,16 +948,14 @@ gov_rational_consensus = {
 # Blood Court
 gov_blood_court = {
 	ruler_title = RT_HIGH_EXECUTIONER
-	ruler_title_female = RT_HIGH_EXECUTIONER_FEMALE
 	heir_title = HT_SENIOR_EXECUTIONER
-	heir_title_female = HT_SENIOR_EXECUTIONER_FEMALE
 
 	use_regnal_names = yes
 	dynastic_last_names = yes
 
 	possible = {
 		has_authority = auth_imperial
-		has_valid_civic = civic_fanatic_purifiers
+		has_civic = civic_fanatic_purifiers
 	}
 
 	weight = {
@@ -994,11 +966,11 @@ gov_blood_court = {
 # Purity Order
 gov_purity_order = {
 	ruler_title = RT_LORD_PURIFIER
-	ruler_title_female = RT_LADY_PURIFIER
+	ruler_title_female =  RT_LADY_PURIFIER
 
 	possible = {
 		has_authority = auth_dictatorial
-		has_valid_civic = civic_fanatic_purifiers
+		has_civic = civic_fanatic_purifiers
 	}
 
 	weight = {
@@ -1009,11 +981,10 @@ gov_purity_order = {
 # Purification Committee
 gov_purification_committee = {
 	ruler_title = RT_GRAND_ARBITER
-	ruler_title_female = RT_GRAND_ARBITER_FEMALE
 
 	possible = {
 		has_authority = auth_oligarchic
-		has_valid_civic = civic_fanatic_purifiers
+		has_civic = civic_fanatic_purifiers
 	}
 
 	weight = {
@@ -1024,11 +995,10 @@ gov_purification_committee = {
 # Purity Assembly
 gov_purity_assembly = {
 	ruler_title = RT_PRIME_JUSTICIAR
-	ruler_title_female = RT_PRIME_JUSTICIAR_FEMALE
 
 	possible = {
 		has_authority = auth_democratic
-		has_valid_civic = civic_fanatic_purifiers
+		has_civic = civic_fanatic_purifiers
 	}
 
 	weight = {
@@ -1041,7 +1011,6 @@ gov_purity_assembly = {
 # Megacorporation
 gov_megacorporation = {
 	ruler_title = RT_CEO
-	ruler_title_female = RT_CEO_FEMALE
 
 	election_candidates = {
 		modifier = {
@@ -1056,7 +1025,7 @@ gov_megacorporation = {
 
 	possible = {
 		has_authority = auth_oligarchic
-		has_valid_civic = civic_corporate_dominion
+		has_civic = civic_corporate_dominion
 	}
 
 	weight = {
@@ -1076,7 +1045,7 @@ gov_enlightened_monarchy = {
 
 	possible = {
 		has_authority = auth_imperial
-		has_valid_civic = civic_philosopher_king
+		has_civic = civic_philosopher_king
 	}
 
 	weight = {
@@ -1091,7 +1060,7 @@ gov_enlightened_dictatorship = {
 
 	possible = {
 		has_authority = auth_dictatorial
-		has_valid_civic = civic_philosopher_king
+		has_civic = civic_philosopher_king
 	}
 
 	weight = {
@@ -1102,7 +1071,6 @@ gov_enlightened_dictatorship = {
 # Hive Mind
 gov_hive_mind = {
 	ruler_title = RT_HIVE_MIND
-	ruler_title_female = RT_HIVE_MIND_FEMALE
 	resource_tag = hive_mind
 
 	possible = {
@@ -1122,8 +1090,8 @@ gov_stagnant_ascendancy = {
 	ruler_title_female = RT_EMPRESS
 
 	possible = {
-		has_valid_civic = civic_lethargic_leadership
-		has_valid_civic = civic_empire_in_decline
+		has_civic = civic_lethargic_leadership
+		has_civic = civic_empire_in_decline
 	}
 
 	weight = {
@@ -1137,8 +1105,8 @@ gov_awakened_ascendancy = {
 	ruler_title_female = RT_EMPRESS
 
 	possible = {
-		has_valid_civic = civic_revanchist_fervor
-		has_valid_civic = civic_ancient_caches_of_technology
+		has_civic = civic_revanchist_fervor
+		has_civic = civic_ancient_caches_of_technology
 	}
 
 	weight = {
@@ -1152,8 +1120,8 @@ gov_tribal_society = {
 	ruler_title_female = RT_QUEEN
 
 	possible = {
-		has_valid_civic = civic_secret_of_fire
-		has_valid_civic = civic_the_wheel
+		has_civic = civic_secret_of_fire
+		has_civic = civic_the_wheel
 	}
 
 	weight = {
@@ -1167,8 +1135,8 @@ gov_feudal_realms = {
 	ruler_title_female = RT_QUEEN
 
 	possible = {
-		has_valid_civic = civic_landed_nobility
-		has_valid_civic = civic_flat_world_theory
+		has_civic = civic_landed_nobility
+		has_civic = civic_flat_world_theory
 	}
 
 	weight = {
@@ -1179,11 +1147,10 @@ gov_feudal_realms = {
 # Fragmented Nation States
 gov_fragmented_nation_states = {
 	ruler_title = RT_SECRETARY
-	ruler_title_female = RT_SECRETARY_FEMALE
 
 	possible = {
-		has_valid_civic = civic_increasing_urbanization
-		has_valid_civic = civic_atmospheric_pollution
+		has_civic = civic_increasing_urbanization
+		has_civic = civic_atmospheric_pollution
 	}
 
 	weight = {
@@ -1196,7 +1163,7 @@ gov_curator_enclave = {
 	ruler_title = RT_HIGH_CURATOR
 
 	possible = {
-		has_valid_civic = civic_ancient_preservers
+		has_civic = civic_ancient_preservers
 	}
 
 	weight = {
@@ -1209,7 +1176,7 @@ gov_trader_enclave = {
 	ruler_title = RT_HIGH_TRADER
 
 	possible = {
-		has_valid_civic = civic_trading_conglomerate
+		has_civic = civic_trading_conglomerate
 	}
 
 	weight = {
@@ -1222,7 +1189,7 @@ gov_artist_enclave = {
 	ruler_title = RT_HIGH_ARTIST
 
 	possible = {
-		has_valid_civic = civic_artist_collective
+		has_civic = civic_artist_collective
 	}
 
 	weight = {
@@ -1235,7 +1202,7 @@ gov_military_order = {
 	ruler_title = RT_GRAND_MASTER
 
 	possible = {
-		has_valid_civic = civic_military_order
+		has_civic = civic_military_order
 	}
 
 	weight = {
@@ -1248,7 +1215,7 @@ gov_machine_consciousness = {
 	ruler_title = RT_CORE_DIRECTIVE
 
 	possible = {
-		has_valid_civic = civic_machine_consciousness
+		has_civic = civic_machine_consciousness
 	}
 
 	weight = {

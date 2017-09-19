@@ -26,7 +26,6 @@ isolationist = {
 	can_join_faction = {
 		is_enslaved = no
 		is_being_purged = no
-		has_culture_shock = no
 		NOT = { has_trait = trait_nerve_stapled }
 		OR = {
 			has_ethic = ethic_xenophobe
@@ -92,13 +91,13 @@ isolationist = {
 		base = 100
 	}
 
-	demand = { # "ISOLATIONIST_PHILOSOPHY"
+	demand = {
 		title = "ISOLATIONIST_PHILOSOPHY"
 		unfulfilled_title = "ISOLATIONIST_NO_PHILOSOPHY"
 		desc = "ISOLATIONIST_PHILOSOPHY_DESC"
 
 		fulfilled_effect = 5
-		unfulfilled_effect = -15
+		unfulfilled_effect = -10
 
 		potential = {
 			exists = owner
@@ -112,152 +111,65 @@ isolationist = {
 		}
 
 		trigger = {
-			owner = {
-				NOT = { has_policy_flag = unrestricted_wars }
-			}
+			owner = { has_policy_flag = no_wars }
 		}
 	}
-
-	demand = { # "ISOLATIONIST_NO_AGGRESSIVE_WAR"
-		title = "ISOLATIONIST_NO_AGGRESSIVE_WAR"
-		unfulfilled_title = "ISOLATIONIST_AGGRESSIVE_WAR"
-		desc = "ISOLATIONIST_NO_AGGRESSIVE_WAR_DESC"
-
-		unfulfilled_effect = -10
-
-		potential = {
-			exists = owner
-			owner = {
-				num_communications > 2
-				any_war = { is_war_participant = { who = prev side = attackers } }
-			}
-		}
-
-		trigger = {
-			owner = {
-				NOR = {
-					any_war = { is_war_participant = { who = prev side = attackers } }
-					has_country_flag = entered_war_as_defender
-				}
-			}
-		}
-	}
-
-	demand = { # "ISOLATIONIST_NO_WAR"
-		title = "ISOLATIONIST_NO_DEFENSIVE_WAR"
-		unfulfilled_title = "ISOLATIONIST_DEFENSIVE_WAR"
-		desc = "ISOLATIONIST_NO_DEFENSIVE_WAR_DESC"
-
-		unfulfilled_effect = -5
-
-		potential = {
-			exists = owner
-			owner = {
-				num_communications > 2
-			}
-		}
-
-		trigger = {
-			owner = {
-				OR = {
-					has_country_flag = entered_war_as_defender
-				}
-			}
-		}
-	}
-
-	#demand = {
-	#	title = "ISOLATIONIST_NO_DIPLO"
-	#	unfulfilled_title = "ISOLATIONIST_DIPLO"
-	#	desc = "ISOLATIONIST_NO_DIPLO_DESC"
-	#	
-	#	unfulfilled_effect = -5
-	#	
-	#	potential = {
-	#		exists = owner
-	#		owner = {
-	#			num_communications > 0
-	#		}
-	#	}
-	#	
-	#	trigger = {
-	#		owner = {
-	#			NOT = {
-	#				any_relation = {
-	#					has_communications = root.owner
-	#					OR = {
-	#						has_diplo_migration_treaty = root.owner
-	#						has_research_agreement = root.owner
-	#						is_in_federation_with = root.owner
-	#						is_guaranteeing = root.owner
-	#						has_defensive_pact = root.owner
-	#					}
-	#				}
-	#			}
-	#		}
-	#	}
-	#}
-
-
 
 	demand = {
-		title = "ISOLATIONIST_MOVEMENT_RESTRICTED"
-		unfulfilled_title = "ISOLATIONIST_MOVEMENT_UNRESTRICTED"
-		desc = "ISOLATIONIST_MOVEMENT_RESTRICTED_DESC"
+		title = "ISOLATIONIST_NO_DIPLO"
+		unfulfilled_title = "ISOLATIONIST_DIPLO"
+		desc = "ISOLATIONIST_NO_DIPLO_DESC"
 		
-		unfulfilled_effect = -10
+		unfulfilled_effect = -5
 		
 		potential = {
 			exists = owner
 			owner = {
-				num_communications > 2
+				num_communications > 0
 			}
 		}
 		
 		trigger = {
 			owner = {
-				NOR = {
+				NOT = {
 					any_relation = {
 						has_communications = root.owner
 						OR = {
 							has_diplo_migration_treaty = root.owner
-							root = {
-								owner = {
-									has_diplo_migration_treaty = prevprev
-								}
-							}
+							has_research_agreement = root.owner
+							is_in_federation_with = root.owner
+							is_guaranteeing = root.owner
+							has_defensive_pact = root.owner
 						}
 					}
-					has_policy_flag = refugees_allowed
 				}
 			}
 		}
 	}
 
-	#demand = {
-	#	title = "ISOLATIONIST_REFUGEES_RESTRICTED"
-	#	unfulfilled_title = "ISOLATIONIST_REFUGEES_UNRESTRICTED"
-	#	desc = "ISOLATIONIST_REFUGEES_RESTRICTED_DESC"
-#
-	#	unfulfilled_effect = -10
-#
-	#	potential = {
-	#		exists = owner
-	#		owner = {
-	#			any_relation = {
-	#				has_communications = root.owner
-	#				is_country_type = default
-	#			}
-	#		}
-	#	}
-#
-	#	trigger = {
-	#		owner = {
-	#			NOT = { has_policy_flag = refugees_allowed }
-	#		}
-	#	}
-	#}
+	demand = {
+		title = "ISOLATIONIST_REFUGEES_RESTRICTED"
+		unfulfilled_title = "ISOLATIONIST_REFUGEES_UNRESTRICTED"
+		desc = "ISOLATIONIST_REFUGEES_RESTRICTED_DESC"
 
+		unfulfilled_effect = -10
+
+		potential = {
+			exists = owner
+			owner = {
+				any_relation = {
+					has_communications = root.owner
+					is_country_type = default
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				NOT = { has_policy_flag = refugees_allowed }
+			}
+		}
+	}
 
 	demand = {
 		title = "ISOLATIONIST_NON_AGGRESSION1"
@@ -428,6 +340,74 @@ isolationist = {
 			}
 		}
 	}
+
+	#demand = {
+	#	title = "ISOLATIONIST_STRONG_ARMY"
+	#	unfulfilled_title = "ISOLATIONIST_WEAK_ARMY"
+	#	desc = "ISOLATIONIST_STRONG_ARMY_DESC"
+	#	
+	#	fulfilled_effect = 5
+	#	unfulfilled_effect = -15
+	#	
+	#	potential = {
+	#		owner = {
+	#			num_communications > 0
+	#			any_owned_planet = {
+	#				num_pops > 4
+	#			}
+	#		}
+	#	}
+	#	
+	#	trigger = {
+	#		owner = {
+	#			NOT = {
+	#				any_owned_planet = {
+	#					num_pops > 4
+	#					count_armies = {
+	#						count < 3
+	#						limit = { army_type = defense_army }
+	#					}
+	#				}
+	#			}
+	#		}
+	#	}
+	#}
+
+	#demand = {
+	#	title = "ISOLATIONIST_DEFENSIVE_STATIONS"
+	#	unfulfilled_title = "ISOLATIONIST_FEW_DEFENSIVE_STATIONS"
+	#	desc = "ISOLATIONIST_DEFENSIVE_STATIONS_DESC"
+	#	
+	#	fulfilled_effect = 10
+	#	unfulfilled_effect = -5
+	#	
+	#	potential = {
+	#		exists = owner
+	#		owner = {
+	#			num_communications > 0
+	#		}
+	#	}
+	#	
+	#	trigger = {
+	#		owner = {
+	#			NOT = {
+	#				any_owned_planet = {
+	#					solar_system = {
+	#						NOT = {
+	#							any_ship_in_system = {
+	#								OR = {
+	#									is_ship_size = military_station_small
+	#									is_ship_size = military_station_medium
+	#									is_ship_size = military_station_large
+	#								}
+	#							}
+	#						}
+	#					}
+	#				}
+	#			}
+	#		}
+	#	}
+	#}
 	
 	on_create = {
 		pop_faction_event = { id = factions.1 }
@@ -465,7 +445,7 @@ isolationist = {
 				custom_tooltip = {
 					fail_text = EMBRACE_FACTION_COOLDOWN
 					parameter:empire = {
-						NOT = { has_modifier = embraced_faction_timer }
+						NOT = { has_country_flag = embraced_faction }
 					}
 				}
 				support > 0.20
@@ -486,73 +466,18 @@ isolationist = {
 				}
 				parameter:empire = {
 					shift_ethic = ethic_xenophobe
+					hidden_effect = { set_timed_country_flag = { flag = embraced_faction days = 7200 } }
 					hidden_effect = {
-						every_pop_faction = { # embraces xenophobe ethos
-							limit = { is_pop_faction_type = supremacist }
-							add_modifier = { modifier = embraced_faction days = 3600 }
-							if = {
-								limit = {
-									has_modifier = promoted_faction
-								}
-								remove_modifier = promoted_faction
-							}
-						}
-						add_modifier = { modifier = embraced_faction_timer days = 3600 }
 						every_pop_faction = {
 							limit = { NOT = { is_same_value = root } }
 							add_modifier = { modifier = embraced_another_faction days = 3600 }
 						}
 					}
 				}
-				hidden_effect = {
-					save_event_target_as = TargetFaction
-					parameter:empire = {
-						every_relation = {
-							limit = {
-								is_ai = no
-								is_country_type = default			
-								has_communications = prev
-							}
-							country_event = { id = factions.2000 }
-						}
-					}				
-				}				
 			}
 			
 			ai_weight = {
-				base = 1
-				modifier = {
-					factor = 0
-					support < 0.50
-					owner = {
-						has_ethic = ethic_xenophobe
-					}
-				}
-				modifier = {
-					factor = 0
-					NOT = { 
-						owner = {
-							exists = ruler
-							ruler = {
-								leader_of_faction = isolationist
-							}
-						}
-					}
-				}
-				modifier = {
-					factor = 0
-					owner = {
-						count_pop_factions = {
-							limit = {
-								NOR = {
-									is_pop_faction_type = democratic_election_faction_1
-									is_pop_faction_type = democratic_election_faction_2
-								}
-							}
-							count < 4
-						}					
-					}
-				}				
+				base = 0
 			}
 		}
 		promote_faction = {
@@ -602,17 +527,6 @@ isolationist = {
 					remove_modifier = promoted_faction
 				}
 				parameter:empire = {
-					hidden_effect = {
-						every_pop_faction = {
-							limit = { is_pop_faction_type = supremacist }
-							if = {
-								limit = {
-									has_modifier = promoted_faction
-								}
-								remove_modifier = promoted_faction
-							}
-						}
-					}
 					remove_modifier = promoted_xenophobe
 				}
 			}
@@ -638,12 +552,6 @@ isolationist = {
 			effect = {
 				add_modifier = { modifier = suppressed_faction days = -1 }
 				parameter:empire = {
-					hidden_effect = {
-						every_pop_faction = {
-							limit = { is_pop_faction_type = supremacist }
-							add_modifier = { modifier = suppressed_faction days = -1 }
-						}
-					}
 					add_modifier = { modifier = suppressed_xenophobe days = -1 }
 				}
 			}
@@ -667,12 +575,6 @@ isolationist = {
 				remove_modifier = suppressed_faction
 				parameter:empire = {
 					remove_modifier = suppressed_xenophobe
-					hidden_effect = {
-						every_pop_faction = {
-							limit = { is_pop_faction_type = supremacist }
-							remove_modifier = suppressed_faction
-						}
-					}
 				}
 			}
 			

@@ -24,7 +24,6 @@ energy = {
 	AI_category = energy
 	max = 5000
 	base_income = 0
-	capital_building_resource = yes # When placing colony, AI should want to place on this resource
 }
 
 minerals = {
@@ -234,7 +233,7 @@ sr_living_metal = {
 	is_global = yes
 	
 	modifier = {
-		megastructure_build_speed_mult = 0.3
+		ship_armor_mult = 0.05
 		ship_auto_repair_add = 0.02
 	}
 }

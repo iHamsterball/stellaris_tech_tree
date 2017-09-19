@@ -2,7 +2,6 @@
 #	entity = "bawling_pink_rainbow_graphics"
 #	construction_entity = "bawling_pink_rainbow_graphics_construction"
 #	portrait = "GFX_my_piquant_megastructure_background"
-#	upgrade_desc = default|hide		# default: 'default'. Use 'hide' to hide to hide this stage from the upgrade list.
 #	upgrade_from = {
 #		my_flamboyant_megastructure
 #	}
@@ -27,7 +26,7 @@
 #		planet_possible = {}		# trigger, scope: planet
 #	}
 #
-#	on_build_start = {}				# effects, scope: galactic object, from: country, fromfrom: megastructure instance (when upgrading existing megastructure)
+#	on_build_start = {}				# effects, scope: galactic object, from: country
 #	on_build_cancel = {}			# effects, scope: galactic object, from: country
 #	on_build_complete = {}			# effects, scope: galactic object, from: country, fromfrom: megastructure instance
 #

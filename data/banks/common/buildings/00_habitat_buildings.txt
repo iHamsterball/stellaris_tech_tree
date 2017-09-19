@@ -44,7 +44,7 @@ building_hab_astro_mining_facility = {
 	base_buildtime = 360
 	
 	cost = {
-		minerals = 200
+		minerals = 150
 	}
 	
 	potential = {
@@ -55,7 +55,7 @@ building_hab_astro_mining_facility = {
 	}
 	
 	produced_resources = {
-		minerals = 4
+		minerals = 3
 	}
 	
 	required_resources = {
@@ -76,33 +76,15 @@ building_hab_solar_power_processor = {
 			has_building = "building_hab_capital"
 			solar_system = {
 				custom_tooltip = {
-					fail_text = "requires_no_black_hole_or_dyson_sphere"
-					NOR = {
-						is_star_class = sc_black_hole
-						has_megastructure = dyson_sphere_3
-						has_megastructure = dyson_sphere_4
-						has_megastructure = dyson_sphere_5
-					}
-				}				
-			}
-		}	
-	}
-	
-	destroy_if = {
-		planet = {		
-			solar_system = {
-				OR = {
-					is_star_class = sc_black_hole	
-					has_megastructure = dyson_sphere_3
-					has_megastructure = dyson_sphere_4
-					has_megastructure = dyson_sphere_5
-				}
+					fail_text = "requires_no_black_hole"
+					NOT = { is_star_class = sc_black_hole }
+				}		
 			}
 		}	
 	}
 	
 	produced_resources = {
-		energy = 8
+		energy = 10
 	}
 }
 
@@ -133,7 +115,7 @@ building_hab_laboratory_module = {
 	base_buildtime = 360
 	
 	cost = {
-		minerals = 250
+		minerals = 200
 	}
 	
 	potential = {
@@ -170,11 +152,11 @@ building_hab_cultural_center = {
 	}
 	
 	produced_resources = {		
-		unity = 4
+		unity = 3
 	}
 	
 	planet_modifier = {
-		pop_happiness = 0.05
+		pop_happiness = 0.1
 	}
 	
 	required_resources = {
@@ -185,3 +167,4 @@ building_hab_cultural_center = {
 		weight = 300
 	}
 }
+

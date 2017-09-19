@@ -9,8 +9,6 @@
  MOD_COUNTRY_BORDER_MULT:0 "Border Range"
  MOD_COUNTRY_ROBOT_MAINTENANCE_MULT:0 "Robot Maintenance Cost"
  MOD_COUNTRY_ROBOT_MAINTENANCE_MULT_DESC:0 "Affects the energy maintenance cost of robotic Pops."
- MOD_COUNTRY_ROBOT_BUILD_SPEED_MULT:0 "Robot Build Speed"
- MOD_COUNTRY_ROBOT_BUILD_SPEED_MULT_DESC:0 "Affects the speed at which robotic Pops are built."
  MOD_COUNTRY_INFLUENCE_GAIN_ADD:0 "Monthly Influence"
  MOD_COUNTRY_INFLUENCE_GAIN_MULT:0 "Monthly Influence"
  MOD_COUNTRY_DEFENSIVE_WAR_INFLUENCE_GAIN_ADD:0 "Monthly Influence (Defensive War)"
@@ -111,8 +109,6 @@
  MOD_POP_FOOD_REQ_DESC:0 "All Pops within the Empire will have their Food requirement adjusted by this value."
  MOD_POP_FOOD_REQ_MULT:0 "$MOD_POP_FOOD_REQ$"
  MOD_POP_FOOD_REQ_MULT_DESC:0 "All Pops within the Empire will have their Food requirement adjusted by this value."
- MOD_POP_GROWTH_SPEED:0 "Growth Speed"
- MOD_POP_GROWTH_SPEED_DESC:0 "This value affects the speed at which new Pops are grown."
  MOD_POP_GROWTH_REQ:1 "Growth Time"
  MOD_POP_GROWTH_REQ_DESC:1 "This value affects the amount of Food required for a new Pop to be fully grown."
  MOD_POP_GROWTH_REQ_MULT:1 "Growth Time"
@@ -581,7 +577,6 @@
  recently_migrated:0 "Recent Immigrant"
  recent_refugee:0 "Refugees"
  infiltration_happiness:0 "Annexation Fever"
- infiltration_happiness_desc:0 "The people of this planet are celebrating their integration into a more advanced civilization."
  wrong_gravity:0 "Wrong Gravity"
  very_wrong_gravity:0 "Very Wrong Gravity"
  pop_enslaved:1 "Chattel Slavery"
@@ -794,7 +789,6 @@
  opinion_enlightened_us:0 "Enlightened Us"
  opinion_destroyed_portal:0 "Destroyed Dimensional Portal"
  
- opinion_devouring_swarm:0 "$civic_hive_devouring_swarm$"
  opinion_swarm:0 "Extragalactic Invaders"
  opinion_prey:0 "Prey"
  
