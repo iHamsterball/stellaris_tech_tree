@@ -1,0 +1,483 @@
+@influence_tier1 = 50
+@influence_tier2 = 150
+@energy_tier1 = 400
+@energy_tier2 = 600
+
+malcontent_slaves = {
+
+	support_multiplier = 0.25
+	lose_support_on_pop_leave = no
+
+	is_potential = {
+		always = no
+	}
+
+	valid = {
+		owner = {
+			any_owned_pop = {
+				is_enslaved = yes
+			}
+		}
+	}
+
+	can_create = { always = no }
+
+	is_dangerous = {
+		support > 0.24
+		any_support_effect_chance > 0.01
+	}
+
+	on_set_leader = {
+		owner = {
+			random_owned_pop = {
+				limit = { is_enslaved = yes }
+				species = {
+					root = {
+						owner = {
+							create_leader = {
+								type = governor
+								species = prevprev
+								name = random
+								skill = 0
+								traits = {}
+							}
+							last_created_leader = {
+								recruitable = no
+								root = {
+									assign_leader = prev
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	#attraction_custom_title = "malcontent_slaves_attraction_title"
+	attraction_custom_desc = "malcontent_slaves_attraction_desc"
+	
+	on_create = {
+		set_name = random
+		owner = {
+			every_owned_pop = {
+				limit = {
+					is_enslaved = yes
+					OR = {
+						has_pop_flag = former_malcontent
+						pop_has_ethic = ethic_fanatic_individualist
+						pop_has_ethic = ethic_individualist
+					}
+				}
+				set_pop_faction = root
+			}
+		}
+	}
+
+	flag = {
+		icon = {
+			category = "human"
+			file = "flag_human_11.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "v.dds"
+		}
+		colors={
+			"red"
+			"teal"
+			"null"
+			"null"
+		}
+	}
+	
+	parameters = {
+		owner_empire = {
+			type = country
+		}
+	}
+	
+	demand = {
+		title = POP_FACTION_MALCONTENT_SLAVES_DEMAND_TITLE_1
+		desc = POP_FACTION_MALCONTENT_SLAVES_DEMAND_DESC_1
+		max_support = 1
+	}
+	
+	attraction = {	#executed with a pop scope, country is stored in root
+		base = 0
+
+		modifier = {
+			add = 100
+			is_enslaved = yes
+		}
+
+		modifier = {
+			add = 50
+			is_enslaved = yes
+			pop_has_ethic = ethic_individualist
+		}
+
+		modifier = {
+			add = 70
+			is_enslaved = yes
+			pop_has_ethic = ethic_fanatic_individualist
+		}
+
+		# Foreign slave in xenophobic empire
+		modifier = {
+			factor = 1.2
+			is_enslaved = yes
+			NOT = { is_same_species = root.species }
+			root = { has_ethic = ethic_xenophobe }
+		}
+
+		# Foreign slave in fanatic xenophobic empire
+		modifier = {
+			factor = 1.4
+			is_enslaved = yes
+			NOT = { is_same_species = root.species }
+			root = { has_ethic = ethic_fanatic_xenophobe }
+		}
+
+		# Xenophobic slave in foreign empire
+		modifier = {
+			factor = 1.3
+			is_enslaved = yes
+			pop_has_ethic = ethic_xenophobe
+			NOT = { is_same_species = root.species }
+		}
+
+		# Xenophobic slave in foreign empire
+		modifier = {
+			factor = 1.6
+			is_enslaved = yes
+			pop_has_ethic = ethic_fanatic_xenophobe
+			NOT = { is_same_species = root.species }
+		}
+
+		# Unhappy
+		modifier = {
+			factor = 1.25
+			is_enslaved = yes
+			happiness < 0.51
+		}
+
+		# Very unhappy
+		modifier = {
+			factor = 1.5
+			is_enslaved = yes
+			happiness < 0.31
+		}
+
+		# Regulated slavery
+		modifier = {
+			factor = 0.8
+			OR = {
+				root = { has_policy_flag = slavery_allowed_regulated }
+				root = { has_policy_flag = slavery_allowed_regulated_xenos_only }
+			}
+		}
+		
+		# Unfeeling robot
+		modifier = {
+			factor = 0
+			OR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				#is_species = "ROBOT_POP_SPECIES_3"
+			}
+		}
+	}
+	
+	support_effects = {
+		interstellar_railroad = {
+			title = POP_FACTION_MALCONTENT_SLAVES_INTERSTELLAR_RAILROAD
+			min_support = 0.25
+			max_support = 0.50
+
+			spawn_chance = {
+				base = 0
+
+				modifier = {
+					add = 1
+					custom_tooltip = {
+						text = FACTION_ACTION_MALCONTENT_SLAVES_INTERSTELLAR_RAILROAD_TOOLTIP_1
+						owner = {
+							count_owned_pops = {
+								limit = { is_enslaved = yes }
+								count > 4
+							}
+						}
+					}
+				}
+
+				modifier = {
+					add = 1
+					custom_tooltip = {
+						text = FACTION_ACTION_MALCONTENT_SLAVES_INTERSTELLAR_RAILROAD_TOOLTIP_2
+						owner = {
+							count_owned_pops = {
+								limit = { is_enslaved = yes }
+								count > 6
+							}
+						}
+					}
+				}
+
+				modifier = {
+					add = 1
+					custom_tooltip = {
+						text = FACTION_ACTION_MALCONTENT_SLAVES_INTERSTELLAR_RAILROAD_TOOLTIP_3
+						owner = {
+							count_owned_pops = {
+								limit = { is_enslaved = yes }
+								count > 8
+							}
+						}
+					}
+				}
+
+				modifier = {
+					add = 2
+					custom_tooltip = {
+						text = FACTION_ACTION_MALCONTENT_SLAVES_INTERSTELLAR_RAILROAD_TOOLTIP_4
+						owner = {
+							count_owned_pops = {
+								limit = { is_enslaved = yes }
+								count > 10
+							}
+						}
+					}
+				}
+
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = POP_FACTION_MALCONTENT_SLAVES_RECENT_INTERSTELLAR_RAILROAD
+						has_pop_faction_flag = recent_interstellar_railroad
+					}
+				}
+			}
+
+			effect = {
+				custom_tooltip = POP_FACTION_MALCONTENT_SLAVES_INTERSTELLAR_RAILROAD_DESC
+				hidden_effect = {
+					owner = {
+						#random_list = {
+							#40 = {
+								random_owned_pop = {
+									limit = { is_enslaved = yes }
+									kill_pop = yes
+								}
+								set_country_flag = 1_railroaded
+							#}
+							#30 = {
+							#	while = {
+							#		count = 3
+							#		random_owned_pop = {
+							#			limit = { is_enslaved = yes }
+							#			kill_pop = yes
+							#		}
+							#	}
+							#	set_country_flag = 3_railroaded
+							#}
+							#20 = {
+							#	while = {
+							#		count = 4
+							#		random_owned_pop = {
+							#			limit = { is_enslaved = yes }
+							#			kill_pop = yes
+							#		}
+							#	}
+							#	set_country_flag = 4_railroaded
+							#}
+							#10 = {
+							#	while = {
+							#		count = 5
+							#		random_owned_pop = {
+							#			limit = { is_enslaved = yes }
+							#			kill_pop = yes
+							#		}
+							#	}
+							#	set_country_flag = 5_railroaded
+							#}
+						#}
+					}
+					add_support = -0.15
+					set_timed_pop_faction_flag = {
+						flag = recent_interstellar_railroad
+						days = 720
+					}
+					pop_faction_event = { id = faction.50 }
+				}
+			}
+		}
+
+		riots = {
+			title = POP_FACTION_MALCONTENT_SLAVES_RIOTS
+			min_support = 0.50
+			max_support = 0.75
+
+			spawn_chance = {
+				base = 5
+
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = POP_FACTION_DOCILE_SLAVES_RECENT_RIOTS
+						has_pop_faction_flag = recent_riots
+					}
+				}
+			}
+
+			effect = {
+				custom_tooltip = POP_FACTION_MALCONTENT_SLAVES_RIOTS_DESC
+				hidden_effect = {
+					owner = {
+						random_owned_planet = {
+							limit = {
+								any_pop = {
+									exists = pop_faction
+									pop_faction = { is_same_value = root }
+								}
+							}
+							save_event_target_as = riots_planet
+							random_tile = {
+								limit = {
+									has_building = yes
+									is_ruined = no
+									NOT = {
+										has_building = building_colony_shelter
+										has_building = building_capital_1
+										has_building = building_capital_2
+										has_building = building_capital_3
+									}
+								}
+								set_ruined = yes
+								root = {
+									pop_faction_event = { id = faction.55 }
+									add_support = -0.10
+									set_timed_pop_faction_flag = {
+										flag = recent_riots
+										days = 360
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		revolt = {
+			title = POP_FACTION_MALCONTENT_SLAVES_REVOLT
+			min_support = 0.75
+			max_support = 1.00
+
+			spawn_chance = {
+				base = 10
+			}
+
+
+			effect = {
+				custom_tooltip = POP_FACTION_MALCONTENT_SLAVES_REVOLT_DESC
+				hidden_effect = {
+					owner = {
+						if = {
+							limit = {
+								any_owned_planet = {
+									count_pops = {
+										limit = {
+											exists = pop_faction
+											pop_faction = { is_same_value = root }
+										}
+										count > 3
+									}
+								}
+							}
+							random_owned_planet = {
+								limit = {
+									count_pops = {
+										limit = {
+											exists = pop_faction
+											pop_faction = { is_same_value = root }
+										}
+										count > 3
+									}
+								}
+								save_event_target_as = revolt_planet
+							}
+							else = {
+								random_owned_planet = {
+									limit = {
+										any_pop = {
+											exists = pop_faction
+											pop_faction = { is_same_value = root }
+										}
+									}
+									save_event_target_as = revolt_planet
+								}
+							}
+						}
+					}
+					event_target:revolt_planet = {
+						random_owned_pop = {
+							limit = {
+								exists = pop_faction
+								pop_faction = { is_same_value = root }
+							}
+							save_event_target_as = leader_pop
+						}
+					}
+					
+					
+					event_target:revolt_planet = {
+						create_rebels = {
+							name = random
+							government = random
+							species = event_target:leader_pop.species
+							ethos = event_target:leader_pop
+							flag = random
+							effect = {
+								add_war_demand = {
+									type = "independence"
+									parameter:country = owner
+									warscore_cost = 50
+									target = this
+								}
+							}
+						}
+					}
+					owner = {
+						every_owned_planet = {
+							limit = {
+								any_pop = {
+									exists = pop_faction
+									pop_faction = { is_same_value = root }
+								}
+							}
+							every_owned_pop = {
+								limit = {
+									exists = pop_faction
+									pop_faction = { is_same_value = root }
+								}
+								planet = {
+									#while = {
+									#	count = 3
+										create_army = {
+											owner = last_created
+											species = event_target:leader_pop
+											type = "rebel_slave_defense_army"
+										}
+									#}
+								}
+							}
+						}
+					}
+					#kill_pop_faction = yes
+					pop_faction_event = { id = faction.60 }
+				}
+			}
+		}
+	}
+}

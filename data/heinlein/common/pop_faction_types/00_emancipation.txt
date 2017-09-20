@@ -1,0 +1,303 @@
+@influence_tier1 = 50
+@influence_tier2 = 150
+@energy_tier1 = 400
+@energy_tier2 = 600
+
+emancipation = {
+
+	lose_support_on_pop_leave = yes
+
+	is_potential = {
+		#always = yes
+		any_owned_pop = {
+			is_enslaved = yes
+		}
+	}
+
+	valid = {
+		owner = {
+			any_owned_pop = {
+				is_enslaved = yes
+			}
+		}
+	}
+	can_create = { always = yes }
+
+	is_dangerous = {
+		support > 0.24
+		any_support_effect_chance > 0.01
+	}
+	
+	#attraction_custom_title = 
+	#attraction_custom_desc = 
+	
+	on_create = {
+		set_name = random
+	}
+
+	flag = {
+		icon = {
+			category = "ornate"
+			file = "flag_ornate_9.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "v.dds"
+		}
+		colors={
+			"brown"
+			"blue"
+			"null"
+			"null"
+		}
+	}
+	
+	parameters = {
+		owner_country = {
+			type = country
+			valid_objects = {
+				is_same_value = root
+			}
+		}
+	}
+	
+	demand = {
+		title = POP_FACTION_EMANCIPATION_DEMAND_TITLE_2
+		desc = POP_FACTION_EMANCIPATION_DEMAND_DESC_2
+		max_support = 1
+
+		#potential = {}
+	}
+	
+	attraction = {	#executed with a pop scope, country is stored in root
+		base = 0
+		
+		modifier = {
+			add = 40
+
+			owner = {
+				any_owned_pop = {
+					is_enslaved = yes
+				}
+			}
+		}
+
+		modifier = {
+			add = 20
+			planet = {
+				any_pop = {
+					is_enslaved = yes
+					NOR = {
+						is_species = "ROBOT_POP_SPECIES_1"
+						is_species = "ROBOT_POP_SPECIES_2"
+					}
+				}
+			}
+		}
+
+		# Individualist
+		modifier = {
+			factor = 1.2
+			pop_has_ethic = ethic_individualist
+		}
+
+		# Fanatic Individualist
+		modifier = {
+			factor = 1.4
+			pop_has_ethic = ethic_fanatic_individualist
+		}
+
+		# Xenophile, enslaved xenos on planet
+		modifier = {
+			factor = 1.2
+			pop_has_ethic = ethic_fanatic_xenophile
+			planet = {
+				any_pop = {
+					is_enslaved = yes
+					NOR = {
+						is_same_species = root.species
+						is_species = "ROBOT_POP_SPECIES_1"
+						is_species = "ROBOT_POP_SPECIES_2"
+					}
+				}
+			}
+		}
+
+		# Fanatic Xenophile, enslaved xenos on planet
+		modifier = {
+			factor = 1.4
+			pop_has_ethic = ethic_fanatic_xenophile
+			planet = {
+				any_pop = {
+					is_enslaved = yes
+					NOR = {
+						is_same_species = root.species
+						is_species = "ROBOT_POP_SPECIES_1"
+						is_species = "ROBOT_POP_SPECIES_2"
+					}
+				}
+			}
+		}
+
+		# Xenophobe, alien slaves
+		modifier = {
+			factor = 0.4
+			pop_has_ethic = ethic_xenophobe
+			owner = {
+				any_owned_pop = {
+					is_enslaved = yes
+					NOR = {
+						is_same_species = root.species
+						is_species = "ROBOT_POP_SPECIES_1"
+						is_species = "ROBOT_POP_SPECIES_2"
+					}
+				}
+			}
+		}
+
+		# Fanatic Xenophobe, alien slaves
+		modifier = {
+			factor = 0.2
+			pop_has_ethic = ethic_fanatic_xenophobe
+			owner = {
+				any_owned_pop = {
+					is_enslaved = yes
+					NOR = {
+						is_same_species = root.species
+						is_species = "ROBOT_POP_SPECIES_1"
+						is_species = "ROBOT_POP_SPECIES_2"
+					}
+				}
+			}
+		}
+
+		# Collectivist
+		modifier = {
+			factor = 0.4
+			pop_has_ethic = ethic_collectivist
+		}
+
+		# Fanatic Collectivist
+		modifier = {
+			factor = 0.2
+			pop_has_ethic = ethic_fanatic_collectivist
+		}
+	}
+	
+	support_effects = {
+		stoking_the_flames = {
+			title = POP_FACTION_EMANCIPATION_STOKING_THE_FIRE
+			min_support = 0.25
+			max_support = 1
+
+			spawn_chance = {
+				base = 3
+
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = POP_FACTION_EMANCIPATION_RECENT_STOKING_THE_FIRE
+						has_pop_faction_flag = recent_stoking_the_fire
+					}
+				}
+			}
+
+			effect = {
+				custom_tooltip = POP_FACTION_EMANCIPATION_STOKING_THE_FIRE_DESC
+				hidden_effect = {
+					owner = {
+						if = {
+							limit = {
+								any_owned_pop = {
+									exists = pop_faction
+									pop_faction = { is_pop_faction_type = malcontent_slaves }
+								}
+							}
+							random_pop_faction = {
+								limit = { is_pop_faction_type = malcontent_slaves }
+								save_event_target_as = malcontent_faction
+							}	
+							random_owned_pop = {
+								limit = {
+									exists = pop_faction
+									pop_faction = { is_pop_faction_type = docile_slaves }
+								}
+								set_pop_faction = event_target:malcontent_faction
+							}
+							else = {
+								# Create Malcontent Slaves pop faction
+								# Save as malcontent_faction
+								root = {
+									if = {
+										limit = {
+											any_pop = {
+												is_enslaved = yes
+												NOR = {
+													is_species = "ROBOT_POP_SPECIES_1"
+													is_species = "ROBOT_POP_SPECIES_2"
+													pop_has_ethic = ethic_fanatic_collectivist
+													pop_has_ethic = ethic_collectivist
+												}
+											}
+										}
+										random_owned_pop = {
+											limit = {
+												is_enslaved = yes
+												NOR = {
+													is_species = "ROBOT_POP_SPECIES_1"
+													is_species = "ROBOT_POP_SPECIES_2"
+													pop_has_ethic = ethic_fanatic_collectivist
+													pop_has_ethic = ethic_collectivist
+												}
+											}
+											root.owner = {
+												create_pop_faction = {
+													type = malcontent_slaves
+													parameter:owner_empire = this
+													pop = prev
+												}
+												last_created_pop_faction = {
+													save_event_target_as = malcontent_faction
+												}
+											}
+										}
+										else = {
+											random_owned_pop = {
+												limit = {
+													is_enslaved = yes
+													NOR = {
+														is_species = "ROBOT_POP_SPECIES_1"
+														is_species = "ROBOT_POP_SPECIES_2"
+													}
+												}
+												root.owner = {
+													create_pop_faction = {
+														type = malcontent_slaves
+														parameter:owner_empire = this
+														pop = prev
+													}
+													last_created_pop_faction = {
+														save_event_target_as = malcontent_faction
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						random_pop_faction = {
+							limit = { is_pop_faction_type = malcontent_slaves }
+							add_support = 0.15
+						}
+					}
+					set_timed_pop_faction_flag = {
+						flag = recent_stoking_the_fire
+						days = 360 # 1 year
+					}
+					pop_faction_event = { id = faction.80 }
+				}
+			}
+		}
+	}
+}

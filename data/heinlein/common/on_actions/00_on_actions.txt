@@ -1,0 +1,1269 @@
+# No scope, like on_game_start
+on_monthly_pulse = {
+	events = {
+		guardian.10
+	}
+}
+
+# No scope, like on_game_start
+on_yearly_pulse = {
+	events = {
+		pirate.4
+		crisis.204
+		crisis.205
+		crisis.208
+		crisis.1254
+		crisis.206
+	}
+}
+
+# No scope, like on_game_start
+#on_bi_yearly_pulse = {
+#	events = {
+#	}
+#}
+
+# No scope, like on_game_start
+#on_five_year_pulse = {
+#}
+
+# No scope, like on_game_start
+on_decade_pulse = {
+	events = {
+		galactic_features.362
+	}
+}
+
+# Triggers when the game starts
+on_game_start = {
+	events = {
+		game_start.1
+		game_start.2
+		game_start.3
+		game_start.4
+		game_start.5
+	}
+}
+
+# Triggers when pressing begin in the intro window
+# This = country to press begin
+on_press_begin = {
+	events = {
+		tutorial.104
+		advisor.1
+	}
+}
+
+# Triggers when a station is abandoned.
+# this = ship of station being lost.
+# from = country losing ownership.
+on_border_change_station_lost = {
+	events = {
+		guardian.1073
+	}
+}
+
+# Triggers when an abandoned station is gained.
+# this = ship of station being gained.
+# from = country gaining ownership.
+on_border_change_station_gained = {
+	events = {
+		guardian.1075
+	}
+}
+
+# Triggers when trying to open the diplomacy view for countries with custom diplomacy.
+# Country scope
+# This = target country (player)
+# From = source country
+on_custom_diplomacy = {
+	events = {
+		crisis.30
+		crisis.55
+		crisis.1050
+		crisis.1051
+		crisis.1052
+		nomad.30
+		guardian.100
+		guardian.103
+		guardian.104
+		#guardian.200
+		guardian.300
+		guardian.313
+		#guardian.400
+		guardian.500
+		guardian.157
+		guardian.160
+		guardian.163
+		guardian.597
+	}
+}
+
+# Triggered when two empires discover each other
+on_first_contact = {
+	events = {
+		story.7
+		action.10
+		action.15
+		action.16
+		action.17
+		action.18
+		action.25
+		action.50
+		#action.31
+		tutorial.59
+		nomad.6
+		guardian.9
+	}
+}
+
+# Triggered when an Empire has fleets within another Empire's borders.
+# This = receiver
+# From = sender
+# FromFrom = fleet
+# FromFromFrom = system
+on_enforce_borders = {
+	events = {
+	}
+}
+
+# Triggers country_event for the attacker upon victory
+# This = country, leader attacker
+# From = country, planet owner
+# FromFrom = planet
+on_planet_attackers_win = {
+	events = {
+		techrisk.4
+		colony.114
+		crisis.201
+		action.8
+		action.14
+		colony.158
+		crisis.2400
+	}
+}
+
+# Triggers country_event for the attacker upon defeat
+# This = country, attack leader
+# From = country, planet owner
+# FromFrom = planet
+on_planet_attackers_lose = {
+	events = {
+	}
+}
+
+# Triggers country_event for the defender upon victory
+# This = country, planet owner
+# From = country, attack leader
+# FromFrom = planet
+on_planet_defenders_win = {
+	events = {
+		colony.5
+		colony.56
+		colony.108
+	}
+}
+
+# Triggers country_event for the defender upon defeat
+# This = country, planet owner
+# From = country, attack leader
+# FromFrom = planet
+on_planet_defenders_lose = {
+	events = {
+		colony.57
+		colony.113
+		colony.154
+	}
+}
+
+# Triggers event when a system is entered by ships from a country (not pirates or monsters) for the first time
+# Scope = Ship
+# From = System
+# FromFrom = Country
+on_entering_system_first_time = {
+	events = {
+		country.2
+	}
+	random_events = {
+		200 = 0
+		10 = leader.19
+	}
+}
+
+# Triggers event when ship enters a system
+# Scope = Ship
+# From = System
+# FromFrom = Country
+on_entering_system = {
+	events = {
+		country.2
+		country.6
+		galactic_features.2
+		anomaly.142
+		anomaly.143
+		anomaly.144
+		country.1030
+		country.1050
+		country.1102
+		anomaly.96
+		anomaly.106
+		anomaly.4036
+		galactic_features.350
+		country.254
+		guardian.999
+		guardian.1001
+		guardian.3000
+		guardian.3100
+		guardian.2061
+		guardian.3202
+	}
+	random_events = {
+		100 = 0
+	}
+}
+
+# A fleet has entered a system
+# Scope = Fleet
+# From = System
+on_entering_system_fleet = {
+	events = {
+		action.40
+		country.211
+		country.1002
+		anomaly.3095
+		country.204
+		country.205
+		country.206
+		story.218
+		story.220
+		story.330
+		#story.408
+		anomaly.3114
+		anomaly.3115
+		nomad.3
+		nomad.7
+		nomad.8
+		guardian.96
+		guardian.1005
+		pirate.10
+		guardian.610
+		guardian.1030
+	}
+}
+
+# A ship has surveyed a planet.
+# Scope = Ship
+# From = Planet
+on_survey = {
+	events = {
+		action.24
+		advisor.10
+		advisor.15
+		advisor.25
+		country.52
+		progress.2
+		primitive.1
+		galactic_features.300
+		story.307
+		anomaly.6660
+		colony_mod.100 #Setup event to add Titanic life blockers to planets with the modifier
+		action.12
+		tutorial.50
+		tutorial.55
+		precursor.102
+		precursor.602
+		precursor.1102
+		precursor.1602
+		precursor.2102
+		precursor.2200
+		precursor.2201
+		guardian.2010
+	}
+}
+
+# A country has gained a surveyed status on a planet. Happens after "on_survey" if a science ship surveyed a planet.
+# Root = Planet
+# From = Country
+# FromFrom = Fleet of the science ship that surveyed it, if any
+on_planet_surveyed = {
+	events = {
+		action.46
+		country.259
+	}
+}
+
+# A ship is done surveying the last unsurveyed planet in a system
+# Scope = ship
+# From = system
+on_system_survey = {
+	events = {
+		tutorial.2
+		tutorial.299
+		tutorial.18
+		tutorial.74
+		tutorial.170
+		country.251
+		country.252
+		country.253
+	}
+}
+
+# A planet has begun the colonization process.
+# Scope = Planet
+on_colonization_started = {
+	events = {
+		advisor.17
+		progress.3
+	}
+	random_events = {
+		190 = 0
+
+		10 = diplomatic.21
+	}
+}
+
+# A planet has been colonized.
+# Scope = Planet
+on_colonized = {
+	events = {
+		primitive.40
+		crisis.203
+		anomaly.4171
+		tutorial.27
+		tutorial.444 #Increase num_colonies variable
+	}
+}
+
+# A colony has been destroyed. Called just before owner and controller is cleared
+# Scope = Planet
+on_colony_destroyed = {
+	events = {
+		colony.2002
+	}
+}
+
+# This = owner of fleet 1
+# From = owner of fleet 2
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_entering_battle = {
+	events = {
+		nomad.96
+		nomad.98
+		nomad.99
+		guardian.330
+		guardian.155
+		guardian.158
+		guardian.161
+		guardian.595
+	}
+}
+
+# This = owner of ship 1 (destroyed)
+# From = owner of ship 2 (combatant)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_destroyed_victim = {
+	events = {
+		mandate.143
+		nomad.95
+		guardian.3002
+		guardian.3101
+		guardian.592
+		guardian.140
+	}
+}
+
+# This = owner of ship 1 (combatant)
+# From = owner of ship 2 (destroyed)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_destroyed_perp = {
+	events = {
+		guardian.1016
+		guardian.2099
+	}
+	random_events = {
+	}
+}
+
+# This = owner of fleet 1 (destroyed)
+# From = owner of fleet 2 (combatant)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_fleet_destroyed_victim = {
+	events = {
+		country.16
+		country.18
+		country.20
+		country.220
+		galactic_features.3
+		country.1021
+		country.1060
+		anomaly.3097
+		crisis.1012
+		crisis.1115
+		crisis.1215
+		crisis.1252
+		guardian.331
+		guardian.1072 #removes modifier if you have a station in orbit of pantagruel
+		guardian.3203
+		#guardian.649
+	}
+}
+
+# This = owner of fleet 1 (combatant)
+# From = owner of fleet 2 (destroyed)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_fleet_destroyed_perp = {
+	events = {
+		country.9
+		country.11
+		country.14
+		country.215
+		country.216
+		country.1020
+		country.1043
+		colony.181
+		observation.5
+		story.109
+		#story.114
+		story.209
+		story.309
+		story.311
+		story.214
+		story.216
+		story.222
+		story.332
+		story.409
+		anomaly.3101
+		anomaly.3120
+		galactic_features.360
+		crisis.1111
+		crisis.70
+		guardian.1009
+		guardian.1012
+		guardian.1015
+		guardian.1032
+		guardian.1040
+		guardian.648
+		guardian.655
+		guardian.670
+		guardian.334
+		guardian.2014
+		guardian.4
+		pirate.25
+		pirate.13
+	}
+	random_events = {
+		300 = 0
+		2 = leader.1
+		2 = leader.5
+		2 = leader.6
+		2 = leader.7
+		2 = leader.8
+		2 = leader.9
+	}
+}
+
+# This = owner of fleet
+# From = disbanded fleet
+on_fleet_disbanded = {
+	events = {
+		mandate.3 #removes mandate progress if you disband a related station
+		guardian.1071 #removes modifier if you have a station in orbit of pantagruel
+	}
+}
+
+# This = owner of fleet
+# From = destroyed fleet
+on_fleet_destroyed_maintenance = {
+	events = {
+
+	}
+}
+
+# The game will generate one on_building_X on_action for every station ship-size
+# Orbital stations will get the planet in FROM, space stations only get they building ship
+
+# This = construction ship
+# From = planet it is built on
+# Fires when construction is complete,
+# immediately before station is created
+on_building_mining_station = {
+	events = {
+		mandate.110
+		tutorial.10
+		tutorial.1000
+		tutorial.56
+		pirate.3
+		guardian.3200
+	}
+}
+
+# This = construction ship
+# From = planet it is built on
+# Fires when construction is complete,
+# immediately before station is created
+on_building_research_station = {
+	events = {
+		mandate.120
+		tutorial.12
+		tutorial.1200
+		tutorial.56
+		guardian.1070
+	}
+}
+
+# This = construction ship
+# From = planet it is built on
+# Fires when construction is complete,
+# immediately before station is created
+on_building_outpost_station = {
+	events = {
+		tutorial.76
+		tutorial.750
+		tutorial.56
+		mandate.110
+		mandate.120
+		guardian.1070
+	}
+}
+
+# This = construction ship
+# Fires when construction is complete,
+# immediately before station is created
+on_building_wormhole_station = {
+	events = {
+	}
+}
+
+# This = country
+# From = opponent war leader
+on_entering_war = {
+	events = {
+	}
+}
+
+# This = Country
+# From = Fleet
+on_fleet_detected = {
+	events = {
+	}
+}
+
+# This = Ship
+# From = Disabler Ship
+on_ship_disabled = {
+	events = {
+		country.201
+		country.212
+		country.217
+		country.222
+		guardian.2100
+	}
+}
+
+# This = Ship
+on_ship_enabled = {
+	events = {
+	}
+}
+
+# Triggers when a Special Project to uplift a pre-sentient species is completed
+# Scope = planet_event
+# This = planet scope
+# From = uplifted species
+on_uplift_completion = {
+	events = {
+		uplift.6001
+		uplift.6011
+		uplift.6021
+		uplift.6031
+		uplift.6041
+		uplift.6051
+		uplift.6061
+		uplift.6071
+		uplift.6091
+		uplift.6081
+	}
+}
+
+# This = Planet scope
+# From = Country
+on_purge_complete = {
+	events = {
+		crisis.202
+		# mandate.131
+		action.21 # Opinion effect on other empires
+	}
+}
+
+# This = Pop scope
+# From = Planet
+on_purge_begun = {
+	events = {
+		faction.3
+		action.26 # Pop happiness effects
+	}
+}
+
+# This = Pop scope
+# From = Planet
+on_purge_canceled = {
+	events = {
+		faction.4
+		action.27 # Pop happiness effects
+	}
+}
+
+# Planet has reached 0 health
+# This = Planet
+on_planet_zero_health = {
+	events = {
+		crisis.200
+	}
+}
+
+# Pop is enslaved
+# This = Pop scope
+# owner_species = { (species)
+# owner = { owner_species = { (empire main species)
+# owner = { (empire)
+on_pop_enslaved = {
+	events = {
+		faction.1
+		mandate.170
+		action.29 # Remove the pop if we don't allow slaves to procreate
+	}
+}
+
+# Full Orbital Bombardment commenced
+# This = Country scope
+# From = Planet
+on_full_orbital_bombardment = {
+	events = {
+	}
+}
+
+# Pop is released from slavery
+# This = Pop scope
+# owner_species = { (species)
+# owner = { owner_species = { (empire main species)
+# owner = { (empire)
+on_pop_emancipated = {
+	events = {
+		faction.2
+		mandate.155
+	}
+}
+
+# Executed right before a country has established communications with another country
+# This = Country which established the communications
+# From = Country which communications were established with
+on_pre_communications_established = {
+	events = {
+		action.7
+		action.19
+	}
+}
+
+# Executed right after country has established communications with another country
+# This = Country which established the communications
+# From = Country which communications were established with
+on_post_communications_established = {
+	events = {
+		anomaly.4016
+		anomaly.4092
+		tutorial.60
+		tutorial.61
+		tutorial.62
+	}
+}
+
+# Executed as a leader has died
+# This = Country
+# From = Leader
+on_leader_death = {
+	events = {
+		pretender.1
+		mandate.21
+	}
+}
+
+# A leader leveled up.
+# Scope = Country
+# From = Leader
+on_leader_level_up = {
+	events = {
+		leader.20 #gatekeeper for various events
+	}
+}
+
+# Executed as new ruler has been set
+# This = Country
+on_ruler_set = {
+	events = {
+		action.47
+	}
+}
+
+# Executed when a ruler has been removed
+# From = Previous Ruler
+# This = Country
+on_ruler_removed = {
+	events = {
+	}
+}
+
+# From = Tile
+# This = Planet
+on_blocker_cleared = {
+	events = {
+		tutorial.16
+		tutorial.160
+	}
+}
+
+# A ship has started a new order
+# Root = Ship
+# From = Country
+on_ship_order = {
+	events = {
+		tutorial.500
+	}
+}
+
+# Executes after a policy has been changed
+# use last_changed_policy to identify which policy it was
+# This = Country
+on_policy_changed = {
+	events = {
+		mandate.150
+		action.20
+		action.35
+		action.48
+	}
+}
+
+# A ship has been built
+# Root = Ship
+# From = Planet
+on_ship_built = {
+	events = {
+		tutorial.40
+		tutorial.8
+		tutorial.21
+		tutorial.25
+		mandate.144
+	}
+}
+
+# A ship design has been finished
+# Root = Country
+on_ship_designed = {
+	events = {
+		tutorial.49
+		tutorial.480
+	}
+}
+
+# A war is beginning, executed for every country in the war.
+# Root = Country
+# From = War
+on_war_beginning = {
+	events = {
+		action.41
+	}
+}
+
+# A war has ended
+# Root = Loser
+# From = Main Winner
+on_war_ended = {
+	events = {
+	}
+}
+
+# Root = Planet being bombarded for a day.
+# From = Fleet performing the delicate bombardment.
+on_daily_bombardment = {
+	events = {
+		crisis.1011
+	}
+}
+
+# A country has increased the level of a tech, use last_increased_tech trigger to check tech and level.
+# This = Country
+on_tech_increased = {
+	events = {
+		tutorial.6
+		tutorial.64
+		tutorial.73
+		crisis.2190
+	}
+}
+
+# A country has modified a species
+# This = Country
+# From = Species ( Post Modification )
+on_modification_complete = {
+	events = {
+		tutorial.65
+	}
+}
+
+# A planets controller becomes a country not the same as the owner.
+# Root = Planet
+# From = Planet Owner
+# FromFrom = Planet Controller (the one occupying)
+on_planet_occupied = {
+	events = {
+		crisis.2005
+		crisis.2215
+	}
+}
+
+# A fleet has successfully escaped from combat, executed right before the fleet enters FTL
+# This = escaping fleet
+# From = system escaped from
+# FromFrom = system escaping to
+on_emergency_ftl = {
+	events = {
+		nomad.97
+		guardian.1010
+		guardian.1013
+		guardian.1014
+		guardian.1020
+		guardian.1031
+		guardian.650
+		guardian.654
+	}
+	random_events = {
+		310 = 0
+		10 = leader.10
+		10 = leader.12
+		10 = leader.13
+		10 = leader.14
+	}
+}
+
+#A building construction has been completed.
+# This = Planet
+# From = Tile
+on_building_complete = {
+	events = {
+		tutorial.14
+		tutorial.140
+	}
+}
+
+# A building construction has been queued.
+# This = Planet
+# From = Tile
+on_building_queued = {
+	events = {
+	}	
+}
+
+# A building construction has been unqueued.
+# This = Planet
+# From = Tile
+on_building_unqueued = {
+	events = {
+	}	
+}
+
+# A building construction has been completed, which is an upgrade of previous building.
+# This = Planet
+# From = Tile
+on_building_upgraded = {
+	events = {
+	}	
+}
+
+# A building construction has demolished.
+# This = Planet
+# From = Tile
+on_building_demolished = {
+	events = {
+		colony.2020
+		guardian.305
+	}
+}
+
+# A building construction has finished, replacing another building.
+# This = Planet
+# From = Tile
+on_building_replaced = {
+	events = {
+		colony.2020
+		guardian.305
+	}
+}
+
+# A planet is being bombarded
+# This = planet under bombardment
+# From = bombarding empire
+on_monthly_orbital_bombardment = {
+	events = {
+		orbital_bombardment.1
+	}
+}
+
+# A tile building has been ruined
+# This = Planet
+# From = Tile
+on_building_ruined = {
+	events = {
+		
+	}
+}
+
+# A tile building has been repaired
+# This = Planet
+# From = Tile
+on_building_repaired = {
+	events = {
+	}
+}
+
+# Tutorial level for a country has changed
+# This = Country
+on_tutorial_level_changed = {
+	events = {
+		tutorial.100 # Show what has been enabled / disabled
+		tutorial.101 # Show what has been enabled / disabled
+		tutorial.102 # Show what has been enabled / disabled
+		tutorial.103 # Disable irrelevant tutorial stuff
+	}
+}
+
+# A war has been won
+# Root = Winner Warleader
+# From = Loser Warleader
+# FromFrom = War
+on_war_won = {
+	events = {
+		action.32
+		action.44
+	}
+}
+
+# A war has been won, by force
+# Root = Winner Warleader
+# From = Loser Warleader
+# FromFrom = War
+on_war_won_forced = {
+	events = {
+		action.37
+	}
+}
+
+# A war has been lost
+# Root = Loser Warleader
+# From = Winner Warleader
+# FromFrom = War
+on_war_lost = {
+	events = {
+		fallen_empires.2
+		fallen_empires.12
+	}
+}
+
+# A war has been lost, by force
+# Root = Loser Warleader
+# From = Winner Warleader
+# FromFrom = War
+on_war_lost_forced = {
+	events = {
+		action.38
+	}
+}
+
+# A white peace has been signed
+# Root = Recipient
+# From = Actor
+# FromFrom = Main Attacker
+# FromFromFrom = Main Defender
+# FromFromFromFrom = War
+on_white_peace = {
+	events = {
+		action.45
+	}
+}
+
+# A white peace has been signed, by force
+# Root = Recipient
+# From = Actor
+# FromFrom = Main Attacker
+# FromFromFrom = Main Defender
+# FromFromFromFrom = War
+on_white_peace_forced = {
+	events = {
+		action.39
+	}
+}
+
+# A pop has finished migrating to another planet
+# Root = pop
+# From = Tile on the new planet
+# FromFrom = Tile on the old planet
+on_pop_migration_end = {
+	events = {
+	}
+}
+
+# A pop has been resettled to another planet
+# Root = pop
+# From = Tile on the old planet
+on_pop_resettled = {
+	events = {
+	}
+}
+
+# A pop has been born
+# This = pop
+on_pop_birth = {
+	events = {
+		action.28
+		action.141 # Transfer shorter Culture Shock to children
+	}
+}
+
+# Initial rebels manage to take control of the planet, happens before the new owner is set, after the war is created.
+# This = Rebel Country
+# From = Planet
+# FromFrom = War
+on_rebels_take_planet = {
+	events = {
+		action.30
+	}
+}
+
+# Initial rebels manage to take control of the planet, happens after the new owner is set, after the war is created.
+# This = Rebel Country
+# From = Planet
+# FromFrom = War
+on_rebels_take_planet_owner_switched = {
+	events = {
+		action.36
+	}
+}
+
+
+#Country scope
+on_election_started = {
+	events = {
+		action.33
+	}
+}
+on_election_ended = {
+	events = {
+		action.34
+	}
+}
+
+#From = Country scope
+#This = Planet scope
+on_planet_ownerless = {
+	events = {
+		action.43
+	}
+}
+
+#From = Country scope
+#This = Planet scope
+on_planet_transfer = {
+	events = {
+		action.42
+	}
+}
+
+#From = Planet scope
+#This = Fleet scope
+on_fleet_enter_orbit = {
+	events = {
+	}
+}
+
+#This = Country scope
+on_join_alliance = {
+	events = {
+	}
+}
+
+#This = Country scope
+on_leave_alliance = {
+	events = {
+	}
+}
+
+# X years has passed since a planet was colonized (won't trigger on empire homeworld)
+on_colony_1_year_old = {
+	events = {
+	}
+
+	random_events = {
+		300 = 0
+
+		### Colony Events & Chains - 14
+		1 = colony.1 # Migrating Forests
+		1 = colony.50 # Subterranean Aliens
+		1 = colony.1500 # Helpful Drones
+		1 = colony.1520 # Mharin Kharin
+
+		2 = colony.100 # Abandoned Terraforming
+		1 = colony.180 # Asteroid Sighted
+		1 = colony.2001 # Trouble in Paradise
+		2 = colony.2005 # Submerged Cruiser
+		1 = colony.2010 # A Change of Heart
+		2 = colony.2015 # Odd Factory
+		2 = colony.2025 # What Separates Us
+		2 = colony.2030 # Assassination
+		2 = colony.2035 # Infectious Disease
+		2 = colony.2050 # Clerical Errors
+
+		### Planet Modifiers - 9
+		5 = colony_mod.1 # Irradiated
+		5 = colony_mod.2 # Titanic Life
+		5 = colony_mod.3 # Unstable Tectonics
+		5 = colony_mod.4 # Asteroid Belt
+		5 = colony_mod.5 # Atmospheric Hallucinogen
+		5 = colony_mod.12 # Asteroid Impacts
+		5 = colony_mod.14 # Asteroid Impacts - Good
+		5 = colony_mod.16 # Strong Magnetic Field - Good
+		5 = colony_mod.17 # Strong Magnetic Field - Bad
+
+		### Tomb Worlds - 8
+		5 = colony.150 # Underground Vault
+		5 = colony.155 # Nuclear Bomb
+		5 = colony.160 # Particle Accelerator
+		5 = colony.161 # Surviving Infrastructure
+		5 = colony.162 # Space Station
+		5 = colony.163 # Wasteland Radiation
+		5 = colony.164 # Pacifist Movement
+		5 = colony.170 # Orbital Debris
+	}
+}
+
+on_colony_2_years_old = {
+	events = {
+	}
+	random_events = {
+		300 = 0 
+
+		### Colony Events & Chains - 14
+		1 = colony.1 # Migrating Forests
+		1 = colony.50 # Subterranean Aliens
+		1 = colony.1500 # Helpful Drones
+		1 = colony.1520 # Mharin Kharin
+
+		5 = colony.100 # Abandoned Terraforming
+		2 = colony.180 # Asteroid Sighted
+		1 = colony.2001 # Trouble in Paradise
+		5 = colony.2005 # Submerged Cruiser
+		1 = colony.2010 # A Change of Heart
+		5 = colony.2015 # Odd Factory
+		5 = colony.2025 # What Separates Us
+		5 = colony.2030 # Assassination
+		5 = colony.2035 # Infectious Disease
+		5 = colony.2050 # Clerical Errors
+
+		### Planet Modifiers - 9
+		50 = colony_mod.1 # Irradiated
+		50 = colony_mod.2 # Titanic Life
+		50 = colony_mod.3 # Unstable Tectonics
+		50 = colony_mod.4 # Asteroid Belt
+		50 = colony_mod.5 # Atmospheric Hallucinogen
+		50 = colony_mod.12 # Asteroid Impacts
+		50 = colony_mod.14 # Asteroid Impacts - Good
+		50 = colony_mod.16 # Strong Magnetic Field - Good
+		50 = colony_mod.17 # Strong Magnetic Field - Bad
+
+		### Tomb Worlds - 8
+		50 = colony.150 # Underground Vault
+		50 = colony.155 # Nuclear Bomb
+		50 = colony.160 # Particle Accelerator
+		50 = colony.161 # Surviving Infrastructure
+		50 = colony.162 # Space Station
+		50 = colony.163 # Wasteland Radiation
+		50 = colony.164 # Pacifist Movement
+		50 = colony.170 # Orbital Debris
+	}
+}
+
+on_colony_3_years_old = {
+	events = {
+	}
+	random_events = {
+		300 = 0
+
+		### Colony Events & Chains - 14
+		1 = colony.1 # Migrating Forests
+		1 = colony.50 # Subterranean Aliens
+		1 = colony.1500 # Helpful Drones
+		1 = colony.1520 # Mharin Kharin
+
+		5 = colony.100 # Abandoned Terraforming
+		3 = colony.180 # Asteroid Sighted
+		5 = colony.2001 # Trouble in Paradise
+		5 = colony.2005 # Submerged Cruiser
+		5 = colony.2010 # A Change of Heart
+		5 = colony.2015 # Odd Factory
+		5 = colony.2025 # What Separates Us
+		5 = colony.2030 # Assassination
+		5 = colony.2035 # Infectious Disease
+		5 = colony.2050 # Clerical Errors
+
+		### Planet Modifiers - 9
+		150 = colony_mod.1 # Irradiated
+		150 = colony_mod.2 # Titanic Life
+		150 = colony_mod.3 # Unstable Tectonics
+		150 = colony_mod.4 # Asteroid Belt
+		150 = colony_mod.5 # Atmospheric Hallucinogen
+		150 = colony_mod.12 # Asteroid Impacts
+		150 = colony_mod.14 # Asteroid Impacts - Good
+		150 = colony_mod.16 # Strong Magnetic Field - Good
+		150 = colony_mod.17 # Strong Magnetic Field - Bad
+
+		### Tomb Worlds - 8
+		50 = colony.150 # Underground Vault
+		50 = colony.155 # Nuclear Bomb
+		50 = colony.160 # Particle Accelerator
+		50 = colony.161 # Surviving Infrastructure
+		50 = colony.162 # Space Station
+		50 = colony.163 # Wasteland Radiation
+		50 = colony.164 # Pacifist Movement
+		50 = colony.170 # Orbital Debris
+	}
+}
+
+on_colony_4_years_old = {
+	random_events = {
+		300 = 0
+
+		### Colony Events & Chains - 14
+		1 = colony.2001 # Trouble in Paradise
+		1 = colony.2010 # A Change of Heart
+	}
+}
+
+on_colony_5_years_old = {
+}
+
+on_colony_6_years_old = {
+}
+
+on_colony_7_years_old = {
+}
+
+on_colony_8_years_old = {
+}
+
+on_colony_9_years_old = {
+}
+
+on_colony_10_years_old = {
+}
