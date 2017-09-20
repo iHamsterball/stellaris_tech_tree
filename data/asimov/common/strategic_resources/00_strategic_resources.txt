@@ -1,0 +1,196 @@
+### System Resources
+
+time = {
+}
+
+### Basic Resources
+
+energy = {
+	accumulative = yes
+	collect_if_wrong_building = no
+	accumulated_by_sectors = yes
+	tradable = yes
+	AI_category = energy
+	max = 2500
+}
+
+minerals = {
+	accumulative = yes
+	collect_if_wrong_building = no
+	accumulated_by_sectors = yes
+	tradable = yes
+	AI_category = minerals
+	max = 5000
+}
+
+food = {
+	is_planet_local = yes
+	accumulative = yes
+	collect_if_wrong_building = no
+	AI_category = food
+}
+
+physics_research = {
+	accumulative = yes
+	collect_if_wrong_building = no
+	AI_category = physics
+}
+
+society_research = {
+	accumulative = yes
+	collect_if_wrong_building = no
+	AI_category = society
+}
+
+engineering_research = {
+	accumulative = yes
+	collect_if_wrong_building = no
+	AI_category = engineering
+}
+
+influence = {
+	accumulative = yes
+	AI_category = influence
+	max = 1000
+	sector_ignore_cost = yes
+}
+
+###########################
+## Terraforming Resources #
+###########################
+
+sr_terraform_gases = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_terrestrial_sculpting" }
+	tradable = yes
+	is_rare = yes
+	
+	num_ai_wanted = 100
+}
+
+sr_terraform_liquids = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_terrestrial_sculpting" }
+	tradable = yes
+	is_rare = yes
+	
+	num_ai_wanted = 100
+}
+
+###########################
+###   Rare Resources    ###
+###########################
+
+#############
+# Clustered #
+#############
+
+# Garanthium
+sr_garanthium = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_mine_garanthium" }
+	tradable = yes
+	is_rare = yes
+}
+
+# Lythuric Gas
+sr_lythuric = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_lythuric_gas" }
+	tradable = yes
+	is_rare = yes
+}
+
+# Engos Vapor
+sr_engos = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_engos_vapor" }
+	tradable = yes
+	is_rare = yes
+}
+
+# Teldar Crystals
+sr_teldar = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_mine_teldar" }
+	tradable = yes
+	is_rare = yes
+}
+
+# Pitharan Dust
+sr_pitharan = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_pitharan_dust" }
+	tradable = yes
+	is_rare = yes
+}
+
+# Orillium Ore
+sr_orillium = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_mine_orillium" }
+	tradable = yes
+	is_rare = yes
+}
+
+#################
+# Non-clustered #
+#################
+
+# Satramene Gas
+sr_satramene = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_mine_satramene" }
+	tradable = yes
+	is_rare = yes
+}
+
+# Neutronium Ore
+sr_neutronium = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_mine_neutronium" }
+	tradable = yes
+	is_rare = yes
+}
+
+# Living Metal
+sr_living_metal = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_mine_living_metal" }
+	tradable = yes
+	is_rare = yes
+}
+
+# Zro
+sr_zro = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_mine_zro" }
+	tradable = yes
+	is_rare = yes
+}
+
+# Alien Pets
+sr_alien_pets = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_alien_life_studies" }
+	tradable = yes
+	is_rare = yes
+}
+
+# Betharian Stone
+sr_betharian = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_mine_betharian" }
+	tradable = yes
+	is_rare = yes
+	
+	num_ai_wanted = 100
+}
+
+# Dark Matter
+sr_dark_matter = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_mine_dark_matter" }
+	tradable = yes
+	is_rare = yes
+}

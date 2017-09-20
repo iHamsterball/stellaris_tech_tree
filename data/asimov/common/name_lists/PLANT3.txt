@@ -1,0 +1,183 @@
+﻿### Plantoid 1
+### Created by Rufus Tronde
+PLANT3 = {	
+	### SHIPS
+
+	ship_names = {
+	
+		generic = {
+			Medriatus Soetemus Deketalus Boramavus Charadomus Ortionacus Moratinius Tenokiarius Meladionius Ornithorhynchus Paradoxus Lanlitius
+		}
+	
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		orbital_station = {
+		}
+		mining_station = {
+		}
+		research_station = {
+		}
+		wormhole_station = { }
+		terraform_station = {
+		}
+		observation_station = {
+		}
+	
+		military_station_small = {  }
+	
+		military_station_medium = {  }
+	
+		military_station_large = {  }	
+	}
+	
+	fleet_names = {
+		random_names = {
+			"Blossoming Bion Armada" "Flourishing Bion Armada" "Vanquishing Bion Armada" "Whirling Bion Armada" "Burgeoning Bion Armada"
+		}
+		sequential_name = "%O% Bion Armada"
+	}
+
+	### ARMIES
+	army_names = {
+		defense_army = {
+			sequential_name = "%O% Shield of Bark"
+		}
+			
+		assault_army = {
+			sequential_name = "%O% Spear of Spine"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Harvest Crops"
+		}
+		
+		clone_army = { 
+			sequential_name = "Genet %R%"
+		}
+		
+		robotic_army = {
+			sequential_name = "Daisy Chain %R%"
+		}
+		
+		android_army = {
+			sequential_name = "Sunflower Chain %R%"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O% Pheromone Force"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Xenodendron Force"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% Extremophile Force"
+		}
+	}
+
+		
+	
+	### PLANETS
+	
+	planet_names = {
+	
+		generic = {
+			names = {
+				Lonvitium Koronium Nimerium Mitanium Ramonium Henumium Janarsium Fugatium Panokirium Ronobirium Berykinium
+				Cobunorium Omoderium Ibinidium Madasenium
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+		
+	}
+	
+	### CHARACTERS
+	
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+			}
+			
+			# Always combined with a second name
+			first_names_female = {
+				Flora Viola Violet Lily Rose Daisy Rowan Iris Jasmine Veronica Hazel Erica Olive
+			}
+
+			first_names_male = {
+				Rowan Basil Heath Reed Ash Huckleberry Bud
+			}
+			
+			# Always combined with a first name
+			second_names = {
+				Oak Bloom Garland Maple Hawthorn Lite
+			}
+
+			regnal_first_names_male = {
+				Valerian Narcissus Amaranth
+			}
+
+			regnal_first_names_female = {
+				Buttercup Jasmine Belladonna
+			}
+			
+			regnal_second_names = {
+				Linnaeus
+			}
+		}
+	}
+}
