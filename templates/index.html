@@ -13,22 +13,44 @@
     <link rel="stylesheet" href="{% static "css/tech-tree.css" %}">
     <link rel="stylesheet" href="{% static "vendor/perfect-scrollbar/perfect-scrollbar.css" %}">
     <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
-
+    <style>
+html { overflow-x: hidden; overflow-y: hidden; }
+</style>
 </head>
 <body>
-<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-    <input name="next" type="hidden" value="{{ redirect_to }}" />
-    <select name="language" onchange="this.form.submit()">
-        {% get_current_language as LANGUAGE_CODE %}
-        {% get_available_languages as LANGUAGES %}
-        {% get_language_info_list for LANGUAGES as languages %}
-        {% for language in languages %}
-            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-                {{ language.name_local }} ({{ language.code }})
-            </option>
-        {% endfor %}
-    </select>
-</form>
+    <div style="z-index: 2; height: 300px; background-color: #ffffff;">
+        <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+            <input name="next" type="hidden" value="{{ redirect_to }}" />
+            <select name="language" onchange="this.form.submit()">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                        {{ language.name_local }} ({{ language.code }})
+                    </option>
+                {% endfor %}
+            </select>
+        </form>
+
+        <select id="version" onchange="loadTech(document.getElementById('version').value)">
+            <option value="adams">Adams v1.6.2</option>
+            <option value="banks">Banks v1.5.1</option>
+            <option value="kennedy">Kennedy v1.4.1</option>
+            <option value="heinlein">Heinlein v1.3.2</option>
+            <option value="asimov">Asimov v1.2.5*ParseError</option>
+            <option value="alphamod">Alpha Mod</option>
+            <option value="isb">Improved Space Battles</option>
+            <option value="new_horizons">ST: New Horizons</option>
+            <option value="nsc">New Ship Class</option>
+        </select>
+    </div>
+    <script>
+      window.addEventListener("load", function() {
+        loadTech(document.getElementById('version').value);
+        waitLoadDrag('tech-tree');
+      });
+    </script>
 
     <div class="chart" id="tech-tree">
         <script src="{% static "vendor/raphael.js" %}"></script>
@@ -38,6 +60,11 @@
         <!--<script src="{% static "vendor/jquery.mousewheel.js" %}"></script>-->
         <!--<script src="{% static "vendor/perfect-scrollbar/perfect-scrollbar.js" %}"></script>-->
         <script src="{% static "js/tech-tree.js" %}"></script>
+        <script src="{% static "js/drag.js" %}"></script>
     </div>
+
+    <script type="text/javascript">
+        waitLoadDrag('tech-tree', 100);
+    </script>
 </body>
 </html>
