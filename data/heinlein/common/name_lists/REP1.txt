@@ -1,0 +1,174 @@
+﻿### Reptilian 1
+REP1 = {
+	### SHIPS
+
+	ship_names = {
+
+		generic = {
+			Trum'Pakh Trum'Dolon Trum'Sarim Trum'Doloss Trum'Rokh Trum'Vakhna Trum'Kariss Trum'Poffon Trum'Hariss Trum'Soyob Trum'Dakhan
+			Trum'Voim Trum'Dukh Trum'Vassk Trum'Esam Trum'Cassthar Trum'Barkan Trum'Lampan Trum'Rokba Trum'Histan Trum'Oloman Trum'Okran
+			Trum'Fokin Trum'Farass Trum'Iomath Trum'Mothon Trum'Dialom Trum'Bodnok Trum'Bathnor Trum'Zoyom Trum'Abnar Trum'Reeken
+			Alam'Bissna Alam'Turom Alam'Taratha Alam'Tisska Alam'Purim Alam'Shuss Alam'Parathnak Alam'Gioshum Alam'Korob Alam'Hinthab
+			Alam'Kulom Alam'Avintok Alam'Tannek Alam'Sior Alam'Rossul Alam'Bebinna Alam'Fethon Alam'Polluner Alam'Rastram Alam'Treesk
+			Alam'Enerpul Alam'Buskat Pob'Tirin Pob'Kassh Pob'Onor Pob'Greefad Pob'Minisk Pob'Sumath Pob'Ereesim Pob'Kreedak Pob'Duthur
+			Pob'Hialash Pob'Vermeb Pob'Badram Pob'Buvdar Pob'Tharat Pob'Illith Pob'Vikham Pob'Thorok Pob'Rumber Pob'Ikath
+		}
+
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		
+		mining_station = { }
+		research_station = { }
+		wormhole_station = { }
+		#terraform_station = { }
+		observation_station = { }
+		outpost_station = {
+			#random_names = { }
+			#sequential_name = "%O% Frontier Outpost"
+		}
+		
+		military_station_small = {}
+		military_station_medium = {}
+		military_station_large = {}	
+	}
+
+	fleet_names = {
+		random_names = {
+			"Lav'Tissha Battle Group" "Alak'Ssaral Battle Group" "Hiri'Gasska Battle Group" "Kur'Freega Battle Group" "Mak'Tissam Battle Group"
+		}
+		sequential_name = "%O% Battle Group"
+	}
+	
+	army_names = {
+	
+		defense_army = {
+			sequential_name = "%O% Surface Guard"
+		}
+			
+		assault_army = {
+			sequential_name = "%O% Claw"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Bondservants"
+		}
+		
+		clone_army = { 
+			sequential_name = "%O% Replica Legion"
+		}
+		
+		robotic_army = {
+			sequential_name = "%O% Assault Nexus"
+		}
+		
+		android_army = {
+			sequential_name = "%O% Synthetic Warriors"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O% Thought Watchers"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% War Hive"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% Warrior Order"
+		}
+	}
+		
+
+	### PLANETS
+
+	planet_names = {
+
+		generic = {
+			names = {
+				Na'Tirgir Na'Dall Bid'Jossk Bid'Rissim Ata'Virisch Ata'Podossa Pan'Dassak Pan'Kischa Fal'Taram Fal'Kaboss Mil'Susska Mil'Feldrak Ra'Targass Ra'Bothnor Gal'Suposk Gal'Karaska Shi'Tanask Shi'Poltan Ro'Doman Ro'Eseek Ka'Tanab Ka'Salosch Ira'Monosk Ira'Obass
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+		
+	}
+
+	### CHARACTERS
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+				Hask'Valgam Hask'Zumon Hask'Teragg Hask'Sornas Hask'Pagram Hask'Jonnot Hask'Gentar Hask'Birim Hask'Endek Hask'Kalass Torba'Inrab Torba'Keldi Torba'Varass Torba'Namta Torba'Gandar Torba'Daggasch Torba'Finnrak Torba'Hassadra Torba'Malas Torba'Patar
+			}
+			
+			# Always combined with a second name
+			first_names = {
+			}
+			
+			# Always combined with a first name
+			second_names = {
+			}
+			
+			regnal_first_names = {
+				Hask'Valgam Hask'Zumon Hask'Teragg Hask'Sornas Hask'Pagram Hask'Jonnot Hask'Gentar Hask'Birim
+			}
+			
+			regnal_second_names = {
+				Mezak
+			}
+		}
+	}
+}

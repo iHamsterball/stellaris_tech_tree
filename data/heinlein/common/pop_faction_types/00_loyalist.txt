@@ -1,0 +1,172 @@
+# ############################
+#  Loyalist Faction
+# ############################
+#
+# 
+# The Loyalist-faction should always exist as it will be used as the standard faction for all Pops
+# that have no strong feelings to join any other faction. Pops willingness to be in the
+# Loyalist-faction will be reduced the less happy they are, meaning they are more willing
+# to join any other faction.
+# 
+# 
+# 
+
+loyalist = {
+	election_header = "GFX_faction_header_yellow"
+	lose_support_on_pop_leave = no
+
+	attraction = {
+		base = 0
+		
+		scaled_modifier = {
+			scope = this
+			add = 100
+			calc = pop_happiness
+		}
+
+		modifier = {
+			factor = 0
+			is_enslaved = yes
+		}
+	}
+
+	is_dangerous = {
+		always = no
+	}
+	
+	mandate = {
+		key = "mandate_emancipation2"
+		parameter_transfer = {}
+		weight = {
+			base = 20
+		}
+	}
+
+	mandate = {
+		key = "mandate_miner"
+		parameter_transfer = {}
+		weight = {
+			base = 20
+
+			modifier = {
+				factor = 0.3
+				owner = {
+					any_owned_leader = {
+						leader_of_faction = yes
+						has_mandate = "mandate_miner"
+					}
+				}
+			}
+		}
+	}
+
+	mandate = {
+		key = "mandate_orbital_researcher"
+		parameter_transfer = {}
+		weight = {
+			base = 20
+
+			modifier = {
+				factor = 0.3
+				owner = {
+					any_owned_leader = {
+						leader_of_faction = yes
+						has_mandate = "mandate_orbital_researcher"
+					}
+				}
+			}
+		}
+	}
+
+	mandate = {
+		key = "mandate_slaver"
+		parameter_transfer = {}
+		weight = {
+			base = 20
+
+			modifier = {
+				factor = 0.3
+				owner = {
+					any_owned_leader = {
+						leader_of_faction = yes
+						has_mandate = "mandate_slaver"
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				owner = {
+					OR = {
+						has_ethic = ethic_individualist
+						has_ethic = ethic_fanatic_individualist
+					}
+				}
+			}
+		}
+	}
+
+	mandate = {
+		key = "mandate_shipwright"
+		parameter_transfer = {}
+		weight = {
+			base = 20
+
+			modifier = {
+				factor = 0.3
+				owner = {
+					any_owned_leader = {
+						leader_of_faction = yes
+						has_mandate = "mandate_shipwright"
+					}
+				}
+			}
+
+			modifier = {
+				factor = 1.5
+				owner = {
+					used_naval_capacity_percent < 0.3
+				}
+			}
+
+			modifier = {
+				factor = 0
+				owner = {
+					OR = {
+						has_ethic = ethic_pacifist
+						has_ethic = ethic_fanatic_pacifist
+						used_naval_capacity_percent > 0.5
+						#max_naval_capacity > 500
+					}
+				}
+			}
+		}
+	}
+	
+	on_set_leader = { # Effect that executes when a faction wants a leader
+		owner = {
+			random_owned_leader = {
+				limit = { leader_of_faction = no }
+				root = {
+					assign_leader = prev
+				}
+			}
+		}
+	}
+
+	on_create = {
+		set_name = random
+		set_support = 1
+		owner = {
+			every_owned_pop = {
+				if = {
+					limit = {
+						member_of_faction = no
+						can_join_factions = yes
+					}
+					set_pop_faction = ROOT
+				}
+			}
+		}
+	}
+}

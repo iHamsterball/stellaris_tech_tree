@@ -1,0 +1,489 @@
+@influence_tier1 = 50
+@influence_tier2 = 150
+@energy_tier1 = 400
+@energy_tier2 = 600
+
+docile_slaves = {
+
+	support_multiplier = 0.1
+	lose_support_on_pop_leave = no
+	is_potential = {
+		always = no
+	}
+	valid = {
+		owner = {
+			any_owned_pop = {
+				is_enslaved = yes
+			}
+		}
+	}
+	can_create = { always = no }
+	
+	#attraction_custom_title = "slave_attraction_title"
+	attraction_custom_desc = "docile_slave_attraction_desc"
+	
+
+	is_dangerous = {
+		support > 0.49
+		owner = {
+			NOT = { has_policy_flag = slavery_allowed_regulated }
+			NOT = { has_policy_flag = slavery_allowed_regulated_xenos_only }
+		}
+		any_support_effect_chance > 0.01
+	}
+
+	on_create = {
+		set_name = random
+		owner = {
+			every_owned_pop = {
+				limit = {
+					is_enslaved = yes
+					OR = {
+						has_pop_flag = former_docile
+						pop_has_ethic = ethic_fanatic_collectivist
+						pop_has_ethic = ethic_collectivist
+					}
+				}
+				set_pop_faction = root
+			}
+		}
+	}
+
+	flag = {
+		icon = {
+			category = "blocky"
+			file = "flag_blocky_23.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "v.dds"
+		}
+		colors={
+			"dark_teal"
+			"teal"
+			"null"
+			"null"
+		}
+	}
+	
+	parameters = {
+		owner_empire = {
+			type = country
+		}
+	}
+	
+	demand = {
+		title = POP_FACTION_DOCILE_SLAVES_DEMAND_TITLE_1
+		desc = POP_FACTION_DOCILE_SLAVES_DEMAND_DESC_1
+		max_support = 1
+
+		potential = {
+			custom_tooltip_fail = {
+				text = docile_slaves_demand_fulfilled
+				owner = {
+					NOT = {
+						has_policy_flag = slavery_allowed_regulated
+						has_policy_flag = slavery_allowed_regulated_xenos_only
+					}
+				}
+			}
+		}
+	}
+	
+	attraction = {	#executed with a pop scope, country is stored in root
+		base = 0
+		
+		modifier = {
+			add = 100
+			is_enslaved = yes
+		}
+
+		modifier = {
+			add = 50
+			is_enslaved = yes
+			pop_has_ethic = ethic_collectivist
+		}
+
+		modifier = {
+			add = 70
+			is_enslaved = yes
+			pop_has_ethic = ethic_fanatic_collectivist
+		}
+
+		# Xenophile in foreign empire
+		modifier = {
+			factor = 1.2
+			is_enslaved = yes
+			pop_has_ethic = ethic_xenophile
+			NOT = { is_same_species = root.species }
+		}
+
+		# Fanatic Xenophile in foreign empire
+		modifier = {
+			factor = 1.4
+			is_enslaved = yes
+			pop_has_ethic = ethic_fanatic_xenophile
+			NOT = { is_same_species = root.species }
+		}
+
+		modifier = {
+			factor = 1.2
+			OR = {
+				root = { has_policy_flag = slavery_allowed_regulated }
+				root = { has_policy_flag = slavery_allowed_regulated_xenos_only }
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			OR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				#is_species = "ROBOT_POP_SPECIES_3"
+			}
+		}
+	}
+
+	support_effects = {
+		unrest = {
+			title = POP_FACTION_DOCILE_SLAVES_UNREST
+			min_support = 0.25
+			max_support = 0.50
+
+			spawn_chance = {
+				base = 3
+
+				modifier = {
+					factor = 0
+					custom_tooltip_success = {
+						text = docile_slaves_demand_fulfilled
+						owner = {
+							OR = {
+								has_policy_flag = slavery_allowed_regulated
+								has_policy_flag = slavery_allowed_regulated_xenos_only
+							}
+						}
+					}
+				}
+
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = POP_FACTION_DOCILE_SLAVES_RECENT_UNREST
+						has_pop_faction_flag = recent_unrest
+					}
+				}
+			}
+
+			effect = {
+				custom_tooltip = POP_FACTION_DOCILE_SLAVES_UNREST_DESC
+				hidden_effect = {
+					owner = {
+						if = {
+							limit = {
+								any_owned_planet = {
+									count_pops = {
+										limit = {
+											exists = pop_faction
+											pop_faction = { is_same_value = root }
+										}
+										count > 3
+									}
+								}
+							}
+							random_owned_planet = {
+								limit = {
+									count_pops = {
+										limit = {
+											exists = pop_faction
+											pop_faction = { is_same_value = root }
+										}
+										count > 3
+									}
+								}
+								save_event_target_as = unrest_planet
+							}
+							else = {
+								random_owned_planet = {
+									limit = { 
+										any_pop = { is_enslaved = yes }
+									}
+									save_event_target_as = unrest_planet
+								}
+							}
+						}
+					}
+					event_target:unrest_planet = {
+						every_pop = {
+							limit = {
+								exists = pop_faction
+								pop_faction = { is_same_value = root }
+							}
+							add_modifier = {
+								modifier = docile_slaves_unrest_modifier
+								days = 1440 # 4 years
+							}
+						}
+					}
+					add_support = -0.15
+					set_timed_pop_faction_flag = {
+						flag = recent_unrest
+						days = 2160 # 6 years
+					}
+					pop_faction_event = { id = faction.10 }
+				}
+			}
+		}
+
+		roving_gangs = {
+			title = POP_FACTION_DOCILE_SLAVES_ROVING_GANGS
+			min_support = 0.50
+			max_support = 0.75
+
+			spawn_chance = {
+				base = 2
+
+				modifier = {
+					factor = 0
+					custom_tooltip_success = {
+						text = docile_slaves_demand_fulfilled
+						owner = {
+							OR = {
+								has_policy_flag = slavery_allowed_regulated
+								has_policy_flag = slavery_allowed_regulated_xenos_only
+							}
+						}
+					}
+				}
+
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = POP_FACTION_DOCILE_SLAVES_RECENT_ROVING_GANGS
+						has_pop_faction_flag = recent_roving_gangs
+					}
+				}
+			}
+
+			effect = {
+				custom_tooltip = POP_FACTION_DOCILE_SLAVES_ROVING_GANGS_DESC
+				hidden_effect = {
+					owner = {
+						if = {
+							limit = {
+								any_owned_planet = {
+									count_pops = {
+										limit = {
+											exists = pop_faction
+											pop_faction = { is_same_value = root }
+										}
+										count > 4
+									}
+								}
+							}
+							random_owned_planet = {
+								limit = {
+									count_pops = {
+										limit = {
+											exists = pop_faction
+											pop_faction = { is_same_value = root }
+										}
+										count > 4
+									}
+								}
+								save_event_target_as = roving_gangs_planet
+							}
+							else = {
+								random_owned_planet = {
+									limit = { 
+										any_pop = { is_enslaved = yes }
+									}
+									save_event_target_as = roving_gangs_planet
+								}
+							}
+						}
+					}
+					pop_faction_event = { id = faction.15 } # gang kills random pop on roving_gangs_planet, response from their pop faction, slave can also die pushing some to Malcontents
+					add_support = -0.25
+					set_timed_pop_faction_flag = {
+						flag = recent_roving_gangs
+						days = 720
+					}
+				}
+			}
+		}
+
+		radicalization = {
+			title = POP_FACTION_DOCILE_SLAVES_RADICALIZATION
+			min_support = 0.75
+			max_support = 1.00
+
+			spawn_chance = {
+				base = 20
+
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = POP_FACTION_DOCILE_SLAVES_RECENT_RADICALIZATION
+						has_pop_faction_flag = recent_radicalization
+					}
+				}
+
+				modifier = {
+					factor = 0
+					custom_tooltip_success = {
+						text = docile_slaves_demand_fulfilled
+						owner = {
+							OR = {
+								has_policy_flag = slavery_allowed_regulated
+								has_policy_flag = slavery_allowed_regulated_xenos_only
+							}
+						}
+					}
+				}
+			}
+
+
+			effect = {
+				custom_tooltip = POP_FACTION_DOCILE_SLAVES_RADICALIZATION_DESC
+				hidden_effect = {
+					owner = {
+						if = {
+							limit = {
+								NOT = {
+									any_owned_pop = {
+										exists = pop_faction
+										pop_faction = { is_pop_faction_type = malcontent_slaves}
+									}
+								}
+							}
+							# Create Malcontent Slaves pop faction
+							# Save as malcontent_faction
+							root = {
+								if = {
+									limit = {
+										any_pop = {
+											is_enslaved = yes
+											NOR = {
+												is_species = "ROBOT_POP_SPECIES_1"
+												is_species = "ROBOT_POP_SPECIES_2"
+												pop_has_ethic = ethic_fanatic_collectivist
+												pop_has_ethic = ethic_collectivist
+											}
+										}
+									}
+									random_owned_pop = {
+										limit = {
+											is_enslaved = yes
+											NOR = {
+												is_species = "ROBOT_POP_SPECIES_1"
+												is_species = "ROBOT_POP_SPECIES_2"
+												pop_has_ethic = ethic_fanatic_collectivist
+												pop_has_ethic = ethic_collectivist
+											}
+										}
+										root.owner = {
+											create_pop_faction = {
+												type = malcontent_slaves
+												parameter:owner_empire = this
+												pop = prev
+											}
+											last_created_pop_faction = {
+												save_event_target_as = malcontent_faction
+											}
+										}
+									}
+									else = {
+										random_owned_pop = {
+											limit = {
+												is_enslaved = yes
+												NOR = {
+													is_species = "ROBOT_POP_SPECIES_1"
+													is_species = "ROBOT_POP_SPECIES_2"
+												}
+											}
+											root.owner = {
+												create_pop_faction = {
+													type = malcontent_slaves
+													parameter:owner_empire = this
+													pop = prev
+												}
+												last_created_pop_faction = {
+													save_event_target_as = malcontent_faction
+												}
+											}
+										}
+									}
+								}
+							}
+							else = {
+								random_pop_faction = {
+									limit = { is_pop_faction_type = malcontent_slaves }
+									save_event_target_as = malcontent_faction
+								}	
+							}
+						}
+					}
+					if = {
+						limit = {
+							num_pops > 24
+						}
+						while = {
+							count = 6
+							random_owned_pop = {
+								set_pop_faction = event_target:malcontent_faction
+							}
+						}
+						else = {
+							if = {
+								limit = {
+									num_pops > 19
+								}
+								while = {
+									count = 5
+									random_owned_pop = {
+										set_pop_faction = event_target:malcontent_faction
+									}
+								}
+								else = {
+									if = {
+										limit = {
+											num_pops > 14
+										}
+										while = {
+											count = 4
+											random_owned_pop = {
+												set_pop_faction = event_target:malcontent_faction
+											}
+										}
+										else = {
+											if = {
+												limit = {
+													num_pops > 9
+												}
+												while = {
+													count = 3
+													random_owned_pop = {
+														set_pop_faction = event_target:malcontent_faction
+													}
+												}
+												else = {
+													while = {
+														count = 3
+														random_owned_pop = {
+															set_pop_faction = event_target:malcontent_faction
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

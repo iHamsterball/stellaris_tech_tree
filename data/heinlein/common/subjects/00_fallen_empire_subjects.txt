@@ -1,0 +1,209 @@
+# Xenophobe
+thrall = {
+	can_colonize = no
+	can_be_integrated = no
+	joins_overlord_wars = no
+	calls_overlord_to_war = no
+	can_do_diplomacy = yes
+	
+	diplo_threat = 0.75
+	
+	subject_tax_rate = {
+		minerals = 0.25
+		energy = 0.25
+	}
+	
+	potential = {
+		is_country_type = default
+		from = {
+			is_country_type = awakened_fallen_empire
+			has_ethic = ethic_fanatic_xenophobe
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = {
+				has_global_flag = war_in_heaven_ongoing
+			}
+			join_war = from
+		}
+	}
+}
+
+# Spiritualist
+dominion = {
+	can_colonize = yes
+	can_be_integrated = no
+	joins_overlord_wars = no
+	calls_overlord_to_war = no
+	can_do_diplomacy = yes
+	
+	diplo_threat = 0.75
+	
+	subject_tax_rate = {
+		minerals = 0.25
+		energy = 0.25
+	}
+	
+	potential = {
+		is_country_type = default
+		from = {
+			is_country_type = awakened_fallen_empire
+			has_ethic = ethic_fanatic_spiritualist
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = {
+				has_global_flag = war_in_heaven_ongoing
+			}
+			join_war = from
+		}
+		if = {
+			limit = { has_ethic = "ethic_fanatic_materialist" }
+			country_remove_ethic = "ethic_fanatic_materialist"
+		}
+		if = {
+			limit = { has_ethic = "ethic_materialist" }
+			country_remove_ethic = "ethic_materialist"
+		}
+		if = {
+			limit = { has_ethic = "ethic_fanatic_individualist" }
+			country_remove_ethic = "ethic_fanatic_individualist"
+		}
+		if = {
+			limit = { has_ethic = "ethic_individualist" }
+			country_remove_ethic = "ethic_individualist"
+		}
+		if = {
+			limit = { has_ethic = "ethic_fanatic_pacifist" }
+			country_remove_ethic = "ethic_fanatic_pacifist"
+		}
+		if = {
+			limit = { has_ethic = "ethic_pacifist" }
+			country_remove_ethic = "ethic_pacifist"
+		}
+		if = {
+			limit = { has_ethic = "ethic_fanatic_militarist" }
+			country_remove_ethic = "ethic_fanatic_militarist"
+		}
+		if = {
+			limit = { has_ethic = "ethic_militarist" }
+			country_remove_ethic = "ethic_militarist"
+		}
+		if = {
+			limit = { has_ethic = "ethic_fanatic_xenophile" }
+			country_remove_ethic = "ethic_fanatic_xenophile"
+		}
+		if = {
+			limit = { has_ethic = "ethic_xenophile" }
+			country_remove_ethic = "ethic_xenophile"
+		}
+		if = {
+			limit = { has_ethic = "ethic_fanatic_xenophobe" }
+			country_remove_ethic = "ethic_fanatic_xenophobe"
+		}
+		if = {
+			limit = { has_ethic = "ethic_xenophobe" }
+			country_remove_ethic = "ethic_xenophobe"
+		}
+		if = {
+			limit = { has_ethic = "ethic_fanatic_spiritualist" }
+			country_remove_ethic = "ethic_fanatic_spiritualist"
+		}
+		if = {
+			limit = { has_ethic = "ethic_spiritualist" }
+			country_remove_ethic = "ethic_spiritualist"
+		}
+		if = {
+			limit = { has_ethic = "ethic_fanatic_collectivist" }
+			country_remove_ethic = "ethic_fanatic_collectivist"
+		}
+		if = {
+			limit = { has_ethic = "ethic_collectivist" }
+			country_remove_ethic = "ethic_collectivist"
+		}
+		country_add_ethic = "ethic_fanatic_spiritualist"
+		country_add_ethic = "ethic_collectivist"	
+		change_government = "divine_mandate"
+	}
+}
+
+# Materialist
+satellite = {
+	can_colonize = yes
+	can_be_integrated = no
+	joins_overlord_wars = no
+	calls_overlord_to_war = no
+	can_do_diplomacy = yes
+	
+	diplo_threat = 0.75
+	
+	subject_tax_rate = {
+		physics_research = 0.25
+		society_research = 0.25
+		engineering_research = 0.25
+	}
+
+	potential = {
+		is_country_type = default
+		from = {
+			is_country_type = awakened_fallen_empire
+			has_ethic = ethic_fanatic_materialist
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = {
+				has_global_flag = war_in_heaven_ongoing
+			}
+			join_war = from
+		}
+		set_policy = {
+			policy = artificial_intelligence_policy
+			option = ai_outlawed
+			cooldown = yes
+		}
+	}	
+}
+
+# Xenophile
+signatory = {
+	can_colonize = yes
+	can_be_integrated = no
+	joins_overlord_wars = no
+	calls_overlord_to_war = yes
+	can_do_diplomacy = no
+	
+	diplo_threat = 0.75
+	
+	potential = {
+		is_country_type = default
+		from = {
+			is_country_type = awakened_fallen_empire
+			has_ethic = ethic_fanatic_xenophile
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = {
+				has_global_flag = war_in_heaven_ongoing
+			}
+			join_war = from
+		}
+		set_policy = {
+			policy = slavery
+			option = slavery_not_allowed
+			cooldown = yes
+		}
+		set_policy = {
+			policy = purge
+			option = purge_not_allowed
+			cooldown = yes
+		}				
+	}
+}

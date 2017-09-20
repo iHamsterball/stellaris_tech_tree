@@ -1,0 +1,131 @@
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes. 
+
+#############
+#	POWER	#
+#############
+
+@power_S1 = -5
+@power_M1 = -10
+@power_L1 = -20
+            
+@power_S2 = -10
+@power_M2 = -20
+@power_L2 = -40
+          
+#############
+#	COST	#
+#############
+
+@cost_S1 = 5
+@cost_M1 = 10
+@cost_L1 = 20
+           
+@cost_S2 = 7.5
+@cost_M2 = 15
+@cost_L2 = 30
+
+#############
+#	AFTERBURNER	#
+#############
+
+@afterburner_S1 = 0.10
+@afterburner_M1 = 0.20
+@afterburner_L1 = 0.40
+
+@afterburner_S2 = 0.15
+@afterburner_M2 = 0.30
+@afterburner_L2 = 0.60
+
+
+#############
+# UTILITIES #
+#############
+
+# Afterburners
+utility_component_template = {
+	key = "SMALL_AFTERBURNER_1"
+	size = small
+	icon = "GFX_ship_part_afterburner_1"
+	icon_frame = 1
+	power = @power_S1
+	cost = @cost_S1
+	modifier = {
+		ship_combat_speed_mult = @afterburner_S1
+	}
+	prerequisites = { "tech_afterburners_1" }
+	component_set = "AFTERBURNER_1"
+	upgrades_to = "SMALL_AFTERBURNER_2"
+}
+
+utility_component_template = {
+	key = "MEDIUM_AFTERBURNER_1"
+	size = medium
+	icon = "GFX_ship_part_afterburner_1"
+	icon_frame = 1
+	power = @power_M1
+	cost = @cost_M1
+	modifier = {
+		ship_combat_speed_mult = @afterburner_M1
+	}
+	prerequisites = { "tech_afterburners_1" }
+	component_set = "AFTERBURNER_1"
+	upgrades_to = "MEDIUM_AFTERBURNER_2"
+}
+
+utility_component_template = {
+	key = "LARGE_AFTERBURNER_1"
+	size = large
+	icon = "GFX_ship_part_afterburner_1"
+	icon_frame = 1
+	power = @power_L1
+	cost = @cost_L1
+	modifier = {
+		ship_combat_speed_mult = @afterburner_L1
+	}
+	prerequisites = { "tech_afterburners_1" }
+	component_set = "AFTERBURNER_1"
+	upgrades_to = "LARGE_AFTERBURNER_2"
+}
+
+# Advanced Afterburners
+utility_component_template = {
+	key = "SMALL_AFTERBURNER_2"
+	size = small
+	icon = "GFX_ship_part_afterburner_2"
+	icon_frame = 1
+	power = @power_S2
+	cost = @cost_S2
+	modifier = {
+		ship_combat_speed_mult = @afterburner_S2
+	}
+	prerequisites = { "tech_afterburners_2" }
+	component_set = "AFTERBURNER_2"
+}
+
+utility_component_template = {
+	key = "MEDIUM_AFTERBURNER_2"
+	size = medium
+	icon = "GFX_ship_part_afterburner_2"
+	icon_frame = 1
+	power = @power_M2
+	cost = @cost_M2
+	modifier = {
+		ship_combat_speed_mult = @afterburner_M2
+	}
+	prerequisites = { "tech_afterburners_2" }
+	component_set = "AFTERBURNER_2"
+}
+
+utility_component_template = {
+	key = "LARGE_AFTERBURNER_2"
+	size = large
+	icon = "GFX_ship_part_afterburner_2"
+	icon_frame = 1
+	power = @power_L2
+	cost = @cost_L2
+	modifier = {
+		ship_combat_speed_mult = @afterburner_L2
+	}
+	prerequisites = { "tech_afterburners_2" }
+	component_set = "AFTERBURNER_2"
+}

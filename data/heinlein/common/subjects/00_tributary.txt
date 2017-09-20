@@ -1,0 +1,19 @@
+tributary = {
+	can_colonize = yes
+	joins_overlord_wars = no
+	calls_overlord_to_war = no
+	can_do_diplomacy = yes
+	
+	can_switch_to = {
+		vassal protectorate
+	}
+	
+	subject_tax_rate = {
+		minerals = 0.25
+		energy = 0.25
+	}
+	
+	potential = {
+		from = { is_country_type = default }
+	}
+}
