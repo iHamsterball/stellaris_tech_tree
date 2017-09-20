@@ -1,0 +1,243 @@
+make_tributary = {
+	execution_order = 1
+	
+	parameters = {
+		country = {
+			type = country
+		}
+	}
+	
+	warscore_cost = {
+		base = 10
+
+		scaled_modifier = {
+			scope = parameter:country
+			add = 10
+			calc = planets_in_country
+		}		
+
+		scaled_modifier = {
+			scope = parameter:country
+			add = 0.5
+			calc = pop_count
+		}
+
+		scaled_modifier = {
+			scope = parameter:country
+			div = 0.05
+			calc = planets_in_country
+		}
+		
+		modifier = {
+			factor = 1.5
+			has_ethic = "ethic_pacifist"
+		}
+	
+		modifier = {
+			factor = 2.0
+			has_ethic = "ethic_fanatic_pacifist"
+		}		
+		
+		modifier = {
+			factor = 0.9
+			has_ethic = "ethic_militarist"
+		}
+	
+		modifier = {
+			factor = 0.8
+			has_ethic = "ethic_fanatic_militarist"
+		}
+	}
+
+	potential = {
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_wrong_type"
+			parameter:country = {
+				is_country_type = default 
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_not_opponent"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								is_war_participant = {
+									who = prevprev
+									side = prev
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						would_join_war = {
+							attacker = root
+							defender = from
+							side = from
+						}
+					}
+					
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_overlord_in_war"
+			OR = {
+				NOT = {
+					exists = parameter:country.overlord
+				}
+				AND = {
+					exists = fromfrom
+					fromfrom = {
+						NOT = {
+							is_war_participant = {
+								who = parameter:country.overlord
+								side = root
+							}
+						}
+					}
+				}
+				AND = {
+					NOT = { exists = fromfrom }
+					parameter:country.overlord = {
+						NOT = {
+							would_join_war = {
+								attacker = root
+								defender = from
+								side = root
+							}
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_no_overlords"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								count_war_participants = {
+									side = root
+									limit = {
+										NOT = { exists = overlord }
+										parameter:country = {
+											can_be_subject = {
+												overlord = prev
+												subject_type = "tributary"
+											}
+										}
+									}
+									count > 0
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						count_potential_war_participants = {
+							attacker = root
+							defender = from
+							side = root
+
+							limit = {
+								NOT = { exists = overlord }
+								parameter:country = {
+									can_be_subject = {
+										overlord = prev
+										subject_type = "tributary"
+									}
+								}
+							}
+
+							count > 0
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	possible = {
+		fromfromfrom = {
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_no_vassals_of_vassals"
+				NOT = { exists = overlord }
+			}
+		}
+		hidden:parameter:country = {
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_liberated"
+				war_demand_counter = {
+					type = liberated_or_vassalized
+					value < 1
+				}
+			}
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_no_planets"
+				war_demand_counter = {
+					type = num_owned_planets
+					value > 0
+				}
+			}
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_missing_tech"
+				has_technology = tech_xeno_supremacy
+			}
+		}
+	}
+	
+	proposable = {
+		custom_tooltip_fail = {
+			text = "war_demand_war_philosophy"
+			has_policy_flag = unrestricted_wars	
+		}	
+	
+		parameter:country = {
+			can_be_subject = {
+				overlord = fromfromfrom
+				subject_type = "tributary"
+			}
+		}
+	}
+	
+	effect = {
+		add_threat = {
+			who = fromfromfrom
+			amount = 2 # scales to pops
+		}
+		parameter:country = {
+			set_subject_of = {
+				who = fromfromfrom
+				subject_type = "tributary"
+			}
+			fromfromfrom = {
+				guarantee_country = {
+					target = prev
+					free_guarantee_days = 3650
+				}
+			}
+		}
+	}
+	
+	counters = {
+		liberated_or_vassalized = {
+			context = parameter:country
+			value = { base = 1 }
+		}
+	}
+	
+	ai_weight = {
+		base = 0
+		
+		modifier = {
+			factor = 0.5
+			NOT = { this = { is_domineering_to = parameter:country } }
+		}
+	}
+}

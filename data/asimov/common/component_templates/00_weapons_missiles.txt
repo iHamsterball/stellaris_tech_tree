@@ -1,0 +1,543 @@
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes. 
+
+#Updated Range on these
+
+# DEFAULT VALUES:
+# is_missile = no
+# is_beam = no
+# is_point_defence = no
+
+@missile_speed = 5
+
+# ####################
+#  Missiles
+# ####################
+
+### Missile Launcher
+weapon_component_template = {
+	key = "SMALL_MISSILE_1"
+	size = small
+	entity = "turret_missile_small_entity"
+	
+	icon = "GFX_ship_part_missile_1"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_missiles_1" }
+	component_set = "MISSILE_1"
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+}
+
+### Missile Launcher
+weapon_component_template = {
+	key = "MEDIUM_MISSILE_1"
+	size = medium
+	entity = "turret_missile_medium_entity"
+	
+	icon = "GFX_ship_part_missile_1"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_missiles_1" }
+	component_set = "MISSILE_1"
+	projectile_gfx = "medium_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+}
+
+### Missile Launcher
+weapon_component_template = {
+	key = "LARGE_MISSILE_1"
+	size = large
+	entity = "turret_missile_large_entity"
+	
+	icon = "GFX_ship_part_missile_1"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_missiles_1" }
+	component_set = "MISSILE_1"
+	projectile_gfx = "large_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+}
+
+### Advanced Missile Launcher
+weapon_component_template = {
+	key = "SMALL_MISSILE_2"
+	size = small
+	entity = "turret_missile_small_entity"
+	
+	icon = "GFX_ship_part_missile_2"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_missiles_2" }
+	component_set = "MISSILE_2"
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+}
+
+### Advanced Missile Launcher
+weapon_component_template = {
+	key = "MEDIUM_MISSILE_2"
+	size = medium
+	entity = "turret_missile_medium_entity"
+	
+	icon = "GFX_ship_part_missile_2"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_missiles_2" }
+	component_set = "MISSILE_2"
+	projectile_gfx = "medium_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+}
+
+### Advanced Missile Launcher
+weapon_component_template = {
+	key = "LARGE_MISSILE_2"
+	size = large
+	entity = "turret_missile_large_entity"
+	
+	icon = "GFX_ship_part_missile_2"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_missiles_2" }
+	component_set = "MISSILE_2"
+	projectile_gfx = "large_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+}
+
+### Strike Missile Launcher
+weapon_component_template = {
+	key = "SMALL_MISSILE_3"
+	size = small
+	entity = "turret_missile_small_entity"
+	
+	icon = "GFX_ship_part_missile_3"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_missiles_3" }
+	component_set = "MISSILE_3"
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+}
+
+### Strike Missile Launcher
+weapon_component_template = {
+	key = "MEDIUM_MISSILE_3"
+	size = medium
+	entity = "turret_missile_medium_entity"
+	
+	icon = "GFX_ship_part_missile_3"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+		
+	prerequisites = { "tech_missiles_3" }
+	component_set = "MISSILE_3"
+	projectile_gfx = "medium_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+}
+
+### Strike Missile Launcher
+weapon_component_template = {
+	key = "LARGE_MISSILE_3"
+	size = large
+	entity = "turret_missile_large_entity"
+	
+	icon = "GFX_ship_part_missile_3"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_missiles_3" }
+	component_set = "MISSILE_3"
+	projectile_gfx = "large_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+}
+
+### Heavy Missile Launcher
+weapon_component_template = {
+	key = "SMALL_MISSILE_4"
+	size = small
+	entity = "turret_missile_small_entity"
+	
+	icon = "GFX_ship_part_missile_4"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_missiles_4" }
+	component_set = "MISSILE_4"
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+}
+
+### Heavy Missile Launcher
+weapon_component_template = {
+	key = "MEDIUM_MISSILE_4"
+	size = medium
+	entity = "turret_missile_medium_entity"
+	
+	icon = "GFX_ship_part_missile_4"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_missiles_4" }
+	component_set = "MISSILE_4"
+	projectile_gfx = "medium_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+}
+
+### Heavy Missile Launcher
+weapon_component_template = {
+	key = "LARGE_MISSILE_4"
+	size = large
+	entity = "turret_missile_large_entity"
+	
+	icon = "GFX_ship_part_missile_4"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_missiles_4" }
+	component_set = "MISSILE_4"
+	projectile_gfx = "large_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+}
+
+### Advanced Heavy Missile Launcher
+weapon_component_template = {
+	key = "SMALL_MISSILE_5"
+	size = small
+	entity = "turret_missile_small_entity"
+	
+	icon = "GFX_ship_part_missile_5"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_missiles_5" }
+	component_set = "MISSILE_5"
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+}
+
+### Advanced Heavy Missile Launcher
+weapon_component_template = {
+	key = "MEDIUM_MISSILE_5"
+	size = medium
+	entity = "turret_missile_medium_entity"
+	
+	icon = "GFX_ship_part_missile_5"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_missiles_5" }
+	component_set = "MISSILE_5"
+	projectile_gfx = "medium_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+}
+
+### Advanced Heavy Missile Launcher
+weapon_component_template = {
+	key = "LARGE_MISSILE_5"
+	size = large
+	entity = "turret_missile_large_entity"
+	
+	icon = "GFX_ship_part_missile_5"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_missiles_5" }
+	component_set = "MISSILE_5"
+	projectile_gfx = "large_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+}
+
+# ####################
+# Spaceport Missile
+# ####################
+
+weapon_component_template = {
+	key = "SMALL_SPACEPORT_MISSILE"
+	size = small
+	entity = "turret_missile_small_entity"
+	
+	type = missile
+	icon = "GFX_ship_part_missile_1"
+	icon_frame = 1
+	
+	projectile_gfx = "small_missile"
+	hidden = yes
+	component_set = "SPACEPORT_MISSILE"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+}
+
+weapon_component_template = {
+	key = "MEDIUM_SPACEPORT_MISSILE"
+	size = medium
+	entity = "turret_missile_medium_entity"
+	
+	type = missile
+	icon = "GFX_ship_part_missile_1"
+	icon_frame = 1
+	
+	projectile_gfx = "medium_missile"
+	hidden = yes
+	component_set = "SPACEPORT_MISSILE"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+}
+
+weapon_component_template = {
+	key = "LARGE_SPACEPORT_MISSILE"
+	size = large
+	entity = "turret_missile_large_entity"
+	
+	type = missile
+	icon = "GFX_ship_part_missile_1"
+	icon_frame = 1
+	
+	projectile_gfx = "large_missile"
+	hidden = yes
+	component_set = "SPACEPORT_MISSILE"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+}
+
+
+# ####################
+#  	Swarmer Missiles
+# ####################
+
+### Swarmer Missile Launcher
+weapon_component_template = {
+	key = "LARGE_SWARMER_MISSILE_1"
+	size = large
+	entity = "turret_missile_large_entity"
+	
+	icon = "GFX_ship_part_swarmer_missile_1"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_swarmer_missiles_1" }
+	component_set = "SWARMER_MISSILE_1"
+	projectile_gfx = "swarmer_missiles"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+}
+
+### Advanced Swarmer Missile Launcher
+weapon_component_template = {
+	key = "LARGE_SWARMER_MISSILE_2"
+	size = large
+	entity = "turret_missile_large_entity"
+	
+	icon = "GFX_ship_part_swarmer_missile_2"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_swarmer_missiles_2" }
+	component_set = "SWARMER_MISSILE_2"
+	projectile_gfx = "swarmer_missiles_02"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+}
+
+# ####################
+#  	Torpedoes
+# ####################
+
+### Torpedo Launcher
+weapon_component_template = {
+	key = "SMALL_TORPEDO_1"
+	size = small
+	entity = "turret_missile_small_entity"
+	
+	icon = "GFX_ship_part_torpedo_1"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_torpedoes_1" }
+	component_set = "TORPEDO_1"
+	projectile_gfx = "small_torpedo"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_anti_shield }
+}
+
+### Torpedo Launcher
+weapon_component_template = {
+	key = "MEDIUM_TORPEDO_1"
+	size = medium
+	entity = "turret_missile_medium_entity"
+	
+	icon = "GFX_ship_part_torpedo_1"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_torpedoes_1" }
+	component_set = "TORPEDO_1"
+	projectile_gfx = "medium_torpedo"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_anti_shield }
+}
+
+### Torpedo Launcher
+weapon_component_template = {
+	key = "LARGE_TORPEDO_1"
+	size = large
+	entity = "turret_missile_large_entity"
+	
+	icon = "GFX_ship_part_torpedo_1"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_torpedoes_1" }
+	component_set = "TORPEDO_1"
+	projectile_gfx = "large_torpedo"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_anti_shield }
+}
+
+### Armored Torpedoes
+weapon_component_template = {
+	key = "SMALL_TORPEDO_2"
+	size = small
+	entity = "turret_missile_small_entity"
+	
+	icon = "GFX_ship_part_torpedo_2"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_torpedoes_2" }
+	component_set = "TORPEDO_2"
+	projectile_gfx = "small_torpedo_02"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_anti_shield }
+}
+
+### Armored Torpedoes
+weapon_component_template = {
+	key = "MEDIUM_TORPEDO_2"
+	size = medium
+	entity = "turret_missile_medium_entity"
+	
+	icon = "GFX_ship_part_torpedo_2"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_torpedoes_2" }
+	component_set = "TORPEDO_2"
+	projectile_gfx = "medium_torpedo_02"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_anti_shield }
+}
+
+### Armored Torpedoes
+weapon_component_template = {
+	key = "LARGE_TORPEDO_2"
+	size = large
+	entity = "turret_missile_large_entity"
+	
+	icon = "GFX_ship_part_torpedo_2"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_torpedoes_2" }
+	component_set = "TORPEDO_2"
+	projectile_gfx = "large_torpedo_02"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_anti_shield }
+}
+
+### Striker Torpedoes
+weapon_component_template = {
+	key = "SMALL_TORPEDO_3"
+	size = small
+	entity = "turret_missile_small_entity"
+	
+	icon = "GFX_ship_part_torpedo_3"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_torpedoes_3" }
+	component_set = "TORPEDO_3"
+	projectile_gfx = "small_torpedo_03"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_anti_shield }
+}
+
+### Striker Torpedoes
+weapon_component_template = {
+	key = "MEDIUM_TORPEDO_3"
+	size = medium
+	entity = "turret_missile_medium_entity"
+	
+	icon = "GFX_ship_part_torpedo_3"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_torpedoes_3" }
+	component_set = "TORPEDO_3"
+	projectile_gfx = "medium_torpedo_03"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_anti_shield }
+}
+
+### Striker Torpedoes
+weapon_component_template = {
+	key = "LARGE_TORPEDO_3"
+	size = large
+	entity = "turret_missile_large_entity"
+	
+	icon = "GFX_ship_part_torpedo_3"
+	icon_frame = 1
+	static_rotation = yes
+	type = missile
+	
+	prerequisites = { "tech_torpedoes_3" }
+	component_set = "TORPEDO_3"
+	projectile_gfx = "large_torpedo_03"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_anti_shield }
+}

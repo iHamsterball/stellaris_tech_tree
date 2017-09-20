@@ -1,0 +1,168 @@
+##########################################################################
+# HARD FIXED STATE - DO NOT REMOVE OR RENAME ANY OF THESE
+##########################################################################
+
+# Opinion from AI personality
+opinion_from_personality = {
+	opinion = {
+		modifier = {
+			add = -1000
+			has_ai_personality = metalhead	
+		}	
+		modifier = {
+			add = 100
+			has_ai_personality = fanatic_befrienders
+		}		
+		modifier = {
+			add = -1000
+			has_ai_personality = fanatic_purifiers
+			NOT = { is_same_species = FROM }
+			NOT = { is_subspecies = FROM }			
+		}	
+		modifier = {
+			add = -50
+			has_ai_personality = honorbound_warriors
+			FROM = { has_ethic = "ethic_pacifist" }
+		}
+		modifier = {
+			add = -100
+			has_ai_personality = honorbound_warriors
+			FROM = { has_ethic = "ethic_fanatic_pacifist" }
+		}
+		modifier = {
+			add = 25
+			has_ai_personality = democratic_crusaders 
+			FROM = { has_election_type = democratic }
+		}		
+		modifier = {
+			add = -50
+			has_ai_personality = democratic_crusaders	
+			FROM = { has_election_type = oligarchic }
+		}
+		modifier = {
+			add = -100
+			has_ai_personality = democratic_crusaders	
+			FROM = { has_election_type = none }
+		}		
+		modifier = {
+			add = -100
+			NOT = { has_ai_personality = democratic_crusaders }
+			has_ai_personality_behaviour = ideologue
+			OR = {
+				AND = {
+					OR = {
+						has_ethic = "ethic_individualist"
+						has_ethic = "ethic_fanatic_individualist"
+					}
+					OR = {
+						FROM = { has_ethic = "ethic_collectivist" }
+						FROM = { has_ethic = "ethic_fanatic_collectivist" }
+					}
+				}
+				AND = {
+					OR = {
+						has_ethic = "ethic_collectivist"
+						has_ethic = "ethic_fanatic_collectivist"
+					}
+					OR = {
+						FROM = { has_ethic = "ethic_individualist" }
+						FROM = { has_ethic = "ethic_fanatic_individualist" }
+					}
+				}
+				AND = {
+					OR = {
+						has_ethic = "ethic_materialist"
+						has_ethic = "ethic_fanatic_materialist"
+					}
+					OR = {
+						FROM = { has_ethic = "ethic_spiritualist" }
+						FROM = { has_ethic = "ethic_fanatic_spiritualist" }
+					}
+				}
+				AND = {
+					OR = {
+						has_ethic = "ethic_spiritualist"
+						has_ethic = "ethic_fanatic_spiritualist"
+					}
+					OR = {
+						FROM = { has_ethic = "ethic_materialist" }
+						FROM = { has_ethic = "ethic_fanatic_materialist" }
+					}
+				}					
+			}
+		}		
+	}
+}
+
+
+# Desecrated Fallen Empire's holy world
+opinion_desecrated_holy_world = {
+	opinion = {
+		modifier = {
+			add = -200
+			has_ai_personality = fallen_empire_spiritualist
+			FROM = {
+				any_owned_planet = {
+					has_modifier = "holy_planet"
+				}
+			}
+		}	
+	}
+}
+
+# Desecrated Tomb World
+opinion_desecrated_tomb_world = {
+	opinion = {
+		modifier = {
+			add = -50
+			has_ai_personality = fallen_empire_spiritualist
+			FROM = {
+				any_owned_planet = {
+					is_planet_class = pc_nuked
+				}
+			}
+		}	
+	}
+}
+
+# Fallen Empire catches you researching AI
+opinion_researching_ai = {
+	opinion = {
+		modifier = {
+			add = -10
+			has_ai_personality = fallen_empire_materialist
+			FROM = { NOT = { has_policy_flag = ai_outlawed } }
+			FROM = { has_technology = tech_robotic_workers }
+		}
+		modifier = {
+			add = -20
+			has_ai_personality = fallen_empire_materialist
+			FROM = { NOT = { has_policy_flag = ai_outlawed } }
+			FROM = { has_technology = tech_droid_workers }		
+		}
+		modifier = {
+			add = -70
+			has_ai_personality = fallen_empire_materialist
+			FROM = { NOT = { has_policy_flag = ai_outlawed } }
+			FROM = { has_technology = tech_synthetic_workers }		
+		}	
+		modifier = {
+			add = -10
+			has_ai_personality = fallen_empire_materialist
+			FROM = { NOT = { has_policy_flag = ai_outlawed } }
+			FROM = { has_technology = tech_administrative_ai }		
+		}
+		modifier = {
+			add = -20
+			has_ai_personality = fallen_empire_materialist
+			FROM = { NOT = { has_policy_flag = ai_outlawed } }
+			FROM = { has_technology = tech_self_aware_logic }		
+		}
+		modifier = {
+			add = -70
+			has_ai_personality = fallen_empire_materialist
+			FROM = { NOT = { has_policy_flag = ai_outlawed } }
+			FROM = { has_technology = tech_sentient_ai }		
+		}		
+	}
+}

@@ -1,0 +1,166 @@
+### AGENDAS ####
+#
+# Agendas are given to leader-candidates in Oligarchic government-forms
+#
+# weight_modifier - scope = leader, from = country
+# modifier
+
+
+agenda_defensive_focus = {
+	weight_modifier = {
+		weight = 100
+		modifier = {
+			factor = 1.5
+				from = {
+					has_ethic = ethic_militarist
+				}
+			}
+		modifier = {
+			factor = 2
+				from = {
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+		modifier = {
+			factor = 1.5
+			leader_class = admiral
+		}
+		modifier = {
+			factor = 2
+			leader_class = general
+		}
+	}
+	
+	modifier = {
+		shipsize_military_station_small_build_cost_mult = -0.15
+		shipsize_military_station_medium_build_cost_mult = -0.15
+		shipsize_military_station_large_build_cost_mult = -0.15
+	}
+}
+
+agenda_naval_focus = {
+	weight_modifier = {
+		weight = 100
+		modifier = {
+			factor = 1.5
+				from = {
+					has_ethic = ethic_militarist
+				}
+			}
+		modifier = {
+			factor = 2
+				from = {
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+		modifier = {
+			factor = 1.5
+			leader_class = admiral
+		}
+	}
+	
+	modifier = {
+		spaceport_ship_build_cost_mult = -0.10
+		ship_upkeep_mult = -0.10
+		spaceport_ship_build_speed_mult = 0.20
+	}
+}
+
+agenda_industrial = {
+	weight_modifier = {
+		weight = 100
+	}
+	
+	modifier = {
+		shipsize_constructor_build_cost_mult = -0.15
+		shipsize_mining_station_build_cost_mult = -0.15
+		building_mining_network_1_build_cost_mult = -0.15
+	}
+}
+
+agenda_science = {
+	weight_modifier = {
+		weight = 100
+		modifier = {
+			factor = 1.5
+				from = {
+					has_ethic = ethic_materialist
+				}
+			}
+		modifier = {
+			factor = 2
+				from = {
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+		modifier = {
+			factor = 1.5
+			leader_class = scientist
+		}
+	}
+	
+	modifier = {
+		all_technology_research_speed = 0.10
+	}
+}
+
+agenda_finanical = {
+	weight_modifier = {
+		weight = 100
+		modifier = {
+			factor = 1.5
+				from = {
+					has_ethic = ethic_materialist
+				}
+			}
+		modifier = {
+			factor = 2
+				from = {
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				leader_class = governor
+			}
+		}
+	}
+	
+	modifier = {
+		tile_resource_energy_mult = 0.10
+	}
+}
+
+agenda_welfare = {
+	weight_modifier = {
+		weight = 100
+		modifier = {
+			factor = 1.5
+			from = {
+				has_ethic = ethic_pacifist
+			}
+		}
+		modifier = {
+			factor = 2
+			from = {
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+	
+	modifier = {
+		pop_growth_req_mult = -0.25
+	}
+}
+
+## Null agenda, if all other options fail
+agenda_null = {
+	weight_modifier = {
+		weight = 0
+	}
+	
+	modifier = {
+		pop_other_species_happiness = 0.01
+	}
+}
