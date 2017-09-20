@@ -1,5 +1,6 @@
 import codecs
 import json
+import os
 import re
 import yaml
 from django.http import JsonResponse
@@ -16,10 +17,18 @@ def techs(request):
     locale = request.GET.get('locale')
 
     print(locale, version)
-
-    jsonified = generate_localized_tech(locale, version)
-
-    data = json.loads(jsonified)
+    
+    file_path = os.path.join('data', version, 'techs.json')
+    if os.path.isfile(file_path):
+        print('Cached')
+        with open(file_path) as data_file:
+            data = json.load(data_file)
+    else:
+        print('Generating')
+        jsonified = generate_localized_tech(locale, version)
+        with open(file_path, 'w') as write_file:
+            write_file.write(jsonified)
+        data = json.loads(jsonified)
 
     #print(type(data))
 
