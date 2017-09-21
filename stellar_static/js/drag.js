@@ -198,6 +198,14 @@ function drag(elementId) {
   //触屏开始状态
   element.addEventListener('touchstart', function (event) {
     event.preventDefault();
+    //这方法太脏了(#1
+    let tooltip = document.querySelector('div[role="tooltip"]');
+    if (!(tooltip === undefined || tooltip === null)) {
+      tooltip.remove();
+    }
+    let evt = document.createEvent("MouseEvents");
+    evt.initEvent("mouseout", true, true);
+    event.target.dispatchEvent(evt);
     onTouchstart(event);
   }, false);
 
@@ -221,5 +229,14 @@ function drag(elementId) {
   //触屏释放状态
   element.addEventListener('touchend', function (event) {
     element.style.cursor = "auto"
+    position.state = 0;
+    //真的太脏了(#2
+    if (event.target.className == 'description'
+    || event.target.className == 'weight-modifiers'
+    || event.target.className == 'feature-unlocks') {
+      let evt = document.createEvent("MouseEvents");
+      evt.initEvent("mouseover", true, true);
+      event.target.dispatchEvent(evt);
+    }
   }, false);
 }   
