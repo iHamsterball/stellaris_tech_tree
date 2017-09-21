@@ -171,6 +171,7 @@ function drag(elementId) {
 
   //元素被鼠标拖住
   element.addEventListener('mousedown', function (event) {
+    element.style.cursor = "move";
     onMousedown(event);
   }, false);
 
@@ -181,6 +182,7 @@ function drag(elementId) {
 
   //释放拖拽状态
   element.addEventListener('mouseup', function (event) {
+    element.style.cursor = "auto";
     position.state = 0;
   }, false);
 }   
