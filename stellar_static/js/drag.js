@@ -97,17 +97,44 @@ function drag(elementId) {
     return event || window.event;
   }
 
-  //元素被鼠标拖住
-  element.addEventListener('mousedown', function (event) {
+  //绑定鼠标按下动作
+  function onMousedown(event) {
     //获得偏移的位置以及更改状态
     let e = getEvent(event);
-    position.offsetX = e.offsetX;
-    position.offsetY = e.offsetY;
-    position.state = 1;
-  }, false);
+    if (event.target.nodeName != 'svg') {
+      position.offsetX = e.offsetX;
+      position.offsetY = e.offsetY;
+      console.log("Event: ", position.offsetX, position.offsetY);
+      /*while (tmp.className.split(' ')[0] != 'node') {
+        tmp = tmp.parentNode;
+        position.offsetX += tmp.offsetLeft;
+        position.offsetY += tmp.offsetTop;
+        console.log("Callback: ", tmp.className, position.offsetX, position.offsetY);
+      }*/
 
-  //元素移动过程中
-  document.addEventListener('mousemove', function (event) {
+      let tmp = event.target;
+      while (tmp.className.split(' ')[0] != 'chart') {
+        tmp = tmp.parentNode;
+      }
+
+      console.log("Padding: ", event.target.getBoundingClientRect());
+      position.offsetX += event.target.getBoundingClientRect().left;
+      position.offsetY += event.target.getBoundingClientRect().top;
+      console.log("Padding: ", tmp.getBoundingClientRect());
+      position.offsetX -= tmp.getBoundingClientRect().left;
+      position.offsetY -= tmp.getBoundingClientRect().top;
+      console.log("Final:", position.offsetX, position.offsetY);
+    } else {
+
+      position.offsetX = e.offsetX;
+      position.offsetY = e.offsetY;
+      console.log(position.offsetX, position.offsetY);
+    }
+    position.state = 1;
+  }
+ 
+  //拖动元素动作
+  function onMousemove(event) {
     let e = getEvent(event);
     if (position.state) {
       position.endX = e.clientX;
@@ -138,7 +165,18 @@ function drag(elementId) {
         element.style.left = ((minX > 0) ? '+' + minX : minX) + 'px';
         position.offsetX = position.endX - minX;
       }
+      //console.log(position);
     }
+  }
+
+  //元素被鼠标拖住
+  element.addEventListener('mousedown', function (event) {
+    onMousedown(event);
+  }, false);
+
+  //元素移动过程中
+  element.addEventListener('mousemove', function (event) {
+    onMousemove(event);
   }, false);
 
   //释放拖拽状态
