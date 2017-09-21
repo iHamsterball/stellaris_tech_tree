@@ -18,7 +18,7 @@ html { overflow-x: hidden; overflow-y: hidden; }
 </style>
 </head>
 <body>
-    <div style="z-index: 2; height: 300px; background-color: #ffffff;">
+    <div style="position: absolute; z-index: 4; height: 300px; width: 100%; background-color: #ffffff;">
         <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
             <input name="next" type="hidden" value="{{ redirect_to }}" />
             <select name="language" onchange="this.form.submit()">
@@ -52,7 +52,9 @@ html { overflow-x: hidden; overflow-y: hidden; }
       });
     </script>
 
-    <div class="chart" id="tech-tree">
+    <div class="chart" id="tech-tree" 
+        style="top: 300px; user-select: none; -moz-user-select:none; -webkit-user-select:none;" 
+        unselectable="on" onselectstart="return false;">
         <script src="{% static "vendor/raphael.js" %}"></script>
         <script src="{% static "js/Treant.js" %}"></script>
         <script src="{% static "vendor/jquery.min.js" %}"></script>
