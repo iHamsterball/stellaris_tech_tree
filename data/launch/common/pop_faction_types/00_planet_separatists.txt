@@ -1,0 +1,644 @@
+planet_separatists = {
+	
+	is_potential = {
+		num_owned_planets > 1 
+	}
+	
+	parameters = {
+		planet = {
+			type = planet
+			filter = owned
+			valid_objects = {
+				is_capital = no
+			}
+		}
+		empire = {
+			type = country
+			valid_objects = {
+				is_same_value = root
+			}
+		}
+	}
+	
+	valid = {
+		parameter:planet = { debug_scope_type = planet
+			owner = {
+				is_same_value = root.owner
+			}
+		}
+		parameter:planet = { sector_controlled = no }		
+	}
+	
+	attraction = {
+		base = 40
+
+		modifier = {
+			add = 10
+			opposing_ethics_divergence = {
+				steps = 1
+				who = parameter:planet
+			}
+		}
+
+		modifier = {
+			add = 20
+			opposing_ethics_divergence = {
+				steps = 2
+				who = parameter:planet
+			}
+		}
+
+		modifier = {
+			add = 10
+			planet = {
+				is_same_value = parameter:planet
+			}
+			tile = {
+				has_building = no
+				has_resource = {
+					type = minerals
+					amount = 0
+				}
+				has_resource = {
+					type = energy
+					amount = 0
+				}
+				has_resource = {
+					type = food
+					amount = 0
+				}
+				has_resource = {
+					type = society_research
+					amount = 0
+				}
+				has_resource = {
+					type = physics_research
+					amount = 0
+				}
+				has_resource = {
+					type = engineering_research
+					amount = 0
+				}
+			}
+		}
+
+		modifier = {
+			add = 20
+			OR = {
+				pop_has_ethic = ethic_xenophobe
+				pop_has_ethic = ethic_fanatic_xenophobe
+			}
+			parameter:empire = {
+				any_owned_pop = {
+					NOT = {
+						is_same_species = root
+					}
+				}
+			}
+		}
+
+		# +20% attraction if faction leader is ruler
+		modifier = {
+			factor = 1.2
+			exists = owner
+			owner = {
+				exists = ruler
+				ruler = {
+					exists = pop_faction
+					pop_faction = {
+						is_same_value = from
+					}
+				}
+			}
+		}
+		
+		# set to 0 if in sector or not on planet
+		modifier = {
+			factor = 0
+			OR = {
+				planet = { sector_controlled = yes }
+				NOT = {
+					planet = {
+						is_same_value = parameter:planet 
+					}
+				}
+			}
+		}
+
+		# set to 0 if over 35% happiness
+		modifier = {
+			factor = 0
+			happiness > 0.35
+		}
+
+		# set to 0 if robotic
+		modifier = {
+			factor = 0
+			OR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+			}
+		}
+	}
+	
+	on_create = {
+		set_name = random
+	}
+
+	flag = {
+		icon = {
+			category = "blocky"
+			file = "flag_blocky_23.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "horizontal.dds"
+		}
+		colors={
+			"dark_teal"
+			"teal"
+			"null"
+			"null"
+		}
+	}
+	
+	mandate = {
+		key = "mandate_planet_separatist"
+		parameter_transfer = {
+			planet = planet
+		}
+		weight = { 
+			base = 100
+		}
+	}
+	
+	on_set_leader = {
+		random_owned_pop = {
+			species = {
+				root = {
+					owner = {
+						create_leader = {
+							type = governor
+							species = prevprev
+							name = random
+							skill = 0
+							traits = {}
+						}
+						last_created_leader = {
+							recruitable = no
+							root = {
+								assign_leader = prev
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	demand = {
+		title = "POP_FACTION_PLANET_SEPARATIST_DEMAND_TITLE"
+		desc = "POP_FACTION_PLANET_SEPARATIST_DEMAND_DESC"
+	}
+	
+	actions = {		
+		grant_independence = {
+			title = "POP_FACTION_PLANET_SEPARATIST_GRANT_INDEPENDENCE_TITLE"
+			description = "POP_FACTION_PLANET_SEPARATIST_GRANT_INDEPENDENCE_DESC"
+			
+			valid = {
+				custom_tooltip = {
+					text = "POP_FACTION_PLANET_SEPARATIST_IS_NOT_OCCUPIED"
+					parameter:planet = { debug_scope_type = planet
+						is_occupied_flag = no
+					}
+				}
+				
+				custom_tooltip = {
+					text = "POP_FACTION_PLANET_SEPARATIST_NO_GROUND_COMBAT"
+					parameter:planet = { debug_scope_type = planet
+						has_ground_combat = no
+					}
+				}
+			}
+			
+			effect = {
+				hidden_effect = {
+					if = {
+						limit = {
+							has_pop_faction_flag = mandated_release
+						}
+						parameter:planet = { debug_scope_type = planet save_event_target_as = released_planet }
+						owner = { country_event = { id = mandate.100 } }
+					}
+					parameter:planet = { debug_scope_type = planet
+						random_owned_pop = {
+							limit = {
+								NOT = {
+									pop_has_trait = trait_robotic_1
+									pop_has_trait = trait_robotic_2
+									pop_has_trait = trait_robotic_3
+								}
+							}
+							species = { save_event_target_as = spawn_species }
+						}
+					}	
+					random_owned_pop = {
+						species = {
+							create_country = {
+								type = default
+								government = random
+								species = event_target:spawn_species
+								flag = random
+								ethos = random
+								ignore_initial_colony_error = yes
+							}
+						}
+					}
+					last_created_country = {
+						set_timed_country_flag = { flag = day_0 days = 1 }
+						parameter:planet = { debug_scope_type = planet
+							owner = {
+								establish_communications = last_created_country
+							}
+							set_owner = prev
+						}
+						set_name = random
+						set_subject_of = {
+							who = parameter:empire
+							subject_type = vassal
+						}
+					}
+					kill_pop_faction = yes
+				}
+			}
+			
+			ai_weight = {
+				base = 0
+			}
+		}
+		
+		suppress_media = {
+			title = FACTION_ACTION_SUPPRESS_MEDIA
+			description = FACTION_ACTION_SUPPRESS_MEDIA_DESC
+
+			cost = {
+				energy = 400
+				influence = 50
+			}
+
+			effect = {
+				add_support = -0.10
+			}
+
+			ai_weight = {
+				base = 0
+				modifier = {
+					add = 1
+					support > 0.10
+				}
+				modifier = {
+					add = 1
+					support > 0.30
+				}
+				modifier = {
+					add = 1
+					support > 0.50
+				}
+				modifier = {
+					add = 1
+					support > 0.70
+				}	
+				modifier = {
+					add = 1
+					support > 0.90
+				}						
+			}
+		}
+
+		bribe_leaders = {
+			title = FACTION_ACTION_BRIBE_LEADERS
+			description = FACTION_ACTION_BRIBE_LEADERS
+		
+			cost = {
+				energy = 200
+				influence = 200
+			}
+		
+			effect = {
+				add_support = -0.10
+			}
+
+			ai_weight = {
+				base = 0
+				modifier = {
+					add = 1
+					support > 0.10
+				}
+				modifier = {
+					add = 1
+					support > 0.30
+				}
+				modifier = {
+					add = 1
+					support > 0.50
+				}
+				modifier = {
+					add = 1
+					support > 0.70
+				}	
+				modifier = {
+					add = 1
+					support > 0.90
+				}						
+			}
+		}
+	}
+	
+	support_effects = {
+		
+		# Gather Support
+		gather_support = {
+			title = "POP_FACTION_PLANET_SEPARATIST_GATHER_SUPPORT"
+			min_support = 0.0
+			max_support = 1.0
+			
+			spawn_chance = {
+				base = 5
+				
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = "POP_FACTION_PLANET_SEPARATIST_LEADER_IS_RULER"
+						owner = {
+							exists = ruler
+							ruler = {
+								is_same_value = root.leader
+							}
+						}
+					}
+				}
+				
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = "POP_FACTION_PLANET_SEPARATIST_RECENTLY_FULL_SUPPORT"
+						parameter:planet = { debug_scope_type = planet
+							count_pops = {
+								limit = {
+									OR = {
+										not = { exists = pop_faction }
+										pop_faction = {
+											not = { is_same_value = root }
+										}
+									}
+								}
+								count > 0
+							}
+						}
+					}
+				}
+			}
+			
+			effect = {
+				custom_tooltip = "POP_FACTION_PLANET_SEPARATIST_GATHER_SUPPORT_DESC"
+				hidden_effect = {
+					parameter:planet = { debug_scope_type = planet
+						debug_scope_type = planet
+						random_owned_pop = {
+							limit = {
+								NOT = {
+									has_modifier = "planet_separatist_supporter"
+								}
+								or = {
+									not = { exists = pop_faction }
+									pop_faction = {
+										not = { is_same_value = root }
+									}
+								}
+							}
+							add_modifier = {
+								modifier = "planet_separatist_supporter"
+								days = 360
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		# Strikes
+		strikes = {
+			title = "POP_FACTION_PLANET_SEPARATIST_STRIKES_TITLE"
+			min_support = 0.25
+			max_support = 1.0
+			
+			spawn_chance = {
+				base = 100
+				
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = "POP_FACTION_PLANET_SEPARATIST_LEADER_IS_RULER"
+						owner = {
+							exists = ruler
+							ruler = {
+								is_same_value = root.ruler
+							}
+						}
+					}
+				}
+			}
+						
+			effect = {
+				custom_tooltip = "POP_FACTION_PLANET_SEPARATIST_STRIKES_DESC"
+				hidden_effect = {
+					parameter:planet = { debug_scope_type = planet
+						add_modifier = {
+							modifier = "planet_separatist_strikes"
+							days = 30
+						}
+					}
+				}
+			}
+		}
+		
+		# Sabotage
+		sabotage = {
+			title = "POP_FACTION_PLANET_SEPARATIST_SABOTAGE_TITLE"
+			min_support = 0.5
+			max_support = 1.0
+			
+			spawn_chance = {
+				base = 5
+				
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = "POP_FACTION_PLANET_SEPARATIST_LEADER_IS_RULER"
+						owner = {
+							exists = ruler
+							ruler = {
+								is_same_value = root.ruler
+							}
+						}
+					}
+				}
+				
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = "POP_FACTION_PLANET_SEPARATIST_RECENT_SABOTAGE"
+						has_pop_faction_flag = recent_sabotage
+					}
+				}
+				
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = "POP_FACTION_PLANET_SEPARATIST_NOTHING_TO_RUIN"
+						parameter:planet = { debug_scope_type = planet
+							NOT = {
+								any_tile = {
+									has_building = yes
+									is_ruined = no
+									NOT = {
+										has_building = building_colony_shelter
+										has_building = building_capital_1
+										has_building = building_capital_2
+										has_building = building_capital_3
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			effect = {
+				custom_tooltip = "POP_FACTION_PLANET_SEPARATIST_SABOTAGE_DESC"
+				hidden_effect = {
+					set_timed_pop_faction_flag = { flag = recent_sabotage days = 300 }
+					parameter:planet = { debug_scope_type = planet
+						save_event_target_as = planet
+						random_tile = {
+							limit = {
+								has_building = yes
+								is_ruined = no
+								NOT = {
+									has_building = building_colony_shelter
+									has_building = building_capital_1
+									has_building = building_capital_2
+									has_building = building_capital_3
+								}
+							}
+							set_ruined = yes
+							root = {
+								pop_faction_event = {
+									id = faction.101
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		# Rebellion
+		rebellion = {
+			title = "POP_FACTION_PLANET_SEPARATIST_REBELLION_TITLE"
+			min_support = 1.0
+			max_support = 1.0
+			
+			spawn_chance = { 
+				value = 5
+				
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = "POP_FACTION_PLANET_SEPARATIST_LEADER_IS_RULER"
+						owner = {
+							exists = ruler
+							ruler = {
+								is_same_value = root.ruler
+							}
+						}
+					}
+				}
+				
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = "POP_FACTION_PLANET_SEPARATIST_OCCUPIED"
+						parameter:planet = { debug_scope_type = planet
+							is_occupied_flag = yes
+						}
+					}
+				}
+				
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = "POP_FACTION_PLANET_SEPARATIST_COMBAT"
+						parameter:planet = { debug_scope_type = planet
+							has_ground_combat = yes							
+						}
+					}
+				}
+			}
+			
+			effect = {
+				custom_tooltip = "POP_FACTION_PLANET_SEPARATIST_REBELLION_DESC"
+				hidden_effect = {
+					parameter:planet = { debug_scope_type = planet
+						save_event_target_as = rebelling_planet
+						random_owned_pop = {
+							limit = {
+								NOT = {
+									pop_has_trait = trait_robotic_1
+									pop_has_trait = trait_robotic_2
+									pop_has_trait = trait_robotic_3
+								}
+							}
+							save_event_target_as = leader_pop
+						}
+					}
+					
+					pop_faction_event = { id = faction.100 }
+					
+					parameter:planet = { debug_scope_type = planet
+						create_rebels = {
+							name = random
+							government = random
+							species = event_target:leader_pop.species
+							ethos = event_target:leader_pop
+							flag = random
+						}
+					}
+					
+					last_created_country = {
+						add_war_demand = {
+							type = "liberate_country"
+							parameter:country = this
+							warscore_cost = 50
+							target = this
+						}
+					}
+						
+					every_owned_pop = {
+						parameter:planet = { debug_scope_type = planet
+							create_army = {
+								owner = last_created
+								species = prev
+								type = "defense_army"
+							}
+						}
+					}
+					
+					kill_pop_faction = yes
+				}
+			}
+		}
+	}
+}

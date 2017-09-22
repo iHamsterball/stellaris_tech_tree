@@ -1,0 +1,73 @@
+fallen_empire_1 = {
+	graphical_culture = "fallen_empire_02"
+	initializer = "fallen_1_1"
+	
+	create_country_effect = {
+		create_species = {
+			name = random
+			class = random
+			portrait = random
+			traits = random
+		}
+		create_country = {
+			name = random
+			type = fallen_empire
+			ignore_initial_colony_error = yes
+			government = stagnated_ascendancy
+			species = last_created
+			flag = random
+		}
+		last_created_country = {
+			set_country_flag = fallen_empire_1
+		}
+	}
+}
+fallen_empire_2 = {
+	graphical_culture = "fallen_empire_01"
+	initializer = "fallen_2"
+	
+	create_country_effect = {
+		create_species = {
+			name = random
+			class = random
+			portrait = random
+			traits = random
+		}
+		create_country = {
+			name = random
+			type = fallen_empire
+			ignore_initial_colony_error = yes
+			government = stagnated_ascendancy
+			species = last_created
+			flag = random
+		}
+		last_created_country = {
+			set_country_flag = fallen_empire_2
+		}
+	}
+}
+
+fallen_empire_3 = {
+	graphical_culture = "fallen_empire_03"
+	initializer = "fallen_3"
+	
+	create_country_effect = {
+		create_species = {
+			name = random
+			class = random
+			portrait = random
+			traits = random
+		}
+		create_country = {
+			name = random
+			type = fallen_empire
+			ignore_initial_colony_error = yes
+			government = stagnated_ascendancy
+			species = last_created
+			flag = random
+		}
+		last_created_country = {
+			set_country_flag = fallen_empire_3
+		}
+	}
+}

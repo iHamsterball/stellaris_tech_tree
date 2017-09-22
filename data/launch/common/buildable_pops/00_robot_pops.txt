@@ -1,0 +1,165 @@
+buildable_robot_pop_1 = {
+		
+	prerequisites = {
+		"tech_robotic_workers"
+	}
+	cost = {
+		minerals = 50
+		energy = 150
+	}
+	
+	allow = {
+		NOT = {
+			has_policy_flag = ai_outlawed
+		}
+	}
+	
+	potential = {
+		NOT = {
+			has_technology = "tech_droid_workers"
+			has_technology = "tech_synthetic_workers"
+		}
+	}
+	
+	tile_potential = {
+		always = yes
+	}
+
+	tile_allow = {
+		always = yes
+	}
+	
+	species = {
+		name = "ROBOT_POP_SPECIES_1"
+		class = "ROBOT"
+		portrait = "robot1"
+		traits = {
+			trait = "trait_mechanical"
+			trait = "trait_robotic_1"
+		}
+		new_pop_resource_requirement = {
+			type = robot_food 
+			value = 30.0
+		}
+		pops_auto_growth = 1.0
+		pops_auto_upgrade_to = buildable_robot_pop_2
+		
+		pops_can_be_colonizers = no
+		pops_can_migrate = no
+		pops_can_reproduce = no
+		pops_can_join_factions = no
+		pop_maintenance = 1
+		pops_can_be_slaves = no
+		can_generate_leaders = no
+		can_be_modified = no
+		pops_have_happiness = no
+		pop_ethics = no
+	}
+}
+
+buildable_robot_pop_2 = {
+		
+	prerequisites = {
+		"tech_droid_workers"
+	}
+	cost = {
+		minerals = 50
+		energy = 150
+	}
+	
+	allow = {
+		NOT = {
+			has_policy_flag = ai_outlawed
+		}
+	}
+	
+	potential = {
+		NOT = {
+			has_technology = "tech_synthetic_workers"
+		}
+	}
+	
+	tile_potential = {
+		always = yes
+	}
+
+	tile_allow = {
+		always = yes
+	}
+	
+	species = {
+		name = "ROBOT_POP_SPECIES_2"
+		class = "ROBOT"
+		portrait = "robot2"
+		traits = {
+			trait = "trait_mechanical"
+			trait = "trait_robotic_2"
+		}
+		
+		new_pop_resource_requirement = {
+			type = robot_food 
+			value = 30.0			
+		}
+		pops_auto_growth = 1.0
+		pops_auto_upgrade_to = buildable_robot_pop_3
+		
+		pops_can_be_colonizers = yes
+		pops_can_migrate = no
+		pops_can_reproduce = no
+		pops_can_join_factions = no
+		pop_maintenance = 1
+		can_generate_leaders = no
+		pops_can_be_slaves = no
+		can_be_modified = no
+		pops_have_happiness = no
+		pop_ethics = no
+	}
+}
+
+buildable_robot_pop_3 = {
+		
+	prerequisites = {
+		"tech_synthetic_workers"
+	}
+	cost = {
+		minerals = 50
+		energy = 150
+	}
+	
+	allow = {
+		NOT = {
+			has_policy_flag = ai_outlawed
+		}
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	species = {
+		name = "ROBOT_POP_SPECIES_3"
+		class = "ROBOT"
+		portrait = "robot3"
+		traits = {
+			trait = "trait_mechanical"
+			trait = "trait_robotic_3"
+		}
+		
+		new_pop_resource_requirement = {
+			type = robot_food
+			value = 30.0
+		}
+		pops_auto_growth = 1.0
+		
+		pops_can_be_colonizers = yes
+		pops_can_migrate = yes
+		pops_can_reproduce = no
+		pops_can_join_factions = yes
+		pop_maintenance = 1
+		can_generate_leaders = yes
+		pops_can_be_slaves = yes
+		can_be_modified = no
+		pops_have_happiness = yes
+		pop_ethics = random	#can also be pop_ethics = { some_ethic some_other_ethic etc }
+	}
+}

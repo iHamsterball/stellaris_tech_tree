@@ -1,0 +1,64 @@
+#
+# can_colonize = allowed to colonize planets
+# potential = if possible to select in diplomatic interactions
+# become_vassal = trigger when it converts into a vassal
+# tech_cost_mult = tech cost multiplier if overlord has a tech
+# overlord_influence = extra influence given to overlord
+# joins_overlord_wars = Joins in if overlord goes to war (Defensive or Offensive)
+# calls_overlord_to_war Calls overlord to war (Defensive only)
+# can_do_diplomacy Can do some limited diplomacy
+# overlord_becomes_warleader, if overlord takes over as warleader. Default true
+# gets_sensors(yes): gets overlords sensors
+# gets_access(yes): gets overlords access
+
+@protectorate_tech_threshold = 0.4
+
+vassal = {
+	can_colonize = no
+	can_be_integrated = yes
+
+	joins_overlord_wars = yes
+	calls_overlord_to_war = yes
+	can_do_diplomacy = no
+
+	potential = {
+		OR = {
+			tech_unlocked_ratio = {
+				who = from
+				ratio > @protectorate_tech_threshold
+			}
+			tech_unlocked_ratio = {
+				who = from
+				ratio = @protectorate_tech_threshold
+			}
+		}
+	}
+}
+
+protectorate = {
+
+	can_colonize = yes
+
+	joins_overlord_wars = no
+	calls_overlord_to_war = yes
+	can_do_diplomacy = yes
+
+	tech_cost_mult = -0.5
+	overlord_influence = 1
+
+	potential = {
+		tech_unlocked_ratio = {
+			who = from
+			ratio < @protectorate_tech_threshold
+		}
+	}
+
+	become_vassal = {
+		tech_unlocked_ratio = {
+			who = from
+			ratio > 0.6
+		}
+	}
+
+
+}

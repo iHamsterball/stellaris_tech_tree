@@ -1,0 +1,399 @@
+﻿l_russian:
+ ####################################
+ #:0 "Pop factions"
+ ####################################
+ # Demand TITLES are run straight from a pop faction with no
+ # assembled event scope, [Owner.GetName] to get country name.
+ # Tooltips, DESCS and events use the usual [Root.Owner.GetName]
+ 
+ FACTION_COUNTRY_SEPARATIST:0 "Сепаратисты [parameter:owner.GetSpeciesAdj]"
+ 
+ # Generic Actions
+ FACTION_ACTION_SUPPRESS_FOLLOWERS:0 "Притеснение последователей"
+ FACTION_ACTION_SUPPRESS_FOLLOWERS_DESC:0 "Усложнив жизнь последователям, вы можете отбить у них желание поддерживать фракцию."
+ FACTION_ACTION_SUPPRESS_FOLLOWERS_VALID:0 ""
+ FACTION_ACTION_ASSASSINATE_LEADER:0 "Убийство лидера"
+ FACTION_ACTION_ASSASSINATE_LEADER_DESC:0 "Оставив фракцию без лидера, вы на какое-то время заткнете ей рот."
+ FACTION_ACTION_ASSASSINATE_LEADER_INVALID:0 "За последние три месяца не было ни одного покушения на лидеров фракций."
+ FACTION_ACTION_BRIBE_LEADERS:0 "Подкуп лидеров"
+ FACTION_ACTION_BRIBE_LEADERS_DESC:0 "Взаимное мытье рук."
+ FACTION_ACTION_FAVOR:0 "Благоволение"
+ FACTION_ACTION_FAVOR_DESC:0 "Поддержка тех, кто сохраняет верность режиму."
+ FACTION_ACTION_FAVOR_TOOLTIP:0 "Добавляет модификатор §Yблагословение§! всем поселениям планеты §Y[Root.GetName]§!, слегка повышая их счастье."
+ FACTION_ACTION_FAVOR_INVALID:0 "Наше благоволение может быть даровано только раз в год, а иначе оно станет неэффективным."
+ FACTION_ACTION_TYRANNIZE:0 "Тирания"
+ FACTION_ACTION_TYRANNIZE_DESC:0 "Добровольное снижение народной поддержки правящего режима."
+ FACTION_ACTION_TYRANNIZE_TOOLTIP:0 "Добавляет модификатор §Yтирания§! всем поселениям планеты §Y[Root.GetName]§!, резко уменьшая их счастье.\n"
+ FACTION_ACTION_TYRANNIZE_INVALID:0 "Мы можем быть тираном по отношению к нашему подданному только раз в полгода, а иначе это станет неэффективным."
+ ACCEPT_DEMANDS_NO_ACTIVE_DEMANDS:0 "§RУ этой фракции нет требований§!"
+ 
+ # Generic Support Effects
+ SUPPORT_EFFECT_RADICALIZATION:0 "Риск радикализации"
+ SUPPORT_EFFECT_RADICALIZATION_DESC:0 "Резкий всплеск радикальных настроений повышает воинственность этой фракции."
+ SUPPORT_EFFECT_REVOLT:0 "Риск восстания"
+ SUPPORT_EFFECT_REVOLT_DESC:0 "Фракция пытается поднять вооруженное восстание в колонии."
+ SUPPORT_EFFECT_RIOT:0 "Риск бунта"
+ SUPPORT_EFFECT_RIOT_DESC:0 "Фракция устраивает бунт и уничтожает часть имущества колонии."
+ 
+ # No Demands
+ POP_FACTION_NO_DEMANDS:0 "Нет требований"
+ POP_FACTION_NO_DEMANDS_DESC:0 "$FACTION$ демонстрирует преданность по отношению к империи $COUNTRY$ и никогда не станет предъявлять требований."
+ POP_FACTION_NO_CURRENT_DEMANDS:0 "Текущих требований нет"
+ POP_FACTION_NO_CURRENT_DEMANDS_DESC:0 "$FACTION$ не имеет требований на данный момент."
+ 
+ # No effects
+ POP_FACTION_NO_EFFECTS:0 "Нет эффектов"
+ POP_FACTION_NO_EFFECTS_DESC:0 "$FACTION$ никогда не будет иметь никаких эффектов."
+ POP_FACTION_NO_CURRENT_EFFECTS:0 "Текущих эффектов нет"
+ POP_FACTION_NO_CURRENT_EFFECTS_DESC:0 "$FACTION$ не имеет эффектов на данный момент."
+ 
+ ### LOYALISTS
+ pft_loyalist:0 "Лоялисты"
+ pft_loyalist_desc:0 "Во фракцию лоялистов входят ваши самые довольные граждане. Они ничего не требуют и удовлетворены существующим положением вещей."
+ 
+ ### SEPARATIST
+ 
+ # Separatist Demands
+ POP_FACTION_SEPARATIST_DEMAND_TITLE_1:0 "Планета §H[parameter:planet.GetName]§! является автономией"
+ POP_FACTION_SEPARATIST_DEMAND_DESC_1:0 "Создать новый сектор со столицей на планете §H[parameter:planet.GetName]§!."
+ POP_FACTION_SEPARATIST_DEMAND_TITLE_2:0 "Планета §H[parameter:planet.GetName]§! является независимой"
+ POP_FACTION_SEPARATIST_DEMAND_DESC_2:0 "Сделать планету §H[parameter:planet.GetName]§! столицей независимой империи"
+ 
+ ### PLANET SEPARATISTS
+ POP_FACTION_PLANET_SEPARATIST_DEMAND_TITLE:0 "Независимая планета [parameter:Planet.GetName]"
+ POP_FACTION_PLANET_SEPARATIST_DEMAND_DESC:0 "Сепаратисты хотят, чтобы планета §Y[parameter:Planet.GetName]§! была независимой."
+ POP_FACTION_PLANET_SEPARATIST_STRIKES_TITLE:0 "Забастовка"
+ POP_FACTION_PLANET_SEPARATIST_STRIKES_DESC:0 "Планетарное производство снижено из-за нехватки рабочей силы."
+ POP_FACTION_PLANET_SEPARATIST_REBELLION_TITLE:0 "Восстание"
+ POP_FACTION_PLANET_SEPARATIST_OCCUPIED:0 "Планета оккупирована"
+ POP_FACTION_PLANET_SEPARATIST_COMBAT:0 "Наземные сражения"
+ POP_FACTION_PLANET_SEPARATIST_LEADER_IS_RULER:0 "Лидер фракции является правителем"
+ POP_FACTION_PLANET_SEPARATIST_REBELLION_DESC:0 "Каждое поселение, присоединившееся к восстанию, формирует §Rнаступательную армию§! и пытается получить контроль над планетой."
+ POP_FACTION_PLANET_SEPARATIST_GATHER_SUPPORT:0 "Укрепление поддержки"
+ POP_FACTION_PLANET_SEPARATIST_GATHER_SUPPORT_DESC:0 "Сепаратисты повышают уровень поддержки путем изменения принципов или снижения счастья других поселений."
+ POP_FACTION_PLANET_SEPARATIST_REORGANIZING:0 "Реорганизация"
+ POP_FACTION_PLANET_SEPARATIST_RECENTLY_FULL_SUPPORT:0 "Все поселения планеты состоят во фракции"
+ POP_FACTION_PLANET_SEPARATIST_IS_NOT_OCCUPIED:0 "Планета не оккупирована"
+ POP_FACTION_PLANET_SEPARATIST_NO_GROUND_COMBAT:0 "На планете нет наземных сражений"
+ POP_FACTION_PLANET_SEPARATIST_GRANT_INDEPENDENCE_TITLE:0 "Даровать суверенитет"
+ POP_FACTION_PLANET_SEPARATIST_GRANT_INDEPENDENCE_DESC:0 "Даровать колонии на планете §Y[parameter:Planet.GetName]§! суверенитет в качестве вассальной империи."
+ POP_FACTION_PLANET_SEPARATIST_SABOTAGE_TITLE:0 "Бунты"
+ POP_FACTION_PLANET_SEPARATIST_RECENT_SABOTAGE:0 "Недавние бунты"
+ POP_FACTION_PLANET_SEPARATIST_SABOTAGE_DESC:0 "Бунты на планете §Rразрушают§! сооружение."
+ POP_FACTION_PLANET_SEPARATIST_NOTHING_TO_RUIN:0 "Нет уцелевших сооружений"
+ 
+ ### Sector separatists
+ pft_sector_separatists:0 "Сепаратисты сектора"
+ pft_sector_separatists_desc:0 "Сепаратисты сектора могут появляться на различных планетах сектора, стремясь освободить свою звездную территорию от имперской власти. При достаточном уровне народной поддержки они могут даже взяться за оружие.\n\n§HСепаратисты сектора никогда не появятся в нашем основном секторе.§!"
+ POP_FACTION_SECTOR_SEPARATIST_DEMAND_TITLE:0 "Независимый сектор [parameter:sector.GetName]"
+ POP_FACTION_SECTOR_SEPARATIST_DEMAND_DESC:0 "Сепаратисты хотят, чтобы сектор §Y[parameter:sector.GetName]§! был независимым."
+ POP_FACTION_SECTOR_SEPARATIST_GRANT_INDEPENDENCE_TITLE:0 "Даровать суверенитет"
+ POP_FACTION_SECTOR_SEPARATIST_GRANT_INDEPENDENCE_DESC:0 "Даровать суверенитет колониям сектора §Y[parameter:sector.GetName]§!"
+ POP_FACTION_SECTOR_SEPARATIST_IS_NOT_OCCUPIED:0 "Ни одна планета в секторе не оккупирована"
+ POP_FACTION_SECTOR_SEPARATIST_NO_GROUND_COMBAT:0 "Ни на одной планете в секторе нет наземных сражений"
+ 
+ 
+ 
+ ### NATIONALISTS
+ 
+ pft_nationalist:0 "Репатриационная фракция"
+ pft_nationalist_desc:0 "Поселения, состоящие в репатриационных фракциях, стремятся выйти из состава нашей империи в качестве независимых государств, а потом интегрироваться в империю, частью которой они когда-то были. К ним могут присоединиться и другие поселения, если они решат, что чужая власть более заманчива, чем наша."
+ 
+ POP_FACTION_NATIONALIST_DEMAND_TITLE:0 "Вернуть империи §Y[parameter:country.GetName]§!"
+ POP_FACTION_NATIONALIST_DEMAND_DESC:0 "Вернуть империи §H[parameter:country.GetName]§! все планеты с поселениями, принадлежащими этой фракции."
+ POP_FACTION_NATIONALIST_SABOTAGE_TITLE:0 "Диверсия"
+ POP_FACTION_NATIONALIST_SABOTAGE_DESC:0 "Члены этой фракции §Rразрушают§! сооружение."
+ POP_FACTION_NATIONALIST_CORRUPTION_TITLE:0 "Коррупция"
+ POP_FACTION_NATIONALIST_CORRUPTION_DESC:0 "На всех планетах с поселениями, принадлежащими этой фракции, снижается производство."
+ POP_FACTION_NATIONALIST_REBELLION_TITLE:0 "Восстание"
+ POP_FACTION_NATIONALIST_REBELLION_DESC:0 "$POP_FACTION_PLANET_SEPARATIST_REBELLION_DESC$"
+ POP_FACTION_NATIONALIST_LEADER_IS_RULER:0 "Лидер фракции является правителем"
+ POP_FACTION_NATIONALIST_RECENT_SABOTAGE:0 "Недавняя диверсия"
+ POP_FACTION_NATIONALIST_MEMBERS_OCCUPIED:0 "Оккупации"
+ POP_FACTION_NATIONALIST_MEMBERS_GROUND_COMBAT:0 "Наземные сражения"
+ POP_FACTION_NATIONALIST_INTEGRATION_CAMPAIGN_1_TITLE:0 "Кампания по интеграции 1"
+ POP_FACTION_NATIONALIST_INTEGRATION_CAMPAIGN_1_DESC:0 "Можно уменьшить чувство разочарования у националистов, если помочь им интегрироваться в их новое общество."
+ POP_FACTION_NATIONALIST_INTEGRATION_CAMPAIGN_2_TITLE:0 "Кампания по интеграции 2"
+ POP_FACTION_NATIONALIST_INTEGRATION_CAMPAIGN_2_DESC:0 "Можно уменьшить чувство разочарования у националистов, если помочь им интегрироваться в их новое общество."
+ POP_FACTION_NATIONALIST_INTEGRATION_CAMPAIGN_3_TITLE:0 "Кампания по интеграции 3"
+ POP_FACTION_NATIONALIST_INTEGRATION_CAMPAIGN_3_DESC:0 "Можно уменьшить чувство разочарования у националистов, если помочь им интегрироваться в их новое общество."
+ POP_FACTION_NATIONALIST_RELEASE_PLANETS_TITLE:0 "Вернуть планеты"
+ POP_FACTION_NATIONALIST_RELEASE_PLANETS_DESC:0 "Вернуть империи §Y[parameter:country.GetName]§! все планеты с поселениями, принадлежащими этой фракции."
+ POP_FACTION_NATIONALIST_RELEASE_PLANETS_OCCUPIED:0 "Ни одна из планет не оккупирована"
+ POP_FACTION_NATIONALIST_RELEASE_PLANETS_COMBAT:0 "Ни на одной из планет нет наземных сражений"
+ 
+ ### SLAVES
+ 
+ slave_attraction_title:0 "§R---§!"
+ slave_attraction_desc:0 "Порабощенные поселения, за исключением поселений роботов, всегда входят во фракцию рабов.\n\nДругие поселения присоединиться не могут."
+ 
+ purged_attraction_title:0 "§R---§!"
+ purged_attraction_desc:0 "Поселения, подвергающиеся геноциду, всегда входят в антигеноцидную фракцию, за исключением поселений роботов.\n\nДругие поселения присоединиться не могут."
+ 
+ # Slave Demands
+ pft_slave:0 "Фракция рабов"
+ pft_slave_desc:0 "Фракция рабов состоит из порабощенных поселений нашей империи. Их основное требование - свобода.\n\n§HК этой фракции автоматически присоединяются все порабощенные поселения.§!"
+ POP_FACTION_SLAVE_DEMAND_TITLE_1:0 "Освобождение"
+ POP_FACTION_SLAVE_DEMAND_DESC_1:0 "Поселения, входящие в эту фракцию, требуют только одного - свободы."
+ FACTION_ACTION_SLAVE_EMANCIPATE_ALL:0 "Освободить рабов"
+ FACTION_ACTION_SLAVE_EMANCIPATE_ALL_DESC:0 "Освободить каждое порабощенное поселение."
+ 
+ # Slave Actions
+ FACTION_ACTION_SLAVE_HARSH_TREATMENT:0 "Жестокое обращение"
+ FACTION_ACTION_SLAVE_HARSH_TREATMENT_DESC:0 "Указать рабам на их место."
+ FACTION_ACTION_SLAVE_FORCE_FEEDING:0 "Принудительное питание"
+ FACTION_ACTION_SLAVE_FORCE_FEEDING_DESC:0 "Принудительно обеспечивать всех голодающих необходимым питанием."
+ 
+ # Slave Support Effects
+ SUPPORT_EFFECT_SLAVE_UPRISING:0 "Риск восстания рабов"
+ SUPPORT_EFFECT_SLAVE_UPRISING_DESC:0 "Рабы вооружаются и создают повстанческие отряды."
+ SUPPORT_EFFECT_HUNGER_STRIKE:0 "Риск голодовки"
+ SUPPORT_EFFECT_HUNGER_STRIKE_DESC:0 "Рабы пытаются уморить себя голодом, что резко снижает их производительность."
+ 
+ ### EMANCIPATION MOVEMENT
+ 
+ # Emancipation Movement Demands
+ POP_FACTION_EMANCIPATION_DEMAND_TITLE_1:0 "Шестичасовой рабочий день для рабов"
+ POP_FACTION_EMANCIPATION_DEMAND_TITLE_2:0 "Освободить всех рабов"
+ POP_FACTION_EMANCIPATION_DEMAND_TITLE_3:0 "Запретить рабство"
+ POP_FACTION_EMANCIPATION_DEMAND_DESC_1:0 "Увеличить минимальное время отдыха."
+ POP_FACTION_EMANCIPATION_DEMAND_DESC_2:0 "Освободить всех рабов в: [Root.Owner.GetName]."
+ POP_FACTION_EMANCIPATION_DEMAND_DESC_3:0 "Отменить политику §YРазрешить рабство§!."
+ 
+ # Emancipation Movement Actions
+ 
+ # Emancipation Movement Support Effects
+ SUPPORT_EFFECT_EMANCIPATION_RADICALIZE_SLAVES:0 "Радикализация рабов"
+ SUPPORT_EFFECT_EMANCIPATION_RADICALIZE_SLAVES_DESC:0 "Тайная, но скоординированная попытка организовать восстание рабов."
+ SUPPORT_EFFECT_EMANCIPATION_SMUGGLE_OFF_WORLD:0 "Межгалактическая железная дорога"
+ SUPPORT_EFFECT_EMANCIPATION_SMUGGLE_OFF_WORLD_DESC:0 "Порабощенное поселение вывозят за пределы планеты куда подальше."
+ 
+ ### PEACE MOVEMENT
+ 
+ # Demands
+ POP_FACTION_PEACE_DEMAND_TITLE_1:0 "Завершение войны"
+ POP_FACTION_PEACE_DEMAND_DESC_1:0 "Разорвать все дипломатические связи, требующие участия в конфликте с государством [parameter:enemy.GetName] и объявить мир на условиях статус-кво."
+ 
+ # Actions
+ 
+ # Support Effects
+ SUPPORT_EFFECT_PEACE_STRIKE:0 "Забастовка"
+ SUPPORT_EFFECT_PEACE_STRIKE_DESC:0 "Участники мирной акции протеста не ходят на работу, что на время снижает общую производительность."
+ SUPPORT_EFFECT_PEACE_SABOTAGE:0 "Диверсия"
+ SUPPORT_EFFECT_PEACE_SABOTAGE_DESC:0 "Слышьте, парни, это саботаж!"
+ 
+ ### PURGED
+ 
+ pft_purged:0 "Антигеноцидная фракция"
+ pft_purged_desc:0 "Антигеноцидная фракция состоит из всех поселений, подвергающихся геноциду в нашей империи, а также тех, что сочувствуют этой беде. Их основное требование - чтобы им позволили жить.\n\n§HК этой фракции автоматически присоединяются все поселения, подвергающиеся геноциду.§!"
+ 
+ # Demands
+ POP_FACTION_PURGED_DEMAND_TITLE_1:0 "Прекращение геноцида"
+ POP_FACTION_PURGED_DEMAND_DESC_1:0 "Полностью прекратить истребительные мероприятия в: [Root.Owner.GetName]."
+ 
+ # Actions
+ FACTION_ACTION_SUPPRESS_MEDIA:0 "Ослабление популяризации"
+ FACTION_ACTION_SUPPRESS_MEDIA_DESC:0 "Ослабить народную поддержку фракции, уменьшив ее влияние на общественное сознание посредством медиа-ресурсов."
+ 
+ # Support Effects
+ 
+ SUPPORT_EFFECT_PURGED_DEATH_STRUGGLE:0 "Борьба до конца"
+ SUPPORT_EFFECT_PURGED_DEATH_STRUGGLE_DESC:0 "Те, кому грозит чистка, и им сочувствующие могут пойти на совершение терактов."
+ SUPPORT_EFFECT_PURGED_DEATH_REBELLION:0 "Восстание против чистки"
+ SUPPORT_EFFECT_PURGED_DEATH_REBELLION_DESC:0 "Те, кому грозит чистка, не желают умирать сложа руки, а создают повстанческие отряды."
+ 
+ ### LIBERATE
+ 
+ # Demands
+ POP_FACTION_LIBERATE_DEMAND_TITLE_1:0 "Освободить планету §H[parameter:planet.GetName]§!."
+ POP_FACTION_LIBERATE_DEMAND_DESC_1:0 "Объявить войну империи [parameter.enemy.GetName], чтобы вернуть планету [parameter:planet.GetName]."
+ 
+ # Support Effects
+ SUPPORT_EFFECT_LIBERATE_INSULT_HIJACK:0 "Радиоперехват"
+ SUPPORT_EFFECT_LIBERATE_INSULT_HIJACK_DESC:0 "[Root.GetName] отравляет наши дипломатические отношения с империи §H[parameter:enemy.GetName]§!."
+ SUPPORT_EFFECT_LIBERATE_HAWKISH_REBELS:0 "Риск вооруженного восстания"
+ SUPPORT_EFFECT_LIBERATE_HAWKISH_REBELS_DESC:0 "[Root.GetName] поднимает бунт против слабых правителей [Root.Owner.GetSpeciesAdj]."
+ 
+ ### XENOSLAVER
+ 
+ # Demands
+ POP_FACTION_XENOSLAVER_DEMAND_TITLE_1:0 "Порабощение чужаков"
+ POP_FACTION_XENOSLAVER_DEMAND_DESC_1:0 "Поработить все §Yпоселения§! расы §H[parameter:xeno.GetSpeciesAdj]§!."
+ 
+ # Actions
+ 
+ # Support Effects
+ SUPPORT_EFFECT_XENOSLAVER_TAKE_SLAVES:0 "Незаконное порабощение"
+ SUPPORT_EFFECT_XENOSLAVER_TAKE_SLAVES_DESC:0 "Члены воинствующих фракций могут незаконно принуждать поселения действовать в их интересах."
+ SUPPORT_EFFECT_XENOSLAVER_SLAVER_CONFEDERACY:0 "Конфедерация рабовладельцев"
+ SUPPORT_EFFECT_XENOSLAVER_SLAVER_CONFEDERACY_DESC:0 "Фракция пытается поднять вооруженное восстание."
+ 
+ ### CRUSADER
+ 
+ # Demands
+ POP_FACTION_CRUSADE_DEMAND_TITLE_1:0 "Крестовый поход"
+ POP_FACTION_CRUSADE_DEMAND_DESC_1:0 "Развязать священную войну против еретической империи [parameter:heathens.GetName]."
+ 
+ # Actions
+ 
+ # Support Effects
+ SUPPORT_EFFECT_CRUSADE_INSULT:0 "Намеренное кощунство"
+ SUPPORT_EFFECT_CRUSADE_INSULT_DESC:0 "[Root.GetName] публично выступает против империи [parameter:heathens.GetName], ухудшая дипломатические отношения."
+ SUPPORT_EFFECT_CRUSADE_INSURRECTION:0 "Восстание культа"
+ SUPPORT_EFFECT_CRUSADE_INSURRECTION_DESC:0 "[Root.GetName] пытается устроить переворот в колонии."
+ 
+ ### CONQUEROR
+ 
+ # Support Effects
+ SUPPORT_EFFECT_CONQUER_INSULT:0 "Оскорбительное коммюнике"
+ SUPPORT_EFFECT_CONQUER_INSULT_DESC:0 "[Root.GetName] направляет оскорбительное коммюнике, что усиливает напряженность между нами и государством §H[parameter:foreign_power.GetName]§!."
+ 
+ ### PRETENDER
+ 
+ pft_pretender:0 "Фракция претендента"
+ pft_pretender_desc:0 "Эта фракция привлекает сторонников текущего претендента, которые стремятся к тому, чтобы сделать его правителем."
+ 
+ POP_FACTION_PRETENDER_ATTRITION_TITLE:0 "Отсев"
+ POP_FACTION_PRETENDER_ATTRITION_DESC:0 "Поселение теряет интерес к делу и §Gпокидает фракцию§!."
+ POP_FACTION_PRETENDER_DEMAND_TITLE:0 "Отказаться от трона в пользу: §Y[parameter:pretender.GetName]§!"
+ POP_FACTION_PRETENDER_DEMAND_DESC:0 "[Root.Owner.GetRulerTitle] §Y[Root.Owner.GetRulerName]§! отправляется в изгнание, а на престол восходит §Y[parameter:pretender.GetName]§!."
+ POP_FACTION_PRETENDER_INSTALL_TITLE:0 "Поставить у власти претендента"
+ POP_FACTION_PRETENDER_INSTALL_DESC:0 "§Y[parameter:pretender.GetName]§! становится новым правителем"
+ 
+ ########################################
+ # FACTION EVENTS
+ ########################################
+ 
+ ### Loyalists
+ faction.4.title:0 "Требования лоялистов"
+ faction.4.desc:0 "[Root.Owner.GetRulerTitle] [Root.Owner.GetRulerName] из империи [Root.Owner.GetName] пользуется поддержкой лоялистов, которые не выдвигают никаких требований."
+ 
+ ### Slaves
+ faction.6.title:0 "Голодовка!"
+ faction.6.desc:0 "Рабы с планеты [Root.Owner.GetName] решили уничтожить наши производственные мощности - их тела - в ходе добровольной голодовки. Члены фракции [Root.GetName], по сути, §Yуничтожают§! себя на планете [Root.Owner.GetName].\n\nЕсли мы не предпримем мер, то потеряем львиную долю порабощенного населения. Мы можем подождать, пока несчастные умрут или найти другой способ усмирить непокорную фракцию."
+ 
+ faction.7.title:0 "Восстание рабов!"
+ faction.7.desc:0 "Рабы с планеты [slave_planet.GetName] восстали против хозяев и создали нелегальную мятежную коалицию, чтобы освободиться от своих законных владельцев - [Root.Owner.GetName]!"
+ 
+ faction.8.title:0 "Принудительное питание"
+ faction.8.desc:0 "Раб не имеет права повреждать или угнетать свое тело.\n\nИх бессмысленный самогеноцид завершился, и все, кто принял в нем участие, получили соответствующие дозы питательных веществ."
+ 
+ ### Separatists
+ # From = pop faction
+ # Parameters = planet
+ 
+ pft_planet_separatists:0 "Фракция сепаратистов планеты"
+ pft_planet_separatists_desc:0 "Сепаратисты планеты могут появляться на колонизированных планетах и стремятся освободить свою планету от имперской власти. При достаточном уровне народной поддержки они могут даже взяться за оружие.\n\n§HСепаратисты планеты появляются только на напрямую управляемых планетах.§!"
+ 
+ # Separatists rebel
+ faction.100.title:0 "Сепаратисты подняли бунт!"
+ faction.100.desc:0 "Волнения на планете [event_target:planet.GetName] достигли критической отметки. Местная фракция сепаратистов поднялась в вооруженной попытке захватить планету."
+ 
+ # Separatists riot
+ faction.101.title:0 "Восстание сепаратистов!"
+ faction.101.desc:0 "Народный гнев на планете §Y[event_target:planet.GetName]§! достиг точки кипения и члены фракции §Y[Root.GetName]§! вышли на улицы, поджигая здания и мародерствуя.\n\nПо нашим данным, главное предприятие колонии уничтожено."
+ 
+ # Separatist leader assassinated
+ faction.102.title:0 "Лидер фракции убит!"
+ faction.102.desc:0 "Фракция [Root.GetName] охвачена паникой после того, как внезапно погиб ее лидер [Root.Leader.GetName].\n\nГражданам [Root.Owner.GetSpeciesAdj] представят это событие как итог борьбы за власть внутри фракции [Root.GetName]. Несмотря на появление нового лидера, народная поддержка фракции уменьшилась."
+ 
+ # Separatist sector created
+ faction.103.title:0 "Сектор создан!"
+ faction.103.desc:0 "Фракция [Root.GetName] получила в свое распоряжение полунезависимый сектор с правительством на планете [parameter:planet.GetName]."
+ 
+ faction.104.title:0 "Империя освобождена!"
+ faction.104.desc:0 "Чтобы ублажить и, по сути, устранить сепаратистов, колония на планете [parameter:planet.GetName] получила независимость от империи [Root.Owner.GetName].\n\nФракция [Root.GetName] теперь является отдельной империей."
+ 
+ ### Crusaders
+ 
+ # Crusaders want to a crusade to against the heathens, conquer their capital
+ faction.200.title:0 "Фракция [Root.GetName] заклеймила еретиков [parameter:heathens.GetName]!"
+ faction.200.desc:0 "они указывают иностранную столицу как важный объект и хотят ее захватить."
+ 
+ holy_war_title:0 "Священная война"
+ holy_war_desc:0 "Возглавить крестовый поход против: [parameter:heathens.GetName]."
+ holy_war_1_poi:0 "Главная система"
+ holy_war_1_poi_desc:0 "Планета еретиков."
+ profane_planets_seized:0 "Еретические планеты очищены"
+ 
+ # Capital conquered
+ faction.201.title:0 "Столица еретиков захвачена!"
+ faction.201.desc:0 "Их храмы осквернены, а их боги отвернулись от них."
+ 
+ faction.202.title:0 "Империя [parameter:heathens.GetName] оскорблена"
+ faction.202.desc:0 "Из-за досадного промаха в системе безопасности фракция [Root.GetName] ненадолго получила доступ к нашим каналам дипломатической связи. Они использовали эту возможность, чтобы оскорбить империю [parameter:heathens.GetName], обвинив ее в ереси и аморальных деяниях.\n\nГлубоко религиозная империя [parameter:heathens.GetSpeciesPlural] крайне недовольна этим инцидентом."
+ faction.202.a:0 "Какой позор."
+ faction.202.a.tooltip:0 "§Y[parameter:enemy.GetName]§! добавляет модификатор отношения §YОскорбление фракции§! к §Yнашей империи§!."
+ faction.203.title:0 "Попытка оскорбления"
+ faction.203.desc:0 "В результате очередного крайне неприятного промаха в системе безопасности фракция [Root.GetName] ненадолго получила доступ к нашим каналам дипломатической связи. Они использовали эту возможность, чтобы вновь унизить религиозные взгляды империи [parameter:heathens.GetName].\n\nК счастью, империя [parameter:heathens.GetSpeciesPlural] не приняла всерьез этот повторный инцидент и, похоже, проигнорировала его."
+ faction.203.a:0 "Пронесло..."
+ 
+ faction.204.title:0 "Религиозный бунт!"
+ faction.204.desc:0 "Мы получили сообщения о том, что радикально настроенные элементы фракции [Root.GetName] готовят вооруженное восстание на планете [planet.GetName].\n\nПодготовка только началась, так что у нас еще есть возможность задушить бунт в зародыше."
+ faction.204.a:0 "Ну что ж..."
+ faction.204.a.tooltip:0 "[planet.GetName]:\nВосстание!"
+ 
+ ### Nationalists
+ faction.301.title:0 "Диверсия на планете [planet.GetName]!"
+ faction.301.desc:0 "[Root.GetName] разрушили сооружение на планете [planet.GetName]"
+ 
+ faction.302.title:0 "Восстание националистов"
+ faction.302.desc:0 "Вдохновленные народной поддержкой националистические фракции вооружились и пытаются силой вернуть свои территории."
+ 
+ ### Peace Movement
+ 
+ faction.400.title:0 "Диверсия на флоте!"
+ faction.400.desc:0 "В какой-то момент радикально настроенные члены фракции [From.GetName] успешно проникли на как минимум один военный корабль империи [Root.Owner.GetSpeciesAdj] и установили взрывчатку. Они детонировали взрывчатку, полностью уничтожив [Root.GetName].\n\n[From.Leader.GetName], лидер фракции [From.GetName], считает это действие наглядным примером недопустимости любого насилия, в частности, войны, в которую втянуты [Root.Owner.GetName] и [From.parameter:enemy.GetName]."
+ faction.400.a:0 "Какое двуличие."
+ faction.400.a.tooltip:0 "§R[Root.GetName] уничтожен.§!"
+ 
+ faction.401.title:0 "Прекращение огня"
+ faction.401.desc:0 "Все дипломатические связи, обязывающие продолжать войну с империей [From.parameter:enemy.GetName], разорваны, и мы предложили мир на условиях статус-кво."
+ faction.401.a:0 "Мы надеемся, они этим довольны."
+ 
+ faction.402.title:0 "Прекращение огня"
+ faction.402.desc:0 "Мы предложили мир на условиях статус-кво империи [From.parameter:enemy.GetName] в надежде положить конец войне."
+ faction.402.a:0 "Зачем нам эта война?"
+ 
+ ### Liberation Faction
+ 
+ faction.501.title:0 "Империя [parameter:enemy.GetName] оскорблена"
+ faction.501.desc:0 "Из-за досадного промаха в системе безопасности фракция [Root.GetName] ненадолго получила доступ к нашим каналам дипломатической связи. Они использовали эту возможность, чтобы глубоко оскорбить империю [parameter:enemy.GetName] и потребовать немедленного возвращения планеты [parameter:planet.GetName].\n\nИмперия [parameter:enemy.GetSpeciesPlural] крайне недовольна произошедшим."
+ faction.501.a:0 "Какой позор."
+ faction.501.a.tooltip:0 "§Y[parameter:enemy.GetName]§! добавляет модификатор отношения §YОскорбление фракции§! к §Yнашей империи§!."
+ faction.502.title:0 "Попытка оскорбления"
+ faction.502.desc:0 "В результате очередного крайне неприятного промаха в системе безопасности фракция [Root.GetName] ненадолго получила доступ к нашим каналам дипломатической связи. Они использовали эту возможность, чтобы вновь унизить империю [parameter:enemy.GetName] и потребовать немедленного возвращения планеты [parameter:planet.GetName].\n\nК счастью, империя [parameter:enemy.GetSpeciesPlural] не приняла всерьез этот повторный инцидент и, похоже, проигнорировала его."
+ faction.502.a:0 "Пронесло..."
+ faction.503.title:0 "Воинственные мятежники!"
+ faction.503.desc:0 "Мы получили сообщения о том, что радикально настроенные элементы фракции [Root.GetName] создали хорошо организованные отряды мятежников на планете [planet.GetName].\n\nПодготовка только началась, так что у нас еще есть возможность задушить бунт в зародыше."
+ faction.503.a:0 "Ну что ж..."
+ faction.503.a.tooltip:0 "[planet.GetName]:\n§RВосстание!§!"
+ 
+ ### Emancipation Faction
+ faction.600.title:0 "Радикализация рабов"
+ faction.600.desc:0 "Есть данные, что члены фракции [Root.GetName] сеют смуту среди рабов. По некоторым слухам, они обучают и даже вооружают отщепенцев из фракции [parameter:slave_faction.GetName], хотя это звучит слишком дико, чтобы быть правдой."
+ faction.600.a:0 "Но это все равно тревожит."
+ faction.600.a.tooltip:0 "[parameter:slave_faction.GetName]:\n§R+50%§! Воинственность\n§R+30%§! Поддержка"
+ faction.601.title:0 "Межгалактическая железная дорога"
+ faction.601.desc:0 "До нас дошли слухи, что несколько радикально настроенных членов фракции [Root.GetName] освободили группу рабов на планете [railroad_planet.GetName] и увезли их туда, куда [Root.Owner.GetName] не сможет дотянуться."
+ faction.601.a:0 "Надо внимательнее за ними следить."
+ faction.601.a.tooltip:0 "[railroad_planet.GetName]:\nПорабощенные поселения: §R-1§!"
+ 
+ ### Xenoslaver Faction
+ faction.700.title:0 "Рабы захвачены!"
+ faction.700.desc:0 "По слухам, обезумевшая фракция [Root.GetName] поработила жителей империи [Root.Owner.GetName], не относящихся к расе [Root.Owner.GetSpeciesAdj]."
+ faction.700.a:0 "Это возмутительно!"
+ faction.700.a.tooltip:0 "Рабы:\n§Y+2§! поселения"
+ 
+ faction.701.title:0 "Фракция [parameter:rebelling_faction.GetName] бунтует!"
+ faction.701.desc:0 "Устав от того, сколь мягко [Root.Owner.GetName] обходится с обнаглевшими чужаками, бывшие рабовладельцы с планеты [parameter:planet.GetName] собрались вместе, создали конфедерацию общин и объявили о своей независимости."
+ faction.701.a:0 "Это очень, очень, очень возмутительно."
+ 
+ ### Purged Faction
+ faction.801.title:0 "Борьба до конца"
+ faction.801.desc:0 "Доведенные до отчаяния граждане планеты [riot_planet.GetName], которым угрожает чистка, решили атаковать и разрушить одно из предприятий планеты."
+ 
+ faction.803.title:0 "[Root.GetName] бунтует!"
+ faction.803.desc:0 "Доведенные до отчаяния граждане, которым угрожает чистка на планете [death_planet.GetName], восстали с оружием в руках против власти империи [Root.Owner.GetName] и создали слабое повстанческое движение."
+ #mockup:0 "\n\n\n§HПритеснение последователей§!\nСтоимость: £influence §R150§!\n--------------\n§Y<FactionName>§!:\nВоинственность: §R+10%§!\nПоддержка: §G-30%§!"
+ #mockup2:0 "\n\n\n§HПритеснение последователей§!\nСтоимость: £influence §Y150§!\n--------------\n§Y<FactionName>§!:\nВоинственность: §R+10%§!\nПоддержка: §G-30%§!"

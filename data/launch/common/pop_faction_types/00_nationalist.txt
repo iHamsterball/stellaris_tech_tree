@@ -1,0 +1,693 @@
+# ############################
+#  Nationalist Faction
+# ############################
+#
+# The Nationalist faction is created when conquering planets.
+# 
+
+@integration_campaign_1_cost = 100
+@integration_campaign_1_attraction = -5
+@integration_campaign_2_cost = 200
+@integration_campaign_2_attraction = -5
+@integration_campaign_3_cost = 300
+@integration_campaign_3_attraction = -5
+@action_tier_1_cost = 200
+@action_tier_2_cost = 500
+
+nationalist = {
+	lose_support_on_pop_leave = no
+	
+	is_potential = {
+		always = no
+	}
+
+	valid = {
+		always = yes
+	}
+	
+	parameters = {
+		country = {
+			type = country
+		}
+	}
+
+	mandate = {
+		key = "mandate_nationalist"
+		parameter_transfer = {
+			country = country
+		}
+		weight = {
+			base = 100
+		}
+	}
+	
+	# flag = nationalist_spawn_country
+	flag = {
+		icon = {
+			category = "spherical"
+			file = "flag_spherical_9.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "new_dawn.dds"
+		}
+		colors={
+			"dark_teal"
+			"teal"
+			"null"
+			"null"
+		}
+	}
+
+	attraction = {
+		base = 0
+		
+		modifier = {
+			add = 70
+			exists = pop_faction
+			pop_faction = {
+				exists = from
+				is_same_value = from
+			}
+		}
+		
+		modifier = {
+			add = @integration_campaign_1_attraction
+			exists = from
+			from = {
+				has_pop_faction_flag = integration_campaign_1
+			}
+		}
+		
+		modifier = {
+			add = @integration_campaign_2_attraction
+			exists = from
+			from = {
+				has_pop_faction_flag = integration_campaign_2
+			}
+		}
+		
+		modifier = {
+			add = @integration_campaign_3_attraction
+			exists = from
+			from = {
+				has_pop_faction_flag = integration_campaign_3
+			}
+		}
+
+		modifier = {
+			factor = 1.2
+			exists = owner
+			owner = {
+				exists = ruler
+				ruler = {
+					exists = pop_faction
+					pop_faction = {
+						is_same_value = from
+					}
+				}
+			}
+		}
+
+		# set to 0 if over 50% happiness
+		modifier = {
+			factor = 0
+			happiness > 0.50
+		}
+
+		# set to 0 if robotic
+		modifier = {
+			factor = 0
+			OR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+			}
+		}
+	}
+	
+	on_create = {
+		set_name = random
+	}
+	
+	on_set_leader = {
+		random_owned_pop = {
+			species = {
+				root = {
+					owner = {
+						create_leader = {
+							type = general
+							species = prevprev
+							name = random
+							skill = 0
+							traits = {}
+						}
+						last_created_leader = {
+							recruitable = no
+							root = {
+								assign_leader = prev
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	demand = {
+		title = "POP_FACTION_NATIONALIST_DEMAND_TITLE"
+		desc = "POP_FACTION_NATIONALIST_DEMAND_DESC"
+	}
+
+	actions = {
+		release_planets = {
+			title = "POP_FACTION_NATIONALIST_RELEASE_PLANETS_TITLE"
+			description = "POP_FACTION_NATIONALIST_RELEASE_PLANETS_DESC"
+			
+			valid = {
+				custom_tooltip = {
+					text = "POP_FACTION_NATIONALIST_RELEASE_PLANETS_OCCUPIED"
+					NOT = {
+						any_pop = {
+							planet = {
+								is_occupied_flag = yes
+							}
+						}
+					}
+				}
+				
+				custom_tooltip = {
+					text = "POP_FACTION_NATIONALIST_RELEASE_PLANETS_COMBAT"
+					NOT = {
+						any_pop = {
+							planet = {
+								has_ground_combat = yes
+							}
+						}
+					}
+				}
+			}
+			
+			effect = {
+				hidden_effect = {
+					if = {
+						limit = {
+							has_pop_faction_flag = mandated_ceding
+						}
+						parameter:country = { save_event_target_as = ceding_empire }
+						owner = { country_event = { id = mandate.180 } }
+					}
+					every_owned_pop = {
+						limit = {
+							planet = {
+								owner = {
+									is_same_value = root.owner
+								}
+							}
+						}
+						planet = {
+							set_owner = parameter:country
+						}
+					}
+					kill_pop_faction = yes
+				}
+			}
+			
+			ai_weight = {
+				base = 0
+			}
+		}
+		
+		integration_campaign_1 = {
+			title = "POP_FACTION_NATIONALIST_INTEGRATION_CAMPAIGN_1_TITLE"
+			description = "POP_FACTION_NATIONALIST_INTEGRATION_CAMPAIGN_1_DESC"
+			
+			cost = {
+				influence = @integration_campaign_1_cost
+			}
+			
+			potential = {
+				not = {
+					has_pop_faction_flag = integration_campaign_1
+				}
+			}
+
+			effect = {
+				set_pop_faction_flag = integration_campaign_1
+			}
+			
+			ai_weight = {
+				base = 0
+				modifier = {
+					add = 10
+					support > 0.39
+					owner = {
+						influence > @integration_campaign_1_cost
+					}
+				}
+				modifier = {
+					factor = 0.1
+					owner = {
+						OR = {
+							has_ethic = ethic_xenophobe
+							has_ethic = ethic_fanatic_xenophobe
+						}
+					}
+				}
+			}
+		}
+		
+		integration_campaign_2 = {
+			title = "POP_FACTION_NATIONALIST_INTEGRATION_CAMPAIGN_2_TITLE"
+			description = "POP_FACTION_NATIONALIST_INTEGRATION_CAMPAIGN_2_DESC"
+			
+			cost = {
+				influence = @integration_campaign_2_cost
+			}
+			
+			potential = {
+				has_pop_faction_flag = integration_campaign_1
+				not = {
+					has_pop_faction_flag = integration_campaign_2
+				}
+			}
+
+			effect = {
+				set_pop_faction_flag = integration_campaign_2
+			}
+			
+			ai_weight = {
+				base = 0
+				modifier = {
+					add = 10
+					has_pop_faction_flag = integration_campaign_1
+					owner = {
+						influence > @integration_campaign_2_cost
+					}
+				}
+				modifier = {
+					factor = 0.2
+					owner = {
+						OR = {
+							has_ethic = ethic_xenophobe
+							has_ethic = ethic_fanatic_xenophobe
+						}
+					}
+				}
+			}
+		}
+		
+		integration_campaign_3 = {
+			title = "POP_FACTION_NATIONALIST_INTEGRATION_CAMPAIGN_3_TITLE"
+			description = "POP_FACTION_NATIONALIST_INTEGRATION_CAMPAIGN_3_DESC"
+			
+			cost = {
+				influence = @integration_campaign_3_cost
+			}
+			
+			potential = {
+				has_pop_faction_flag = integration_campaign_1
+				has_pop_faction_flag = integration_campaign_2
+				not = {
+					has_pop_faction_flag = integration_campaign_3
+				}
+			}
+
+			effect = {
+				set_pop_faction_flag = integration_campaign_3
+			}
+			
+			ai_weight = {
+				base = 0
+				modifier = {
+					add = 10
+					has_pop_faction_flag = integration_campaign_2
+					owner = {
+						influence > @integration_campaign_3_cost
+					}
+				}
+				modifier = {
+					factor = 0.2
+					owner = {
+						OR = {
+							has_ethic = ethic_xenophobe
+							has_ethic = ethic_fanatic_xenophobe
+						}
+					}
+				}
+			}
+		}
+
+		#assassinate_leader = {
+		#	title = FACTION_ACTION_ASSASSINATE_LEADER
+		#	description = FACTION_ACTION_ASSASSINATE_LEADER_DESC
+		#
+		#	cost = {
+		#		energy = 500
+		#	}
+		#
+		#	valid = {
+		#		custom_tooltip = {
+		#			text = FACTION_ACTION_ASSASSINATE_LEADER_INVALID
+		#			owner = { NOT = { has_country_flag = recent_assassination } }
+		#		}
+		#	}
+		#
+		#	effect = {
+		#		add_support = -0.25
+		#		hidden_effect = {
+		#			owner = {
+		#				set_timed_country_flag = {
+		#					flag = recent_assassination
+		#					days = 90
+		#				}
+		#			}
+		#			pop_faction_event = { id = faction.102 }
+		#		}
+		#	}
+		#
+		#	ai_weight = {
+		#		base = 0
+		#		modifier = {
+		#			add = 1
+		#			support > 0.10
+		#			owner = { energy > 500 }
+		#		}
+		#		modifier = {
+		#			add = 4
+		#			owner = { energy > 1000 }
+		#		}
+		#		modifier = {
+		#			factor = 4
+		#			support > 0.19
+		#		}
+		#		modifier = {
+		#			factor = 3
+		#			support > 0.59
+		#		}
+		#	}
+		#}
+
+		suppress_media = {
+			title = FACTION_ACTION_SUPPRESS_MEDIA
+			description = FACTION_ACTION_SUPPRESS_MEDIA_DESC
+
+			cost = {
+				energy = 400
+				influence = 50
+			}
+
+			effect = {
+				add_support = -0.10
+			}
+
+			ai_weight = {
+				base = 0
+				modifier = {
+					add = 1
+					support > 0.10
+				}
+				modifier = {
+					add = 1
+					support > 0.30
+				}
+				modifier = {
+					add = 1
+					support > 0.50
+				}
+				modifier = {
+					add = 1
+					support > 0.70
+				}	
+				modifier = {
+					add = 1
+					support > 0.90
+				}						
+			}
+		}
+		
+		bribe_leaders = {
+			title = FACTION_ACTION_BRIBE_LEADERS
+			description = FACTION_ACTION_BRIBE_LEADERS
+		
+			cost = {
+				energy = 200
+				influence = 200
+			}
+		
+			effect = {
+				add_support = -0.10
+			}
+
+			ai_weight = {
+				base = 0
+				modifier = {
+					add = 1
+					support > 0.10
+				}
+				modifier = {
+					add = 1
+					support > 0.30
+				}
+				modifier = {
+					add = 1
+					support > 0.50
+				}
+				modifier = {
+					add = 1
+					support > 0.70
+				}	
+				modifier = {
+					add = 1
+					support > 0.90
+				}						
+			}
+		}
+	}
+	
+	support_effects = {
+		
+		# Sabotage
+		sabotage = {
+			title = "POP_FACTION_NATIONALIST_SABOTAGE_TITLE"
+			min_support = 0.0
+			max_support = 1.0
+			
+			spawn_chance = {
+				base = 5
+				
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = "POP_FACTION_NATIONALIST_LEADER_IS_RULER"
+						owner = {
+							exists = ruler
+							ruler = {
+								is_same_value = root.leader
+							}
+						}
+					}
+				}
+				
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = "POP_FACTION_NATIONALIST_RECENT_SABOTAGE"
+						has_pop_faction_flag = recent_sabotage
+					}
+				}
+			}
+			
+			effect = {
+				custom_tooltip = "POP_FACTION_NATIONALIST_SABOTAGE_DESC"
+				hidden_effect = {
+					set_timed_pop_faction_flag = { flag = recent_sabotage days = 300 }
+					random_owned_pop = {
+						limit = {
+							planet = {
+								any_tile = {
+									has_building = yes
+									is_ruined = no
+									NOT = {
+										has_building = building_colony_shelter
+										has_building = building_capital_1
+										has_building = building_capital_2
+										has_building = building_capital_3
+									}
+								}
+							}
+						}
+						planet = {
+							save_event_target_as = planet
+							random_tile = {
+								limit = {
+									has_building = yes
+									is_ruined = no
+									NOT = {
+										has_building = building_capital_1
+										has_building = building_capital_2
+										has_building = building_capital_3
+									}
+								}
+								set_ruined = yes
+								root = {
+									pop_faction_event = {
+										id = faction.301
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		# Corruption
+		title = {
+			title = "POP_FACTION_NATIONALIST_CORRUPTION_TITLE"
+			min_support = 0.4
+			max_support = 1.0
+			
+			spawn_chance = {
+				base = 100
+				
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = "POP_FACTION_NATIONALIST_LEADER_IS_RULER"
+						owner = {
+							exists = ruler
+							ruler = {
+								is_same_value = root.leader
+							}
+						}
+					}
+				}
+			}
+			
+			effect = {
+				custom_tooltip = "POP_FACTION_NATIONALIST_CORRUPTION_DESC"
+				hidden_effect = {
+					every_owned_pop = {
+						planet = {
+							if = {
+								limit = {
+									NOT = { has_modifier = "nationalist_corruption" }
+								}
+								add_modifier = {
+									modifier = "nationalist_corruption"
+									days = 30
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		# Rebellion
+		rebellion = {
+			title = "POP_FACTION_NATIONALIST_REBELLION_TITLE"
+			min_support = 1.0
+			max_support = 1.0
+			
+			spawn_chance = { 
+				value = 5
+				
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = "POP_FACTION_NATIONALIST_LEADER_IS_RULER"
+						owner = {
+							ruler = {
+								is_same_value = root.leader
+							}
+						}
+					}
+				}
+				
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = "POP_FACTION_NATIONALIST_MEMBERS_OCCUPIED"
+						count_pops = {
+							count > 0
+						}
+						count_pops = {
+							count = 0
+							limit = {
+								planet = {
+									is_occupied_flag = no
+								}
+							}
+						}
+					}
+				}
+				
+				modifier = {
+					factor = 0
+					custom_tooltip = {
+						text = "POP_FACTION_NATIONALIST_GROUND_COMBAT"
+						count_pops = {
+							count > 0
+						}
+						count_pops = {
+							count = 0
+							limit = {
+								planet = {
+									has_ground_combat = no								
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			effect = {
+				custom_tooltip = "POP_FACTION_NATIONALIST_REBELLION_DESC"
+				hidden_effect = {
+					pop_faction_event = { id = faction.302 }
+					every_owned_pop = {
+						limit = {
+							planet = {
+								is_occupied_flag = no
+								has_ground_combat = no
+							}
+						}
+						planet = {
+							if = {
+								limit = {
+									NOT = {
+										exists = event_target:rebel_country
+									}
+								}
+								create_rebels = {
+									name = random
+									government = random
+									species = parameter:country
+									ethos = parameter:country
+									flag = random
+								}
+								last_created_country = {
+									save_event_target_as = rebel_country
+									add_war_demand = {
+										type = "liberate_country"
+										parameter:country = this
+										warscore_cost = 50
+										target = this
+									}
+								}
+							}
+							create_army = {
+								owner = event_target:rebel_country
+								species = prev
+								type = "defense_army"
+							}
+						}
+					}
+					kill_pop_faction = yes
+				}
+			}
+		}
+	}
+}

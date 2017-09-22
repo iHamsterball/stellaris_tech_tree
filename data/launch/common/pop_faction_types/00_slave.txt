@@ -1,0 +1,95 @@
+slave = {
+	lose_support_on_pop_leave = no
+	is_potential = {
+		always = no
+	}
+	valid = {
+		owner = {
+			any_owned_pop = {
+				is_enslaved = yes
+			}
+		}
+	}
+	can_create = { always = no }
+	
+	attraction_custom_title = "slave_attraction_title"
+	attraction_custom_desc = "slave_attraction_desc"
+	
+	on_create = {
+		set_support = 1
+		set_name = random
+		owner = {
+			every_owned_pop = {
+				limit = { is_enslaved = yes }
+				set_pop_faction = root
+			}
+		}
+	}
+
+	flag = {
+		icon = {
+			category = "human"
+			file = "flag_human_11.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "v.dds"
+		}
+		colors={
+			"dark_teal"
+			"teal"
+			"null"
+			"null"
+		}
+	}
+	
+	parameters = {
+	}
+	
+	demand = {
+		title = POP_FACTION_SLAVE_DEMAND_TITLE_1
+		desc = POP_FACTION_SLAVE_DEMAND_DESC_1
+		max_support = 1
+	}
+	
+	attraction = {	#executed with a pop scope, country is stored in root
+		base = 0
+		modifier = {
+			add = 999
+			is_enslaved = yes
+		}
+		
+		modifier = {
+			factor = 0
+			OR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+			}
+		}
+	}
+	
+	actions = {
+		emancipate_all = {
+			title = "FACTION_ACTION_SLAVE_EMANCIPATE_ALL"
+			description = "FACTION_ACTION_SLAVE_EMANCIPATE_ALL_DESC"
+			
+			cost = {
+				influence = 0
+			}
+			
+			effect = {
+				every_owned_pop = {
+					enslave_pop = no
+					set_pop_faction = default_pop_faction
+				}
+				kill_pop_faction = yes
+			}
+			
+			# This action is just a shortcut, AI should do this manually 
+			ai_weight = {
+				base = 1
+			}
+		}
+	}
+}

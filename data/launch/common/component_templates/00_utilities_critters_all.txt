@@ -1,0 +1,67 @@
+
+#############
+#	COST	#
+#############
+
+@cost_3S = 6
+@cost_3M = 12
+@cost_3L = 18
+
+
+# ####################
+#  Critter Utilities - All
+# ####################
+
+
+# Auto-Repair / Hull Regeneration
+
+utility_component_template = {
+	key = "SMALL_AUTO_REPAIR"
+	size = small
+	icon = "GFX_ship_part_auto_repair"
+	icon_frame = 1
+	power = 0
+	cost = @cost_3S
+	modifier = {
+		ship_auto_repair_add = 0.005 # Regenerates 0.5% ship-health per month
+	}
+	prerequisites = { tech_regenerative_hull_tissue }
+	component_set = "AUTO_REPAIR"
+	military_power = 1
+}
+
+utility_component_template = {
+	key = "MEDIUM_AUTO_REPAIR"
+	size = medium
+	icon = "GFX_ship_part_auto_repair"
+	icon_frame = 1
+	power = 0
+	cost = @cost_3M
+
+	modifier = {
+		ship_auto_repair_add = 0.01 # Regenerates 1% ship-health per month
+	}
+	
+	prerequisites = { tech_regenerative_hull_tissue }
+	component_set = "AUTO_REPAIR"
+	military_power = 1
+}
+
+utility_component_template = {
+	key = "LARGE_AUTO_REPAIR"
+	size = large
+	icon = "GFX_ship_part_auto_repair"
+	icon_frame = 1
+	power = 0
+	cost = @cost_3L
+
+	modifier = {
+		ship_auto_repair_add = 0.02 # Regenerates 1.5% ship-health per month
+	}
+	
+	prerequisites = { tech_regenerative_hull_tissue }
+	component_set = "AUTO_REPAIR"
+	military_power = 1
+}
+
+

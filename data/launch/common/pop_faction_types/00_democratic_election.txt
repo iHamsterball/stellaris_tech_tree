@@ -1,0 +1,152 @@
+##############################
+# Democratic Election Faction
+##############################
+# Democratic Election factions will briefly exist during
+# democratic elections to allow for multiple choices
+# if only Loyalists exist.
+
+democratic_election_faction = {
+	election_header = "GFX_faction_header_yellow"
+	lose_support_on_pop_leave = no
+
+	parameters = {
+		empire = {
+			type = country
+			valid_objects = {
+				is_same_value = root
+			}
+		}
+	}
+	
+	hidden = yes
+	
+	attraction = {
+		base = 0
+		
+		modifier = {
+			add = 999
+			
+			exists = pop_faction
+			pop_faction = {
+				is_pop_faction_type = democratic_election_faction
+			}
+		}
+
+		modifier = {
+			factor = 0
+			OR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+			}
+		}
+	}
+	
+	mandate = {
+		key = "mandate_emancipation2"
+		parameter_transfer = {}
+		weight = {
+			base = 20
+
+			modifier = {
+				factor = 0.3
+				parameter:empire = {
+					any_owned_leader = {
+						leader_of_faction = yes
+						has_mandate = "mandate_emancipation2"
+					}
+				}
+			}
+		}
+	}
+
+	mandate = {
+		key = "mandate_miner"
+		parameter_transfer = {}
+		weight = {
+			base = 20
+
+			modifier = {
+				factor = 0.3
+				parameter:empire = {
+					any_owned_leader = {
+						leader_of_faction = yes
+						has_mandate = "mandate_miner"
+					}
+				}
+			}
+		}
+	}
+
+	mandate = {
+		key = "mandate_orbital_researcher"
+		parameter_transfer = {}
+		weight = {
+			base = 20
+
+			modifier = {
+				factor = 0.3
+				parameter:empire = {
+					any_owned_leader = {
+						leader_of_faction = yes
+						has_mandate = "mandate_orbital_researcher"
+					}
+				}
+			}
+		}
+	}
+
+	mandate = {
+		key = "mandate_slaver"
+		parameter_transfer = {}
+		weight = {
+			base = 20
+
+			modifier = {
+				factor = 0.3
+				parameter:empire = {
+					any_owned_leader = {
+						leader_of_faction = yes
+						has_mandate = "mandate_slaver"
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				parameter:empire = {
+					has_ethic = ethic_fanatic_individualist
+				}
+			}
+		}
+	}
+	
+	on_set_leader = { # Effect that executes when a faction wants a leader
+		owner = {
+			random_owned_leader = {
+				limit = { leader_of_faction = no }
+				root = {
+					assign_leader = prev
+				}
+			}
+		}
+	}
+
+	#on_create = {
+	#	set_name = random
+	#	set_support = 0.0
+	#	owner = {
+	#		random_owned_pop = {
+	#			limit = { 
+	#				OR = {
+	#					member_of_faction = no 
+	#					pop_faction = {
+	#						is_pop_faction_type = loyalist
+	#					}
+	#				}
+	#			}
+	#			set_pop_faction = ROOT
+	#		}
+	#	}
+	#}
+}

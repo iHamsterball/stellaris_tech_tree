@@ -1,0 +1,111 @@
+icon = {
+	HIGH = "GFX_alerticon_banner_high"
+	MEDIUM = "GFX_alerticon_banner_med"
+	LOW = "GFX_alerticon_banner_low"
+}
+
+# category can be HIGH, MEDIUM, LOW, DISABLED
+# Alerts automatically use the frame number, for the order of the alerts below
+
+alerts = {
+	alert_negative_income = {
+		category = MEDIUM
+		sound = "alert_negative"
+	}
+
+	alert_physics_research = {
+		category = MEDIUM
+		sound = "alert_research_notification"
+	}
+
+	alert_society_research = {
+		category = MEDIUM
+		sound = "alert_research_notification"
+	}
+
+	alert_engineering_research = {
+		category = MEDIUM
+		sound = "alert_research_notification"
+	}
+
+	alert_timed_project = {
+		category = MEDIUM
+		sound = "alert_research_notification"
+	}
+
+	alert_unemployed_pops = {
+		category = LOW
+		sound = "alert_negative"
+	}
+
+	alert_fleet_combat = {
+		category = HIGH
+		sound = "fleet_under_attack"
+	}
+
+	alert_army_combat = {
+		category = HIGH
+		sound = "fleet_under_attack"
+	}
+
+	alert_revolt = {
+		category = HIGH
+		sound = "alert_negative"
+	}
+
+	alert_mia = {
+		category = LOW
+		sound = "alert_negative"
+	}
+
+	alert_building = {
+		category = LOW
+		sound = "alert_negative"
+	}
+
+	alert_above_planet_cap = {
+		category = MEDIUM
+		sound = "alert_negative"
+	}
+	alert_above_sector_cap = {
+		category = MEDIUM
+		sound = "alert_negative"
+	}
+	alert_disconnected_system = {
+		category = MEDIUM
+		sound = "alert_negative"
+	}
+	alert_can_modify_species = {
+		category = LOW
+		sound  = "alert_negative"
+	}
+	alert_starving_planet = {
+		category = MEDIUM
+		sound = "alert_negative"
+	}
+	alert_hostile_in_system = {
+		category = LOW
+		sound = "alert_negative"
+	}
+	alert_sectors_missing_resources = {
+		category = MEDIUM
+		sound = "alert_negative"
+	}
+	alert_capped_resources = {
+		category = MEDIUM
+		sound = "alert_negative"
+	}		
+	alert_set_war_demands = {
+		category = MEDIUM
+		sound = "alert_research_notification"
+	}
+	alert_powerful_factions = {
+		category = MEDIUM
+		sound = "alert_negative"
+	}
+	
+	alert_resource_shortage = {
+		category = HIGH
+		sound = "alert_negative"
+	}	
+}

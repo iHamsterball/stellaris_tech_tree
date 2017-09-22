@@ -1,0 +1,102 @@
+# Big Space Whale
+ship_design = {
+	name = "Tiyanki Cow"
+	ship_size = space_whale_1
+	hide_size = yes
+	
+	section = {
+		template = "space_whale_1_section"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_SPACE_WHALE_WEAPON"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+	}
+	required_component="WARP_DRIVE_3"
+}
+
+# Medium Space Whale
+ship_design = {
+	name = "Tiyanki Bull"
+	ship_size = space_whale_2
+	hide_size = yes
+	
+	section = {
+		template = "space_whale_2_section"
+		slot = "mid"
+		
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_SPACE_WHALE_WEAPON"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+	}
+	required_component="WARP_DRIVE_3"
+}
+
+# Small Space Whale
+ship_design = {
+	name = "Tiyanki Calf"
+	ship_size = space_whale_3
+	hide_size = yes
+	
+	section = {
+		template = "space_whale_3_section"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_SPACE_WHALE_WEAPON"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+	}
+	required_component="WARP_DRIVE_3"
+}
+
+# Matriarch
+ship_design = {
+	name = "The Matriarch"
+	ship_size = space_whale_4
+	hide_size = yes
+	
+	section = {
+		template = "space_whale_4_section"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_SPACE_WHALE_WEAPON"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "LARGE_SPACE_WHALE_WEAPON"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "LARGE_SPACE_WHALE_WEAPON"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_AUTO_REPAIR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_ARMOR_3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_ARMOR_3"
+		}
+	}
+}

@@ -1,0 +1,109 @@
+purged = {
+	# factions cease to exist when all members leave or a parameter becomes invalid
+	lose_support_on_pop_leave = yes
+	
+	is_potential = {
+		# country scope
+		always = no
+	}
+	valid = {
+		# pop faction scope
+		owner = {
+			any_owned_pop = {
+				is_being_purged = yes
+			}
+		}
+	}
+	
+	on_create = {
+		set_name = random
+		owner = {
+			every_owned_pop = {
+				limit = { is_being_purged = yes }
+				set_pop_faction = root
+			}
+		}
+	}
+
+	flag = {
+		icon = {
+			category = "human"
+			file = "flag_human_7.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "triangle_split.dds"
+		}
+		colors={
+			"dark_teal"
+			"teal"
+			"null"
+			"null"
+		}
+	}
+	
+	parameters = {
+	}
+
+	on_set_leader = { # Effect that executes when a faction wants a leader
+		owner = {
+			create_leader = {
+				type = governor
+				species = owner_main_species
+				name = random
+				skill = 0
+				traits = {}
+			}
+			last_created_leader = {
+				recruitable = no
+				root = {
+					assign_leader = prev
+				}
+			}
+		}
+	}
+
+	attraction_custom_title = "purged_attraction_title"
+	attraction_custom_desc = "purged_attraction_desc"
+
+	can_create = {
+		always = yes
+	}
+	
+	# Cease purge
+	demand = {
+		title = POP_FACTION_PURGED_DEMAND_TITLE_1
+		desc = POP_FACTION_PURGED_DEMAND_TITLE_1
+		max_support = 1
+		potential = {
+			always = yes
+		}
+	}
+	
+	attraction = {	#executed with a pop scope, country is stored in root
+		base = 0
+		# Is being purged
+		modifier = {
+			is_being_purged = yes
+			NOT = {
+				is_enslaved = yes
+			}
+			add = 100
+		}
+
+		modifier = {
+			factor = 0
+			OR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+			}
+		}
+	}
+	
+	actions = {
+	}
+	
+	support_effects = {
+	}
+}
