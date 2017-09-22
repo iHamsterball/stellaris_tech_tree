@@ -22,7 +22,6 @@ class FeatureUnlocks:
             return loc_data[alt_key]
 
         def _localize(string):
-            print(string, type(string))
             try:
                 localized = loc_data[string] if type(string) is str \
                             else loc_data[string.group(1)]

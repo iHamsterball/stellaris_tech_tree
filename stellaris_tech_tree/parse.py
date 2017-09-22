@@ -222,7 +222,8 @@ def generate_localized_tech(locale, version):
     spaceport_module_file_paths = []
     tile_blocker_file_paths = []
     loc_file_paths = []
-    skip_terms = ['events?', 'tutorials?', 'pop_factions?', 'name_lists?',
+    # Great Synthetic Dawn DLC use synthetic_dawn_events as its file name
+    skip_terms = ['^events?', 'tutorials?', 'pop_factions?', 'name_lists?',
                   'messages?', 'mandates?', 'projects?', 'sections?',
                   'triggers?', 'traits?']
     has_skip_term = re.compile(r'(?:{})_'.format('|'.join(skip_terms)))
