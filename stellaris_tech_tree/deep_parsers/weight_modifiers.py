@@ -332,7 +332,14 @@ def _localize_has_resource(value):
     return ugettext('Has {} {} {}').format(operator, amount, localized_resource)
 
 def _localize_has_any_megastructure_in_empire(value):
-    return ugettext('Has any megastructure in empire')
+    return ugettext('Has any megastructure in empire') if value == 'yes' else ugettext('Does NOT have any megastructure in empire')
+
+def _localize_is_ftl_restricted(value):
+    return ugettext('Is FTL restricted') if value == 'yes' else ugettext('Is NOT FTL restricted')
+
+def _localize_has_not_authority(value):
+    localized_machine_intelligence = localization_map[value]
+    return ugettext('{} has NOT authority').format(localized_machine_intelligence)
 
 def _localize_always(value):
     return ugettext('Always') if value == 'yes' else ugettext('Never')
