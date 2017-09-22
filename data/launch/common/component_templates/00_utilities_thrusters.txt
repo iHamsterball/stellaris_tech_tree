@@ -1,0 +1,87 @@
+# Icons set here are the ones show in the actual slot.
+
+#############
+# THRUSTERS #
+#############
+
+### 
+
+utility_component_template = {
+	key = "SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	power = -5
+	cost = 5
+	
+	modifier = {
+		ship_evasion_add = 10
+	}
+		
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	power = -10
+	cost = 10
+	modifier = {
+		ship_speed_mult = 0.1
+		ship_evasion_add = 20
+	}
+
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	power = -15
+	cost = 15
+	modifier = {
+		ship_speed_mult = 0.2
+		ship_evasion_add = 30
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	power = -20
+	cost = 20
+	modifier = {
+		ship_speed_mult = 0.3
+		ship_evasion_add = 40
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	
+	ai_weight = {
+		weight = 4
+	}
+}

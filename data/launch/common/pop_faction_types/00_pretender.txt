@@ -1,0 +1,220 @@
+
+@install_pretender_cost = 100
+
+pretender = {
+	lose_support_on_pop_leave = no
+
+	is_potential = {
+		always = no
+	}
+	
+	parameters = {
+		pretender = {
+			type = leader
+		}
+	}
+
+	can_create = {
+		always = yes
+	}
+
+	flag = {
+		icon = {
+			category = "ornate"
+			file = "flag_ornate_11.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "circle.dds"
+		}
+		colors={
+			"dark_teal"
+			"teal"
+			"null"
+			"null"
+		}
+	}
+	
+	on_create = {
+		owner = {
+			every_owned_pop = {
+				limit = {
+					OR = {
+						NOT = { exists = pop_faction }
+						pop_faction = { is_same_value = owner.default_pop_faction }
+					}
+				}
+				random_list = {
+					80 = {
+					}
+					20 = {
+						set_pop_faction = root
+					}
+				}
+			}
+		}
+		
+		set_name = random
+		set_support = 1.0
+	}
+	
+	on_set_leader = {
+		assign_leader = parameter:pretender
+	}
+	
+	demand = {
+		title = "POP_FACTION_PRETENDER_DEMAND_TITLE"
+		desc = "POP_FACTION_PRETENDER_DEMAND_DESC"
+	}
+	
+	# Executed with a pop scope, country is stored in root
+	attraction = {
+		base = 0
+
+		modifier = {
+			add = 85
+			exists = pop_faction
+			pop_faction = {
+				exists = from
+				is_same_value = from
+			}
+		}
+
+		modifier = {
+			factor = 0
+			OR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+			}
+		}
+	}
+	
+	actions = {
+		install_new_ruler = {
+			title = "POP_FACTION_PRETENDER_INSTALL_TITLE"
+			description = "POP_FACTION_PRETENDER_INSTALL_DESC"
+			
+			cost = {
+				influence = @install_pretender_cost
+			}
+			
+			effect = {
+				owner = {
+					set_leader = parameter:pretender
+					every_pop_faction = {
+						limit = {
+							is_pop_faction_type = "pretender"
+						}
+						kill_pop_faction = yes
+					}
+				}
+			}
+			
+			ai_weight = {
+				base = 0
+				modifier = {
+					add = 1
+					support > 0.79
+				}
+			}
+		}
+
+		suppress_media = {
+			title = FACTION_ACTION_SUPPRESS_MEDIA
+			description = FACTION_ACTION_SUPPRESS_MEDIA_DESC
+
+			cost = {
+				energy = 400
+				influence = 50
+			}
+
+			effect = {
+				add_support = -0.10
+			}
+
+			ai_weight = {
+				base = 0
+				modifier = {
+					add = 1
+					support > 0.10
+				}
+				modifier = {
+					add = 1
+					support > 0.30
+				}
+				modifier = {
+					add = 1
+					support > 0.50
+				}
+				modifier = {
+					add = 1
+					support > 0.70
+				}	
+				modifier = {
+					add = 1
+					support > 0.90
+				}						
+			}
+		}
+		
+		bribe_leaders = {
+			title = FACTION_ACTION_BRIBE_LEADERS
+			description = FACTION_ACTION_BRIBE_LEADERS
+		
+			cost = {
+				energy = 200
+				influence = 200
+			}
+		
+			effect = {
+				add_support = -0.10
+			}
+
+			ai_weight = {
+				base = 0
+				modifier = {
+					add = 1
+					support > 0.10
+				}
+				modifier = {
+					add = 1
+					support > 0.30
+				}
+				modifier = {
+					add = 1
+					support > 0.50
+				}
+				modifier = {
+					add = 1
+					support > 0.70
+				}	
+				modifier = {
+					add = 1
+					support > 0.90
+				}						
+			}
+		}
+	}
+	
+	support_effects = {
+		attrition = {
+			title = "POP_FACTION_PRETENDER_ATTRITION_TITLE"
+			min_support = 0.0
+			max_support = 1.0
+			
+			spawn_chance = {
+				value = 5
+			}
+			
+			effect = {
+				custom_tooltip = "POP_FACTION_PRETENDER_ATTRITION_DESC"
+				hidden_effect = {
+					random_owned_pop = {
+						set_pop_faction = owner.default_pop_faction
+					}
+				}
+			}
+		}
+	}
+}

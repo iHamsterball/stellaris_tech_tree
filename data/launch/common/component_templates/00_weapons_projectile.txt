@@ -1,0 +1,671 @@
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes. 
+
+#Updated Range on these
+
+# DEFAULT VALUES:
+# is_missile = no
+# is_beam = no
+# is_point_defence = no
+
+# ####################
+#  Mass Drivers
+# ####################
+
+# ## Mass Drivers
+weapon_component_template = {
+	type = instant
+	
+	key = "SMALL_MASS_DRIVER_1"
+	size = small
+	entity = "small_kinetic_gun_entity"
+	damage = { min = 10.0 max = 14.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 15
+	
+	icon = "GFX_ship_part_mass_driver_1"
+	icon_frame = 1
+	power = -3
+	cost = 2
+	prerequisites = { "tech_mass_drivers_1" }
+	component_set = "MASS_DRIVER_1"
+	projectile_gfx = "mass_driver_s"
+	tags = { weapon_type_kinetic }
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "MEDIUM_MASS_DRIVER_1"
+	size = medium
+	entity = "medium_kinetic_gun_entity"
+	damage = { min = 15.0 max = 21.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+	
+	icon = "GFX_ship_part_mass_driver_1"
+	icon_frame = 1
+	power = -6
+	cost = 2
+	prerequisites = { "tech_mass_drivers_1"}
+	component_set = "MASS_DRIVER_1"
+	projectile_gfx = "mass_driver_m"
+	tags = { weapon_type_kinetic }
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "LARGE_MASS_DRIVER_1"
+	size = large
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 22.0 max = 32.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+	
+	icon = "GFX_ship_part_mass_driver_1"
+	icon_frame = 1
+	power = -9
+	cost = 6
+	prerequisites = { "tech_mass_drivers_1" }
+	component_set = "MASS_DRIVER_1"
+	projectile_gfx = "mass_driver_l"
+	tags = { weapon_type_kinetic }
+}
+
+# ## Coilguns
+weapon_component_template = {
+	type = instant
+	
+	key = "SMALL_MASS_DRIVER_2"
+	size = small
+	entity = "small_kinetic_gun_entity"
+	damage = { min = 15.0 max = 21.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+	
+	icon = "GFX_ship_part_mass_driver_2"
+	icon_frame = 1
+	power = -9
+	cost = 2
+	prerequisites = { "tech_mass_drivers_2" }
+	component_set = "MASS_DRIVER_2"
+	projectile_gfx = "coilgun_s"
+	tags = { weapon_type_kinetic }
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "MEDIUM_MASS_DRIVER_2"
+	size = medium
+	entity = "medium_kinetic_gun_entity"
+	damage = { min = 20.0 max = 30.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+	
+	icon = "GFX_ship_part_mass_driver_2"
+	icon_frame = 1
+	power = -14
+	cost = 4
+	prerequisites = { "tech_mass_drivers_2" }
+	component_set = "MASS_DRIVER_2"
+	projectile_gfx = "coilgun_m"
+	tags = { weapon_type_kinetic }
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "LARGE_MASS_DRIVER_2"
+	size = large
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 27.0 max = 43.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+	
+	icon = "GFX_ship_part_mass_driver_2"
+	icon_frame = 1
+	power = -18
+	cost = 6
+	prerequisites = { "tech_mass_drivers_2" }
+	component_set = "MASS_DRIVER_2"
+	projectile_gfx = "coilgun_l"
+	tags = { weapon_type_kinetic }
+}
+
+# ## Railguns
+weapon_component_template = {
+	type = instant
+	
+	key = "SMALL_MASS_DRIVER_3"
+	size = small
+	entity = "small_kinetic_gun_entity"
+	damage = { min = 20.0 max = 28.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+	
+	icon = "GFX_ship_part_mass_driver_3"
+	icon_frame = 1
+	power = -27
+	cost = 2
+	prerequisites = { "tech_mass_drivers_3" }
+	component_set = "MASS_DRIVER_3"
+	projectile_gfx = "railgun_s"
+	tags = { weapon_type_kinetic }
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "MEDIUM_MASS_DRIVER_3"
+	size = medium
+	entity = "medium_kinetic_gun_entity"
+	damage = { min = 25.0 max = 39.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+	
+	icon = "GFX_ship_part_mass_driver_3"
+	icon_frame = 1
+	power = -41
+	cost = 4
+	prerequisites = { "tech_mass_drivers_3" }
+	component_set = "MASS_DRIVER_3"
+	projectile_gfx = "railgun_m"
+	tags = { weapon_type_kinetic }
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "LARGE_MASS_DRIVER_3"
+	size = large
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 32.0 max = 54.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+
+	icon = "GFX_ship_part_mass_driver_3"
+	icon_frame = 1
+	power = -54
+	cost = 6
+	prerequisites = { "tech_mass_drivers_3" }
+	component_set = "MASS_DRIVER_3"
+	projectile_gfx = "railgun_l"
+	tags = { weapon_type_kinetic }
+}
+
+# ## Advanced Railguns
+weapon_component_template = {
+	type = instant
+	
+	key = "SMALL_MASS_DRIVER_4"
+	size = small
+	entity = "small_kinetic_gun_entity"
+	damage = { min = 25.0 max = 35.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+	
+	icon = "GFX_ship_part_mass_driver_4"
+	icon_frame = 1
+	power = -81
+	cost = 2
+	prerequisites = { "tech_mass_drivers_4" }
+	component_set = "MASS_DRIVER_4"
+	projectile_gfx = "advanced_railgun_s"
+	tags = { weapon_type_kinetic }
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "MEDIUM_MASS_DRIVER_4"
+	size = medium
+	entity = "medium_kinetic_gun_entity"
+	damage = { min = 30.0 max = 48.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+	
+	icon = "GFX_ship_part_mass_driver_4"
+	icon_frame = 1
+	power = -122
+	cost = 4
+	prerequisites = { "tech_mass_drivers_4" }
+	component_set = "MASS_DRIVER_4"
+	projectile_gfx = "advanced_railgun_m"
+	tags = { weapon_type_kinetic }
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "LARGE_MASS_DRIVER_4"
+	size = large
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 37.0 max = 65.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+	
+	icon = "GFX_ship_part_mass_driver_4"
+	icon_frame = 1
+	power = -162
+	cost = 6
+	prerequisites = { "tech_mass_drivers_4" }
+	component_set = "MASS_DRIVER_4"
+	projectile_gfx = "advanced_railgun_l"
+	tags = { weapon_type_kinetic }
+}
+
+# ## Gauss Cannons
+weapon_component_template = {
+	type = instant
+	
+	key = "SMALL_MASS_DRIVER_5"
+	size = small
+	entity = "small_kinetic_gun_entity"
+	damage = { min = 30.0 max = 42.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+	
+	icon = "GFX_ship_part_mass_driver_5"
+	icon_frame = 1
+	power = -243
+	cost = 2
+	prerequisites = { "tech_mass_drivers_5" }
+	component_set = "MASS_DRIVER_5"
+	projectile_gfx = "gauss_cannon_s"
+	tags = { weapon_type_kinetic }
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "MEDIUM_MASS_DRIVER_5"
+	size = medium
+	entity = "medium_kinetic_gun_entity"
+	damage = { min = 35.0 max = 57.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+
+	icon = "GFX_ship_part_mass_driver_5"
+	icon_frame = 1
+	power = -365
+	cost = 4
+	prerequisites = { "tech_mass_drivers_5" }
+	component_set = "MASS_DRIVER_5"
+	projectile_gfx = "gauss_cannon_m"
+	tags = { weapon_type_kinetic }
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "LARGE_MASS_DRIVER_5"
+	size = large
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 42.0 max = 76.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+
+	icon = "GFX_ship_part_mass_driver_5"
+	icon_frame = 1
+	power = -486
+	cost = 6
+	prerequisites = { "tech_mass_drivers_5" }
+	component_set = "MASS_DRIVER_5"
+	projectile_gfx = "gauss_cannon_l"
+	tags = { weapon_type_kinetic }
+}
+
+
+# ####################
+# Spaceport Mass Driver
+# ####################
+
+weapon_component_template = {
+	key = "SMALL_SPACEPORT_MASS_DRIVER"
+	size = small
+	entity = "small_kinetic_gun_entity"
+	damage = { min = 18.0 max = 34.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 25
+	range = 20.0
+	accuracy = 1
+	type = instant
+	icon = "GFX_ship_part_mass_driver_1"
+	icon_frame = 1
+	power = 0
+	cost = 6
+	projectile_gfx = "advanced_railgun_l"
+	hidden = yes
+	component_set = "SPACEPORT_MASS_DRIVER"
+	tags = { weapon_type_kinetic }
+}
+
+weapon_component_template = {
+	key = "MEDIUM_SPACEPORT_MASS_DRIVER"
+	size = medium
+	entity = "medium_kinetic_gun_entity"
+	damage = { min = 18.0 max = 34.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 25
+	range = 20.0
+	accuracy = 1
+	type = instant
+	icon = "GFX_ship_part_mass_driver_1"
+	icon_frame = 1
+	power = 0
+	cost = 6
+	projectile_gfx = "advanced_railgun_l"
+	hidden = yes
+	component_set = "SPACEPORT_MASS_DRIVER"
+	tags = { weapon_type_kinetic }
+}
+
+weapon_component_template = {
+	key = "LARGE_SPACEPORT_MASS_DRIVER"
+	size = large
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 18.0 max = 34.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 25
+	range = 20.0
+	accuracy = 1
+	type = instant
+	icon = "GFX_ship_part_mass_driver_1"
+	icon_frame = 1
+	power = 0
+	cost = 6
+	projectile_gfx = "advanced_railgun_l"
+	hidden = yes
+	component_set = "SPACEPORT_MASS_DRIVER"
+	tags = { weapon_type_kinetic }
+}
+
+
+# ####################
+#  Kinetic Artillery
+# ####################
+
+# ## Kinetic Artillery 1
+weapon_component_template = {
+	type = instant
+	
+	key = "LARGE_KINETIC_ARTILLERY_1"
+	size = large
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 22.0 max = 32.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+	
+	icon = "GFX_ship_part_kinetic_artillery_1"
+	icon_frame = 1
+	power = -9
+	cost = 6
+	prerequisites = { "tech_kinetic_artillery_1" }
+	component_set = "KINETIC_ARTILLERY_1"
+	projectile_gfx = "kinetic_artillery"
+	tags = { weapon_type_kinetic }
+}
+
+# ## Kinetic Artillery 2
+weapon_component_template = {
+	type = instant
+	
+	key = "LARGE_KINETIC_ARTILLERY_2"
+	size = large
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 27.0 max = 43.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+	
+	icon = "GFX_ship_part_kinetic_artillery_2"
+	icon_frame = 1
+	power = -18
+	cost = 6
+	prerequisites = { "tech_kinetic_artillery_2" }
+	component_set = "KINETIC_ARTILLERY_2"
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic }
+}
+
+
+# ####################
+#  Autocannons
+# ####################
+
+# ## Autocannons 1
+weapon_component_template = {
+	type = instant
+	
+	key = "SMALL_AUTOCANNON_1"
+	size = small
+	entity = "small_kinetic_gun_entity"
+	damage = { min = 10.0 max = 14.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+
+	icon = "GFX_ship_part_autocannon_1"
+	icon_frame = 1
+	power = -3
+	cost = 2
+	prerequisites = { "tech_autocannons_1" }
+	component_set = "AUTOCANNON_1"
+	projectile_gfx = "auto_cannons_s"
+	tags = { weapon_type_kinetic }
+}
+
+
+weapon_component_template = {
+	type = instant
+	
+	key = "MEDIUM_AUTOCANNON_1"
+	size = medium
+	entity = "medium_kinetic_gun_entity"
+	damage = { min = 15.0 max = 21.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+
+	icon = "GFX_ship_part_autocannon_1"
+	icon_frame = 1
+	power = -6
+	cost = 2
+	prerequisites = { "tech_autocannons_1"}
+	component_set = "AUTOCANNON_1"
+	projectile_gfx = "auto_cannons_m"
+	tags = { weapon_type_kinetic }
+}
+
+
+weapon_component_template = {
+	type = instant
+	
+	key = "LARGE_AUTOCANNON_1"
+	size = large
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 22.0 max = 32.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+
+	icon = "GFX_ship_part_autocannon_1"
+	icon_frame = 1
+	power = -9
+	cost = 6
+	prerequisites = { "tech_autocannons_1" }
+	component_set = "AUTOCANNON_1"
+	projectile_gfx = "auto_cannons_l"
+	tags = { weapon_type_kinetic }
+}
+
+# ## Autocannons 2
+weapon_component_template = {
+	type = instant
+	
+	key = "SMALL_AUTOCANNON_2"
+	size = small
+	entity = "small_kinetic_gun_entity"
+	damage = { min = 15.0 max = 21.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+
+	icon = "GFX_ship_part_autocannon_2"
+	icon_frame = 1
+	power = -9
+	cost = 2
+	prerequisites = { "tech_autocannons_2" }
+	component_set = "AUTOCANNON_2"
+	projectile_gfx = "ripper_auto_cannons_s"
+	tags = { weapon_type_kinetic }
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "MEDIUM_AUTOCANNON_2"
+	size = medium
+	entity = "medium_kinetic_gun_entity"
+	damage = { min = 20.0 max = 30.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+
+	icon = "GFX_ship_part_autocannon_2"
+	icon_frame = 1
+	power = -14
+	cost = 4
+	prerequisites = { "tech_autocannons_2" }
+	component_set = "AUTOCANNON_2"
+	projectile_gfx = "ripper_auto_cannons_m"
+	tags = { weapon_type_kinetic }
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "LARGE_AUTOCANNON_2"
+	size = large
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 27.0 max = 43.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+
+	icon = "GFX_ship_part_autocannon_2"
+	icon_frame = 1
+	power = -18
+	cost = 6
+	prerequisites = { "tech_autocannons_2" }
+	component_set = "AUTOCANNON_2"
+	projectile_gfx = "ripper_auto_cannons_l"
+	tags = { weapon_type_kinetic }
+}
+
+# ## Autocannons 3
+weapon_component_template = {
+	type = instant
+	
+	key = "SMALL_AUTOCANNON_3"
+	size = small
+	entity = "small_kinetic_gun_entity"
+	damage = { min = 20.0 max = 28.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+
+	icon = "GFX_ship_part_autocannon_3"
+	icon_frame = 1
+	power = -27
+	cost = 2
+	prerequisites = { "tech_autocannons_3" }
+	component_set = "AUTOCANNON_3"
+	projectile_gfx = "stormfire_auto_cannons_s"
+	tags = { weapon_type_kinetic }
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "MEDIUM_AUTOCANNON_3"
+	size = medium
+	entity = "medium_kinetic_gun_entity"
+	damage = { min = 25.0 max = 39.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+
+	icon = "GFX_ship_part_autocannon_3"
+	icon_frame = 1
+	power = -41
+	cost = 4
+	prerequisites = { "tech_autocannons_3" }
+	component_set = "AUTOCANNON_3"
+	projectile_gfx = "stormfire_auto_cannons_m"
+	tags = { weapon_type_kinetic }
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "LARGE_AUTOCANNON_3"
+	size = large
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 32.0 max = 54.0 }
+	windup = { min = 2.5 max = 17.5 }
+	total_fire_time = 45
+	range = 15
+	accuracy = 1
+	
+	icon = "GFX_ship_part_autocannon_3"
+	icon_frame = 1
+	power = -54
+	cost = 6
+	prerequisites = { "tech_autocannons_3" }
+	component_set = "AUTOCANNON_3"
+	projectile_gfx = "stormfire_auto_cannons_l"
+	tags = { weapon_type_kinetic }
+}

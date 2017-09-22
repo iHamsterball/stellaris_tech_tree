@@ -1,0 +1,192 @@
+tm_semi_static_we_defensive = {
+
+	icon = "gfx/interface/icons/modifiers/mod_war_economy_defensive.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+	
+	trigger = {
+		has_policy_flag = semi_static_we
+		
+		is_at_war = yes
+		
+		NOT = {
+			any_war = {
+				OR = {
+					any_attacker = {
+						is_country = ROOT
+					}
+				}
+			}
+		}
+		
+		def_war_score_sum < 0
+	}
+	
+	war_economy_modifier = {
+		spaceport_ship_build_cost_mult = -0.15
+		planet_ship_build_speed_mult = -0.15
+		planet_army_build_speed_mult = -0.15
+		planet_army_build_cost_mult = -0.15
+	}
+}
+
+tm_semi_static_we_offensive = {
+
+	icon = "gfx/interface/icons/modifiers/mod_war_economy_offensive.dds"
+	icon_frame = 2
+	
+	potential = {
+		always = yes
+	}
+	
+	trigger = {
+		has_policy_flag = semi_static_we
+		
+		is_at_war = yes
+		NOT = {
+			any_war = {
+				any_defender = {
+					is_country = ROOT
+				}
+			}
+		}
+		
+		off_war_score_sum > 0
+	}
+	
+	war_economy_modifier = {
+		spaceport_ship_build_cost_mult = 0.15
+		planet_army_build_cost_mult = 0.15
+		planet_ship_build_speed_mult = -0.15
+		planet_army_build_speed_mult = -0.15
+	}
+}
+
+tm_versatile_we_defensive = {
+	
+	icon = "gfx/interface/icons/modifiers/mod_war_economy_defensive.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+	
+	trigger = {
+		has_policy_flag = versatible_we
+		
+		is_at_war = yes
+		NOT = {
+			any_war = {
+				any_attacker = {
+					is_country = ROOT
+				}
+			}
+		}
+		
+		def_war_score_sum < 0
+	}
+	
+	war_economy_modifier = {
+		spaceport_ship_build_cost_mult = -0.3
+		planet_army_build_cost_mult = -0.3
+		planet_ship_build_speed_mult = 0.15
+		planet_army_build_speed_mult = 0.15
+	}
+}
+
+tm_versatile_we_offensive = {
+
+	icon = "gfx/interface/icons/modifiers/mod_war_economy_offensive.dds"
+	icon_frame = 2
+	
+	potential = {
+		always = yes
+	}
+	
+	trigger = {
+		has_policy_flag = versatile_we
+		
+		is_at_war = yes
+		NOT = {
+			any_war = {
+				any_defender = {
+					is_country = ROOT
+				}
+			}
+		}
+		
+		off_war_score_sum > 0
+	}
+	
+	war_economy_modifier = {
+		spaceport_ship_build_cost_mult = 0.3
+		planet_army_build_cost_mult = 0.3
+		planet_ship_build_speed_mult = -0.15
+		planet_army_build_speed_mult = -0.15
+	}
+}
+
+tm_dynamic_we_defensive = {
+	
+	icon = "gfx/interface/icons/modifiers/mod_war_economy_defensive.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+	
+	trigger = {
+		has_policy_flag = dynamic_we
+		
+		is_at_war = yes
+		NOT = {
+			any_war = {
+				any_attacker = {
+					is_country = ROOT
+				}
+			}
+		}
+		def_war_score_sum < 0
+	}
+	
+	war_economy_modifier = {
+		spaceport_ship_build_cost_mult = -0.45
+		planet_army_build_cost_mult = -0.45
+		planet_ship_build_speed_mult = 0.2
+		planet_army_build_speed_mult = 0.2
+	}
+}
+
+tm_dynamic_we_offensive = {
+
+	icon = "gfx/interface/icons/modifiers/mod_war_economy_offensive.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+	
+	trigger = {
+		has_policy_flag = dynamic_we
+		
+		is_at_war = yes
+		NOT = {
+			any_war = {
+				any_defender = {
+					is_country = ROOT
+				}
+			}
+		}
+		off_war_score_sum > 0
+	}
+	
+	war_economy_modifier = {
+		spaceport_ship_build_cost_mult = 0.45
+		planet_ship_build_speed_mult = 0.2
+		planet_army_build_cost_mult = 0.45
+		planet_army_build_speed_mult = 0.2
+	}
+}

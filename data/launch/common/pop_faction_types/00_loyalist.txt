@@ -1,0 +1,83 @@
+# ############################
+#  Loyalist Faction
+# ############################
+#
+# 
+# The Loyalist-faction should always exist as it will be used as the standard faction for all Pops
+# that have no strong feelings to join any other faction. Pops willingness to be in the
+# Loyalist-faction will be reduced the less happy they are, meaning they are more willing
+# to join any other faction.
+# 
+# 
+# 
+
+loyalist = {
+	election_header = "GFX_faction_header_yellow"
+	lose_support_on_pop_leave = no
+	
+	attraction = {
+		base = 0
+		
+		scaled_modifier = {
+			scope = this
+			add = 100
+			calc = pop_happiness
+		}
+	}
+	
+	mandate = {
+		key = "mandate_emancipation2"
+		parameter_transfer = {}
+		weight = {
+			base = 20
+		}
+	}
+
+	mandate = {
+		key = "mandate_miner"
+		parameter_transfer = {}
+		weight = {
+			base = 20
+		}
+	}
+
+	mandate = {
+		key = "mandate_orbital_researcher"
+		parameter_transfer = {}
+		weight = {
+			base = 20
+		}
+	}
+
+	mandate = {
+		key = "mandate_slaver"
+		parameter_transfer = {}
+		weight = {
+			base = 20
+		}
+	}
+	
+	on_set_leader = { # Effect that executes when a faction wants a leader
+		owner = {
+			random_owned_leader = {
+				limit = { leader_of_faction = no }
+				root = {
+					assign_leader = prev
+				}
+			}
+		}
+	}
+
+	on_create = {
+		set_name = random
+		set_support = 1
+		owner = {
+			every_owned_pop = {
+				if = {
+					limit = { member_of_faction = no }
+					set_pop_faction = ROOT
+				}
+			}
+		}
+	}
+}

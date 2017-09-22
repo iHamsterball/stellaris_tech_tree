@@ -1,0 +1,353 @@
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes. 
+
+#############
+#	POWER	#
+#############
+
+@power_S1 = -5
+@power_M1 = -10
+@power_L1 = -20
+             
+@power_S2 = -7.5
+@power_M2 = -15
+@power_L2 = -30
+             
+@power_S3 = -10
+@power_M3 = -20
+@power_L3 = -40
+             
+@power_S4 = -12.5
+@power_M4 = -25
+@power_L4 = -50
+             
+@power_S5 = -15
+@power_M5 = -30
+@power_L5 = -60
+
+#############
+#	COST	#
+#############
+
+@cost_S1 = 5
+@cost_M1 = 10
+@cost_L1 = 20
+           
+@cost_S2 = 7.5
+@cost_M2 = 15
+@cost_L2 = 30
+           
+@cost_S3 = 10
+@cost_M3 = 20
+@cost_L3 = 40
+           
+@cost_S4 = 12.5
+@cost_M4 = 25
+@cost_L4 = 50
+           
+@cost_S5 = 15
+@cost_M5 = 30
+@cost_L5 = 60
+
+#############
+#	SHIELD	#
+#############
+
+@shield_S1 = 25
+@shield_M1 = 50
+@shield_L1 = 100
+
+@shield_S2 = 50
+@shield_M2 = 100
+@shield_L2 = 200
+
+@shield_S3 = 75
+@shield_M3 = 150
+@shield_L3 = 300
+
+@shield_S4 = 100
+@shield_M4 = 200
+@shield_L4 = 400
+
+@shield_S5 = 125
+@shield_M5 = 250
+@shield_L5 = 500
+
+#############
+# UTILITIES #
+#############
+
+# Deflectors
+utility_component_template = {
+	key = "SMALL_SHIELD_1"
+	size = small
+	icon = "GFX_ship_part_shield_1"
+	icon_frame = 1
+	power = @power_S1
+	cost = @cost_S1
+	modifier = {
+		ship_shield_hp_add = @shield_S1
+		ship_shield_regen_add = 1.2 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_1" }
+	component_set = "SHIELD_1"
+}
+
+utility_component_template = {
+	key = "MEDIUM_SHIELD_1"
+	size = medium
+	icon = "GFX_ship_part_shield_1"
+	icon_frame = 1
+	power = @power_M1
+	cost = @cost_M1
+	modifier = {
+		ship_shield_hp_add = @shield_M1
+		ship_shield_regen_add = 2.4 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_1" }
+	component_set = "SHIELD_1"
+}
+
+utility_component_template = {
+	key = "LARGE_SHIELD_1"
+	size = large
+	icon = "GFX_ship_part_shield_1"
+	icon_frame = 1
+	power = @power_L1
+	cost = @cost_L1
+	modifier = {
+		ship_shield_hp_add = @shield_L1
+		ship_shield_regen_add = 3.6 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_1" }
+	component_set = "SHIELD_1"
+}
+
+# Advanced Deflectors
+utility_component_template = {
+	key = "SMALL_SHIELD_2"
+	size = small
+	icon = "GFX_ship_part_shield_2"
+	icon_frame = 1
+	power = @power_S2
+	cost = @cost_S2
+	modifier = {
+		ship_shield_hp_add = @shield_S2
+		ship_shield_regen_add = 1.8 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_2" }
+	component_set = "SHIELD_2"
+}
+
+utility_component_template = {
+	key = "MEDIUM_SHIELD_2"
+	size = medium
+	icon = "GFX_ship_part_shield_2"
+	icon_frame = 1
+	power = @power_M2
+	cost = @cost_M2
+	modifier = {
+		ship_shield_hp_add = @shield_M2
+		ship_shield_regen_add = 3.2 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_2" }
+	component_set = "SHIELD_2"
+}
+
+utility_component_template = {
+	key = "LARGE_SHIELD_2"
+	size = large
+	icon = "GFX_ship_part_shield_2"
+	icon_frame = 1
+	power = @power_L2
+	cost = @cost_L2
+	modifier = {
+		ship_shield_hp_add = @shield_L2
+		ship_shield_regen_add = 4.6 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_2" }
+	component_set = "SHIELD_2"
+}
+
+# Shields
+utility_component_template = {
+	key = "SMALL_SHIELD_3"
+	size = small
+	icon = "GFX_ship_part_shield_3"
+	icon_frame = 1
+	power = @power_S3
+	cost = @cost_S3
+	modifier = {
+		ship_shield_hp_add = @shield_S3
+		ship_shield_regen_add = 2.4 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_3" }
+	component_set = "SHIELD_3"
+}
+
+utility_component_template = {
+	key = "MEDIUM_SHIELD_3"
+	size = medium
+	icon = "GFX_ship_part_shield_3"
+	icon_frame = 1
+	power = @power_M3
+	cost = @cost_M3
+	modifier = {
+		ship_shield_hp_add = @shield_M3
+		ship_shield_regen_add = 4.0 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_3" }
+	component_set = "SHIELD_3"
+}
+
+utility_component_template = {
+	key = "LARGE_SHIELD_3"
+	size = large
+	icon = "GFX_ship_part_shield_3"
+	icon_frame = 1
+	power = @power_L3
+	cost = @cost_L3
+	modifier = {
+		ship_shield_hp_add = @shield_L3
+		ship_shield_regen_add = 5.6 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_3" }
+	component_set = "SHIELD_3"
+}
+
+# Advanced Shields
+utility_component_template = {
+	key = "SMALL_SHIELD_4"
+	size = small
+	icon = "GFX_ship_part_shield_4"
+	icon_frame = 1
+	power = @power_S4
+	cost = @cost_S4
+	modifier = {
+		ship_shield_hp_add = @shield_S4
+		ship_shield_regen_add = 3.0 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_4" }
+	component_set = "SHIELD_4"
+}
+
+utility_component_template = {
+	key = "MEDIUM_SHIELD_4"
+	size = medium
+	icon = "GFX_ship_part_shield_4"
+	icon_frame = 1
+	power = @power_M4
+	cost = @cost_M4
+	modifier = {
+		ship_shield_hp_add = @shield_M4
+		ship_shield_regen_add = 4.8 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_4" }
+	component_set = "SHIELD_4"
+}
+
+utility_component_template = {
+	key = "LARGE_SHIELD_4"
+	size = large
+	icon = "GFX_ship_part_shield_4"
+	icon_frame = 1
+	power = @power_L4
+	cost = @cost_L4
+	modifier = {
+		ship_shield_hp_add = @shield_L4
+		ship_shield_regen_add = 6.6 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_4" }
+	component_set = "SHIELD_4"
+}
+
+# Hyper Shields
+utility_component_template = {
+	key = "SMALL_SHIELD_5"
+	size = small
+	icon = "GFX_ship_part_shield_5"
+	icon_frame = 1
+	power = @power_S5
+	cost = @cost_S5
+	modifier = {
+		ship_shield_hp_add = @shield_S5
+		ship_shield_regen_add = 3.6 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_5" }
+	component_set = "SHIELD_5"
+}
+
+utility_component_template = {
+	key = "MEDIUM_SHIELD_5"
+	size = medium
+	icon = "GFX_ship_part_shield_5"
+	icon_frame = 1
+	power = @power_M5
+	cost = @cost_M5
+	modifier = {
+		ship_shield_hp_add = @shield_M5
+		ship_shield_regen_add = 5.6 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_5" }
+	component_set = "SHIELD_5"
+}
+
+utility_component_template = {
+	key = "LARGE_SHIELD_5"
+	size = large
+	icon = "GFX_ship_part_shield_5"
+	icon_frame = 1
+	power = @power_L5
+	cost = @cost_L5
+	modifier = {
+		ship_shield_hp_add = @shield_L5
+		ship_shield_regen_add = 7.6 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_5" }
+	component_set = "SHIELD_5"
+}
+
+# Shield Recharger
+utility_component_template = {
+	can_recharge_shield = yes
+	key = "SMALL_SHIELD_RECHARGER"
+	size = small
+	icon = "GFX_ship_part_shield_recharger"
+	icon_frame = 1
+	power = @power_S4
+	cost = @cost_S4
+	modifier = {
+		ship_shield_regen_add = 5 #Regeneration per day
+	}
+	prerequisites = { "tech_shield_rechargers_1" }
+	component_set = "SHIELD_RECHARGER"
+}
+
+utility_component_template = {
+	can_recharge_shield = yes
+	key = "MEDIUM_SHIELD_RECHARGER"
+	size = medium
+	icon = "GFX_ship_part_shield_recharger"
+	icon_frame = 1
+	power = @power_M4
+	cost = @cost_M4
+	modifier = {
+		ship_shield_regen_add = 10.0 #Regeneration per day
+	}
+	prerequisites = { "tech_shield_rechargers_1" }
+	component_set = "SHIELD_RECHARGER"
+}
+
+utility_component_template = {
+	can_recharge_shield = yes
+	key = "LARGE_SHIELD_RECHARGER"
+	size = large
+	icon = "GFX_ship_part_shield_recharger"
+	icon_frame = 1
+	power = @power_L4
+	cost = @cost_L4
+	modifier = {
+		ship_shield_regen_add = 15.0 #Regeneration per day
+	}
+	prerequisites = { "tech_shield_rechargers_1" }
+	component_set = "SHIELD_RECHARGER"
+}

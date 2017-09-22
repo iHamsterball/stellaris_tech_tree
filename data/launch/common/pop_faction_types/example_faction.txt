@@ -1,0 +1,196 @@
+#example = {
+#	#country scope
+#	is_potential = {	#This trigger is checked once every month. If true the game #will build a list of potential factions ( based on the parameters script )
+#		always = no
+#	}
+#	#pop faction scope
+#	valid = {			#This trigger is checked once per day for existing factions. #If false the faction will be removed
+#		always = yes
+#	}
+#	parameters = {
+#		#parameter evaluation can potentially be very expensive. 
+#		#in this example we first try to find a country from the list of all #countries ( the list is maybe 50 entries long )
+#		# we find 10 matches for this parameter, nice!
+#		# Then, for each match to 'transfer_to', we try to find a match for 'planet'
+#		# we do this by going through every planet, roughly 6k planets with a 1k star #galaxy
+#		# This means that the valid_objects trigger will be run 10*6k times in total
+#		
+#		#All parameters will be accessible as parameter:<parameter_name>
+#		transfer_to = {
+#			type = country
+#			#filter = known
+#			valid_objects = {	#each country will be tested against this
+#				is_country_type = default
+#				NOT = { is_same_empire = root }
+#				#any_claimed_system = {
+#				#	system_owner = root
+#				#}
+#			}
+#		}
+#		planet = {
+#			type = planet
+#			filter = owned	#only check planets that are owned by the country, huge #optimization when we have >6k planets
+#			valid_objects = {
+#				has_owner = yes
+#				owner = {
+#					is_same_empire = root
+#				}
+#				#has_claimant = parameter:transfer_to	
+#			}
+#		}
+#		#Parameters are be evaluated in order, and parameters can depend on #parameters that come before them.
+#		#In this case we want the 'planet' parameter to only be valid for planets #that are claimed by
+#		#the country stored in 'transfer_to'
+#		#This also means that we need to evaluate each possible combination of #parameters
+#		
+#		#example: We have three countries, A, B, and C who own planets a, b, and c #respectively.
+#		#	A and B both have a claim on planet c
+#		#	when evaluating the above demand for C we start evaluating the #'transfer_to' parameter which results
+#		#	in a list containing A and B.
+#		# 	Then for each item in that list ( A, B ) we need to evaluate the 'planet' #parameter which results
+#		#	in a list containing ( c ) for A, and a list containing ( c ) for B
+#		#	this gives us a total of two possible demand instances:
+#		#	[transfer_to: A, planet: c] and [transfer_to: B, planet: c]
+#		
+#		#there should be plenty of ways we can optimize this logic. Firstly we only #need to calculate all potential instances every other month or so ( as long #as we remove potentials quickly )
+#		#secondly we could provide a couple of precalculated lists so that we don't #need to run complex triggers on all planets multiple times
+#	}
+#	#pop scope
+#	can_create = {	#this trigger is evaluated after parameters are initialized and a #pop is considering what faction to join or create. If this evaluates to true the #pop will calculate its attraction to this potential faction
+#		always = yes
+#	}
+#	
+#	#pop faction scope
+#	on_create = {	#an effect that is executed immediately after the faction has #been created. Faction will have one pop ( if created with a pop )
+#		set_name = random
+#	}
+#	#pop faction scope
+#	on_set_leader = { # Effect that executes when a faction wants a leader, pop #faction scope, having it empty will have default behavior
+#		owner = {
+#			create_leader = {
+#				type = governor
+#				species = owner_main_species
+#				name = random
+#				skill = 0
+#				traits = {}
+#			}
+#			last_created_leader = {
+#				recruitable = no
+#				root = {
+#					assign_leader = prev
+#				}
+#			}
+#		}
+#	}
+#
+#
+#	
+#	demand = {
+#		#min_support = 0.1
+#		#max_support = 0.9
+#		title = POP_FACTION_XENOSLAVER_DEMAND_TITLE_1 # title string is run directly #in pop faction scope. To get country name, [Owner.GetName], no root.
+#		potential = {
+#			# Potential determines if a demand can be fulfilled. If it cannot be #fulfilled, it will not be considered valid or even displayed.
+#			custom_tooltip = {
+#				text = POP_FACTION_SEPARATISTS_DEMAND_DESC_1 # tooltip string uses a #regular event-style scope. [Root.Owner.GetName] to get country name.
+#				owner = {
+#					energy > 100
+#				}
+#			}
+#		}
+#		# effect = { #executed with a pop_faction scope
+#		# 	custom_tooltip = POP_FACTION_SEPARATISTS_DEMAND_EFFECT_DESC_1
+#		# 	hidden_effect = {
+#		# 		parameter:planet = {
+#		# 			create_country = {
+#		# 				type = default
+#		# 				species = owner
+#		# 				day_zero_contact = no
+#		# 			}
+#		# 		}
+#		# 	}
+#		# }
+#	}
+#	
+#	attraction = {#executed with a pop scope, country is stored in root
+#		base = 10
+#		modifier = {
+#			add = 10000
+#			parameter:planet = { is_capital = no }
+#		}
+#	}
+#	
+#	actions = {
+#		bribe_leaders = {
+#			title = "FACTION_ACTION_BRIBE_LEADERS"
+#			description = "FACTION_ACTION_BRIBE_LEADERS_DESC"
+#			potential = {
+#				always = yes
+#			}
+#			valid = {
+#				owner = {
+#					energy > 99
+#				}
+#			}
+#			effect = {
+#				owner = {
+#					add_energy = -100
+#				}
+#			}
+#			ai_weight = { 			# scope = pop_faction / from = country
+#				weight = 50			# default = 100
+#				modifier = {
+#					weight = 50		# replace base weight
+#					AND = {
+#						# militancy < 0.2
+#						support < 0.6
+#						support > 0.2
+#					}
+#				}
+#				modifier = {
+#					factor = 2		# multiply by 2
+#					from = {
+#						OR = {
+#							has_ethic = "ethic_fanatic_xenophobe"
+#							has_ethic = "ethic_xenophobe"
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#	
+#	support_effects = {
+#		rebel = {
+#			title = SUPPORT_EFFECT_XENOSLAVER_SLAVER_CONFEDERACY
+#			min_support = 0.5
+#			#max_support = 1.0
+#			
+#			spawn_chance = { 
+#				value = 10 
+#			}
+#			effect = {
+#				owner = {
+#					capital_scope = {
+#						create_rebels = {
+#							name = "Tarakan Empire"
+#							government = despotic_empire
+#							species = owner
+#							ethos = {
+#								ethic = "ethic_xenophobe"
+#								ethic = "ethic_militarist"			
+#							}
+#							flag = random
+#						}
+#						create_army = {
+#							name = "Invading Horde"
+#							owner = last_created
+#							species = owner
+#							type = "assault_army"
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#}#

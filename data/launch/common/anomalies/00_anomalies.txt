@@ -1,0 +1,1705 @@
+########################
+### anomaly EVENTS ###
+########################
+# potential = ship scope
+
+# All discoveries assigned weight 1 unless otherwise stated
+
+# Coprolite Asteroid
+anomaly = {
+	event = anomaly.1
+	category = "origin_asteroid_category"
+	
+	weight = 1
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Pirate Treasure
+anomaly = {
+	event = anomaly.5
+	category = "hatch_asteroid_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Asteroid Fauna
+anomaly = {
+	event = anomaly.10
+	category = "life_asteroid_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Asteroid Fossils
+anomaly = {
+	event = anomaly.15
+	category = "origin_asteroid_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Derelict Shipyard
+anomaly = {
+	event = anomaly.25
+	category = "hatch_asteroid_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Junkyard
+anomaly = {
+	event = anomaly.30
+	category = "debris_asteroid_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Crashed Scout Ship
+anomaly = {
+	event = anomaly.35
+	category = "crashed_ship_asteroid_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Automated Mining Base
+anomaly = {
+	event = anomaly.40
+	category = "station_asteroid_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Weapons Target Range
+anomaly = {
+	event = anomaly.50
+	category = "emissions_asteroid_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Asteroid Collision
+anomaly = {
+	event = anomaly.55
+	category = "collision_asteroid_category"
+	
+	potential = {
+		orbit = {
+			has_any_strategic_resource = no
+		}
+	}
+}
+
+# Exotic Radiation
+anomaly = {
+	event = anomaly.60
+	category = "emissions_asteroid_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Crashed Ore Freighter
+anomaly = {
+	event = anomaly.65
+	category = "crashed_ship_asteroid_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Atmospheric Ecosystem
+anomaly = {
+	event = anomaly.300
+	category = "life_gasgiant_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Abandoned Cargo Pod
+anomaly = {
+	event = anomaly.305
+	category = "cargo_gasgiant_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Social Experiment
+anomaly = {
+	event = anomaly.310
+	category = "aerostat_gasgiant_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Aerostat Colonies
+anomaly = {
+	event = anomaly.315
+	category = "aerostat_gasgiant_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Debris Field
+anomaly = {
+	event = anomaly.320
+	category = "debris_gasgiant_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Crushed Cruiser
+anomaly = {
+	event = anomaly.325
+	category = "object_gasgiant_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Extreme Storms
+anomaly = {
+	event = anomaly.330
+	category = "storms_gasgiant_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Energy Signature
+anomaly = {
+	event = anomaly.335
+	category = "object_gasgiant_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Precious Moon
+anomaly = {
+	event = anomaly.340
+	category = "moon_gasgiant_category"
+	
+	potential = {
+		orbit = {
+			has_any_strategic_resource = no
+		}
+	}
+}
+
+# Asteroid Collision
+anomaly = {
+	event = anomaly.600
+	category = "impact_uninhabitable_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Warp Impact
+anomaly = {
+	event = anomaly.605
+	category = "impact_uninhabitable_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Microsingularity
+anomaly = {
+	event = anomaly.610
+	category = "energy_uninhabitable_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Magnetic Reversal
+anomaly = {
+	event = anomaly.615
+	category = "energy_uninhabitable_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Mummified Pilot
+anomaly = {
+	event = anomaly.625
+	category = "signal_uninhabitable_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Ancient Life Pod
+anomaly = {
+	event = anomaly.630
+	category = "signal_uninhabitable_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Alien Writing
+anomaly = {
+	event = anomaly.635
+	category = "writing_uninhabitable_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Solar Sailer
+anomaly = {
+	event = anomaly.650
+	category = "solar_uninhabitable_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Glancing Hit
+anomaly = {
+	event = anomaly.655
+	category = "energy_uninhabitable_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Towed Asteroid
+anomaly = {
+	event = anomaly.660
+	category = "asteroid_uninhabitable_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Nuclear Devastation (Toxic)
+anomaly = {
+	event = anomaly.670
+	category = "inhabited_toxic_category"
+	
+	potential = {
+		orbit = {
+			is_planet_class = pc_toxic
+		}
+	}
+}
+
+## Nuclear Wasteland (Arctic/Tundra and Desert/Arid)
+#anomaly = {
+#	event = anomaly.675
+#	category = "HAB_PHY_1"
+#	
+#	potential = {
+#		orbit = {
+#			OR = {
+#				is_planet_class = pc_arctic
+#				is_planet_class = pc_tundra
+#				is_planet_class = pc_arid
+#				is_planet_class = pc_desert
+#			}
+#		}
+#	}
+#}
+#
+## Gamma-Ray Burst
+#anomaly = {
+#	event = anomaly.680
+#	category = "HAB_PHY_1"
+#	
+#	potential = {
+#		orbit = {
+#			always = yes
+#		}
+#	}
+#}
+
+# Runaway Greenhouse Effect
+anomaly = {
+	event = anomaly.685
+	category = "inhabited_toxic_category"
+	
+	potential = {
+		orbit = {
+			is_planet_class = pc_toxic
+		}
+	}
+}
+
+# Ammonia Biosphere
+anomaly = {
+	event = anomaly.690
+	category = "life_toxic_category"
+	
+	potential = {
+		orbit = {
+			is_planet_class = pc_toxic
+		}
+	}
+}
+
+# Silicon Life Forms
+anomaly = {
+	event = anomaly.695
+	category = "life_barren_category"
+	
+	potential = {
+		orbit = {
+			always = yes
+		}
+	}
+}
+
+# Wildcat Miners
+anomaly = {
+	event = anomaly.700
+	category = "station_uninhabitable_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Ancient Survey Marker
+anomaly = {
+	event = anomaly.705
+	category = "beacon_uninhabitable_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+## Splinter Colony
+#anomaly = {
+#	event = anomaly.710
+#	category = "HPL_INHABITED_CAT"
+#	
+#	potential = {
+#		orbit = {
+#			habitability = {
+#				who = prev
+#				value > 0.5
+#			}
+#		}
+#	}
+#}
+#
+## Colony Ruins
+#anomaly = {
+#	event = anomaly.715
+#	category = "HAB_ENG_1"
+#	
+#	potential = {
+#		orbit = {
+#			always = yes
+#		}
+#	}
+#}
+#
+## Dead Remains
+#anomaly = {
+#	event = anomaly.2500
+#	category = "mountain_uninhabitable_category"
+#	
+#	potential = {
+#		always = yes
+#	}
+#}
+
+# Ocean Beneath the Ice
+anomaly = {
+	event = anomaly.2510
+	category = "life_frozen_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Gigantic Skeleton
+anomaly = {
+	event = anomaly.2520
+	category = "mountain_uninhabitable_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Signs of Battle
+anomaly = {
+	event = anomaly.2530
+	category = "battle_uninhabitable_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Alien Mural
+anomaly = {
+	event = anomaly.2540
+	category = "object_uninhabitable_category"
+	
+	potential = {
+		orbit = {
+			OR = {
+				is_planet_class = pc_frozen
+				is_planet_class = pc_barren
+				is_planet_class = pc_barren_cold
+				is_planet_class = pc_molten
+				is_planet_class = pc_toxic
+			}
+		}
+	}
+}
+
+# Automated Shipyard
+anomaly = {
+	event = anomaly.2550
+	category = "shipyard_uninhabitable_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Gas Giant Ship
+anomaly = {
+	event = anomaly.2560
+	category = "ship_gasgiant_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Terminal Orbit
+anomaly = {
+	event = anomaly.2570
+	category = "terminal_gasgiant_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Gas Giant Civilization
+anomaly = {
+	event = anomaly.5000
+	category = "signal_gasgiant_category"
+	
+	potential = {
+		always = yes
+	}
+}
+
+## Upliftable Species ### TEMP ###
+#anomaly = {
+#	event = anomaly.6000
+#	category = "UPLIFTING"
+#	
+#	potential = {
+#		always = yes
+#	}
+#}
+
+## Primitive Industrial Civilization
+#anomaly = {
+#	event = primitive.1
+#	category = "HPL_INHABITED_CAT"
+#	
+#	potential = {
+#		always = yes
+#	}
+#}
+#
+## Primitive Medieval Civilization
+#anomaly = {
+#	event = primitive.2
+#	category = "HPL_INHABITED_CAT"
+#	
+#	potential = {
+#		always = yes
+#	}
+#}
+#
+## Primitive Stone Age Aliens
+#anomaly = {
+#	event = primitive.3
+#	category = "HPL_INHABITED_CAT"
+#	
+#	potential = {
+#		always = yes
+#	}
+#}
+
+
+
+
+### Vultaum Precursor Discoveries
+
+# Vultaum Introduction 1
+anomaly = {
+	event = precursor.1
+	category = "vultaum_asteroid_category"
+	
+	weight = 500
+	
+	potential = {
+		owner = {
+			NOT = { has_country_flag = vultaum_intro }
+		}
+	}
+}
+
+# Vultaum Introduction 2
+anomaly = {
+	event = precursor.1
+	category = "vultaum_gasgiant_category"
+	
+	weight = 500
+	
+	potential = {
+		owner = {
+			NOT = { has_country_flag = vultaum_intro }
+		}
+	}
+}
+
+# Vultaum Introduction 3
+anomaly = {
+	event = precursor.1
+	category = "vultaum_uninhabitable_category"
+	
+	weight = 500
+	
+	potential = {
+		owner = {
+			NOT = { has_country_flag = vultaum_intro }
+		}
+	}
+}
+
+# Vultaum Introduction 4
+anomaly = {
+	event = precursor.1
+	category = "vultaum_habitable_category"
+	
+	weight = 500
+	
+	potential = {
+		owner = {
+			NOT = { has_country_flag = vultaum_intro }
+		}
+	}
+}
+
+# Vultaum Mining Base
+anomaly = {
+	event = precursor.5
+	category = "vultaum_uninhabitable_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = vultaum_intro
+			NOT = { has_country_flag = vultaum_1 }
+			has_event_chain = vultaum_chain
+		}
+	}
+}
+
+# Vultaum Observatory
+anomaly = {
+	event = precursor.10
+	category = "vultaum_uninhabitable_category"
+	
+	potential = {
+		#orbit = {
+		#	solar_system = {
+		#		NOT = { has_star_flag = precursor_1 }
+		#	}
+		#}
+		#any_system = {
+		#	has_star_flag = precursor_1
+		#	distance = {
+		#		source = ROOT
+		#		max_distance = 30
+		#		min_distance = 0
+		#	}
+		#}
+		owner = {
+			has_country_flag = vultaum_intro
+			NOT = { has_country_flag = vultaum_2 }
+			has_event_chain = vultaum_chain
+		}
+	}
+}
+
+# Vultaum Colony 1
+anomaly = {
+	event = precursor.15
+	category = "vultaum_habitable_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = vultaum_intro
+			NOT = { has_country_flag = vultaum_3 }
+			has_event_chain = vultaum_chain
+		}
+	}
+}
+
+# Vultaum Colony 2
+anomaly = {
+	event = precursor.20
+	category = "vultaum_habitable_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = vultaum_intro
+			NOT = { has_country_flag = vultaum_4 }
+			has_event_chain = vultaum_chain
+		}
+	}
+}
+
+# Vultaum Colony 3
+anomaly = {
+	event = precursor.25
+	category = "vultaum_habitable_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = vultaum_intro
+			NOT = { has_country_flag = vultaum_5 }
+			has_event_chain = vultaum_chain
+		}
+	}
+}
+
+# Vultaum Gas Giant Base
+anomaly = {
+	event = precursor.30
+	category = "vultaum_gasgiant_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = vultaum_intro
+			NOT = { has_country_flag = vultaum_6 }
+			has_event_chain = vultaum_chain
+		}
+	}
+}
+
+# Vultaum Trade Post
+anomaly = {
+	event = precursor.35
+	category = "vultaum_uninhabitable_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = vultaum_intro
+			NOT = { has_country_flag = vultaum_7 }
+			has_event_chain = vultaum_chain
+		}
+	}
+}
+
+# Vultaum Satellite
+anomaly = {
+	event = precursor.40
+	category = "vultaum_uninhabitable_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = vultaum_intro
+			NOT = { has_country_flag = vultaum_8 }
+			has_event_chain = vultaum_chain
+		}
+	}
+}
+
+# Vultaum Splinter Colony
+anomaly = {
+	event = precursor.45
+	category = "vultaum_habitable_category"
+
+	potential = {
+		#orbit = {
+		#	solar_system = {
+		#		NOT = { has_star_flag = precursor_1 }
+		#	}
+		#}
+		#any_system = {
+		#	has_star_flag = precursor_1
+		#	distance = {
+		#		source = ROOT
+		#		max_distance = 30
+		#		min_distance = 0
+		#	}
+		#}
+		owner = {
+			has_country_flag = vultaum_intro
+			NOT = { has_country_flag = vultaum_9 }
+			has_event_chain = vultaum_chain
+		}
+	}
+}
+
+# Vultaum Virtual Reality Center
+anomaly = {
+	event = precursor.50
+	category = "vultaum_uninhabitable_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = vultaum_intro
+			NOT = { has_country_flag = vultaum_10 }
+			has_event_chain = vultaum_chain
+		}
+	}
+}
+
+# Vultaum Asteroid Mining Base
+anomaly = {
+	event = precursor.55
+	category = "vultaum_asteroid_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = vultaum_intro
+			NOT = { has_country_flag = vultaum_11 }
+			has_event_chain = vultaum_chain
+		}
+	}
+}
+
+### Yuht Precursor Discoveries
+
+# Yuht Introduction 1
+anomaly = {
+	event = precursor.500
+	category = "yuht_asteroid_category"
+	
+	weight = 500
+	
+	potential = {
+		owner = {
+			NOT = { has_country_flag = yuht_intro }
+		}
+	}
+}
+
+# Yuht Introduction 2
+anomaly = {
+	event = precursor.500
+	category = "yuht_gasgiant_category"
+	
+	weight = 500
+	
+	potential = {
+		owner = {
+			NOT = { has_country_flag = yuht_intro }
+		}
+	}
+}
+
+# Yuht Introduction 3
+anomaly = {
+	event = precursor.500
+	category = "yuht_uninhabitable_category"
+	
+	weight = 500
+	
+	potential = {
+		owner = {
+			NOT = { has_country_flag = yuht_intro }
+		}
+	}
+}
+
+# Yuht Introduction 4
+anomaly = {
+	event = precursor.500
+	category = "yuht_habitable_category"
+	
+	weight = 500
+	
+	potential = {
+		owner = {
+			NOT = { has_country_flag = yuht_intro }
+		}
+	}
+}
+
+# Yuht Hatchery World
+anomaly = {
+	event = precursor.505
+	category = "yuht_habitable_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = yuht_intro
+			NOT = { has_country_flag = yuht_1 }
+		}
+	}
+}
+
+# Yuht Listening Post
+anomaly = {
+	event = precursor.510
+	category = "yuht_uninhabitable_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = yuht_intro
+			NOT = { has_country_flag = yuht_2 }
+		}
+	}
+}
+
+# Yuht Colony 1
+anomaly = {
+	event = precursor.515
+	category = "yuht_habitable_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = yuht_intro
+			NOT = { has_country_flag = yuht_3 }
+		}
+	}
+}
+
+# Yuht Colony 2
+anomaly = {
+	event = precursor.520
+	category = "yuht_habitable_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = yuht_intro
+			NOT = { has_country_flag = yuht_4 }
+		}
+	}
+}
+
+# Yuht Colony 3
+anomaly = {
+	event = precursor.525
+	category = "yuht_habitable_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = yuht_intro
+			NOT = { has_country_flag = yuht_5 }
+		}
+	}
+}
+
+# Yuht Satellite
+anomaly = {
+	event = precursor.530
+	category = "yuht_gasgiant_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = yuht_intro
+			NOT = { has_country_flag = yuht_6 }
+		}
+	}
+}
+
+# Yuht Cruiser
+anomaly = {
+	event = precursor.535
+	category = "yuht_uninhabitable_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = yuht_intro
+			NOT = { has_country_flag = yuht_7 }
+		}
+	}
+}
+
+# Yuht Colony Ship
+anomaly = {
+	event = precursor.540
+	category = "yuht_uninhabitable_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = yuht_intro
+			NOT = { has_country_flag = yuht_8 }
+		}
+	}
+}
+
+# Yuht Asteroid Dwelling
+anomaly = {
+	event = precursor.545
+	category = "yuht_asteroid_category"
+
+	potential = {
+		owner = {
+			has_country_flag = yuht_intro
+			NOT = { has_country_flag = yuht_9 }
+		}
+	}
+}
+
+### First League Precursor Discoveries
+
+# First League Introduction 1
+anomaly = {
+	event = precursor.1000
+	category = "league_asteroid_category"
+	
+	weight = 500
+	
+	potential = {
+		owner = {
+			NOT = { has_country_flag = first_league_intro }
+		}
+	}
+}
+
+# First League Introduction 2
+anomaly = {
+	event = precursor.1000
+	category = "league_gasgiant_category"
+	
+	weight = 500
+	
+	potential = {
+		owner = {
+			NOT = { has_country_flag = first_league_intro }
+		}
+	}
+}
+
+# First League Introduction 3
+anomaly = {
+	event = precursor.1000
+	category = "league_uninhabitable_category"
+	
+	weight = 500
+	
+	potential = {
+		owner = {
+			NOT = { has_country_flag = first_league_intro }
+		}
+	}
+}
+
+# First League Introduction 4
+anomaly = {
+	event = precursor.1000
+	category = "league_habitable_category"
+	
+	weight = 500
+	
+	potential = {
+		owner = {
+			NOT = { has_country_flag = first_league_intro }
+		}
+	}
+}
+
+# League Naval Base
+anomaly = {
+	event = precursor.1005
+	category = "league_uninhabitable_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = first_league_intro
+			NOT = { has_country_flag = first_league_1 }
+		}
+	}
+}
+
+# League Cruiser
+anomaly = {
+	event = precursor.1010
+	category = "league_gasgiant_category"
+
+	potential = {
+		owner = {
+			has_country_flag = first_league_intro
+			NOT = { has_country_flag = first_league_2 }
+		}
+	}
+}
+
+# Khamdai Homeworld
+anomaly = {
+	event = precursor.1015
+	category = "league_habitable_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = first_league_intro
+			NOT = { has_country_flag = first_league_3 }
+		}
+	}
+}
+
+# Chassago Homeworld
+anomaly = {
+	event = precursor.1020
+	category = "league_habitable_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = first_league_intro
+			NOT = { has_country_flag = first_league_4 }
+		}
+	}
+}
+
+# Migir-Yan Homeworld
+anomaly = {
+	event = precursor.1025
+	category = "league_habitable_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = first_league_intro
+			NOT = { has_country_flag = first_league_5 }
+		}
+	}
+}
+
+# V'ropak Homeworld
+anomaly = {
+	event = precursor.1030
+	category = "league_habitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = first_league_intro
+			NOT = { has_country_flag = first_league_6 }
+		}
+	}
+}
+
+# League Science Base
+anomaly = {
+	event = precursor.1035
+	category = "league_uninhabitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = first_league_intro
+			NOT = { has_country_flag = first_league_7 }
+		}
+	}
+}
+
+# Joint League Colony
+anomaly = {
+	event = precursor.1040
+	category = "league_habitable_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = first_league_intro
+			NOT = { has_country_flag = first_league_8 }
+		}
+	}
+}
+
+# League Trade Center
+anomaly = {
+	event = precursor.1045
+	category = "league_habitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = first_league_intro
+			NOT = { has_country_flag = first_league_9 }
+		}
+	}
+}
+
+# Battle Wreckage
+anomaly = {
+	event = precursor.1050
+	category = "league_uninhabitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = first_league_intro
+			NOT = { has_country_flag = first_league_10 }
+		}
+	}
+}
+
+# Prison Complex
+anomaly = {
+	event = precursor.1055
+	category = "league_uninhabitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = first_league_intro
+			NOT = { has_country_flag = first_league_11 }
+		}
+	}
+}
+
+# Protected Primitive World
+anomaly = {
+	event = precursor.1060
+	category = "league_habitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = first_league_intro
+			NOT = { has_country_flag = first_league_12 }
+		}
+	}
+}
+
+# Blockaded World
+anomaly = {
+	event = precursor.1065
+	category = "league_habitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = first_league_intro
+			NOT = { has_country_flag = first_league_13 }
+		}
+	}
+}
+
+# Smuggler Asteroid
+anomaly = {
+	event = precursor.1070
+	category = "league_asteroid_category"
+
+	potential = {
+		owner = {
+			has_country_flag = first_league_intro
+			NOT = { has_country_flag = first_league_14 }
+		}
+	}
+}
+
+### Irassian Precursor Discoveries
+
+# Irassian Introduction 1
+anomaly = {
+	event = precursor.1500
+	category = "irassian_asteroid_category"
+	
+	weight = 500
+	
+	potential = {
+		owner = {
+			NOT = { has_country_flag = irassian_intro }
+		}
+	}
+}
+
+# Irassian Introduction 2
+anomaly = {
+	event = precursor.1500
+	category = "irassian_gasgiant_category"
+	
+	weight = 500
+	
+	potential = {
+		owner = {
+			NOT = { has_country_flag = irassian_intro }
+		}
+	}
+}
+
+# Irassian Introduction 3
+anomaly = {
+	event = precursor.1500
+	category = "irassian_uninhabitable_category"
+	
+	weight = 500
+	
+	potential = {
+		owner = {
+			NOT = { has_country_flag = irassian_intro }
+		}
+	}
+}
+
+# Irassian Introduction 4
+anomaly = {
+	event = precursor.1500
+	category = "irassian_habitable_category"
+	
+	weight = 500
+	
+	potential = {
+		owner = {
+			NOT = { has_country_flag = irassian_intro }
+		}
+	}
+}
+
+# Quarantined World
+anomaly = {
+	event = precursor.1505
+	category = "irassian_habitable_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = irassian_intro
+			NOT = { has_country_flag = irassians_1 }
+		}
+	}
+}
+
+# Purified World
+anomaly = {
+	event = precursor.1510
+	category = "irassian_habitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = irassian_intro
+			NOT = { has_country_flag = irassians_2 }
+		}
+	}
+}
+
+# Scheming Client Race
+anomaly = {
+	event = precursor.1515
+	category = "irassian_habitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = irassian_intro
+			NOT = { has_country_flag = irassians_3 }
+		}
+	}
+}
+
+# Destroyed Client Race
+anomaly = {
+	event = precursor.1520
+	category = "irassian_habitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = irassian_intro
+			NOT = { has_country_flag = irassians_4 }
+		}
+	}
+}
+
+# Dead Colony
+anomaly = {
+	event = precursor.1525
+	category = "irassian_habitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = irassian_intro
+			NOT = { has_country_flag = irassians_5 }
+		}
+	}
+}
+
+# Dead Mining Base
+anomaly = {
+	event = precursor.1530
+	category = "irassian_uninhabitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = irassian_intro
+			NOT = { has_country_flag = irassians_6 }
+		}
+	}
+}
+
+# Irassian Colony
+anomaly = {
+	event = precursor.1535
+	category = "irassian_habitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = irassian_intro
+			NOT = { has_country_flag = irassians_7 }
+		}
+	}
+}
+
+# Derelict Ship
+anomaly = {
+	event = precursor.1540
+	category = "irassian_uninhabitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = irassian_intro
+			NOT = { has_country_flag = irassians_8 }
+		}
+	}
+}
+
+# Disease Control Base
+anomaly = {
+	event = precursor.1545
+	category = "irassian_uninhabitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = irassian_intro
+			NOT = { has_country_flag = irassians_9 }
+		}
+	}
+}
+
+# Asteroid Listening Post
+anomaly = {
+	event = precursor.1550
+	category = "irassian_asteroid_category"
+
+	potential = {
+		owner = {
+			has_country_flag = irassian_intro
+			NOT = { has_country_flag = irassians_10 }
+		}
+	}
+}
+
+# Gas Giant Science station
+anomaly = {
+	event = precursor.1555
+	category = "irassian_gasgiant_category"
+
+	potential = {
+		owner = {
+			has_country_flag = irassian_intro
+			NOT = { has_country_flag = irassians_11 }
+		}
+	}
+}
+
+### Cybrex Precursor Discoveries
+
+# Cybrex Introduction 1
+anomaly = {
+	event = precursor.2000
+	category = "cybrex_asteroid_category"
+	
+	weight = 500
+	
+	potential = {
+		owner = {
+			NOT = { has_country_flag = cybrex_intro }
+		}
+	}
+}
+
+# Cybrex Introduction 2
+anomaly = {
+	event = precursor.2000
+	category = "cybrex_gasgiant_category"
+	
+	weight = 500
+	
+	potential = {
+		owner = {
+			NOT = { has_country_flag = cybrex_intro }
+		}
+	}
+}
+
+# Cybrex Introduction 3
+anomaly = {
+	event = precursor.2000
+	category = "cybrex_uninhabitable_category"
+	
+	weight = 500
+	
+	potential = {
+		owner = {
+			NOT = { has_country_flag = cybrex_intro }
+		}
+	}
+}
+
+# Cybrex Introduction 4
+anomaly = {
+	event = precursor.2000
+	category = "cybrex_habitable_category"
+	
+	weight = 500
+	
+	potential = {
+		owner = {
+			NOT = { has_country_flag = cybrex_intro }
+		}
+	}
+}
+
+# Kuur Homeworld
+anomaly = {
+	event = precursor.2005
+	category = "cybrex_habitable_category"
+	
+	potential = {
+		owner = {
+			has_country_flag = cybrex_intro
+			NOT = { has_country_flag = cybrex_1 }
+		}
+	}
+}
+
+# Indimak Homeworld
+anomaly = {
+	event = precursor.2010
+	category = "cybrex_habitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = cybrex_intro
+			NOT = { has_country_flag = cybrex_2 }
+		}
+	}
+}
+
+# Broken Warform
+anomaly = {
+	event = precursor.2015
+	category = "cybrex_uninhabitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = cybrex_intro
+			NOT = { has_country_flag = cybrex_3 }
+		}
+	}
+}
+
+# Cybrex Invasion
+anomaly = {
+	event = precursor.2020
+	category = "cybrex_habitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = cybrex_intro
+			NOT = { has_country_flag = cybrex_4 }
+		}
+	}
+}
+
+# Cybrex Ruins
+anomaly = {
+	event = precursor.2025
+	category = "cybrex_habitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = cybrex_intro
+			NOT = { has_country_flag = cybrex_5 }
+		}
+	}
+}
+
+# Cybrex Listening Post
+anomaly = {
+	event = precursor.2030
+	category = "cybrex_asteroid_category"
+
+	potential = {
+		owner = {
+			has_country_flag = cybrex_intro
+			NOT = { has_country_flag = cybrex_6 }
+		}
+	}
+}
+
+# Cybrex Refinery
+anomaly = {
+	event = precursor.2035
+	category = "cybrex_gasgiant_category"
+
+	potential = {
+		owner = {
+			has_country_flag = cybrex_intro
+			NOT = { has_country_flag = cybrex_7 }
+		}
+	}
+}
+
+# Battle Debris
+anomaly = {
+	event = precursor.2040
+	category = "cybrex_uninhabitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = cybrex_intro
+			NOT = { has_country_flag = cybrex_8 }
+		}
+	}
+}
+
+# Cybrex Base Remains
+anomaly = {
+	event = precursor.2045
+	category = "cybrex_uninhabitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = cybrex_intro
+			NOT = { has_country_flag = cybrex_9 }
+		}
+	}
+}
+
+# Organic Remains
+anomaly = {
+	event = precursor.2050
+	category = "cybrex_uninhabitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = cybrex_intro
+			NOT = { has_country_flag = cybrex_10 }
+		}
+	}
+}
+
+# Cybrex Research Station
+anomaly = {
+	event = precursor.2055
+	category = "cybrex_uninhabitable_category"
+
+	potential = {
+		owner = {
+			has_country_flag = cybrex_intro
+			NOT = { has_country_flag = cybrex_11 }
+		}
+	}
+}
+
+
+### EVENT SPAWNED DISCOVERIES
+
+# Vultaum Homeworld
+anomaly = {
+	event = precursor.101
+	category = "VULTAUMAR"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Yuht Homeworld
+anomaly = {
+	event = precursor.601
+	category = "YUHTAAN"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# First League Homeworld
+anomaly = {
+	event = precursor.1101
+	category = "FEN_HABBANIS"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Irassian Homeworld
+anomaly = {
+	event = precursor.1601
+	category = "IRASSIA"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Cybrex Homeworld
+anomaly = {
+	event = precursor.2101
+	category = "CYBREX"
+	
+	potential = {
+		always = yes
+	}
+}
+
+# Nuclear Wasteland (Sol III)
+anomaly = {
+	event = galactic_features.104
+	category = "sol_wasteland_category"
+	
+	potential = {
+		always = yes
+	}
+}

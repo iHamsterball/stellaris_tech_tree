@@ -1,0 +1,216 @@
+# Icons set here are the ones show in the actual slot. 
+
+@ftl1 = 5
+@ftl2 = 10
+@ftl3 = 15
+@ftl4 = 30
+
+@power1 = -5
+@power2 = -10
+@power3 = -15
+@power4 = -30
+
+#############
+# UTILITIES #
+#############
+
+### NON-FTL DRIVE
+utility_component_template = {
+	key = "EMPTY_DRIVE"
+	size = small
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+	cost = 0
+	should_ai_use = no
+	
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport }
+	component_set = "ftl_components"
+}
+
+### WARP DRIVES
+utility_component_template = {
+	key = "WARP_DRIVE_1"
+	size = small
+	icon = "GFX_ship_part_warp_drive_1"
+	icon_frame = 1
+	power = @power1
+	cost = @ftl1
+	ftl = warp
+	
+	ai_weight = {
+		weight = 1
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport }
+	prerequisites = { "tech_warp_drive_1" }
+	component_set = "ftl_components"
+}
+
+utility_component_template = {
+	key = "WARP_DRIVE_2"
+	size = small
+	icon = "GFX_ship_part_warp_drive_2"
+	icon_frame = 1
+	power = @power2
+	cost = @ftl2
+	ftl = warp
+	ship_modifier = {
+		ship_ftl_warp_range_mult = 0.5
+		ship_interstellar_speed_mult = 0.2
+		ship_winddown_mult = -0.2
+	}
+	
+	ai_weight = {
+		weight = 2
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport }
+	prerequisites = { "tech_warp_drive_2" }
+	component_set = "ftl_components"
+}
+
+utility_component_template = {
+	key = "WARP_DRIVE_3"
+	size = small
+	icon = "GFX_ship_part_warp_drive_3"
+	icon_frame = 1
+	power = @power3
+	cost = @ftl3
+	ftl = warp
+	ship_modifier = {
+		ship_ftl_warp_range_mult = 1.0
+		ship_interstellar_speed_mult = 0.4
+		ship_winddown_mult = -0.4
+	}
+	
+	ai_weight = {
+		weight = 3
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport }
+	prerequisites = { "tech_warp_drive_3" }
+	component_set = "ftl_components"
+}
+
+### HYPER DRIVES
+utility_component_template = {
+	key = "HYPER_DRIVE_1"
+	size = small
+	icon = "GFX_ship_part_hyper_drive_1"
+	icon_frame = 1
+	power = @power1
+	cost = @ftl1
+	ftl = hyperdrive
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport }
+	prerequisites = { "tech_hyper_drive_1" }
+	component_set = "ftl_components"
+}
+
+utility_component_template = {
+	key = "HYPER_DRIVE_2"
+	size = small
+	icon = "GFX_ship_part_hyper_drive_2"
+	icon_frame = 1
+	power = @power2
+	cost = @ftl2
+	ftl = hyperdrive
+	ship_modifier = {
+		ship_windup_mult = -0.25
+	}
+	
+	ai_weight = {
+		weight = 2
+	}
+	
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport }
+	prerequisites = { "tech_hyper_drive_2" }
+	component_set = "ftl_components"
+}
+
+utility_component_template = {
+	key = "HYPER_DRIVE_3"
+	size = small
+	icon = "GFX_ship_part_hyper_drive_3"
+	icon_frame = 1
+	power = @power3
+	cost = @ftl3
+	ftl = hyperdrive
+	ship_modifier = {
+		ship_windup_mult = -0.5
+	}
+	
+	ai_weight = {
+		weight = 3
+	}
+	
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport }
+	prerequisites = { "tech_hyper_drive_3" }
+	component_set = "ftl_components"
+}
+
+### WORM HOLE DRIVES
+utility_component_template = {
+	key = "WORMHOLE_DRIVE"
+	size = small
+	icon = "GFX_ship_part_wormhole"
+	icon_frame = 1
+	power = 0
+	cost = 0
+	ftl = wormhole
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport }
+	prerequisites = { "tech_wormhole_generation_1" }
+	component_set = "ftl_components"
+}
+
+### Jump drives
+utility_component_template = {
+	key = "JUMP_DRIVE_1"
+	size = small
+	icon = "GFX_ship_part_jump_drive_1"
+	icon_frame = 1
+	power = @power4
+	cost = @ftl4
+	ftl = jumpdrive
+	
+	ai_weight = {
+		weight = 4
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport }
+	prerequisites = { "tech_jump_drive_1" }
+	component_set = "ftl_components"
+}
+
+### Jump drives
+utility_component_template = {
+	key = "PSI_JUMP_DRIVE_1"
+	size = small
+	icon = "GFX_ship_part_psi_jump_drive_1"
+	icon_frame = 1
+	power = @power4
+	cost = @ftl4
+	ftl = jumpdrive
+	
+	ai_weight = {
+		weight = 5
+	}
+	
+	ship_modifier = {
+		ship_ftl_jumpdrive_range_mult = 0.50
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport }
+	prerequisites = { "tech_psi_jump_drive_1" }
+	component_set = "ftl_components"
+}

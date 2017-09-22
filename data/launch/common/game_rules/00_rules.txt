@@ -1,0 +1,332 @@
+#Tooltips will be generated from these rules when they fail. Use of custom_tooltip is recommended
+#There are still multiple hard-coded rules that apply in addition to these.
+#If rules here evaluate to true, there might still be other rules that make the action unavailable.
+#If a rule here evaluates to false the action will become unavailable
+
+#Root = country
+#This = pop
+can_enslave_pop = {
+	if = { 
+		limit = { 
+			OR = { 
+				AND = {
+					ROOT = { has_policy_flag = slavery_allowed_all }
+					NOT = { is_species = "ROBOT_POP_SPECIES_3" }
+				}
+				AND = {
+					ROOT = { has_policy_flag = slavery_allowed_xenos_only }
+					NOT = { 
+						is_same_species = ROOT 
+						is_species = "ROBOT_POP_SPECIES_3"
+					}
+				}
+				AND = {
+					ROOT = { has_policy_flag = ai_servitude }
+					is_species = "ROBOT_POP_SPECIES_3"
+				}
+			}	
+		}
+		is_sentient = yes
+		else = {
+			custom_tooltip = {
+				text = "SLAVERY_UNALLOWED_WRONG_POLICY"
+				always = no
+			}
+		}
+	}
+}
+
+
+#Root = country
+#This = pop
+can_purge_pop = {
+	if = { 
+		limit = { 
+			OR = { 
+				ROOT = { has_policy_flag = purge_allowed_all }
+				AND = {
+					ROOT = { has_policy_flag = purge_allowed_xenos_only }
+					NOT = { 
+						OR = {
+							is_same_species = ROOT 
+							is_species = "ROBOT_POP_SPECIES_3"
+						}
+					}
+				}
+				AND = {
+					ROOT = { has_policy_flag = ai_servitude }
+					is_species = "ROBOT_POP_SPECIES_3"
+				}
+				has_trait = trait_robotic_1 # allow if non-sentient robot
+				has_trait = trait_robotic_2 # allow if non-sentient robot
+			} 
+		}
+		always = yes
+		else = {
+			custom_tooltip = {
+				text = "PURGE_UNALLOWED_WRONG_POLICY"
+				always = no
+			}
+		}
+	}
+}
+
+
+#Root = country
+#This = pop
+can_auto_migrate_pop = {
+	if = { 
+		limit = {
+			AND = {
+				OR = {
+					ROOT = { has_policy_flag = migration_allowed_all }
+					AND = {
+						ROOT = { has_policy_flag = migration_allowed_primary_only }
+						is_same_species = ROOT 
+					}
+				}
+				planet = {
+					count_pops = {
+						limit = {
+							is_colony_pop = yes
+						}
+						count > 5 # Must be at least this many colony-sustaining Pops on the planet for a Pop to be allowed to migrate
+					}
+				}
+			}
+		}
+		always = yes
+		else = {
+			always = no
+		}
+	}
+}
+
+
+#Root = country
+#This = pop
+can_vote_in_democratic_election = {
+	or = {
+		root = {
+			has_policy_flag = voting_allowed_all
+		}
+		AND = {
+			root = {
+				has_policy_flag = voting_allowed_primary_only
+			}
+			is_same_species = root
+		}
+	}
+}
+
+
+#Root = country
+#This = pop
+can_generate_leader_from_pop = {
+	if = { 
+		limit = { 
+			OR = { 
+				ROOT = { has_policy_flag = leadership_allow_all }
+				AND = {
+					ROOT = { has_policy_flag = leadership_allow_dominant_only }
+					is_same_species = ROOT 
+				}
+				AND = {
+					ROOT = { has_policy_flag = leadership_allow_xeno }
+					NOT = { 
+						OR = {
+							has_trait = trait_robotic_1
+							has_trait = trait_robotic_2
+							has_trait = trait_robotic_3
+						}
+					}
+				}
+				AND = {
+					ROOT = { has_policy_flag = leadership_allow_robot }
+					OR = {
+						has_trait = trait_robotic_3
+						is_same_species = ROOT
+					}
+				}
+			} 
+		}
+		always = yes
+		else = {
+			always = no
+		}
+	}
+}
+
+#Root = country, attacker
+#This = country, target
+#This rule is a condition for taking hostile actions towards neutral targets. Such as landing troops or attacking their fleets
+can_take_hostile_actions = {
+	if = {
+		limit = { 
+			ROOT = {
+				has_policy_flag = first_contact_attack_not_allowed
+			}
+			NOT = {
+				is_hostile = ROOT
+				has_communications = ROOT
+			}
+		}
+		custom_tooltip = {
+			text = "CAN_TAKE_HOSTILE_ACTION_FIRST_CONTACT_PROTOCOL"
+			always = no
+		}
+		else = {
+		
+			#attacking primitives with non-interference
+			if = {
+				limit = {
+					ROOT = { 
+						OR = { 
+							has_policy_flag = interference_passive 
+							has_policy_flag = interference_active
+						}
+					}
+					is_primitive = yes
+				}
+				custom_tooltip = {
+					text = "CAN_TAKE_HOSTILE_ACTION_NATIVE_INTERFERENCE"
+					always = no
+				}
+			
+				else = {
+					always = yes
+				}
+			}
+		}
+	}
+}
+
+#Root = country
+#This = planet
+can_colonize_planet = {
+	if = {
+		limit = { 
+			AND = {
+				has_modifier = "stone_age_civilization"
+				ROOT = {
+					NOT = {
+						has_policy_flag = interference_full
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = "NONINTERFERENCE_DIRECTIVE"
+			always = no
+		}
+		else = {
+			always = yes
+		}
+	}
+}
+
+#Root = country
+#This = pop
+can_colonize_with_pop = {
+	if = {
+		limit = { 
+			OR = {
+				has_modifier = culture_shock_bronze_age 
+				has_modifier = culture_shock_iron_age 
+				has_modifier = culture_shock_late_medieval_age 
+				has_modifier = culture_shock_renaissance_age 
+				has_modifier = culture_shock_steam_age 
+				has_modifier = culture_shock_industrial_age 
+				has_modifier = culture_shock_machine_age 
+				has_modifier = culture_shock_atomic_age 
+				has_modifier = culture_shock_early_space_age 
+			}
+		}
+		custom_tooltip = {
+			always = no
+		}
+		else = {
+			always = yes
+		}
+	}
+}
+
+#Root = country, us
+#This = country, them
+#This rule is a condition for determining if a country is hostile towards another. not to be confused with can_take_hostile_action
+can_be_hostile_towards = {
+	if = {
+		limit = { is_primitive = yes }
+		ROOT = {
+			NOT = { has_policy_flag = interference_passive }
+		}
+		
+		else = {
+			if = {
+				limit = { ROOT = { is_primitive = yes } }
+				NOT = { has_policy_flag = interference_passive }
+			}
+		}
+	}
+}
+
+# Check if a player can resettle a pop to a tile on another planet
+# This = Pop
+# From = Country
+# FromFrom = Target tile, optional
+can_resettle_pop = {
+	custom_tooltip = {
+		text = "RESETTLE_POP_IS_GROWING"
+		exists = this
+		is_growing = no
+	}
+	custom_tooltip = {
+		text = "RESETTLEMENT_POLICY_DISABLED"
+		OR = {
+			FROM = {
+				has_policy_flag = resettlement_allowed
+			}
+			AND = {
+				exists = this
+				OR = {
+					has_trait = trait_robotic_1 # allow if non-sentient robot
+					has_trait = trait_robotic_2 # allow if non-sentient robot
+					is_enslaved = yes # allow if enslaved
+				}
+			}
+		}
+	}
+}
+
+# This = Planet
+can_resettle_pop_planet = {
+	custom_tooltip = {
+		text = "RESETTLE_PLANET_UNDER_COLONIZATION"
+		exists = this
+		is_under_colonization = no
+	}
+	custom_tooltip = {
+		text = "RESETTLEMENT_PLANETARY_ADMINISTRATION"
+		exists = this
+		any_tile = {
+			OR = {
+				has_building = "building_capital_1"
+				has_building = "building_capital_2"
+				has_building = "building_capital_3"
+			}
+		}
+	}
+}
+
+# Checks if a pop can procreate
+# This = Pop
+can_pop_procreate = {
+	OR = {
+		is_enslaved = no
+		owner = {
+			NOT = {
+				has_policy_flag = slavery_procreation_not_allowed
+			}
+		}
+	}
+}

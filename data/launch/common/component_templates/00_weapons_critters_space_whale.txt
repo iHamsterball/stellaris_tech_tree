@@ -1,0 +1,59 @@
+
+
+# ####################
+#  Critter Weapons - Space Cloud
+# ####################
+
+@critter_cost_value = 35
+
+
+### Standard Whale Weapon
+
+weapon_component_template = {
+	key = "SMALL_SPACE_WHALE_WEAPON"
+
+	size = small
+	entity = "small_space_whale_weapon_entity"
+	type = instant
+	icon = "GFX_ship_part_space_whale_weapon_1"
+	icon_frame = 1
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+		
+	component_set = "SPACE_WHALE_WEAPON_1"
+	prerequisites = { "tech_space_whale_weapon_1" }
+	cost = @critter_cost_value
+}
+
+weapon_component_template = {
+	key = "MEDIUM_SPACE_WHALE_WEAPON"
+
+	size = medium
+	entity = "medium_space_whale_weapon_entity"
+	type = instant
+	icon = "GFX_ship_part_space_whale_weapon_1"
+	icon_frame = 1
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+		
+	component_set = "SPACE_WHALE_WEAPON_1"
+	prerequisites = { "tech_space_whale_weapon_1" }
+	cost = @critter_cost_value
+}
+
+weapon_component_template = {
+	key = "LARGE_SPACE_WHALE_WEAPON"
+
+	size = large
+	entity = "large_space_whale_weapon_entity"
+	type = instant
+	icon = "GFX_ship_part_space_whale_weapon_1"
+	icon_frame = 1
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+	
+	component_set = "SPACE_WHALE_WEAPON_1"
+	prerequisites = { "tech_space_whale_weapon_1" }
+	
+	cost = @critter_cost_value
+}

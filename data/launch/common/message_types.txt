@@ -1,0 +1,858 @@
+message_type = {
+	key = "CONSTRUCTION_MESSAGE_TYPE"
+	icon = "GFX_message_other_construction"
+	icon_frame = 1
+
+	#sound = "spaceport_complete_alert"
+	sound = "advisor_notification_construction_complete"
+	sound_is_advisor = yes
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "ARMY_RECRUITMENT"
+	icon = "GFX_message_other_construction"
+	icon_frame = 1
+
+	sound = "army_construction_done"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "BUILDING_CONSTRUCTION_MESSAGE_TYPE"
+	icon = "GFX_message_other_construction"
+	icon_frame = 1
+
+	#sound = "alert_construction_complete"
+	sound = "advisor_notification_construction_complete"
+	sound_is_advisor = yes
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "FLEET_UPGRADE_DONE_MESSAGE_TYPE"
+	icon = "GFX_message_fleet_upgrader_complete"
+	icon_frame = 1
+
+	#sound = "alert_construction_complete"
+	sound = "advisor_notification_ships_upgraded"
+	sound_is_advisor = yes
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "FLEET_REPARATIONS_DONE_MESSAGE_TYPE"
+	icon = "GFX_message_repairs_complete"
+	icon_frame = 1
+
+	sound = "notification"
+	#sound = "advisor_notification_construction_complete"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "FLEET_ORDER_FINISH_MESSAGE_TYPE"
+	icon = "GFX_message_fleet_action_complete"
+	icon_frame = 1
+
+	sound = "spaceport_complete_alert"
+	#sound = "advisor_notification_construction_complete"
+	#sound_is_advisor = yes
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "FLEET_DETECTED_MESSAGE_TYPE"
+	icon = "GFX_message_fleet_detected"
+	icon_frame = 2
+
+	#sound = "notification"
+	ping = "ping_notification_red"
+}
+
+message_type = {
+	key = "OBJECT_DETECTED_MESSAGE_TYPE"
+	icon = "GFX_message_fleet_detected"
+	icon_frame = 2
+
+	#sound = "notification"
+	ping = "ping_notification_red"
+}
+
+message_type = {
+	key = "EVENT_MESSAGE_TYPE"
+	icon = "GFX_message_other_alert"
+	icon_frame = 1
+
+	sound = "discovery"
+	ping = "mixed_notification_yellow"
+}
+
+message_type = {
+	key = "ANOMALY_DETECTED_TYPE"
+	icon = "GFX_message_anomaly"
+	icon_frame = 1
+
+	#sound = "discovery"
+	sound = advisor_notification_discovery_detected
+	sound_is_advisor = yes
+	ping = "arrow_notification_yellow"
+}
+
+message_type = {
+	key = "LEADER_DEATH"
+	icon = "GFX_message_leader_died"
+	icon_frame = 1
+
+	sound = "ui_notification_leader_death"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "RULER_ELECTED"
+	icon = "GFX_message_event_ruler"
+	icon_frame = 1
+
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "RULER_ELECTED_UNTIL_DEATH"
+	icon = "GFX_message_event_ruler"
+	icon_frame = 1
+
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "RULER_ELECTED_HEIR"
+	icon = "GFX_message_event_ruler"
+	icon_frame = 1
+
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "SYSTEM_SURVEYED"
+	icon = "GFX_message_system_survey_complete"
+	icon_frame = 1
+
+	#sound = "survey_complete"
+	sound = "advisor_notification_system_survey_complete"
+	sound_is_advisor = yes
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "UPLIFTING_FAILED"
+	icon = "GFX_message_aborted_project"
+	icon_frame = 1
+
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "SPECIES_MODIFICATION_FAILED"
+	icon = "GFX_message_aborted_project"
+	icon_frame = 1
+
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "OUR_SURRENDER"
+	icon = "GFX_message_surrender_we"
+	icon_frame = 1
+
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "THEIR_SURRENDER"
+	icon = "GFX_message_surrender_they"
+	icon_frame = 1
+
+	sound = "diplomatic_notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "VICTORY"
+	icon = "GFX_message_victory"
+	icon_frame = 2
+
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "DEFEAT"
+	icon = "GFX_message_diplomatic_war"
+	icon_frame = 2
+
+	sound = "notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "TECHNOLOGY_ORDER_FINISH_MESSAGE_TYPE"
+	icon = "GFX_message_technology_researched"
+	icon_frame = 1
+
+	sound = "advisor_notification_research_complete"
+	sound_is_advisor = yes
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "DEBRIS_ANALYZED_FINISH_MESSAGE_TYPE"
+	icon = "GFX_message_event_completion"
+	icon_frame = 1
+
+	#sound = "notification"
+	sound = "advisor_notification_debri_analysed"
+	sound_is_advisor = yes
+	ping = "arrow_notification_green"
+}
+
+message_type = {
+	key = "WORMHOLE_CLOSED_NO_ACCESS"
+	icon = "GFX_message_wormhole_closed"
+	icon_frame = 1
+
+	sound = "notification"
+	ping = "mixed_notification_yellow"
+}
+
+message_type = {
+	key = "FLEET_LEAVE_SYSTEM_NO_ACCESS"
+	icon = "GFX_message_no_access"
+	icon_frame = 2
+
+	sound = "notification"
+	ping = "mixed_notification_yellow"
+}
+
+message_type = {
+	key = "FLEET_EVADE_HOSTILE_MESSAGE_TYPE"
+	icon = "GFX_message_evading_hostile_fleet"
+	icon_frame = 2
+
+	sound = "advisor_notification_evade_hostile_fleet"
+	sound_is_advisor = yes
+	ping = "mixed_notification_yellow"
+}
+
+message_type = {
+	key = "TERRAFORM_MESSAGE_TYPE"
+	icon = "GFX_message_terraforming"
+	icon_frame = 1
+
+	name = "MESSAGE_TERRAFORM_MESSAGE_TYPE_TITLE"
+	sound = "notification"
+	ping = "mixed_notification_green"
+}
+
+message_type = {
+	key = "ELECTION_MESSAGE_TYPE"
+	icon = "GFX_message_election"
+	icon_frame = 1
+
+	name = "MESSAGE_ELECTION_MESSAGE_TYPE_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "TRADE_DEAL_END_MISSING_RESOURCE"
+	icon = "GFX_message_trade_deal_canceled"
+	icon_frame = 2
+
+	name = "MESSAGE_TRADE_DEAL_END_MISSING_RESOURCE_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "TRADE_DEAL_END_MISSING_RESOURCE_THEM"
+	icon = "GFX_message_trade_deal_canceled"
+	icon_frame = 2
+
+	name = "MESSAGE_TRADE_DEAL_END_MISSING_RESOURCE_THEM_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "TRADE_DEAL_END_GUARANTEE_ALLIANCE"
+	icon = "GFX_message_message_end_guarantee_alliance"
+	icon_frame = 1
+
+	name = "MESSAGE_TRADE_DEAL_END_GUARANTEE_ALLIANCE_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "TRADE_DEAL_END_GUARANTEE_ALLIANCE_THEM"
+	icon = "GFX_message_message_end_guarantee_alliance_them"
+	icon_frame = 1
+
+	name = "MESSAGE_TRADE_DEAL_END_GUARANTEE_ALLIANCE_THEM_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "TRADE_DEAL_END_SUPPORT_INDEPENDENCE"
+	icon = "GFX_message_stopped_supporting_independence"
+	icon_frame = 2
+
+	name = "MESSAGE_TRADE_DEAL_END_SUPPORT_INDEPENDENCE_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "TRADE_DEAL_END_SUPPORT_INDEPENDENCE_THEM"
+	icon = "GFX_message_stopped_supporting_our_independence"
+	icon_frame = 2
+
+	name = "MESSAGE_TRADE_DEAL_END_SUPPORT_INDEPENDENCE_THEM_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "TRADE_DEAL_END_CANCELLED"
+	icon = "GFX_message_trade_deal_canceled"
+	icon_frame = 1
+
+	name = "MESSAGE_TRADE_DEAL_END_CANCELLED_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "TRADE_DEAL_END_TIMEOUT"
+	icon = "GFX_message_trade_deal_timed_out"
+	icon_frame = 1
+
+	name = "MESSAGE_TRADE_DEAL_END_TIMEOUT_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "PLANET_REVOLT"
+	icon = "GFX_message_other_revolt"
+	icon_frame = 1
+
+	name = "MESSAGE_PLANET_REVOLT_TITLE"
+	sound = "advisor_notification_planet_in_revolt"
+	sound_is_advisor = yes
+	ping = "mixed_notification_red"
+}
+
+message_type = {
+	key = "ALLIED_ENTERED_WAR"
+	icon = "GFX_message_entered_war"
+	icon_frame = 1
+
+	name = "MESSAGE_ALLIED_ENTERED_WAR_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "FEDERATION_DECLARED_WAR"
+	icon = "GFX_message_entered_war"
+	icon_frame = 1
+
+	name = "MESSAGE_FEDERATION_DECLARED_WAR"
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "OVERLORD_DECLARED_WAR"
+	icon = "GFX_message_entered_war"
+	icon_frame = 1
+
+	name = "MESSAGE_OVERLORD_DECLARED_WAR"
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "SUBJECT_ENTERED_WAR"
+	icon = "GFX_message_entered_war"
+	icon_frame = 1
+
+	name = "MESSAGE_SUBJECT_ENTERED_WAR_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "OVERLORD_ENTERED_WAR"
+	icon = "GFX_message_entered_war"
+	icon_frame = 1
+
+	name = "MESSAGE_OVERLORD_ENTERED_WAR_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "SUPPORTED_DECLARED_WAR"
+	icon = "GFX_message_entered_war"
+	icon_frame = 1
+
+	name = "MESSAGE_SUPPORTED_DECLARED_WAR"
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "GUARANTEED_ENTERED_WAR"
+	icon = "GFX_message_entered_war"
+	icon_frame = 1
+
+	name = "MESSAGE_GUARANTEER_ENTERED_WAR_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "VASSAL_ENTER_WAR"
+	icon = "GFX_message_entered_war"
+	icon_frame = 1
+
+	name = "MESSAGE_VASSAL_ENTER_WAR"
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "ENEMY_VASSAL_ENTER_WAR"
+	icon = "GFX_message_entered_war"
+	icon_frame = 1
+
+	name = "MESSAGE_ENEMY_VASSAL_ENTER_WAR"
+	sound = "notification"
+	ping = "ping_notification_red"
+}
+
+message_type = {
+	key = "WAR_ENDED"
+	icon = "GFX_message_entered_war"
+	icon_frame = 1
+
+	name = "MESSAGE_WAR_ENDED"
+	sound = "notification"
+	ping = "mixed_notification_yellow"
+}
+
+message_type = {
+	key = "ENEMY_LEAVES_WAR"
+	icon = "GFX_message_entered_war"
+	icon_frame = 1
+
+	name = "MESSAGE_ENEMY_LEAVES_WAR"
+	sound = "notification"
+	ping = "mixed_notification_yellow"
+}
+
+message_type = {
+	key = "INVASION_ATTACKER_WIN"
+	icon = "GFX_message_invasion_won"
+	icon_frame = 2
+
+	name = "MESSAGE_INVASION_TITLE"
+	sound = "advisor_notification_invasion_success"
+	sound_is_advisor = yes
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "INVASION_ATTACKER_LOSE"
+	icon = "GFX_message_invasion_lost"
+	icon_frame = 2
+
+	name = "MESSAGE_INVASION_TITLE"
+	sound = "advisor_notification_invasion_failed"
+	sound_is_advisor = yes
+	ping = "ping_notification_red"
+}
+
+message_type = {
+	key = "INVASION_DEFENDER_WIN"
+	icon = "GFX_message_invasion_defence_won"
+	icon_frame = 2
+
+	name = "MESSAGE_INVASION_TITLE"
+	sound = "advisor_notification_enemy_invasion_defeated"
+	sound_is_advisor = yes
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "INVASION_DEFENDER_LOSE"
+	icon = "GFX_message_invasion_defence_lost"
+	icon_frame = 2
+
+	name = "MESSAGE_INVASION_TITLE"
+	sound = "advisor_notification_invasion_enemy_won"
+	sound_is_advisor = yes
+	ping = "ping_notification_red"
+}
+
+message_type = {
+	key = "SUBJECT_TYPE_CHANGED"
+	icon = "GFX_message_other_alert"
+	icon_frame = 1
+
+	sound = "discovery"
+	ping = "mixed_notification_yellow"
+}
+
+
+#############################################
+# Diplomatic Action Messages
+#############################################
+
+message_type = {
+	key = "DIPLO_ACTION_DECLARE_WAR"
+	icon = "GFX_message_declare_war"
+	icon_frame = 2
+
+	name = "MESSAGE_DECLARE_WAR_TITLE"
+	sound = "notification_war"
+	ping = "ping_notification_red"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_OFFER_PEACE"
+	icon = "GFX_message_peace_offer"
+	icon_frame = 1
+
+	name = "MESSAGE_OFFER_PEACE_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_INVITE_TO_ALLIANCE"
+	icon = "GFX_message_join_alliance"
+	icon_frame = 1
+
+	name = "MESSAGE_INVITE_TO_ALLIANCE_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_ASK_TO_JOIN_ALLIANCE"
+	icon = "GFX_message_join_alliance_request"
+	icon_frame = 1
+
+	name = "MESSAGE_ASK_TO_JOIN_ALLIANCE_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_LEAVE_ALLIANCE"
+	icon = "GFX_message_leave_alliance"
+	icon_frame = 1
+
+	name = "MESSAGE_LEAVE_ALLIANCE_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_DEMAND_VASSALIZATION"
+	icon = "GFX_message_demand_vassalization"
+	icon_frame = 1
+
+	name = "MESSAGE_DEMAND_VASSALIZATION_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_ASK_TO_BECOME_VASSALIZED"
+	icon = "GFX_message_vassalization_request"
+	icon_frame = 1
+
+	name = "MESSAGE_ASK_TO_BECOME_VASSALIZED_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_DEMAND_PROTECTORATE"
+	icon = "GFX_message_demand_vassalization"
+	icon_frame = 1
+
+	name = "MESSAGE_DEMAND_PROTECTORATE_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_ASK_TO_BECOME_PROTECTORATE"
+	icon = "GFX_message_vassalization_request"
+	icon_frame = 1
+
+	name = "MESSAGE_ASK_TO_BECOME_PROTECTORATE_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_FORM_FEDERATION"
+	icon = "GFX_message_form_federation"
+	icon_frame = 1
+
+	name = "MESSAGE_FORM_FEDERATION_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_INVITE_TO_FEDERATION"
+	icon = "GFX_message_invite_to_federation"
+	icon_frame = 1
+
+	name = "MESSAGE_INVITE_TO_FEDERATION_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_ASK_TO_JOIN_FEDERATION"
+	icon = "GFX_message_join_federation"
+	icon_frame = 1
+
+	name = "MESSAGE_ASK_TO_JOIN_FEDERATION_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_LEAVE_FEDERATION"
+	icon = "GFX_message_leave_federation"
+	icon_frame = 1
+
+	name = "MESSAGE_LEAVE_FEDERATION_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_OFFER_TRADE_DEAL"
+	icon = "GFX_message_trade_deal"
+	icon_frame = 1
+
+	name = "MESSAGE_OFFER_TRADE_DEAL_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_REQUEST_WAR"
+	icon = "GFX_message_war_request"
+	icon_frame = 1
+
+	name = "MESSAGE_REQUEST_WAR_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_red"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_PROPOSE_INVITE"
+	icon = "GFX_message_invite_proposal"
+	icon_frame = 1
+
+	name = "MESSAGE_PROPOSE_INVITE_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_ASK_TO_BE_RELEASED_SUBJECT"
+	icon = "GFX_message_release_vassal_request"
+	icon_frame = 1
+
+	name = "MESSAGE_ASK_TO_BE_RELEASED_SUBJECT_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_RELEASE_SUBJECT"
+	icon = "GFX_message_release_vassal"
+	icon_frame = 1
+
+	name = "MESSAGE_RELEASE_SUBJECT_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "DIPLO_WARNING_NOT_ACTIVE_IN_WAR"
+	icon = "GFX_message_warning_not_active_in_war"
+	icon_frame = 1
+
+	name = "MESSAGE_WARNING_NOT_ACTIVE_IN_WAR_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_NOT_ACTIVE_IN_WAR"
+	icon = "GFX_message_not_active_in_war"
+	icon_frame = 1
+
+	name = "MESSAGE_NOT_ACTIVE_IN_WAR_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_EMBASSY"
+	icon = "GFX_message_embassy"
+	icon_frame = 1
+
+	name = "MESSAGE_EMBASSY_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_RECALL_EMBASSY"
+	icon = "GFX_message_embassy"
+	icon_frame = 1
+
+	name = "MESSAGE_RECALL_EMBASSY_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_MAKE_RIVAL"
+	icon = "GFX_message_rivalry"
+	icon_frame = 1
+
+	name = "MESSAGE_MAKE_RIVAL_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_red"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_END_RIVALRY"
+	icon = "GFX_message_rivalry"
+	icon_frame = 1
+
+	name = "MESSAGE_END_RIVALRY_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+
+message_type = {
+	key = "DIPLO_ACTION_INSULT"
+	icon = "GFX_message_insult"
+	icon_frame = 1
+
+	name = "MESSAGE_DIPLOMATIC_INSULT_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_INTEGRATE_SUBJECT"
+	icon = "GFX_message_started_integration"
+	icon_frame = 1
+	
+	name = "MESSAGE_INTEGRATE_SUBJECT_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_CANCEL_SUBJECT_INTEGRATION"
+	icon = "GFX_message_stopped_integration"
+	icon_frame = 1
+	
+	name = "MESSAGE_CANCEL_SUBJECT_INTEGRATION_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "LEADER_EXPERIENCE"
+	icon = "GFX_message_leader_experience_gain"
+	icon_frame = 1
+
+	name = "MESSAGE_LEADER_EXPERIENCE_TITLE"
+	sound = "notification"
+	ping = "mixed_notification_green"
+}
+
+message_type = {
+	key = "LEADER_LEVEL_UP"
+	icon = "GFX_message_leader_level_up"
+	icon_frame = 1
+
+	name = "MESSAGE_LEADER_LEVEL_UP_TITLE"
+	sound = "notification"
+	ping = "mixed_notification_green"
+}
+
+message_type = {
+	key = "COMBAT_STATS"
+	icon = "GFX_message_combat_stats"
+	icon_frame = 1
+
+	name = "MESSAGE_COMBAT_STATS_TITLE"
+	sound = "notification"
+	ping = "mixed_notification_green"
+}
+
+message_type = {
+	key = "NEW_HEIR"
+	icon = "GFX_message_new_heir"
+	icon_frame = 1
+
+	name = "MESSAGE_NEW_HEIR_TITLE"
+	sound = "notification"
+	ping = "mixed_notification_green"
+}
+
+message_type = {
+	key = "TRIGG_MOD_GAINED"
+	icon = "GFX_message_conditional_effect_gained"
+	icon_frame = 1
+
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "TRIGG_MOD_LOST"
+	icon = "GFX_message_conditional_effect_lost"
+	icon_frame = 1
+
+	sound = "notification"
+	ping = "ping_notification_red"
+}

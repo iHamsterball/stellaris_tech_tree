@@ -1,0 +1,312 @@
+achievement_colonize = {
+	id = 1
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		num_owned_planets > 1
+	}
+}
+
+achievement_minerals_1 = {
+	id = 2
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		has_monthly_income = 
+		{
+			resource = minerals
+			value > 250
+		}
+	}
+}
+
+achievement_minerals_2 = {
+	id = 3
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		has_monthly_income = 
+		{
+			resource = minerals
+			value > 1000
+		}
+	}
+}
+
+achievement_economy_1 = {
+	id = 4
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		energy > 1000
+	}
+}
+
+achievement_economy_2 = {
+	id = 5
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		energy > 5000
+	}
+}
+
+achievement_unification = {
+	id = 7
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		is_federation_leader = yes
+	}
+}
+
+achievement_capital = {
+	id = 8
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		capital_scope = {
+			has_building = building_capital_3
+		}
+	}
+}
+
+achievement_empire = {
+	id = 9
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		vassals > 2
+	}
+}
+
+achievement_survey = {
+	id = 10
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		has_surveyed_class = pc_desert
+		has_surveyed_class = pc_tropical
+		has_surveyed_class = pc_arid
+		has_surveyed_class = pc_continental
+		has_surveyed_class = pc_ocean
+		has_surveyed_class = pc_tundra
+		has_surveyed_class = pc_arctic
+		has_surveyed_class = pc_gas_giant
+		has_surveyed_class = pc_asteroid
+		has_surveyed_class = pc_molten
+		has_surveyed_class = pc_barren
+		has_surveyed_class = pc_barren_cold
+		has_surveyed_class = pc_toxic
+		has_surveyed_class = pc_frozen
+	}
+}
+
+achievement_grandadmiral = {
+	id = 11
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		has_country_flag = fleet_combat_dealt_big_hp_dmg
+	}
+}
+
+achievement_terraform = {
+	id = 12
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		any_owned_planet = {
+			is_terraformed = yes
+		}
+	}
+}
+
+achievement_robots = {
+	id = 13
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		any_owned_pop = {
+			is_species_class = "ROBOT"
+		}
+	}
+}
+
+achievement_uplift = {
+	id = 14
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		has_country_flag = has_uplifted_species	
+	}
+}
+
+achievement_genetailor = {
+	id = 15
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		has_country_flag = has_modified_species	
+	}
+}
+
+achievement_grandfleet = {
+	id = 16
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		any_owned_fleet = {
+			is_ship_class = shipclass_military
+			fleet_size > 119
+		}
+	}
+}
+
+achieviement_conquer_homeworld = {
+	id = 17
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		has_country_flag = has_conquer_other_homeworld
+	}
+}
+
+achievement_rare = {
+	id = 18
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		num_rare_techs > 0
+	}
+}
+
+achievement_otherside = {
+	id = 19
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		num_rare_techs > 14
+	}
+}
+
+achievement_trade = {
+	id = 20
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		has_country_flag = has_negotiated_trade_deal
+	}
+}
+
+achievement_winwar = {
+	id = 21
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		has_country_flag = has_won_war
+	}
+}
+
+
+#######################################################
+# Crisis Achievements
+#######################################################
+
+achievement_queening = {
+	id = 22
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		has_country_flag = queen_captured
+	}
+}
+
+
+achievement_rift_sealed = {
+	id = 23
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		has_country_flag = extradimensionals_expunged
+	}
+}
+
+
+achievement_synth_detector = {
+	id = 24
+	
+	possible = {
+		is_ironman = yes
+	}
+	
+	happened = {
+		has_country_flag = synth_detector
+	}
+}

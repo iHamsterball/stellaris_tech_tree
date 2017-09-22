@@ -1,0 +1,8110 @@
+@base_moon_distance = 10
+
+### FALLEN EMPIRE HOME SYSTEMS
+
+# Home System I
+fallen_1_1 = {
+	usage = fallen_empire_init
+	name = "Beacon of Infinity"
+	class = "sc_g"
+	
+	planet = {
+		class = star
+		orbit_distance = 0
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Palatial District"
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			root = {
+				# assigns ethos to Fallen Empire during system initialization,
+				# to allow ethics-triggered systems to spawn
+				random_list = {
+					75 = { country_add_ethic = "ethic_fanatic_xenophobe" }
+					25 = { country_add_ethic = "ethic_fanatic_materialist" }
+				}
+			}
+			prevent_anomaly = yes
+			set_owner = ROOT
+			set_capital = yes
+			random_tile = {
+				limit = { has_building = no has_blocker = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_3"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}
+				add_resource = {
+					resource = food
+					amount = 1
+				}			
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}			
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}			
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}			
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}	
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}		
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}			
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}			
+			create_spaceport = {
+				owner = ROOT
+				initial_module = "fallen_empire_weapon"				
+			}	
+			spaceport = {
+				set_spaceport_level = 6		
+				set_spaceport_module = {
+					slot = 1
+					module = "crew_quarters"
+				}	
+				set_spaceport_module = {
+					slot = 2
+					module = "fleet_academy"
+				}
+				set_spaceport_module = {
+					slot = 3
+					module = "synchronized_defenses"
+				}
+				set_spaceport_module = {
+					slot = 4
+					module = "solar_panel_network"
+				}				
+			}					
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Servitor"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 80
+				}				
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Servitor"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 90
+				}				
+			}	
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Servitor"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 100
+				}				
+			}			
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}				
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}				
+				set_location = {
+					target = PREV
+					distance = 90
+					angle = random 
+				}
+			}		
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}				
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}				
+				set_location = {
+					target = PREV
+					distance = 70
+					angle = random 
+				}
+			}			
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}				
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}				
+				set_location = {
+					target = PREV
+					distance = 45
+					angle = random 
+				}
+			}	
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Omega"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 90
+				}
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Omega"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 180
+				}
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Omega"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 270
+				}
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Omega"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 0
+				}
+			}
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Ring Section B"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "Ring Section C"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Trade District"
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			set_owner = ROOT		
+			random_tile = {
+				limit = { has_building = no has_blocker = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_2"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}
+				add_resource = {
+					resource = food
+					amount = 1
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}			
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}					
+			}			
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}			
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}			
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}			
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}	
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}			
+			create_spaceport = {
+				owner = ROOT
+				initial_module = "fallen_empire_weapon"
+			}		
+			spaceport = {
+				set_spaceport_level = 6		
+				set_spaceport_module = {
+					slot = 1
+					module = "crew_quarters"
+				}	
+				set_spaceport_module = {
+					slot = 2
+					module = "fleet_academy"
+				}
+				set_spaceport_module = {
+					slot = 3
+					module = "synchronized_defenses"
+				}
+				set_spaceport_module = {
+					slot = 4
+					module = "solar_panel_network"
+				}					
+			}		
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}			
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}	
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Ring Section E"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "Ring Section F"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Industrial District"
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			set_owner = ROOT		
+			random_tile = {
+				limit = { has_building = no has_blocker = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_2"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}	
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}				
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}			
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}			
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}					
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}	
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}			
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}			
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}		
+			create_spaceport = {
+				owner = ROOT
+				initial_module = "fallen_empire_weapon"
+			}
+			spaceport = {
+				set_spaceport_level = 6		
+				set_spaceport_module = {
+					slot = 1
+					module = "crew_quarters"
+				}	
+				set_spaceport_module = {
+					slot = 2
+					module = "fleet_academy"
+				}
+				set_spaceport_module = {
+					slot = 3
+					module = "synchronized_defenses"
+				}
+				set_spaceport_module = {
+					slot = 4
+					module = "solar_panel_network"
+				}					
+			}					
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Ring Section H"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "Ring Section I"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Agrarian District"
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			set_owner = ROOT
+			random_tile = {
+				limit = { has_building = no has_blocker = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_2"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}
+				add_resource = {
+					resource = food
+					amount = 1
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}			
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}			
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}			
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}	
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}						
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}	
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}		
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}			
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}	
+			create_spaceport = {
+				owner = ROOT
+				initial_module = "fallen_empire_weapon"
+			}
+			spaceport = {
+				set_spaceport_level = 6		
+				set_spaceport_module = {
+					slot = 1
+					module = "crew_quarters"
+				}	
+				set_spaceport_module = {
+					slot = 2
+					module = "fleet_academy"
+				}
+				set_spaceport_module = {
+					slot = 3
+					module = "synchronized_defenses"
+				}
+				set_spaceport_module = {
+					slot = 4
+					module = "solar_panel_network"
+				}					
+			}		
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Ring Section K"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "Ring Section L"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	
+	neighbor_system = {
+		distance = { min = 0 max = 50 }
+		initializer = "fallen_1_2"
+	}
+	neighbor_system = {
+		distance = { min = 0 max = 50 }
+		initializer = "fallen_1_3"
+	}
+}
+
+fallen_1_2 = {
+	class = "sc_g"
+	name = "Beacon of Perpetuity"
+	
+	planet = {
+		class = star
+		orbit_distance = 0
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		class = "pc_ringworld_habitable_damaged"
+		name = "Ring Segment A"
+		orbit_angle = 30
+		orbit_distance = 0
+		
+		init_effect = {
+			create_ambient_object = {
+				type = "large_debris_object"
+				location = THIS
+			}
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech_damaged"
+		name = "Ring Segment B"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_seam_damaged"
+		name = "Ring Segment C"
+		orbit_angle = 30
+		orbit_distance = 0
+		
+		init_effect = {
+			create_ambient_object = {
+				type = "medium_debris_01_object"
+				location = THIS
+			}
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable_damaged"
+		name = "Ring Segment D"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_tech_damaged"
+		name = "Ring Segment E"
+		orbit_angle = 30
+		orbit_distance = 0
+		
+		init_effect = {
+			create_ambient_object = {
+				type = "small_debris_object"
+				location = THIS
+			}
+		}
+	}
+	planet = {
+		class = "pc_ringworld_seam_damaged"
+		name = "Ring Segment F"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_habitable_damaged"
+		name = "Ring Section G"
+		orbit_angle = 30
+		orbit_distance = 0
+		
+		init_effect = {
+			create_ambient_object = {
+				type = "medium_debris_02_object"
+				location = THIS
+			}
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech_damaged"
+		name = "Ring Segment H"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_seam_damaged"
+		name = "Ring Segment I"
+		orbit_angle = 30
+		orbit_distance = 0
+		
+		init_effect = {
+			create_ambient_object = {
+				type = "large_debris_object"
+				location = THIS
+			}
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable_damaged"
+		name = "Ring Segment J"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_tech_damaged"
+		name = "Ring Segment K"
+		orbit_angle = 30
+		orbit_distance = 0
+		
+		init_effect = {
+			create_ambient_object = {
+				type = "small_debris_object"
+				location = THIS
+			}
+		}
+	}
+	planet = {
+		class = "pc_ringworld_seam_damaged"
+		name = "Ring Segment L"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	
+	init_effect = {
+		create_ambient_object = {
+			type = "large_debris_object"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "large_debris_object"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "medium_debris_01_object"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "medium_debris_01_object"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "medium_debris_02_object"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "medium_debris_02_object"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "small_debris_object"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "small_debris_object"
+			location = solar_system
+		}
+	}
+}
+
+fallen_1_3 = {
+	class = "sc_g"
+	name = "Beacon of Stability"
+	
+	planet = {
+		class = star
+		orbit_distance = 0
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		class = "pc_ringworld_habitable_damaged"
+		name = "Palace District"
+		orbit_angle = 30
+		orbit_distance = 0
+		
+		init_effect = {
+			create_ambient_object = {
+				type = "large_debris_object"
+				location = THIS
+			}
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech_damaged"
+		name = "Ring Section B"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "Ring Section C"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Eternal Bastion"
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			set_owner = ROOT			
+			random_tile = {
+				limit = { has_building = no has_blocker = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_2"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}
+				add_resource = {
+					resource = food
+					amount = 1
+				}				
+			}	
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}			
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}			
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}			
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}	
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}			
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}	
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}			
+			create_spaceport = {
+				owner = ROOT
+				initial_module = "fallen_empire_weapon"
+			}	
+			spaceport = {
+				set_spaceport_level = 6		
+				set_spaceport_module = {
+					slot = 1
+					module = "crew_quarters"
+				}	
+				set_spaceport_module = {
+					slot = 2
+					module = "fleet_academy"
+				}
+				set_spaceport_module = {
+					slot = 3
+					module = "synchronized_defenses"
+				}
+				set_spaceport_module = {
+					slot = 4
+					module = "solar_panel_network"
+				}					
+			}			
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}			
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}						
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Omega"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 90
+				}
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Omega"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 180
+				}
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}				
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}			
+				set_location = {
+					target = PREV
+					distance = 45
+					angle = random 
+				}
+			}				
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Ring Section E"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_seam_damaged"
+		name = "Ring Section F"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_habitable_damaged"
+		name = "Industrial District"
+		orbit_angle = 30
+		orbit_distance = 0
+		
+		init_effect = {
+			create_ambient_object = {
+				type = "medium_debris_01_object"
+				location = THIS
+			}
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech_damaged"
+		name = "Ring Section H"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_seam_damaged"
+		name = "Ring Section I"
+		orbit_angle = 30
+		orbit_distance = 0
+		
+		init_effect = {
+			create_ambient_object = {
+				type = "medium_debris_02_object"
+				location = THIS
+			}
+		}
+	}
+	planet = {
+		class = "pc_ringworld_habitable_damaged"
+		name = "Agrarian District"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_tech_damaged"
+		name = "Ring Section K"
+		orbit_angle = 30
+		orbit_distance = 0
+		
+		init_effect = {
+			create_ambient_object = {
+				type = "small_debris_object"
+				location = THIS
+			}
+		}
+	}
+	planet = {
+		class = "pc_ringworld_seam_damaged"
+		name = "Ring Section L"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+}
+
+# Home System II
+fallen_2 = {
+	usage = fallen_empire_init
+	class = "rl_standard_stars"
+	asteroids_distance = 50
+	
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 50
+	
+	planet = {
+		count = { min = 1 max = 3 }
+		class = random_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 40 max = 100 }
+	}
+	
+	planet = {
+		count = { min = 0 max = 2 }
+		orbit_distance = 20
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 0 max = 1 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		name = "Celestial Throne"
+		orbit_distance = 20
+		class = pc_gaia
+		orbit_angle = { min = 90 max = 270 }
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			root = {
+				# assigns ethos to Fallen Empire during system initialization,
+				# to allow ethics-triggered systems to spawn
+				random_list = {
+					25 = { country_add_ethic = "ethic_fanatic_xenophile" }
+					75 = { country_add_ethic = "ethic_fanatic_spiritualist" }
+				}
+			}
+			prevent_anomaly = yes
+			set_owner = ROOT
+			set_capital = yes
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}			
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_3"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}
+				add_resource = {
+					resource = food
+					amount = 1
+				}			
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}			
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}			
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}			
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "gene_warrior_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}	
+			create_spaceport = {
+				owner = ROOT
+				initial_module = "fallen_empire_weapon"
+			}
+			spaceport = {
+				set_spaceport_level = 6		
+				set_spaceport_module = {
+					slot = 1
+					module = "crew_quarters"
+				}	
+				set_spaceport_module = {
+					slot = 2
+					module = "fleet_academy"
+				}
+				set_spaceport_module = {
+					slot = 3
+					module = "synchronized_defenses"
+				}
+				set_spaceport_module = {
+					slot = 4
+					module = "solar_panel_network"
+				}					
+			}									
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Omega"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 90
+				}
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Omega"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 180
+				}
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Omega"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 270
+				}
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Omega"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 0
+				}
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Servitor"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 80
+				}				
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Servitor"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 90
+				}				
+			}	
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Servitor"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 100
+				}				
+			}				
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}				
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}				
+				set_location = {
+					target = PREV
+					distance = 70
+					angle = random 
+				}
+			}			
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}				
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}				
+				set_location = {
+					target = PREV
+					distance = 45
+					angle = random 
+				}
+			}			
+		}
+		
+		change_orbit = @base_moon_distance
+
+		moon = {
+			name = "The Mistake"
+			class = "pc_barren"
+			entity = "barren_planet_01_destroyed_entity"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+			modifiers = none
+			
+			init_effect = { prevent_anomaly = yes }
+		}
+	}
+	
+	planet = {
+		count = { min = 2 max = 4 }
+		orbit_distance = 20
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 0 max = 1 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		count = { min = 1 max = 2 }
+		orbit_distance = 20
+		class = pc_gas_giant
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 0 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	init_effect = {
+		random_system_planet = {
+			limit = { has_deposit_for = shipclass_mining_station }
+			create_mining_station = {
+				owner = ROOT
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Sigma"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 90
+				}
+			}
+		}
+		random_system_planet = {
+			limit = { 
+				has_deposit_for = shipclass_mining_station 
+				has_mining_station = no
+			}
+			create_mining_station = {
+				owner = ROOT
+			}
+		}
+		random_system_planet = {
+			limit = { has_deposit_for = shipclass_research_station }
+			create_research_station = {
+				owner = ROOT
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Sigma"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 90
+				}
+			}
+		}
+		random_system_planet = {
+			limit = { 
+				has_deposit_for = shipclass_research_station 
+				has_research_station = no
+			}
+			create_research_station = {
+				owner = ROOT
+			}
+		}
+	}
+		
+	neighbor_system = {
+		distance = { min = 0 max = 50 }
+		initializer = "fallen_orbitals_1"
+	}
+	neighbor_system = {
+		distance = { min = 0 max = 50 }
+		initializer = "fallen_orbitals_1"
+	}
+	neighbor_system = {
+		distance = { min = 0 max = 50 }
+		initializer = "fallen_orbitals_2"
+	}
+	neighbor_system = {
+		distance = { min = 0 max = 50 }
+		initializer = "fallen_orbitals_2"
+	}
+	neighbor_system = {
+		distance = { min = 0 max = 50 }
+		initializer = "fallen_shielded_2"
+	}
+	neighbor_system = {
+		trigger = {
+			root = {
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		distance = { min = 30 max = 100 }
+		initializer = "fallen_holy_01"
+	}
+	neighbor_system = {
+		trigger = {
+			root = {
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		distance = { min = 50 max = 150 }
+		initializer = "fallen_holy_02"
+	}
+	neighbor_system = {
+		trigger = {
+			root = {
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		distance = { min = 80 max = 200 }
+		initializer = "fallen_holy_03"
+	}
+	neighbor_system = {
+		trigger = {
+			root = {
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		distance = { min = 120 max = 250 }
+		initializer = "fallen_holy_04"
+	}
+}
+
+# Home System III
+fallen_3 = {
+	usage = fallen_empire_init
+	class = "rl_standard_stars"
+	asteroids_distance = 50
+	
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 50
+	
+	planet = {
+		count = { min = 1 max = 3 }
+		class = random_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 40 max = 100 }
+	}
+	
+	planet = {
+		name = "Sky Father"
+		class = "pc_gas_giant"
+		orbit_distance = 60
+		orbit_angle = 200
+		size = 40
+		has_ring = no
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			name = "Cradle"
+			class = "pc_gaia"
+			size = 20
+			orbit_distance = 5
+			orbit_angle = 20
+			tile_blockers = none
+			modifiers = none
+			
+			init_effect = {
+				root = {
+					# assigns ethos to Fallen Empire during system initialization,
+					# to allow ethics-triggered systems to spawn
+					random_list = {
+						50 = { country_add_ethic = "ethic_fanatic_xenophile" }
+						50 = { country_add_ethic = "ethic_fanatic_xenophobe" }
+					}
+				}
+				prevent_anomaly = yes
+				set_owner = ROOT
+				set_capital = yes
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}				
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no num_adjacent_tiles > 3 }
+					set_building = "building_capital_3"
+					add_resource = {
+						resource = minerals
+						amount = 1
+						replace = yes
+					}
+					add_resource = {
+						resource = food
+						amount = 1
+					}			
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_agri_processing_complex"
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}				
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_agri_processing_complex"
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}				
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_ancient_factory"
+					add_resource = {
+						resource = minerals
+						amount = 1
+						replace = yes
+					}					
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_ancient_factory"
+					add_resource = {
+						resource = minerals
+						amount = 1
+						replace = yes
+					}					
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}	
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}	
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}	
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}	
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}	
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}	
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}	
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}	
+				}			
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}	
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}	
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}	
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}	
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_ancient_factory"
+					add_resource = {
+						resource = minerals
+						amount = 1
+						replace = yes
+					}					
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_ancient_factory"
+					add_resource = {
+						resource = minerals
+						amount = 1
+						replace = yes
+					}					
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_ancient_factory"
+					add_resource = {
+						resource = minerals
+						amount = 1
+						replace = yes
+					}					
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_ancient_factory"
+					add_resource = {
+						resource = minerals
+						amount = 1
+						replace = yes
+					}					
+				}				
+				create_army = {
+					name = random
+					owner = ROOT
+					species = ROOT
+					type = "gene_warrior_army"
+				}
+				create_army = {
+					name = random
+					owner = ROOT
+					species = ROOT
+					type = "gene_warrior_army"
+				}
+				create_army = {
+					name = random
+					owner = ROOT
+					species = ROOT
+					type = "gene_warrior_army"
+				}			
+				create_army = {
+					name = random
+					owner = ROOT
+					species = ROOT
+					type = "gene_warrior_army"
+				}
+				create_army = {
+					name = random
+					owner = ROOT
+					species = ROOT
+					type = "gene_warrior_army"
+				}
+				create_army = {
+					name = random
+					owner = ROOT
+					species = ROOT
+					type = "gene_warrior_army"
+				}
+				create_army = {
+					name = random
+					owner = ROOT
+					species = ROOT
+					type = "defense_army"
+				}
+				create_army = {
+					name = random
+					owner = ROOT
+					species = ROOT
+					type = "defense_army"
+				}
+				create_army = {
+					name = random
+					owner = ROOT
+					species = ROOT
+					type = "defense_army"
+				}
+				create_army = {
+					name = random
+					owner = ROOT
+					species = ROOT
+					type = "defense_army"
+				}
+				create_army = {
+					name = random
+					owner = ROOT
+					species = ROOT
+					type = "defense_army"
+				}
+				create_army = {
+					name = random
+					owner = ROOT
+					species = ROOT
+					type = "defense_army"
+				}	
+				create_spaceport = {
+					owner = ROOT
+					initial_module = "fallen_empire_weapon"
+				}
+				spaceport = {
+					set_spaceport_level = 6		
+					set_spaceport_module = {
+						slot = 1
+						module = "crew_quarters"
+					}	
+					set_spaceport_module = {
+						slot = 2
+						module = "fleet_academy"
+					}
+					set_spaceport_module = {
+						slot = 3
+						module = "synchronized_defenses"
+					}
+					set_spaceport_module = {
+						slot = 4
+						module = "solar_panel_network"
+					}				
+				}	
+				create_fleet = { }
+				last_created_fleet = {
+					set_owner = ROOT
+					create_ship = {
+						name = random
+						design = "Servitor"
+						graphical_culture = root
+					}
+					set_location = {
+						target = PREV
+						distance = 80
+					}				
+				}
+				create_fleet = { }
+				last_created_fleet = {
+					set_owner = ROOT
+					create_ship = {
+						name = random
+						design = "Servitor"
+						graphical_culture = root
+					}
+					set_location = {
+						target = PREV
+						distance = 90
+					}				
+				}	
+				create_fleet = { }
+				last_created_fleet = {
+					set_owner = ROOT
+					create_ship = {
+						name = random
+						design = "Servitor"
+						graphical_culture = root
+					}
+					set_location = {
+						target = PREV
+						distance = 100
+					}				
+				}				
+				create_fleet = { }
+				last_created_fleet = {
+					set_owner = ROOT
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}				
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}				
+					set_location = {
+						target = PREV
+						distance = 70
+						angle = random 
+					}
+				}			
+				create_fleet = { }
+				last_created_fleet = {
+					set_owner = ROOT
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Avatar"
+						graphical_culture = root
+					}				
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}
+					create_ship = {
+						name = random
+						design = "Eclipse"
+						graphical_culture = root
+					}				
+					set_location = {
+						target = PREV
+						distance = 45
+						angle = random 
+					}
+				}	
+				create_fleet = { }
+				last_created_fleet = {
+					set_owner = ROOT
+					create_ship = {
+						name = random
+						design = "Omega"
+						graphical_culture = root
+					}
+					set_location = {
+						target = PREV
+						distance = 20
+						angle = 90
+					}
+				}
+				create_fleet = { }
+				last_created_fleet = {
+					set_owner = ROOT
+					create_ship = {
+						name = random
+						design = "Omega"
+						graphical_culture = root
+					}
+					set_location = {
+						target = PREV
+						distance = 20
+						angle = 180
+					}
+				}
+				create_fleet = { }
+				last_created_fleet = {
+					set_owner = ROOT
+					create_ship = {
+						name = random
+						design = "Omega"
+						graphical_culture = root
+					}
+					set_location = {
+						target = PREV
+						distance = 20
+						angle = 270
+					}
+				}
+				create_fleet = { }
+				last_created_fleet = {
+					set_owner = ROOT
+					create_ship = {
+						name = random
+						design = "Omega"
+						graphical_culture = root
+					}
+					set_location = {
+						target = PREV
+						distance = 20
+						angle = 0
+					}
+				}
+			}
+		}
+		
+		moon = {
+			name = "Sister"
+			class = "pc_barren"
+			entity = "barren_planet_01_destroyed_entity"
+			size = 13
+			orbit_distance = 5
+			orbit_angle = 50
+		}
+		
+		moon = {
+			name = "Brother"
+			class = "pc_gaia"
+			size = 10
+			orbit_distance = 8
+			orbit_angle = 10
+			tile_blockers = none
+			modifiers = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				set_owner = ROOT		
+				random_tile = {
+					limit = { has_building = no has_blocker = no num_adjacent_tiles > 3 }
+					set_building = "building_capital_2"
+					add_resource = {
+						resource = minerals
+						amount = 1
+						replace = yes
+					}
+					add_resource = {
+						resource = food
+						amount = 1
+					}					
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_agri_processing_complex"
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}						
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_agri_processing_complex"
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}						
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}					
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}					
+				}				
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}						
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}					
+				}				
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_ancient_factory"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}					
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_ancient_factory"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}					
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_ancient_factory"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}					
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}						
+				create_army = {
+					name = random
+					owner = ROOT
+					species = ROOT
+					type = "defense_army"
+				}
+				create_army = {
+					name = random
+					owner = ROOT
+					species = ROOT
+					type = "defense_army"
+				}
+				create_army = {
+					name = random
+					owner = ROOT
+					species = ROOT
+					type = "defense_army"
+				}
+				create_army = {
+					name = random
+					owner = ROOT
+					species = ROOT
+					type = "defense_army"
+				}				
+			}
+		}
+		
+		moon = {
+			name = "Mother"
+			class = "pc_gaia"
+			size = 12
+			orbit_distance = 5
+			orbit_angle = 190
+			tile_blockers = none
+			modifiers = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				set_owner = ROOT				
+				random_tile = {
+					limit = { has_building = no has_blocker = no num_adjacent_tiles > 3 }
+					set_building = "building_capital_2"
+					add_resource = {
+						resource = minerals
+						amount = 1
+						replace = yes
+					}
+					add_resource = {
+						resource = food
+						amount = 1
+					}					
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_agri_processing_complex"
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}						
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_agri_processing_complex"
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}						
+				}				
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_ancient_factory"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}					
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_ancient_factory"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}					
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}						
+				}				
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}						
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}						
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}						
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}						
+				}				
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_ancient_factory"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}						
+				}
+				random_tile = {
+					limit = { has_building = no has_blocker = no }
+					set_building = "building_ancient_factory"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}						
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}	
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}					
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}
+				create_pop = { 
+					species = owner_main_species
+					ethos = owner 
+				}					
+				create_army = {
+					name = random
+					owner = ROOT
+					species = ROOT
+					type = "defense_army"
+				}
+				create_army = {
+					name = random
+					owner = ROOT
+					species = ROOT
+					type = "defense_army"
+				}
+				create_army = {
+					name = random
+					owner = ROOT
+					species = ROOT
+					type = "defense_army"
+				}
+				create_army = {
+					name = random
+					owner = ROOT
+					species = ROOT
+					type = "defense_army"
+				}
+			}
+		}
+	}
+		
+	neighbor_system = {
+		distance = { min = 0 max = 50 }
+		initializer = "fallen_orbitals_1"
+	}
+	neighbor_system = {
+		distance = { min = 0 max = 50 }
+		initializer = "fallen_orbitals_1"
+	}
+	neighbor_system = {
+		distance = { min = 0 max = 50 }
+		initializer = "fallen_orbitals_2"
+	}
+	neighbor_system = {
+		distance = { min = 0 max = 50 }
+		initializer = "fallen_orbitals_2"
+	}
+	neighbor_system = {
+		distance = { min = 0 max = 50 }
+		initializer = "fallen_shielded_3"
+	}
+}
+
+
+### STANDARD FALLEN EMPIRE SYSTEMS
+
+fallen_col_1 = {
+	class = "rl_standard_stars"
+	asteroids_distance = 50
+	
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 50
+	
+	planet = {
+		count = { min = 1 max = 3 }
+		class = random_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 40 max = 100 }
+	}
+	
+	planet = {
+		count = { min = 0 max = 2 }
+		orbit_distance = 20
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 0 max = 1 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		count = 1
+		orbit_distance = 20
+		home_planet = yes
+		class = ideal_planet_class
+		orbit_angle = { min = 90 max = 270 }
+		size = 16
+		tile_blockers = none
+		modifiers = none
+
+		init_effect = {
+			prevent_anomaly = yes
+			set_owner = ROOT			
+			random_tile = {
+				limit = { has_building = no has_blocker = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_2"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}
+				add_resource = {
+					resource = food
+					amount = 1
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+		create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}			
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_spaceport = {
+				owner = ROOT
+				initial_module = "fallen_empire_weapon"
+			}
+			spaceport = {
+				set_spaceport_level = 6		
+				set_spaceport_module = {
+					slot = 1
+					module = "crew_quarters"
+				}	
+				set_spaceport_module = {
+					slot = 2
+					module = "fleet_academy"
+				}
+				set_spaceport_module = {
+					slot = 3
+					module = "synchronized_defenses"
+				}
+				set_spaceport_module = {
+					slot = 4
+					module = "solar_panel_network"
+				}				
+			}				
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}			
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}			
+				set_location = {
+					target = PREV
+					distance = 45
+					angle = random 
+				}
+			}				
+		}
+		
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 0 max = 1 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		count = { min = 2 max = 4 }
+		orbit_distance = 20
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 0 max = 1 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		count = { min = 1 max = 2 }
+		orbit_distance = 20
+		class = pc_gas_giant
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 0 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	init_effect = {
+		random_system_planet = {
+			limit = { has_deposit_for = shipclass_mining_station }
+			create_mining_station = {
+				owner = ROOT
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Sigma"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 90
+				}
+			}
+		}
+		random_system_planet = {
+			limit = { 
+				has_deposit_for = shipclass_mining_station 
+				has_mining_station = no
+			}
+			create_mining_station = {
+				owner = ROOT
+			}
+		}
+		random_system_planet = {
+			limit = { has_deposit_for = shipclass_research_station }
+			create_research_station = {
+				owner = ROOT
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Sigma"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 90
+				}
+			}
+		}
+		random_system_planet = {
+			limit = { 
+				has_deposit_for = shipclass_research_station 
+				has_research_station = no
+			}
+			create_research_station = {
+				owner = ROOT
+			}
+		}
+		random_system_planet = {
+			limit = { 
+				has_research_station = no
+				has_mining_station = no
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Sigma"
+					graphical_culture = root
+				}
+				set_location = PREV
+			}
+		}
+	}
+}
+
+fallen_col_2 = {
+	class = "rl_standard_stars"
+	asteroids_distance = 115
+		
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 50
+	
+	planet = {
+		count = 1
+		home_planet = yes
+		class = ideal_planet_class
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 16 max = 16 }
+		tile_blockers = none
+		modifiers = none
+
+		init_effect = {
+			prevent_anomaly = yes
+			set_owner = ROOT			
+			random_tile = {
+				limit = { has_building = no has_blocker = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_2"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}
+				add_resource = {
+					resource = food
+					amount = 1
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}
+			create_pop = { 
+				species = owner_main_species
+				ethos = owner 
+			}			
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_spaceport = {
+				owner = ROOT
+				initial_module = "fallen_empire_weapon"
+			}
+			spaceport = {
+				set_spaceport_level = 6		
+				set_spaceport_module = {
+					slot = 1
+					module = "crew_quarters"
+				}	
+				set_spaceport_module = {
+					slot = 2
+					module = "fleet_academy"
+				}
+				set_spaceport_module = {
+					slot = 3
+					module = "synchronized_defenses"
+				}
+				set_spaceport_module = {
+					slot = 4
+					module = "solar_panel_network"
+				}				
+			}	
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Avatar"
+					graphical_culture = root
+				}			
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}
+				create_ship = {
+					name = random
+					design = "Eclipse"
+					graphical_culture = root
+				}			
+				set_location = {
+					target = PREV
+					distance = 45
+					angle = random 
+				}
+			}				
+		}
+		
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 0 max = 1 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		count = 2
+		orbit_distance = 20
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 0 max = 1 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	change_orbit = 25
+	
+	planet = {
+		count = { min = 2 max = 3 }
+		class = random_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 40 max = 110 }
+	}
+	
+	planet = {
+		count = { min = 2 max = 4 }
+		orbit_distance = 25
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 0 max = 1 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		count = { min = 1 max = 2 }
+		orbit_distance = 20
+		class = pc_gas_giant
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 0 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		count = { min = 0 max = 2 }
+		orbit_distance = 20
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	init_effect = {
+		random_system_planet = {
+			limit = { has_deposit_for = shipclass_mining_station }
+			create_mining_station = {
+				owner = ROOT
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Sigma"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 90
+				}
+			}
+		}
+		random_system_planet = {
+			limit = { 
+				has_deposit_for = shipclass_mining_station 
+				has_mining_station = no
+			}
+			create_mining_station = {
+				owner = ROOT
+			}
+		}
+		random_system_planet = {
+			limit = { has_deposit_for = shipclass_research_station }
+			create_research_station = {
+				owner = ROOT
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Sigma"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 90
+				}
+			}
+		}
+		random_system_planet = {
+			limit = { 
+				has_deposit_for = shipclass_research_station 
+				has_research_station = no
+			}
+			create_research_station = {
+				owner = ROOT
+			}
+		}
+		random_system_planet = {
+			limit = { 
+				has_research_station = no
+				has_mining_station = no
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Sigma"
+					graphical_culture = root
+				}
+				set_location = PREV
+			}
+		}
+	}
+}
+
+
+fallen_orbitals_1 = {	
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		count = { min = 2 max = 10 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	init_effect = {
+		random_system_planet = {
+			limit = {
+				is_ideal_planet_class = {
+					who = ROOT
+					status = yes
+				}
+				is_colony = no
+			}
+			prevent_anomaly = yes
+			set_owner = ROOT
+			random_tile = {
+				limit = { 
+					has_building = no 
+					has_blocker = no
+					num_adjacent_tiles > 3
+				}
+				set_building = "building_capital_2"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}
+				add_resource = {
+					resource = food
+					amount = 1
+				}				
+			}
+			random_tile = {
+				limit = { 
+					has_building = no 
+					has_blocker = no
+				}
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { 
+					has_building = no 
+					has_blocker = no
+				}
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { 
+					has_building = no 
+					has_blocker = no
+				}
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { 
+					has_building = no 
+					has_blocker = no
+				}
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { 
+					has_building = no 
+					has_blocker = no
+				}
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { 
+					has_building = no 
+					has_blocker = no
+				}
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = {
+					has_blocker = no
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				create_pop = {
+					species = owner_main_species
+					ethos = owner
+				}
+			}
+			random_tile = {
+				limit = {
+					has_blocker = no
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				create_pop = {
+					species = owner_main_species
+					ethos = owner
+				}
+			}
+			random_tile = {
+				limit = {
+					has_blocker = no
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				create_pop = {
+					species = owner_main_species
+					ethos = owner
+				}
+			}
+			random_tile = {
+				limit = {
+					has_blocker = no
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				create_pop = {
+					species = owner_main_species
+					ethos = owner
+				}
+			}
+			random_tile = {
+				limit = {
+					has_blocker = no
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				create_pop = {
+					species = owner_main_species
+					ethos = owner
+				}
+			}
+			random_tile = {
+				limit = {
+					has_blocker = no
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				create_pop = {
+					species = owner_main_species
+					ethos = owner
+				}
+			}			
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+		}
+		random_system_planet = {
+			limit = { has_deposit_for = shipclass_mining_station }
+			create_mining_station = {
+				owner = ROOT
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Sigma"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 90
+				}
+			}
+		}
+		random_system_planet = {
+			limit = { 
+				has_deposit_for = shipclass_mining_station 
+				has_mining_station = no
+			}
+			create_mining_station = {
+				owner = ROOT
+			}
+		}
+		random_system_planet = {
+			limit = { has_deposit_for = shipclass_research_station }
+			create_research_station = {
+				owner = ROOT
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Sigma"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 90
+				}
+			}
+		}
+		random_system_planet = {
+			limit = { 
+				has_deposit_for = shipclass_research_station 
+				has_research_station = no
+			}
+			create_research_station = {
+				owner = ROOT
+			}
+		}
+		random_system_planet = {
+			limit = { 
+				has_research_station = no
+				has_mining_station = no
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Sigma"
+					graphical_culture = root
+				}
+				set_location = PREV
+			}
+		}
+	}
+	
+	neighbor_system = {
+		distance = { min = 0 max = 50 }
+		initializer = "fallen_col_1"
+	}
+	neighbor_system = {
+		distance = { min = 0 max = 50 }
+		initializer = "fallen_col_2"
+	}
+}
+
+fallen_orbitals_2 = {
+	asteroids_distance = 95
+		
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		count = 2
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	change_orbit = 25
+	
+	planet = {
+		count = { min = 1 max = 4 }
+		class = random_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		count = { min = 2 max = 5 }
+		orbit_distance = 25
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	init_effect = {
+		random_system_planet = {
+			limit = {
+				is_ideal_planet_class = {
+					who = ROOT
+					status = yes
+				}
+				is_colony = no
+			}
+			prevent_anomaly = yes
+			set_owner = ROOT
+			random_tile = {
+				limit = { 
+					has_building = no 
+					has_blocker = no
+					num_adjacent_tiles > 3
+				}
+				set_building = "building_capital_2"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}
+				add_resource = {
+					resource = food
+					amount = 1
+				}				
+			}
+			random_tile = {
+				limit = { 
+					has_building = no 
+					has_blocker = no
+				}
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { 
+					has_building = no 
+					has_blocker = no
+				}
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { 
+					has_building = no 
+					has_blocker = no
+				}
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { 
+					has_building = no 
+					has_blocker = no
+				}
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { 
+					has_building = no 
+					has_blocker = no
+				}
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { 
+					has_building = no 
+					has_blocker = no
+				}
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}
+			}
+			random_tile = {
+				limit = {
+					has_blocker = no
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				create_pop = {
+					species = owner_main_species
+					ethos = owner
+				}
+			}
+			random_tile = {
+				limit = {
+					has_blocker = no
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				create_pop = {
+					species = owner_main_species
+					ethos = owner
+				}
+			}
+			random_tile = {
+				limit = {
+					has_blocker = no
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				create_pop = {
+					species = owner_main_species
+					ethos = owner
+				}
+			}
+			random_tile = {
+				limit = {
+					has_blocker = no
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				create_pop = {
+					species = owner_main_species
+					ethos = owner
+				}
+			}
+			random_tile = {
+				limit = {
+					has_blocker = no
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				create_pop = {
+					species = owner_main_species
+					ethos = owner
+				}
+			}
+			random_tile = {
+				limit = {
+					has_blocker = no
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				create_pop = {
+					species = owner_main_species
+					ethos = owner
+				}
+			}			
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+			create_army = {
+				name = random
+				owner = ROOT
+				species = ROOT
+				type = "defense_army"
+			}
+		}
+		random_system_planet = {
+			limit = { has_deposit_for = shipclass_mining_station }
+			create_mining_station = {
+				owner = ROOT
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Sigma"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 90
+				}
+			}
+		}
+		random_system_planet = {
+			limit = { 
+				has_deposit_for = shipclass_mining_station 
+				has_mining_station = no
+			}
+			create_mining_station = {
+				owner = ROOT
+			}
+		}
+		random_system_planet = {
+			limit = { has_deposit_for = shipclass_research_station }
+			create_research_station = {
+				owner = ROOT
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Sigma"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 90
+				}
+			}
+		}
+		random_system_planet = {
+			limit = { 
+				has_deposit_for = shipclass_research_station 
+				has_research_station = no
+			}
+			create_research_station = {
+				owner = ROOT
+			}
+		}
+		random_system_planet = {
+			limit = { 
+				has_research_station = no
+				has_mining_station = no
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Sigma"
+					graphical_culture = root
+				}
+				set_location = PREV
+			}
+		}
+	}
+	
+	neighbor_system = {
+		distance = { min = 0 max = 50 }
+		initializer = "fallen_col_1"
+	}
+	neighbor_system = {
+		distance = { min = 0 max = 50 }
+		initializer = "fallen_col_2"
+	}
+}
+
+### SPECIAL FALLEN EMPIRE SYSTEMS
+
+# Shielded Planet 1
+fallen_shielded_1 = {
+	class = "rl_standard_stars"
+	flags = { fallen_shielded_1 }
+		
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 35
+	
+	planet = {
+		count = { min = 1 max = 3 }
+		orbit_distance = 15
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		count = 1
+		orbit_distance = 20
+		class = pc_shielded
+		orbit_angle = { min = 90 max = 270 }
+		size = 16
+		modifiers = none
+		flags = { fallen_shield_world }
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 0 max = 1 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		count = { min = 1 max = 3 }
+		orbit_distance = 25
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		count = { min = 1 max = 2 }
+		orbit_distance = 20
+		class = pc_gas_giant
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 1 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		count = { min = 0 max = 1 }
+		orbit_distance = 20
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	init_effect = {
+		random_system_planet = {
+			limit = { has_deposit_for = shipclass_mining_station }
+			create_mining_station = {
+				owner = ROOT
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Sigma"
+					#graphical_culture = root
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 90
+				}
+			}
+		}
+		random_system_planet = {
+			limit = { 
+				has_deposit_for = shipclass_mining_station 
+				has_mining_station = no
+			}
+			create_mining_station = {
+				owner = ROOT
+			}
+		}
+		random_system_planet = {
+			limit = { has_deposit_for = shipclass_research_station }
+			create_research_station = {
+				owner = ROOT
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Sigma"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 90
+				}
+			}
+		}
+		random_system_planet = {
+			limit = { 
+				has_deposit_for = shipclass_research_station 
+				has_research_station = no
+			}
+			create_research_station = {
+				owner = ROOT
+			}
+		}
+		random_system_planet = {
+			limit = { is_planet_class = pc_shielded }
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Omega"
+					graphical_culture = root
+				}
+				set_location = PREV
+			}
+		}
+	}
+}
+
+# Shielded Planet 2
+fallen_shielded_2 = {
+	class = "rl_standard_stars"
+	flags = { fallen_shielded_2 }
+		
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 35
+	
+	planet = {
+		count = { min = 1 max = 3 }
+		orbit_distance = 15
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		count = 1
+		orbit_distance = 20
+		class = pc_shielded
+		orbit_angle = { min = 90 max = 270 }
+		size = 16
+		modifiers = none
+		flags = { fallen_shield_world }
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 0 max = 1 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		count = { min = 1 max = 3 }
+		orbit_distance = 25
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		count = { min = 1 max = 2 }
+		orbit_distance = 20
+		class = pc_gas_giant
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 1 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		count = { min = 0 max = 1 }
+		orbit_distance = 20
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	init_effect = {
+		random_system_planet = {
+			limit = { has_deposit_for = shipclass_mining_station }
+			create_mining_station = {
+				owner = ROOT
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Sigma"
+					#graphical_culture = root
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 90
+				}
+			}
+		}
+		random_system_planet = {
+			limit = { 
+				has_deposit_for = shipclass_mining_station 
+				has_mining_station = no
+			}
+			create_mining_station = {
+				owner = ROOT
+			}
+		}
+		random_system_planet = {
+			limit = { has_deposit_for = shipclass_research_station }
+			create_research_station = {
+				owner = ROOT
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Sigma"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 90
+				}
+			}
+		}
+		random_system_planet = {
+			limit = { 
+				has_deposit_for = shipclass_research_station 
+				has_research_station = no
+			}
+			create_research_station = {
+				owner = ROOT
+			}
+		}
+		random_system_planet = {
+			limit = { is_planet_class = pc_shielded }
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Omega"
+					graphical_culture = root
+				}
+				set_location = PREV
+			}
+		}
+	}
+}
+
+# Shielded Planet 3
+fallen_shielded_3 = {
+	class = "rl_standard_stars"
+	
+	flags = { fallen_shielded_3 }
+		
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 35
+	
+	planet = {
+		count = { min = 1 max = 3 }
+		orbit_distance = 15
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		count = 1
+		orbit_distance = 20
+		class = pc_shielded
+		orbit_angle = { min = 90 max = 270 }
+		size = 16
+		modifiers = none
+		flags = { fallen_shield_world }
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 0 max = 1 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		count = { min = 1 max = 3 }
+		orbit_distance = 25
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		count = { min = 1 max = 2 }
+		orbit_distance = 20
+		class = pc_gas_giant
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 1 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		count = { min = 0 max = 1 }
+		orbit_distance = 20
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	init_effect = {
+		random_system_planet = {
+			limit = { has_deposit_for = shipclass_mining_station }
+			create_mining_station = {
+				owner = ROOT
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Sigma"
+					#graphical_culture = root
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 90
+				}
+			}
+		}
+		random_system_planet = {
+			limit = { 
+				has_deposit_for = shipclass_mining_station 
+				has_mining_station = no
+			}
+			create_mining_station = {
+				owner = ROOT
+			}
+		}
+		random_system_planet = {
+			limit = { has_deposit_for = shipclass_research_station }
+			create_research_station = {
+				owner = ROOT
+			}
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Sigma"
+					graphical_culture = root
+				}
+				set_location = {
+					target = PREV
+					distance = 20
+					angle = 90
+				}
+			}
+		}
+		random_system_planet = {
+			limit = { 
+				has_deposit_for = shipclass_research_station 
+				has_research_station = no
+			}
+			create_research_station = {
+				owner = ROOT
+			}
+		}
+		random_system_planet = {
+			limit = { is_planet_class = pc_shielded }
+			create_fleet = { }
+			last_created_fleet = {
+				set_owner = ROOT
+				create_ship = {
+					name = random
+					design = "Omega"
+					graphical_culture = root
+				}
+				set_location = PREV
+			}
+		}
+	}
+}
+
+# Fallen Empire's Holy World 1
+fallen_holy_01 = {
+	class = "rl_standard_stars"
+
+	flags = { holy_system_1 }
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		count = 1
+		orbit_distance = 30
+		class = "pc_gaia"
+		orbit_angle = { min = 90 max = 270 }
+		size = 18
+		name = "Walled Garden"
+
+		init_effect = {
+			add_modifier = {
+				modifier = "holy_planet"
+				days = -1
+			}
+		}
+	}
+
+	planet = {
+		count = { min = 2 max = 10 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+}
+
+# Fallen Empire's Holy World 2
+fallen_holy_02 = {
+	class = "rl_standard_stars"
+	asteroids_distance = 95
+
+	flags = { holy_system_2 }
+	
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		count = 2
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	change_orbit = 25
+	
+	planet = {
+		count = { min = 1 max = 4 }
+		class = random_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		count = 1
+		orbit_distance = 25
+		class = "pc_gaia"
+		orbit_angle = { min = 90 max = 270 }
+		size = 14
+		name = "Emerald Mausoleum"
+		init_effect = {
+			add_modifier = {
+				modifier = "holy_planet"
+				days = -1
+			}
+		}
+	}
+	
+	planet = {
+		count = { min = 2 max = 5 }
+		orbit_distance = 30
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+}
+
+# Fallen Empire's Holy World 3
+fallen_holy_03 = {
+	class = "rl_standard_stars"
+
+	flags = { holy_system_3 }
+	
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		count = 1
+		orbit_distance = 10
+		class = "pc_gaia"
+		name = "Pristine Jewel"
+		orbit_angle = { min = 90 max = 270 }
+		size = 10
+
+		init_effect = {
+			add_modifier = {
+				modifier = "holy_planet"
+				days = -1
+			}
+		}
+	}
+	
+	planet = {
+		count = { min = 1 max = 2 }
+		orbit_distance = 60
+		class = pc_gas_giant
+		orbit_angle = { min = 90 max = 270 }
+		size = 25
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 1 max = 4 }
+			size = { min = 8 max = 20 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 6
+		}
+	}
+	
+	change_orbit = 20
+	
+	planet = {
+		count = { min = 0 max = 2 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+# Fallen Empire's Holy World 4
+fallen_holy_04 = {
+	class = "rl_standard_stars"
+	asteroids_distance = 120
+
+	flags = { holy_system_4 }
+	
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 120
+	
+	planet = {
+		count = 1
+		orbit_distance = 10
+		class = "pc_gaia"
+		name = "Prophet's Retreat"
+		orbit_angle = { min = 90 max = 270 }
+		size = 25
+
+		init_effect = {
+			add_modifier = {
+				modifier = "holy_planet"
+				days = -1
+			}
+		}
+	}
+	
+	change_orbit = -80
+	
+	planet = {
+		count = { min = 0 max = 2 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	change_orbit = 80
+	
+	planet = {
+		count = { min = 0 max = 2 }
+		orbit_distance = 40
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
