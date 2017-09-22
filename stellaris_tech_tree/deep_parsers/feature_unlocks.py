@@ -55,7 +55,6 @@ class FeatureUnlocks:
                     localized = _localize('tech_gene_tailoring_POINTS')
 
             while '$' in localized:
-                print(localized)
                 localized = re.sub(r'\$([\w\|\+=]+)\$', _localize, localized)
 
             return localized
@@ -110,8 +109,8 @@ class FeatureUnlocks:
 
         try:
             acquired_modifiers = [localize(modifier) for modifier in next(iter(
-               attribute for attribute in tech_data
-               if list(attribute)[0] == 'modifier'
+                attribute for attribute in tech_data
+                if list(attribute)[0] == 'modifier'
             ))['modifier']]
         except (StopIteration):
             acquired_modifiers = []
