@@ -18,7 +18,7 @@ html { overflow-x: hidden; overflow-y: hidden; }
 </style>
 </head>
 <body>
-    <div style="position: absolute; z-index: 4; height: 300px; width: 100%; background-color: #ffffff;">
+    <div id="panel" style="z-index: 4; width: 100%; background-color: #ffffff;">
         <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
             <input name="next" type="hidden" value="{{ redirect_to }}" />
             <select name="language" onchange="this.form.submit()">
@@ -34,11 +34,14 @@ html { overflow-x: hidden; overflow-y: hidden; }
         </form>
 
         <select id="version" onchange="loadTech(document.getElementById('version').value)">
+            <option value="Čapek">Čapek v1.8.0</option>
             <option value="adams">Adams v1.6.2</option>
             <option value="banks">Banks v1.5.1</option>
             <option value="kennedy">Kennedy v1.4.1</option>
             <option value="heinlein">Heinlein v1.3.2</option>
             <option value="asimov">Asimov v1.2.5*ParseError</option>
+            <option value="clarke">Clarke v1.1.0</option>
+            <option value="launch">Launch v1.0.3</option>
             <option value="alphamod">Alpha Mod</option>
             <option value="isb">Improved Space Battles</option>
             <option value="new_horizons">ST: New Horizons</option>
@@ -47,13 +50,16 @@ html { overflow-x: hidden; overflow-y: hidden; }
     </div>
     <script>
       window.addEventListener("load", function() {
+        document.getElementById('panel').style.height = '+' + window.innerHeight * 0.2 + 'px';
+        document.getElementById('panel').style.position = "absolute";
+        document.getElementById('tech-tree').style.top = '+' + window.innerHeight * 0.2 + 'px';
         loadTech(document.getElementById('version').value);
         waitLoadDrag('tech-tree');
       });
     </script>
 
     <div class="chart" id="tech-tree" 
-        style="top: 300px; user-select: none; -moz-user-select:none; -webkit-user-select:none;" 
+        style="user-select: none; -moz-user-select:none; -webkit-user-select:none;" 
         unselectable="on" onselectstart="return false;">
         <script src="{% static "vendor/raphael.js" %}"></script>
         <script src="{% static "js/Treant.js" %}"></script>
