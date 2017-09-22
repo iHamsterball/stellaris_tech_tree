@@ -32,7 +32,7 @@ function drag(elementId) {
 
   document.body.onkeydown = function (e) {
     //屏蔽默认按键功能
-    e.preventDefault();
+    //e.preventDefault();
     if (direction[e.keyCode]) {
       key[direction[e.keyCode]] = true;
       console.log(direction[e.keyCode]);
