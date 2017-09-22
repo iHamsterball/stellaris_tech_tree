@@ -1,0 +1,585 @@
+#Difficulty level by color: Blue->Green->Yellow->Red
+
+# Small Crystal Entity - Blue
+ship_design = {
+	name = "Small Crystal Entity Blue"
+	ship_size = crystal_ship_small_blue
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_small_blue_section"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_CRYSTAL_SHIP_BLUE_LIGHTNING"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_BLUE_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+	}
+}
+# Medium Crystal Entity - Blue
+ship_design = {
+	name = "Medium Crystal Entity Blue"
+	ship_size = crystal_ship_medium_blue
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_medium_blue_section"
+		slot = "mid"
+		
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_BLUE_LIGHTNING"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_BLUE_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+	}
+}
+# Large Crystal Entity - Blue
+ship_design = {
+	name = "Large Crystal Entity Blue"
+	ship_size = crystal_ship_large_blue
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_large_blue_section"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_CRYSTAL_SHIP_BLUE_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+	}
+}
+
+# Small Crystal Entity - Green
+ship_design = {
+	name = "Small Crystal Entity Green"
+	ship_size = crystal_ship_small_green
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_small_green_section"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_CRYSTAL_SHIP_GREEN_LIGHTNING"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_GREEN_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+	}
+}
+# Medium Crystal Entity - Green
+ship_design = {
+	name = "Medium Crystal Entity Green"
+	ship_size = crystal_ship_medium_green
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_medium_green_section"
+		slot = "mid"
+		
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_GREEN_LIGHTNING"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_GREEN_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+	}
+}
+# Large Crystal Entity - Green
+ship_design = {
+	name = "Large Crystal Entity Green"
+	ship_size = crystal_ship_large_green
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_large_green_section"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_CRYSTAL_SHIP_GREEN_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+	}
+}
+
+# Small Crystal Entity - Yellow
+ship_design = {
+	name = "Small Crystal Entity Yellow"
+	ship_size = crystal_ship_small_yellow
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_small_yellow_section"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_CRYSTAL_SHIP_YELLOW_LIGHTNING"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_YELLOW_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+	}
+}
+# Medium Crystal Entity - Yellow
+ship_design = {
+	name = "Medium Crystal Entity Yellow"
+	ship_size = crystal_ship_medium_yellow
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_medium_yellow_section"
+		slot = "mid"
+		
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_YELLOW_LIGHTNING"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_YELLOW_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+	}
+}
+# Large Crystal Entity - Yellow
+ship_design = {
+	name = "Large Crystal Entity Yellow"
+	ship_size = crystal_ship_large_yellow
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_large_yellow_section"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_CRYSTAL_SHIP_YELLOW_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+	}
+}
+
+# Small Crystal Entity - Red
+ship_design = {
+	name = "Small Crystal Entity Red"
+	ship_size = crystal_ship_small_red
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_small_red_section"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_CRYSTAL_SHIP_RED_LIGHTNING"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "SMALL_CRYSTAL_SHIP_RED_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+	}
+}
+# Medium Crystal Entity - Red
+ship_design = {
+	name = "Medium Crystal Entity Red"
+	ship_size = crystal_ship_medium_red
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_medium_red_section"
+		slot = "mid"
+		
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_RED_LIGHTNING"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_RED_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+	}
+}
+# Large Crystal Entity - Red
+ship_design = {
+	name = "Large Crystal Entity Red"
+	ship_size = crystal_ship_large_red
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_large_red_section"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_CRYSTAL_SHIP_RED_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+	}
+}
+
+# Small Crystal Entity - Blue - ELITE
+ship_design = {
+	name = "Small Crystal Entity Blue Elite"
+	ship_size = crystal_ship_small_blue_elite
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_small_blue_elite_section"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_CRYSTAL_SHIP_BLUE_ELITE_LIGHTNING"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_BLUE_ELITE_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+	}
+}
+# Medium Crystal Entity - Blue - ELITE
+ship_design = {
+	name = "Medium Crystal Entity Blue Elite"
+	ship_size = crystal_ship_medium_blue_elite
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_medium_blue_elite_section"
+		slot = "mid"
+		
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_BLUE_ELITE_LIGHTNING"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_BLUE_ELITE_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "MEDIUM_CRYSTAL_ARMOR_1"
+		}
+	}
+}
+# Large Crystal Entity - Blue - ELITE
+ship_design = {
+	name = "Large Crystal Entity Blue Elite"
+	ship_size = crystal_ship_large_blue_elite
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_large_blue_elite_section"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_CRYSTAL_SHIP_BLUE_ELITE_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_CRYSTAL_ARMOR_1"
+		}
+	}
+}
+
+# Small Crystal Entity - Green - ELITE
+ship_design = {
+	name = "Small Crystal Entity Green Elite"
+	ship_size = crystal_ship_small_green_elite
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_small_green_elite_section"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_CRYSTAL_SHIP_GREEN_ELITE_LIGHTNING"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_GREEN_ELITE_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+	}
+}
+# Medium Crystal Entity - Green - ELITE
+ship_design = {
+	name = "Medium Crystal Entity Green Elite"
+	ship_size = crystal_ship_medium_green_elite
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_medium_green_elite_section"
+		slot = "mid"
+		
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_GREEN_ELITE_LIGHTNING"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_GREEN_ELITE_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "MEDIUM_CRYSTAL_ARMOR_1"
+		}
+	}
+}
+# Large Crystal Entity - Green - ELITE
+ship_design = {
+	name = "Large Crystal Entity Green Elite"
+	ship_size = crystal_ship_large_green_elite
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_large_green_elite_section"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_CRYSTAL_SHIP_GREEN_ELITE_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_CRYSTAL_ARMOR_1"
+		}
+	}
+}
+
+# Small Crystal Entity - Yellow - ELITE
+ship_design = {
+	name = "Small Crystal Entity Yellow Elite"
+	ship_size = crystal_ship_small_yellow_elite
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_small_yellow_elite_section"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_CRYSTAL_SHIP_YELLOW_ELITE_LIGHTNING"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_YELLOW_ELITE_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+	}
+}
+# Medium Crystal Entity - Yellow - ELITE
+ship_design = {
+	name = "Medium Crystal Entity Yellow Elite"
+	ship_size = crystal_ship_medium_yellow_elite
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_medium_yellow_elite_section"
+		slot = "mid"
+		
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_YELLOW_ELITE_LIGHTNING"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_YELLOW_ELITE_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "MEDIUM_CRYSTAL_ARMOR_2"
+		}
+	}
+}
+# Large Crystal Entity - Yellow - ELITE
+ship_design = {
+	name = "Large Crystal Entity Yellow Elite"
+	ship_size = crystal_ship_large_yellow_elite
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_large_yellow_elite_section"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_CRYSTAL_SHIP_YELLOW_ELITE_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_CRYSTAL_ARMOR_2"
+		}
+	}
+}
+
+# Small Crystal Entity - Red - ELITE
+ship_design = {
+	name = "Small Crystal Entity Red Elite"
+	ship_size = crystal_ship_small_red_elite
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_small_red_elite_section"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_CRYSTAL_SHIP_RED_ELITE_LIGHTNING"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "SMALL_CRYSTAL_SHIP_RED_ELITE_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+	}
+}
+# Medium Crystal Entity - Red - ELITE
+ship_design = {
+	name = "Medium Crystal Entity Red Elite"
+	ship_size = crystal_ship_medium_red_elite
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_medium_red_elite_section"
+		slot = "mid"
+		
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_RED_ELITE_LIGHTNING"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_RED_ELITE_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "MEDIUM_CRYSTAL_ARMOR_2"
+		}
+	}
+}
+# Large Crystal Entity - Red - ELITE
+ship_design = {
+	name = "Large Crystal Entity Red Elite"
+	ship_size = crystal_ship_large_red_elite
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_large_red_elite_section"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_CRYSTAL_SHIP_RED_ELITE_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_AUTO_REPAIR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_CRYSTAL_ARMOR_2"
+		}
+	}
+}

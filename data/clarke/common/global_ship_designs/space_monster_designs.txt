@@ -1,0 +1,91 @@
+# Space Cloud
+ship_design = {
+	name = "Cloud Entity"
+	ship_size = space_cloud
+	hide_size = yes
+
+	section = {
+		template = "space_cloud_section"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_SPACE_CLOUD_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_SPACE_CLOUD_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_SPACE_CLOUD_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "SMALL_SPACE_CLOUD_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_GUN_04"
+			template = "SMALL_SPACE_CLOUD_LIGHTNING"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "MEDIUM_AUTO_REPAIR"
+		}
+	}
+	required_component="COMBAT_COMPUTER_AGGRESSIVE_BASIC"
+	required_component="SHIP_THRUSTER_1"
+}
+
+# Large Space Amoeba
+ship_design = {
+	name = "Large Space Organism"
+	ship_size = space_amoeba
+	hide_size = yes
+	
+	section = {
+		template = "space_amoeba_large_section"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "AMOEBA_STRIKE_CRAFT"
+		}
+		
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_AUTO_REPAIR"
+		}
+	}
+}
+
+# Large Space Amoeba w/ warp
+ship_design = {
+	name = "Great Space Organism"
+	ship_size = space_amoeba
+	hide_size = yes
+	
+	section = {
+		template = "space_amoeba_large_section"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "AMOEBA_STRIKE_CRAFT"
+		}
+		
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_AUTO_REPAIR"
+		}
+	}
+	required_component="WARP_DRIVE_3"
+}
