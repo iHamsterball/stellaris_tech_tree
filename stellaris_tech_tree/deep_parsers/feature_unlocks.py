@@ -18,12 +18,45 @@ class FeatureUnlocks:
         self._spaceport_modules = spaceport_modules
         self._tile_blockers = tile_blockers
 
+        def __localize(alt_key):
+            return loc_data[alt_key]
+
         def _localize(string):
-            localized = loc_data[string] if type(string) is str \
-                        else loc_data[string.group(1)]
+            print(string, type(string))
+            try:
+                localized = loc_data[string] if type(string) is str \
+                            else loc_data[string.group(1)]
+            except KeyError:
+                if isinstance(string, str):
+                    prefix = 'MOD_'
+                    key = string
+                    alt_key = (prefix + key).upper()
+                    try:
+                        localized = __localize(alt_key)
+                    except KeyError:
+                        prefix = 'MOD_COUNTRY_'
+                        alt_key = (prefix + key).upper()
+                        try:
+                            localized = __localize(alt_key)
+                        except KeyError:
+                            prefix = 'MOD_POP_'
+                            alt_key = (prefix + key).upper()
+                            try:
+                                localized = __localize(alt_key)
+                            except KeyError:
+                                prefix = 'MOD_PLANET_'
+                                alt_key = (prefix + key).upper()
+                                try:
+                                    localized = __localize(alt_key)
+                                except KeyError:
+                                    # Give up.
+                                    localized = string
+                else:
+                    localized = _localize('tech_gene_tailoring_POINTS')
 
             while '$' in localized:
-                localized = re.sub(r'\$(\w+)\$', _localize, localized)
+                print(localized)
+                localized = re.sub(r'\$([\w\|\+=]+)\$', _localize, localized)
 
             return localized
 
@@ -54,55 +87,31 @@ class FeatureUnlocks:
 
         def localize(modifier):
             key = list(modifier)[0]
-            value = ('{:+.0%}'.format(modifier[key])
-                     if modifier[key] < 1
-                     or int(modifier[key]) != modifier[key]
-                     else '{:+d}'.format(int(modifier[key])))
+            try:
+                value = ('{:+.0%}'.format(modifier[key])
+                        if modifier[key] < 1
+                        or int(modifier[key]) != modifier[key]
+                        else '{:+d}'.format(int(modifier[key])))
+            except TypeError:
+                try:
+                    value = self._localize(modifier[key])
+                except AttributeError:
+                    #description_parameters
+                    value = ''
 
             if key == 'all_technology_research_speed':
                 key = 'MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED'
             elif key == 'science_ship_survey_speed':
                 key = 'MOD_SHIP_SCIENCE_SURVEY_SPEED'
 
-            try:
-                localized = {self._localize(key): value}
-            except KeyError:
-                prefix = 'MOD_'
-                alt_key = (prefix + key).upper()
-                try:
-                    localized_key = self._localize(alt_key)
-                    localized = {localized_key: value}
-                    while '$' in localized_key:
-                        localized_key = re.sub(r'\$(\w+)\$',
-                                               self._localize,
-                                               localized_key)
-                        localized = {localized_key: value}
-
-                except KeyError:
-                    prefix = 'MOD_COUNTRY_'
-                    alt_key = (prefix + key).upper()
-                    try:
-                        localized = {self._localize(alt_key): value}
-                    except KeyError:
-                        prefix = 'MOD_POP_'
-                        alt_key = (prefix + key).upper()
-                        try:
-                            localized = {self._localize(alt_key): value}
-                        except KeyError:
-                            prefix = 'MOD_PLANET_'
-                            alt_key = (prefix + key).upper()
-                            try:
-                                localized = {self._localize(alt_key): value}
-                            except KeyError:
-                                # Give up.
-                                localized = {key: value}
+            localized = {self._localize(key): value}
 
             return '{}: {}'.format(next(iter(localized)), next(iter(localized.values())))
 
         try:
             acquired_modifiers = [localize(modifier) for modifier in next(iter(
-                attribute for attribute in tech_data
-                if list(attribute)[0] == 'modifier'
+               attribute for attribute in tech_data
+               if list(attribute)[0] == 'modifier'
             ))['modifier']]
         except (StopIteration):
             acquired_modifiers = []
