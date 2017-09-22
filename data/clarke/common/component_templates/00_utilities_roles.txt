@@ -1,0 +1,222 @@
+#############
+# UTILITIES ROLES #
+#############
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_DEFAULT"
+	size = small
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	power = 0
+	cost = 0
+	ship_behavior = "default"
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	class_restriction = { shipclass_military }
+	
+	component_set = "combat_computers"
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_AGGRESSIVE_BASIC"
+	size = small
+	icon = "GFX_ship_part_computer_aggressive_basic"
+	icon_frame = 1
+	power = -5
+	cost = 5
+	ship_behavior = "aggressive"
+	
+	modifier = {
+		ship_evasion_add = 5
+		ship_combat_speed_mult = 0.10
+	}
+	ship_modifier = {
+		ship_weapon_damage = 0.05
+	}
+	
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 2
+			has_country_flag = ai_flag_aggressive_personality
+		}
+	}
+	
+	class_restriction = { shipclass_military }
+	prerequisites = { "tech_combat_computers_1" }
+	component_set = "combat_computers"
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_DEFENSIVE_BASIC"
+	size = small
+	icon = "GFX_ship_part_computer_defensive_basic"
+	icon_frame = 1
+	power = -5
+	cost = 5
+	ship_behavior = "defensive"
+	
+	ship_modifier = {
+		ship_accuracy_add = 3
+		ship_fire_rate_mult = 0.05
+		ship_weapon_range_mult = 0.10
+	}
+	
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 2
+			has_country_flag = ai_flag_defensive_personality
+		}
+	}
+
+	class_restriction = { shipclass_military }
+	prerequisites = { "tech_combat_computers_1" }
+	component_set = "combat_computers"
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_AGGRESSIVE_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_aggressive_advanced"
+	icon_frame = 1
+	power = -10
+	cost = 10
+	ship_behavior = "aggressive"
+	
+	modifier = {
+		ship_evasion_add = 10
+		ship_combat_speed_mult = 0.20
+	}
+	ship_modifier = {
+		ship_weapon_damage = 0.10
+	}
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 2
+			has_country_flag = ai_flag_aggressive_personality
+		}
+	}
+	
+	class_restriction = { shipclass_military }
+	prerequisites = { "tech_combat_computers_2" }
+	component_set = "combat_computers"
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_DEFENSIVE_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_defensive_advanced"
+	icon_frame = 1
+	power = -10
+	cost = 10
+	ship_behavior = "defensive"
+	
+	ship_modifier = {
+		ship_accuracy_add = 6
+		ship_fire_rate_mult = 0.10
+		ship_weapon_range_mult = 0.20
+	}
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 2
+			has_country_flag = ai_flag_defensive_personality
+		}
+	}
+
+	class_restriction = { shipclass_military }
+	prerequisites = { "tech_combat_computers_2" }
+	component_set = "combat_computers"
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_SENTIENT"
+	size = small
+	icon = "GFX_ship_part_computer_sentient"
+	icon_frame = 1
+	power = -20
+	cost = 20
+	ship_behavior = "default"
+	
+	ship_modifier = {
+		ship_accuracy_add = 6
+		ship_fire_rate_mult = 0.10
+		ship_weapon_damage = 0.10
+	}
+	modifier = {
+		ship_evasion_add = 8
+		ship_combat_speed_mult = 0.10
+	}
+	
+	ai_weight = {
+		weight = 500
+		modifier = {
+			factor = 2
+			OR = {
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_materialist"
+			}
+		}
+		modifier = {
+			factor = 0.1
+			OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
+	}
+	
+	class_restriction = { shipclass_military }
+	prerequisites = { "tech_combat_computers_3" }
+	component_set = "combat_computers"
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_PRECOG"
+	size = small
+	icon = "GFX_ship_part_computer_pregoc"
+	icon_frame = 1
+	power = -20
+	cost = 20
+	ship_behavior = "default"
+	
+	modifier = {
+		ship_evasion_add = 10
+		ship_combat_speed_mult = 0.15
+	}	
+	ship_modifier = {
+		ship_accuracy_add = 4
+		ship_fire_rate_mult = 0.08
+		ship_weapon_damage = 0.08
+		ship_weapon_range_mult = 0.15
+	}
+	
+	ai_weight = {
+		weight = 500
+		modifier = {
+			factor = 2
+			OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
+		modifier = {
+			factor = 0.1
+			OR = {
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_materialist"
+			}
+		}
+	}
+	
+	class_restriction = { shipclass_military }
+	prerequisites = { "tech_precognition_interface" }
+	component_set = "combat_computers"
+}

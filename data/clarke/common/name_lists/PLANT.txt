@@ -1,0 +1,191 @@
+﻿### Plantoid 1
+PLANT = {	
+	### SHIPS
+
+	ship_names = {
+	
+		generic = {
+			"Blade" "Thorn" "Trichome" "Petal"
+		}
+	
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+		
+		science = {
+			"Drifting Leaf" "Floating Leaf" "Seeking Leaf" "Fluttering Leaf" "Soaring Leaf"
+		}
+		
+		colonizer = {
+			"Seed Capsule" "Fruit Carrier"
+		}
+		
+		constructor = {
+			"Meristem"
+		}
+		
+		orbital_station = {
+			"Branch"
+		}
+		mining_station = {
+			"Root"
+		}
+		research_station = {
+			"Topiary"
+		}
+		wormhole_station = { }
+		terraform_station = {
+			"Greenhouse"
+			"Orangerie"
+		}
+		observation_station = {
+			"Sensing Vine" "Climbing Vine" "Grasping Vine" "Twining Vine" "Growing Vine" "Enveloping Vine" "Dandelion Vine"
+		}
+	
+		military_station_small = { "Ya-te-veo" }
+	
+		military_station_medium = { "Ya-te-veo" }
+	
+		military_station_large = { "Ya-te-veo" }	
+	}
+	
+	fleet_names = {
+		random_names = {
+			"Blossoming Corolla" "Flourishing Corolla" "Vanquishing Corolla" "Whirling Corolla" "Burgeoning Corolla"
+		}
+		sequential_name = "%O% Corolla"
+	}
+
+	### ARMIES
+	army_names = {
+		defense_army = {
+			sequential_name = "%O% Protector's Wreath"
+		}
+			
+		assault_army = {
+			sequential_name = "%O% Funeral Wreath"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Bound Wreath"
+		}
+		
+		clone_army = { 
+			sequential_name = "Offset Wreath %R%"
+		}
+		
+		robotic_army = {
+			sequential_name = "Brass Wreath %R%"
+		}
+		
+		android_army = {
+			sequential_name = "Golden Wreath %R%"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O% Oaken Wreath"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Wreath of Flesh"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% Transgenic Wreath"
+		}
+	}
+
+		
+	
+	### PLANETS
+	
+	planet_names = {
+	
+		generic = {
+			names = {
+			}
+		}
+		
+		pc_desert = {
+			names = {
+				"Cactus' Rest" "Palms' Oasis"
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+				"The Cloud Forest" "The Rainforest"
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+				"Many Woods" "Many Meadows"
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+				"The Great Reef" "Coral's Home"
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+				"Boreal Rim" "Moss' Expand"
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+				"Evergreen" "Perseverence"
+			}
+		}
+		
+	}
+	
+	### CHARACTERS
+	
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+			}
+			
+			# Always combined with a second name
+			first_names = {
+				"Petals of"
+				"Fronds of"
+				"Rhizome of"
+				"Stalk of"
+			}
+			
+			# Always combined with a first name
+			second_names = {
+				White Grey Black Burgundy Red Blue Indigo Cyan Yellow Orange Ivory Ebony Purple Brown Teal Green Aquamarine Khaki Magenta Gold Silver
+				Bronze Honeydew Lavender Maroon Olive
+			}
+
+			regnal_first_names = {
+				"Trunk of"
+			}
+			
+			regnal_second_names = {
+				Yggdrasil "Yax Imix Che" Kalpavriksha Bo Akshayavat "Nookomis Giizhig" Irminsul Somb Tule Ashvattha Fusang
+			}
+		}
+	}
+}

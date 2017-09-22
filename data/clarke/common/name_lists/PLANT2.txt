@@ -1,0 +1,175 @@
+﻿### Plantoid 2
+### Created by Maximilian Olbers
+PLANT2 = {	
+	### SHIPS
+
+	ship_names = {
+	
+		generic = {
+			Leguminant Perennia Pithy Evergreener Crenator Resinous Tuberous Twig Undulator Whorler Petiole
+		}
+	
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		orbital_station = {
+		}
+		mining_station = {
+		}
+		research_station = {
+		}
+		wormhole_station = { }
+		terraform_station = {
+		}
+		observation_station = {
+		}
+	
+		military_station_small = { }
+	
+		military_station_medium = { }
+	
+		military_station_large = { }	
+	}
+	
+	fleet_names = {
+		random_names = {
+			"Blossoming Bouquet" "Flourishing Bouquet" "Vanquishing Bouquet" "Whirling Bouquet" "Burgeoning Bouquet"
+		}
+		sequential_name = "%O% Bouquet"
+	}
+
+	### ARMIES
+	army_names = {
+		defense_army = {
+			sequential_name = "%O% Protective Stalk"
+		}
+			
+		assault_army = {
+			sequential_name = "%O% Poison Stalk"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Bound Stalk"
+		}
+		
+		clone_army = { 
+			sequential_name = "Stalk of Many %R%"
+		}
+		
+		robotic_army = {
+			sequential_name = "Iron Stalk %R%"
+		}
+		
+		android_army = {
+			sequential_name = "Steel Stalk %R%"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O% Lobed Stalk"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Strange Stalk"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% Hybrid Stalk"
+		}
+	}
+
+		
+	
+	### PLANETS
+	
+	planet_names = {
+	
+		generic = {
+			names = {
+				Mosshome Arborealis Herbaceon Horticultured Grasslands Nutfall Shrubbery Trunksite Fernfield Cloverbed
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+		
+	}
+	
+	### CHARACTERS
+	
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+			}
+			
+			# Always combined with a second name
+			first_names = {
+				White Grey Black Burgundy Red Blue Indigo Cyan Yellow Orange Ivory Ebony Purple Brown Teal Green Aquamarine Khaki Magenta Gold Silver
+				Bronze Honeydew Lavender Maroon Olive
+			}
+			
+			# Always combined with a first name
+			second_names = {
+				Root Bulb Germination Frond Fruit Needle Nectar Weed Shoot Pod Cone
+			}
+
+			regnal_first_names = {
+				"Flower of"
+			}
+			
+			regnal_second_names = {
+				Yggdrasil "Yax Imix Che" Kalpavriksha Bo Akshayavat "Nookomis Giizhig" Irminsul Somb Tule Ashvattha Fusang
+			}
+		}
+	}
+}
