@@ -26,6 +26,7 @@ class Technology:
             iter(key for key in tech_data if list(key)[0] == 'tier')
         )['tier']
 
+        self.tier = self._is_repeatable_tech(tech_data)
         self.cost = self._cost(tech_data)
         self.base_weight = self._base_weight(tech_data)
         self.base_factor = self._base_factor(tech_data)
@@ -51,6 +52,12 @@ class Technology:
             is_start_tech = True if self.tier == 0 else False
 
         return is_start_tech
+
+    def _is_repeatable_tech(self, tech_data):
+        string = next(iter(key for key
+                           in tech_data
+                           if list(key)[0] == 'tier'))['tier']
+        return self._at_vars[string] if str(string).startswith('@') else string
 
     def _is_dangerous(self, tech_data):
         try:
