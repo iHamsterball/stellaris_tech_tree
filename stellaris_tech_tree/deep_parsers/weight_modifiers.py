@@ -242,7 +242,8 @@ def _localize_research_leader(values, negated=False):
         value = condition[key]
         localized_condition = {
             'has_trait': lambda: _localize_has_expertise(value),
-            'has_level': lambda: _localize_has_level(value)
+            'has_level': lambda: _localize_has_level(value),
+            'OR' : lambda: _localize_or(values)
         }[key]()
         localized_conditions.append(localized_condition)
 
@@ -267,11 +268,19 @@ def _localize_has_expertise(value):
 
     return condition
 
+def _localize_area(value):
+    # WTF is this?
+    # Version 1.3 and earlier
+    return ugettext('physics') if value == 'physics' else ''
 
 def _localize_any_system_within_border(values):
     parsed_values = [_parse_condition(value) for value in values]
     return {ugettext('Any System within Borders'): parsed_values}
 
+def _localize_not_any_system_within_border(values):
+    # Version 1.3 and earlier
+    parsed_values = [_parse_condition(value) for value in values]
+    return {ugettext('NOT Any System within Borders'): parsed_values}
 
 def _localize_is_in_cluster(value):
     return ugettext('Is in a {} Cluster').format(value)
@@ -340,6 +349,16 @@ def _localize_is_ftl_restricted(value):
 def _localize_has_not_authority(value):
     localized_machine_intelligence = localization_map[value]
     return ugettext('{} has NOT authority').format(localized_machine_intelligence)
+
+def _localize_has_not_policy_flag(value):
+    # Version 1.3 and earlier
+    return ugettext('{} Slavery for all species').format(localization_map[value])
+
+def _localize_not_is_same_species(value):
+    # ROOT
+    # I don't know what's this, I didn't play launch version before
+    # Version 1.0 only
+    return ugettext('Is NOT same species with ROOT species')
 
 def _localize_always(value):
     return ugettext('Always') if value == 'yes' else ugettext('Never')

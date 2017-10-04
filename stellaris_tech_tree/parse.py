@@ -50,7 +50,8 @@ def p_script(tokens):
 
 def p_statement_statements(tokens):
     'statements : statement statements'
-    tokens[0] = tokens[1] + tokens[2]
+    tokens[0] = [tokens[1]] + tokens[2] if type(tokens[1]) is str else \
+                tokens[1] + tokens[2]
 
 
 def p_statements_empty(tokens):
@@ -88,6 +89,10 @@ def p_statement_var_assign(tokens):
 
 def p_statement_binop(tokens):
     'statement : binop'
+    tokens[0] = tokens[1]
+
+def p_statement_color(tokens):
+    'statement : NUMBER NUMBER NUMBER NUMBER'
     tokens[0] = tokens[1]
 
 
