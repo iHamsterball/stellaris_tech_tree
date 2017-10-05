@@ -1,0 +1,71 @@
+
+# ==============================
+# TWEEEEEEEEEEAK for dat balance
+
+
+# XXX Obviously set it higher than 2 for release
+@move_hq_days_required = 30
+@move_hq_mineralcost = 1500
+@move_hq_mineralcost_negative = -1500
+@move_hq_energycost = 1500
+@move_hq_energycost_negative = -1500
+@move_hq_influencecost = 200
+
+# Edict cooldown is in events/nsc_hq_events.txt at the top
+
+
+# ==============================
+
+
+planet_edict = {
+	name = nsc_move_hq
+	influence_cost = @move_hq_influencecost
+
+	length = @move_hq_days_required
+
+	potential = {
+		owner = {
+			has_country_flag = headquarters_built
+			is_ai = no
+			is_playable_country = yes
+		}
+	}
+
+	allow = {
+		owner = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = nsc_hq_move_cooldown
+					has_country_flag = nsc_moving_hq
+				}
+				has_country_flag = headquarters_built
+			}
+			# XXX
+			# What we should do here is count_owned_ships
+			# The problem is that while a tooltip ingame is showing,
+			# any condition here will be triggered over 34 times per second,
+			# so any checks that we do should have minimal processing overhead.
+			# So instead, we set a country flag in an on_action
+			#count_owned_ships = {
+			#	limit = { is_ship_size = Headquarters }
+			#	count = 1 # Disable if there's more than 1 HQ
+			#}
+			minerals > @move_hq_mineralcost
+			energy > @move_hq_energycost
+		}
+	}
+	effect = {
+		owner = {
+			add_minerals = @move_hq_mineralcost_negative
+			add_energy = @move_hq_energycost_negative
+			set_country_flag = "nsc_moving_hq"
+			country_event = {
+				id = nsc_hq.1
+				days = @move_hq_days_required
+			}
+		}
+		custom_tooltip = edict_nsc_move_hq_tooltip
+	}
+	ai_weight = { weight = 0 }
+}
+

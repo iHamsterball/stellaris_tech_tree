@@ -1,0 +1,12 @@
+#This is used for all playable types of countries in NSC, and since it's used in all the coding for
+#"is_country_type = default", mod countries (like Zenith's) can just be added here and be supported by NSC.
+
+is_playable_country = {
+	OR = {
+		is_country_type = default
+		#Compatibility with mod: Zenith of Fallen Empires
+		is_country_type = ascended_empire
+		is_country_type = lost_empire
+		is_country_type = ascended_hive_mind
+	}
+}

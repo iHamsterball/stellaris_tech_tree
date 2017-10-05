@@ -1,0 +1,18 @@
+#Scope type varies depending on what is selected
+# This = selected object or player country
+# From = player country
+
+########################################################################################################
+# IMPORTANT: FILE NAME MUST REMAIN "modmenu_button_effects" FOR OVERWRITE PURPOSES FOR COMPATIBLE MODS #
+########################################################################################################
+
+modmenu_button_effect = {
+	
+	potential = { always = yes }
+	allow = { always = yes }
+
+	effect = {
+		hidden_effect = { from = { country_event = { id = modmenu.1 } } }
+		custom_tooltip = modmenu.tooltip
+	}
+}

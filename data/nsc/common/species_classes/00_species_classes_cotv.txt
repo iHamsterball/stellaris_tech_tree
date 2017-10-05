@@ -1,0 +1,63 @@
+SWM = {
+	randomized = no
+
+	portraits = { 
+			invaders_all
+			invaders_yellow
+			invaders_violet
+			invaders_rose
+			invaders_red
+			invaders_orange
+			invaders_magenta
+			invaders_green
+			invaders_cyan
+			invaders_chartreuse
+			invaders_blue
+			invaders_azure
+			invaders_aquamarine
+	}
+	
+	graphical_culture = swarm_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+
+SYNTHETIC = {
+	#robotic = yes
+	randomized = no
+	
+	portraits = {
+		synthetic_advanced
+		synthetic_color
+		synthetic_black
+		synthetic_grey
+		synthetic_white
+	}
+	
+	graphical_culture = ai_01
+	move_pop_sound_effect = "robot_pops_move"
+}
+
+UNBIDDEN1 = {
+	randomized = no
+
+	portraits = {
+			unbidden_all
+			unbidden_white
+			unbidden_black
+			unbidden_yellow
+			unbidden_violet
+			unbidden_rose
+			unbidden_red
+			unbidden_orange
+			unbidden_magenta
+			unbidden_green
+			unbidden_cyan
+			unbidden_chartreuse
+			unbidden_blue
+			unbidden_azure
+			unbidden_aquamarine
+	}
+	
+	graphical_culture = unbidden_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}

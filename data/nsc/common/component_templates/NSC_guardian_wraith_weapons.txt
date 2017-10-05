@@ -1,0 +1,237 @@
+#######################################
+# Spectral Wraith Weaponry - Guardian #
+#######################################
+
+weapon_component_template = {
+	key = "WRAITH_ORANGE_LASER"
+	size = large
+	entity = "large_laser_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_laser_orange"
+	icon_frame = 1
+	projectile_gfx = "gamma_laser_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	
+	damage = { min = 150.0 max = 250.0 }
+	windup = { min = 2.0 max = 15.0 } 
+	total_fire_time = 15.0 # This value is cooldown
+	range = 150.0
+	accuracy = 0.8
+	tracking = 0.75
+	shield_damage = 1
+	armor_penetration = 0.5
+
+	hidden = yes
+}
+
+weapon_component_template = {
+	key = "WRAITH_VIOLET_LASER"
+	size = large
+	entity = "large_laser_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_laser_violet"
+	icon_frame = 1
+	projectile_gfx = "uv_laser_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	
+	damage = { min = 150.0 max = 250.0 }
+	windup = { min = 2.0 max = 15.0 } 
+	total_fire_time = 15.0 # This value is cooldown
+	range = 150.0
+	accuracy = 0.8
+	tracking = 0.75
+	shield_damage = 1
+	armor_penetration = 0.5
+
+	hidden = yes
+}
+
+weapon_component_template = {
+	key = "WRAITH_WHITE_LASER"
+	size = large
+	entity = "large_laser_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_laser_white"
+	icon_frame = 1
+	projectile_gfx = "white_laser_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	
+	damage = { min = 175.0 max = 300.0 }
+	windup = { min = 2.0 max = 15.0 } 
+	total_fire_time = 15.0 # This value is cooldown
+	range = 150.0
+	accuracy = 0.8
+	tracking = 0.75
+	shield_damage = 1
+	armor_penetration = 0.5
+
+	hidden = yes
+}
+
+#######################################
+# Spectral Wraith Weaponry - Playable #
+#######################################
+
+weapon_component_template = {
+	key = "PHANTOM_WRAITH_RED_LASER"
+	size = large
+	entity = "large_laser_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_laser_red"
+	icon_frame = 1
+	projectile_gfx = "infrared_laser_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	
+	damage = { min = 75.0 max = 175.0 }
+	windup = { min = 2.0 max = 15.0 } 
+	total_fire_time = 25.0 # This value is cooldown
+	range = 120.0
+	accuracy = 0.8
+	tracking = 0.25
+	shield_damage = 1
+	armor_penetration = 0.5
+
+	hidden = yes
+}
+
+weapon_component_template = {
+	key = "PHANTOM_WRAITH_BLUE_LASER"
+	size = large
+	entity = "large_laser_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_laser_blue"
+	icon_frame = 1
+	projectile_gfx = "blue_laser_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	
+	damage = { min = 75.0 max = 175.0 }
+	windup = { min = 2.0 max = 15.0 } 
+	total_fire_time = 25.0 # This value is cooldown
+	range = 120.0
+	accuracy = 0.8
+	tracking = 0.25
+	shield_damage = 1
+	armor_penetration = 0.5
+
+	hidden = yes
+}
+
+weapon_component_template = {
+	key = "PHANTOM_WRAITH_YELLOW_LASER"
+	size = large
+	entity = "large_laser_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_laser_yellow"
+	icon_frame = 1
+	projectile_gfx = "yellow_laser_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	
+	damage = { min = 75.0 max = 175.0 }
+	windup = { min = 2.0 max = 15.0 } 
+	total_fire_time = 25.0 # This value is cooldown
+	range = 120.0
+	accuracy = 0.8
+	tracking = 0.25
+	shield_damage = 1
+	armor_penetration = 0.5
+
+	hidden = yes
+}
+
+weapon_component_template = {
+	key = "PHANTOM_WRAITH_VIOLET_LASER"
+	size = large
+	entity = "large_laser_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_laser_violet"
+	icon_frame = 1
+	projectile_gfx = "uv_laser_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	
+	damage = { min = 75.0 max = 175.0 }
+	windup = { min = 2.0 max = 15.0 } 
+	total_fire_time = 25.0 # This value is cooldown
+	range = 120.0
+	accuracy = 0.8
+	tracking = 0.25
+	shield_damage = 1
+	armor_penetration = 0.5
+
+	hidden = yes
+}
+
+weapon_component_template = {
+	key = "PHANTOM_WRAITH_GREEN_LASER"
+	size = large
+	entity = "large_laser_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_laser_green"
+	icon_frame = 1
+	projectile_gfx = "xray_laser_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	
+	damage = { min = 75.0 max = 175.0 }
+	windup = { min = 2.0 max = 15.0 } 
+	total_fire_time = 25.0 # This value is cooldown
+	range = 120.0
+	accuracy = 0.8
+	tracking = 0.25
+	shield_damage = 1
+	armor_penetration = 0.5
+
+	hidden = yes
+}
+
+weapon_component_template = {
+	key = "PHANTOM_WRAITH_ORANGE_LASER"
+	size = large
+	entity = "large_laser_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_laser_orange"
+	icon_frame = 1
+	projectile_gfx = "gamma_laser_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	
+	damage = { min = 75.0 max = 175.0 }
+	windup = { min = 2.0 max = 15.0 } 
+	total_fire_time = 25.0 # This value is cooldown
+	range = 120.0
+	accuracy = 0.8
+	tracking = 0.25
+	shield_damage = 1
+	armor_penetration = 0.5
+
+	hidden = yes
+}
+
+weapon_component_template = {
+	key = "PHANTOM_WRAITH_WHITE_LASER"
+	size = large
+	entity = "large_laser_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_laser_white"
+	icon_frame = 1
+	projectile_gfx = "white_laser_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	
+	damage = { min = 75.0 max = 175.0 }
+	windup = { min = 2.0 max = 15.0 } 
+	total_fire_time = 25.0 # This value is cooldown
+	range = 120.0
+	accuracy = 0.8
+	tracking = 0.25
+	shield_damage = 1
+	armor_penetration = 0.5
+
+	hidden = yes
+}

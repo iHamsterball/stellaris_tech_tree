@@ -1,0 +1,169 @@
+utility_component_template = {
+	key = "BORDER_EXTRUDER_NSC_1"
+	size = medium
+	icon = "GFX_ship_part_border_extruder_1"
+	icon_frame = 1
+	power = 0
+	cost = 20
+	border_extrusion_range = 20
+	class_restriction = { shipclass_outpost_station }
+	
+	component_set = "border_extruders_nsc"
+	
+	ai_weight = { weight = 1 }
+	
+	upgrades_to = "BORDER_EXTRUDER_NSC_2"
+}
+
+utility_component_template = {
+	key = "BORDER_EXTRUDER_NSC_2"
+	size = medium
+	icon = "GFX_ship_part_border_extruder_2"
+	icon_frame = 1
+	power = 0
+	cost = 30
+	border_extrusion_range = 25
+	class_restriction = { shipclass_outpost_station }
+	
+	prerequisites = { "tech_frontier_outpost_1" }
+	component_set = "border_extruders_nsc"
+	
+	ai_weight = { weight = 2 }
+	
+	upgrades_to = "BORDER_EXTRUDER_NSC_3"
+}
+
+utility_component_template = {
+	key = "BORDER_EXTRUDER_NSC_3"
+	size = medium
+	icon = "GFX_ship_part_border_extruder_3"
+	icon_frame = 1
+	power = 0
+	cost = 40
+	border_extrusion_range = 30
+	class_restriction = { shipclass_outpost_station }
+	
+	prerequisites = { "tech_frontier_outpost_2" }
+	component_set = "border_extruders_nsc"
+	
+	ai_weight = { weight = 3 }
+	
+	upgrades_to = "BORDER_EXTRUDER_NSC_4"
+}
+
+utility_component_template = {
+	key = "BORDER_EXTRUDER_NSC_4"
+	size = medium
+	icon = "GFX_ship_part_border_extruder_4"
+	icon_frame = 1
+	power = 0
+	cost = 50
+	border_extrusion_range = 40
+	class_restriction = { shipclass_outpost_station }
+	
+	prerequisites = { "tech_frontier_outpost_3" }
+	component_set = "border_extruders_nsc"
+	
+	ai_weight = { weight = 4 }
+}
+
+utility_component_template = {
+	key = "SHIP_THRUSTER_5_NSC"
+	size = small
+	icon = "GFX_ship_part_thruster_5_NSC"
+	icon_frame = 1
+	power = -20
+	cost = 7
+	modifier = {
+		ship_speed_mult = 0.80
+		ship_combat_speed_mult = 0.80
+		ship_evasion_add = 9
+	}
+
+	prerequisites = { "tech_thrusters_5_NSC" }
+	component_set = "thruster_components"
+	
+	ai_weight = { weight = 5 }
+}
+
+#Customized Copy for the "reward" for conquering all Playable Guardians.
+utility_component_template = {
+	key = "GUARDIAN_WARP"
+	size = small
+	icon = "GFX_ship_part_warp_drive_3"
+	icon_frame = 1
+	power = -15
+	cost = 50
+	ftl = warp
+	ship_modifier = {
+		ship_ftl_warp_range_mult = 2.0
+		ship_interstellar_speed_mult = 0.25
+		ship_winddown_mult = -4
+	}
+	
+	prerequisites = { "tech_guardian_warp" }
+	
+	ai_weight = { weight = 10 }
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport }
+}
+
+utility_component_template = {
+	key = "MEDIUM_SCIENCE_LAB_NSC"
+	size = medium
+	icon = "GFX_ship_part_nsc_science_lab"
+	icon_frame = 1
+	power = -5
+	cost = 5
+	science_lab_speed = 1
+	science_lab_level = 1
+	class_restriction = { shipclass_science_ship }
+
+	ship_modifier = {
+		science_ship_survey_speed = 0.5
+		ship_anomaly_research_speed_mult = 0.5
+		ship_anomaly_generation_chance_mult = 0.2
+		ship_anomaly_fail_risk = -0.3
+	}
+	
+	component_set = "science_labs"
+	prerequisites = { tech_civilian_cruiser_upgrades }
+	
+	ai_weight = { weight = 150 }
+}
+
+utility_component_template = {
+	key = "NSC_CIVILIAN_CRUISER_SYSTEMS_EMPTY"
+	size = medium
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+	cost = 0
+	
+	component_set = "enhanced_civilian_designs"
+}
+
+utility_component_template = {
+	key = "NSC_CIVILIAN_CRUISER_SYSTEMS"
+	size = medium
+	icon = "GFX_ship_part_nsc_cruiser_systems"
+	icon_frame = 1
+	power = 0
+	cost = 0
+	#science_lab_speed = 1
+	#science_lab_level = 1
+
+	ship_modifier = {
+		ship_speed_mult = 0.75 #7
+		ship_combat_speed_mult = 5 #2.5
+		ship_hitpoints_mult = 4 #1500 - 5 = 1800 because of additive nature.
+		ship_armor_add = 18 #20
+		ship_evasion_add = 10 #25%
+		ship_upkeep_mult = 0.25
+	}
+	
+	component_set = "enhanced_civilian_designs"
+	prerequisites = { tech_civilian_cruiser_upgrades }
+	
+	ai_weight = { weight = 150 }
+}

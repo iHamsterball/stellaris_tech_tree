@@ -1,0 +1,10 @@
+
+mothball_module = {
+	icon = "GFX_spaceport_mothball"
+	section = "HANGARBAY_SPACEPORT_SECTION"
+	construction_days = 180
+	prerequisites = { tech_spaceport_2 }
+	spaceport_level = 2
+	cost = { minerals = 250 }
+	ai_weight = { factor = 0 }
+}

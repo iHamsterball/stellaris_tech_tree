@@ -1,0 +1,34 @@
+#ai_weight - checks that required resources are available by AI will be made in code for performance reasons
+
+#modifiers that can be added from modules
+#"modifier", category: MODIFIER_CATEGORY_SPACEPORT. things that affect the builder part of the spaceport. like construction costs and speeds
+#"orbit_modifier", category: MODIFIER_CATEGORY_FLEET | MODIFIER_CATEGORY_SHIP. applied on all orbiting fleets and ships
+#"planet_modifier", category: MODIFIER_CATEGORY_PLANET | MODIFIER_CATEGORY_POP | MODIFIER_CATEGORY_TILE. affects the planet
+#"station_modifier", category: MODIFIER_CATEGORY_FLEET | MODIFIER_CATEGORY_SHIP. affects the ship part of the spaceport. like health and armor
+#"ship_modifier", category: MODIFIER_CATEGORY_SHIP. affects all ships that are built by this space port
+
+
+customs_office = {
+	icon = "GFX_spaceport_module_customs_office"
+	section = "SCIENCE_SPACEPORT_SECTION"
+	construction_days = 180
+	prerequisites = { "tech_spaceport_2" }
+	spaceport_level = 2
+
+	cost = {
+		minerals = 250
+		influence = 15
+	}
+
+	required_resources = {
+		energy = 3
+		minerals = 3
+	}
+
+	planet_modifier = {
+		planet_border_mult = 0.25
+		pop_government_ethic_attraction = 0.2
+		pop_migration_speed = 0.15
+		planet_migration_xeno_pull = -0.15
+	}
+}

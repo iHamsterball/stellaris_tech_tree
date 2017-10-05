@@ -1,0 +1,71 @@
+# Dimensional Horror
+ship_design = {
+	name = "NAME_Darkspawn_Dimensional_Horror"
+	ship_size = NSC_dimensional_horror
+
+	section = {
+		template = "NSC_DIMENSIONAL_HORROR_KEY"
+		slot = "mid"
+		
+		component = {
+			slot = "PRIMARY_WEAPON_01"
+			template = "NSC_DIMENSIONAL_HORROR_PRIMARY_WEAPON"
+		}		
+		
+		component = {
+			slot = "LARGE_WEAPON_01"
+			template = "NSC_DIMENSIONAL_HORROR_LARGE_WEAPON"
+		}
+		
+		component = {
+			slot = "LARGE_WEAPON_02"
+			template = "NSC_DIMENSIONAL_HORROR_LARGE_WEAPON"
+		}
+
+		component = {
+			slot = "MEDIUM_WEAPON_01"
+			template = "NSC_DIMENSIONAL_HORROR_MEDIUM_WEAPON"
+		}
+		
+		component = {
+			slot = "MEDIUM_WEAPON_02"
+			template = "NSC_DIMENSIONAL_HORROR_MEDIUM_WEAPON"
+		}
+
+		component = {
+			slot = "SMALL_WEAPON_01"
+			template = "NSC_DIMENSIONAL_HORROR_SMALL_WEAPON"
+		}
+		
+		component = {
+			slot = "SMALL_WEAPON_02"
+			template = "NSC_DIMENSIONAL_HORROR_SMALL_WEAPON"
+		}
+
+		component = {
+			slot = "POINT_DEFENCE_01"
+			template = "NSC_DIMENSIONAL_HORROR_PD"
+		}
+		
+		component = {
+			slot = "POINT_DEFENCE_02"
+			template = "NSC_DIMENSIONAL_HORROR_PD"
+		}
+		
+		component = {
+			slot = "POINT_DEFENCE_03"
+			template = "NSC_DIMENSIONAL_HORROR_PD"
+		}
+		
+		component = {
+			slot = "POINT_DEFENCE_04"
+			template = "NSC_DIMENSIONAL_HORROR_PD"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}		
+	}
+	required_component="Flagship_COMBAT_COMPUTER_4"
+	required_component="SHIP_SENSOR_5"
+}

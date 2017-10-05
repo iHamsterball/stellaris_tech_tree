@@ -1,0 +1,19 @@
+mothball_checkfleet = {
+	exists = owner
+	owner = { is_same_value = root.owner }
+	exists = orbit
+	orbit = { is_same_value = root }
+}
+
+mothball_checkship = {
+	NOT = { is_ship_size = "orbital_station" }
+	# Try to catch all, even things added by other mods
+	is_ship_class = shipclass_military
+	NOT = {
+		# Yes, I am aware this is probably redundant.
+		is_ship_class = shipclass_science_ship
+		is_ship_class = shipclass_colonizer
+		is_ship_class = shipclass_constructor
+		is_ship_class = shipclass_transport
+	}
+}

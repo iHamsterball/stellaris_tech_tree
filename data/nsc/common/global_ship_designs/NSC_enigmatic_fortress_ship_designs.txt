@@ -1,0 +1,120 @@
+ship_design = {
+	name = "NAME_Enigmatic_Fortress"
+	ship_size = NSC_enigmatic_fortress
+	hide_size = yes
+	section = {
+		template = "ENIGMATIC_FORTRESS_KEY"
+		slot = "mid"
+
+		component = {
+			slot = "XL_GUN_01"
+			template = "DRAGON_WEAPON_AQUAMARINE"
+		}
+		component = {
+			slot = "XL_GUN_02"
+			template = "DRAGON_WEAPON_AQUAMARINE"
+		}		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "LARGE_KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "LARGE_KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "LARGE_KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_05"
+			template = "LARGE_KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "LARGE_KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_07"
+			template = "LARGE_KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "ENIGMATIC_DECODER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "SHIELD_RECHARGER"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_ENIGMATIC_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_ENIGMATIC_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_ENIGMATIC_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_ENIGMATIC_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_ENIGMATIC_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_ENIGMATIC_POWER_CORE"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_ENIGMATIC_POWER_CORE"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_ENIGMATIC_POWER_CORE"
+		}
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_ENIGMATIC_POWER_CORE"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_13"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_14"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_16"
+			template = "LARGE_ARMOR_5"
+		}
+	}
+	required_component="SHIP_SENSOR_5"
+	required_component="ENIGMATIC_DISRUPTION_FIELD"
+}

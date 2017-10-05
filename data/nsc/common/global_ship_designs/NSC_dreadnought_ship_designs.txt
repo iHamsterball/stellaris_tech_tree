@@ -1,0 +1,2413 @@
+#############################################
+# NSC AUTOMATED DREADNOUGHT VANILLA DESIGNS #
+#############################################
+
+# NSC Automated Dreadnought - Vanilla - Guardian Warp Drive
+ship_design = {
+	name = "NAME_NSC_Automated_Dreadnought_Guardian_Warp"
+	ship_size = nsc_automated_dreadnought
+
+	section = {
+		template = "NSC_automated_dreadnought_key"
+		slot = "mid"
+
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "DREADNOUGHT_PULSAR_AZURE"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "DREADNOUGHT_PULSAR_AZURE"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_07_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_07_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}
+		component = {
+			slot = "SMALL_GUN_08"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_09"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_10"
+			template = "SMALL_AUTOCANNON_3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_13"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_14"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_16"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_17"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_18"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_19"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_20"
+			template = "LARGE_SHIELD_5"
+		}				
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "SHIELD_RECHARGER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "AUTO_REPAIR"
+		}			
+	}
+	required_component="GUARDIAN_WARP"
+	required_component="Flagship_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_5"
+}
+
+# NSC Automated Dreadnought - Vanilla - Psi Jump Drive
+ship_design = {
+	name = "NAME_NSC_Automated_Dreadnought_Psi_Jump"
+	ship_size = nsc_automated_dreadnought
+
+	section = {
+		template = "NSC_automated_dreadnought_key"
+		slot = "mid"
+
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "DREADNOUGHT_PULSAR_AZURE"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "DREADNOUGHT_PULSAR_AZURE"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_07_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_07_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}
+		component = {
+			slot = "SMALL_GUN_08"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_09"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_10"
+			template = "SMALL_AUTOCANNON_3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_13"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_14"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_16"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_17"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_18"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_19"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_20"
+			template = "LARGE_SHIELD_5"
+		}				
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "SHIELD_RECHARGER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "AUTO_REPAIR"
+		}			
+	}
+	required_component="PSI_JUMP_DRIVE_1"
+	required_component="Flagship_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_5"
+}
+
+# NSC Automated Dreadnought - Vanilla - Jump Drive
+ship_design = {
+	name = "NAME_NSC_Automated_Dreadnought_Jump"
+	ship_size = nsc_automated_dreadnought
+
+	section = {
+		template = "NSC_automated_dreadnought_key"
+		slot = "mid"
+
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "DREADNOUGHT_PULSAR_AZURE"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "DREADNOUGHT_PULSAR_AZURE"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_07_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_07_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}
+		component = {
+			slot = "SMALL_GUN_08"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_09"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_10"
+			template = "SMALL_AUTOCANNON_3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_13"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_14"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_16"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_17"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_18"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_19"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_20"
+			template = "LARGE_SHIELD_5"
+		}				
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "SHIELD_RECHARGER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "AUTO_REPAIR"
+		}			
+	}
+	required_component="JUMP_DRIVE_1"
+	required_component="Flagship_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_5"
+}
+
+# NSC Automated Dreadnought - Vanilla - Warp Drive
+ship_design = {
+	name = "NAME_NSC_Automated_Dreadnought_Warp"
+	ship_size = nsc_automated_dreadnought
+
+	section = {
+		template = "NSC_automated_dreadnought_key"
+		slot = "mid"
+
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "DREADNOUGHT_PULSAR_AZURE"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "DREADNOUGHT_PULSAR_AZURE"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_07_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_07_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}
+		component = {
+			slot = "SMALL_GUN_08"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_09"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_10"
+			template = "SMALL_AUTOCANNON_3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_13"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_14"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_16"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_17"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_18"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_19"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_20"
+			template = "LARGE_SHIELD_5"
+		}				
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "SHIELD_RECHARGER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "AUTO_REPAIR"
+		}			
+	}
+	required_component="WARP_DRIVE_3"
+	required_component="Flagship_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_5"
+}
+
+# NSC Automated Dreadnought - Vanilla - Hyperdrive
+ship_design = {
+	name = "NAME_NSC_Automated_Dreadnought_Hyper"
+	ship_size = nsc_automated_dreadnought
+
+	section = {
+		template = "NSC_automated_dreadnought_key"
+		slot = "mid"
+
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "DREADNOUGHT_PULSAR_AZURE"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "DREADNOUGHT_PULSAR_AZURE"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_07_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_07_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}
+		component = {
+			slot = "SMALL_GUN_08"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_09"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_10"
+			template = "SMALL_AUTOCANNON_3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_13"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_14"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_16"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_17"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_18"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_19"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_20"
+			template = "LARGE_SHIELD_5"
+		}				
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "SHIELD_RECHARGER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "AUTO_REPAIR"
+		}			
+	}
+	required_component="HYPER_DRIVE_3"
+	required_component="Flagship_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_5"
+}
+
+# NSC Automated Dreadnought - Vanilla - Wormhole Drive
+ship_design = {
+	name = "NAME_NSC_Automated_Dreadnought_Wormhole"
+	ship_size = nsc_automated_dreadnought
+
+	section = {
+		template = "NSC_automated_dreadnought_key"
+		slot = "mid"
+
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "DREADNOUGHT_PULSAR_AZURE"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "DREADNOUGHT_PULSAR_AZURE"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_07_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_07_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}
+		component = {
+			slot = "SMALL_GUN_08"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_09"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_10"
+			template = "SMALL_AUTOCANNON_3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_13"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_14"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_16"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_17"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_18"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_19"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_20"
+			template = "LARGE_SHIELD_5"
+		}				
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "SHIELD_RECHARGER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "AUTO_REPAIR"
+		}			
+	}
+	required_component="WORMHOLE_DRIVE"
+	required_component="Flagship_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_5"
+}
+
+#################################################
+# NSC AUTOMATED DREADNOUGHT ALTERNATIVE DESIGNS #
+#################################################
+
+# NSC Automated Dreadnought - Alternative - Guardian Warp Drive 
+ship_design = {
+	name = "NAME_NSC_Automated_Dreadnought_II_Guardian_Warp"
+	ship_size = nsc_automated_dreadnought_alternative
+
+	section = {
+		template = "NSC_automated_dreadnought_alternative_key"
+		slot = "mid"
+
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "DREADNOUGHT_PULSAR_CYAN"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "DREADNOUGHT_PULSAR_CYAN"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_07_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_07_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}
+		component = {
+			slot = "SMALL_GUN_08"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_09"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_10"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_13"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_14"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_16"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_17"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_18"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_19"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_20"
+			template = "LARGE_SHIELD_5"
+		}				
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "SHIELD_RECHARGER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "AUTO_REPAIR"
+		}			
+	}
+	required_component="GUARDIAN_WARP"
+	required_component="Flagship_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_5"
+}
+
+# NSC Automated Dreadnought - Alternative - Psi Jump Drive 
+ship_design = {
+	name = "NAME_NSC_Automated_Dreadnought_II_Psi_Jump"
+	ship_size = nsc_automated_dreadnought_alternative
+
+	section = {
+		template = "NSC_automated_dreadnought_alternative_key"
+		slot = "mid"
+
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "DREADNOUGHT_PULSAR_CYAN"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "DREADNOUGHT_PULSAR_CYAN"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_07_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_07_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}
+		component = {
+			slot = "SMALL_GUN_08"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_09"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_10"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_13"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_14"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_16"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_17"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_18"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_19"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_20"
+			template = "LARGE_SHIELD_5"
+		}				
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "SHIELD_RECHARGER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "AUTO_REPAIR"
+		}			
+	}
+	required_component="PSI_JUMP_DRIVE_1"
+	required_component="Flagship_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_5"
+}
+
+# NSC Automated Dreadnought - Alternative - Jump Drive 
+ship_design = {
+	name = "NAME_NSC_Automated_Dreadnought_II_Jump"
+	ship_size = nsc_automated_dreadnought_alternative
+
+	section = {
+		template = "NSC_automated_dreadnought_alternative_key"
+		slot = "mid"
+
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "DREADNOUGHT_PULSAR_CYAN"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "DREADNOUGHT_PULSAR_CYAN"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_07_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_07_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}
+		component = {
+			slot = "SMALL_GUN_08"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_09"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_10"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_13"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_14"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_16"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_17"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_18"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_19"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_20"
+			template = "LARGE_SHIELD_5"
+		}				
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "SHIELD_RECHARGER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "AUTO_REPAIR"
+		}			
+	}
+	required_component="JUMP_DRIVE_1"
+	required_component="Flagship_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_5"
+}
+
+# NSC Automated Dreadnought - Alternative - Warp Drive 
+ship_design = {
+	name = "NAME_NSC_Automated_Dreadnought_II_Warp"
+	ship_size = nsc_automated_dreadnought_alternative
+
+	section = {
+		template = "NSC_automated_dreadnought_alternative_key"
+		slot = "mid"
+
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "DREADNOUGHT_PULSAR_CYAN"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "DREADNOUGHT_PULSAR_CYAN"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_07_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_07_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}
+		component = {
+			slot = "SMALL_GUN_08"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_09"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_10"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_13"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_14"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_16"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_17"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_18"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_19"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_20"
+			template = "LARGE_SHIELD_5"
+		}				
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "SHIELD_RECHARGER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "AUTO_REPAIR"
+		}			
+	}
+	required_component="WARP_DRIVE_3"
+	required_component="Flagship_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_5"
+}
+
+# NSC Automated Dreadnought - Alternative - Hyperdrive
+ship_design = {
+	name = "NAME_NSC_Automated_Dreadnought_II_Hyper"
+	ship_size = nsc_automated_dreadnought_alternative
+
+	section = {
+		template = "NSC_automated_dreadnought_alternative_key"
+		slot = "mid"
+
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "DREADNOUGHT_PULSAR_CYAN"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "DREADNOUGHT_PULSAR_CYAN"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_07_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_07_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}
+		component = {
+			slot = "SMALL_GUN_08"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_09"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_10"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_13"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_14"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_16"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_17"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_18"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_19"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_20"
+			template = "LARGE_SHIELD_5"
+		}				
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "SHIELD_RECHARGER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "AUTO_REPAIR"
+		}			
+	}
+	required_component="HYPER_DRIVE_3"
+	required_component="Flagship_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_5"
+}
+
+# NSC Automated Dreadnought - Alternative - Wormhole Drive
+ship_design = {
+	name = "NAME_NSC_Automated_Dreadnought_II_Wormhole"
+	ship_size = nsc_automated_dreadnought_alternative
+
+	section = {
+		template = "NSC_automated_dreadnought_alternative_key"
+		slot = "mid"
+
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "DREADNOUGHT_PULSAR_CYAN"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "DREADNOUGHT_PULSAR_CYAN"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "DREADNOUGHT_LARGE_DISRUPTOR"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}		
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "DREADNOUGHT_LARGE_PLASMA"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}	
+		component = {
+			slot = "LARGE_GUN_07_L"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "LARGE_GUN_07_R"
+			template = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "FLAK_BATTERY_2"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_04_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_L"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}	
+		component = {
+			slot = "SMALL_GUN_05_R"
+			template = "DREADNOUGHT_MASS_DRIVER"
+		}
+		component = {
+			slot = "SMALL_GUN_08"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_09"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_10"
+			template = "SMALL_AUTOCANNON_3"
+		}	
+
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_13"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_14"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_16"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_17"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_18"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_19"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_20"
+			template = "LARGE_SHIELD_5"
+		}				
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "SHIELD_RECHARGER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "AUTO_REPAIR"
+		}			
+	}
+	required_component="WORMHOLE_DRIVE"
+	required_component="Flagship_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_5"
+}

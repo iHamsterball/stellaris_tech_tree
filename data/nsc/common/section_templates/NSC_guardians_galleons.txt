@@ -1,0 +1,888 @@
+ship_section_template = { #This one is to prevent vanilla file errors, since the Pirate Galleon is split between Guardian/Pirate files for some reason.
+	key = "pirate_galleon_key"
+	ship_size = pirate_galleon
+	fits_on_slot = mid
+	entity = "pirate_01_galleon_hull_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		is_side_slot = yes
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_02"
+	}
+	component_slot = {
+		name = "LARGE_GUN_03"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_03"
+	}
+	component_slot = {
+		name = "LARGE_GUN_04"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_04"
+	}
+	component_slot = {
+		name = "LARGE_GUN_05"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_05"
+	}
+	component_slot = {
+		name = "LARGE_GUN_06"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_06"
+	}
+	component_slot = {
+		name = "LARGE_GUN_07"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_07"
+	}
+	component_slot = {
+		name = "LARGE_GUN_08"
+		slot_size = large
+		slot_type = weapon
+		is_side_slot = yes
+		locatorname = "large_gun_08"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		is_side_slot = yes
+		locatorname = "small_gun_02"
+	}
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = small
+		slot_type = weapon
+		is_side_slot = yes
+		locatorname = "small_gun_03"
+	}
+	component_slot = {
+		name = "SMALL_GUN_04"
+		slot_size = small
+		slot_type = weapon
+		is_side_slot = yes
+		locatorname = "small_gun_04"
+	}
+	
+	medium_utility_slots = 6
+	large_utility_slots = 6
+}
+
+#Pirate Galleon
+ship_section_template = {
+	key = "first_mate_pirate_galleon_key"
+	ship_size = pirate_galleon
+	fits_on_slot = mid
+	entity = "pirate_01_galleon_hull_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01_L"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01_l"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01_R"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01_r"
+	}
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_02"
+	}
+	component_slot = {
+		name = "LARGE_GUN_03"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_03"
+	}
+	component_slot = {
+		name = "LARGE_GUN_04"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_04"
+	}
+	component_slot = {
+		name = "LARGE_GUN_05"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_05"
+	}
+	component_slot = {
+		name = "LARGE_GUN_06"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_06"
+	}
+	component_slot = {
+		name = "LARGE_GUN_07"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_07"
+	}
+	component_slot = {
+		name = "LARGE_GUN_08_L"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_08_l"
+	}
+	component_slot = {
+		name = "LARGE_GUN_08_R"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_08_r"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02_L"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02_l"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02_R"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02_r"
+	}
+	component_slot = {
+		name = "SMALL_GUN_03_L"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_03_l"
+	}
+	component_slot = {
+		name = "SMALL_GUN_03_R"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_03_r"
+	}
+	component_slot = {
+		name = "SMALL_GUN_04_L"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_04_l"
+	}
+	component_slot = {
+		name = "SMALL_GUN_04_R"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_04_r"
+	}
+	
+	medium_utility_slots = 6
+	large_utility_slots = 6
+}
+
+#Pirate Galleon - Guardian Version
+ship_section_template = {
+	key = "first_mate_guardian_galleon_key"
+	ship_size = guardian_pirate_galleon
+	fits_on_slot = mid
+	entity = "pirate_01_galleon_hull_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01_L"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01_l"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01_R"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01_r"
+	}
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_02"
+	}
+	component_slot = {
+		name = "LARGE_GUN_03"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_03"
+	}
+	component_slot = {
+		name = "LARGE_GUN_04"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_04"
+	}
+	component_slot = {
+		name = "LARGE_GUN_05"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_05"
+	}
+	component_slot = {
+		name = "LARGE_GUN_06"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_06"
+	}
+	component_slot = {
+		name = "LARGE_GUN_07"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_07"
+	}
+	component_slot = {
+		name = "LARGE_GUN_08_L"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_08_l"
+	}
+	component_slot = {
+		name = "LARGE_GUN_08_R"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_08_r"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02_L"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02_l"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02_R"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02_r"
+	}
+	component_slot = {
+		name = "SMALL_GUN_03_L"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_03_l"
+	}
+	component_slot = {
+		name = "SMALL_GUN_03_R"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_03_r"
+	}
+	component_slot = {
+		name = "SMALL_GUN_04_L"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_04_l"
+	}
+	component_slot = {
+		name = "SMALL_GUN_04_R"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_04_r"
+	}
+	
+	medium_utility_slots = 6
+	large_utility_slots = 6
+}
+
+# Captain's Pirate Galleon - Player Version
+ship_section_template = {
+	key = "captain_pirate_galleon_key"
+	ship_size = captain_pirate_galleon
+	fits_on_slot = mid
+	entity = "captain_pirate_galleon_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_02"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_02"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_03"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_03"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_04"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_04"
+	}
+	component_slot = {
+		name = "TOP_SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "top_small_gun_01"
+	}
+	component_slot = {
+		name = "BOTTOM_SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "bottom_small_gun_01"
+	}
+	component_slot = {
+		name = "TOP_MEDIUM_GUN_01_L"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "top_medium_gun_01_l"
+	}
+	component_slot = {
+		name = "TOP_MEDIUM_GUN_01_R"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "top_medium_gun_01_r"
+	}
+	component_slot = {
+		name = "MID_MEDIUM_GUN_01_L"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "mid_medium_gun_01_l"
+	}
+	component_slot = {
+		name = "MID_MEDIUM_GUN_01_R"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "mid_medium_gun_01_r"
+	}
+	component_slot = {
+		name = "BOTTOM_MEDIUM_GUN_01_L"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "bottom_medium_gun_01_l"
+	}
+	component_slot = {
+		name = "BOTTOM_MEDIUM_GUN_01_R"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "bottom_medium_gun_01_r"
+	}
+	component_slot = {
+		name = "TOP_LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "top_large_gun_01"
+	}
+	component_slot = {
+		name = "BOTTOM_LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "bottom_large_gun_01"
+	}
+	component_slot = {
+		name = "TOP_LARGE_GUN_02"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "top_large_gun_02"
+	}
+	component_slot = {
+		name = "BOTTOM_LARGE_GUN_02"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "bottom_large_gun_02"
+	}
+	component_slot = {
+		name = "TOP_LARGE_GUN_03"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "top_large_gun_03"
+	}
+	component_slot = {
+		name = "BOTTOM_LARGE_GUN_03"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "bottom_large_gun_03"
+	}
+	component_slot = {
+		name = "TOP_LARGE_GUN_04"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "top_large_gun_04"
+	}
+	component_slot = {
+		name = "BOTTOM_LARGE_GUN_04"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "bottom_large_gun_04"
+	}
+	component_slot = {
+		name = "TOP_LARGE_GUN_05"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "top_large_gun_05"
+	}
+	component_slot = {
+		name = "BOTTOM_LARGE_GUN_05"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "bottom_large_gun_05"
+	}
+	component_slot = {
+		name = "TOP_LARGE_GUN_06"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "top_large_gun_06"
+	}
+	component_slot = {
+		name = "BOTTOM_LARGE_GUN_06"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "bottom_large_gun_06"
+	}
+	component_slot = {
+		name = "TOP_LARGE_GUN_07"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "top_large_gun_07"
+	}
+	component_slot = {
+		name = "BOTTOM_LARGE_GUN_07"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "bottom_large_gun_07"
+	}
+	component_slot = {
+		name = "TOP_LARGE_GUN_08_L"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "top_large_gun_08_l"
+	}
+	component_slot = {
+		name = "TOP_LARGE_GUN_08_R"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "top_large_gun_08_r"
+	}
+	component_slot = {
+		name = "BOTTOM_LARGE_GUN_08_L"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "bottom_large_gun_08_l"
+	}
+	component_slot = {
+		name = "BOTTOM_LARGE_GUN_08_R"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "bottom_large_gun_08_r"
+	}
+	component_slot = {
+		name = "TOP_SMALL_GUN_02_L"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "top_small_gun_02_l"
+	}
+	component_slot = {
+		name = "TOP_SMALL_GUN_02_R"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "top_small_gun_02_r"
+	}
+	component_slot = {
+		name = "MID_SMALL_GUN_02_L"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "mid_small_gun_02_l"
+	}
+	component_slot = {
+		name = "MID_SMALL_GUN_02_R"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "mid_small_gun_02_r"
+	}
+	component_slot = {
+		name = "BOTTOM_SMALL_GUN_02_L"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "bottom_small_gun_02_l"
+	}
+	component_slot = {
+		name = "BOTTOM_SMALL_GUN_02_R"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "bottom_small_gun_02_r"
+	}
+	component_slot = {
+		name = "TOP_SMALL_GUN_03_L"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "top_small_gun_03_l"
+	}
+	component_slot = {
+		name = "TOP_SMALL_GUN_03_R"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "top_small_gun_03_r"
+	}
+	component_slot = {
+		name = "BOTTOM_SMALL_GUN_03_L"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "bottom_small_gun_03_l"
+	}
+	component_slot = {
+		name = "BOTTOM_SMALL_GUN_03_R"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "bottom_small_gun_03_r"
+	}
+	component_slot = {
+		name = "TOP_SMALL_GUN_04_L"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "top_small_gun_04_l"
+	}	
+	component_slot = {
+		name = "TOP_SMALL_GUN_04_R"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "top_small_gun_04_r"
+	}	
+	component_slot = {
+		name = "BOTTOM_SMALL_GUN_04_L"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "bottom_small_gun_04_l"
+	}
+	component_slot = {
+		name = "BOTTOM_SMALL_GUN_04_R"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "bottom_small_gun_04_r"
+	}
+	
+	large_utility_slots = 16
+}
+
+# Captain's Pirate Galleon - Guardian Version
+ship_section_template = {
+	key = "master_pirate_galleon_key"
+	ship_size = master_pirate_galleon
+	fits_on_slot = mid
+	entity = "captain_pirate_galleon_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_02"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_02"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_03"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_03"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_04"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_04"
+	}
+	component_slot = {
+		name = "TOP_SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "top_small_gun_01"
+	}
+	component_slot = {
+		name = "BOTTOM_SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "bottom_small_gun_01"
+	}
+	component_slot = {
+		name = "TOP_MEDIUM_GUN_01_L"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "top_medium_gun_01_l"
+	}
+	component_slot = {
+		name = "TOP_MEDIUM_GUN_01_R"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "top_medium_gun_01_r"
+	}
+	component_slot = {
+		name = "MID_MEDIUM_GUN_01_L"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "mid_medium_gun_01_l"
+	}
+	component_slot = {
+		name = "MID_MEDIUM_GUN_01_R"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "mid_medium_gun_01_r"
+	}
+	component_slot = {
+		name = "BOTTOM_MEDIUM_GUN_01_L"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "bottom_medium_gun_01_l"
+	}
+	component_slot = {
+		name = "BOTTOM_MEDIUM_GUN_01_R"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "bottom_medium_gun_01_r"
+	}
+	component_slot = {
+		name = "TOP_LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "top_large_gun_01"
+	}
+	component_slot = {
+		name = "BOTTOM_LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "bottom_large_gun_01"
+	}
+	component_slot = {
+		name = "TOP_LARGE_GUN_02"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "top_large_gun_02"
+	}
+	component_slot = {
+		name = "BOTTOM_LARGE_GUN_02"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "bottom_large_gun_02"
+	}
+	component_slot = {
+		name = "TOP_LARGE_GUN_03"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "top_large_gun_03"
+	}
+	component_slot = {
+		name = "BOTTOM_LARGE_GUN_03"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "bottom_large_gun_03"
+	}
+	component_slot = {
+		name = "TOP_LARGE_GUN_04"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "top_large_gun_04"
+	}
+	component_slot = {
+		name = "BOTTOM_LARGE_GUN_04"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "bottom_large_gun_04"
+	}
+	component_slot = {
+		name = "TOP_LARGE_GUN_05"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "top_large_gun_05"
+	}
+	component_slot = {
+		name = "BOTTOM_LARGE_GUN_05"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "bottom_large_gun_05"
+	}
+	component_slot = {
+		name = "TOP_LARGE_GUN_06"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "top_large_gun_06"
+	}
+	component_slot = {
+		name = "BOTTOM_LARGE_GUN_06"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "bottom_large_gun_06"
+	}
+	component_slot = {
+		name = "TOP_LARGE_GUN_07"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "top_large_gun_07"
+	}
+	component_slot = {
+		name = "BOTTOM_LARGE_GUN_07"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "bottom_large_gun_07"
+	}
+	component_slot = {
+		name = "TOP_LARGE_GUN_08_L"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "top_large_gun_08_l"
+	}
+	component_slot = {
+		name = "TOP_LARGE_GUN_08_R"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "top_large_gun_08_r"
+	}
+	component_slot = {
+		name = "BOTTOM_LARGE_GUN_08_L"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "bottom_large_gun_08_l"
+	}
+	component_slot = {
+		name = "BOTTOM_LARGE_GUN_08_R"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "bottom_large_gun_08_r"
+	}
+	component_slot = {
+		name = "TOP_SMALL_GUN_02_L"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "top_small_gun_02_l"
+	}
+	component_slot = {
+		name = "TOP_SMALL_GUN_02_R"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "top_small_gun_02_r"
+	}
+	component_slot = {
+		name = "MID_SMALL_GUN_02_L"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "mid_small_gun_02_l"
+	}
+	component_slot = {
+		name = "MID_SMALL_GUN_02_R"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "mid_small_gun_02_r"
+	}
+	component_slot = {
+		name = "BOTTOM_SMALL_GUN_02_L"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "bottom_small_gun_02_l"
+	}
+	component_slot = {
+		name = "BOTTOM_SMALL_GUN_02_R"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "bottom_small_gun_02_r"
+	}
+	component_slot = {
+		name = "TOP_SMALL_GUN_03_L"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "top_small_gun_03_l"
+	}
+	component_slot = {
+		name = "TOP_SMALL_GUN_03_R"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "top_small_gun_03_r"
+	}
+	component_slot = {
+		name = "BOTTOM_SMALL_GUN_03_L"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "bottom_small_gun_03_l"
+	}
+	component_slot = {
+		name = "BOTTOM_SMALL_GUN_03_R"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "bottom_small_gun_03_r"
+	}
+	component_slot = {
+		name = "TOP_SMALL_GUN_04_L"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "top_small_gun_04_l"
+	}	
+	component_slot = {
+		name = "TOP_SMALL_GUN_04_R"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "top_small_gun_04_r"
+	}	
+	component_slot = {
+		name = "BOTTOM_SMALL_GUN_04_L"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "bottom_small_gun_04_l"
+	}
+	component_slot = {
+		name = "BOTTOM_SMALL_GUN_04_R"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "bottom_small_gun_04_r"
+	}
+	
+	large_utility_slots = 20
+}

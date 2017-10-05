@@ -1,0 +1,181 @@
+##################################
+# Automated Dreadnought Weaponry #
+##################################
+
+# Cyan Dreadnought XL
+weapon_component_template = {
+	key = "DREADNOUGHT_PULSAR_CYAN"
+	size = large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_cyan"
+	icon_frame = 1
+	
+	damage = { min = 300.0 max = 600.0 } #Damage equivalent to 4 Graviton Lances hitting simultaneously.
+	windup = { min = 10.0 max = 18.0 } #vanilla Guardian values - time between aquiring target and projectile launch
+	total_fire_time = 85.0 #this value is "cooldown" - 100.0 is vanilla
+	range = 120.0
+	accuracy = 0.85
+	tracking = 0
+	
+	shield_damage = 0.75
+	armor_penetration = 0.90
+	
+	firing_arc = 25.0 #15.0
+	min_range = 10.0
+	static_rotation = yes
+	
+	hidden = yes
+	projectile_gfx = "dragon_weapon_cyan"
+	tags = { weapon_type_energy }
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		cruiser = 2500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}
+
+# Azure Dreadnought XL
+weapon_component_template = {
+	key = "DREADNOUGHT_PULSAR_AZURE"
+	size = large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_azure"
+	icon_frame = 1
+	
+	damage = { min = 300.0 max = 600.0 } #Damage equivalent to 4 Graviton Lances hitting simultaneously.
+	windup = { min = 10.0 max = 18.0 } #vanilla Guardian values - time between aquiring target and projectile launch
+	total_fire_time = 85.0 #this value is "cooldown" - 100.0 is vanilla
+	range = 120.0
+	accuracy = 0.85
+	tracking = 0
+	
+	shield_damage = 0.75
+	armor_penetration = 0.90
+	
+	firing_arc = 25.0 #15.0
+	min_range = 10.0
+	static_rotation = yes
+	
+	hidden = yes
+	projectile_gfx = "dragon_weapon_azure"
+	tags = { weapon_type_energy }
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		cruiser = 2500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}
+
+#### Kinetic Artillery
+weapon_component_template = {
+	type = instant
+	
+	key = "DREADNOUGHT_LARGE_KINETIC_ARTILLERY"
+	size = large
+	entity = "large_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_dreadnought_kinetic_artillery"
+	icon_frame = 1
+	
+	damage = { min = 125.0 max = 250.0 }
+	windup = { min = 2.0 max = 18.0 }
+	total_fire_time = 70.0 #this value is "cooldown"
+	range = 120.0
+	accuracy = 0.75
+	tracking = 0.05
+	shield_damage = 1.5
+	armor_penetration = 0.25
+	
+	hidden = yes
+	projectile_gfx = "dreadnought_kinetic_artillery"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_long_range }
+}
+
+#### Plasma Cannon
+weapon_component_template = {
+	key = "DREADNOUGHT_LARGE_PLASMA"
+	size = large
+	entity = "large_laser_gun_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dreadnought_plasma_cannon"
+	icon_frame = 1
+	
+	damage = { min = 50.0 max = 100.0 }
+	windup = { min = 2.0 max = 25.0 }
+	total_fire_time = 30.0 #this value is "cooldown"
+	range = 70.0
+	accuracy = 0.75
+	tracking = 0.1
+	shield_damage = 0.8
+	armor_penetration = 0.8
+	
+	hidden = yes
+	projectile_gfx = "plasma_accelerator_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+}
+
+#### Phase Disruptor
+weapon_component_template = {
+	key = "DREADNOUGHT_LARGE_DISRUPTOR"
+	size = large
+	entity = "large_laser_gun_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dreadnought_phase_disruptor"
+	icon_frame = 1
+	
+	damage = { min = 30.0 max = 60.0 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 25.0 #this value is "cooldown"
+	range = 80.0
+	accuracy = 0.8
+	tracking = 0.1
+	shield_damage = 3
+	
+	hidden = yes
+	projectile_gfx = "disruptor_2_large"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield }
+}
+
+#### Kinetic Driver
+weapon_component_template = {
+	type = instant
+	
+	key = "DREADNOUGHT_MASS_DRIVER"
+	size = small
+	entity = "small_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_mass_driver_5"
+	icon_frame = 1
+	
+	damage = { min = 10.0 max = 30.0 }
+	windup = { min = 2.0 max = 18.0 }
+	total_fire_time = 25.0 #this value is "cooldown"
+	range = 50.0
+	accuracy = 0.75
+	tracking = 0.6
+	shield_damage = 1.5
+	
+	hidden = yes
+	projectile_gfx = "dreadnought_gauss_cannon"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+}

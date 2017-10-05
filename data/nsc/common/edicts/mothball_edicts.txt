@@ -1,0 +1,89 @@
+planet_edict = {
+	name = activate_moth
+	influence_cost = 0
+	length = 0
+
+	potential = {
+		has_spaceport = yes
+		has_spaceport_module = mothball_module
+		owner = {
+			is_ai = no
+			is_playable_country = yes
+		}
+		NOT = {
+			owner = { has_country_flag = mothball_planet_active }
+			owner = { has_special_project = folk_unmothball }
+			owner = { has_special_project = folk_scrapships }
+			owner = { has_country_flag = mothball_requiresmorevespene }
+			has_planet_flag = mothball_active
+		}
+	}
+	allow = {
+		NOT = {
+			orbital_bombardment = soft
+			orbital_bombardment = limited
+			orbital_bombardment = full
+		}
+	}
+	effect = {
+		custom_tooltip = edict_activate_moth_tooltip
+		hidden_effect = {
+			set_planet_flag = mothball_active
+			owner = { set_country_flag = mothball_planet_active }
+			planet_event = { id = folkmothball.1 }
+		}
+	}
+	ai_weight = { weight = 0 }
+}
+
+planet_edict = {
+	name = deactivate_moth
+	influence_cost = 0
+	length = 0
+
+	potential = {
+		owner = {
+			is_ai = no
+			is_playable_country = yes
+		}
+		has_planet_flag = mothball_active
+		NOT = { owner = { has_special_project = folk_scrapships } }
+		NOT = { owner = { has_country_flag = mothball_requiresmorevespene } }
+	}
+	allow = { NOT = { owner = { has_special_project = folk_unmothball } } }
+	effect = {
+		custom_tooltip = edict_deactivate_moth_tooltip
+		enable_special_project = {
+			name = "folk_unmothball"
+			location = this
+			owner = root
+		}
+	}
+	ai_weight = { weight = 0 }
+}
+
+planet_edict = {
+	name = "scrapships"
+	influence_cost = 0
+	length = 0
+
+	potential = {
+		owner = {
+			is_ai = no
+			is_playable_country = yes
+		}
+		has_planet_flag = "mothball_active"
+		NOT = { owner = { has_special_project = folk_unmothball } }
+		NOT = { owner = { has_country_flag = mothball_requiresmorevespene } }
+	}
+	allow = { NOT = { owner = { has_special_project = folk_scrapships } } }
+	effect = {
+		custom_tooltip = edict_scrapships_tooltip
+		enable_special_project = {
+			name = "folk_scrapships"
+			location = this
+			owner = root
+		}
+	}
+	ai_weight = { weight = 0 }
+}

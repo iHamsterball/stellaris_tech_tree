@@ -1,0 +1,1390 @@
+# ######################
+# Ether Drake Weaponry #
+# ######################
+
+# These are all the weapons applied to the Dragon Fire Drakes. The Secondary and tertiary weaponry also apply to Guardians & Babies, but the XL Beam is different (other file).
+
+# Red Dragonfire Drake
+weapon_component_template = {
+	key = "DRAGON_WEAPON_RED"
+	size = large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_red"
+	icon_frame = 1
+	
+	damage = { min = 800.0 max = 1440.0 } #Damage equivalent to 4 Graviton Lances hitting simultaneously.
+	windup = { min = 10.0 max = 20.0 } #vanilla Guardian values - time between aquiring target and projectile launch
+	total_fire_time = 85.0 #this value is "cooldown" - 100.0 is vanilla
+	range = 120.0
+	accuracy = 0.85
+	tracking = 0
+	
+	shield_damage = 0.75
+	armor_penetration = 0.90
+	
+	firing_arc = 25.0 #15.0
+	min_range = 10.0
+	static_rotation = yes
+	
+	hidden = yes
+	projectile_gfx = "dragon_weapon_red"
+	tags = { weapon_type_energy }
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		Flagship = 50000
+		Superdreadnought = 50000
+		Dreadnought = 50000
+		Carrier = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		Battlecruiser = 5000
+		LightCarrier = 5000
+		cruiser = 2500
+		StrikeCruiser = 1500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_SECONDARY_WEAPON_RED"
+	size = medium
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_bolt_red"
+	icon_frame = 1
+	
+	hidden = yes
+	use_ship_kill_target = no
+	
+	damage = { min = 150.0 max = 250.0 }
+	windup = { min = 2.0 max = 20.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 80.0
+	accuracy = 0.8
+	tracking = 0.75
+	shield_damage = 1.5
+	armor_penetration = 0.25
+	
+	projectile_gfx = "dragon_wing_red_weapon"
+	tags = { weapon_type_energy }
+	target_weights = {
+		cruiser = 2500
+		destroyer = 1500
+		small_ship_fallen_empire = 1500
+		battleship = 1000
+		npc_warship_01 = 1000
+		space_dragon_baby = 1000		
+		massive_ship_fallen_empire = 1000
+		large_ship_fallen_empire = 1000				
+		corvette = 500	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_TERTIARY_WEAPON_RED"
+	size = point_defence
+	entity = "invisible_turret_entity"
+	type = point_defence
+	
+	damage = { min = 15.0 max = 20.0 }
+	windup = { min = 1.0 max = 1.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 20.0
+	accuracy = 0.8
+	tracking = 0.5
+	
+	icon = "GFX_ship_part_dragonfire_lightning_red"
+	icon_frame = 1
+	
+	hidden = yes
+	projectile_gfx = "arc_emitter_red"
+	tags = { weapon_type_point_defense weapon_type_energy }
+}
+
+# Orange Dragonfire Drake
+weapon_component_template = {
+	key = "DRAGON_WEAPON_ORANGE"
+	size = large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_orange"
+	icon_frame = 1
+	
+	damage = { min = 800.0 max = 1440.0 } #Damage equivalent to 4 Graviton Lances hitting simultaneously.
+	windup = { min = 10.0 max = 20.0 } #vanilla Guardian values - time between aquiring target and projectile launch
+	total_fire_time = 85.0 #this value is "cooldown" - 100.0 is vanilla
+	range = 120.0
+	accuracy = 0.85
+	tracking = 0
+	
+	shield_damage = 0.75
+	armor_penetration = 0.90
+	
+	firing_arc = 25.0 #15.0
+	min_range = 10.0
+	static_rotation = yes
+	
+	hidden = yes
+	projectile_gfx = "dragon_weapon_orange"
+	tags = { weapon_type_energy }
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		Flagship = 50000
+		Superdreadnought = 50000
+		Dreadnought = 50000
+		Carrier = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		Battlecruiser = 5000
+		LightCarrier = 5000
+		cruiser = 2500
+		StrikeCruiser = 1500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_SECONDARY_WEAPON_ORANGE"
+	size = medium
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_bolt_orange"
+	icon_frame = 1
+	
+	hidden = yes
+	use_ship_kill_target = no
+	
+	damage = { min = 150.0 max = 250.0 }
+	windup = { min = 2.0 max = 20.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 80.0
+	accuracy = 0.8
+	tracking = 0.75
+	shield_damage = 1.5
+	armor_penetration = 0.5
+	
+	projectile_gfx = "dragon_wing_orange_weapon"
+	tags = { weapon_type_energy }
+	target_weights = {
+		cruiser = 2500
+		destroyer = 1500
+		small_ship_fallen_empire = 1500
+		battleship = 1000
+		npc_warship_01 = 1000
+		space_dragon_baby = 1000		
+		massive_ship_fallen_empire = 1000
+		large_ship_fallen_empire = 1000				
+		corvette = 500	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_TERTIARY_WEAPON_ORANGE"
+	size = point_defence
+	entity = "invisible_turret_entity"
+	type = point_defence
+	
+	damage = { min = 15.0 max = 20.0 }
+	windup = { min = 1.0 max = 1.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 20.0
+	accuracy = 0.8
+	tracking = 0.5
+	
+	icon = "GFX_ship_part_dragonfire_lightning_orange"
+	icon_frame = 1
+	
+	hidden = yes
+	projectile_gfx = "arc_emitter_orange"
+	tags = { weapon_type_point_defense weapon_type_energy }
+}
+
+# Yellow Dragonfire Drake
+weapon_component_template = {
+	key = "DRAGON_WEAPON_YELLOW"
+	size = large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_yellow"
+	icon_frame = 1
+	
+	damage = { min = 800.0 max = 1440.0 } #Damage equivalent to 4 Graviton Lances hitting simultaneously.
+	windup = { min = 10.0 max = 20.0 } #vanilla Guardian values - time between aquiring target and projectile launch
+	total_fire_time = 85.0 #this value is "cooldown" - 100.0 is vanilla
+	range = 120.0
+	accuracy = 0.85
+	tracking = 0
+	
+	shield_damage = 0.75
+	armor_penetration = 0.90
+	
+	firing_arc = 25.0 #15.0
+	min_range = 10.0
+	static_rotation = yes
+	
+	hidden = yes
+	projectile_gfx = "dragon_weapon_yellow"
+	tags = { weapon_type_energy }
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		Flagship = 50000
+		Superdreadnought = 50000
+		Dreadnought = 50000
+		Carrier = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		Battlecruiser = 5000
+		LightCarrier = 5000
+		cruiser = 2500
+		StrikeCruiser = 1500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_SECONDARY_WEAPON_YELLOW"
+	size = medium
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_bolt_yellow"
+	icon_frame = 1
+	
+	hidden = yes
+	use_ship_kill_target = no
+	
+	damage = { min = 150.0 max = 250.0 }
+	windup = { min = 2.0 max = 20.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 80.0
+	accuracy = 0.8
+	tracking = 0.75
+	shield_damage = 1.5
+	armor_penetration = 0.25
+	
+	projectile_gfx = "dragon_wing_yellow_weapon"
+	tags = { weapon_type_energy }
+	target_weights = {
+		cruiser = 2500
+		destroyer = 1500
+		small_ship_fallen_empire = 1500
+		battleship = 1000
+		npc_warship_01 = 1000
+		space_dragon_baby = 1000		
+		massive_ship_fallen_empire = 1000
+		large_ship_fallen_empire = 1000				
+		corvette = 500	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_TERTIARY_WEAPON_YELLOW"
+	size = point_defence
+	entity = "invisible_turret_entity"
+	type = point_defence
+	
+	damage = { min = 15.0 max = 20.0 }
+	windup = { min = 1.0 max = 1.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 20.0
+	accuracy = 0.8
+	tracking = 0.5
+	
+	icon = "GFX_ship_part_dragonfire_lightning_yellow"
+	icon_frame = 1
+	
+	hidden = yes
+	projectile_gfx = "arc_emitter_yellow"
+	tags = { weapon_type_point_defense weapon_type_energy }
+}
+
+# Chartreuse Dragonfire Drake
+weapon_component_template = {
+	key = "DRAGON_WEAPON_CHARTREUSE"
+	size = large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_chartreuse"
+	icon_frame = 1
+	
+	damage = { min = 800.0 max = 1440.0 } #Damage equivalent to 4 Graviton Lances hitting simultaneously.
+	windup = { min = 10.0 max = 20.0 } #vanilla Guardian values - time between aquiring target and projectile launch
+	total_fire_time = 85.0 #this value is "cooldown" - 100.0 is vanilla
+	range = 120.0
+	accuracy = 0.85
+	tracking = 0
+	
+	shield_damage = 0.75
+	armor_penetration = 0.90
+	
+	firing_arc = 25.0 #15.0
+	min_range = 10.0
+	static_rotation = yes
+	
+	hidden = yes
+	projectile_gfx = "dragon_weapon_chartreuse"
+	tags = { weapon_type_energy }
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		Flagship = 50000
+		Superdreadnought = 50000
+		Dreadnought = 50000
+		Carrier = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		Battlecruiser = 5000
+		LightCarrier = 5000
+		cruiser = 2500
+		StrikeCruiser = 1500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_SECONDARY_WEAPON_CHARTREUSE"
+	size = medium
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_bolt_chartreuse"
+	icon_frame = 1
+	
+	hidden = yes
+	use_ship_kill_target = no
+	
+	damage = { min = 150.0 max = 250.0 }
+	windup = { min = 2.0 max = 20.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 80.0
+	accuracy = 0.8
+	tracking = 0.75
+	shield_damage = 1.5
+	armor_penetration = 0.25
+	
+	projectile_gfx = "dragon_wing_chartreuse_weapon"
+	tags = { weapon_type_energy }
+	target_weights = {
+		cruiser = 2500
+		destroyer = 1500
+		small_ship_fallen_empire = 1500
+		battleship = 1000
+		npc_warship_01 = 1000
+		space_dragon_baby = 1000		
+		massive_ship_fallen_empire = 1000
+		large_ship_fallen_empire = 1000				
+		corvette = 500	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_TERTIARY_WEAPON_CHARTREUSE"
+	size = point_defence
+	entity = "invisible_turret_entity"
+	type = point_defence
+	
+	damage = { min = 15.0 max = 20.0 }
+	windup = { min = 1.0 max = 1.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 20.0
+	accuracy = 0.8
+	tracking = 0.5
+	
+	icon = "GFX_ship_part_dragonfire_lightning_chartreuse"
+	icon_frame = 1
+	
+	hidden = yes
+	projectile_gfx = "arc_emitter_chartreuse"
+	tags = { weapon_type_point_defense weapon_type_energy }
+}
+
+# Green Dragonfire Drake
+weapon_component_template = {
+	key = "DRAGON_WEAPON_GREEN"
+	size = large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_green"
+	icon_frame = 1
+	
+	damage = { min = 800.0 max = 1440.0 } #Damage equivalent to 4 Graviton Lances hitting simultaneously.
+	windup = { min = 10.0 max = 20.0 } #vanilla Guardian values - time between aquiring target and projectile launch
+	total_fire_time = 85.0 #this value is "cooldown" - 100.0 is vanilla
+	range = 120.0
+	accuracy = 0.85
+	tracking = 0
+	
+	shield_damage = 0.75
+	armor_penetration = 0.90
+	
+	firing_arc = 25.0 #15.0
+	min_range = 10.0
+	static_rotation = yes
+	
+	hidden = yes
+	projectile_gfx = "dragon_weapon_green"
+	tags = { weapon_type_energy }
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		Flagship = 50000
+		Superdreadnought = 50000
+		Dreadnought = 50000
+		Carrier = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		Battlecruiser = 5000
+		LightCarrier = 5000
+		cruiser = 2500
+		StrikeCruiser = 1500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_SECONDARY_WEAPON_GREEN"
+	size = medium
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_bolt_green"
+	icon_frame = 1
+	
+	hidden = yes
+	use_ship_kill_target = no
+	
+	damage = { min = 150.0 max = 250.0 }
+	windup = { min = 2.0 max = 20.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 80.0
+	accuracy = 0.8
+	tracking = 0.75
+	shield_damage = 1.5
+	armor_penetration = 0.25
+	
+	projectile_gfx = "dragon_wing_green_weapon"
+	tags = { weapon_type_energy }
+	target_weights = {
+		cruiser = 2500
+		destroyer = 1500
+		small_ship_fallen_empire = 1500
+		battleship = 1000
+		npc_warship_01 = 1000
+		space_dragon_baby = 1000		
+		massive_ship_fallen_empire = 1000
+		large_ship_fallen_empire = 1000				
+		corvette = 500	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_TERTIARY_WEAPON_GREEN"
+	size = point_defence
+	entity = "invisible_turret_entity"
+	type = point_defence
+	
+	damage = { min = 15.0 max = 20.0 }
+	windup = { min = 1.0 max = 1.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 20.0
+	accuracy = 0.8
+	tracking = 0.5
+	
+	icon = "GFX_ship_part_dragonfire_lightning_green"
+	icon_frame = 1
+	
+	hidden = yes
+	projectile_gfx = "arc_emitter_green"
+	tags = { weapon_type_point_defense weapon_type_energy }
+}
+
+# Aquamarine Dragonfire Drake
+weapon_component_template = {
+	key = "DRAGON_WEAPON_AQUAMARINE"
+	size = large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_aquamarine"
+	icon_frame = 1
+	
+	damage = { min = 800.0 max = 1440.0 } #Damage equivalent to 4 Graviton Lances hitting simultaneously.
+	windup = { min = 10.0 max = 20.0 } #vanilla Guardian values - time between aquiring target and projectile launch
+	total_fire_time = 85.0 #this value is "cooldown" - 100.0 is vanilla
+	range = 120.0
+	accuracy = 0.85
+	tracking = 0
+	
+	shield_damage = 0.75
+	armor_penetration = 0.90
+	
+	firing_arc = 25.0 #15.0
+	min_range = 10.0
+	static_rotation = yes
+	
+	hidden = yes
+	projectile_gfx = "dragon_weapon_aquamarine"
+	tags = { weapon_type_energy }
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		Flagship = 50000
+		Superdreadnought = 50000
+		Dreadnought = 50000
+		Carrier = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		Battlecruiser = 5000
+		LightCarrier = 5000
+		cruiser = 2500
+		StrikeCruiser = 1500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_SECONDARY_WEAPON_AQUAMARINE"
+	size = medium
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_bolt_aquamarine"
+	icon_frame = 1
+	
+	hidden = yes
+	use_ship_kill_target = no
+	
+	damage = { min = 150.0 max = 250.0 }
+	windup = { min = 2.0 max = 20.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 80.0
+	accuracy = 0.8
+	tracking = 0.75
+	shield_damage = 1.5
+	armor_penetration = 0.25
+	
+	projectile_gfx = "dragon_wing_aquamarine_weapon"
+	tags = { weapon_type_energy }
+	target_weights = {
+		cruiser = 2500
+		destroyer = 1500
+		small_ship_fallen_empire = 1500
+		battleship = 1000
+		npc_warship_01 = 1000
+		space_dragon_baby = 1000		
+		massive_ship_fallen_empire = 1000
+		large_ship_fallen_empire = 1000				
+		corvette = 500	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_TERTIARY_WEAPON_AQUAMARINE"
+	size = point_defence
+	entity = "invisible_turret_entity"
+	type = point_defence
+	
+	damage = { min = 15.0 max = 20.0 }
+	windup = { min = 1.0 max = 1.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 20.0
+	accuracy = 0.8
+	tracking = 0.5
+	
+	icon = "GFX_ship_part_dragonfire_lightning_aquamarine"
+	icon_frame = 1
+	
+	hidden = yes
+	projectile_gfx = "arc_emitter_aquamarine"
+	tags = { weapon_type_point_defense weapon_type_energy }
+}
+
+# Cyan Dragonfire Drake
+weapon_component_template = {
+	key = "DRAGON_WEAPON_CYAN"
+	size = large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_cyan"
+	icon_frame = 1
+	
+	damage = { min = 800.0 max = 1440.0 } #Damage equivalent to 4 Graviton Lances hitting simultaneously.
+	windup = { min = 10.0 max = 20.0 } #vanilla Guardian values - time between aquiring target and projectile launch
+	total_fire_time = 85.0 #this value is "cooldown" - 100.0 is vanilla
+	range = 120.0
+	accuracy = 0.85
+	tracking = 0
+	
+	shield_damage = 0.75
+	armor_penetration = 0.90
+	
+	firing_arc = 25.0 #15.0
+	min_range = 10.0
+	static_rotation = yes
+	
+	hidden = yes
+	projectile_gfx = "dragon_weapon_cyan"
+	tags = { weapon_type_energy }
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		Flagship = 50000
+		Superdreadnought = 50000
+		Dreadnought = 50000
+		Carrier = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		Battlecruiser = 5000
+		LightCarrier = 5000
+		cruiser = 2500
+		StrikeCruiser = 1500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_SECONDARY_WEAPON_CYAN"
+	size = medium
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_bolt_cyan"
+	icon_frame = 1
+	
+	hidden = yes
+	use_ship_kill_target = no
+	
+	damage = { min = 150.0 max = 250.0 }
+	windup = { min = 2.0 max = 20.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 80.0
+	accuracy = 0.8
+	tracking = 0.75
+	shield_damage = 1.5
+	armor_penetration = 0.25
+	
+	projectile_gfx = "dragon_wing_cyan_weapon"
+	tags = { weapon_type_energy }
+	target_weights = {
+		cruiser = 2500
+		destroyer = 1500
+		small_ship_fallen_empire = 1500
+		battleship = 1000
+		npc_warship_01 = 1000
+		space_dragon_baby = 1000		
+		massive_ship_fallen_empire = 1000
+		large_ship_fallen_empire = 1000				
+		corvette = 500	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_TERTIARY_WEAPON_CYAN"
+	size = point_defence
+	entity = "invisible_turret_entity"
+	type = point_defence
+	
+	damage = { min = 15.0 max = 20.0 }
+	windup = { min = 1.0 max = 1.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 20.0
+	accuracy = 0.8
+	tracking = 0.5
+	
+	icon = "GFX_ship_part_dragonfire_lightning_cyan"
+	icon_frame = 1
+	
+	hidden = yes
+	projectile_gfx = "arc_emitter_cyan"
+	tags = { weapon_type_point_defense weapon_type_energy }
+}
+
+# Azure Dragonfire Drake
+weapon_component_template = {
+	key = "DRAGON_WEAPON_AZURE"
+	size = large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_azure"
+	icon_frame = 1
+	
+	damage = { min = 800.0 max = 1440.0 } #Damage equivalent to 4 Graviton Lances hitting simultaneously.
+	windup = { min = 10.0 max = 20.0 } #vanilla Guardian values - time between aquiring target and projectile launch
+	total_fire_time = 85.0 #this value is "cooldown" - 100.0 is vanilla
+	range = 120.0
+	accuracy = 0.85
+	tracking = 0
+	
+	shield_damage = 0.75
+	armor_penetration = 0.90
+	
+	firing_arc = 25.0 #15.0
+	min_range = 10.0
+	static_rotation = yes
+	
+	hidden = yes
+	projectile_gfx = "dragon_weapon_azure"
+	tags = { weapon_type_energy }
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		Flagship = 50000
+		Superdreadnought = 50000
+		Dreadnought = 50000
+		Carrier = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		Battlecruiser = 5000
+		LightCarrier = 5000
+		cruiser = 2500
+		StrikeCruiser = 1500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_SECONDARY_WEAPON_AZURE"
+	size = medium
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_bolt_azure"
+	icon_frame = 1
+	
+	hidden = yes
+	use_ship_kill_target = no
+	
+	damage = { min = 150.0 max = 250.0 }
+	windup = { min = 2.0 max = 20.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 80.0
+	accuracy = 0.8
+	tracking = 0.75
+	shield_damage = 1.5
+	armor_penetration = 0.25
+	
+	projectile_gfx = "dragon_wing_azure_weapon"
+	tags = { weapon_type_energy }
+	target_weights = {
+		cruiser = 2500
+		destroyer = 1500
+		small_ship_fallen_empire = 1500
+		battleship = 1000
+		npc_warship_01 = 1000
+		space_dragon_baby = 1000		
+		massive_ship_fallen_empire = 1000
+		large_ship_fallen_empire = 1000				
+		corvette = 500	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_TERTIARY_WEAPON_AZURE"
+	size = point_defence
+	entity = "invisible_turret_entity"
+	type = point_defence
+	
+	damage = { min = 15.0 max = 20.0 }
+	windup = { min = 1.0 max = 1.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 20.0
+	accuracy = 0.8
+	tracking = 0.5
+	
+	icon = "GFX_ship_part_dragonfire_lightning_azure"
+	icon_frame = 1
+	
+	hidden = yes
+	projectile_gfx = "arc_emitter_azure"
+	tags = { weapon_type_point_defense weapon_type_energy }
+}
+
+# Blue Dragonfire Drake
+weapon_component_template = {
+	key = "DRAGON_WEAPON_BLUE"
+	size = large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_blue"
+	icon_frame = 1
+	
+	damage = { min = 800.0 max = 1440.0 } #Damage equivalent to 4 Graviton Lances hitting simultaneously.
+	windup = { min = 10.0 max = 20.0 } #vanilla Guardian values - time between aquiring target and projectile launch
+	total_fire_time = 85.0 #this value is "cooldown" - 100.0 is vanilla
+	range = 120.0
+	accuracy = 0.85
+	tracking = 0
+	
+	shield_damage = 0.75
+	armor_penetration = 0.90
+	
+	firing_arc = 25.0 #15.0
+	min_range = 10.0
+	static_rotation = yes
+	
+	hidden = yes
+	projectile_gfx = "dragon_weapon_blue"
+	tags = { weapon_type_energy }
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		Flagship = 50000
+		Superdreadnought = 50000
+		Dreadnought = 50000
+		Carrier = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		Battlecruiser = 5000
+		LightCarrier = 5000
+		cruiser = 2500
+		StrikeCruiser = 1500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_SECONDARY_WEAPON_BLUE"
+	size = medium
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_bolt_blue"
+	icon_frame = 1
+	
+	hidden = yes
+	use_ship_kill_target = no
+	
+	damage = { min = 150.0 max = 250.0 }
+	windup = { min = 2.0 max = 20.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 80.0
+	accuracy = 0.8
+	tracking = 0.75
+	shield_damage = 1.5
+	armor_penetration = 0.25
+	
+	projectile_gfx = "dragon_wing_blue_weapon"
+	tags = { weapon_type_energy }
+	target_weights = {
+		cruiser = 2500
+		destroyer = 1500
+		small_ship_fallen_empire = 1500
+		battleship = 1000
+		npc_warship_01 = 1000
+		space_dragon_baby = 1000		
+		massive_ship_fallen_empire = 1000
+		large_ship_fallen_empire = 1000				
+		corvette = 500	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_TERTIARY_WEAPON_BLUE"
+	size = point_defence
+	entity = "invisible_turret_entity"
+	type = point_defence
+	
+	damage = { min = 15.0 max = 20.0 }
+	windup = { min = 1.0 max = 1.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 20.0
+	accuracy = 0.8
+	tracking = 0.5
+	
+	icon = "GFX_ship_part_dragonfire_lightning_blue"
+	icon_frame = 1
+	
+	hidden = yes
+	projectile_gfx = "arc_emitter_blue"
+	tags = { weapon_type_point_defense weapon_type_energy }
+}
+
+# Violet Dragonfire Drake
+weapon_component_template = {
+	key = "DRAGON_WEAPON_VIOLET"
+	size = large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_violet"
+	icon_frame = 1
+	
+	damage = { min = 800.0 max = 1440.0 } #Damage equivalent to 4 Graviton Lances hitting simultaneously.
+	windup = { min = 10.0 max = 20.0 } #vanilla Guardian values - time between aquiring target and projectile launch
+	total_fire_time = 85.0 #this value is "cooldown" - 100.0 is vanilla
+	range = 120.0
+	accuracy = 0.85
+	tracking = 0
+	
+	shield_damage = 0.75
+	armor_penetration = 0.90
+	
+	firing_arc = 25.0 #15.0
+	min_range = 10.0
+	static_rotation = yes
+	
+	hidden = yes
+	projectile_gfx = "dragon_weapon_violet"
+	tags = { weapon_type_energy }
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		Flagship = 50000
+		Superdreadnought = 50000
+		Dreadnought = 50000
+		Carrier = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		Battlecruiser = 5000
+		LightCarrier = 5000
+		cruiser = 2500
+		StrikeCruiser = 1500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_SECONDARY_WEAPON_VIOLET"
+	size = medium
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_bolt_violet"
+	icon_frame = 1
+	
+	hidden = yes
+	use_ship_kill_target = no
+	
+	damage = { min = 150.0 max = 250.0 }
+	windup = { min = 2.0 max = 20.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 80.0
+	accuracy = 0.8
+	tracking = 0.75
+	shield_damage = 1.5
+	armor_penetration = 0.25
+	
+	projectile_gfx = "dragon_wing_violet_weapon"
+	tags = { weapon_type_energy }
+	target_weights = {
+		cruiser = 2500
+		destroyer = 1500
+		small_ship_fallen_empire = 1500
+		battleship = 1000
+		npc_warship_01 = 1000
+		space_dragon_baby = 1000		
+		massive_ship_fallen_empire = 1000
+		large_ship_fallen_empire = 1000				
+		corvette = 500	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_TERTIARY_WEAPON_VIOLET"
+	size = point_defence
+	entity = "invisible_turret_entity"
+	type = point_defence
+	
+	damage = { min = 15.0 max = 20.0 }
+	windup = { min = 1.0 max = 1.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 20.0
+	accuracy = 0.8
+	tracking = 0.5
+	
+	icon = "GFX_ship_part_dragonfire_lightning_violet"
+	icon_frame = 1
+	
+	hidden = yes
+	projectile_gfx = "arc_emitter_violet"
+	tags = { weapon_type_point_defense weapon_type_energy }
+}
+
+# Magenta Dragonfire Drake
+weapon_component_template = {
+	key = "DRAGON_WEAPON_MAGENTA"
+	size = large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_magenta"
+	icon_frame = 1
+	
+	damage = { min = 800.0 max = 1440.0 } #Damage equivalent to 4 Graviton Lances hitting simultaneously.
+	windup = { min = 10.0 max = 20.0 } #vanilla Guardian values - time between aquiring target and projectile launch
+	total_fire_time = 85.0 #this value is "cooldown" - 100.0 is vanilla
+	range = 120.0
+	accuracy = 0.85
+	tracking = 0
+	
+	shield_damage = 0.75
+	armor_penetration = 0.90
+	
+	firing_arc = 25.0 #15.0
+	min_range = 10.0
+	static_rotation = yes
+	
+	hidden = yes
+	projectile_gfx = "dragon_weapon_magenta"
+	tags = { weapon_type_energy }
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		Flagship = 50000
+		Superdreadnought = 50000
+		Dreadnought = 50000
+		Carrier = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		Battlecruiser = 5000
+		LightCarrier = 5000
+		cruiser = 2500
+		StrikeCruiser = 1500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_SECONDARY_WEAPON_MAGENTA"
+	size = medium
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_bolt_magenta"
+	icon_frame = 1
+	
+	hidden = yes
+	use_ship_kill_target = no
+	
+	damage = { min = 150.0 max = 250.0 }
+	windup = { min = 2.0 max = 20.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 80.0
+	accuracy = 0.8
+	tracking = 0.75
+	shield_damage = 1.5
+	armor_penetration = 0.25
+	
+	projectile_gfx = "dragon_wing_magenta_weapon"
+	tags = { weapon_type_energy }
+	target_weights = {
+		cruiser = 2500
+		destroyer = 1500
+		small_ship_fallen_empire = 1500
+		battleship = 1000
+		npc_warship_01 = 1000
+		space_dragon_baby = 1000		
+		massive_ship_fallen_empire = 1000
+		large_ship_fallen_empire = 1000				
+		corvette = 500	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_TERTIARY_WEAPON_MAGENTA"
+	size = point_defence
+	entity = "invisible_turret_entity"
+	type = point_defence
+	
+	damage = { min = 15.0 max = 20.0 }
+	windup = { min = 1.0 max = 1.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 20.0
+	accuracy = 0.8
+	tracking = 0.5
+	
+	icon = "GFX_ship_part_dragonfire_lightning_magenta"
+	icon_frame = 1
+	
+	hidden = yes
+	projectile_gfx = "arc_emitter_magenta"
+	tags = { weapon_type_point_defense weapon_type_energy }
+}
+
+# Rose Dragonfire Drake
+weapon_component_template = {
+	key = "DRAGON_WEAPON_ROSE"
+	size = large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_rose"
+	icon_frame = 1
+	
+	damage = { min = 800.0 max = 1440.0 } #Damage equivalent to 4 Graviton Lances hitting simultaneously.
+	windup = { min = 10.0 max = 20.0 } #vanilla Guardian values - time between aquiring target and projectile launch
+	total_fire_time = 85.0 #this value is "cooldown" - 100.0 is vanilla
+	range = 120.0
+	accuracy = 0.85
+	tracking = 0
+	
+	shield_damage = 0.75
+	armor_penetration = 0.90
+	
+	firing_arc = 25.0 #15.0
+	min_range = 10.0
+	static_rotation = yes
+	
+	hidden = yes
+	projectile_gfx = "dragon_weapon_rose"
+	tags = { weapon_type_energy }
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		Flagship = 50000
+		Superdreadnought = 50000
+		Dreadnought = 50000
+		Carrier = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		Battlecruiser = 5000
+		LightCarrier = 5000
+		cruiser = 2500
+		StrikeCruiser = 1500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_SECONDARY_WEAPON_ROSE"
+	size = medium
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_bolt_rose"
+	icon_frame = 1
+	
+	hidden = yes
+	use_ship_kill_target = no
+	
+	damage = { min = 150.0 max = 250.0 }
+	windup = { min = 2.0 max = 20.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 80.0
+	accuracy = 0.8
+	tracking = 0.75
+	shield_damage = 1.5
+	armor_penetration = 0.25
+	
+	projectile_gfx = "dragon_wing_rose_weapon"
+	tags = { weapon_type_energy }
+	target_weights = {
+		cruiser = 2500
+		destroyer = 1500
+		small_ship_fallen_empire = 1500
+		battleship = 1000
+		npc_warship_01 = 1000
+		space_dragon_baby = 1000		
+		massive_ship_fallen_empire = 1000
+		large_ship_fallen_empire = 1000				
+		corvette = 500	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_TERTIARY_WEAPON_ROSE"
+	size = point_defence
+	entity = "invisible_turret_entity"
+	type = point_defence
+	
+	damage = { min = 15.0 max = 20.0 }
+	windup = { min = 1.0 max = 1.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 20.0
+	accuracy = 0.8
+	tracking = 0.5
+	
+	icon = "GFX_ship_part_dragonfire_lightning_rose"
+	icon_frame = 1
+	
+	hidden = yes
+	projectile_gfx = "arc_emitter_rose"
+	tags = { weapon_type_point_defense weapon_type_energy }
+}
+
+# White Dragonfire Drake
+weapon_component_template = {
+	key = "DRAGON_WEAPON_WHITE"
+	size = large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_white"
+	icon_frame = 1
+	
+	damage = { min = 800.0 max = 1440.0 } #Damage equivalent to 4 Graviton Lances hitting simultaneously.
+	windup = { min = 10.0 max = 20.0 } #vanilla Guardian values - time between aquiring target and projectile launch
+	total_fire_time = 85.0 #this value is "cooldown" - 100.0 is vanilla
+	range = 120.0
+	accuracy = 0.85
+	tracking = 0
+	
+	shield_damage = 0.75
+	armor_penetration = 0.90
+	
+	firing_arc = 25.0 #15.0
+	min_range = 10.0
+	static_rotation = yes
+	
+	hidden = yes
+	projectile_gfx = "dragon_weapon_white"
+	tags = { weapon_type_energy }
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		Flagship = 50000
+		Superdreadnought = 50000
+		Dreadnought = 50000
+		Carrier = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		Battlecruiser = 5000
+		LightCarrier = 5000
+		cruiser = 2500
+		StrikeCruiser = 1500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_SECONDARY_WEAPON_WHITE"
+	size = medium
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_bolt_white"
+	icon_frame = 1
+	
+	hidden = yes
+	use_ship_kill_target = no
+	
+	damage = { min = 150.0 max = 250.0 }
+	windup = { min = 2.0 max = 20.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 80.0
+	accuracy = 0.8
+	tracking = 0.75
+	shield_damage = 1.5
+	armor_penetration = 0.25
+	
+	projectile_gfx = "dragon_wing_white_weapon"
+	tags = { weapon_type_energy }
+	target_weights = {
+		cruiser = 2500
+		destroyer = 1500
+		small_ship_fallen_empire = 1500
+		battleship = 1000
+		npc_warship_01 = 1000
+		space_dragon_baby = 1000		
+		massive_ship_fallen_empire = 1000
+		large_ship_fallen_empire = 1000				
+		corvette = 500	
+	}
+}
+
+weapon_component_template = {
+	key = "DRAGON_TERTIARY_WEAPON_WHITE"
+	size = point_defence
+	entity = "invisible_turret_entity"
+	type = point_defence
+	
+	damage = { min = 15.0 max = 20.0 }
+	windup = { min = 1.0 max = 1.0 } 
+	total_fire_time = 10.0 # This value is cooldown
+	range = 20.0
+	accuracy = 0.8
+	tracking = 0.5
+	
+	icon = "GFX_ship_part_dragonfire_lightning_white"
+	icon_frame = 1
+	
+	hidden = yes
+	projectile_gfx = "arc_emitter_white"
+	tags = { weapon_type_point_defense weapon_type_energy }
+}
+
+# Voidwalker Drake
+weapon_component_template = {
+	key = "DRAGON_WEAPON_VOIDWALKER"
+	size = large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_white"
+	icon_frame = 1
+	
+	damage = { min = 2500.0 max = 4000.0 }
+	windup = { min = 10.0 max = 20.0 } #vanilla Guardian values - time between aquiring target and projectile launch
+	total_fire_time = 150.0 #this value is "cooldown" - 100.0 is vanilla
+	range = 120.0
+	accuracy = 0.85
+	tracking = 0
+	
+	shield_damage = 0.75
+	armor_penetration = 0.90
+	
+	firing_arc = 25.0 #15.0
+	min_range = 10.0
+	static_rotation = yes
+	
+	hidden = yes
+	projectile_gfx = "dragon_weapon_white"
+	tags = { weapon_type_energy }
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		Flagship = 50000
+		Superdreadnought = 50000
+		Dreadnought = 50000
+		Carrier = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		Battlecruiser = 5000
+		LightCarrier = 5000
+		cruiser = 2500
+		StrikeCruiser = 1500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}

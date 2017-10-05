@@ -1,0 +1,35 @@
+﻿l_braz_por:
+
+sm_mothball_module: "Mothball & Scrapyard"
+sm_mothball_module_desc: "Enables planet edicts to mothball or scrap all military fleets and ships in orbit."
+
+edict_activate_moth: "Activate Mothball Module"
+edict_activate_moth_desc: "All military fleets orbiting, built, rallied, or arriving, to or on this planet, will be mothballed, reducing their upkeep cost by §G100%§!.\n"
+edict_activate_moth_tooltip: "\nActivates the mothball spaceport module. This is free. However, to de-mothball them again you need to §Ppay a hefty£minerals price.§!\n\nThe price is calculated by our administration, and will not be announced ahead of time. However, it will never exceed 70% of the cost of all mothballed ships.\n\n§GMothballed ships are not viewed as valid targets by any hostiles. All crews are sent off to other duties, and the ships will be lifeless husks floating in space.§! §RIf the planet is ever bombarded, all ships will be destroyed.§!"
+
+edict_deactivate_moth: "Deactivate Mothball Module"
+edict_deactivate_moth_desc: "Enables a §Mspecial project§! for the empire to de-mothball all military ships in orbit.\n\n§GTurns off mothballing immediately§! for new arrivals and orbital construction.\n"
+edict_deactivate_moth_tooltip: "\nThe cost can not be determined at this time. The budget notes that costs start at§R£minerals 10§! per navy size, and increases every decade, up to a maximum of§R£minerals 50§! per navy size.\n\n§PIf we can not afford to pay this when the special project is completed, we will be deducted monthly for as long as necessary.§!"
+
+edict_scrapships: "Scrap Mothballed Ships"
+edict_scrapships_desc: "Enables a §Mspecial project§! for the empire to scrap the mothballed ships for materials."
+edict_scrapships_tooltip: "Disassembles and refunds you some of the cost of the mothballed ships.\n\nOur construction crews will disassemble the ships and determine how much of it can be recycled into£mineralsminerals upon completion of the project."
+
+mothballed_fleet: "Mothballed"
+mothballed_fleet_desc: "This fleet is mothballed."
+
+folk_unmothball: "De-mothball Fleets"
+folk_unmothball_DESC: "Our construction crews need some time to finish de-mothballing our ships. We still don't know the real cost of this project, but we are assured that it will be between 5% and 70% of what constructing new ships would cost."
+
+folk_scrapships: "Scrap Fleets"
+folk_scrapships_DESC: "Engage our construction crews to scrap the mothballed fleets."
+
+folk_mothball_paidfully: "Payment transaction success"
+folk_mothball_paidfully_desc: "All our fleets have been de-mothballed and are operational immediately.\n\nPayment delivered: £minerals §R[Root.MothballPayment]§!\n\nThe payment has been made to the §YMothball & Scrapyard Company§! in full."
+
+folk_mothball_notpaid: "Payment failure!"
+folk_mothball_notpaid_desc: "All our fleets have been de-mothballed and are operational immediately.\n\nHowever, we have §Rnot paid our dues§! to the §YMothball & Scrapyard Company§! in full, and will be deducted£minerals every month until we have done so. You will get a new notification when payment is completed.\n\nTotal owed: £minerals §R[Root.MothballPayment]§!\nPaid: £minerals §R[Root.MothballPartlyPaid]§!\nDue amount: £minerals §R[Root.MothballDue]§!\n"
+
+folk_mothball_scrapped: "Fleets scrapped"
+folk_mothball_scrapped_desc: "The employees at the Mothball & Scrapyard Company have disassembled, scrapped, and sold the parts from all our mothballed fleets.\n\nAfter their cut, our payment is to the respectable amount of £minerals §R[Root.MothballScrapPayment]§!."
+
