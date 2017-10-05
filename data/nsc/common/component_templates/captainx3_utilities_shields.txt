@@ -1,0 +1,452 @@
+#############
+#	POWER	#
+#############
+
+@power_S6 = -15
+@power_M6 = -30
+@power_L6 = -60
+             
+@power_S7 = -17.5
+@power_M7 = -35
+@power_L7 = -70
+             
+@power_S8 = -20
+@power_M8 = -40
+@power_L8 = -80
+             
+@power_S9 = -22.5
+@power_M9 = -45
+@power_L9 = -90
+            
+@power_S10 = -25
+@power_M10 = -50
+@power_L10 = -100
+
+@power_S11 = -27.5
+@power_M11 = -55
+@power_L11 = -110
+
+#############
+#	COST	#
+#############
+
+@cost_S6 = 7
+@cost_M6 = 14
+@cost_L6 = 28
+           
+@cost_S7 = 8
+@cost_M7 = 16
+@cost_L7 = 32
+           
+@cost_S8 = 9
+@cost_M8 = 18
+@cost_L8 = 36
+           
+@cost_S9 = 10
+@cost_M9 = 20
+@cost_L9 = 40
+           
+@cost_S10 = 11
+@cost_M10 = 22
+@cost_L10 = 44
+
+@cost_S11 = 12
+@cost_M11 = 24
+@cost_L11 = 48
+
+##########
+# SHIELD #
+##########
+
+@shield_S6 = 150
+@shield_M6 = 300
+@shield_L6 = 600
+
+@shield_S7 = 205
+@shield_M7 = 410
+@shield_L7 = 820
+
+@shield_S8 = 270
+@shield_M8 = 540
+@shield_L8 = 1080
+
+@shield_S9 = 345
+@shield_M9 = 690
+@shield_L9 = 1380
+
+@shield_S10 = 430
+@shield_M10 = 860
+@shield_L10 = 1720
+
+@shield_S11 = 525
+@shield_M11 = 1050
+@shield_L11 = 2100
+
+#######################
+# SHIELD REGENERATION #
+#######################
+
+@shield_reg_S6 = 4.2
+@shield_reg_M6 = 6.4
+@shield_reg_L6 = 8.6
+
+@shield_reg_S7 = 4.8
+@shield_reg_M7 = 7.2
+@shield_reg_L7 = 9.6
+
+@shield_reg_S8 = 5.4
+@shield_reg_M8 = 8
+@shield_reg_L8 = 10.6
+
+@shield_reg_S9 = 6
+@shield_reg_M9 = 8.8
+@shield_reg_L9 = 11.6
+
+@shield_reg_S10 = 6.6
+@shield_reg_M10 = 9.6
+@shield_reg_L10 = 12.6
+
+@shield_reg_S11 = 7.2
+@shield_reg_M11 = 10.4
+@shield_reg_L11 = 13.6
+
+#####################
+# Shield Components #
+#####################
+
+# Reinforced Shields
+utility_component_template = {
+	key = "SMALL_SHIELD_6_NSC"
+	size = small
+	icon = "GFX_ship_part_shield_6_NSC"
+	icon_frame = 1
+	power = @power_S6
+	cost = @cost_S6
+	modifier = {
+		ship_shield_hp_add = @shield_S6
+		ship_shield_regen_add = @shield_reg_S6 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_6_NSC" }
+	upgrades_to = "SMALL_SHIELD_7_NSC"
+	component_set = "NSC_SHIELD_6"
+}
+
+utility_component_template = {
+	key = "MEDIUM_SHIELD_6_NSC"
+	size = medium
+	icon = "GFX_ship_part_shield_6_NSC"
+	icon_frame = 1
+	power = @power_M6
+	cost = @cost_M6
+	modifier = {
+		ship_shield_hp_add = @shield_M6
+		ship_shield_regen_add = @shield_reg_M6 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_6_NSC" }
+	upgrades_to = "MEDIUM_SHIELD_7_NSC"
+	component_set = "NSC_SHIELD_6"
+}
+
+utility_component_template = {
+	key = "LARGE_SHIELD_6_NSC"
+	size = large
+	icon = "GFX_ship_part_shield_6_NSC"
+	icon_frame = 1
+	power = @power_L6
+	cost = @cost_L6
+	modifier = {
+		ship_shield_hp_add = @shield_L6
+		ship_shield_regen_add = @shield_reg_L6 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_6_NSC" }
+	upgrades_to = "LARGE_SHIELD_7_NSC"
+	component_set = "NSC_SHIELD_6"
+}
+
+# NSC Hyper Shields
+utility_component_template = {
+	key = "SMALL_SHIELD_7_NSC"
+	size = small
+	icon = "GFX_ship_part_shield_7_NSC"
+	icon_frame = 1
+	power = @power_S7
+	cost = @cost_S7
+	modifier = {
+		ship_shield_hp_add = @shield_S7
+		ship_shield_regen_add = @shield_reg_S7 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_7_NSC" }
+	upgrades_to = "SMALL_SHIELD_8_NSC"
+	component_set = "NSC_SHIELD_7"
+}
+
+utility_component_template = {
+	key = "MEDIUM_SHIELD_7_NSC"
+	size = medium
+	icon = "GFX_ship_part_shield_7_NSC"
+	icon_frame = 1
+	power = @power_M7
+	cost = @cost_M7
+	modifier = {
+		ship_shield_hp_add = @shield_M7
+		ship_shield_regen_add = @shield_reg_M7 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_7_NSC" }
+	upgrades_to = "MEDIUM_SHIELD_8_NSC"
+	component_set = "NSC_SHIELD_7"
+}
+
+utility_component_template = {
+	key = "LARGE_SHIELD_7_NSC"
+	size = large
+	icon = "GFX_ship_part_shield_7_NSC"
+	icon_frame = 1
+	power = @power_L7
+	cost = @cost_L7
+	modifier = {
+		ship_shield_hp_add = @shield_L7
+		ship_shield_regen_add = @shield_reg_L7 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_7_NSC" }
+	upgrades_to = "LARGE_SHIELD_8_NSC"
+	component_set = "NSC_SHIELD_7"
+}
+
+# Baryonic Shields
+utility_component_template = {
+	key = "SMALL_SHIELD_8_NSC"
+	size = small
+	icon = "GFX_ship_part_shield_8_NSC"
+	icon_frame = 1
+	power = @power_S8
+	cost = @cost_S8
+	modifier = {
+		ship_shield_hp_add = @shield_S8
+		ship_shield_regen_add = @shield_reg_S8 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_8_NSC" }
+	upgrades_to = "SMALL_SHIELD_9_NSC"
+	component_set = "NSC_SHIELD_8"
+}
+
+utility_component_template = {
+	key = "MEDIUM_SHIELD_8_NSC"
+	size = medium
+	icon = "GFX_ship_part_shield_8_NSC"
+	icon_frame = 1
+	power = @power_M8
+	cost = @cost_M8
+	modifier = {
+		ship_shield_hp_add = @shield_M8
+		ship_shield_regen_add = @shield_reg_M8 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_8_NSC" }
+	upgrades_to = "MEDIUM_SHIELD_9_NSC"
+	component_set = "NSC_SHIELD_8"
+}
+
+utility_component_template = {
+	key = "LARGE_SHIELD_8_NSC"
+	size = large
+	icon = "GFX_ship_part_shield_8_NSC"
+	icon_frame = 1
+	power = @power_L8
+	cost = @cost_L8
+	modifier = {
+		ship_shield_hp_add = @shield_L8
+		ship_shield_regen_add = @shield_reg_L8 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_8_NSC" }
+	upgrades_to = "LARGE_SHIELD_9_NSC"
+	component_set = "NSC_SHIELD_8"
+}
+
+# Multilayered Shields
+utility_component_template = {
+	key = "SMALL_SHIELD_9_NSC"
+	size = small
+	icon = "GFX_ship_part_shield_9_NSC"
+	icon_frame = 1
+	power = @power_S9
+	cost = @cost_S9
+	modifier = {
+		ship_shield_hp_add = @shield_S9
+		ship_shield_regen_add = @shield_reg_S9 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_9_NSC" }
+	upgrades_to = "SMALL_SHIELD_10_NSC"
+	component_set = "NSC_SHIELD_9"
+}
+
+utility_component_template = {
+	key = "MEDIUM_SHIELD_9_NSC"
+	size = medium
+	icon = "GFX_ship_part_shield_9_NSC"
+	icon_frame = 1
+	power = @power_M9
+	cost = @cost_M9
+	modifier = {
+		ship_shield_hp_add = @shield_M9
+		ship_shield_regen_add = @shield_reg_M9 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_9_NSC" }
+	upgrades_to = "MEDIUM_SHIELD_10_NSC"
+	component_set = "NSC_SHIELD_9"
+}
+
+utility_component_template = {
+	key = "LARGE_SHIELD_9_NSC"
+	size = large
+	icon = "GFX_ship_part_shield_9_NSC"
+	icon_frame = 1
+	power = @power_L9
+	cost = @cost_L9
+	modifier = {
+		ship_shield_hp_add = @shield_L9
+		ship_shield_regen_add = @shield_reg_L9 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_9_NSC" }
+	upgrades_to = "LARGE_SHIELD_10_NSC"
+	component_set = "NSC_SHIELD_9"
+}
+
+# Multiphasic Shields
+utility_component_template = {
+	key = "SMALL_SHIELD_10_NSC"
+	size = small
+	icon = "GFX_ship_part_shield_10_NSC"
+	icon_frame = 1
+	power = @power_S10
+	cost = @cost_S10
+	modifier = {
+		ship_shield_hp_add = @shield_S10
+		ship_shield_regen_add = @shield_reg_S10 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_10_NSC" }
+	#upgrades_to = "SMALL_PSI_SHIELD_NSC"
+	component_set = "NSC_SHIELD_10"
+}
+
+utility_component_template = {
+	key = "MEDIUM_SHIELD_10_NSC"
+	size = medium
+	icon = "GFX_ship_part_shield_10_NSC"
+	icon_frame = 1
+	power = @power_M10
+	cost = @cost_M10
+	modifier = {
+		ship_shield_hp_add = @shield_M10
+		ship_shield_regen_add = @shield_reg_M10 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_10_NSC" }
+	#upgrades_to = "MEDIUM_PSI_SHIELD_NSC"
+	component_set = "NSC_SHIELD_10"
+}
+
+utility_component_template = {
+	key = "LARGE_SHIELD_10_NSC"
+	size = large
+	icon = "GFX_ship_part_shield_10_NSC"
+	icon_frame = 1
+	power = @power_L10
+	cost = @cost_L10
+	modifier = {
+		ship_shield_hp_add = @shield_L10
+		ship_shield_regen_add = @shield_reg_L10 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_10_NSC" }
+	#upgrades_to = "LARGE_PSI_SHIELD_NSC"
+	component_set = "NSC_SHIELD_10"
+}
+
+# Optimized Psionic Shields
+utility_component_template = {
+	key = "SMALL_SHIELD_11_PSIONIC_NSC"
+	size = small
+	icon = "GFX_ship_part_psi_shield_NSC"
+	icon_frame = 1
+	power = @power_S11
+	cost = @cost_S11
+	modifier = {
+		ship_shield_hp_add = @shield_S11
+		ship_shield_regen_add = @shield_reg_S11 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_11_psionic_NSC" }
+	component_set = "NSC_SHIELD_11_PSIONIC"
+}
+
+utility_component_template = {
+	key = "MEDIUM_SHIELD_11_PSIONIC_NSC"
+	size = medium
+	icon = "GFX_ship_part_psi_shield_NSC"
+	icon_frame = 1
+	power = @power_M11
+	cost = @cost_M11
+	modifier = {
+		ship_shield_hp_add = @shield_M11
+		ship_shield_regen_add = @shield_reg_M11 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_11_psionic_NSC" }
+	component_set = "NSC_SHIELD_11_PSIONIC"
+}
+
+utility_component_template = {
+	key = "LARGE_SHIELD_11_PSIONIC_NSC"
+	size = large
+	icon = "GFX_ship_part_psi_shield_NSC"
+	icon_frame = 1
+	power = @power_L11
+	cost = @cost_L11
+	modifier = {
+		ship_shield_hp_add = @shield_L11
+		ship_shield_regen_add = @shield_reg_L11 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_11_psionic_NSC" }
+	component_set = "NSC_SHIELD_11_PSIONIC"
+}
+
+# Optimized Enigmatic Shields
+utility_component_template = {
+	key = "SMALL_SHIELD_12_ENIGMATIC_NSC"
+	size = small
+	icon = "GFX_ship_part_enigmatic_shield_NSC"
+	icon_frame = 1
+	power = @power_S11
+	cost = @cost_S11
+	modifier = {
+		ship_shield_hp_add = @shield_S11
+		ship_shield_regen_add = @shield_reg_S11 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_12_enigmatic_NSC" }
+	component_set = "NSC_SHIELD_12_ENIGMATIC"
+}
+
+utility_component_template = {
+	key = "MEDIUM_SHIELD_12_ENIGMATIC_NSC"
+	size = medium
+	icon = "GFX_ship_part_enigmatic_shield_NSC"
+	icon_frame = 1
+	power = @power_M11
+	cost = @cost_M11
+	modifier = {
+		ship_shield_hp_add = @shield_M11
+		ship_shield_regen_add = @shield_reg_M11 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_12_enigmatic_NSC" }
+	component_set = "NSC_SHIELD_12_ENIGMATIC"
+}
+
+utility_component_template = {
+	key = "LARGE_SHIELD_12_ENIGMATIC_NSC"
+	size = large
+	icon = "GFX_ship_part_enigmatic_shield_NSC"
+	icon_frame = 1
+	power = @power_L11
+	cost = @cost_L11
+	modifier = {
+		ship_shield_hp_add = @shield_L11
+		ship_shield_regen_add = @shield_reg_L11 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_12_enigmatic_NSC" }
+	component_set = "NSC_SHIELD_12_ENIGMATIC"
+}

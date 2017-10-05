@@ -1,0 +1,103 @@
+##################
+### TECH COSTS ###
+##################
+#If you change any of these, use replace in files so the values are the same across all files
+
+@tier1cost1 = 360
+@tier1cost2 = 480
+@tier1cost3 = 600
+@tier1cost4 = 720
+
+@tier2cost1 = 1000
+@tier2cost2 = 1400
+@tier2cost3 = 1800
+@tier2cost4 = 2200
+
+@tier3cost1 = 3000
+@tier3cost2 = 4000
+@tier3cost3 = 5000
+@tier3cost4 = 6000
+
+@tier4cost1 = 7000
+@tier4cost2 = 8000
+@tier4cost3 = 9000
+@tier4cost4 = 10000
+
+@repeatableTechBaseCost = 1500
+@repeatableTechLevelCost = 480
+
+####################
+### TECH WEIGHTS ###
+####################
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+@tier1weight4 = 85
+
+@tier2weight1 = 75
+@tier2weight2 = 70
+@tier2weight3 = 65
+@tier2weight4 = 60
+
+@tier3weight1 = 50
+@tier3weight2 = 45
+@tier3weight3 = 40
+@tier3weight4 = 35
+
+@tier4weight1 = 30
+
+@repeatableTechWeight = 25
+@repatableTechFactor = 0.5
+
+########################
+# OVERALL TECH BALANCE #
+########################
+
+# Physics = 22
+# Society = 17
+# Engineering = 31
+
+######################
+# TECHS IN THIS FILE #
+######################
+
+# TOTAL = 6
+# Spaceport Tiers 2-6, to adjust the "prereqfor_desc" coding so each ship will show up properly without needing alphabetical superiority.
+# Battleship Assembly Yard Tech - Overwritten to make sure it is unlocked after Battleship itself in new NSC order system.
+
+# ##################
+# ##################
+# ##################
+
+
+tech_battleship_yard = {
+	cost = @tier2cost4
+	area = engineering
+	tier = 2
+	category = { voidcraft }	
+	prerequisites = { "tech_battleship_1" }
+	weight = @tier2weight4
+		
+	## Unlocks Battleship Assembly Yard
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}

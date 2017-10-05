@@ -1,0 +1,213 @@
+##################
+### TECH COSTS ###
+##################
+#If you change any of these, use replace in files so the values are the same across all files
+
+@tier1cost1 = 360
+@tier1cost2 = 480
+@tier1cost3 = 600
+@tier1cost4 = 720
+
+@tier2cost1 = 1000
+@tier2cost2 = 1400
+@tier2cost3 = 1800
+@tier2cost4 = 2200
+
+@tier3cost1 = 3000
+@tier3cost2 = 4000
+@tier3cost3 = 5000
+@tier3cost4 = 6000
+
+@tier4cost1 = 7000
+@tier4cost2 = 8000
+@tier4cost3 = 9000
+@tier4cost4 = 10000
+
+@repeatableTechBaseCost = 1500
+@repeatableTechLevelCost = 480
+
+####################
+### TECH WEIGHTS ###
+####################
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+@tier1weight4 = 85
+
+@tier2weight1 = 75
+@tier2weight2 = 70
+@tier2weight3 = 65
+@tier2weight4 = 60
+
+@tier3weight1 = 50
+@tier3weight2 = 45
+@tier3weight3 = 40
+@tier3weight4 = 35
+
+@tier4weight1 = 30
+
+@repeatableTechWeight = 25
+@repatableTechFactor = 0.5
+
+########################
+# OVERALL TECH BALANCE #
+########################
+
+# Physics = 22
+# Society = 17
+# Engineering = 31
+
+######################
+# TECHS IN THIS FILE #
+######################
+
+# TOTAL = 5
+# Integrated Research Paradigm - Society - Starts R&D Center Building Chain.
+# Reactor Tech Block - Society - This is used to "block" NSC Reactors level 8 and up from being given to the player IF they have BOSP, ESC, or Crystallis activated instead.
+# Reactor Needed Block - Society - This is used to "block" NSC Reactors level 6-7 if there is another component mod active, otherwise is automatically given for NSC ship class power needs.
+# Shield Tech Block - Society - This is used to "block" all NSC Shields from being given to the player IF they have BOSP, ESC, or Crystallis activated instead.
+# Armor Tech Block - Society - This is used to "block" all NSC Armors from being given to the player IF they have BOSP, ESC, or Crystallis activated instead.
+# Component Tech Block - Society - This is used to "block" all NSC base ship components (sensors/thrusters) from being given to the player IF they have BOSP, ESC, or Crystallis activated instead.
+# AI Force Update - Engineering - This is used to force the AI to update all their global designs, so that new components will be properly added to the global designs... hopefully.
+
+# ##################
+# ##################
+# ##################
+
+
+# Integrated Research Paradigm
+tech_integrated_research_paradigm = {
+	cost = @tier1cost2
+	area = society
+	tier = 2
+	category = { statecraft }	
+	weight = @tier1weight2
+	
+	# Unlocks Research Initiative Center, first in upgrade line for R&D Center buildings
+	prereqfor_desc = {
+		building = {
+			title = "TECH_UNLOCK_BUILDING_SCIENCE_CENTER_1_CONSTRUCTION_TITLE"
+			desc = "TECH_UNLOCK_BUILDING_SCIENCE_CENTER_1_CONSTRUCTION_DESC"
+		}
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_integrated_research_paradigm }
+		}
+		modifier = {
+			factor = 15
+			is_playable_country = yes
+			has_technology = tech_physics_lab_1
+			has_technology = tech_biolab_1
+			has_technology = tech_engineering_lab_1
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+}
+
+#Blocks Level 6-7 Reactors if another component mod is present, otherwise needs to be given for base NSC to function properly.
+tech_block_needed_power = {
+	cost = 0
+	area = society
+	tier = 0
+	category = { statecraft }
+	is_rare = yes
+	weight = 0
+	is_reverse_engineerable = no
+	
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+}
+
+#Blocks all Reactors Level 8 up.
+tech_block_reactors = {
+	cost = 0
+	area = society
+	tier = 0
+	category = { statecraft }
+	is_rare = yes
+	weight = 0
+	is_reverse_engineerable = no
+	
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+}
+
+#Blocks all Shields level 6 up.
+tech_block_shields = {
+	cost = 0
+	area = society
+	tier = 0
+	category = { statecraft }
+	is_rare = yes
+	weight = 0
+	is_reverse_engineerable = no
+}
+
+#Blocks all Armors level 6 up.
+tech_block_armors = {
+	cost = 0
+	area = society
+	tier = 0
+	category = { statecraft }
+	is_rare = yes
+	weight = 0
+	is_reverse_engineerable = no
+}
+
+#Base ship components. Example: Sensors & Thrusters
+tech_block_components = {
+	cost = 0
+	area = society
+	tier = 0
+	category = { statecraft }
+	is_rare = yes
+	weight = 0
+	is_reverse_engineerable = no
+}
+
+# Used to force AI to update global designs.
+tech_nsc_ai_gd_upgrade = {
+	area = engineering
+	cost = 0
+	cost_per_level = 0
+	levels = -1
+	weight = 0
+	icon = "tech_spaceport_2"
+	category = { voidcraft }
+	tier = 0
+	ai_update_type = military #This is what makes it work.
+	is_reverse_engineerable = no
+}
+
+tech_guardian_warp = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { field_manipulation }
+	ai_update_type = all
+	weight = 0
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight_modifier = { factor = 0 }
+}

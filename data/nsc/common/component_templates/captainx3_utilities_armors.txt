@@ -1,0 +1,378 @@
+#############
+#	ARMOR	#
+#############
+
+#Values go down due to HP bonuses.
+
+@armor_6S = 6.79
+@armor_6M = 14.28
+@armor_6L = 30.38
+
+@armor_7S = 5.88
+@armor_7M = 12.39
+@armor_7L = 26.46
+
+@armor_8S = 4.9
+@armor_8M = 10.29
+@armor_8L = 21.98
+
+@armor_9S = 3.85
+@armor_9M = 8.05
+@armor_9L = 17.15
+
+@armor_10S = 2.8
+@armor_10M = 5.81
+@armor_10L = 12.32
+
+@armor_11S = 1.82
+@armor_11M = 3.71
+@armor_11L = 7.91
+
+#############
+#	COST	#
+#############
+
+@cost_6S = 7.2
+@cost_6M = 11.7
+@cost_6L = 20.7
+
+@cost_7S = 8.5
+@cost_7M = 13.5
+@cost_7L = 23.5
+
+@cost_8S = 10
+@cost_8M = 15.5
+@cost_8L = 26.5
+
+@cost_9S = 11.9
+@cost_9M = 17.9
+@cost_9L = 29.9
+
+@cost_10S = 14
+@cost_10M = 20.5
+@cost_10L = 33.5
+
+@cost_11S = 16.6
+@cost_11M = 23.6
+@cost_11L = 37.6
+
+#################
+#   HITPOINTS   #
+#################
+
+@ship_hitpoints_mult_S6 = 0.01
+@ship_hitpoints_mult_M6 = 0.01
+@ship_hitpoints_mult_L6 = 0.01
+
+@ship_hitpoints_mult_S7 = 0.013
+@ship_hitpoints_mult_M7 = 0.013
+@ship_hitpoints_mult_L7 = 0.013
+
+@ship_hitpoints_mult_S8 = 0.017
+@ship_hitpoints_mult_M8 = 0.017
+@ship_hitpoints_mult_L8 = 0.017
+
+@ship_hitpoints_mult_S9 = 0.022
+@ship_hitpoints_mult_M9 = 0.022
+@ship_hitpoints_mult_L9 = 0.022
+
+@ship_hitpoints_mult_S10 = 0.028
+@ship_hitpoints_mult_M10 = 0.028
+@ship_hitpoints_mult_L10 = 0.028
+
+@ship_hitpoints_mult_S11 = 0.036
+@ship_hitpoints_mult_M11 = 0.036
+@ship_hitpoints_mult_L11 = 0.036
+
+
+
+# Ablative Neutronium Armor
+utility_component_template = {
+	key = "SMALL_ARMOR_6_NSC"
+	size = small
+	icon = "GFX_ship_part_armor_6_NSC"
+	icon_frame = 1
+	power = 0
+	cost = @cost_6S
+	armor_value = @armor_6S
+	
+	modifier = { ship_hitpoints_mult = @ship_hitpoints_mult_S6 }
+	
+	prerequisites = { "tech_ship_armor_6_NSC" }
+	upgrades_to = "SMALL_ARMOR_7_NSC"
+	component_set = "NSC_ARMOR_6"
+}
+
+utility_component_template = {
+	key = "MEDIUM_ARMOR_6_NSC"
+	size = medium
+	icon = "GFX_ship_part_armor_6_NSC"
+	icon_frame = 1
+	power = 0
+	cost = @cost_6M
+	armor_value = @armor_6M
+	
+	modifier = { ship_hitpoints_mult = @ship_hitpoints_mult_M6 }
+	
+	prerequisites = { "tech_ship_armor_6_NSC" }
+	upgrades_to = "MEDIUM_ARMOR_7_NSC"
+	component_set = "NSC_ARMOR_6"
+}
+
+utility_component_template = {
+	key = "LARGE_ARMOR_6_NSC"
+	size = large
+	icon = "GFX_ship_part_armor_6_NSC"
+	icon_frame = 1
+	power = 0
+	cost = @cost_6L
+	armor_value = @armor_6L
+	
+	modifier = { ship_hitpoints_mult = @ship_hitpoints_mult_L6 }
+	
+	prerequisites = { "tech_ship_armor_6_NSC" }
+	upgrades_to = "LARGE_ARMOR_7_NSC"
+	component_set = "NSC_ARMOR_6"
+}
+
+# Reactive Nanocomposite Armor
+utility_component_template = {
+	key = "SMALL_ARMOR_7_NSC"
+	size = small
+	icon = "GFX_ship_part_armor_7_NSC"
+	icon_frame = 1
+	power = 0
+	cost = @cost_7S
+	armor_value = @armor_7S
+	
+	modifier = { ship_hitpoints_mult = @ship_hitpoints_mult_S7 }
+	
+	prerequisites = { "tech_ship_armor_7_NSC" }
+	upgrades_to = "SMALL_ARMOR_8_NSC"
+	component_set = "NSC_ARMOR_7"
+}
+
+utility_component_template = {
+	key = "MEDIUM_ARMOR_7_NSC"
+	size = medium
+	icon = "GFX_ship_part_armor_7_NSC"
+	icon_frame = 1
+	power = 0
+	cost = @cost_7M
+	armor_value = @armor_7M
+	
+	modifier = { ship_hitpoints_mult = @ship_hitpoints_mult_M7 }
+	
+	prerequisites = { "tech_ship_armor_7_NSC" }
+	upgrades_to = "MEDIUM_ARMOR_8_NSC"
+	component_set = "NSC_ARMOR_7"
+}
+
+utility_component_template = {
+	key = "LARGE_ARMOR_7_NSC"
+	size = large
+	icon = "GFX_ship_part_armor_7_NSC"
+	icon_frame = 1
+	power = 0
+	cost = @cost_7L
+	armor_value = @armor_7L
+	
+	modifier = { ship_hitpoints_mult = @ship_hitpoints_mult_L7 }
+	
+	prerequisites = { "tech_ship_armor_7_NSC" }
+	upgrades_to = "LARGE_ARMOR_8_NSC"
+	component_set = "NSC_ARMOR_7"
+}
+
+# Neutronium Nanocomposite Armor
+utility_component_template = {
+	key = "SMALL_ARMOR_8_NSC"
+	size = small
+	icon = "GFX_ship_part_armor_8_NSC"
+	icon_frame = 1
+	power = 0
+	cost = @cost_8S
+	armor_value = @armor_8S
+	
+	modifier = { ship_hitpoints_mult = @ship_hitpoints_mult_S8 }
+	
+	prerequisites = { "tech_ship_armor_8_NSC" }
+	upgrades_to = "SMALL_ARMOR_9_NSC"
+	component_set = "NSC_ARMOR_8"
+}
+
+utility_component_template = {
+	key = "MEDIUM_ARMOR_8_NSC"
+	size = medium
+	icon = "GFX_ship_part_armor_8_NSC"
+	icon_frame = 1
+	power = 0
+	cost = @cost_8M
+	armor_value = @armor_8M
+	
+	modifier = { ship_hitpoints_mult = @ship_hitpoints_mult_M8 }
+	
+	prerequisites = { "tech_ship_armor_8_NSC" }
+	upgrades_to = "MEDIUM_ARMOR_9_NSC"
+	component_set = "NSC_ARMOR_8"
+}
+
+utility_component_template = {
+	key = "LARGE_ARMOR_8_NSC"
+	size = large
+	icon = "GFX_ship_part_armor_8_NSC"
+	icon_frame = 1
+	power = 0
+	cost = @cost_8L
+	armor_value = @armor_8L
+	
+	modifier = { ship_hitpoints_mult = @ship_hitpoints_mult_L8 }
+	
+	prerequisites = { "tech_ship_armor_8_NSC" }
+	upgrades_to = "LARGE_ARMOR_9_NSC"
+	component_set = "NSC_ARMOR_8"
+}
+
+# Anti-Neutronium Nanocomposite Armor
+utility_component_template = {
+	key = "SMALL_ARMOR_9_NSC"
+	size = small
+	icon = "GFX_ship_part_armor_9_NSC"
+	icon_frame = 1
+	power = 0
+	cost = @cost_9S
+	armor_value = @armor_9S
+	
+	modifier = { ship_hitpoints_mult = @ship_hitpoints_mult_S9 }
+	
+	prerequisites = { "tech_ship_armor_9_NSC" }
+	upgrades_to = "SMALL_ARMOR_10_NSC"
+	component_set = "NSC_ARMOR_9"
+}
+
+utility_component_template = {
+	key = "MEDIUM_ARMOR_9_NSC"
+	size = medium
+	icon = "GFX_ship_part_armor_9_NSC"
+	icon_frame = 1
+	power = 0
+	cost = @cost_9M
+	armor_value = @armor_9M
+	
+	modifier = { ship_hitpoints_mult = @ship_hitpoints_mult_M9 }
+	
+	prerequisites = { "tech_ship_armor_9_NSC" }
+	upgrades_to = "MEDIUM_ARMOR_10_NSC"
+	component_set = "NSC_ARMOR_9"
+}
+
+utility_component_template = {
+	key = "LARGE_ARMOR_9_NSC"
+	size = large
+	icon = "GFX_ship_part_armor_9_NSC"
+	icon_frame = 1
+	power = 0
+	cost = @cost_9L
+	armor_value = @armor_9L
+	
+	modifier = { ship_hitpoints_mult = @ship_hitpoints_mult_L9 }
+	
+	prerequisites = { "tech_ship_armor_9_NSC" }
+	upgrades_to = "LARGE_ARMOR_10_NSC"
+	component_set = "NSC_ARMOR_9"
+}
+
+# Gravi-Forged Nanocomposite Armor
+utility_component_template = {
+	key = "SMALL_ARMOR_10_NSC"
+	size = small
+	icon = "GFX_ship_part_armor_10_NSC"
+	icon_frame = 1
+	power = 0
+	cost = @cost_10S
+	armor_value = @armor_10S
+	
+	modifier = { ship_hitpoints_mult = @ship_hitpoints_mult_S10 }
+	
+	prerequisites = { "tech_ship_armor_10_NSC" }
+	upgrades_to = "SMALL_ARMOR_11_DRAGON_NSC"
+	component_set = "NSC_ARMOR_10"
+}
+
+utility_component_template = {
+	key = "MEDIUM_ARMOR_10_NSC"
+	size = medium
+	icon = "GFX_ship_part_armor_10_NSC"
+	icon_frame = 1
+	power = 0
+	cost = @cost_10M
+	armor_value = @armor_10M
+	
+	modifier = { ship_hitpoints_mult = @ship_hitpoints_mult_M10 }
+	
+	prerequisites = { "tech_ship_armor_10_NSC" }
+	upgrades_to = "MEDIUM_ARMOR_11_DRAGON_NSC"
+	component_set = "NSC_ARMOR_10"
+}
+
+utility_component_template = {
+	key = "LARGE_ARMOR_10_NSC"
+	size = large
+	icon = "GFX_ship_part_armor_10_NSC"
+	icon_frame = 1
+	power = 0
+	cost = @cost_10L
+	armor_value = @armor_10L
+	
+	modifier = { ship_hitpoints_mult = @ship_hitpoints_mult_L10 }
+	
+	prerequisites = { "tech_ship_armor_10_NSC" }
+	upgrades_to = "LARGE_ARMOR_11_DRAGON_NSC"
+	component_set = "NSC_ARMOR_10"
+}
+
+# Optimized Adaptive Dragon Armor 
+utility_component_template = {
+	key = "SMALL_ARMOR_11_DRAGON_NSC"
+	size = small
+	icon = "GFX_ship_part_optimized_dragon_armor"
+	icon_frame = 1
+	power = 0
+	cost = @cost_11S
+	armor_value = @armor_11S
+	
+	modifier = { ship_hitpoints_mult = @ship_hitpoints_mult_S11 }
+	
+	prerequisites = { "tech_optimized_adaptive_dragon_armor" }
+	component_set = "NSC_ARMOR_11_DRAGON"
+}
+
+utility_component_template = {
+	key = "MEDIUM_ARMOR_11_DRAGON_NSC"
+	size = medium
+	icon = "GFX_ship_part_optimized_dragon_armor"
+	icon_frame = 1
+	power = 0
+	cost = @cost_11M
+	armor_value = @armor_11M
+	
+	modifier = { ship_hitpoints_mult = @ship_hitpoints_mult_M11 }
+	
+	prerequisites = { "tech_optimized_adaptive_dragon_armor" }
+	component_set = "NSC_ARMOR_11_DRAGON"
+}
+
+utility_component_template = {
+	key = "LARGE_ARMOR_11_DRAGON_NSC"
+	size = large
+	icon = "GFX_ship_part_optimized_dragon_armor"
+	icon_frame = 1
+	power = 0
+	cost = @cost_11L
+	armor_value = @armor_11L
+	
+	modifier = { ship_hitpoints_mult = @ship_hitpoints_mult_L11 }
+	
+	prerequisites = { "tech_optimized_adaptive_dragon_armor" }
+	component_set = "NSC_ARMOR_11_DRAGON"
+}

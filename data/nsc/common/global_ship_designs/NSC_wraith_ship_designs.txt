@@ -1,0 +1,3227 @@
+#############################
+# RED WRAITH GLOBAL DESIGNS #
+#############################
+
+# Red Wraith - Guardian Warp Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_450THz_Guardian_Warp"
+	ship_size = red_wraith
+
+	section = {
+		template = "red_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="GUARDIAN_WARP"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Red Wraith - Psi Jump Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_450THz_Psi_Jump"
+	ship_size = red_wraith
+
+	section = {
+		template = "red_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="PSI_JUMP_DRIVE_1"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Red Wraith - Jump Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_450THz_Jump"
+	ship_size = red_wraith
+
+	section = {
+		template = "red_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="JUMP_DRIVE_1"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Red Wraith - Warp Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_450THz_Warp"
+	ship_size = red_wraith
+
+	section = {
+		template = "red_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="WARP_DRIVE_3"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Red Wraith - Hyperdrive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_450THz_Hyper"
+	ship_size = red_wraith
+
+	section = {
+		template = "red_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="HYPER_DRIVE_3"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Red Wraith - Wormhole Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_450THz_Wormhole"
+	ship_size = red_wraith
+
+	section = {
+		template = "red_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_RED_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="WORMHOLE_DRIVE"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+################################
+# ORANGE WRAITH GLOBAL DESIGNS #
+################################
+
+# Orange Wraith - Guardian Warp Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_500THz_Guardian_Warp"
+	ship_size = orange_wraith
+
+	section = {
+		template = "orange_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="GUARDIAN_WARP"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Orange Wraith - Psi Jump Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_500THz_Psi_Jump"
+	ship_size = orange_wraith
+
+	section = {
+		template = "orange_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="PSI_JUMP_DRIVE_1"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Orange Wraith - Jump Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_500THz_Jump"
+	ship_size = orange_wraith
+
+	section = {
+		template = "orange_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="JUMP_DRIVE_1"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Orange Wraith - Warp Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_500THz_Warp"
+	ship_size = orange_wraith
+
+	section = {
+		template = "orange_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="WARP_DRIVE_3"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Orange Wraith - Hyperdrive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_500THz_Hyper"
+	ship_size = orange_wraith
+
+	section = {
+		template = "orange_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="HYPER_DRIVE_3"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Orange Wraith - Wormhole Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_500THz_Wormhole"
+	ship_size = orange_wraith
+
+	section = {
+		template = "orange_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_ORANGE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="WORMHOLE_DRIVE"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+################################
+# YELLOW WRAITH GLOBAL DESIGNS #
+################################
+
+# Yellow Wraith - Guardian Warp
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_520THz_Guardian_Warp"
+	ship_size = yellow_wraith
+
+	section = {
+		template = "wraith_key_yellow"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="GUARDIAN_WARP"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Yellow Wraith - Psi Jump Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_520THz_Psi_Jump"
+	ship_size = yellow_wraith
+
+	section = {
+		template = "wraith_key_yellow"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="PSI_JUMP_DRIVE_1"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Yellow Wraith - Jump Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_520THz_Jump"
+	ship_size = yellow_wraith
+
+	section = {
+		template = "wraith_key_yellow"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="JUMP_DRIVE_1"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Yellow Wraith - Warp Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_520THz_Warp"
+	ship_size = yellow_wraith
+
+	section = {
+		template = "wraith_key_yellow"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="WARP_DRIVE_3"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Yellow Wraith - Hyperdrive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_520THz_Hyper"
+	ship_size = yellow_wraith
+
+	section = {
+		template = "wraith_key_yellow"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="HYPER_DRIVE_3"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Yellow Wraith - Wormhole Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_520THz_Wormhole"
+	ship_size = yellow_wraith
+
+	section = {
+		template = "wraith_key_yellow"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_YELLOW_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="WORMHOLE_DRIVE"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+###############################
+# GREEN WRAITH GLOBAL DESIGNS #
+###############################
+
+# Green Wraith - Guardian Warp Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_550THz_Guardian_Warp"
+	ship_size = green_wraith
+
+	section = {
+		template = "green_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="GUARDIAN_WARP"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Green Wraith - Psi Jump Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_550THz_Psi_Jump"
+	ship_size = green_wraith
+
+	section = {
+		template = "green_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="PSI_JUMP_DRIVE_1"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Green Wraith - Jump Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_550THz_Jump"
+	ship_size = green_wraith
+
+	section = {
+		template = "green_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="JUMP_DRIVE_1"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Green Wraith - Warp Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_550THz_Warp"
+	ship_size = green_wraith
+
+	section = {
+		template = "green_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="WARP_DRIVE_3"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Green Wraith - Hyperdrive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_550THz_Hyper"
+	ship_size = green_wraith
+
+	section = {
+		template = "green_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="HYPER_DRIVE_3"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Green Wraith - Wormhole Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_550THz_Wormhole"
+	ship_size = green_wraith
+
+	section = {
+		template = "green_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_GREEN_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="WORMHOLE_DRIVE"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+##############################
+# BLUE WRAITH GLOBAL DESIGNS #
+##############################
+
+# Blue Wraith - Guardian Warp Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_650THz_Guardian_Warp"
+	ship_size = blue_wraith
+
+	section = {
+		template = "blue_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="GUARDIAN_WARP"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Blue Wraith - Psi Jump Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_650THz_Psi_Jump"
+	ship_size = blue_wraith
+
+	section = {
+		template = "blue_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="PSI_JUMP_DRIVE_1"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Blue Wraith - Jump Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_650THz_Jump"
+	ship_size = blue_wraith
+
+	section = {
+		template = "blue_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="JUMP_DRIVE_1"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Blue Wraith - Warp Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_650THz_Warp"
+	ship_size = blue_wraith
+
+	section = {
+		template = "blue_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="WARP_DRIVE_3"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Blue Wraith - Hyperdrive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_650THz_Hyper"
+	ship_size = blue_wraith
+
+	section = {
+		template = "blue_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="HYPER_DRIVE_3"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Blue Wraith - Wormhole Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_650THz_Wormhole"
+	ship_size = blue_wraith
+
+	section = {
+		template = "blue_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_BLUE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="WORMHOLE_DRIVE"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+################################
+# VIOLET WRAITH GLOBAL DESIGNS #
+################################
+
+# Violet Wraith - Guardian Warp Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_720THz_Guardian_Warp"
+	ship_size = violet_wraith
+
+	section = {
+		template = "violet_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="GUARDIAN_WARP"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Violet Wraith - Psi Jump Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_720THz_Psi_Jump"
+	ship_size = violet_wraith
+
+	section = {
+		template = "violet_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="PSI_JUMP_DRIVE_1"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Violet Wraith - Jump Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_720THz_Jump"
+	ship_size = violet_wraith
+
+	section = {
+		template = "violet_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="JUMP_DRIVE_1"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Violet Wraith - Warp Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_720THz_Warp"
+	ship_size = violet_wraith
+
+	section = {
+		template = "violet_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="WARP_DRIVE_3"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Violet Wraith - Wormhole Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_720THz_Wormhole"
+	ship_size = violet_wraith
+
+	section = {
+		template = "violet_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_VIOLET_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="WORMHOLE_DRIVE"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+###############################
+# WHITE WRAITH GLOBAL DESIGNS #
+###############################
+
+# White Wraith - Guardian Warp Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_800THz_Guardian_Warp"
+	ship_size = white_wraith
+
+	section = {
+		template = "white_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="GUARDIAN_WARP"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# White Wraith - Psi Jump Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_800THz_Psi_Jump"
+	ship_size = white_wraith
+
+	section = {
+		template = "white_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="PSI_JUMP_DRIVE_1"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# White Wraith - Jump Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_800THz_Jump"
+	ship_size = white_wraith
+
+	section = {
+		template = "white_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="JUMP_DRIVE_1"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# White Wraith - Warp Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_800THz_Warp"
+	ship_size = white_wraith
+
+	section = {
+		template = "white_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="WARP_DRIVE_3"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# White Wraith - Hyperdrive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_800THz_Hyper"
+	ship_size = white_wraith
+
+	section = {
+		template = "white_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="HYPER_DRIVE_3"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# White Wraith - Wormhole Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_800THz_Wormhole"
+	ship_size = white_wraith
+
+	section = {
+		template = "white_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="WORMHOLE_DRIVE"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+###############################
+# BLACK WRAITH GLOBAL DESIGNS #
+###############################
+
+# Black Wraith - Guardian Warp Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_300THz_Guardian_Warp"
+	ship_size = black_wraith
+
+	section = {
+		template = "black_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="GUARDIAN_WARP"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Black Wraith - Psi Jump Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_300THz_Psi_Jump"
+	ship_size = black_wraith
+
+	section = {
+		template = "black_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="PSI_JUMP_DRIVE_1"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Black Wraith - Jump Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_300THz_Jump"
+	ship_size = black_wraith
+
+	section = {
+		template = "black_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="JUMP_DRIVE_1"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Black Wraith - Warp Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_300THz_Warp"
+	ship_size = black_wraith
+
+	section = {
+		template = "black_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="WARP_DRIVE_3"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Black Wraith - Hyperdrive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_300THz_Hyper"
+	ship_size = black_wraith
+
+	section = {
+		template = "black_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="HYPER_DRIVE_3"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}
+
+# Black Wraith - Wormhole Drive
+ship_design = {
+	name = "NAME_Phantom_Spectral_Wraith_300THz_Wormhole"
+	ship_size = black_wraith
+
+	section = {
+		template = "black_wraith_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_L"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06_R"
+			template = "PHANTOM_WRAITH_WHITE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="WORMHOLE_DRIVE"
+	required_component="CRUISER_COMBAT_COMPUTER_4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_4"
+}

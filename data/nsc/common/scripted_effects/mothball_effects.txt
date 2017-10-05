@@ -1,0 +1,391 @@
+
+# ===========================
+# It's important to note that
+# only MothballCost is used to actually calculate costs and
+# such, all other variables are merely cosmetic, and for
+# displaying in windows.
+#
+
+mothball_has_paid_fully = {
+	every_owned_planet = {
+		limit = { has_planet_flag = "mothball_active" }
+		remove_planet_flag = "mothball_active"
+	}
+	remove_country_flag = "mothball_requiresmorevespene"
+	remove_country_flag = "mothball_planet_active"
+	country_event = { id = folkmothball.111 }
+}
+
+
+
+mothball_count_size = {
+	# We can't use a switch, because it errors in error.log with the "default"
+	# switch case.
+	#switch = {
+	#	trigger = is_ship_size
+	#	corvette = { owner = { change_variable = { which = MothballCost value = 1 } } }
+	#	destroyer = { owner = { change_variable = { which = MothballCost value = 2 } } }
+	#	cruiser = { owner = { change_variable = { which = MothballCost value = 4 } } }
+	#	battleship = { owner = { change_variable = { which = MothballCost value = 8 } } }
+		# Realships
+		#"rs_battlecruiser" = { root.owner = { change_variable = { which = MothballCost value = 4 } } }
+		#"rs_dreadnought" = { root.owner = { change_variable = { which = MothballCost value = 8 } } }
+		#"rs_ea_cruiser" = { root.owner = { change_variable = { which = MothballCost value = 4 } } }
+		#"rs_support_cruiser" = { root.owner = { change_variable = { which = MothballCost value = 4 } } }
+		#"rs_heavy_dreadnought_type_a" = { root.owner = { change_variable = { which = MothballCost value = 9 } } }
+		#"rs_heavy_dreadnought_type_b" = { root.owner = { change_variable = { which = MothballCost value = 9 } } }
+		#"rs_heavy_dreadnought_type_c" = { root.owner = { change_variable = { which = MothballCost value = 9 } } }
+		#"rs_heavy_dreadnought_type_d" = { root.owner = { change_variable = { which = MothballCost value = 9 } } }
+		#"rs_heavy_dreadnought_type_e" = { root.owner = { change_variable = { which = MothballCost value = 9 } } }
+		#"rs_heavy_dreadnought_type_f" = { root.owner = { change_variable = { which = MothballCost value = 9 } } }
+		#"rs_heavy_dreadnought_type_g" = { root.owner = { change_variable = { which = MothballCost value = 9 } } }
+		# NSC
+		#"LightCarrier" = { root.owner = { change_variable = { which = MothballCost value = 5 } } }
+		#"StrikeCruiser" = { root.owner = { change_variable = { which = MothballCost value = 6 } } }
+		#"Battlecruiser" = { root.owner = { change_variable = { which = MothballCost value = 6 } } }
+		#"Carrier" = { root.owner = { change_variable = { which = MothballCost value = 10 } } }
+		#"Dreadnought" = { root.owner = { change_variable = { which = MothballCost value = 15 } } }
+		#"Superdreadnought" = { root.owner = { change_variable = { which = MothballCost value = 25 } } }
+		#"Flagship" = { root.owner = { change_variable = { which = MothballCost value = 50 } } }
+		#default = {
+		#	owner = { change_variable = { which = MothballCost value = 8 } }
+		#}
+	#}
+	owner = { change_variable = { which = MothballCost value = 8 } }
+	if = { limit = { is_ship_size = "corvette" } owner = { change_variable = { which = MothballCost value = -7 } } }
+	if = { limit = { is_ship_size = "destroyer" } owner = { change_variable = { which = MothballCost value = -6 } } }
+	if = { limit = { is_ship_size = "cruiser" } owner = { change_variable = { which = MothballCost value = -4 } } }
+	#if = { limit = { is_ship_size = "battleship" } owner = { change_variable = { which = MothballCost value = 0 } } }
+	# Grrr this errors in console, too.
+	#if = { limit = { is_ship_size = "rs_heavy_dreadnought_type_a" } owner = { change_variable = { which = MothballCost value = 1 } } }
+}
+
+mothball_giefscraps = {
+	# mothball_count_size is called per-ship in the event
+	multiply_variable = {
+		which = MothballCost
+		value = 20
+	}
+	set_variable = {
+		which = MothballScrapPayment
+		value = MothballCost
+	}
+	mothball_addminerals = yes
+	remove_country_flag = "mothball_planet_active"
+	every_owned_planet = {
+		limit = { has_planet_flag = "mothball_active" }
+		remove_planet_flag = "mothball_active"
+	}
+	country_event = { id = "folkmothball.113" }
+}
+
+mothball_graballdatcash = {
+	# mothball_count_size is called per-ship in the event
+	multiply_variable = {
+		which = MothballCost
+		value = 10
+	}
+	switch = {
+		trigger = has_country_flag
+		folk_mothballed_cost_1 = {
+			multiply_variable = {
+				which = MothballCost
+				value = 2
+			}
+		}
+		folk_mothballed_cost_2 = {
+			multiply_variable = {
+				which = MothballCost
+				value = 3
+			}
+		}
+		folk_mothballed_cost_3 = {
+			multiply_variable = {
+				which = MothballCost
+				value = 4
+			}
+		}
+		folk_mothballed_cost_4 = {
+			multiply_variable = {
+				which = MothballCost
+				value = 5
+			}
+		}
+	}
+	set_variable = {
+		which = MothballPayment
+		value = MothballCost
+	}
+	set_variable = {
+		which = MothballPartlyPaid
+		value = MothballCost
+	}
+
+	mothball_countminerals = yes
+	mothball_subtractminerals = yes
+
+	if = {
+		limit = {
+			check_variable = {
+				which = MothballCost
+				value > 0
+			}
+		}
+		subtract_variable = {
+			which = MothballPartlyPaid
+			value = MothballCost
+		}
+		set_variable = {
+			which = MothballDue
+			value = MothballCost
+		}
+
+		# player didnt have enough minerals
+		set_country_flag = "mothball_requiresmorevespene"
+		country_event = { id = "folkmothball.112" }
+		else = { mothball_has_paid_fully = yes }
+	}
+}
+
+mothball_subtractminerals = {
+	while = {
+		limit = {
+			check_variable = {
+				which = MothballCost
+				value > 1000
+			}
+			has_country_resource = {
+				type = minerals
+				amount > 1000
+			}
+		}
+		add_minerals = -1000
+		change_variable = {
+			which = MothballCost
+			value = -1000
+		}
+	}
+	while = {
+		limit = {
+			check_variable = {
+				which = MothballCost
+				value > 100
+			}
+			has_country_resource = {
+				type = minerals
+				amount > 100
+			}
+		}
+		add_minerals = -100
+		change_variable = {
+			which = MothballCost
+			value = -100
+		}
+	}
+	while = {
+		limit = {
+			check_variable = {
+				which = MothballCost
+				value > 10
+			}
+			has_country_resource = {
+				type = minerals
+				amount > 10
+			}
+		}
+		add_minerals = -10
+		change_variable = {
+			which = MothballCost
+			value = -10
+		}
+	}
+	while = {
+		limit = {
+			check_variable = {
+				which = MothballCost
+				value > 0
+			}
+			has_country_resource = {
+				type = minerals
+				amount > 0
+			}
+		}
+		add_minerals = -1
+		change_variable = {
+			which = MothballCost
+			value = -1
+		}
+	}
+}
+
+mothball_addminerals = {
+	while = {
+		limit = {
+			check_variable = {
+				which = MothballCost
+				value > 1000
+			}
+		}
+		add_minerals = 1000
+		change_variable = {
+			which = MothballCost
+			value = -1000
+		}
+	}
+	while = {
+		limit = {
+			check_variable = {
+				which = MothballCost
+				value > 100
+			}
+		}
+		add_minerals = 100
+		change_variable = {
+			which = MothballCost
+			value = -100
+		}
+	}
+	while = {
+		limit = {
+			check_variable = {
+				which = MothballCost
+				value > 10
+			}
+		}
+		add_minerals = 10
+		change_variable = {
+			which = MothballCost
+			value = -10
+		}
+	}
+	while = {
+		limit = {
+			check_variable = {
+				which = MothballCost
+				value > 0
+			}
+		}
+		add_minerals = 1
+		change_variable = {
+			which = MothballCost
+			value = -1
+		}
+	}
+}
+
+
+# Shamelessly ripped from AMC, though there simply is no other way to do it
+mothball_countminerals = {
+	set_variable = {
+		which = MothballMinerals
+		value = 0
+	}
+	while = {
+		limit = {
+			has_country_resource = {
+				type = minerals
+				amount > 1000
+			}
+		}
+		add_minerals = -1000
+		change_variable = {
+			which = MothballMinerals
+			value = 1000
+		}
+	}
+	while = {
+		limit = {
+			has_country_resource = {
+				type = minerals
+				amount > 100
+			}
+		}
+		add_minerals = -100
+		change_variable = {
+			which = MothballMinerals
+			value = 100
+		}
+	}
+	while = {
+		limit = {
+			has_country_resource = {
+				type = minerals
+				amount > 10
+			}
+		}
+		add_minerals = -10
+		change_variable = {
+			which = MothballMinerals
+			value = 10
+		}
+	}
+	while = {
+		limit = {
+			has_country_resource = {
+				type = minerals
+				amount > 0
+			}
+		}
+		add_minerals = -1
+		change_variable = {
+			which = MothballMinerals
+			value = 1
+		}
+	}
+	set_variable = {
+		which = MothballMineralsTemp
+		value = MothballMinerals
+	}
+	while = {
+		limit = {
+			check_variable = {
+				which = MothballMineralsTemp
+				value > 1000
+			}
+		}
+		add_minerals = 1000
+		change_variable = {
+			which = MothballMineralsTemp
+			value = -1000
+		}
+	}
+	while = {
+		limit = {
+			check_variable = {
+				which = MothballMineralsTemp
+				value > 100
+			}
+		}
+		add_minerals = 100
+		change_variable = {
+			which = MothballMineralsTemp
+			value = -100
+		}
+	}
+	while = {
+		limit = {
+			check_variable = {
+				which = MothballMineralsTemp
+				value > 10
+			}
+		}
+		add_minerals = 10
+		change_variable = {
+			which = MothballMineralsTemp
+			value = -10
+		}
+	}
+	while = {
+		limit = {
+			check_variable = {
+				which = MothballMineralsTemp
+				value > 0
+			}
+		}
+		add_minerals = 1
+		change_variable = {
+			which = MothballMineralsTemp
+			value = -1
+		}
+	}
+}

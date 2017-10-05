@@ -1,0 +1,137 @@
+﻿l_polish:
+
+ ####################################
+ # AURAS / COMPONENTS / SPECIAL SLOTS
+ ####################################
+
+ SHIP_AURA_SHIELDS: "Shield Enhancement Field"
+ SHIP_AURA_FIRING: "Integrated Fleet Network"
+ SHIP_AURA_DAMAGE: "Enhanced Targeting Field"
+
+ SHIP_SENSOR_5: "EWAR Sensor Array"
+ SHIP_SENSOR_5_DESC: "The EWAR (Early Warning And Reconnaissance) Sensor Array is a very powerful sensor combining the best of both worlds, giving superior range without sacrificing on frequencies or fidelity, allowing our ships to easily detect objects and energy with great accuracy even at extreme ranges. However due to the power necessary to maintain such detailed scans at such long distances, the EWAR Sensor can only be mounted on our largest Capital Ships."
+ SHIP_SENSOR_6: "Multispectrum Sensors"
+ SHIP_SENSOR_6_DESC: "Multispectrum sensors can scan multiple bands within the electromagnetic spectrum, giving it a much wider range of ability to detect objects and phenomena throughout space, even at closer distances, which also allows our ships to travel at greater sublight speeds with more assurance."
+ SHIP_SENSOR_7: "Transdimensional Sensors"
+ SHIP_SENSOR_7_DESC: "Transdimensional sensors offer the widest known range of scanning frequencies and bands, allowing our ships to get very precise scans in a large radius, and with this precision comes the ability to safely travel at even faster sublight speeds."
+ STATION_SENSOR_5: "EWAR Sensor Array"
+ STATION_SENSOR_5_DESC: "The EWAR (Early Warning And Reconnaissance) Sensor Array is a very powerful sensor combining the best of both worlds, giving superior range without sacrificing on frequencies or fidelity, allowing our orbitals to easily detect objects and energy with great accuracy even at extreme ranges. However due to the power necessary to maintain such detailed scans at such long distances, the EWAR Sensor can only be mounted on our largest Military Stations, and the Sensor Station specifically designed to house it."
+ STATION_SENSOR_6: "Multispectrum Sensors"
+ STATION_SENSOR_6_DESC: "Multispectrum sensors can scan multiple bands within the electromagnetic spectrum, giving it a much wider range of ability to detect objects and phenomena throughout space, even at closer distances, which also allows our stations a better accuracy against incoming objects."
+ STATION_SENSOR_7: "Transdimensional Sensors"
+ STATION_SENSOR_7_DESC: "Transdimensional sensors offer the widest known range of scanning frequencies and bands, allowing our stations to get very precise scans in a large radius, making them even more accurate against incoming targets."
+ SHIP_SENSOR_EMPTY: "Empty Slot"
+ 
+ SHIP_THRUSTER_5_NSC: "Graviton Thrusters"
+ SHIP_THRUSTER_5_NSC_DESC: "These highly advanced anti-matter gravimetrically powered thrusters provide ships with unmatched maneuverability and speed under sublight conditions."
+ 
+ MEDIUM_SCIENCE_LAB_NSC: "Cruiser Science Lab"
+ NSC_CIVILIAN_CRUISER_SYSTEMS: "Enhanced Core Systems"
+ NSC_CIVILIAN_CRUISER_SYSTEMS_EMPTY: "Empty Slot"
+ 
+ science_labs: "Science Labs"
+ enhanced_civilian_designs: "Civilian Cruiser Enhancements"
+ 
+ #Vanilla Thruster Overwrite:
+ SHIP_THRUSTER_4_DESC: "These highly advanced fusion-powered thrusters provide ships with extreme maneuverability and speed under sublight conditions."
+
+ #Not sure why this is needed, but game wants this:
+ station_sensor_components: "§HSensors§!"
+ station_sensor_components_DESC: "Sensors will reveal the details of any systems and fleets within their range."
+ 
+ SC_FRIENDLY_AURA: "Optimized Civilian Systems"
+ SC_DEFENSE_AURA: "Automated Defense System"
+ sc_friendly_aura: "Optimized Civilian Systems"
+ sc_friendly_aura_DESC: "Gives enhancements across the board to our civilian ships, ranging from upgraded armor plating to evasion/speed to optimized systems, albeit at a slightly higher maintainance cost."
+ sc_defense_aura: "Automated Defense System"
+ sc_defense_aura_DESC: "Sends out a powerful energy burst from the ship at regular interavals, protecting civilian ships from the random dangers of the galaxy."
+ STATION_REPAIR_AURA: "Automated Ship Repair System"
+
+ NSC_AURA_EMPTY: "Empty Slot"
+ SC_AURA_EMPTY: "Empty Slot"
+ SC_FRIENDLY_AURA_EMPTY: "Empty Slot"
+ SPECIAL_SLOT_EMPTY: "Empty Slot"
+ special_ship_slot: "Special Component"
+ special_ship_slot_desc: "A special component slot."
+
+ SPECIAL_SLOT_MULTIPHASIC_SENSORS: "Multiphasic Sensors"
+ SPECIAL_SLOT_MULTIPHASIC_SENSORS_DESC: "Increases sensor range using multiphasic generators."
+ SPECIAL_SLOT_DAMAGE_CONTROL: "Damage Control Teams"
+ SPECIAL_SLOT_DAMAGE_CONTROL_DESC: "Teams specially trained in rapid ship repair."
+ SPECIAL_SLOT_READY_ROOM: "Captain's Ready Room"
+ SPECIAL_SLOT_READY_ROOM_DESC: "A place for the Captain to relax but still be available on a moment's notice."
+ SPECIAL_SLOT_CREW_LOUNGE: "Crew Lounge"
+ SPECIAL_SLOT_CREW_LOUNGE_DESC: "A place for the ship's crew to relax and unwind."
+ SPECIAL_SLOT_FIRE_CONTROL: "Fire Control System"
+ SPECIAL_SLOT_FIRE_CONTROL_DESC: "An advanced targeting system that increases weapon speed and damage."
+ SPECIAL_SLOT_STRUCTURAL_INTEGRITY: "Structural Integrity Field"
+ SPECIAL_SLOT_STRUCTURAL_INTEGRITY_DESC: "An advanced system of forcefields that strengthen the ship's hull structure."
+ SPECIAL_SLOT_AUXILIARY_SHIELDS: "Auxiliary Shield System"
+ SPECIAL_SLOT_AUXILIARY_SHIELDS_DESC: "A secondary series of backup shield generators."
+ SPECIAL_SLOT_QUANTUM_THRUSTERS: "Quantum Thrusters"
+ SPECIAL_SLOT_QUANTUM_THRUSTERS_DESC: "An advanced set of ship thrusters to augment speed and maneuverability."
+ SPECIAL_SLOT_DEFLECTOR_ARRAY: "Deflector Array"
+ SPECIAL_SLOT_DEFLECTOR_ARRAY_DESC: "A large array that is designed to provide additional protection for the ship."
+
+ KITCHEN_SINK: "Kitchen Sink"
+ KITCHEN_SINK_DESC: "A clean crew is a happy crew."
+ STELLAR_CARTOGRAPHY: "Stellar Cartography"
+ STELLAR_CARTOGRAPHY_DESC: "A large system used for mapping surrounding space."
+ NAVIGATIONAL_ARRAY: "Navigational Array"
+ NAVIGATIONAL_ARRAY_DESC: "An advanced 3D navigational system."
+
+ SPECIAL_SLOT_KITCHEN_SINK: "Kitchen Sink"
+ SPECIAL_SLOT_KITCHEN_SINK_DESC: "A clean crew is a happy crew."
+ SPECIAL_SLOT_STELLAR_CARTOGRAPHY: "Stellar Cartography"
+ SPECIAL_SLOT_STELLAR_CARTOGRAPHY_DESC: "A large system used for mapping surrounding space."
+ SPECIAL_SLOT_NAVIGATIONAL_ARRAY: "Navigational Array"
+ SPECIAL_SLOT_NAVIGATIONAL_ARRAY_DESC: "An advanced 3D navigational system."
+
+ EWAR_sensor_components: "EWAR (Early Warning And Reconnaissance) Sensor Array"
+ EWAR_sensor_components_desc: "A very powerful sensor array that can be used to spot enemies at great distances or spy on neighboring empires."
+
+ STRIKE_CRUISER_AURA_EMPTY: "Empty Slot"
+ STRIKE_CRUISER_AURA_SUBSPACE_SNARE: "Subspace Snare"
+
+ # Slot Name
+ nsc_hq_auras: "Headquarters Subspace Manipulators"
+ # Component name
+ NSC_HQ_AURA: "Headquarters Subspace Manipulator"
+ # Tooltip description
+ nsc_hq_aura_everything: "Combined Aura"
+
+
+ border_extruders_nsc: "Border Beacon"
+ border_extruders_nsc_DESC: "A special beacon that increases an empire's borders."
+
+ BORDER_EXTRUDER_NSC_1: "Border Beacon Level 1"
+ BORDER_EXTRUDER_NSC_1_DESC: "Increases border range by 20."
+ BORDER_EXTRUDER_NSC_2: "Border Beacon Level 2"
+ BORDER_EXTRUDER_NSC_2_DESC: "Increases border range by 25."
+ BORDER_EXTRUDER_NSC_3: "Border Beacon Level 3"
+ BORDER_EXTRUDER_NSC_3_DESC: "Increases border range by 30."
+ BORDER_EXTRUDER_NSC_4: "Border Beacon Level 4"
+ BORDER_EXTRUDER_NSC_4_DESC: "Increases border range by 40."
+
+ 
+ ####################################
+ #MISCELLANEOUS
+ ####################################
+
+ 
+ UNDERSTOOD: "Understood."
+
+ sm_customs_office: "Customs Office"
+ sm_customs_office_desc: "\n\n The Customs Office provides better protection and control of your empire's borders, while slowing down migration and having a suspiciously high maintenance bill.\n\n"
+
+ shipclass_orbital_station_hit_points_mult: "Spaceport Hit Points"
+ shipsize_military_station_xlarge_upkeep_mult: "Battle Fortress Upkeep"
+
+ shipsize_MiningBase_upkeep_mult: "Mining Base Upkeep"
+ shipsize_PowerStation_upkeep_mult: "Power Station Upkeep"
+
+ budget_group_country_modifier: "Mining Base Upkeep"
+ miningbase_bonus_planet: "Mining Base Bonus"
+ miningbase_bonus_planet_desc: "The bonuses provided to this planet by the NSC Mining Station you currently have in this system."
+ powerstation_bonus_planet: "Power Station Bonus"
+ powerstation_bonus_planet_desc: "The bonuses provided to this planet by the NSC Power Station you currently have in this system."

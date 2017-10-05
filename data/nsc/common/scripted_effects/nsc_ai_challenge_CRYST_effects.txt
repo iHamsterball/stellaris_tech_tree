@@ -1,0 +1,955 @@
+###################################
+# Crystallis AI "KEEP UP" EFFECTS #
+###################################
+
+# NOTICE: This file is for Crystallis Technologies that the AI Challenge will provide the AI if the Player has Crystallis active and is gaining Crystallis techs. These are in this separate file for ease of updates against Crystallis.
+
+##############################
+# CRSTALLIS ARMOR TECHNOLOGY #
+##############################
+
+nsc_ai_tech_give_cryst_armor_6 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_ship_armor_6 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_ship_armor_6 } } give_technology = { tech = tech_c_ship_armor_6 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_armor_7 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_ship_armor_7 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_ship_armor_7 } } give_technology = { tech = tech_c_ship_armor_7 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_armor_8 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_ship_armor_8 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_ship_armor_8 } } give_technology = { tech = tech_c_ship_armor_8 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_armor_9 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_ship_armor_9 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_ship_armor_9 } } give_technology = { tech = tech_c_ship_armor_9 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_armor_10 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_ship_armor_10 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_ship_armor_10 } } give_technology = { tech = tech_c_ship_armor_10 } } } } 
+	}
+}
+
+########################################
+# CRSTALLIS CRSYTAL PLATING TECHNOLOGY #
+########################################
+
+nsc_ai_tech_give_cryst_crystal_plating_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_crystal_armor_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_crystal_armor_2 } } give_technology = { tech = tech_crystal_armor_2 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_crystal_plating_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_crystal_armor_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_crystal_armor_3 } } give_technology = { tech = tech_c_crystal_armor_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_crystal_plating_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_crystal_armor_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_crystal_armor_4 } } give_technology = { tech = tech_c_crystal_armor_4 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_crystal_plating_5 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_crystal_armor_5 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_crystal_armor_5 } } give_technology = { tech = tech_c_crystal_armor_5 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_crystal_plating_6 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_crystal_armor_6 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_crystal_armor_6 } } give_technology = { tech = tech_c_crystal_armor_6 } } } } 
+	}
+}
+
+#############################
+# CRSTALLIS CREW TECHNOLOGY #
+#############################
+
+nsc_ai_tech_give_cryst_synth_crew = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_synth_crew }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_synth_crew } } give_technology = { tech = tech_c_synth_crew } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_psi_crew = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_psionic_crew_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_psionic_crew_1 } } give_technology = { tech = tech_c_psionic_crew_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_clone_crew = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_clone_crew_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_clone_crew_1 } } give_technology = { tech = tech_c_clone_crew_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_purifier_crew = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_purifier_crew_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_purifier_crew_1 } } give_technology = { tech = tech_c_purifier_crew_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_alien_crew = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_alien_crew_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_alien_crew_1 } } give_technology = { tech = tech_c_alien_crew_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_civilian_crew = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_civilian_crew_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_civilian_crew_1 } } give_technology = { tech = tech_c_civilian_crew_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_slave_crew = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_slave_crew_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_slave_crew_1 } } give_technology = { tech = tech_c_slave_crew_1 } } } } 
+	}
+}
+
+#######################################
+# CRSTALLIS DEEP SPACE LAB TECHNOLOGY #
+#######################################
+
+nsc_ai_tech_give_cryst_deep_space_lab_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_deep_space_lab_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_deep_space_lab_1 } } give_technology = { tech = tech_c_deep_space_lab_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_deep_space_lab_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_deep_space_lab_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_deep_space_lab_2 } } give_technology = { tech = tech_c_deep_space_lab_2 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_deep_space_lab_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_deep_space_lab_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_deep_space_lab_3 } } give_technology = { tech = tech_c_deep_space_lab_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_deep_space_lab_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_deep_space_lab_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_deep_space_lab_4 } } give_technology = { tech = tech_c_deep_space_lab_4 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_deep_space_lab_5 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_deep_space_lab_5 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_deep_space_lab_5 } } give_technology = { tech = tech_c_deep_space_lab_5 } } } } 
+	}
+}
+
+###############################
+# CRSTALLIS HANGAR TECHNOLOGY #
+###############################
+
+nsc_ai_tech_give_cryst_hangar_upgrades_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_hangar_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_hangar_1 } } give_technology = { tech = tech_c_hangar_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_hangar_upgrades_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_hangar_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_hangar_2 } } give_technology = { tech = tech_c_hangar_2 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_hangar_upgrades_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_hangar_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_hangar_3 } } give_technology = { tech = tech_c_hangar_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_hangar_upgrades_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_hangar_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_hangar_4 } } give_technology = { tech = tech_c_hangar_4 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_hangar_upgrades_5 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_hangar_5 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_hangar_5 } } give_technology = { tech = tech_c_hangar_5 } } } } 
+	}
+}
+
+#######################################
+# CRSTALLIS INFUSED TISSUE TECHNOLOGY #
+#######################################
+
+nsc_ai_tech_give_cryst_infused_tissue_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_regenerative_hull_tissue_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_regenerative_hull_tissue_1 } } give_technology = { tech = tech_c_regenerative_hull_tissue_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_infused_tissue_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_regenerative_hull_tissue_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_regenerative_hull_tissue_2 } } give_technology = { tech = tech_c_regenerative_hull_tissue_2 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_infused_tissue_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_regenerative_hull_tissue_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_regenerative_hull_tissue_3 } } give_technology = { tech = tech_c_regenerative_hull_tissue_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_infused_tissue_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_regenerative_hull_tissue_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_regenerative_hull_tissue_4 } } give_technology = { tech = tech_c_regenerative_hull_tissue_4 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_infused_tissue_5 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_regenerative_hull_tissue_5 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_regenerative_hull_tissue_5 } } give_technology = { tech = tech_c_regenerative_hull_tissue_5 } } } } 
+	}
+}
+
+################################
+# CRSTALLIS REACTOR TECHNOLOGY #
+################################
+
+nsc_ai_tech_give_cryst_reactor_6 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_reactor_6 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_reactor_6 } } give_technology = { tech = tech_c_reactor_6 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_reactor_7 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_reactor_7 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_reactor_7 } } give_technology = { tech = tech_c_reactor_7 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_reactor_8 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_reactor_8 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_reactor_8 } } give_technology = { tech = tech_c_reactor_8 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_reactor_9 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_reactor_9 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_reactor_9 } } give_technology = { tech = tech_c_reactor_9 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_reactor_10 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_reactor_10 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_reactor_10 } } give_technology = { tech = tech_c_reactor_10 } } } } 
+	}
+}
+
+###############################
+# CRSTALLIS SENSOR TECHNOLOGY #
+###############################
+
+nsc_ai_tech_give_cryst_sensor_5 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_sensors_5 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_sensors_5 } } give_technology = { tech = tech_c_sensors_5 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_sensor_6 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_sensors_6 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_sensors_6 } } give_technology = { tech = tech_c_sensors_6 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_sensor_7 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_sensors_7 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_sensors_7 } } give_technology = { tech = tech_c_sensors_7 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_sensor_8 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_sensors_8 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_sensors_8 } } give_technology = { tech = tech_c_sensors_8 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_sensor_9 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_sensors_9 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_sensors_9 } } give_technology = { tech = tech_c_sensors_9 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_sensor_10 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_sensors_10 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_sensors_10 } } give_technology = { tech = tech_c_sensors_10 } } } } 
+	}
+}
+
+###############################
+# CRSTALLIS SHIELD TECHNOLOGY #
+###############################
+
+nsc_ai_tech_give_cryst_shield_6 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shields_6 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shields_6 } } give_technology = { tech = tech_c_shields_6 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_shield_7 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shields_7 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shields_7 } } give_technology = { tech = tech_c_shields_7 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_shield_8 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shields_8 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shields_8 } } give_technology = { tech = tech_c_shields_8 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_shield_9 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shields_9 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shields_9 } } give_technology = { tech = tech_c_shields_9 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_shield_10 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shields_10 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shields_10 } } give_technology = { tech = tech_c_shields_10 } } } } 
+	}
+}
+
+#########################################
+# CRSTALLIS HARDENEED SHIELD TECHNOLOGY #
+#########################################
+
+nsc_ai_tech_give_cryst_shield_16 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shields_16 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shields_16 } } give_technology = { tech = tech_c_shields_16 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_shield_17 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shields_17 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shields_17 } } give_technology = { tech = tech_c_shields_17 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_shield_18 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shields_18 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shields_18 } } give_technology = { tech = tech_c_shields_18 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_shield_19 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shields_19 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shields_19 } } give_technology = { tech = tech_c_shields_19 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_shield_20 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shields_20 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shields_20 } } give_technology = { tech = tech_c_shields_20 } } } } 
+	}
+}
+
+#######################################
+# CRSTALLIS PSIONIC SHIELD TECHNOLOGY #
+#######################################
+
+nsc_ai_tech_give_cryst_shield_11 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shields_11 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shields_11 } } give_technology = { tech = tech_c_shields_11 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_shield_12 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shields_12 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shields_12 } } give_technology = { tech = tech_c_shields_12 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_shield_13 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shields_13 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shields_13 } } give_technology = { tech = tech_c_shields_13 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_shield_14 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shields_14 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shields_14 } } give_technology = { tech = tech_c_shields_14 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_shield_15 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shields_15 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shields_15 } } give_technology = { tech = tech_c_shields_15 } } } } 
+	}
+}
+
+#########################################
+# CRSTALLIS SYNTHETIC SHIELD TECHNOLOGY #
+#########################################
+
+nsc_ai_tech_give_cryst_synth_shield_6 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shields_synth_6 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shields_synth_6 } } give_technology = { tech = tech_c_shields_synth_6 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_synth_shield_7 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shields_synth_7 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shields_synth_7 } } give_technology = { tech = tech_c_shields_synth_7 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_synth_shield_8 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shields_synth_8 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shields_synth_8 } } give_technology = { tech = tech_c_shields_synth_8 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_synth_shield_9 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shields_synth_9 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shields_synth_9 } } give_technology = { tech = tech_c_shields_synth_9 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_synth_shield_10 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shields_synth_10 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shields_synth_10 } } give_technology = { tech = tech_c_shields_synth_10 } } } } 
+	}
+}
+
+#########################################
+# CRSTALLIS SHIELD RECHARGER TECHNOLOGY #
+#########################################
+
+nsc_ai_tech_give_cryst_shield_recharger_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shield_rechargers_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shield_rechargers_2 } } give_technology = { tech = tech_c_shield_rechargers_2 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_shield_recharger_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_shield_rechargers_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_shield_rechargers_3 } } give_technology = { tech = tech_c_shield_rechargers_3 } } } } 
+	}
+}
+
+#####################################
+# CRSTALLIS SHIP SEGMENT TECHNOLOGY #
+#####################################
+
+nsc_ai_tech_give_cryst_ship_segment_corvette = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_corvette_sections }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_corvette_sections } } give_technology = { tech = tech_c_corvette_sections } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_ship_segment_destroyer = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_destroyer_sections }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_destroyer_sections } } give_technology = { tech = tech_c_destroyer_sections } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_ship_segment_cruiser = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_cruiser_sections }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_cruiser_sections } } give_technology = { tech = tech_c_cruiser_sections } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_ship_segment_battleship = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_battleship_sections }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_battleship_sections } } give_technology = { tech = tech_c_battleship_sections } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_ship_segment_science = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_science_sections }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_science_sections } } give_technology = { tech = tech_c_science_sections } } } } 
+	}
+}
+
+#########################################
+# CRSTALLIS TARGETING MATRIX TECHNOLOGY #
+#########################################
+
+nsc_ai_tech_give_cryst_targeting_matrix_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_crystalis_targeting_matrix_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_crystalis_targeting_matrix_1 } } give_technology = { tech = tech_c_crystalis_targeting_matrix_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_targeting_matrix_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_crystalis_targeting_matrix_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_crystalis_targeting_matrix_2 } } give_technology = { tech = tech_c_crystalis_targeting_matrix_2 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_targeting_matrix_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_crystalis_targeting_matrix_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_crystalis_targeting_matrix_3 } } give_technology = { tech = tech_c_crystalis_targeting_matrix_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_targeting_matrix_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_crystalis_targeting_matrix_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_crystalis_targeting_matrix_4 } } give_technology = { tech = tech_c_crystalis_targeting_matrix_4 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_targeting_matrix_5 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_crystalis_targeting_matrix_5 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_crystalis_targeting_matrix_5 } } give_technology = { tech = tech_c_crystalis_targeting_matrix_5 } } } } 
+	}
+}
+
+#######################################
+# CRSTALLIS THRUSTER ARMOR TECHNOLOGY #
+#######################################
+
+nsc_ai_tech_give_cryst_thruster_armor_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_thrusters_armor_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_thrusters_armor_1 } } give_technology = { tech = tech_c_thrusters_armor_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_thruster_armor_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_thrusters_armor_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_thrusters_armor_2 } } give_technology = { tech = tech_c_thrusters_armor_2 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_thruster_armor_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_thrusters_armor_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_thrusters_armor_3 } } give_technology = { tech = tech_c_thrusters_armor_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_thruster_armor_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_thrusters_armor_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_thrusters_armor_4 } } give_technology = { tech = tech_c_thrusters_armor_4 } } } } 
+	}
+}
+
+#######################################
+# CRSTALLIS THRUSTER ARMOR TECHNOLOGY #
+#######################################
+
+nsc_ai_tech_give_cryst_thruster_psi_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_thrusters_psi_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_thrusters_psi_1 } } give_technology = { tech = tech_c_thrusters_psi_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_thruster_psi_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_thrusters_psi_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_thrusters_psi_2 } } give_technology = { tech = tech_c_thrusters_psi_2 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_thruster_psi_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_thrusters_psi_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_thrusters_psi_3 } } give_technology = { tech = tech_c_thrusters_psi_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_thruster_psi_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_thrusters_psi_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_thrusters_psi_4 } } give_technology = { tech = tech_c_thrusters_psi_4 } } } } 
+	}
+}
+
+#########################################
+# CRSTALLIS CRITTER WEAPONRY TECHNOLOGY #
+#########################################
+
+nsc_ai_tech_give_cryst_extradimensional_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_extradimensional_weapon_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_extradimensional_weapon_2 } } give_technology = { tech = tech_c_extradimensional_weapon_2 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_extradimensional_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_extradimensional_weapon_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_extradimensional_weapon_3 } } give_technology = { tech = tech_c_extradimensional_weapon_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_space_cloud_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_space_cloud_weapon_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_space_cloud_weapon_2 } } give_technology = { tech = tech_c_space_cloud_weapon_2 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_space_cloud_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_space_cloud_weapon_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_space_cloud_weapon_3 } } give_technology = { tech = tech_c_space_cloud_weapon_3 } } } } 
+	}
+}
+
+###############################################
+# CRSTALLIS POINT-DEFENSE WEAPONRY TECHNOLOGY #
+###############################################
+
+nsc_ai_tech_give_cryst_point_defense_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_pd_tracking_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_pd_tracking_4 } } give_technology = { tech = tech_c_pd_tracking_4 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_point_defense_5 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_pd_tracking_5 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_pd_tracking_5 } } give_technology = { tech = tech_c_pd_tracking_5 } } } } 
+	}
+}
+
+###############################################
+# CRSTALLIS POINT-DEFENSE WEAPONRY TECHNOLOGY #
+###############################################
+
+nsc_ai_tech_give_cryst_energy_torpedoes_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_energy_torpedoes_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_energy_torpedoes_3 } } give_technology = { tech = tech_c_energy_torpedoes_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_energy_torpedoes_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_energy_torpedoes_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_energy_torpedoes_4 } } give_technology = { tech = tech_c_energy_torpedoes_4 } } } } 
+	}
+}
+
+###########################################
+# CRSTALLIS DISRUPTOR WEAPONRY TECHNOLOGY #
+###########################################
+
+nsc_ai_tech_give_cryst_disruptors_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_disruptors_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_disruptors_4 } } give_technology = { tech = tech_c_disruptors_4 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_disruptors_5 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_disruptors_5 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_disruptors_5 } } give_technology = { tech = tech_c_disruptors_5 } } } } 
+	}
+}
+
+#############################################
+# CRSTALLIS ARC EMITTER WEAPONRY TECHNOLOGY #
+#############################################
+
+nsc_ai_tech_give_cryst_arc_emitter_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_arc_emitter_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_arc_emitter_3 } } give_technology = { tech = tech_c_arc_emitter_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_arc_emitter_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_arc_emitter_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_arc_emitter_4 } } give_technology = { tech = tech_c_arc_emitter_4 } } } } 
+	}
+}
+
+##############################################
+# CRSTALLIS ENERGY LANCE WEAPONRY TECHNOLOGY #
+##############################################
+
+nsc_ai_tech_give_cryst_energy_lance_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_energy_lance_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_energy_lance_3 } } give_technology = { tech = tech_c_energy_lance_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_energy_lance_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_energy_lance_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_energy_lance_4 } } give_technology = { tech = tech_c_energy_lance_4 } } } } 
+	}
+}
+
+#########################################
+# CRSTALLIS TORPEDO WEAPONRY TECHNOLOGY #
+#########################################
+
+nsc_ai_tech_give_cryst_torpedoes_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_torpedoes_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_torpedoes_4 } } give_technology = { tech = tech_c_torpedoes_4 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_torpedoes_5 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_torpedoes_5 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_torpedoes_5 } } give_technology = { tech = tech_c_torpedoes_5 } } } } 
+	}
+}
+
+#################################################
+# CRSTALLIS SWARMER MISSILE WEAPONRY TECHNOLOGY #
+#################################################
+
+nsc_ai_tech_give_cryst_swarmer_missiles_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_swarmer_missiles_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_swarmer_missiles_3 } } give_technology = { tech = tech_c_swarmer_missiles_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_swarmer_missiles_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_swarmer_missiles_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_swarmer_missiles_4 } } give_technology = { tech = tech_c_swarmer_missiles_4 } } } } 
+	}
+}
+
+##########################################
+# CRSTALLIS FLAK GUN WEAPONRY TECHNOLOGY #
+##########################################
+
+nsc_ai_tech_give_cryst_flak_batteries_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_flak_batteries_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_flak_batteries_3 } } give_technology = { tech = tech_c_flak_batteries_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_flak_batteries_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_flak_batteries_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_flak_batteries_4 } } give_technology = { tech = tech_c_flak_batteries_4 } } } } 
+	}
+}
+
+#############################################
+# CRSTALLIS MASS DRIVER WEAPONRY TECHNOLOGY #
+#############################################
+
+nsc_ai_tech_give_cryst_kinetic_artillery_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_kinetic_artillery_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_kinetic_artillery_3 } } give_technology = { tech = tech_c_kinetic_artillery_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_kinetic_artillery_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_kinetic_artillery_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_kinetic_artillery_4 } } give_technology = { tech = tech_c_kinetic_artillery_4 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_mass_accelerator_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_mass_accelerator_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_mass_accelerator_3 } } give_technology = { tech = tech_c_mass_accelerator_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_mass_accelerator_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_mass_accelerator_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_mass_accelerator_4 } } give_technology = { tech = tech_c_mass_accelerator_4 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_mass_drivers_6 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_mass_drivers_6 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_mass_drivers_6 } } give_technology = { tech = tech_c_mass_drivers_6 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_mass_drivers_7 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_mass_drivers_7 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_mass_drivers_7 } } give_technology = { tech = tech_c_mass_drivers_7 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_autocannons_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_autocannons_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_autocannons_4 } } give_technology = { tech = tech_c_autocannons_4 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_autocannons_5 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_autocannons_5 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_autocannons_5 } } give_technology = { tech = tech_c_autocannons_5 } } } } 
+	}
+}
+
+#########################################
+# CRSTALLIS MISSILE WEAPONRY TECHNOLOGY #
+#########################################
+
+nsc_ai_tech_give_cryst_missiles_6 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_missiles_6 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_missiles_6 } } give_technology = { tech = tech_c_missiles_6 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_missiles_7 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_missiles_7 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_missiles_7 } } give_technology = { tech = tech_c_missiles_7 } } } } 
+	}
+}
+
+#######################################
+# CRSTALLIS LAZER WEAPONRY TECHNOLOGY #
+#######################################
+
+nsc_ai_tech_give_cryst_lasers_6 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_lasers_6 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_lasers_6 } } give_technology = { tech = tech_c_lasers_6 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_lasers_7 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_lasers_7 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_lasers_7 } } give_technology = { tech = tech_c_lasers_7 } } } } 
+	}
+}
+
+########################################
+# CRSTALLIS PLASMA WEAPONRY TECHNOLOGY #
+########################################
+
+nsc_ai_tech_give_cryst_plasma_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_plasma_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_plasma_4 } } give_technology = { tech = tech_c_plasma_4 } } } } 
+	}
+}
+
+nsc_ai_tech_give_cryst_plasma_5 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_plasma_5 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_plasma_5 } } give_technology = { tech = tech_c_plasma_5 } } } } 
+	}
+}
+
+#####################################
+# CRSTALLIS STRIKE CRAFT TECHNOLOGY #
+#####################################
+
+nsc_ai_tech_give_cryst_strike_craft_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_c_strike_craft_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_c_strike_craft_4 } } give_technology = { tech = tech_c_strike_craft_4 } } } } 
+	}
+}

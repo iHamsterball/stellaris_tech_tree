@@ -1,0 +1,1129 @@
+##################
+### TECH COSTS ###
+##################
+#If you change any of these, use replace in files so the values are the same across all files
+
+@tier1cost1 = 360
+@tier1cost2 = 480
+@tier1cost3 = 600
+@tier1cost4 = 720
+
+@tier2cost1 = 1000
+@tier2cost2 = 1400
+@tier2cost3 = 1800
+@tier2cost4 = 2200
+
+@tier3cost1 = 3000
+@tier3cost2 = 4000
+@tier3cost3 = 5000
+@tier3cost4 = 6000
+
+@tier4cost1 = 7000
+@tier4cost2 = 8000
+@tier4cost3 = 9000
+@tier4cost4 = 10000
+
+@repeatableTechBaseCost = 1500
+@repeatableTechLevelCost = 480
+
+####################
+### TECH WEIGHTS ###
+####################
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+@tier1weight4 = 85
+
+@tier2weight1 = 75
+@tier2weight2 = 70
+@tier2weight3 = 65
+@tier2weight4 = 60
+
+@tier3weight1 = 50
+@tier3weight2 = 45
+@tier3weight3 = 40
+@tier3weight4 = 35
+
+@tier4weight1 = 30
+
+@repeatableTechWeight = 25
+@repatableTechFactor = 0.5
+
+########################
+# OVERALL TECH BALANCE #
+########################
+
+# Physics = 22
+# Society = 17
+# Engineering = 30
+
+######################
+# TECHS IN THIS FILE #
+######################
+
+# TOTAL = 24
+
+# Advanced Warship Components (Tier 1) - Physics - Unlocks lower half of NSC's "Special Ship Slot" components
+# Advanced Warship Components (Tier 2) - Physics - Unlocks upper half of NSC's "Special Ship Slot" components
+# Graviton Reactor - Physics - Unlocks Level 6 Graviton Reactor
+# Dark Matter Reactor - Physics - Unlocks Level 7 Dark Matter Reactor
+# Singularity Reactor - Physics - Originally the Advanced Zero Point Module Tech, unlocks Level 8 Singularity Reactor
+# Multidimensional Reactor - Physics - Unlocks Level 9 Multidimensional Reactor
+# NSC Zero Point Reactor - Physics - Unlocks NSC's version of the Zero Point Reactor
+# Optimized Enigmatic Power Core - Physics - Unlocks NSC's upgraded "special" Enigmatic Power Core
+# Reinforced Shields - Physics - Unlocks NSC's Level 6 Shields
+# Hyper Shields - Physics - Unlocks NSC's version of Hyper Shields, level 7
+# Baryonic Shields - Physics - Unlocks NSC's Level 8 Shields
+# Multilayered Shields - Physics - Unlocks NSC's Level 9 Shields
+# Multiphasic Shields - Physics - Unlocks NSC's Level 10 Shields
+# Optimized Psionic Shields - Physics - Unlocks NSC's upgraded "special" Psionic Shielding
+# Optimized Enigmatic Shields - Physics - Unlocks NSC's upgraded "special" Enigmatic Shielding
+# Ablative Neutronium Armor - Engineering - Unlocks NSC's Level 6 Armor
+# Reactive Nanocomposite Armor - Engineering - Unlocks NSC's Level 7 Armor
+# Neutronium Nanocomposite Armor - Engineering - Unlocks NSC's Level 8 Armor
+# Anti-Neutronium Nanocomposite Armor - Engineering - Unlocks NSC's Level 9 Armor
+# Gravi-Forged Nanocomposite Armor - Engineering - Unlocks NSC's Level 10 Armor
+# Optimized Adaptive Dragon Armor - Engineering - Unlocks NSC's upgraded "special" Dragon Armor
+# Multispectrum Sensors - Physics - Unlocks NSC's Level 5 Sensors
+# Transdimensional Sensors - Physics - Unlocks NSC's Level 6 Sensors
+# Graviton Thrusters - Engineering - Unlocks NSC's Level 5 Thrusters
+
+# ##################
+# ##################
+# ##################
+
+# Advanced Warship Components Tier 1
+tech_advanced_warship_components_1 = {
+	cost = @tier2cost3
+	area = physics
+	tier = 2
+	category = { computing }
+	prerequisites = { "tech_spaceport_4" }
+	weight = @tier2weight1
+		
+	## unlocks Special Component Slot & all Power 50 component sets	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_SPECIAL_COMPONENTS_1_TITLE"
+			desc = "TECH_UNLOCK_SPECIAL_COMPONENTS_1_DESC"
+		}
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_advanced_warship_components_1 }
+		}
+		modifier = {
+			factor = 0.1
+			years_passed < 21
+		}	
+		modifier = {
+			factor = 1
+			years_passed > 20
+		}
+		modifier = {
+			factor = 2
+			years_passed > 30
+		}
+		modifier = {
+			factor = 3
+			years_passed > 35
+		}
+		modifier = {
+			factor = 4
+			years_passed > 40
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+}
+
+# Advanced Warship Components Tier 2
+tech_advanced_warship_components_2 = {
+	cost = @tier3cost1
+	area = physics
+	tier = 3
+	category = { computing }
+	prerequisites = { "tech_spaceport_6" }
+	weight = @tier2weight4
+		
+	## unlocks remaining Special Ship Components: 75, 100 power modules and both auxiliary modules
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_SPECIAL_COMPONENTS_2_TITLE"
+			desc = "TECH_UNLOCK_SPECIAL_COMPONENTS_2_DESC"
+		}
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_advanced_warship_components_2 }
+		}
+		modifier = {
+			factor = 0.1
+			years_passed < 51
+		}	
+		modifier = {
+			factor = 1
+			years_passed > 50
+		}
+		modifier = {
+			factor = 2
+			years_passed > 60
+		}
+		modifier = {
+			factor = 3
+			years_passed > 65
+		}
+		modifier = {
+			factor = 4
+			years_passed > 70
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+}
+
+tech_graviton_power = {
+	area = physics
+	cost = @tier4cost1
+	tier = 3
+	category = { particles }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_block_needed_power" } #This tech is needed if no other component mods are active, thus separate tech block.
+	weight = @tier3weight4
+	
+	modifier = { max_energy = 1000 }
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 2
+			has_technology = tech_spaceport_6
+		}	
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_graviton_power }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 50 #important component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_dark_matter_power = {
+	area = physics
+	cost = @tier4cost1
+	tier = 3
+	category = { particles }
+	ai_update_type = military
+	prerequisites = { "tech_graviton_power" "tech_block_needed_power" } #This tech is needed if no other component mods are active, thus separate tech block.
+	weight = @tier3weight4
+	
+	modifier = { max_energy = 1000 }
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 3
+			has_technology = tech_spaceport_6
+		}	
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_dark_matter_power }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 50 #important component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+# This tech is the Singularity Reactor, name kept for save-game compatibility.
+tech_adv_zero_point_power = {
+	area = physics
+	cost = @tier4cost2
+	tier = 3
+	category = { particles }
+	ai_update_type = military	
+	prerequisites = { "tech_dark_matter_power" "tech_block_reactors" } #This one is first with "regular" tech block.
+	weight = @tier3weight4
+	
+	modifier = { max_energy = 1000 }
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_adv_zero_point_power }
+		}
+		modifier = {
+			factor = 3
+			has_technology = tech_battleship_1
+		}	
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 50 #important component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_multidimensional_power = {
+	area = physics
+	cost = @tier4cost2
+	tier = 3
+	category = { particles }
+	ai_update_type = military
+	prerequisites = { "tech_adv_zero_point_power" }
+	weight = @tier3weight4
+	
+	modifier = { max_energy = 1000 }
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 3
+			has_technology = tech_carrier_1
+		}	
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_multidimensional_power }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 50 #important component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_nsc_zero_point_power = {
+	area = physics
+	cost = @tier4cost3
+	tier = 3
+	category = { particles }
+	is_rare = yes
+	ai_update_type = military
+	prerequisites = { "tech_multidimensional_power" }
+	weight = @tier3weight4
+	
+	modifier = { max_energy = 1000 }
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 3
+			has_technology = tech_dreadnought_1
+		}	
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_nsc_zero_point_power }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 50 #important component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_optimized_enigmatic_power = {
+	area = physics
+	cost = @tier4cost4
+	tier = 3
+	category = { particles }
+	is_rare = yes
+	ai_update_type = military
+	prerequisites = { "tech_nsc_zero_point_power" "tech_enigmatic_power_core" }
+	weight = @tier3weight4
+	
+	modifier = { max_energy = 1000 }
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 5
+			has_technology = tech_enigmatic_power_core
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_optimized_enigmatic_power }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 50 #important component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_shields_6_NSC = {
+	area = physics
+	cost = @tier3cost3
+	tier = 3
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_shields_5" "tech_block_shields" }
+	weight = @tier3weight2
+	
+	modifier = { planet_fortification_strength = 0.2 }
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_shields_6_NSC }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 40 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_shields_7_NSC = {
+	area = physics
+	cost = @tier3cost4
+	tier = 3
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_shields_6_NSC" }
+	weight = @tier3weight2
+	
+	modifier = { planet_fortification_strength = 0.2 }
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_shields_7_NSC }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 40 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_shields_8_NSC = {
+	area = physics
+	cost = @tier4cost1
+	tier = 3
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_shields_7_NSC" }
+	weight = @tier3weight3
+	
+	modifier = { planet_fortification_strength = 0.2 }
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_shields_8_NSC }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 40 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_shields_9_NSC = {
+	area = physics
+	cost = @tier4cost2
+	tier = 3
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_shields_8_NSC" }
+	weight = @tier3weight3
+	
+	modifier = { planet_fortification_strength = 0.2 }
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_shields_9_NSC }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 40 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_shields_10_NSC = {
+	area = physics
+	cost = @tier4cost3
+	tier = 3
+	category = { field_manipulation }
+	is_rare = yes
+	ai_update_type = all
+	prerequisites = { "tech_shields_9_NSC" }
+	weight = @tier3weight4
+	
+	modifier = { planet_fortification_strength = 0.2 }
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_shields_10_NSC }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 40 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_shields_11_psionic_NSC = {
+	area = physics
+	cost = @tier4cost4
+	tier = 3
+	category = { field_manipulation }
+	is_rare = yes
+	ai_update_type = all
+	prerequisites = { "tech_shields_10_NSC" "tech_psionic_shield" }
+	weight = @tier3weight4
+	
+	modifier = { planet_fortification_strength = 0.2 }
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_shields_11_psionic_NSC }
+		}
+		modifier = {
+			factor = 5
+			has_technology = tech_psionic_shield
+		}	
+		modifier = {
+			factor = 2
+			has_technology = tech_shields_10_NSC
+		}	
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 40 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_shields_12_enigmatic_NSC = {
+	area = physics
+	cost = @tier4cost4
+	tier = 3
+	category = { field_manipulation }
+	is_rare = yes
+	ai_update_type = all
+	prerequisites = { "tech_shields_10_NSC" "tech_enigmatic_deflector" }
+	weight = @tier3weight4
+	
+	modifier = { planet_fortification_strength = 0.2 }
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_shields_12_enigmatic_NSC }
+		}
+		modifier = {
+			factor = 5
+			has_technology = tech_enigmatic_deflector
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 40 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+# Ablative Neutronium Armor
+tech_ship_armor_6_NSC = {
+	area = engineering
+	cost = @tier3cost3
+	tier = 3
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_block_armors" "tech_ship_armor_5" }
+	weight = @tier3weight3
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_ship_armor_6_NSC }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 30
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+# Reactive Nanocomposite Armor
+tech_ship_armor_7_NSC = {
+	area = engineering
+	cost = @tier3cost4
+	tier = 3
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_ship_armor_6_NSC" }
+	weight = @tier3weight3
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_ship_armor_7_NSC }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 30
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+# Neutronium Nanocomposite Armor
+tech_ship_armor_8_NSC = {
+	area = engineering
+	cost = @tier4cost1
+	tier = 3
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_ship_armor_7_NSC" }
+	weight = @tier3weight3
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_ship_armor_8_NSC }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 30
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+# Anti-Neutronium Nanocomposite Armor
+tech_ship_armor_9_NSC = {
+	area = engineering
+	cost = @tier4cost2
+	tier = 3
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_ship_armor_8_NSC" }
+	weight = @tier3weight3
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_ship_armor_9_NSC }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 30
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+# Gravi-Forged Nanocomposite Armor
+tech_ship_armor_10_NSC = {
+	area = engineering
+	cost = @tier4cost3
+	tier = 3
+	category = { materials }
+	is_rare = yes
+	ai_update_type = all
+	prerequisites = { "tech_ship_armor_9_NSC" }
+	weight = @tier3weight4
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_ship_armor_10_NSC }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 30
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+# Optimized Adaptive Dragon Armor
+tech_optimized_adaptive_dragon_armor = {
+	area = engineering
+	cost = @tier4cost4
+	tier = 3
+	category = { materials }
+	is_rare = yes
+	ai_update_type = all
+	prerequisites = { "tech_dragon_armor" "tech_ship_armor_10_NSC" }
+	weight = @tier3weight4
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = {  has_technology = tech_optimized_adaptive_dragon_armor	}
+		}
+		modifier = {
+			factor = 5
+			has_technology = tech_dragon_armor
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 30
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+tech_sensors_5_NSC = {
+	area = physics
+	cost = @tier3cost3
+	tier = 3
+	category = { voidcraft }
+	ai_update_type = all	
+	prerequisites = { "tech_block_components" "tech_sensors_4" }
+	weight = @tier3weight2
+		
+	modifier = { planet_sensor_range_add = 30 } #planet_sensor_range_mult = 0.5
+	
+	weight_modifier = {
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_sensors_5_NSC }
+		}
+		modifier = { #This modifier is to ensure the Player gets the sensor tech more readily if the player already unlocked any ship/station requiring the EWARS Array.
+			factor = 20
+			OR = {
+				#Flagship/HQ Station not included due to requiring the one of the first two respectively.
+				has_technology = tech_superdreadnought_1
+				has_technology = tech_battle_fortress_1
+				has_technology = tech_sensorstation_1
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 15 #good component
+		modifier = {
+			factor = 10
+			any_neighbor_country = {
+				has_technology = tech_sensors_5_NSC
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_sensors_6_NSC = {
+	area = physics
+	cost = @tier3cost4
+	tier = 3
+	category = { voidcraft }
+	ai_update_type = all	
+	prerequisites = { "tech_sensors_5_NSC" }
+	weight = @tier3weight3
+		
+	modifier = { planet_sensor_range_add = 30 } #planet_sensor_range_mult = 0.5
+	
+	weight_modifier = {
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_sensors_6_NSC }
+		}
+		modifier = { #This modifier is to ensure the Player gets the sensor tech more readily if the player already unlocked any ship/station requiring the EWARS Array.
+			factor = 20
+			OR = {
+				#Flagship/HQ Station not included due to requiring the one of the first two respectively.
+				has_technology = tech_superdreadnought_1
+				has_technology = tech_battle_fortress_1
+				has_technology = tech_sensorstation_1
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 15 #good component
+		modifier = {
+			factor = 10
+			any_neighbor_country = {
+				has_technology = tech_sensors_6_NSC
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+#Graviton Thrusters
+tech_thrusters_5_NSC = {
+	area = engineering
+	cost = @tier3cost4
+	tier = 3
+	category = { rocketry }
+	ai_update_type = all
+	prerequisites = { "tech_block_components" "tech_thrusters_4" }
+	weight = @tier3weight2
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_thrusters_5_NSC }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_rocketry"
+			}
+		}
+		modifier = {
+			factor = 2
+			has_technology = tech_spaceport_6
+		}
+	}
+	
+	ai_weight = {
+		factor = 3 #important component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_rocketry"
+			}
+		}
+	}
+}

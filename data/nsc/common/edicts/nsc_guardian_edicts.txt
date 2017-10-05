@@ -1,0 +1,96 @@
+@move_guardian_days_required = 30
+@move_guardian_mineralcost = 1000
+@move_guardian_mineralcost_negative = -1000
+@move_guardian_energycost = 1000
+@move_guardian_energycost_negative = -1000
+@move_guardian_influencecost = 200
+
+# Edict cooldown is in events/nsc_hq_events.txt at the top
+
+# ==============================
+
+# Dimesion Horror Move Edict
+planet_edict = {
+	name = guardian_horror_here
+	
+	influence_cost = @move_guardian_influencecost
+	length = @move_guardian_days_required
+
+	potential = {
+		owner = {
+			has_country_flag = dimensional_horror_built
+			is_playable_country = yes
+			is_ai = no
+		}
+	}
+
+	allow = {
+		owner = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = guardian_horror_move_cooldown
+					has_country_flag = guardian_moving_horror
+				}
+				has_country_flag = dimensional_horror_built
+			}
+			minerals > @move_guardian_mineralcost
+			energy > @move_guardian_energycost
+		}
+	}
+	effect = {
+		owner = {
+			add_minerals = @move_guardian_mineralcost_negative
+			add_energy = @move_guardian_energycost_negative
+			set_country_flag = "guardian_moving_horror"
+			country_event = {
+				id = "NSC_guardian_dimensional_horror.9"
+				days = @move_guardian_days_required
+			}
+		}
+		custom_tooltip = edict_guardian_horror_here_tooltip
+	}
+	ai_weight = { weight = 0 }
+}
+
+# Enigmatic Fortress Move Edict
+planet_edict = {
+	name = guardian_fortress_here
+	
+	influence_cost = @move_guardian_influencecost
+	length = @move_guardian_days_required
+
+	potential = {
+		owner = {
+			has_country_flag = enigmatic_fortress_built
+			is_playable_country = yes
+			is_ai = no
+		}
+	}
+
+	allow = {
+		owner = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = guardian_fortress_move_cooldown
+					has_country_flag = guardian_moving_fortress
+				}
+				has_country_flag = "enigmatic_fortress_built"
+			}
+			minerals > @move_guardian_mineralcost
+			energy > @move_guardian_energycost
+		}
+	}
+	effect = {
+		owner = {
+			add_minerals = @move_guardian_mineralcost_negative
+			add_energy = @move_guardian_energycost_negative
+			set_country_flag = "guardian_moving_fortress"
+			country_event = {
+				id = NSC_guardian_enigmatic_fortress.8
+				days = @move_guardian_days_required
+			}
+		}
+		custom_tooltip = edict_guardian_fortress_here_tooltip
+	}
+	ai_weight = { weight = 0 }
+}

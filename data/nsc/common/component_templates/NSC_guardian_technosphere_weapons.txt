@@ -1,0 +1,143 @@
+#############################
+# Infinity Machine Weaponry #
+#############################
+
+# Infinity Lance
+weapon_component_template = {
+	key = "INFINITY_LANCE"
+	size = large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_dragonfire_white"
+	icon_frame = 1
+	
+	damage = { min = 250.0 max = 1000.0 }
+	windup = { min = 10.0 max = 20.0 }
+	total_fire_time = 120.0 #this value is "cooldown"
+	range = 120.0
+	accuracy = 0.85
+	tracking = 0
+	
+	shield_damage = 1.00
+	armor_penetration = 0.90
+	
+	firing_arc = 25.0 #15.0
+	min_range = 10.0
+	static_rotation = yes
+	
+	hidden = yes
+	projectile_gfx = "dragon_weapon_white"
+	tags = { weapon_type_energy }
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		Flagship = 50000
+		Superdreadnought = 50000
+		Dreadnought = 50000
+		Carrier = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		Battlecruiser = 5000
+		LightCarrier = 5000
+		cruiser = 2500
+		StrikeCruiser = 1500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}
+
+weapon_component_template = {
+	key = "TECHNO_SMALL_WHITE_LASER"
+	size = small
+	entity = "small_laser_gun_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_laser_white"
+	icon_frame = 1
+	
+	damage = { min = 10.0 max = 18.0 }
+	windup = { min = 2.0 max = 23.0 } 
+	total_fire_time = 25.0 # This value is cooldown
+	range = 40.0
+	accuracy = 0.9
+	tracking = 0.6
+	shield_damage = 0.75
+	shield_penetration = 0.5
+	armor_penetration = 0.25
+	
+	hidden = yes
+	projectile_gfx = "white_laser_s"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_short_range }
+}
+
+weapon_component_template = {
+	key = "TECHNO_MEDIUM_WHITE_LASER"
+	size = medium
+	entity = "medium_laser_gun_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_laser_white"
+	icon_frame = 1
+	
+	damage = { min = 20.0 max = 35.0 }
+	windup = { min = 2.0 max = 23.0 } 
+	total_fire_time = 25.0 # This value is cooldown
+	range = 70.0
+	accuracy = 0.85
+	tracking = 0.3
+	shield_damage = 1.5
+	armor_penetration = 0.25
+	
+	hidden = yes
+	projectile_gfx = "white_laser_m"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield }
+}
+
+weapon_component_template = {
+	key = "TECHNO_LARGE_WHITE_LASER"
+	size = large
+	entity = "large_laser_gun_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_laser_white"
+	icon_frame = 1
+	
+	damage = { min = 40.0 max = 70.0 }
+	windup = { min = 2.0 max = 23.0 } 
+	total_fire_time = 25.0 # This value is cooldown
+	range = 80.0
+	accuracy = 0.8
+	tracking = 0.1
+	shield_damage = 0.5
+	armor_penetration = 0.8
+	
+	hidden = yes
+	projectile_gfx = "white_laser_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+}
+
+weapon_component_template = {
+	key = "TECHNO_WHITE_PD"
+	size = point_defence
+	entity = "invisible_turret_entity"
+	type = point_defence
+	
+	icon = "GFX_ship_part_laser_white"
+	icon_frame = 1
+	
+	damage = { min = 10.0 max = 20.0 }
+	windup = { min = 1.0 max = 1.0 } 
+	total_fire_time = 5.0 # This value is cooldown
+	range = 15.0
+	accuracy = 0.8
+	tracking = 0.5
+	
+	hidden = yes
+	tags = { weapon_type_point_defense weapon_type_energy }
+	projectile_gfx = "white_laser_s"
+}

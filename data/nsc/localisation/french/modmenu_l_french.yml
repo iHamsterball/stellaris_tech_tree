@@ -1,0 +1,38 @@
+﻿l_french:
+ modmenu_button: "Global NSC Menu"
+ modmenu.tooltip: "Open NSC Mod Control Panel, allowing you to adjust settings for not only NSC, but also Had's Mod Collection (Autobuild, etc)."
+ modmenu.1.name: "Global NSC Mod Control Center"
+ modmenu.1.desc: "An upgraded compatibility system, this panel is a universal control system for all mods that have menu buttons in the government window. This screen will display various mods you can control features for if you have them active in your game.\n\nThe NSC Features Menu will always be visible, however, it will be the only option unless you install one of Had's mods that are accepted by this menu: §YAutobuild, Harder Invaders, Board That Ship, & Human Fallen Empires§!. For each of these mods you activate in your campaign, a button option will appear for you to access that mod's feature controls.\n\nPlease select a mod to begin."
+ edict_modmenu: "$modmenu.1.name$"
+ edict_modmenu_desc: "$modmenu.1.desc$"
+ modmenu_exit: "§GExit Menu.§!"
+ modmenu_remove: "§HRemove§! all of the mod's settings."
+ modmenu_remove.tooltip: "Remove all mod's flags and modifiers."
+ modmenu_on: "§GTurn On§!"
+ modmenu_off: "§RTurn Off§!"
+ modmenu_tooltip_on: "Pressing the button will $modmenu_on$ this option."
+ modmenu_tooltip_off: "Pressing the button will $modmenu_off$ this option."
+ modmenu_return: "§LReturn.§!"
+ modmenu_yes: "Yes."
+ modmenu_no: "No."
+ modmenu_configure: "Here you can configure"
+ modmenu_menu: "§BMenu:§!"
+
+ modmenu.0: "§HAutoBuild§!"
+ modmenu.0.tooltip: "$modmenu_configure$ $modmenu.0$"
+
+ modmenu.1: "§HBoard That Ship§!"
+ modmenu.1.tooltip: "$modmenu_configure$ $modmenu.1$"
+
+ modmenu.2: "§HNSC Feature Menu§!"
+ modmenu.2.tooltip: "$modmenu_configure$ the $modmenu.2$"
+
+ modmenu.3: "§HHarder Invaders§!"
+ modmenu.3.tooltip: "$modmenu_configure$ $modmenu.3$"
+
+ modmenu.4: "§HHuman Fallen Empires§!"
+ modmenu.4.tooltip: "$modmenu_configure$ $modmenu.4$"
+
+######################################################################################################
+# IMPORTANT: FILE NAME MUST REMAIN "modmenu_l_[language]" FOR OVERWRITE PURPOSES FOR COMPATIBLE MODS #
+######################################################################################################

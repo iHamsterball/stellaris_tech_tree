@@ -1,0 +1,512 @@
+### Spawned System with the Captain's Pirate Galleon in it.
+guardians_init_pirate = {
+	name = "NAME_Hidden_Paradise"
+	class = "rl_standard_stars"
+	asteroids_distance = 65 #why is it that my asteroid belt must always be 5 units further than my asteroids?
+	flags = { guardians_pirate_system guardian hostile_system }
+	
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 75
+		has_ring = yes
+		init_effect = {
+			set_planet_flag = guardian_pirate_star
+			save_event_target_as = guardian_pirate_star
+		}
+	}
+	
+	change_orbit = 60
+	
+	planet = {
+		class = random_asteroid
+		orbit_distance = { min = 0 max = 1 }
+		orbit_angle = 0
+		size = { min = 1 max = 5 }
+	}
+	
+	change_orbit = 0
+	
+	planet = {
+		class = random_asteroid
+		orbit_distance = { min = 0 max = 1 }
+		orbit_angle = 36
+		size = { min = 1 max = 5 }
+	}
+	
+	change_orbit = 0
+	
+	planet = {
+		class = random_asteroid
+		orbit_distance = { min = 0 max = 1 }
+		orbit_angle = 36
+		size = { min = 1 max = 5 }
+	}
+	
+	change_orbit = 0
+	
+	planet = {
+		class = random_asteroid
+		orbit_distance = { min = 0 max = 1 }
+		orbit_angle = 36
+		size = { min = 1 max = 5 }
+	}
+	
+	change_orbit = 0
+	
+	planet = {
+		class = random_asteroid
+		orbit_distance = { min = 0 max = 1 }
+		orbit_angle = 36
+		size = { min = 1 max = 5 }
+	}
+	
+	change_orbit = 0
+	
+	planet = {
+		class = random_asteroid
+		orbit_distance = { min = 0 max = 1 }
+		orbit_angle = 36
+		size = { min = 1 max = 5 }
+	}
+	
+	change_orbit = 0
+	
+	planet = {
+		class = random_asteroid
+		orbit_distance = { min = 0 max = 1 }
+		orbit_angle = 36
+		size = { min = 1 max = 5 }
+	}
+	
+	change_orbit = 0
+	
+	planet = {
+		class = random_asteroid
+		orbit_distance = { min = 0 max = 1 }
+		orbit_angle = 36
+		size = { min = 1 max = 5 }
+	}
+	
+	change_orbit = 0
+	
+	planet = {
+		class = random_asteroid
+		orbit_distance = { min = 0 max = 1 }
+		orbit_angle = 36
+		size = { min = 1 max = 5 }
+	}
+	
+	change_orbit = 0
+	
+	planet = {
+		class = random_asteroid
+		orbit_distance = { min = 0 max = 1 }
+		orbit_angle = 36
+		size = { min = 1 max = 5 }
+	}
+	
+	change_orbit = 65
+	
+	planet = {
+		name = "NAME_Revenge"
+		class = "pc_barren"
+		entity = "nuked_planet_01_entity"
+		orbit_angle = random
+		size = 25
+		modifiers = none
+		init_effect = { 
+			prevent_anomaly = yes 
+			save_event_target_as = guardian_pirate_nuked_planet
+			set_planet_flag = guardian_pirate_nuked_planet
+		}
+		
+		change_orbit = 10
+	
+		moon = {
+			name = "NAME_Paradise"
+			class = "pc_gaia"
+			orbit_distance = 9
+			orbit_angle = random
+			size = 25
+			has_ring = yes
+			tile_blockers = none
+			modifiers = none
+		
+			init_effect = {
+				prevent_anomaly = yes
+				set_planet_flag = guardian_pirate_paradise
+				save_event_target_as = guardian_pirate_paradise
+				nsc_25_gaia_world_setup = yes
+			}
+		}
+	}
+	
+	change_orbit = 40
+	
+	planet = {
+		class = "pc_gas_giant"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 24
+		has_ring = yes
+		entity = "gas_giant_03_entity"
+		modifiers = none
+		
+		init_effect = { 
+			save_event_target_as = guardian_pirate_gas_giant
+			set_planet_flag = guardian_pirate_gas_giant
+		}
+		
+		change_orbit = 7
+		
+		moon = {
+			class = "pc_frozen"
+			size = 7
+			orbit_distance = 8
+			orbit_angle = random
+			has_ring = yes
+		}	
+		moon = {
+			class = "pc_frozen"
+			size = 3
+			orbit_distance = 2
+			orbit_angle = random
+			has_ring = no
+		}	
+		moon = {
+			class = "pc_barren_cold"
+			size = 5
+			orbit_distance = 2
+			orbit_angle = random
+			has_ring = no
+		}	
+		moon = {
+			class = "pc_barren_cold"
+			size = 2
+			orbit_distance = 2
+			orbit_angle = random
+			has_ring = no
+		}	
+	}
+	
+	
+	init_effect = { 
+		create_pirate_country = yes
+		event_target:pirate_country = {
+			if = {
+				limit = {
+					NOT = { has_modifier = pirate_power }
+				}
+				add_modifier = {
+					modifier = pirate_power
+					days = -1
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_Heilfire_Raiders"
+			settings = { is_boss = yes spawn_debris = no }
+			effect = {
+				set_owner = event_target:pirate_country
+				set_fleet_flag = pirate_paradise_fleet
+				while = {
+					count = 1 #This means the number of ships that will appear *per* created ship, thus the 3 desired will appear if set to 1.
+					create_ship = {
+						name = "NAME_The_Blackened_Gold"
+						design = "NAME_Master_Pirate_Galleon"
+						graphical_culture = "pirate_01"
+					}
+					create_ship = {
+						name = "NAME_Storm's_Fortress"
+						design = "NAME_First_Mate's_Guardian_Galleon"
+						graphical_culture = "pirate_01"
+					}
+					create_ship = {
+						name = "NAME_Night's_Specter"
+						design = "NAME_First_Mate's_Guardian_Galleon"
+						graphical_culture = "pirate_01"
+					}
+				}
+				set_fleet_formation = {
+					position = { x = -5.0 y = -5.0 } #3
+					position = { x = 5.0 y = -5.0 } #2
+					position = { x = 0.0 y = 0.0 } #1
+				}
+				set_formation_scale = 0.5
+				set_fleet_stance = aggressive
+				set_aggro_range_measure_from = self
+				set_aggro_range = 400
+				set_location = {
+					target = event_target:guardian_pirate_paradise
+					distance = 0
+					angle = 180
+				}
+			}
+		}
+		event_target:pirate_country = {
+			every_owned_ship = {
+				limit = { is_ship_size = master_pirate_galleon }
+				set_ship_flag = boarding_ship
+				set_disable_at_health = 0.01
+			}
+		}
+	}
+}
+
+
+################################################################################################
+# SECONDARY INDENTICAL COPY EXCEPT CARRACK PIRATE GALLEON DOESN'T DISABLE WITH REPEAT SPAWNING #
+################################################################################################
+
+guardians_init_pirate_alt = {
+	name = "NAME_Hidden_Paradise"
+	class = "rl_standard_stars"
+	asteroids_distance = 65 #why is it that my asteroid belt must always be 5 units further than my asteroids?
+	flags = { guardians_pirate_alt_system guardian hostile_system }
+	
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 75
+		has_ring = yes
+		init_effect = {
+			set_planet_flag = guardian_pirate_star
+			save_event_target_as = guardian_pirate_star
+		}
+	}
+	
+	change_orbit = 60
+	
+	planet = {
+		class = random_asteroid
+		orbit_distance = { min = 0 max = 1 }
+		orbit_angle = 0
+		size = { min = 1 max = 5 }
+	}
+	
+	change_orbit = 0
+	
+	planet = {
+		class = random_asteroid
+		orbit_distance = { min = 0 max = 1 }
+		orbit_angle = 36
+		size = { min = 1 max = 5 }
+	}
+	
+	change_orbit = 0
+	
+	planet = {
+		class = random_asteroid
+		orbit_distance = { min = 0 max = 1 }
+		orbit_angle = 36
+		size = { min = 1 max = 5 }
+	}
+	
+	change_orbit = 0
+	
+	planet = {
+		class = random_asteroid
+		orbit_distance = { min = 0 max = 1 }
+		orbit_angle = 36
+		size = { min = 1 max = 5 }
+	}
+	
+	change_orbit = 0
+	
+	planet = {
+		class = random_asteroid
+		orbit_distance = { min = 0 max = 1 }
+		orbit_angle = 36
+		size = { min = 1 max = 5 }
+	}
+	
+	change_orbit = 0
+	
+	planet = {
+		class = random_asteroid
+		orbit_distance = { min = 0 max = 1 }
+		orbit_angle = 36
+		size = { min = 1 max = 5 }
+	}
+	
+	change_orbit = 0
+	
+	planet = {
+		class = random_asteroid
+		orbit_distance = { min = 0 max = 1 }
+		orbit_angle = 36
+		size = { min = 1 max = 5 }
+	}
+	
+	change_orbit = 0
+	
+	planet = {
+		class = random_asteroid
+		orbit_distance = { min = 0 max = 1 }
+		orbit_angle = 36
+		size = { min = 1 max = 5 }
+	}
+	
+	change_orbit = 0
+	
+	planet = {
+		class = random_asteroid
+		orbit_distance = { min = 0 max = 1 }
+		orbit_angle = 36
+		size = { min = 1 max = 5 }
+	}
+	
+	change_orbit = 0
+	
+	planet = {
+		class = random_asteroid
+		orbit_distance = { min = 0 max = 1 }
+		orbit_angle = 36
+		size = { min = 1 max = 5 }
+	}
+	
+	change_orbit = 65
+	
+	planet = {
+		name = "NAME_Revenge"
+		class = "pc_barren"
+		entity = "nuked_planet_01_entity"
+		orbit_angle = random
+		size = 25
+		modifiers = none
+		init_effect = { 
+			prevent_anomaly = yes 
+			save_event_target_as = guardian_pirate_nuked_planet
+			set_planet_flag = guardian_pirate_nuked_planet
+		}
+		
+		change_orbit = 10
+	
+		moon = {
+			name = "NAME_Paradise"
+			class = "pc_gaia"
+			orbit_distance = 9
+			orbit_angle = random
+			size = 25
+			has_ring = yes
+			tile_blockers = none
+			modifiers = none
+		
+			init_effect = {
+				prevent_anomaly = yes
+				set_planet_flag = guardian_pirate_paradise
+				save_event_target_as = guardian_pirate_paradise
+				nsc_25_gaia_world_setup = yes
+			}
+		}
+	}
+	
+	change_orbit = 40
+	
+	planet = {
+		class = "pc_gas_giant"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 24
+		has_ring = yes
+		entity = "gas_giant_03_entity"
+		modifiers = none
+		
+		init_effect = { 
+			save_event_target_as = guardian_pirate_gas_giant
+			set_planet_flag = guardian_pirate_gas_giant
+		}
+		
+		change_orbit = 7
+		
+		moon = {
+			class = "pc_frozen"
+			size = 7
+			orbit_distance = 8
+			orbit_angle = random
+			has_ring = yes
+		}	
+		moon = {
+			class = "pc_frozen"
+			size = 3
+			orbit_distance = 2
+			orbit_angle = random
+			has_ring = no
+		}	
+		moon = {
+			class = "pc_barren_cold"
+			size = 5
+			orbit_distance = 2
+			orbit_angle = random
+			has_ring = no
+		}	
+		moon = {
+			class = "pc_barren_cold"
+			size = 2
+			orbit_distance = 2
+			orbit_angle = random
+			has_ring = no
+		}	
+	}
+	
+	
+	init_effect = { 
+		create_pirate_country = yes
+		event_target:pirate_country = {
+			if = {
+				limit = {
+					NOT = { has_modifier = pirate_power }
+				}
+				add_modifier = {
+					modifier = pirate_power
+					days = -1
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_Heilfire_Raiders"
+			settings = { is_boss = yes spawn_debris = no }
+			effect = {
+				set_owner = event_target:pirate_country
+				set_fleet_flag = pirate_paradise_fleet
+				while = {
+					count = 1 #This means the number of ships that will appear *per* created ship, thus the 3 desired will appear if set to 1.
+					create_ship = {
+						name = "NAME_The_Blackened_Gold"
+						design = "NAME_Master_Pirate_Galleon"
+						graphical_culture = "pirate_01"
+					}
+					create_ship = {
+						name = "NAME_Storm's_Fortress"
+						design = "NAME_First_Mate's_Guardian_Galleon"
+						graphical_culture = "pirate_01"
+					}
+					create_ship = {
+						name = "NAME_Night's_Specter"
+						design = "NAME_First_Mate's_Guardian_Galleon"
+						graphical_culture = "pirate_01"
+					}
+				}
+				set_fleet_formation = {
+					position = { x = -5.0 y = -5.0 } #3
+					position = { x = 5.0 y = -5.0 } #2
+					position = { x = 0.0 y = 0.0 } #1
+				}
+				set_formation_scale = 0.5
+				set_fleet_stance = aggressive
+				set_aggro_range_measure_from = self
+				set_aggro_range = 400
+				set_location = {
+					target = event_target:guardian_pirate_paradise
+					distance = 0
+					angle = 180
+				}
+			}
+		}
+	}
+}

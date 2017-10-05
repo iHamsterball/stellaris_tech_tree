@@ -1,0 +1,165 @@
+# see README.txt for example
+
+magrathea_0 = {
+	entity = ""
+	construction_entity = "orbital_habitat_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = -7 y = -7 }
+	build_time = 3600 #Master Builder bonus doesn't apply to Habitats
+	build_cost = {
+		minerals = 20000 #15K after Master Builder bonus
+		influence = 200 #150 after Master Builder Bonus
+	}
+	construction_blocks_others = no
+
+	potential = { has_ascension_perk = ap_master_builders }
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				NOR = {
+					has_planet_flag = megastructure
+					has_planet_flag = has_megastructure
+					solar_system = { has_star_flag = ring_world_built }
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_not_minor_planetary_body"
+				NOR = {
+					is_asteroid = yes
+					is_moon = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = no
+			}
+		}
+	}
+	
+	ai_weight = { factor = 1 }
+	
+	on_build_start = {}
+	on_build_cancel = {}
+	
+	on_build_complete = {
+		spawn_planet = {
+			class = pc_gaia
+			location = fromfrom.planet
+			orbit_location = no
+			orbit_angle_offset = 40
+			orbit_distance_offset = 12
+			size = 25
+			
+			init_effect = {
+				set_name = "MAGRATHEA_PLANET_NAME"
+				random_list = {
+					10 = { change_pc = "pc_gaia" }
+					10 = { 
+						change_pc = "pc_desert"
+						add_modifier = {
+							modifier = built_world
+							days = -1
+						}
+					}
+					10 = { 
+						change_pc = "pc_tropical"
+						add_modifier = {
+							modifier = built_world
+							days = -1
+						}
+					}
+					10 = { 
+						change_pc = "pc_arid"
+						add_modifier = {
+							modifier = built_world
+							days = -1
+						}
+					}
+					10 = { 
+						change_pc = "pc_continental"
+						add_modifier = {
+							modifier = built_world
+							days = -1
+						}
+					}
+					10 = { 
+						change_pc = "pc_ocean"
+						add_modifier = {
+							modifier = built_world
+							days = -1
+						}
+					}
+					10 = { 
+						change_pc = "pc_tundra"
+						add_modifier = {
+							modifier = built_world
+							days = -1
+						}
+					}
+					10 = { 
+						change_pc = "pc_arctic"
+						add_modifier = {
+							modifier = built_world
+							days = -1
+						}
+					}
+					10 = { 
+						change_pc = "pc_alpine"
+						add_modifier = {
+							modifier = built_world
+							days = -1
+						}
+					}
+					10 = { 
+						change_pc = "pc_savannah"
+						add_modifier = {
+							modifier = built_world
+							days = -1
+						}
+					}
+				}
+				random_list = {
+					50 = { set_ring = yes }
+					50 = { set_ring = no }
+				}
+				set_planet_entity = {
+					entity = "gaia_planet_01_entity"
+					graphical_culture = fromfrom
+				}
+				surveyed = {
+					set_surveyed = yes
+					surveyor = FROM
+				}
+				while = {
+					limit = { any_tile = { has_blocker = yes } }
+					random_tile = {
+						limit = { has_blocker = yes }
+						remove_blocker = yes
+					}
+				}
+				copy_orbital_tile = fromfrom.planet
+				set_planet_flag = megastructure
+				set_planet_flag = habitat
+			}
+		}
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+		}
+		remove_megastructure = fromfrom
+	}
+	
+}

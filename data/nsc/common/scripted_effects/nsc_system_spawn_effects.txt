@@ -1,0 +1,549 @@
+###################################
+# NSC SYSTEM SPAWN CODING EFFECTS #
+###################################
+
+nsc_spawn_dreadnought = {
+	#For second plus attempts. MUST BE CHECKED FIRST. Need to make sure system spawns everytime after first instance.
+	if = {
+		limit = { any_system = { has_star_flag = guardians_dreadnought_system } }
+		random_system = {
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "guardians_init_dreadnought"
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { any_system = { has_star_flag = guardians_dreadnought_system } } }
+		random_system = {
+			limit = {
+				NOT = {
+					is_fe_cluster = yes
+					any_neighbor_system = { any_planet = { is_capital = yes } }
+					any_neighbor_system = { has_star_flag = "guardian" }
+				}
+			}
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "guardians_init_dreadnought"
+			}
+		}
+		#Double check to main sure the system spawned since it will be the only of its kind.
+		if = {
+			limit = { NOT = { any_system = { has_star_flag = guardians_dreadnought_system } } }
+			random_system = {
+				spawn_system = {
+					min_distance = 20
+					max_distance = 50
+					initializer = "guardians_init_dreadnought"
+				}
+			}
+		}
+	}
+}
+
+nsc_spawn_horror = {
+	#For second plus attempts. MUST BE CHECKED FIRST. Need to make sure system spawns everytime after first instance.
+	if = {
+		limit = { any_system = { has_star_flag = guardians_horror_system } }
+		random_system = {
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "guardians_init_horror"
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { any_system = { has_star_flag = guardians_horror_system } } }
+		random_system = {
+			limit = {
+				NOT = {
+					is_fe_cluster = yes
+					any_neighbor_system = { any_planet = { is_capital = yes } }
+					any_neighbor_system = { has_star_flag = "guardian" }
+				}
+			}
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "guardians_init_horror"
+			}
+		}
+		#Double check to main sure the system spawned since it will be the only of its kind.
+		if = {
+			limit = { NOT = { any_system = { has_star_flag = guardians_horror_system } } }
+			random_system = {
+				spawn_system = {
+					min_distance = 20
+					max_distance = 50
+					initializer = "guardians_init_horror"
+				}
+			}
+		}
+	}
+}
+
+nsc_spawn_fortress = {
+	#For second plus attempts. MUST BE CHECKED FIRST. Need to make sure system spawns everytime after first instance.
+	if = {
+		limit = { any_system = { has_star_flag = guardians_fortress_system } }
+		random_system = {
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "guardians_init_fortress"
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { any_system = { has_star_flag = guardians_fortress_system } } }
+		random_system = {
+			limit = {
+				NOT = {
+					is_fe_cluster = yes
+					any_neighbor_system = { any_planet = { is_capital = yes } }
+					any_neighbor_system = { has_star_flag = "guardian" }
+				}
+			}
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "guardians_init_fortress"
+			}
+		}
+		#Double check to main sure the system spawned since it will be the only of its kind.
+		if = {
+			limit = { NOT = { any_system = { has_star_flag = guardians_fortress_system } } }
+			random_system = {
+				spawn_system = {
+					min_distance = 20
+					max_distance = 50
+					initializer = "guardians_init_fortress"
+				}
+			}
+		}
+	}
+}
+
+nsc_spawn_drake = {
+	#For second plus attempts. MUST BE CHECKED FIRST. Need to make sure system spawns everytime after first instance.
+	if = {
+		limit = { any_system = { has_star_flag = guardians_dragon_system } }
+		random_system = {
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "guardians_init_dragon"
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { any_system = { has_star_flag = guardians_dragon_system } } }
+		random_system = {
+			limit = {
+				NOT = {
+					is_fe_cluster = yes
+					any_neighbor_system = { any_planet = { is_capital = yes } }
+					any_neighbor_system = { has_star_flag = "guardian" }
+				}
+			}
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "guardians_init_dragon"
+			}
+		}
+		#Double check to main sure the system spawned since it will be the only of its kind.
+		if = {
+			limit = { NOT = { any_system = { has_star_flag = guardians_dragon_system } } }
+			random_system = {
+				spawn_system = {
+					min_distance = 20
+					max_distance = 50
+					initializer = "guardians_init_dragon"
+				}
+			}
+		}
+	}
+}
+
+nsc_spawn_hive = {
+	#For second plus attempts. MUST BE CHECKED FIRST. Need to make sure system spawns everytime after first instance.
+	if = {
+		limit = { any_system = { has_star_flag = guardians_hive_system } }
+		random_system = {
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "guardians_init_hive"
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { any_system = { has_star_flag = guardians_hive_system } } }
+		random_system = {
+			limit = {
+				NOT = {
+					is_fe_cluster = yes
+					any_neighbor_system = { any_planet = { is_capital = yes } }
+					any_neighbor_system = { has_star_flag = "guardian" }
+				}
+			}
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "guardians_init_hive"
+			}
+		}
+		#Double check to main sure the system spawned since it will be the only of its kind.
+		if = {
+			limit = { NOT = { any_system = { has_star_flag = guardians_hive_system } } }
+			random_system = {
+				spawn_system = {
+					min_distance = 20
+					max_distance = 50
+					initializer = "guardians_init_hive"
+				}
+			}
+		}
+	}
+}
+
+nsc_spawn_stellarite = {
+	#For second plus attempts. MUST BE CHECKED FIRST. Need to make sure system spawns everytime after first instance.
+	if = {
+		limit = { any_system = { has_star_flag = guardians_stellarite_system } }
+		random_system = {
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "guardians_init_stellarites"
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { any_system = { has_star_flag = guardians_stellarite_system } } }
+		random_system = {
+			limit = {
+				NOT = {
+					is_fe_cluster = yes
+					any_neighbor_system = { any_planet = { is_capital = yes } }
+					any_neighbor_system = { has_star_flag = "guardian" }
+				}
+			}
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "guardians_init_stellarites"
+			}
+		}
+		#Double check to main sure the system spawned since it will be the only of its kind.
+		if = {
+			limit = { NOT = { any_system = { has_star_flag = guardians_stellarite_system } } }
+			random_system = {
+				spawn_system = {
+					min_distance = 20
+					max_distance = 50
+					initializer = "guardians_init_stellarites"
+				}
+			}
+		}
+	}
+}
+
+nsc_spawn_technopshere = {
+	#For second plus attempts. MUST BE CHECKED FIRST. Need to make sure system spawns everytime after first instance.
+	if = {
+		limit = { any_system = { has_star_flag = guardians_technosphere_system } }
+		random_system = {
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "guardians_init_technosphere"
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { any_system = { has_star_flag = guardians_technosphere_system } } }
+		random_system = {
+			limit = {
+				NOT = {
+					is_fe_cluster = yes
+					any_neighbor_system = { any_planet = { is_capital = yes } }
+					any_neighbor_system = { has_star_flag = "guardian" }
+				}
+			}
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "guardians_init_technosphere"
+			}
+		}
+		#Double check to main sure the system spawned since it will be the only of its kind.
+		if = {
+			limit = { NOT = { any_system = { has_star_flag = guardians_technosphere_system } } }
+			random_system = {
+				spawn_system = {
+					min_distance = 20
+					max_distance = 50
+					initializer = "guardians_init_technosphere"
+				}
+			}
+		}
+	}
+}
+
+nsc_spawn_wraith = {
+	if = {
+		#For second plus attempts. MUST BE CHECKED FIRST. Need to make sure system spawns everytime after first instance.
+		limit = { any_system = { has_star_flag = guardians_wraith_system } }
+		random_system = {
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "guardians_init_wraith"
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { any_system = { has_star_flag = guardians_wraith_system } } }
+		random_system = {
+			limit = {
+				NOT = {
+					is_fe_cluster = yes
+					any_neighbor_system = { any_planet = { is_capital = yes } }
+					any_neighbor_system = { has_star_flag = "guardian" }
+				}
+			}
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "guardians_init_wraith"
+			}
+		}
+		#Double check to main sure the system spawned since it will be the only of its kind.
+		if = {
+			limit = { NOT = { any_system = { has_star_flag = guardians_wraith_system } } }
+			random_system = {
+				spawn_system = {
+					min_distance = 20
+					max_distance = 50
+					initializer = "guardians_init_wraith"
+				}
+			}
+		}
+	}
+}
+
+nsc_spawn_hidden_paradise = {
+	#For second plus attempts. MUST BE CHECKED FIRST. Need to make sure system spawns everytime after first instance.
+	if = {
+		limit = { any_system = { has_star_flag = guardians_pirate_alt_system } }
+		random_system = {
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "guardians_init_pirate_alt"
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { any_system = { has_star_flag = guardians_pirate_alt_system } } }
+		random_system = {
+			limit = {
+				NOT = {
+					is_fe_cluster = yes
+					any_neighbor_system = { any_planet = { is_capital = yes } }
+					any_neighbor_system = { has_star_flag = "guardian" }
+				}
+			}
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "guardians_init_pirate_alt"
+			}
+		}
+		#Double check to main sure the system spawned since it will be the only of its kind.
+		if = {
+			limit = { NOT = { any_system = { has_star_flag = guardians_pirate_alt_system } } }
+			random_system = {
+				spawn_system = {
+					min_distance = 20
+					max_distance = 50
+					initializer = "guardians_init_pirate_alt"
+				}
+			}
+		}
+	}
+}
+
+nsc_spawn_elite_crystal = {
+	#For second plus attempts. MUST BE CHECKED FIRST. Need to make sure system spawns everytime after first instance.
+	if = {
+		limit = { any_system = { has_star_flag = elite_system } }
+		random_system = {
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "NSC_crystal_home_system"
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { any_system = { has_star_flag = elite_system } } }
+		random_system = {
+			limit = {
+				NOT = {
+					is_fe_cluster = yes
+					any_neighbor_system = { any_planet = { is_capital = yes } }
+					any_neighbor_system = { has_star_flag = "guardian" }
+				}
+			}
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "NSC_crystal_home_system"
+			}
+		}
+		#Double check to main sure the system spawned since it will be the only of its kind.
+		if = {
+			limit = { NOT = { any_system = { has_star_flag = elite_system } } }
+			random_system = {
+				spawn_system = {
+					min_distance = 20
+					max_distance = 50
+					initializer = "NSC_crystal_home_system"
+				}
+			}
+		}
+	}
+}
+
+nsc_spawn_elite_cloud = {
+	#For second plus attempts. MUST BE CHECKED FIRST. Need to make sure system spawns everytime after first instance.
+	if = {
+		limit = { any_system = { has_star_flag = void2_system } }
+		random_system = {
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "NSC_cloud_home_system"
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { any_system = { has_star_flag = void2_system } } }
+		random_system = {
+			limit = {
+				NOT = {
+					is_fe_cluster = yes
+					any_neighbor_system = { any_planet = { is_capital = yes } }
+					any_neighbor_system = { has_star_flag = "guardian" }
+				}
+			}
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "NSC_cloud_home_system"
+			}
+		}
+		#Double check to main sure the system spawned since it will be the only of its kind.
+		if = {
+			limit = { NOT = { any_system = { has_star_flag = void2_system } } }
+			random_system = {
+				spawn_system = {
+					min_distance = 20
+					max_distance = 50
+					initializer = "NSC_cloud_home_system"
+				}
+			}
+		}
+	}
+}
+
+nsc_spawn_elite_drone = {
+	#For second plus attempts. MUST BE CHECKED FIRST. Need to make sure system spawns everytime after first instance.
+	if = {
+		limit = { any_system = { has_star_flag = drone_home_system } }
+		random_system = {
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "NSC_mining_drone_home_system"
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { any_system = { has_star_flag = drone_home_system } } }
+		random_system = {
+			limit = {
+				NOT = {
+					is_fe_cluster = yes
+					any_neighbor_system = { any_planet = { is_capital = yes } }
+					any_neighbor_system = { has_star_flag = "guardian" }
+				}
+			}
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "NSC_mining_drone_home_system"
+			}
+		}
+		#Double check to main sure the system spawned since it will be the only of its kind.
+		if = {
+			limit = { NOT = { any_system = { has_star_flag = drone_home_system } } }
+			random_system = {
+				spawn_system = {
+					min_distance = 20
+					max_distance = 50
+					initializer = "NSC_mining_drone_home_system"
+				}
+			}
+		}
+	}
+}
+
+nsc_spawn_elite_pirate = {
+	#For second plus attempts. MUST BE CHECKED FIRST. Need to make sure system spawns everytime after first instance.
+	if = {
+		limit = { any_system = { has_star_flag = pirate_home_system } }
+		random_system = {
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "NSC_pirate_home_system"
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { any_system = { has_star_flag = pirate_home_system } } }
+		random_system = {
+			limit = {
+				NOT = {
+					is_fe_cluster = yes
+					any_neighbor_system = { any_planet = { is_capital = yes } }
+					any_neighbor_system = { has_star_flag = "guardian" }
+				}
+			}
+			spawn_system = {
+				min_distance = 20
+				max_distance = 50
+				initializer = "NSC_pirate_home_system"
+			}
+		}
+		#Double check to main sure the system spawned since it will be the only of its kind.
+		if = {
+			limit = { NOT = { any_system = { has_star_flag = pirate_home_system } } }
+			random_system = {
+				spawn_system = {
+					min_distance = 20
+					max_distance = 50
+					initializer = "NSC_pirate_home_system"
+				}
+			}
+		}
+	}
+}

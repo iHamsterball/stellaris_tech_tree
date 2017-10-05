@@ -1,0 +1,21 @@
+################################################################################################
+# IMPORTANT: FILE NAME MUST REMAIN "modmenu_edicts" FOR OVERWRITE PURPOSES FOR COMPATIBLE MODS #
+################################################################################################
+
+country_edict = {
+	name = modmenu
+	modifier = {}
+	
+	influence_cost = 0
+	
+	potential = { NOT = { has_country_flag = timed_modmenu } }
+	
+	allow = {}
+	
+	effect = {
+		set_timed_country_flag = { flag = timed_modmenu days = 3 }
+		country_event = { id = modmenu.1 }
+	}
+	
+	ai_weight = { weight = 0 }
+}

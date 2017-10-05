@@ -1,0 +1,1131 @@
+############################
+# NSC AI "KEEP UP" EFFECTS #
+############################
+
+@mineralsPerSpaceport = 1000
+
+#########################
+# MILITARY SHIP CLASSES #
+#########################
+
+nsc_ai_tech_give_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_spaceport_2 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_spaceport_2 } } give_technology = { tech = tech_spaceport_2 } } add_minerals = @mineralsPerSpaceport } } 
+	}
+}
+
+nsc_ai_tech_give_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_spaceport_3 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_spaceport_3 } } give_technology = { tech = tech_spaceport_3 } } add_minerals = @mineralsPerSpaceport } } 
+	}
+}
+
+nsc_ai_tech_give_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_spaceport_4 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_spaceport_4 } } give_technology = { tech = tech_spaceport_4 } } add_minerals = @mineralsPerSpaceport } } 
+	}
+}
+
+nsc_ai_tech_give_5 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_spaceport_5 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_spaceport_5 } } give_technology = { tech = tech_spaceport_5 } } add_minerals = @mineralsPerSpaceport } } 
+	}
+}
+
+nsc_ai_tech_give_6 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_spaceport_6 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_spaceport_6 } } give_technology = { tech = tech_spaceport_6 } } add_minerals = @mineralsPerSpaceport } } 
+	}
+}
+
+nsc_ai_tech_give_battleship = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_battleship_1 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_battleship_1 } } give_technology = { tech = tech_battleship_1 } } add_minerals = @mineralsPerSpaceport } } 
+	}
+}
+
+nsc_ai_tech_give_carrier = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_carrier_1 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_carrier_1 } } give_technology = { tech = tech_carrier_1 } } add_minerals = @mineralsPerSpaceport } } 
+	}
+}
+
+nsc_ai_tech_give_dreadnought = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_dreadnought_1 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_dreadnought_1 } } give_technology = { tech = tech_dreadnought_1 } } add_minerals = @mineralsPerSpaceport } } 
+	}
+}
+
+nsc_ai_tech_give_superdreadnought = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_superdreadnought_1 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_superdreadnought_1 } } give_technology = { tech = tech_superdreadnought_1 } } add_minerals = @mineralsPerSpaceport } } 
+	}
+}
+
+nsc_ai_tech_give_flagship = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_flagship_1 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_flagship_1 } } give_technology = { tech = tech_flagship_1 } } add_minerals = @mineralsPerSpaceport } } 
+	}
+}
+
+############################
+# MILITARY STATION CLASSES #
+############################
+
+nsc_ai_tech_give_military_station_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_space_defense_station_2 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_space_defense_station_2 } } give_technology = { tech = tech_space_defense_station_2 } } add_minerals = @mineralsPerSpaceport } } 
+	}
+}
+
+nsc_ai_tech_give_military_station_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_space_defense_station_3 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_space_defense_station_3 } } give_technology = { tech = tech_space_defense_station_3 } } add_minerals = @mineralsPerSpaceport } } 
+	}
+}
+
+nsc_ai_tech_give_military_battle_fortress = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_battle_fortress_1 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_battle_fortress_1 } } give_technology = { tech = tech_battle_fortress_1 } } add_minerals = @mineralsPerSpaceport } } 
+	}
+}
+
+nsc_ai_tech_give_military_headquarters = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_headquarters_1 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_headquarters_1 } } give_technology = { tech = tech_headquarters_1 } } add_minerals = @mineralsPerSpaceport } } 
+	}
+}
+
+################################
+# NSC CIVILIAN STATION CLASSES #
+################################
+
+nsc_ai_tech_give_civilian_station_sensor = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_sensorstation_1 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_sensorstation_1 } } give_technology = { tech = tech_sensorstation_1 } } add_minerals = @mineralsPerSpaceport } } 
+	}
+}
+
+nsc_ai_tech_give_civilian_station_mining = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_miningbase_1 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_miningbase_1 } } give_technology = { tech = tech_miningbase_1 } } add_minerals = @mineralsPerSpaceport } } 
+	}
+}
+
+nsc_ai_tech_give_civilian_station_power = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_powerstation_1 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_powerstation_1 } } give_technology = { tech = tech_powerstation_1 } } add_minerals = @mineralsPerSpaceport } } 
+	}
+}
+
+#############################
+# FRONTIER OUTPOST SEGMENTS #
+#############################
+
+nsc_ai_tech_give_frontier_outpost_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_frontier_outpost_1 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_frontier_outpost_1 } } give_technology = { tech = tech_frontier_outpost_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_frontier_outpost_level_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_frontier_outpost_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_frontier_outpost_2 } } give_technology = { tech = tech_frontier_outpost_2 } } } }
+	}
+}
+
+nsc_ai_tech_give_frontier_outpost_level_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_frontier_outpost_3 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_frontier_outpost_3 } } give_technology = { tech = tech_frontier_outpost_3 } } } }
+	}
+}
+
+############################
+# SHIP CLASS UPGRADE TECHS #
+############################
+
+nsc_ai_tech_give_enhanced_civilian_designs = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_civilian_cruiser_upgrades } 
+			prev = { if = { limit = { NOT = { has_technology = tech_civilian_cruiser_upgrades } } give_technology = { tech = tech_civilian_cruiser_upgrades } } } } 
+	}
+}
+
+nsc_ai_tech_give_corvette_upgrades = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_corvette_upgrades_1 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_corvette_upgrades_1 } } give_technology = { tech = tech_corvette_upgrades_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_destroyer_upgrades = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_destroyer_upgrades_1 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_destroyer_upgrades_1 } } give_technology = { tech = tech_destroyer_upgrades_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_frigate_upgrades = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_frigate_upgrades_1 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_frigate_upgrades_1 } } give_technology = { tech = tech_frigate_upgrades_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_spitfire_battleship_upgrades = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_spitfire_battleship_upgrades } 
+			prev = { if = { limit = { NOT = { has_technology = tech_spitfire_battleship_upgrades } } give_technology = { tech = tech_spitfire_battleship_upgrades } } } } 
+	}
+}
+
+nsc_ai_tech_give_supercarrier_upgrades = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_supercarrier_1 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_supercarrier_1 } } give_technology = { tech = tech_supercarrier_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_xl_upgrades_battleship = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_xl_upgrade_1 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_xl_upgrade_1 } } give_technology = { tech = tech_xl_upgrade_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_xl_upgrades_dreadnought = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_xl_upgrade_2 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_xl_upgrade_2 } } give_technology = { tech = tech_xl_upgrade_2 } } } } 
+	}
+}
+
+nsc_ai_tech_give_xl_upgrades_superdreadnought = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_xl_upgrade_3 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_xl_upgrade_3 } } give_technology = { tech = tech_xl_upgrade_3 } } } } 
+	}
+}
+
+###################################
+# ACT/YARD SHIP CLASS BONUS TECHS #
+###################################
+
+nsc_ai_tech_give_act_cruiser = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_cruiser_yard } 
+			prev = { if = { limit = { NOT = { has_technology = tech_cruiser_yard } } give_technology = { tech = tech_cruiser_yard } } } } 
+	}
+}
+
+nsc_ai_tech_give_act_battleship = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_battleship_yard } 
+			prev = { if = { limit = { NOT = { has_technology = tech_battleship_yard } } give_technology = { tech = tech_battleship_yard } } } } 
+	}
+}
+
+nsc_ai_tech_give_act_colonizer = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_advanced_construction_techniques_colony_ship } 
+			prev = { if = { limit = { NOT = { has_technology = tech_advanced_construction_techniques_colony_ship } } give_technology = { tech = tech_advanced_construction_techniques_colony_ship } } } } 
+	}
+}
+
+nsc_ai_tech_give_act_strike_cruiser = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_advanced_construction_techniques_strike_cruiser } 
+			prev = { if = { limit = { NOT = { has_technology = tech_advanced_construction_techniques_strike_cruiser } } give_technology = { tech = tech_advanced_construction_techniques_strike_cruiser } } } } 
+	}
+}
+
+nsc_ai_tech_give_act_battlecruiser = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_advanced_construction_techniques_battlecruiser } 
+			prev = { if = { limit = { NOT = { has_technology = tech_advanced_construction_techniques_battlecruiser } } give_technology = { tech = tech_advanced_construction_techniques_battlecruiser } } } } 
+	}
+}
+
+nsc_ai_tech_give_act_light_carrier = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_advanced_construction_techniques_light_carrier } 
+			prev = { if = { limit = { NOT = { has_technology = tech_advanced_construction_techniques_light_carrier } } give_technology = { tech = tech_advanced_construction_techniques_light_carrier } } } } 
+	}
+}
+
+nsc_ai_tech_give_act_carrier = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_advanced_construction_techniques_carrier } 
+			prev = { if = { limit = { NOT = { has_technology = tech_advanced_construction_techniques_carrier } } give_technology = { tech = tech_advanced_construction_techniques_carrier } } } } 
+	}
+}
+
+nsc_ai_tech_give_act_dreadnought = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_advanced_construction_techniques_dreadnought } 
+			prev = { if = { limit = { NOT = { has_technology = tech_advanced_construction_techniques_dreadnought } } give_technology = { tech = tech_advanced_construction_techniques_dreadnought } } } } 
+	}
+}
+
+nsc_ai_tech_give_act_superdreadnought = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_advanced_construction_techniques_superdreadnought } 
+			prev = { if = { limit = { NOT = { has_technology = tech_advanced_construction_techniques_superdreadnought } } give_technology = { tech = tech_advanced_construction_techniques_superdreadnought } } } } 
+	}
+}
+
+nsc_ai_tech_give_act_flagship = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_advanced_construction_techniques_flagship } 
+			prev = { if = { limit = { NOT = { has_technology = tech_advanced_construction_techniques_flagship } } give_technology = { tech = tech_advanced_construction_techniques_flagship } } } } 
+	}
+}
+
+nsc_ai_tech_give_act_military_stations = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_advanced_construction_techniques_military_stations } 
+			prev = { if = { limit = { NOT = { has_technology = tech_advanced_construction_techniques_military_stations } } give_technology = { tech = tech_advanced_construction_techniques_military_stations } } } } 
+	}
+}
+
+nsc_ai_tech_give_act_battle_fortress = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_advanced_construction_techniques_battle_fortress } 
+			prev = { if = { limit = { NOT = { has_technology = tech_advanced_construction_techniques_battle_fortress } } give_technology = { tech = tech_advanced_construction_techniques_battle_fortress } } } } 
+	}
+}
+
+nsc_ai_tech_give_act_headquarters = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_advanced_construction_techniques_hq_station } 
+			prev = { if = { limit = { NOT = { has_technology = tech_advanced_construction_techniques_hq_station } } give_technology = { tech = tech_advanced_construction_techniques_hq_station } } } } 
+	}
+}
+
+###################
+# FTL DRIVE TECHS #
+###################
+
+nsc_ai_tech_give_hyperdrive_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_hyper_drive_2 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_hyper_drive_2 } } give_technology = { tech = tech_hyper_drive_2 } } } } 
+	}
+}
+
+nsc_ai_tech_give_hyperdrive_level_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_hyper_drive_3 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_hyper_drive_3 } } give_technology = { tech = tech_hyper_drive_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_warpdrive_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_warp_drive_2 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_warp_drive_2 } } give_technology = { tech = tech_warp_drive_2 } } } } 
+	}
+}
+
+nsc_ai_tech_give_warpdrive_level_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_warp_drive_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_warp_drive_3 } } give_technology = { tech = tech_warp_drive_3 } } } }
+	}
+}
+
+nsc_ai_tech_give_wormholedrive_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_wormhole_generation_2 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_wormhole_generation_2 } } give_technology = { tech = tech_wormhole_generation_2 } } } } 
+	}
+}
+
+nsc_ai_tech_give_wormholedrive_level_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_wormhole_generation_3 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_wormhole_generation_3 } } give_technology = { tech = tech_wormhole_generation_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_jump_drive = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_jump_drive_1 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_jump_drive_1 } } give_technology = { tech = tech_jump_drive_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_psi_jump_drive = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_psi_jump_drive_1 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_psi_jump_drive_1 } } give_technology = { tech = tech_psi_jump_drive_1 } } } } 
+	}
+}
+
+###############
+# ARMOR TECHS #
+###############
+
+nsc_ai_tech_give_armor_level_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_ship_armor_1 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_ship_armor_1 } } give_technology = { tech = tech_ship_armor_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_armor_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_ship_armor_2 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_ship_armor_2 } } give_technology = { tech = tech_ship_armor_2 } } } } 
+	}
+}
+
+nsc_ai_tech_give_armor_level_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_ship_armor_3 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_ship_armor_3 } } give_technology = { tech = tech_ship_armor_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_armor_level_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_ship_armor_4 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_ship_armor_4 } } give_technology = { tech = tech_ship_armor_4 } } } } 
+	}
+}
+
+nsc_ai_tech_give_armor_level_5 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_ship_armor_5 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_ship_armor_5 } } give_technology = { tech = tech_ship_armor_5 } } } } 
+	}
+}
+
+nsc_ai_tech_give_armor_level_6_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_ship_armor_6_NSC } 
+			prev = { if = { limit = { NOT = { has_technology = tech_ship_armor_6_NSC } } give_technology = { tech = tech_ship_armor_6_NSC } } } } 
+	}
+}
+
+nsc_ai_tech_give_armor_level_7_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_ship_armor_7_NSC } 
+			prev = { if = { limit = { NOT = { has_technology = tech_ship_armor_7_NSC } } give_technology = { tech = tech_ship_armor_7_NSC } } } } 
+	}
+}
+
+nsc_ai_tech_give_armor_level_8_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_ship_armor_8_NSC } 
+			prev = { if = { limit = { NOT = { has_technology = tech_ship_armor_8_NSC } } give_technology = { tech = tech_ship_armor_8_NSC } } } } 
+	}
+}
+
+nsc_ai_tech_give_armor_level_9_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_ship_armor_9_NSC } 
+			prev = { if = { limit = { NOT = { has_technology = tech_ship_armor_9_NSC } } give_technology = { tech = tech_ship_armor_9_NSC } } } } 
+	}
+}
+
+nsc_ai_tech_give_armor_level_10_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_ship_armor_10_NSC } 
+			prev = { if = { limit = { NOT = { has_technology = tech_ship_armor_10_NSC } } give_technology = { tech = tech_ship_armor_10_NSC } } } } 
+	}
+}
+
+nsc_ai_tech_give_armor_dragon_scales = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_dragon_armor } 
+			prev = { if = { limit = { NOT = { has_technology = tech_dragon_armor } } give_technology = { tech = tech_dragon_armor } } } } 
+	}
+}
+
+nsc_ai_tech_give_armor_NSC_dragon_scales = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_optimized_adaptive_dragon_armor } 
+			prev = { if = { limit = { NOT = { has_technology = tech_optimized_adaptive_dragon_armor } } give_technology = { tech = tech_optimized_adaptive_dragon_armor } } } } 
+	}
+}
+
+nsc_ai_tech_give_armor_level_6_ESC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = nhsc_tech_advneutroniumarmor } 
+			prev = { if = { limit = { NOT = { has_technology = nhsc_tech_advneutroniumarmor } } give_technology = { tech = nhsc_tech_advneutroniumarmor } } } } 
+	}
+}
+
+nsc_ai_tech_give_armor_level_7_ESC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = nhsc_tech_adamantiumarmor } 
+			prev = { if = { limit = { NOT = { has_technology = nhsc_tech_adamantiumarmor } } give_technology = { tech = nhsc_tech_adamantiumarmor } } } } 
+	}
+}
+
+#################
+# SHIELDS TECHS #
+#################
+
+nsc_ai_tech_give_shield_level_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_shields_1 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_shields_1 } } give_technology = { tech = tech_shields_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_shield_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_shields_2 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_shields_2 } } give_technology = { tech = tech_shields_2 } } } } 
+	}
+}
+
+nsc_ai_tech_give_shield_level_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_shields_3 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_shields_3 } } give_technology = { tech = tech_shields_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_shield_level_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_shields_4 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_shields_4 } } give_technology = { tech = tech_shields_4 } } } } 
+	}
+}
+
+nsc_ai_tech_give_shield_level_5 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_shields_5 } 
+			prev = { if = { limit = { NOT = { has_technology = tech_shields_5 } } give_technology = { tech = tech_shields_5 } } } } 
+	}
+}
+
+nsc_ai_tech_give_shield_level_6_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_shields_6_NSC } 
+			prev = { if = { limit = { NOT = { has_technology = tech_shields_6_NSC } } give_technology = { tech = tech_shields_6_NSC } } } } 
+	}
+}
+
+nsc_ai_tech_give_shield_level_7_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_shields_7_NSC } 
+			prev = { if = { limit = { NOT = { has_technology = tech_shields_7_NSC } } give_technology = { tech = tech_shields_7_NSC } } } } 
+	}
+}
+
+nsc_ai_tech_give_shield_level_8_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_shields_8_NSC } 
+			prev = { if = { limit = { NOT = { has_technology = tech_shields_8_NSC } } give_technology = { tech = tech_shields_8_NSC } } } } 
+	}
+}
+
+nsc_ai_tech_give_shield_level_9_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_shields_9_NSC } 
+			prev = { if = { limit = { NOT = { has_technology = tech_shields_9_NSC } } give_technology = { tech = tech_shields_9_NSC } } } } 
+	}
+}
+
+nsc_ai_tech_give_shield_level_10_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_shields_10_NSC } 
+			prev = { if = { limit = { NOT = { has_technology = tech_shields_10_NSC } } give_technology = { tech = tech_shields_10_NSC } } } } 
+	}
+}
+
+nsc_ai_tech_give_shield_psionic = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_psionic_shield } 
+			prev = { if = { limit = { NOT = { has_technology = tech_psionic_shield } } give_technology = { tech = tech_psionic_shield } } } } 
+	}
+}
+
+nsc_ai_tech_give_shield_enigmatic = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_enigmatic_deflector } 
+			prev = { if = { limit = { NOT = { has_technology = tech_enigmatic_deflector } } give_technology = { tech = tech_enigmatic_deflector } } } } 
+	}
+}
+
+nsc_ai_tech_give_shield_NSC_psionic = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_shields_11_psionic_NSC } 
+			prev = { if = { limit = { NOT = { has_technology = tech_shields_11_psionic_NSC } } give_technology = { tech = tech_shields_11_psionic_NSC } } } } 
+	}
+}
+
+nsc_ai_tech_give_shield_NSC_enigmatic = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_shields_12_enigmatic_NSC } 
+			prev = { if = { limit = { NOT = { has_technology = tech_shields_12_enigmatic_NSC } } give_technology = { tech = tech_shields_12_enigmatic_NSC } } } } 
+	}
+}
+
+#################
+# REACTOR TECHS #
+#################
+
+nsc_ai_tech_give_reactor_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_fusion_power }
+			prev = { if = { limit = { NOT = { has_technology = tech_fusion_power } } give_technology = { tech = tech_fusion_power } } } } 
+	}
+}
+
+nsc_ai_tech_give_reactor_level_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_cold_fusion_power }
+			prev = { if = { limit = { NOT = { has_technology = tech_cold_fusion_power } } give_technology = { tech = tech_cold_fusion_power } } } } 
+	}
+}
+
+nsc_ai_tech_give_reactor_level_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_antimatter_power }
+			prev = { if = { limit = { NOT = { has_technology = tech_antimatter_power } } give_technology = { tech = tech_antimatter_power } } } } 
+	}
+}
+
+nsc_ai_tech_give_reactor_level_5 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_zero_point_power }
+			prev = { if = { limit = { NOT = { has_technology = tech_zero_point_power } } give_technology = { tech = tech_zero_point_power } } } } 
+	}
+}
+
+nsc_ai_tech_give_reactor_level_6_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_graviton_power }
+			prev = { if = { limit = { NOT = { has_technology = tech_graviton_power } } give_technology = { tech = tech_graviton_power } } } } 
+	}
+}
+
+nsc_ai_tech_give_reactor_level_7_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_dark_matter_power }
+			prev = { if = { limit = { NOT = { has_technology = tech_dark_matter_power } } give_technology = { tech = tech_dark_matter_power } } } } 
+	}
+}
+
+nsc_ai_tech_give_reactor_level_8_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_adv_zero_point_power }
+			prev = { if = { limit = { NOT = { has_technology = tech_adv_zero_point_power } } give_technology = { tech = tech_adv_zero_point_power } } } } 
+	}
+}
+
+nsc_ai_tech_give_reactor_level_9_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_multidimensional_power }
+			prev = { if = { limit = { NOT = { has_technology = tech_multidimensional_power } } give_technology = { tech = tech_multidimensional_power } } } } 
+	}
+}
+
+nsc_ai_tech_give_reactor_level_10_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_nsc_zero_point_power }
+			prev = { if = { limit = { NOT = { has_technology = tech_nsc_zero_point_power } } give_technology = { tech = tech_nsc_zero_point_power } } } } 
+	}
+}
+
+nsc_ai_tech_give_reactor_enigmatic_core = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_enigmatic_power_core }
+			prev = { if = { limit = { NOT = { has_technology = tech_enigmatic_power_core } } give_technology = { tech = tech_enigmatic_power_core } } } } 
+	}
+}
+
+nsc_ai_tech_give_reactor_NSC_enigmatic_core = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_optimized_enigmatic_power }
+			prev = { if = { limit = { NOT = { has_technology = tech_optimized_enigmatic_power } } give_technology = { tech = tech_optimized_enigmatic_power } } } } 
+	}
+}
+
+################
+# SENSOR TECHS #
+################
+
+nsc_ai_tech_give_sensor_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_sensors_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_sensors_2 } } give_technology = { tech = tech_sensors_2 } } } } 
+	}
+}
+
+nsc_ai_tech_give_sensor_level_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_sensors_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_sensors_3 } } give_technology = { tech = tech_sensors_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_sensor_level_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_sensors_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_sensors_4 } } give_technology = { tech = tech_sensors_4 } } } } 
+	}
+}
+
+nsc_ai_tech_give_sensor_level_5_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_sensors_5_NSC }
+			prev = { if = { limit = { NOT = { has_technology = tech_sensors_5_NSC } } give_technology = { tech = tech_sensors_5_NSC } } } } 
+	}
+}
+
+nsc_ai_tech_give_sensor_level_6_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_sensors_6_NSC }
+			prev = { if = { limit = { NOT = { has_technology = tech_sensors_6_NSC } } give_technology = { tech = tech_sensors_6_NSC } } } } 
+	}
+}
+
+##################
+# THRUSTER TECHS #
+##################
+
+nsc_ai_tech_give_thruster_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_thrusters_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_thrusters_2 } } give_technology = { tech = tech_thrusters_2 } } } } 
+	}
+}
+
+nsc_ai_tech_give_thruster_level_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_thrusters_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_thrusters_3 } } give_technology = { tech = tech_thrusters_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_thruster_level_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_thrusters_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_thrusters_4 } } give_technology = { tech = tech_thrusters_4 } } } } 
+	}
+}
+
+nsc_ai_tech_give_thruster_level_5_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_thrusters_5_NSC }
+			prev = { if = { limit = { NOT = { has_technology = tech_thrusters_5_NSC } } give_technology = { tech = tech_thrusters_5_NSC } } } } 
+	}
+}
+
+###############
+# LAZER TECHS #
+###############
+
+nsc_ai_tech_give_lazer_level_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_lasers_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_lasers_1 } } give_technology = { tech = tech_lasers_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_lazer_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_lasers_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_lasers_2 } } give_technology = { tech = tech_lasers_2 } } } } 
+	}
+}
+
+nsc_ai_tech_give_lazer_level_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_lasers_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_lasers_3 } } give_technology = { tech = tech_lasers_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_lazer_level_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_lasers_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_lasers_4 } } give_technology = { tech = tech_lasers_4 } } } } 
+	}
+}
+
+nsc_ai_tech_give_lazer_level_5 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_lasers_5 }
+			prev = { if = { limit = { NOT = { has_technology = tech_lasers_5 } } give_technology = { tech = tech_lasers_5 } } } } 
+	}
+}
+
+#####################
+# MASS DRIVER TECHS #
+#####################
+
+nsc_ai_tech_give_mass_driver_level_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_mass_drivers_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_mass_drivers_1 } } give_technology = { tech = tech_mass_drivers_1 } } } } 
+	}
+}
+
+nsc_ai_tech_give_mass_driver_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_mass_drivers_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_mass_drivers_2 } } give_technology = { tech = tech_mass_drivers_2 } } } } 
+	}
+}
+
+nsc_ai_tech_give_mass_driver_level_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_mass_drivers_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_mass_drivers_3 } } give_technology = { tech = tech_mass_drivers_3 } } } } 
+	}
+}
+
+nsc_ai_tech_give_mass_driver_level_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_mass_drivers_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_mass_drivers_4 } } give_technology = { tech = tech_mass_drivers_4 } } } } 
+	}
+}
+
+nsc_ai_tech_give_mass_driver_level_5 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_mass_drivers_5 }
+			prev = { if = { limit = { NOT = { has_technology = tech_mass_drivers_5 } } give_technology = { tech = tech_mass_drivers_5 } } } }
+	}
+}
+
+####################
+# AUTOCANNON TECHS #
+####################
+
+nsc_ai_tech_give_autocannon_level_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_autocannons_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_autocannons_1 } } give_technology = { tech = tech_autocannons_1 } } } }
+	}
+}
+
+nsc_ai_tech_give_autocannon_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_autocannons_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_autocannons_2 } } give_technology = { tech = tech_autocannons_2 } } } }
+	}
+}
+
+nsc_ai_tech_give_autocannon_level_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_autocannons_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_autocannons_3 } } give_technology = { tech = tech_autocannons_3 } } } }
+	}
+}
+
+################
+# PLASMA TECHS #
+################
+
+nsc_ai_tech_give_plasma_level_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_plasma_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_plasma_1 } } give_technology = { tech = tech_plasma_1 } } } }
+	}
+}
+
+nsc_ai_tech_give_plasma_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_plasma_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_plasma_2 } } give_technology = { tech = tech_plasma_2 } } } }
+	}
+}
+
+nsc_ai_tech_give_plasma_level_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_plasma_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_plasma_3 } } give_technology = { tech = tech_plasma_3 } } } }
+	}
+}
+
+####################
+# DISRUPTORS TECHS #
+####################
+
+nsc_ai_tech_give_disruptor_level_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_disruptors_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_disruptors_1 } } give_technology = { tech = tech_disruptors_1 } } } }
+	}
+}
+
+nsc_ai_tech_give_disruptor_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_disruptors_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_disruptors_2 } } give_technology = { tech = tech_disruptors_2 } } } }
+	}
+}
+
+nsc_ai_tech_give_disruptor_level_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_disruptors_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_disruptors_3 } } give_technology = { tech = tech_disruptors_3 } } } }
+	}
+}
+
+##################
+# KINETICS TECHS #
+##################
+
+nsc_ai_tech_give_kinetic_level_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_kinetic_artillery_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_kinetic_artillery_1 } } give_technology = { tech = tech_kinetic_artillery_1 } } } }
+	}
+}
+
+nsc_ai_tech_give_kinetic_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_kinetic_artillery_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_kinetic_artillery_2 } } give_technology = { tech = tech_kinetic_artillery_2 } } } }
+	}
+}
+
+nsc_ai_tech_give_kinetic_level_3_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_kinetic_artillery_nsc }
+			prev = { if = { limit = { NOT = { has_technology = tech_kinetic_artillery_nsc } } give_technology = { tech = tech_kinetic_artillery_nsc } } } }
+	}
+}
+
+###############
+# LANCE TECHS #
+###############
+
+nsc_ai_tech_give_lance_level_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_energy_lance_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_energy_lance_1 } } give_technology = { tech = tech_energy_lance_1 } } } }
+	}
+}
+
+nsc_ai_tech_give_lance_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_energy_lance_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_energy_lance_2 } } give_technology = { tech = tech_energy_lance_2 } } } }
+	}
+}
+
+nsc_ai_tech_give_lance_level_3_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_energy_lance_NSC }
+			prev = { if = { limit = { NOT = { has_technology = tech_energy_lance_NSC } } give_technology = { tech = tech_energy_lance_NSC } } } }
+	}
+}
+
+#############
+# ARC TECHS #
+#############
+
+nsc_ai_tech_give_arc_level_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_arc_emitter_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_arc_emitter_1 } } give_technology = { tech = tech_arc_emitter_1 } } } }
+	}
+}
+
+nsc_ai_tech_give_arc_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_arc_emitter2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_arc_emitter_2 } } give_technology = { tech = tech_arc_emitter_2 } } } }
+	}
+}
+
+nsc_ai_tech_give_arc_level_3_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_arc_emitter_NSC }
+			prev = { if = { limit = { NOT = { has_technology = tech_arc_emitter_NSC } } give_technology = { tech = tech_arc_emitter_NSC } } } }
+	}
+}
+
+#####################
+# ACCELERATOR TECHS #
+#####################
+
+nsc_ai_tech_give_accelerator_level_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_mass_accelerator_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_mass_accelerator_1 } } give_technology = { tech = tech_mass_accelerator_1 } } } }
+	}
+}
+
+nsc_ai_tech_give_accelerator_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_mass_accelerator_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_mass_accelerator_2 } } give_technology = { tech = tech_mass_accelerator_2 } } } }
+	}
+}
+
+nsc_ai_tech_give_accelerator_level_3_NSC = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_mass_accelerator_NSC }
+			prev = { if = { limit = { NOT = { has_technology = tech_mass_accelerator_NSC } } give_technology = { tech = tech_mass_accelerator_NSC } } } }
+	}
+}
+
+########################
+# ENERGY TORPEDO TECHS #
+########################
+
+nsc_ai_tech_give_energy_torpedo_level_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_energy_torpedoes_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_energy_torpedoes_1 } } give_technology = { tech = tech_energy_torpedoes_1 } } } }
+	}
+}
+
+nsc_ai_tech_give_energy_torpedo_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_energy_torpedoes_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_energy_torpedoes_2 } } give_technology = { tech = tech_energy_torpedoes_2 } } } }
+	}
+}
+
+#######################
+# ARMOR TORPEDO TECHS #
+#######################
+
+nsc_ai_tech_give_armor_torpedo_level_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_torpedoes_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_torpedoes_1 } } give_technology = { tech = tech_torpedoes_1 } } } }
+	}
+}
+
+nsc_ai_tech_give_armor_torpedo_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_torpedoes_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_torpedoes_2 } } give_technology = { tech = tech_torpedoes_2 } } } }
+	}
+}
+
+nsc_ai_tech_give_armor_torpedo_level_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_torpedoes_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_torpedoes_3 } } give_technology = { tech = tech_torpedoes_3 } } } }
+	}
+}
+
+#################
+# MISSILE TECHS #
+#################
+
+nsc_ai_tech_give_missiles_level_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_missiles_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_missiles_1 } } give_technology = { tech = tech_missiles_1 } } } }
+	}
+}
+
+nsc_ai_tech_give_missiles_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_missiles_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_missiles_2 } } give_technology = { tech = tech_missiles_2 } } } }
+	}
+}
+
+nsc_ai_tech_give_missiles_level_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_missiles_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_missiles_3 } } give_technology = { tech = tech_missiles_3 } } } }
+	}
+}
+
+nsc_ai_tech_give_missiles_level_4 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_missiles_4 }
+			prev = { if = { limit = { NOT = { has_technology = tech_missiles_4 } } give_technology = { tech = tech_missiles_4 } } } }
+	}
+}
+
+nsc_ai_tech_give_missiles_level_5 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_missiles_5 }
+			prev = { if = { limit = { NOT = { has_technology = tech_missiles_5 } } give_technology = { tech = tech_missiles_5 } } } }
+	}
+}
+
+nsc_ai_tech_give_swarmer_missiles_level_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_swarmer_missiles_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_swarmer_missiles_1 } } give_technology = { tech = tech_swarmer_missiles_1 } } } }
+	}
+}
+
+nsc_ai_tech_give_swarmer_missiles_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_swarmer_missiles_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_swarmer_missiles_2 } } give_technology = { tech = tech_swarmer_missiles_2 } } } }
+	}
+}
+
+#######################
+# POINT DEFENSE TECHS #
+#######################
+
+nsc_ai_tech_give_point_defense_level_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_pd_tracking_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_pd_tracking_1 } } give_technology = { tech = tech_pd_tracking_1 } } } }
+	}
+}
+
+nsc_ai_tech_give_point_defense_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_pd_tracking_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_pd_tracking_2 } } give_technology = { tech = tech_pd_tracking_2 } } } }
+	}
+}
+
+nsc_ai_tech_give_point_defense_level_3 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_pd_tracking_3 }
+			prev = { if = { limit = { NOT = { has_technology = tech_pd_tracking_3 } } give_technology = { tech = tech_pd_tracking_3 } } } }
+	}
+}
+
+nsc_ai_tech_give_flak_batteries_level_1 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_flak_batteries_1 }
+			prev = { if = { limit = { NOT = { has_technology = tech_flak_batteries_1 } } give_technology = { tech = tech_flak_batteries_1 } } } }
+	}
+}
+
+nsc_ai_tech_give_flak_batteries_level_2 = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_flak_batteries_2 }
+			prev = { if = { limit = { NOT = { has_technology = tech_flak_batteries_2 } } give_technology = { tech = tech_flak_batteries_2 } } } }
+	}
+}
+
+##########################
+# CRITTER WEAPONRY TECHS #
+##########################

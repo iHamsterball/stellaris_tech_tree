@@ -1,0 +1,951 @@
+﻿l_french:
+ 
+ ####################################
+ # Vanilla Overwrites - New Strings
+ ####################################
+ 
+ NSC_guardian.510.a.reply: "By all accounts, the Ether Drakes predate all galactic civilization. There were once multitudes, legend telling of massive dragons of color as varied as the stars, but their race has been slowly wasting away for eons, hunted to near extinction by empires filled with trepidation at it's presence or histrionic glory seekers most eager for a highly prized commemoration.\n\nWe believe they are but the last dregs of a universe that ended before ours began, the sole survivors of some "big crunch." Something about the physical laws of the universe does not agree with them, like they evolved in another reality. Between callous mercenaries, frightful empires, and their own evolutionary dissolution, the extermination of the Drakes over eons of slow decimation have led to their practical extinction... yet you still hear whispers of roaming Dragons around the edges of the galaxy.\n\nThe dragon not far from here is the last known of its kind in the galaxy, perhaps the universe."
+ NSC_guardian.510.b.reply: "Its scales respond to percussive rhythms. To be more precise, certain frequencies have a relaxing effect on the sub-dermal musculature controlling the positioning and shock absorption of their scale plates. A reflex that once played a key role in Ether Drake social interactions, it is now a clear and obvious weakness.\n\nAdjusting the firing pattern of your vessels according to a particular rhythm will greatly increase the damage you can inflict on the mighty dragon. It was never meant for our age. If it is the last of it's kind - put it out of its misery."
+ 
+ nsc_guardian.545.d.alt.reply: "Blue Wraiths have a frequency of 650THz. Their light synchronizes with both §YClass A§! and §YClass F Stars§!. Their ability to avoid conventional weaponry is weakened in systems with blue giants."
+ 
+ NSC_guardian.1052.a: "Well worth the risk. I'll take the Sentient AI."
+ NSC_guardian.1052.b: "Well worth the risk. I'll take advanced reactor technology."
+ NSC_guardian.1052.c: "Well worth the risk. I'll take the immense society research."
+ 
+ NSC_guardian.1061.a: "We wish to know one of your secrets. Perhaps about your sentience?"
+ NSC_guardian.1061.a.alt: "We wish to know one of your secrets. Perhaps your power source?"
+ 
+ NAME_Wraith_450THz: "Spectral Wraith 450THz"
+ NAME_Wraith_520THz: "Spectral Wraith 520THz"
+ NAME_Wraith_650THz: "Spectral Wraith 650THz"
+ 
+ nsc_guardian.2101.desc.gesta: "Having picked apart its defenses, we soon insinuated ourself into the structure.\n\nIts labyrinthine corridors and dense networks both prove equally alien and impenetrable. We will either control the fortress before it pose a threat or obliterate it."
+ 
+ ####################################
+ # Vanilla File Addon Localisation 
+ ####################################
+ 
+ nsc_guardian.545.a: "What about orange Wraiths?"
+ nsc_guardian.545.a.reply: "Orange Wraiths have a frequency of 500THz. Their light is synchronized with §YClass K Stars§!. Their ability to avoid conventional weaponry is weakened in systems with orange dwarves."
+ nsc_guardian.545.b: "What about violet Wraiths?"
+ nsc_guardian.545.b.reply: "Violet Wraiths have a frequency of 720THz. Their light is synchronized with §YClass B Stars§!. Their ability to avoid conventional weaponry is weakened in systems with violet-blue giants."
+ nsc_guardian.545.c: "What about light Wraiths?"
+ nsc_guardian.545.c.reply: "We believe Light Wraiths have a frequency of around 800THz, which is outside the normal visual spectrum, making them extremely powerful. Their light is synchronized with §YNeutron Class Stars and Pulsars§!. Their ability to avoid conventional weaponry is weakened in systems with white dwarves."
+ nsc_guardian.545.d: "What about dark Wraiths?"
+ nsc_guardian.545.d.reply: "We believe Dark Wraiths have a frequency of around 300THz, outside the normal visual spectrum, making them extremely powerful. Their light is synchronized with that of a §Ystar with Hawking radiation§!. Their ability to avoid conventional weaponry is weakened in systems with black holes."
+ 
+ ####################################
+ # Events
+ ####################################
+ 
+ # Main Events:
+ 
+ #No Longer Used:
+ guardian_main.1.name: "Spawning & Playing Guardians"
+ guardian_main.1.desc: "This event chain has two purposes: to allow you to choose the chances of spawning in Guardian systems inside your chosen galaxy and to allow you to choose if you wish to take part in the NSC Playable Guardian Feature.\n\nThis first event is to let you decide if you wish to have the Playable Guardian feature active in this campaign. If you choose to not activate the feature here, the choice is final, so please choose carefully, although there is the option to deactivate the feature later if you wish. The Playable Guardian feature, if you choose to activate it, will allow you to study Guardians after you have defeated them in your campaign. You will go through a short series of events & special projects to unlock the ability to build/grow your own versions of the powerful Leviathans, some with their own custom color options. If you don't want this feature, there is that option as well. Since the chances of you getting to build/grow one of these Guardians is dependent on you finding one in your current game, this leads to the second part of this event chain.\n\nOnce you have selected if you want the NSC Playable Guardians Feature, you will have the opportunity to choose for yourself the chances for each Guardian system to appear in your galaxy, no matter the size. You can choose to have no Guardians at all, every Guardian system guaranteed, or perhaps random chance. You also can decide in one button press or customize... meaning you can guarantee the Ether Drake system, but make sure the Hive Asteroid system doesn't spawn in.\n\nNote that you must choose all of this before starting your campaign. Start by selecting if you want Playable Guardians below."
+ 
+ NSC_guardian_main.1.a: "Yes, I would like to have Playable Guardians."
+ NSC_guardian_main.1.b: "No, I do not want Playable Guardians."
+ 
+ guardian_main.3.name: "Disable Playable Guardians"
+ guardian_main.3.desc: "§RWARNING! This option will disable the Playable Guardian feature for the rest of your current game. Are you sure you want to continue?§!"
+ 
+ NSC_guardian_main.3.a: "Yes, I'm sure. Disable Playable Guardians."
+ NSC_guardian_main.3.b: "No, I want Playable Guardians."
+ 
+ guardian_main.4.name: "Postpone Playable Guardians"
+ guardian_main.4.desc: "This option will postpone the Playable Guardian feature for a §Y1 to 50 year period§! of the player's choosing, then return you to the Playable Guardian repository. Are you sure you want to continue?"
+ 
+ NSC_guardian_main.4.a: "Yes, I'm sure. Postpone Playable Guardians for §Y1 year§!."
+ NSC_guardian_main.4.b: "Yes, I'm sure. Postpone Playable Guardians for §Y5 years§!."
+ NSC_guardian_main.4.c: "Yes, I'm sure. Postpone Playable Guardians for §Y10 years§!."
+ NSC_guardian_main.4.d: "Yes, I'm sure. Postpone Playable Guardians for §Y20 years§!."
+ NSC_guardian_main.4.e: "Yes, I'm sure. Postpone Playable Guardians for §Y50 years§!."
+ NSC_guardian_main.4.f: "No, I would like a Playable Guardian now."
+ 
+ guardian_main.5.name: "Leviathan Trophies"
+ guardian_main.5.desc: "Congratulations are in order; our empire has successfully defeated all the known Guardians of the Galaxy!\n\nIn addition to this legendary feat, our scientists have learned much from each Guardian and believe they have solved many of the mysteries that have baffled us about these rare Leviathans. We have successfully filled in the gaps in our knowledge, allowing us to gain access components that previously were unavailable to us, including the infamous Guardian Warp Drive, the most powerful FTL Drive known.\n\nReap the benefits of your conquests. You've earned it!"
+ NSC_guardian_main.5.a: "Awesome!"
+ 
+ NSC_guardian_activate_tooltip: "This option will activate the NSC Playable Guardian feature, allowing you to study and research the Guardians to eventually build/grow for yourself."
+ NSC_guardian_deactivate_tooltip: "This option will deactivate the NSC Playable Guardian Feature for this campaign, removing the ability to build/grow your own Guardians."
+ 
+ guardian_main.102.name: "Guardian Spawn Chances"
+ guardian_main.102.desc: "This event determines a universal spawn chance for all Guardian Systems (except for Enclaves which retain their original values). This means all 8 "regular" Guardian systems will spawn in at the spawn chance you set below, ranging from 25% to 100%.\n\nIf you wish to choose spawn chances individually, please return to the NSC System Spawn Control Center and select the Guardian Individual option."
+ 
+ NSC_guardian_main.102.a: "I want a §Y0% chance§! of Guardian Systems."
+ NSC_guardian_main.102.b: "I want a §Y25% chance§! of Guardian Systems."
+ NSC_guardian_main.102.c: "I want a §Y50% chance§! of Guardian Systems."
+ NSC_guardian_main.102.d: "I want a §Y75% chance§! of Guardian Systems."
+ NSC_guardian_main.102.e: "I want a §Y100% chance§! of Guardian Systems."
+ NSC_guardian_main.102.f: "I want to customize individually."
+ 
+ guardian_main.1001.name: "No Guardian Systems"
+ guardian_main.1001.desc: "You have selected §Y0% spawn chance§! for all Guardian Systems. This means no Guardians will ever appear in your current campaign. Do you wish to continue?"
+ 
+ NSC_guardian_main.1001.a: "Yes, confirm §Y0% spawn chance§!"
+ NSC_guardian_main.1001.b: "No, I want a different spawn chance."
+ 
+ NSC_guardian_main.110.a: "I want a §Y0% spawn chance§! for this Guardian."
+ NSC_guardian_main.110.b: "I want a §Y25% spawn chance§! for this Guardian."
+ NSC_guardian_main.110.c: "I want a §Y50% spawn chance§! for this Guardian."
+ NSC_guardian_main.110.d: "I want a §Y75% spawn chance§! for this Guardian."
+ NSC_guardian_main.110.e: "I want a §Y100% spawn chance§! for this Guardian."
+ 
+ guardian_main.110.name: "Automated Dreadnought"
+ guardian_main.110.desc: "This event is first in a chain that will allow you to customize the spawn chances of each major Guardian system (Enclaves are not included and have their original values).\n\nThis event determines the spawn chances for the §RAutomated Dreadnought§!."
+ guardian_main.120.name: "Dimensional Horror"
+ guardian_main.120.desc: "This event determines the spawn chances for the §MDimensional Horror§!."
+ guardian_main.130.name: "Enigmatic Fortress"
+ guardian_main.130.desc: "This event determines the spawn chances for the §EEnigmatic Fortress§!."
+ guardian_main.140.name: "Ether Drake"
+ guardian_main.140.desc: "This event determines the spawn chances for the §SEther Drake§!."
+ guardian_main.150.name: "Hive Asteroids"
+ guardian_main.150.desc: "This event determines the spawn chances for the §LHive Asteroids§!."
+ guardian_main.160.name: "Stellarite"
+ guardian_main.160.desc: "This event determines the spawn chances for the §YStellarite§!."
+ guardian_main.170.name: "Technosphere"
+ guardian_main.170.desc: "This event determines the spawn chances for the §GTechnosphere§!."
+ guardian_main.180.name: "Wraith"
+ guardian_main.180.desc: "This event determines the spawn chances for the §BWraiths§!."
+ 
+ guardian_main.2.name: "Playable Guardians Repository"
+ guardian_main.2.desc: "Your scientists have learned much from your explorations and exploits in the galaxy. From the rumors, whispers, and tales of the galaxy told from Enclaves to wandering travelers to the legends of species' bed time stories, your people have discovered the Leviathans, ancient deadly creatures and vessels that wander the galaxy in far distant systems, mysterious and powerful relics of a lost time, waiting to be exploited.\n\nThis "menu" will hold up to 9 different Guardians as you earn their Playable Guardian counterparts by engaging them, or you can postpone below. The option to disable is in the NSC Features Menu. This menu appears when you have no Playable Guardians active and allows you to get yours back or select a new one if available. Remember you can only have §Rone Playable Guardian at a time§! so please choose carefully. There are "safeguards" behind each button if you accidentally press one.\n\nFor more information on how Playable Guardians works, please visit the "User Manual" in the NSC Features Menu."
+ 
+ NSC_guardian_main.2.a: "I want an §RAutomated Dreadnought§!!" #Red
+ NSC_guardian_main.2.b: "I want a §MDimensional Horror§!!" #Purple
+ NSC_guardian_main.2.c: "I want an §EEnigmatic Fortress§!!" #Light Blue
+ NSC_guardian_main.2.d: "I want a §SDragonfire Drake§!!" #Orange
+ NSC_guardian_main.2.e: "I want a §YStellarite§!!" #Yellow
+ NSC_guardian_main.2.f: "I want a §GTechnosphere§!!" #Green
+ NSC_guardian_main.2.g: "I want a §BWraith§!!" #Blue
+ NSC_guardian_main.2.h: "I would like to postpone for now."
+ NSC_guardian_main.2.i: "I want a §HDragonfire Baby§!!"
+ NSC_guardian_main.2.j: "I want a §LPirate Carrack Galleon§!!"
+ 
+ NSC_guardian_starter_tooltip: "Returns to the Playable Guardian selection message."
+ NSC_guardian_main_tooltip: "Enables Event: §YPlayable Guardian Repository§!"
+ NSC_guardian_main_postpone_tooltip: "Delays §YPlayable Guardian Repository§! for the specified amount of time, then the §YPlayable Guardian Repository§! reappears."
+ NSC_guardian_main_disable_tooltip: "Permenantly disables §YPlayable Guardian Repository§!"
+ 
+ NSC_guardian_automated_dreadnought_tooltip: "Allows for construction of an §RAutomated Dreadnought§!."
+ NSC_guardian_dimensional_horror_tooltip: "Allows for summoning of a §MDimensional Horror§!."
+ NSC_guardian_enigmatic_fortress_tooltip: "Allows for building of an §EEnigmatic Fortress§!."
+ NSC_guardian_ether_drake_tooltip: "Allows for growing of a §SDragonfire Drake§!."
+ NSC_guardian_baby_ether_drake_tooltip: "Allows for growing of a §SDragonfire Baby§!."
+ NSC_guardian_stellarite_tooltip: "Allows for birthing of a §YStellarite§!."
+ NSC_guardian_technosphere_tooltip: "Allows for assembling of a §GTechnosphere§!."
+ NSC_guardian_wraith_tooltip: "Allows for the creation of a §BWraith§!."
+ NSC_guardian_pirate_galleon_tooltip: "Allows for the compiling of a §LPirate Carrack Galleon§!."
+ 
+ guardian_backout.1.a: "Actually, I've changed my mind. I want a different Guardian."
+ 
+ # FTL Drive Option Localisation:
+ 
+ guardian_ftl_drive.1: "I want a Guardian Warp Drive."
+ guardian_ftl_drive.2: "I want a Psi Jump Drive."
+ guardian_ftl_drive.3: "I want a Jump Drive."
+ guardian_ftl_drive.4: "I want a Warp Drive."
+ guardian_ftl_drive.5: "I want a Hyperdrive."
+ guardian_ftl_drive.6: "I want a Wormhole Drive."
+ 
+ guardian_ftl_drive_pirate.1: "Make the Captain useful and install a Guardian Warp Drive."
+ guardian_ftl_drive_pirate.2: "Make the Captain useful and install a Psi Jump Drive."
+ guardian_ftl_drive_pirate.3: "Make the Captain useful and install a Jump Drive."
+ guardian_ftl_drive_pirate.4: "Make the Captain useful and install a Warp Drive."
+ guardian_ftl_drive_pirate.5: "Make the Captain useful and install a Hyperdrive."
+ guardian_ftl_drive_pirate.6: "Make the Captain useful and install a Wormhole Drive."
+ 
+ # Automated Dreadnought Events:
+ 
+ guardian_dreadnought.2.a: "I would like an §RAutomated Dreadnought§!!"
+ guardian_dreadnought.2.b: "I would like a different Guardian for now."
+ guardian_dreadnought.2.c: "I already have a Guardian, perhaps later."
+ guardian_dreadnought.3.a: "I want an original white §RAutomated Dreadnought§!!"
+ guardian_dreadnought.3.b: "I want the alternative §RAutomated Dreadnought§!!"
+ 
+ guardian_dreadnought.2.name: "Dreadnought Defeated"
+ guardian_dreadnought.2.desc: "The galaxy stands in awe and rejoices as the mighty §RAutomated Dreadnought§! has been destroyed by the brave men and women of [This.GetName]. Your research teams are already turning what remains of the Dreadnought upside down and studying the ruins on the habitable worlds in this system, and have already found many interesting discoveries, including what they hope is the means to build an §RAutomated Dreadnought§! of our own if you are interested.\n\n§GBefore selecting anything on either event - 'Dreadnought Defeated' or 'Dreadnought Disabled', read the following:\n\nThe 'Dreadnought Defeated' event message (this one) is from NSC and allows you direct access to two different color schemes for the Dreadnought, with increased HP and other benefits (one a surprise), while the original special project found on the Dreadnought, 'Dreadnought Disabled' event is the vanilla one. It takes a very long time to finish, and the only bonus you get is additional weaponry damage, and you cannot replace this Dreadnought. You can decide for yourself what to do with the original Dreadnought chain.§!"
+ 
+ guardian_dreadnought.3.name: "Dreadnought Initialive"
+ guardian_dreadnought.3.desc: "Our researchers have learned much about the §RAutomated Dreadnought§!. With the diligent research our scientists and technicians have put into the Automated Dreadnought and its creator's worlds, we can now build and control our own Dreadnought, and even include the AI functionality without worry of corruption. Our technicians have studied the AI from the ship and the data collected in the [dreadnought_system.GetName] System, and can limit it's control over the ship, so it does control certain functions (with manual overrides) and a large crew compliment will handle the rest, especially life support. It's still automated, just not dependent on it.\n\nAdditionally, we have discovered blueprints for a different variation of the very Dreadnought we defeated, giving us two different options for a new Dreadnought for our fleet.\n\nFinally, given the large crew compliment required, expensive tech, and overall resource costs of this massive §RAutomated Dreadnought§!, your people will only support one active Dreadnought at any given time, but we can create either version of the §RAutomated Dreadnought§! at your command."
+ 
+ guardian_dreadnought.4.name: "Dreadnought Drives"
+ guardian_dreadnought.4.desc: "Now that you have selected the version of the §RAutomated Dreadnought§! you wish to command, please select an FTL Drive type from the selection below:\n\n§BGuardian Warp:§! This is the most powerful drive available, with longest distance and least cooldown time, but only Guardians use them so you need the Drive reward tech for your fleets to merge.\n\n§MPsi Jump Drive:§! Best of the regular drives, with a 50% range boost, but a dangerous drive.\n\n§RJump Drive:§! Best of the regular drives, without 50% range boost, but a dangerous drive.\n\n§GWarp Drive:§! Best Warp Drive for those who use this FTL method.\n\n§HHyperdrive:§! Best Hyperdrive for those who use this FTL method.\n\n§YWormhole Drive:§! One and only wormhole drive for those who use this FTL Method. All tech bonuses will apply."
+ 
+ guardian_dreadnought.5.name: "Dreadnought Launched"
+ guardian_dreadnought.5.desc: "Our engineers have finished and successfully launched our own §RAutomated Dreadnought§!. With the crew ready, the ship's AI functioning properly under our directive, and enough firepower to take on a fleet, the §RAutomated Dreadnought§! is ready to defend the empire at your command."
+ 
+ guardian_dreadnought.6.name: "Dreadnought Destroyed"
+ guardian_dreadnought.6.desc: "Our §RAutomated Dreadnought§! has been destroyed. Your engineers are ready to construct another one if you wish to allow the necessary funding."
+ 
+ # Dimensional Horror Events:
+ 
+ guardian_horror.2.a: "I want a §MDimensional Horror§!!"
+ guardian_horror.2.b: "I would like another Guardian."
+ guardian_horror.2.c: "I already have a Guardian, perhaps later."
+ guardian_horror.3.a: "I want a §MDimensional Horror§!!"
+ 
+ guardian_horror.2.name: "Horror Defeated"
+ guardian_horror.2.desc: "The galaxy stands in awe and rejoices as the mighty §MDimensional Horror§! has been killed by the brave men and women of [This.GetName]. The beast has fallen back into whatever dimensional realm it came from, leaving us with a tremendous opportunity. Our scientists believe they can learn from the sounds the Horror made, data gathered from the system, and the Horror's portal to not only summon a §MDimensional Horror§!, but control one if you dare to try."
+ 
+ guardian_horror.3.name: "Horror Summons"
+ guardian_horror.3.desc: "Our scientists are ready to summon a §MDimensional Horror§! from the dimensional realm. While supremely confident in their ability to summon one, our scientists believe that our best chance at controlling one is by summoning a baby Horror. While the baby obviously wouldn't be as powerful as the Horror we killed previously, even a baby would be a formidable defense for our empire. Furthermore, due to the nature of the summoning, the risks involved, and the sure power of even a baby Horror, your people are not willing to risk summoning more than one Horror, even a baby, at any given time.\n\nWith this understanding, we are ready to begin the summoning process at your command."
+ 
+ guardian_horror.4.name: "Horror Arrived"
+ guardian_horror.4.desc: "Our scientists have successfully summoned our own §MDimensional Horror§!. While our 'safeguard' means the Dimensional Horror is only a baby, our scientists assure us the beast is still deadlier than our mightiest ships. It's now fully trained and ready to defend our empire at your command!\n\nYou can tell your §MDimensional Horror§! to §Hmove to defend§! another colonized world in your empire using the appropriate planetary edict found on the planet you wish defended."
+ 
+ guardian_horror.5.name: "Horror Killed"
+ guardian_horror.5.desc: "Our §MDimensional Horror§! has died, and its corpse has fallen back through the wormhole into its dimension. Our scientists can summon another §MDimensional Horror§! if you wish to find a replacement."
+ 
+ # Enigmatic Fortress Events:
+ 
+ guardian_fortress.2.a: "I want an §EEnigmatic Fortress§!!"
+ guardian_fortress.2.b: "I would like a different Guardian."
+ guardian_fortress.2.c: "I already have a Guardian, perhaps later."
+ guardian_fortress.3.a: "I want an §EEnigmatic Fortress§!!"
+ 
+ guardian_fortress.12.a: "I want the Enigmatic Power Core!"
+ guardian_fortress.12.b: "I want the Enigmatic Deflector!"
+ guardian_fortress.12.c: "I want the Enigmatic Encoder & Decoder!"
+ guardian_fortress.12.d: "I want the Enigmatic Encoder!"
+ guardian_fortress.12.e: "I want the Enigmatic Decoder!"
+ guardian_fortress.12.f: "I want the Enigmatic Discruption Field!"
+ guardian_fortress.12.g: "We really cannot learn anymore from this Fortress."
+ 
+ guardian_fortress.2.name: "Fortress Conquered"
+ guardian_fortress.2.desc: "With our successful powerdown of the §EEnigmatic Fortress§! and new understanding of its security, our scientists and technicians now have complete access to the Fortress and all its systems. We have learned much, and believe it may be possible to construct our own with enough time, effort, and resources... or you could always choose another Guardian."
+ 
+ guardian_fortress.3.name: "Fortress Construction"
+ guardian_fortress.3.desc: "Our researchers have learned much from the idle §EEnigmatic Fortress§!, and now, not only do we have the knowledge to avoid any hidden security or triggering of defenses, but also the knowledge to construct our own Fortress. While we can build our own §EEnigmatic Fortress§!, your advisers will only support the building of one at any given time: between the time, effort, energy, and expense of building one, not to mention maintaining one, there is also the risk of building technology we might never fully understand.\n\nWith this in mind, your engineering teams are ready to build an §EEnigmatic Fortress§! if you wish to fund the project."
+ 
+ guardian_fortress.4.name: "Fortress Online"
+ guardian_fortress.4.desc: "Success! We now have a fully powered and operational §EEnigmatic Fortress§!. While the project leaders continue to learn, adapt, and discover during the building, your top minds are still baffled by the technology that has been built, understanding only enough to run the Fortress and keep it under control. Given the limited control we have, we think we may never actually know the full capabilities of this massive vault. However, we do have a formidable defense station, and the Fortress is ready to defend the empire at your command.\n\nYou §Ycan move§! your §EEnigmatic Fortress§! to defend another colonized world in your empire using the appropriate planetary edict found on the planet you wish defended."
+ 
+ guardian_fortress.5.name: "Fortress Destroyed"
+ guardian_fortress.5.desc: "Our §EEnigmatic Fortress§! has been completely and utterly destroyed, with no possibility of the restore system fixing the damage. Your advisers are ready to commission another §EEnigmatic Fortress§! if you wish to receive a replacement."
+ 
+ guardian_fortress.6.name: "Fortress Rewards"
+ guardian_fortress.6.desc: "After studying the Enigmatic Fortress over the past week, combining everything we know with what limited access we have to the Fortress' systems, we have discovered a backdoor into the main computer core. This should allow us to retrieve information about one of the Fortress' systems, maybe two of depending on the systems, at least enough to get us half way to reverse engineering it, but our technicians inform us this backdoor will only allow for one download before the Fortress locks us out. There may be a time in the future when the rest of the knowledge can be aquired, but for now, please make your selection carefully.\n\n§REnigmatic Power Core:§! A unique reactor that could give insights for improving our own reactor technology. (Required for NSC Advanced Version if NSC Components active.)\n\n§BEnigmatic Deflector:§! A unique shield design that could give insights for improving our own shielding technology. (Required for NSC Advanced Version if NSC Components active.)\n\n§GEnigmatic Encoder:§! Increases evasion.\n\n§MEnigmatic Decoder:§! Increases accuracy and tracking."
+ 
+ # Ether Drake Events:
+ 
+ guardian_dragon.3.a: "I want a Red Dragonfire Drake!"
+ guardian_dragon.3.b: "I want a Orange Dragonfire Drake!"
+ guardian_dragon.3.c: "I want a Yellow Dragonfire Drake!"
+ guardian_dragon.3.d: "I want a Chartreuse Dragonfire Drake!"
+ guardian_dragon.3.e: "I want a Green Dragonfire Drake!"
+ guardian_dragon.3.f: "I want a Aquamarine Dragonfire Drake!"
+ guardian_dragon.3.g: "I want a Cyan Dragonfire Drake!"
+ guardian_dragon.3.h: "I want a Azure Dragonfire Drake!"
+ guardian_dragon.3.i: "I want a Blue Dragonfire Drake!"
+ guardian_dragon.3.j: "I want a Violet Dragonfire Drake!"
+ guardian_dragon.3.k: "I want a Magenta Dragonfire Drake!"
+ guardian_dragon.3.l: "I want a Rose Dragonfire Drake!"
+ guardian_dragon.3.m: "I want a Voidwalker Dragonfire Drake!"
+ 
+ guardian_dragon.2.a: "I want an §SEther Drake§!!"
+ guardian_dragon.2.b: "I would like a different Guardian."
+ guardian_dragon.2.c: "I already have a Guardian, perhaps later."
+ 
+ guardian_dragon.2.name: "Dragon Slain"
+ guardian_dragon.2.desc: "The galaxy stands in awe and rejoices as the mighty §SEther Drake§! has been killed by the brave men and women of [This.GetName]. Our scientists have already begun studying any remains of the Drake and in particular the planet it was guarding. Our researchers have made many intriguing discoveries with hopefully more on the way. With these new revelations, our scientists have already begun to look into a means of growing and hopefully training our own Drake, already dubbing it the Dragonfire Project.\n\nWe can look into producing an §SEther Drake§! for our empire if you like, or perhaps another Guardian is more to your liking?"
+ 
+ guardian_dragon.3.name: "Dragon Training"
+ guardian_dragon.3.desc: "Our Dragonfire Project managers are ready to grow and train our very own §SEther Drake§!, named after the project's code name, §SDragonfire Drakes§!. While our teams cannot promise these §SDragonfire Drakes§! will be nearly as resilient or deadly as known Drakes, they assure you this will be a formidable beast to control. Due to the complex nature of growing of the Drake, the trickiness and dangers of training it, the amount of food to feed and sustain it, and the overall expense of the entire process means your people are only willing to support one Drake at any given time.\n\nUnderstanding this, your geneticists have discovered the genome responsible for changing the color of the Drake's scales, and therefore, they have managed to find the DNA sequence for many different color variations, and you can choose which you would prefer!"
+ 
+ guardian_dragon.4.name: "Dragon Drive"
+ guardian_dragon.4.desc: "Now that you have selected the color of the §SDragonfire Drake§! you wish to command, please select an FTL Drive type from the selection below:\n\n§BGuardian Warp:§! This is the most powerful drive available, with longest distance and least cooldown time, but only Guardians use them so you need the Drive reward tech for your fleets to merge.\n\n§MPsi Jump Drive:§! Best of the regular drives, with a 50% range boost, but a dangerous drive.\n\n§RJump Drive:§! Best of the regular drives, without 50% range boost, but a dangerous drive.\n\n§GWarp Drive:§! Best Warp Drive for those who use this FTL method.\n\n§HHyperdrive:§! Best Hyperdrive for those who use this FTL method.\n\n§YWormhole Drive:§! One and only wormhole drive for those who use this FTL Method. All tech bonuses will apply."
+ 
+ guardian_dragon.5.name: "Dragon Grown"
+ guardian_dragon.5.desc: "Our Dragonfire Project teams have successfully grown and trained your §SDragonfire Drake§!, and inform you as long as you keep it well fed it will respond to any order... mostly."
+ 
+ guardian_dragon.6.name: "Dragon Killed"
+ guardian_dragon.6.desc: "Our §SDragonfire Drake§! has been killed, and its corpse has dissolved into nothingness. Project Dragonfire is ready to grow and train another Dragonfire Drake if you wish to receive a replacement."
+ 
+ # Ether Baby Events:
+ 
+ guardian_baby_dragon.1.a: "I want a Red Dragonfire Baby!"
+ guardian_baby_dragon.1.b: "I want a Orange Dragonfire Baby!"
+ guardian_baby_dragon.1.c: "I want a Yellow Dragonfire Baby!"
+ guardian_baby_dragon.1.d: "I want a Chartreuse Dragonfire Baby!"
+ guardian_baby_dragon.1.e: "I want a Green Dragonfire Baby!"
+ guardian_baby_dragon.1.f: "I want a Aquamarine Dragonfire Baby!"
+ guardian_baby_dragon.1.g: "I want a Cyan Dragonfire Baby!"
+ guardian_baby_dragon.1.h: "I want a Azure Dragonfire Baby!"
+ guardian_baby_dragon.1.i: "I want a Blue Dragonfire Baby!"
+ guardian_baby_dragon.1.j: "I want a Violet Dragonfire Baby!"
+ guardian_baby_dragon.1.k: "I want a Magenta Dragonfire Baby!"
+ guardian_baby_dragon.1.l: "I want a Rose Dragonfire Baby!"
+ guardian_baby_dragon.1.m: "I want a Voidwalker Dragonfire Baby!"
+  
+ guardian_baby_dragon.1.name: "Baby Dragon Training"
+ guardian_baby_dragon.1.desc: "With the hatching of our first baby Drake and discoveries made from the infant, we have discovered that younger Drakes are actually more volatile than their elder brethren, having a lance that is much more powerful than the older ones, but not nearly as durable or hardy. However, the limitation is the same; due to the complex nature of growing of the Baby Drake, the trickiness and dangers of training it (especially give it's increased damage versus hardiness), the amount of food to feed and sustain it (even a baby), and the overall expense of the entire process means your people are only willing to support one Drake, even a baby, at any given time.\n\nYour geneticists had no issues manipulating the scale color of the babies like the adults, so you can choose any of the available 13 colors below."
+ 
+ guardian_baby_dragon.2.name: "Baby Dragon Drive"
+ guardian_baby_dragon.2.desc: "Now that you have selected the color of the §SDragonfire Baby§! you wish to command, please select an FTL Drive type from the selection below:\n\n§BGuardian Warp:§! This is the most powerful drive available, with longest distance and least cooldown time, but only Guardians use them so you need the Drive reward tech for your fleets to merge.\n\n§MPsi Jump Drive:§! Best of the regular drives, with a 50% range boost, but a dangerous drive.\n\n§RJump Drive:§! Best of the regular drives, without 50% range boost, but a dangerous drive.\n\n§GWarp Drive:§! Best Warp Drive for those who use this FTL method.\n\n§HHyperdrive:§! Best Hyperdrive for those who use this FTL method.\n\n§YWormhole Drive:§! One and only wormhole drive for those who use this FTL Method. All tech bonuses will apply."
+ 
+ guardian_baby_dragon.3.name: "Baby Dragon Grown"
+ guardian_baby_dragon.3.desc: "Our Dragonfire Project teams have successfully grown and trained your §SDragonfire Baby§!, and inform you as long as you keep it well fed it will respond to any order... mostly."
+ 
+ guardian_baby_dragon.4.name: "Baby Dragon Killed"
+ guardian_baby_dragon.4.desc: "Our §SDragonfire Baby§! has been killed, and its corpse has dissolved into nothingness. Project Dragonfire is ready to grow and train another Dragonfire Baby if you wish to receive a replacement."
+ 
+ 
+ # Stellarite Events:
+ 
+ guardian_stellarite.3.a: "Summon a §YStellarite§!!"
+ guardian_stellarite.2.a: "I want a §YStellarite§! immediately!"
+ guardian_stellarite.2.b: "I would like a different Guardian."
+ guardian_stellarite.2.c: "I already have a Guardian, perhaps later."
+ 
+ guardian_stellarite.2.name: "Stellarite Control"
+ guardian_stellarite.2.desc: "The galaxy stands in awe and rejoices as the mighty §YStellarite§! has been destroyed by the brave men and women of [This.GetName]. Between the remains of the beast itself and what remains of the star, our scientists believe they can form our own §YStellarite§! and even teach it to not devour every star in our empire if you would like to control one."
+ 
+ guardian_stellarite.3.name: "Stellarite Creation"
+ guardian_stellarite.3.desc: "Our research teams have learned much about the §YStellarite§!, and believe they can easily adapt a training regiment to train the Stellarite to take what it needs without diminishing a star. Your advisers only caution that you should give your people ample time to prepare the beast for its new role, and more importantly, to only try to control one at any given time, to ensure the people the §YStellarite§! is under your control. Aside from the extra time to be sure it will obey commands, you should have no problems finding, summoning, and training a §YStellarite§! to defend your empire. Please select an FTL Drive type below:\n\n§BGuardian Warp:§! This is the most powerful drive available, with longest distance and least cooldown time, but only Guardians use them so you need the Drive reward tech for your fleets to merge.\n\n§MPsi Jump Drive:§! Best of the regular drives, with a 50% range boost, but a dangerous drive.\n\n§RJump Drive:§! Best of the regular drives, without 50% range boost, but a dangerous drive.\n\n§GWarp Drive:§! Best Warp Drive for those who use this FTL method.\n\n§HHyperdrive:§! Best Hyperdrive for those who use this FTL method.\n\n§YWormhole Drive:§! One and only wormhole drive for those who use this FTL Method. All tech bonuses will apply."
+ 
+ guardian_stellarite.4.name: "Stellarite Arrived"
+ guardian_stellarite.4.desc: "We have successfully summoned and trained a §YStellarite§!, ready to defend our empire at your command. Your advisers tell you they believe this Stellarite will be fully cooperative, like a pet, as long as we don't deny it the occasional feeding of a star... without destroying it of course."
+ 
+ guardian_stellarite.5.name: "Stellarite Killed"
+ guardian_stellarite.5.desc: "Our §YStellarite§! has been killed, and it's energy matrix has faded into the cold vacuum of space. Your research teams are ready to form and train another if you wish to find a replacement."
+ 
+ # Technosphere Events:
+ 
+ guardian_technosphere.3.a: "I want a §GTechnosphere§!!"
+ guardian_technosphere.2.a: "Excellent. Begin construction immediately."
+ guardian_technosphere.2.b: "I would prefer a different Guardian."
+ guardian_technosphere.2.c: "I already have a Guardian, perhaps later."
+ 
+ guardian_technosphere.2.name: "Technosphere Mystery"
+ guardian_technosphere.21.desc: "The galaxy stands in awe and rejoices as the mighty §GTechnosphere§!, aka §GInfinity Machine§!, has been destroyed by the brave men and women of [This.GetName]. Between past expeditions to study the Sphere and our new understanding from seeing, observing, and scanning the Sphere ourselves, our scientists believe they can recreate the sphere to defend our own empire, if you wish to have it."
+ guardian_technosphere.22.desc: "We have successfully assisted the §GTechnosphere§! aka §GInfinity Machine§! in mission to discover the answer to... I guess infinity? Either way, the Sphere has rewarded us with a download of epic scope, giving us clear instructions on how to construct our own Sphere! It will take some time for our scientists and technicians to comprehend and get a handle on this new technology, but we should be able to have one to defend our empire within a couple years, if you choose to proceed of course."
+ guardian_technosphere.23.desc: "We have successfully hacked into the §GTechnosphere§! aka §GInfinity Machine§! against all odds! This miraculous hack has given us complete access to the inter systems of the Sphere. Unfortunately, it seems the §GTechnosphere§! had fail safes in case of such a hack, and has self-destructed. However, our technicians have reported they managed to download enough information before its destruction to successfully construct our own Sphere, although it may take some time. We can have one ready to go in a couple of years, if you wish to have one to defend your empire."
+ 
+ guardian_technosphere.3.name: "Technosphere Project"
+ guardian_technosphere.3.desc: "Our research teams now have a firm understanding of the technology required to construct a §GTechnosphere§!. However, given the vast resources required, time to construct, and still unknowns about the §GTechnosphere§!, your advisers suggest you only support one at any given time. If you wish to construct a §GTechnosphere§!, please select an FTL Drive type from the listing below:\n\n§BGuardian Warp:§! This is the most powerful drive available, with longest distance and least cooldown time, but only Guardians use them so you need the Drive reward tech for your fleets to merge.\n\n§MPsi Jump Drive:§! Best of the regular drives, with a 50% range boost, but a dangerous drive.\n\n§RJump Drive:§! Best of the regular drives, without 50% range boost, but a dangerous drive.\n\n§GWarp Drive:§! Best Warp Drive for those who use this FTL method.\n\n§HHyperdrive:§! Best Hyperdrive for those who use this FTL method.\n\n§YWormhole Drive:§! One and only wormhole drive for those who use this FTL Method. All tech bonuses will apply."
+ 
+ guardian_technosphere.4.name: "Technosphere Launch"
+ guardian_technosphere.4.desc: "After a lot of research, development, safeguards, and resources, our fully functional §GTechnosphere§! has been launched!\n\nOur research teams tell us that while quite confident about the §GTechnosphere§! being under our full control, because of our lack of understanding of all operations of the sphere, this §GTechnosphere§! is a little less powerful than the original. However, we are assured that it is still very powerful compared to our standard ship classes, and it is more than capable of handling most threats.\n\nThe §GTechnosphere§! is in orbit over §Y[Root.Capital.GetName]§!, ready to defend the empire at your command."
+ 
+ guardian_technosphere.5.name: "Technosphere Destroyed"
+ guardian_technosphere.5.desc: "Our §GTechnosphere§! has been destroyed, with a previous unknown self destruct feature making sure there is no remaining trace of the sphere for others to find, take, and study. Our research teams are confident they can make a new §GTechnosphere§! without issue if you wish to build a replacement."
+ 
+ guardian_technosphere.6.name: "Technosphere Failed"
+ guardian_technosphere.6.desc: "The §GTechnosphere§! flew into the black hole and nothing happened. Unfortunately, this means you failed to help the §GTechnosphere§!, and while it did probably give you some nice rewards as a "thanks for trying," you have not unlocked the §GTechnosphere§! Playable Guardian because this is a failure. The interesting part is the one and only "successful" way of helping of the §GTechnosphere§! is actually the scenario where it §Ydoesn't fly into the Black Hole at all§! if you can believe that.\n\nDon't let this failure discourage you, it's simply a role of the dice, and you unfortunately hit one of the two outcomes not leading to "success" thus the Playable Guardian, however, to help you try again, another §GTechnosphere§! system has been spawned in your galaxy, where you can get the Playable Guardian version three ways; (1) defeat the Sphere in battle, (2) successfully hack the Sphere with the appropriate special project, or (3) try again to successfully help the Sphere. Hopefully you will have better luck next time."
+ guardian_technosphere.6.alt.desc: "The §GTechnosphere§! flew into the black hole and it spawned into the now smaller, but much more resource rich "Pantagruel" black hole. Congratulations on getting this unique setup, however, unfortunately, this means you failed to help the §GTechnosphere§!! Yes, really, as nice as your new setup is in this system, the game technically considers this a "spectacularly helpful failure", and therefore, you have not unlocked the §GTechnosphere§! Playable Guardian because this is a failure. The interesting part is the one and only "successful" way of helping of the §GTechnosphere§! is actually the scenario where it §Ydoesn't fly into the Black Hole at all§! if you can believe that.\n\nDon't let this failure discourage you, it's simply a role of the dice, and you unfortunately hit one of the two outcomes not leading to "success" thus the Playable Guardian, however, to help you try again, another §GTechnosphere§! system has been spawned in your galaxy, where you can get the Playable Guardian version three ways; (1) defeat the Sphere in battle, (2) successfully hack the Sphere with the appropriate special project, or (3) try again to successfully help the Sphere. Hopefully you will have better luck next time."
+ 
+ # Wraith Events:
+ 
+ guardian_wraith.2.a: "I want a §BWraiths§!!"
+ guardian_wraith.2.b: "I would prefer a different Guardian."
+ guardian_wraith.2.c: "I already have a Guardian, perhaps later."
+ 
+ guardian_wraith.3.a: "I want a red Wraith!"
+ guardian_wraith.3.b: "I want a orange Wraith!"
+ guardian_wraith.3.c: "I want a yellow Wraith!"
+ guardian_wraith.3.d: "I want a green Wraith!"
+ guardian_wraith.3.e: "I want a blue Wraith!"
+ guardian_wraith.3.f: "I want a violet Wraith!"
+ guardian_wraith.3.g: "I want a light Wraith!"
+ guardian_wraith.3.h: "I want a dark Wraith!"
+ 
+ guardian_wraith.2.name: "Wraith Lighting"
+ guardian_wraith.2.desc: "The galaxy stands in awe and rejoices as the mighty §BWraith§! has been destroyed by the brave men and women of [This.GetName]. With the knowledge of the Curators and our own scans and experience with the §BWraith§!, our scientists believe they can duplicate the spectral frequencies of the §BWraiths§!, perhaps with a wider range than just the one we saw, allowing for us to created different colored §BWraiths§! to defend our empire."
+ 
+ guardian_wraith.3.name: "Wraith Spectrums"
+ guardian_wraith.3.desc: "Our researchers have isolated 8 different stable §BWraiths§! spectral frequencies, allowing for us to create 8 different colors, including one not associated with any known star frequency, although none of them seem to have any discernible advantages due to the different in frequency, unlike the ones of legend. Due to the nature of the formation of these creatures, the amount of energy and specialized equipment it takes to create and maintain one, never mind control, your advisers will only allow for one §BWraith§! at any given time. Our research teams are ready to start the process, they just need to know what spectral frequency you wish to have."
+ 
+ guardian_wraith.4.name: "Wraith Power"
+ guardian_wraith.4.desc: "Now that you have selected the color of the §BWraith§! you wish to command, please select an FTL Drive type from the selection below:\n\n§BGuardian Warp:§! This is the most powerful drive available, with longest distance and least cooldown time, but only Guardians use them so you need the Drive reward tech for your fleets to merge.\n\n§MPsi Jump Drive:§! Best of the regular drives, with a 50% range boost, but a dangerous drive.\n\n§RJump Drive:§! Best of the regular drives, without 50% range boost, but a dangerous drive.\n\n§GWarp Drive:§! Best Warp Drive for those who use this FTL method.\n\n§HHyperdrive:§! Best Hyperdrive for those who use this FTL method.\n\n§YWormhole Drive:§! One and only wormhole drive for those who use this FTL Method. All tech bonuses will apply."
+ 
+ guardian_wraith.5.name: "Wraith Optimized"
+ guardian_wraith.5.desc: "Our researchers have successfully created a spectral §BWraiths§! at your desired frequency without any issue. The §BWraith§! is ready to defend our empire at your command."
+ 
+ guardian_wraith.6.name: "Wraith Disintegrated"
+ guardian_wraith.6.desc: "Our §BWraith§! has been killed, and its energy matrix has destabilized and disintegrated into nothingness. Our researchers can create another §BWraith§! if you wish to create a replacement."
+ 
+ guardian_wraith.7.desc: "The study of pulsars seems to be an endless source of insights for our scientists, but rarely exhibit any signs of overtly dangerous phenomena. This makes the recent reports on [From.GetName] all the more concerning.\n\nAn initial scan revealed the pulsar, in addition to its regular electromagnetic beam, is emitting a separate beam at a limited wavelength which is only visible in the same system at shorter and shorter intervals. According to initial calculations, the interval between these pulses will reach zero in approximately §Yfive years§!. What occurs then is open to speculation, but the lack of explanations for the pulse has instilled an almost superstitious fear in those who studied it."
+ guardian_wraith.7.desc.gesta: "The study of pulsars seems to be an endless source of insights, but they rarely exhibit any signs of overtly dangerous phenomena. This makes the recent observations on [From.GetName] all the more concerning.\n\nAn initial scan revealed the pulsar, in addition to its regular electromagnetic beam, is emitting a separate beam at a limited wavelength which is only visible in the same system at shorter and shorter intervals. According to initial calculations, the interval between these pulses will reach zero in approximately §Yfive years§!. What occurs then is open to speculation, but the lack of explanations for the pulse is troubling."
+ 
+ # Captain's Galleon Pirate Events:
+ 
+ guardian_pirate.1.a: "That sound interesting. Let's find this system."
+ guardian_pirate.2.a: "Proceed with caution."
+ guardian_pirate.4.a: "That ship would be an excellent warship. Seize it!"
+ guardian_pirate.4.b: "It's a Pirate ship not worth the trouble. Destroy it."
+ guardian_pirate.5.a: "He could prove useful. Watch him and we'll see."
+ guardian_pirate.6.a: "Curses! The Hidden Paradise system will have to do."
+ guardian_pirate.7.a: "Build me a mighty Pirate Galleon!"
+ guardian_pirate.7.b: "Actually, I want a different Guardian."
+ guardian_pirate.8.a: "Research whatever you need to."
+ 
+ guardian_pirate.1.name: "Pirate Secrets"
+ guardian_pirate.1.desc: "The pirates in the [pirate_home_system.GetName] System are nearly defeated. Our communication officers intercepted a transmission from one of the remaining pirate vessels. It would appear someone panicked and sent a communication we, or well anyone, could track. It would appear the [pirate_home_system.GetName] System isn't the Pirate 'stronghold' as previously believed, or at least, it's just the main rally point.\n\nApparently there is a previously unknown system near it the Pirate clans refer to as 'The Hidden Paradise', and is apparently a 'retreat' of sorts for them, although its location is very tightly controlled. Fortunately for us, we can locate this 'Paradise' for ourselves thanks to whatever pirate vessel panicked. Although, the communication logs do state any pirate vessels traveling to the Paradise without permission will 'answer to the Captain and his galleon'... whatever that means."
+ 
+ guardian_pirate.2.name: "Pirate Paradise"
+ guardian_pirate.2.desc: "As [Root.GetName] enters the mysterious Hidden Paradise System, we finally have an idea of why the pirates call this place 'Paradise'.\n\nThere is a habitable Gaia Moon in the system, orbiting what appears to be a planet completely annihilated in a nuclear war. It will not be habitable for a many decades, if not longer. While the Gaia world here is a welcomed sight, what makes this system rather... unique is the star. It's abnormally large, and even stranger is its rings, like you would typically find around a gas giant. Just outside the rings of the star, there is an asteroid belt, with many being promising mining candidates. It seems like the star pulled in asteroid belts to become planetary rings even though it's not a black hole.\n\nWhile the system is interesting to observe and study, the [Root.GetName] must first deal with the pirates in this system, and these pirates are not your typical scavengers. There are two Pirate Galleons here like the ones in the previous system, but what has everyone worried is the capital ship they protect.\n\nThere is a massive Galleon here, over twice the mass of a standard Galleon. It's embroidered in black and gold, and if the appearance wasn't scary enough, our initial scans tell us it's covered in weaponry, a count only a Pirate would deem necessary. Whoever commands this Galleon is not to be trifled with."
+ 
+ guardian_pirate.3.name: "Pirate Raid"
+ guardian_pirate.3.desc: "Our forces have disabled the Captain's "Carrack Galleon" (as it has been dubbed due to its size), and remarkably the massive vessel hasn't collapsed. This could be an excellent opportunity to send over professional boarding teams and attempt to claim the vessel, perhaps restore it. Of course, if you don't want the vessel or don't think it's worth the effort, we could simply destroy the ship as well.\n\n§GIn order to try and board the Carrack Pirate Galleon, you will require 3 transport ships and a commanding general.§!"
+ 
+ guardian_pirate.4.name: "Pirate Plunder"
+ guardian_pirate.4.desc: "Our strike teams have successfully boarded and captured the Carrack Pirate Galleon!\n\nOur strike teams met with heavy resistance at first, with the firefights lasting a long time, but eventually the pirate crew either grew tired or reckless, as some surrendered and some started making stupid mistakes. Finally, our troops stormed the bridge and captured the Captain of this Galleon, who was remarkably cooperative, mainly because the Captain wants to sign a contract with us to command the ship under our flag!\n\nYour advisers and defense leaders interrogated the Captain and carefully scrutinized him for any signs of deceit. Apparently he was very impressed with our forces managing to fight through his defenses, both in the [pirate_home_system.GetName] System and here in Hidden Paradise. The Captain's knowledge, tactical and strategic skills are impressive, and despite the odds, the Captain is willing to sign a contract to fight under our flag in exchange for the running of the Galleon. During the interrogation, we learned this Galleon has no FTL Drive, but can easily be adapted to host any FTL Drive known, all we need to do is choose one."
+ 
+ guardian_pirate.5.name: "Pirate Lost"
+ guardian_pirate.5.desc: "We couldn't get our strike teams ready and on site in time. The Carrack Pirate Galleon has imploded from damage from our battle, and there is practically nothing left to salvage. While certainly a loss, we have eradicated the most dangerous and secretive pirate stronghold in the galaxy, and the Hidden Paradise system is ripe for the taking."
+ 
+ guardian_pirate.6.name: "Pirate Treasure"
+ guardian_pirate.6.desc: "Since the loss of the original Carrack Pirate Galleon, our engineering teams have been looking for a means of building a replacement. Fortunately, our original Captain kept the blueprints to the massive vessel on hand while still in command of the original, and our technicians managed to pull them from our records. There seems to be a few odd procedures and interesting design choices. It will take a little research to figure out all these intriguing designs and their purpose, but we can build another mighty Carrack Pirate Galleon for our empire if you wish to replace the fallen one."
+ 
+ guardian_pirate.7a.name: "Pirate Hiring"
+ guardian_pirate.7a.desc: "Your researchers have successfully finished all relevant research to build our own Carrack Pirate Galleon at your command, however, while we have another Guardian active, our people will not support the building of a ship of this magnitude."
+ 
+ guardian_pirate.7.name: "Pirate Galleon"
+ guardian_pirate.7.desc: "Our engineering teams are ready to construct a Carrack Pirate Galleon... overloaded weaponry and all. Due to the cost, complex design, and sure resources it will take to build and maintain this colossal vessel, your people will only support one at any given time. All that is left is to select the FTL Drive type to be used with our new Carrack Pirate Galleon:\n\n§BGuardian Warp:§! This is the most powerful drive available, with longest distance and least cooldown time, but only Guardians use them so you need the Drive reward tech for your fleets to merge.\n\n§MPsi Jump Drive:§! Best of the regular drives, with a 50% range boost, but a dangerous drive.\n\n§RJump Drive:§! Best of the regular drives, without 50% range boost, but a dangerous drive.\n\n§GWarp Drive:§! Best Warp Drive for those who use this FTL method.\n\n§HHyperdrive:§! Best Hyperdrive for those who use this FTL method.\n\n§YWormhole Drive:§! One and only wormhole drive for those who use this FTL Method. All tech bonuses will apply."
+ 
+ guardian_pirate.8.name: "Pirate Launch"
+ guardian_pirate.8.desc: "Our new Carrack Pirate Galleon has been launched, and is ready to obliterate our enemies at your command."
+ 
+ guardian_pirate.9.name: "Pirate Destroyed"
+ guardian_pirate.9.desc: "Our Carrack Pirate Galleon has been destroyed, with hardly any wreckage worth looking at remaining. Your engineering teams stand ready to build another one if you wish to build a replacement."
+ 
+ ####################################
+ # Edicts
+ ####################################
+ 
+ edict_guardian_horror_here: "Move §MDimensional Horror§! Here"
+ edict_guardian_horror_here_desc: " " #Space prevents error.log message without showing anything
+ edict_guardian_horror_here_tooltip: "Tells the §MDimensional Horror§! to move its anchored wormhole to orbit §Y[Root.GetName]§!."
+ 
+ edict_guardian_fortress_here: "Move §EEnigmatic Fortress§! Here"
+ edict_guardian_fortress_here_desc: " " #Space prevents error.log message without showing anything
+ edict_guardian_fortress_here_tooltip: "Tells the §EEnigmatic Fortress§! to active it's jump drive and move to orbit §Y[Root.GetName]§!."
+ 
+ ####################################
+ # Special Projects
+ ####################################
+ 
+ # Automated Dreadnought Projects:
+ 
+ guardian_dreadnought_original_project: "Automated Dreadnought Original"
+ guardian_dreadnought_original_project_DESC: "We will construct the original, white hulled, blue lit §RAutomated Dreadnought§!."
+ guardian_dreadnought_original_project_completed: " "
+ 
+ guardian_dreadnought_alternative_project: "Automated Dreadnought Alternative"
+ guardian_dreadnought_alternative_project_DESC: "We will construct the alternative, blue-grey hulled, cyan lit §RAutomated Dreadnought§!."
+ guardian_dreadnought_alternative_project_completed: " "
+ 
+ # Dimensional Horror Projects:
+ 
+ guardian_horror_project: "Dimensional Horror Summoning"
+ guardian_horror_project_DESC: "Our scientists will summon a baby §MDimensional Horror§! and carefully train it to defend our empire."
+ guardian_horror_project_completed: " "
+ 
+ # Enigmatic Fortress Projects:
+   
+ guardian_fortress_project: "Enigmatic Fortress Construction Project"
+ guardian_fortress_project_DESC: "With the knowledge and experiance we have gained, we will build our own §EEnigmatic Fortress§!, and safely place it into orbit of §Y[Root.Capital.GetName]§!."
+ guardian_fortress_project_completed: " "
+ 
+ # Dragonfire Drake Projects:
+ 
+ guardian_dragon_red_project: "Red Dragonfire Drake"
+ guardian_dragon_red_project_DESC: "Our scientists will grow and train a red Dragonfire Drake to serve and protect our empire."
+ guardian_dragon_red_project_completed: " "
+ 
+ guardian_dragon_orange_project: "Orange Dragonfire Drake"
+ guardian_dragon_orange_project_DESC: "Our scientists will grow and train a orange Dragonfire Drake to serve and protect our empire."
+ guardian_dragon_orange_project_completed: " "
+ 
+ guardian_dragon_yellow_project: "Yellow Dragonfire Drake"
+ guardian_dragon_yellow_project_DESC: "Our scientists will grow and train a yellow Dragonfire Drake to serve and protect our empire."
+ guardian_dragon_yellow_project_completed: " "
+ 
+ guardian_dragon_chartreuse_project: "Chartreuse Dragonfire Drake"
+ guardian_dragon_chartreuse_project_DESC: "Our scientists will grow and train a chartreuse Dragonfire Drake to serve and protect our empire."
+ guardian_dragon_chartreuse_project_completed: " "
+ 
+ guardian_dragon_green_project: "Green Dragonfire Drake"
+ guardian_dragon_green_project_DESC: "Our scientists will grow and train a green Dragonfire Drake to serve and protect our empire."
+ guardian_dragon_green_project_completed: " "
+ 
+ guardian_dragon_aquamarine_project: "Aquamarine Dragonfire Drake"
+ guardian_dragon_aquamarine_project_DESC: "Our scientists will grow and train a aquamarine Dragonfire Drake to serve and protect our empire."
+ guardian_dragon_aquamarine_project_completed: " "
+ 
+ guardian_dragon_cyan_project: "Cyan Dragonfire Drake"
+ guardian_dragon_cyan_project_DESC: "Our scientists will grow and train a cyan Dragonfire Drake to serve and protect our empire."
+ guardian_dragon_cyan_project_completed: " "
+ 
+ guardian_dragon_azure_project: "Azure Dragonfire Drake"
+ guardian_dragon_azure_project_DESC: "Our scientists will grow and train a azure Dragonfire Drake to serve and protect our empire."
+ guardian_dragon_azure_project_completed: " "
+ 
+ guardian_dragon_blue_project: "Blue Dragonfire Drake"
+ guardian_dragon_blue_project_DESC: "Our scientists will grow and train a blue Dragonfire Drake to serve and protect our empire."
+ guardian_dragon_blue_project_completed: " "
+ 
+ guardian_dragon_violet_project: "Violet Dragonfire Drake"
+ guardian_dragon_violet_project_DESC: "Our scientists will grow and train a violet Dragonfire Drake to serve and protect our empire."
+ guardian_dragon_violet_project_completed: " "
+ 
+ guardian_dragon_magenta_project: "Magenta Dragonfire Drake"
+ guardian_dragon_magenta_project_DESC: "Our scientists will grow and train a violet Dragonfire Drake to serve and protect our empire."
+ guardian_dragon_magenta_project_completed: " "
+ 
+ guardian_dragon_rose_project: "Rose Dragonfire Drake"
+ guardian_dragon_rose_project_DESC: "Our scientists will grow and train a rose Dragonfire Drake to serve and protect our empire."
+ guardian_dragon_rose_project_completed: " "
+ 
+ guardian_dragon_white_project: "Voidwalker Dragonfire Drake"
+ guardian_dragon_white_project_DESC: "Our scientists will grow and train a Voidwalker Dragonfire Drake to serve and protect our empire."
+ guardian_dragon_white_project_completed: " "
+ 
+ # Dragonfire Baby Projects:
+ 
+ guardian_baby_dragon_red_project: "Red Dragonfire Baby"
+ guardian_baby_dragon_red_project_DESC: "Our scientists will grow and train a red Dragonfire Baby to serve and protect our empire."
+ guardian_baby_dragon_red_project_completed: " "
+ 
+ guardian_baby_dragon_orange_project: "Orange Dragonfire Baby"
+ guardian_baby_dragon_orange_project_DESC: "Our scientists will grow and train a orange Dragonfire Baby to serve and protect our empire."
+ guardian_baby_dragon_orange_project_completed: " "
+ 
+ guardian_baby_dragon_yellow_project: "Yellow Dragonfire Baby"
+ guardian_baby_dragon_yellow_project_DESC: "Our scientists will grow and train a yellow Dragonfire Baby to serve and protect our empire."
+ guardian_baby_dragon_yellow_project_completed: " "
+ 
+ guardian_baby_dragon_chartreuse_project: "Chartreuse Dragonfire Baby"
+ guardian_baby_dragon_chartreuse_project_DESC: "Our scientists will grow and train a chartreuse Dragonfire Baby to serve and protect our empire."
+ guardian_baby_dragon_chartreuse_project_completed: " "
+ 
+ guardian_baby_dragon_green_project: "Green Dragonfire Baby"
+ guardian_baby_dragon_green_project_DESC: "Our scientists will grow and train a green Dragonfire Baby to serve and protect our empire."
+ guardian_baby_dragon_green_project_completed: " "
+ 
+ guardian_baby_dragon_aquamarine_project: "Aquamarine Dragonfire Baby"
+ guardian_baby_dragon_aquamarine_project_DESC: "Our scientists will grow and train a aquamarine Dragonfire Baby to serve and protect our empire."
+ guardian_baby_dragon_aquamarine_project_completed: " "
+ 
+ guardian_baby_dragon_cyan_project: "Cyan Dragonfire Baby"
+ guardian_baby_dragon_cyan_project_DESC: "Our scientists will grow and train a cyan Dragonfire Baby to serve and protect our empire."
+ guardian_baby_dragon_cyan_project_completed: " "
+ 
+ guardian_baby_dragon_azure_project: "Azure Dragonfire Baby"
+ guardian_baby_dragon_azure_project_DESC: "Our scientists will grow and train a azure Dragonfire Baby to serve and protect our empire."
+ guardian_baby_dragon_azure_project_completed: " "
+ 
+ guardian_baby_dragon_blue_project: "Blue Dragonfire Baby"
+ guardian_baby_dragon_blue_project_DESC: "Our scientists will grow and train a blue Dragonfire Baby to serve and protect our empire."
+ guardian_baby_dragon_blue_project_completed: " "
+ 
+ guardian_baby_dragon_violet_project: "Violet Dragonfire Baby"
+ guardian_baby_dragon_violet_project_DESC: "Our scientists will grow and train a violet Dragonfire Baby to serve and protect our empire."
+ guardian_baby_dragon_violet_project_completed: " "
+ 
+ guardian_baby_dragon_magenta_project: "Magenta Dragonfire Baby"
+ guardian_baby_dragon_magenta_project_DESC: "Our scientists will grow and train a violet Dragonfire Baby to serve and protect our empire."
+ guardian_baby_dragon_magenta_project_completed: " "
+ 
+ guardian_baby_dragon_rose_project: "Rose Dragonfire Baby"
+ guardian_baby_dragon_rose_project_DESC: "Our scientists will grow and train a rose Dragonfire Baby to serve and protect our empire."
+ guardian_baby_dragon_rose_project_completed: " "
+ 
+ guardian_baby_dragon_white_project: "Voidwalker Dragonfire Baby"
+ guardian_baby_dragon_white_project_DESC: "Our scientists will grow and train a Voidwalker Dragonfire Baby to serve and protect our empire."
+ guardian_baby_dragon_white_project_completed: " "
+ 
+ # Stellarite Projects:
+ 
+ guardian_stellarite_project: "Stellarite Formation"
+ guardian_stellarite_project_DESC: "We are ready to form and train a §YStellarite§! at your command."
+ guardian_stellarite_project_completed: " "
+ 
+ # Technosphere Projects:
+ 
+ guardian_technosphere_project: "Technosphere Assembly"
+ guardian_technosphere_project_DESC: "Our research teams believe they work out enough of the §GTechnosphere's§! technology to construction one of our own."
+ guardian_technosphere_project_completed: " "
+ 
+ # Wraith Projects:
+ 
+ guardian_wraith_red_project: "Red Wraith"
+ guardian_wraith_red_project_DESC: "Our scientists will create and train a red Wraith to serve and protect our empire."
+ guardian_wraith_red_project_completed: " "
+ 
+ guardian_wraith_orange_project: "Orange Wraith"
+ guardian_wraith_orange_project_DESC: "Our scientists will create and train a orange Wraith to serve and protect our empire."
+ guardian_wraith_orange_project_completed: " "
+ 
+ guardian_wraith_yellow_project: "Yellow Wraith"
+ guardian_wraith_yellow_project_DESC: "Our scientists will create and train a yellow Wraith to serve and protect our empire."
+ guardian_wraith_yellow_project_completed: " "
+ 
+ guardian_wraith_green_project: "Green Wraith"
+ guardian_wraith_green_project_DESC: "Our scientists will create and train a green Wraith to serve and protect our empire."
+ guardian_wraith_green_project_completed: " "
+ 
+ guardian_wraith_blue_project: "Blue Wraith"
+ guardian_wraith_blue_project_DESC: "Our scientists will create and train a blue Wraith to serve and protect our empire."
+ guardian_wraith_blue_project_completed: " "
+ 
+ guardian_wraith_violet_project: "Violet Wraith"
+ guardian_wraith_violet_project_DESC: "Our scientists will create and train a violet Wraith to serve and protect our empire."
+ guardian_wraith_violet_project_completed: " "
+ 
+ guardian_wraith_white_project: "Voidwalker Wraith"
+ guardian_wraith_white_project_DESC: "Our scientists will create and train a Voidwalker Wraith to serve and protect our empire."
+ guardian_wraith_white_project_completed: " "
+ 
+ guardian_wraith_black_project: "Nightwalker Wraith"
+ guardian_wraith_black_project_DESC: "Our scientists will create and train a Nightwalker Wraith to serve and protect our empire."
+ guardian_wraith_black_project_completed: " "
+ 
+ # Pirate Projects:
+ 
+ captain_galleon_board: "Pirate Raid"
+ captain_galleon_board_DESC: "Our expert boarding teams will attempt to take the massive Pirate Galleon by force."
+ captain_galleon_board_completed: " "
+ 
+ captain_galleon_creation: "Pirate Ship"
+ captain_galleon_creation_DESC: "With the blueprints of the original Galleon at our disposal, we will attempt to rebuild the massive Pirate Flagship."
+ captain_galleon_creation_completed: " "
+ 
+ ####################################
+ # Hull Sizes
+ ####################################
+ 
+ NSC_DRAGONFIRE_DRAKE: "Ether Drake"
+ NSC_dragonfire_drake: "Ether Drake"
+ NSC_dragonfire_drake_plural: "Ether Drakes"
+ 
+ NSC_RED_DRAGONFIRE_DRAKE: "Red Dragonfire Drake"
+ NSC_red_dragonfire_drake: "Red Dragonfire Drake"
+ NSC_red_dragonfire_drake_plural: "Red Dragonfire Drakes"
+ 
+ NSC_red_dragonfire_baby: "Red Dragonfire Baby"
+ NSC_red_dragonfire_baby_plural: "Red Dragonfire Babies"
+ 
+ NSC_ORANGE_DRAGONFIRE_DRAKE: "Orange Dragonfire Drake"
+ NSC_orange_dragonfire_drake: "Orange Dragonfire Drake"
+ NSC_orange_dragonfire_drake_plural: "Orange Dragonfire Drakes"
+ 
+ NSC_orange_dragonfire_baby: "Orange Dragonfire Baby"
+ NSC_orange_dragonfire_baby_plural: "Orange Dragonfire Babies"
+ 
+ NSC_YELLOW_DRAGONFIRE_DRAKE: "Yellow Dragonfire Drake"
+ NSC_yellow_dragonfire_drake: "Yellow Dragonfire Drake"
+ NSC_yellow_dragonfire_drake_plural: "Yellow Dragonfire Drakes"
+ 
+ NSC_yellow_dragonfire_baby: "Yellow Dragonfire Baby"
+ NSC_yellow_dragonfire_baby_plural: "Yellow Dragonfire Babies"
+ 
+ NSC_CHARTREUSE_DRAGONFIRE_DRAKE: "Chartreuse Dragonfire Drake"
+ NSC_chartreuse_dragonfire_drake: "Chartreuse Dragonfire Drake"
+ NSC_chartreuse_dragonfire_drake_plural: "Chartreuse Dragonfire Drakes"
+ 
+ NSC_chartreuse_dragonfire_baby: "Chartreuse Dragonfire Baby"
+ NSC_chartreuse_dragonfire_baby_plural: "Chartreuse Dragonfire Babies"
+ 
+ NSC_GREEN_DRAGONFIRE_DRAKE: "Green Dragonfire Drake"
+ NSC_green_dragonfire_drake: "Green Dragonfire Drake"
+ NSC_green_dragonfire_drake_plural: "Green Dragonfire Drakes"
+ 
+ NSC_green_dragonfire_baby: "Green Dragonfire Baby"
+ NSC_green_dragonfire_baby_plural: "Green Dragonfire Babies"
+ 
+ NSC_AQUAMARINE_DRAGONFIRE_DRAKE: "Aquamarine Dragonfire Drake"
+ NSC_aquamarine_dragonfire_drake: "Aquamarine Dragonfire Drake"
+ NSC_aquamarine_dragonfire_drake_plural: "Aquamarine Dragonfire Drakes"
+ 
+ NSC_aquamarine_dragonfire_baby: "Aquamarine Dragonfire Baby"
+ NSC_aquamarine_dragonfire_baby_plural: "Aquamarine Dragonfire Babies"
+ 
+ NSC_CYAN_DRAGONFIRE_DRAKE: "Cyan Dragonfire Drake"
+ NSC_cyan_dragonfire_drake: "Cyan Dragonfire Drake"
+ NSC_cyan_dragonfire_drake_plural: "Cyan Dragonfire Drakes"
+ 
+ NSC_cyan_dragonfire_baby: "Cyan Dragonfire Baby"
+ NSC_cyan_dragonfire_baby_plural: "Cyan Dragonfire Babies"
+ 
+ NSC_AZURE_DRAGONFIRE_DRAKE: "Azure Dragonfire Drake"
+ NSC_azure_dragonfire_drake: "Azure Dragonfire Drake"
+ NSC_azure_dragonfire_drake_plural: "Azure Dragonfire Drakes"
+ 
+ NSC_azure_dragonfire_baby: "Azure Dragonfire Baby"
+ NSC_azure_dragonfire_baby_plural: "Azure Dragonfire Babies"
+ 
+ NSC_BLUE_DRAGONFIRE_DRAKE: "Blue Dragonfire Drake"
+ NSC_blue_dragonfire_drake: "Blue Dragonfire Drake"
+ NSC_blue_dragonfire_drake_plural: "Blue Dragonfire Drakes"
+ 
+ NSC_blue_dragonfire_baby: "Blue Dragonfire Baby"
+ NSC_blue_dragonfire_baby_plural: "Blue Dragonfire Babies"
+ 
+ NSC_VIOLET_DRAGONFIRE_DRAKE: "Violet Dragonfire Drake"
+ NSC_violet_dragonfire_drake: "Violet Dragonfire Drake"
+ NSC_violet_dragonfire_drake_plural: "Violet Dragonfire Drakes"
+ 
+ NSC_violet_dragonfire_baby: "Violet Dragonfire Baby"
+ NSC_violet_dragonfire_baby_plural: "Violet Dragonfire Babies"
+ 
+ NSC_MAGENTA_DRAGONFIRE_DRAKE: "Magenta Dragonfire Drake"
+ NSC_magenta_dragonfire_drake: "Magenta Dragonfire Drake"
+ NSC_magenta_dragonfire_drake_plural: "Magenta Dragonfire Drakes"
+ 
+ NSC_magenta_dragonfire_baby: "Magenta Dragonfire Baby"
+ NSC_magenta_dragonfire_baby_plural: "Magenta Dragonfire Babies"
+ 
+ NSC_ROSE_DRAGONFIRE_DRAKE: "Rose Dragonfire Drake"
+ NSC_rose_dragonfire_drake: "Rose Dragonfire Drake"
+ NSC_rose_dragonfire_drake_plural: "Rose Dragonfire Drakes"
+ 
+ NSC_rose_dragonfire_baby: "Rose Dragonfire Baby"
+ NSC_rose_dragonfire_baby_plural: "Rose Dragonfire Babies"
+ 
+ NSC_WHITE_DRAGONFIRE_DRAKE: "Voidwalker Dragonfire Drake"
+ NSC_white_dragonfire_drake: "Voidwalker Dragonfire Drake"
+ NSC_white_dragonfire_drake_plural: "Voidwalker Dragonfire Drakes"
+ 
+ NSC_white_dragonfire_baby: "White Dragonfire Baby"
+ NSC_white_dragonfire_baby_plural: "White Dragonfire Babies"
+ 
+ PIRATE_GALLEON: "First Mate's Pirate Galleon"
+ pirate_galleon: "First Mates's Pirate Galleon"
+ pirate_galleon_plural: "First Mate's Pirate Galleons"
+ 
+ GUARDIAN_PIRATE_GALLEON: "First Mate's Pirate Galleon"
+ guardian_pirate_galleon: "First Mates's Pirate Galleon"
+ guardian_pirate_galleon_plural: "First Mate's Pirate Galleons"
+ 
+ CAPTAIN_PIRATE_GALLEON: "Carrack Pirate Galleon"
+ captain_pirate_galleon: "Carrack Pirate Galleon"
+ captain_pirate_galleon_plural: "Carrack Pirate Galleons"
+ 
+ MASTER_PIRATE_GALLEON: "Carrack Pirate Galleon"
+ master_pirate_galleon: "Carrack Pirate Galleon"
+ master_pirate_galleon_plural: "Carrack Pirate Galleons"
+ 
+ NSC_DIMENSIONAL_HORROR: "Darkspawn Dimensional Horror"
+ NSC_dimensional_horror: "Darkspawn Dimensional Horror"
+ NSC_dimensional_horror_plural: "Darkspawn Dimensional Horrors"
+ 
+ NSC_ENIGMATIC_FORTRESS: "Enigmatic Fortress"
+ NSC_enigmatic_fortress: "Enigmatic Fortress"
+ NSC_enigmatic_fortress_plural: "Enigmatic Fortress"
+ 
+ NSC_STELLARITE: "Ethereal Stellarite"
+ NSC_stellarite: "Ethereal Stellarite"
+ NSC_stellarite_plural: "Ethereal Stellarites"
+ 
+ Technosphere: "The Infinity Machine"
+ Technosphere_plural: "The Infinity Machines"
+ 
+ NSC_TECHNOSPHERE: "Infinity Machine"
+ NSC_technosphere: "Infinity Machine"
+ NSC_technosphere_plural: "Infinity Machines"
+ 
+ NSC_npc_warship_01: "Automated Dreadnought"
+ NSC_npc_warship_01_plural: "Automated Dreadnoughts"
+ 
+ NSC_AUTOMATED_DREADNOUGHT: "Sentient Dreadnought"
+ nsc_automated_dreadnought: "Sentient Dreadnought"
+ nsc_automated_dreadnought_plural: "Sentient Dreadnought"
+ 
+ NSC_AUTOMATED_DREADNOUGHT_ALTERNATIVE: "Sentient Dreadnought II"
+ nsc_automated_dreadnought_alternative: "Sentient Dreadnought II"
+ nsc_automated_dreadnought_alternative_plural: "Sentient Dreadnought IIs"
+ 
+ RED_WRAITH: "Phantom Spectral Wraith 450THz"
+ red_wraith: "Phantom Spectral Wraith 450THz"
+ red_wraith_plural: "Phantom Spectral Wraiths 450THz"
+ 
+ ORANGE_WRAITH: "Phantom Spectral Wraith 500THz"
+ orange_wraith: "Phantom Spectral Wraith 500THz"
+ orange_wraith_plural: "Phantom Spectral Wraiths 500THz"
+ 
+ YELLOW_WRAITH: "Phantom Spectral Wraith 520THz"
+ yellow_wraith: "Phantom Spectral Wraith 520THz"
+ yellow_wraith_plural: "Phantom Spectral Wraiths 520THz"
+ 
+ GREEN_WRAITH: "Phantom Spectral Wraith 550THz"
+ green_wraith: "Phantom Spectral Wraith 550THz"
+ green_wraith_plural: "Phantom Spectral Wraiths 550THz"
+ 
+ BLUE_WRAITH: "Phantom Spectral Wraith 650THz"
+ blue_wraith: "Phantom Spectral Wraith 650THz"
+ blue_wraith_plural: "Phantom Spectral Wraiths 650THz"
+ 
+ VIOLET_WRAITH: "Phantom Spectral Wraith 720THz"
+ violet_wraith: "Phantom Spectral Wraith 720THz"
+ violet_wraith_plural: "Phantom Spectral Wraiths 720THz"
+ 
+ WHITE_WRAITH: "Phantom Spectral Wraith 800THz"
+ white_wraith: "Phantom Spectral Wraith 800THz"
+ white_wraith_plural: "Phantom Spectral Wraiths 800THz"
+ 
+ BLACK_WRAITH: "Phantom Spectral Wraith 300THz"
+ black_wraith: "Phantom Spectral Wraith 300THz"
+ black_wraith_plural: "Phantom Spectral Wraiths 300THz"
+ 
+ nsc_wraith_red: "Spectral Wraith 450THz"
+ nsc_wraith_red_plural: "Spectrual Wraiths 450THz"
+ 
+ nsc_wraith_orange: "Spectral Wraith 500THz"
+ nsc_wraith_orange_plural: "Spectrual Wraiths 500THz"
+ 
+ nsc_wraith_yellow: "Spectral Wraith 520THz"
+ nsc_wraith_yellow_plural: "Spectrual Wraiths 520THz"
+ 
+ nsc_wraith_blue: "Spectral Wraith 650THz"
+ nsc_wraith_blue_plural: "Spectrual Wraiths 650THz"
+ 
+ nsc_wraith_violet: "Spectral Wraith 720THz"
+ nsc_wraith_violet_plural: "Spectrual Wraiths 720THz"
+
+ nsc_wraith_white: "Spectral Wraith 800THz"
+ nsc_wraith_white_plural: "Spectrual Wraiths 800THz"
+ 
+ nsc_wraith_black: "Spectral Wraith 300THz"
+ nsc_wraith_black_plural: "Spectrual Wraiths 300THz"
+
+ 
+ ####################################
+ # Section Template Keys
+ ####################################
+
+ NSC_red_dragonfire_drake_key: "Red Dragonfire Drake"
+ NSC_orange_dragonfire_drake_key: "Orange Dragonfire Drake"
+ NSC_yellow_dragonfire_drake_key: "Yellow Dragonfire Drake"
+ NSC_chartreuse_dragonfire_drake_key: "Chartreuse Dragonfire Drake"
+ NSC_green_dragonfire_drake_key: "Green Dragonfire Drake"
+ NSC_aquamarine_dragonfire_drake_key: "Aquamarine Dragonfire Drake"
+ NSC_cyan_dragonfire_drake_key: "Cyan Dragonfire Drake"
+ NSC_azure_dragonfire_drake_key: "Azure Dragonfire Drake"
+ NSC_blue_dragonfire_drake_key: "Blue Dragonfire Drake"
+ NSC_violet_dragonfire_drake_key: "Violet Dragonfire Drake"
+ NSC_violet_dragonfire_drake_key: "Magenta Dragonfire Drake"
+ NSC_rose_dragonfire_drake_key: "Rose Dragonfire Drake"
+ NSC_white_dragonfire_drake_key: "Voidwalker Dragonfire Drake"
+ 
+ NSC_DIMENSIONAL_HORROR_KEY: "Darkspawn Dimensional Horror"
+ 
+ ENIGMATIC_FORTRESS_KEY: "Enigmatic Fortress"
+ 
+ NSC_stellarite_key: "Ethereal Stellarite"
+ 
+ nsc_technosphere_key: "Technosphere"
+ 
+ NSC_automated_dreadnought_key: "Sentient Dreadnought"
+ NSC_automated_dreadnought_alternative_key: "Sentient Dreadnought II"
+ 
+ first_mate_pirate_galleon_key: "First Mate's Pirate Galleon"
+ captain_pirate_galleon_key: "Carrack Pirate Galleon"
+ 
+ red_wraith_key: "Red Spectral Wraith"
+ orange_wraith_key: "Orange Spectral Wraith"
+ yellow_wraith_key: "Yellow Spectral Wraith"
+ green_wraith_key: "Green Spectral Wraith"
+ blue_wraith_key: "Blue Spectral Wraith"
+ violet_wraith_key: "Violet Spectral Wraith"
+ white_wraith_key: "White Spectral Wraith"
+ 
+ ####################################
+ # Weapons
+ ####################################
+ 
+ DRAGON_WEAPON_REDFIRE: "$DRAGON_WEAPON_RED$"
+ DRAGON_WEAPON_ORANGEFIRE: "$DRAGON_WEAPON_ORANGE$"
+ DRAGON_WEAPON_YELLOWFIRE: "$DRAGON_WEAPON_YELLOW$"
+ DRAGON_WEAPON_CHARTREUSEFIRE: "$DRAGON_WEAPON_CHARTREUSE$"
+ DRAGON_WEAPON_GREENFIRE: "$DRAGON_WEAPON_GREEN$"
+ DRAGON_WEAPON_AQUAMARINEFIRE: "$DRAGON_WEAPON_AQUAMARINE$"
+ DRAGON_WEAPON_CYANFIRE: "$DRAGON_WEAPON_CYAN$"
+ DRAGON_WEAPON_AZUREFIRE: "$DRAGON_WEAPON_AZURE$"
+ DRAGON_WEAPON_BLUEFIRE: "$DRAGON_WEAPON_BLUE$"
+ DRAGON_WEAPON_VIOLETFIRE: "$DRAGON_WEAPON_VIOLET$"
+ DRAGON_WEAPON_MAGENTAFIRE: "$DRAGON_WEAPON_MAGENTA$"
+ DRAGON_WEAPON_ROSEFIRE: "$DRAGON_WEAPON_ROSE$"
+ DRAGON_WEAPON_WHITEFIRE: "$DRAGON_WEAPON_WHITE$"
+ 
+ DRAGON_WEAPON_RED: "Red Dragonfire"
+ DRAGON_WEAPON_ORANGE: "Orange Dragonfire"
+ DRAGON_WEAPON_YELLOW: "Yellow Dragonfire"
+ DRAGON_WEAPON_CHARTREUSE: "Chartreuse Dragonfire"
+ DRAGON_WEAPON_GREEN: "Green Dragonfire"
+ DRAGON_WEAPON_AQUAMARINE: "Aquamarine Dragonfire"
+ DRAGON_WEAPON_CYAN: "Cyan Dragonfire"
+ DRAGON_WEAPON_AZURE: "Azure Dragonfire"
+ DRAGON_WEAPON_BLUE: "Blue Dragonfire"
+ DRAGON_WEAPON_VIOLET: "Violet Dragonfire"
+ DRAGON_WEAPON_MAGENTA: "Magenta Dragonfire"
+ DRAGON_WEAPON_ROSE: "Rose Dragonfire"
+ DRAGON_WEAPON_WHITE: "White Dragonfire"
+ DRAGON_WEAPON_VOIDWALKER: "Voidwalker Dragonfire"
+ 
+ DRAGON_SECONDARY_WEAPON_RED: "Red Dragonfire Bolt"
+ DRAGON_SECONDARY_WEAPON_ORANGE: "Orange Dragonfire Bolt"
+ DRAGON_SECONDARY_WEAPON_YELLOW: "Yellow Dragonfire Bolt"
+ DRAGON_SECONDARY_WEAPON_CHARTREUSE: "Chartreuse Dragonfire Bolt"
+ DRAGON_SECONDARY_WEAPON_GREEN: "Green Dragonfire Bolt"
+ DRAGON_SECONDARY_WEAPON_AQUAMARINE: "Aquamarine Dragonfire Bolt"
+ DRAGON_SECONDARY_WEAPON_CYAN: "Cyan Dragonfire Bolt"
+ DRAGON_SECONDARY_WEAPON_AZURE: "Azure Dragonfire Bolt"
+ DRAGON_SECONDARY_WEAPON_BLUE: "Blue Dragonfire Bolt"
+ DRAGON_SECONDARY_WEAPON_VIOLET: "Violet Dragonfire Bolt"
+ DRAGON_SECONDARY_WEAPON_MAGENTA: "Magenta Dragonfire Bolt"
+ DRAGON_SECONDARY_WEAPON_ROSE: "Rose Dragonfire Bolt"
+ DRAGON_SECONDARY_WEAPON_WHITE: "White Dragonfire Bolt"
+ 
+ DRAGON_TERTIARY_WEAPON_RED: "Red Dragonfire Lightning"
+ DRAGON_TERTIARY_WEAPON_ORANGE: "Orange Dragonfire Lightning"
+ DRAGON_TERTIARY_WEAPON_YELLOW: "Yellow Dragonfire Lightning"
+ DRAGON_TERTIARY_WEAPON_CHARTREUSE: "Chartreuse Dragonfire Lightning"
+ DRAGON_TERTIARY_WEAPON_GREEN: "Green Dragonfire Lightning"
+ DRAGON_TERTIARY_WEAPON_AQUAMARINE: "Aquamarine Dragonfire Lightning"
+ DRAGON_TERTIARY_WEAPON_CYAN: "Cyan Dragonfire Lightning"
+ DRAGON_TERTIARY_WEAPON_AZURE: "Azure Dragonfire Lightning"
+ DRAGON_TERTIARY_WEAPON_BLUE: "Blue Dragonfire Lightning"
+ DRAGON_TERTIARY_WEAPON_VIOLET: "Violet Dragonfire Lightning"
+ DRAGON_TERTIARY_WEAPON_MAGENTA: "Magenta Dragonfire Lightning"
+ DRAGON_TERTIARY_WEAPON_ROSE: "Rose Dragonfire Lightning"
+ DRAGON_TERTIARY_WEAPON_WHITE: "White Dragonfire Lightning"
+ 
+ NSC_DIMENSIONAL_HORROR_PRIMARY_WEAPON: "Dimensional Lance"
+ NSC_DIMENSIONAL_HORROR_LARGE_WEAPON: "Dimesnional Ripper"
+ NSC_DIMENSIONAL_HORROR_MEDIUM_WEAPON: "Dimensional Render"
+ NSC_DIMENSIONAL_HORROR_SMALL_WEAPON: "Dimensional Striker"
+ NSC_DIMENSIONAL_HORROR_PD: "Dimensional Guard"
+ 
+ NSC_STELLARITE_BEAM: "Stellarite Lance"
+ NSC_STELLARITE_MISSILE: "Stellarite Torpedo"
+ NSC_STELLARITE_PLASMA: "Stellarite Plasma"
+ NSC_STELLARITE_LASER: "Stellarite Lazer"
+ 
+ DREADNOUGHT_LARGE_KINETIC_ARTILLERY: "Kinetic Artillery Cannon"
+ DREADNOUGHT_LARGE_PLASMA: "Accelarated Plasma Cannon"
+ DREADNOUGHT_LARGE_DISRUPTOR: "Pulsated Phase Disruptor"
+ DREADNOUGHT_MASS_DRIVER: "Mass Driver Cannon"
+ DREADNOUGHT_PULSAR_CYAN: "Pulsated Plasma Lance"
+ DREADNOUGHT_PULSAR_AZURE: "Pulsated Plasma Lance"
+ 
+ INFINITY_LANCE: "Infinity Lance"
+ TECHNO_LARGE_WHITE_LASER: "Large Infinity Lazer"
+ TECHNO_MEDIUM_WHITE_LASER: "Medium Infinity Lazer"
+ TECHNO_SMALL_WHITE_LASER: "Small Infinity Lazer"
+ TECHNO_WHITE_PD: "Infinity PD"
+ 
+ PHANTOM_WRAITH_RED_LASER: "450THz Emitter"
+ PHANTOM_WRAITH_BLUE_LASER: "650THz Emitter"
+ PHANTOM_WRAITH_YELLOW_LASER: "520THz Emitter"
+ PHANTOM_WRAITH_VIOLET_LASER: "720THz Emitter"
+ PHANTOM_WRAITH_GREEN_LASER: "550THz Emitter"
+ PHANTOM_WRAITH_ORANGE_LASER: "500THz Emitter"
+ PHANTOM_WRAITH_WHITE_LASER: "800THz Emitter"
+ 
+ WRAITH_ORANGE_LASER: "500THz Emitter"
+ WRAITH_VIOLET_LASER: "720THz Emitter"
+ WRAITH_WHITE_LASER: "800THz Emitter"

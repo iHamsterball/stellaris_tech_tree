@@ -1,0 +1,2837 @@
+# Vanilla Ether Drake (RED)
+ship_section_template = {
+	key = "NSC_dragonfire_drake_key"
+	ship_size = NSC_dragonfire_drake
+	fits_on_slot = mid
+	entity = "NSC_red_dragonfire_drake_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+###########################
+# Elder Dragonfire Drakes #
+###########################
+
+# Red Dragonfire Drake
+ship_section_template = {
+	key = "NSC_red_dragonfire_drake_key"
+	ship_size = NSC_red_dragonfire_drake
+	fits_on_slot = mid
+	entity = "NSC_red_dragonfire_drake_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+
+
+
+# Orange Dragonfire Drake
+ship_section_template = {
+	key = "NSC_orange_dragonfire_drake_key"
+	ship_size = NSC_orange_dragonfire_drake
+	fits_on_slot = mid
+	entity = "NSC_orange_dragonfire_drake_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+
+
+
+# Yellow Dragonfire Drake
+ship_section_template = {
+	key = "NSC_yellow_dragonfire_drake_key"
+	ship_size = NSC_yellow_dragonfire_drake
+	fits_on_slot = mid
+	entity = "NSC_yellow_dragonfire_drake_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+
+
+
+# Chartreuse Dragonfire Drake
+ship_section_template = {
+	key = "NSC_chartreuse_dragonfire_drake_key"
+	ship_size = NSC_chartreuse_dragonfire_drake
+	fits_on_slot = mid
+	entity = "NSC_chartreuse_dragonfire_drake_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+
+
+# Green Dragonfire Drake
+ship_section_template = {
+	key = "NSC_green_dragonfire_drake_key"
+	ship_size = NSC_green_dragonfire_drake
+	fits_on_slot = mid
+	entity = "NSC_green_dragonfire_drake_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+# Aquamarine Dragonfire Drake
+ship_section_template = {
+	key = "NSC_aquamarine_dragonfire_drake_key"
+	ship_size = NSC_aquamarine_dragonfire_drake
+	fits_on_slot = mid
+	entity = "NSC_aquamarine_dragonfire_drake_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+# Cyan Dragonfire Drake
+ship_section_template = {
+	key = "NSC_cyan_dragonfire_drake_key"
+	ship_size = NSC_cyan_dragonfire_drake
+	fits_on_slot = mid
+	entity = "NSC_cyan_dragonfire_drake_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+# Azure Dragonfire Drake
+ship_section_template = {
+	key = "NSC_azure_dragonfire_drake_key"
+	ship_size = NSC_azure_dragonfire_drake
+	fits_on_slot = mid
+	entity = "NSC_azure_dragonfire_drake_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+# Blue Dragonfire Drake
+ship_section_template = {
+	key = "NSC_blue_dragonfire_drake_key"
+	ship_size = NSC_blue_dragonfire_drake
+	fits_on_slot = mid
+	entity = "NSC_blue_dragonfire_drake_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+# Violet Dragonfire Drake
+ship_section_template = {
+	key = "NSC_violet_dragonfire_drake_key"
+	ship_size = NSC_violet_dragonfire_drake
+	fits_on_slot = mid
+	entity = "NSC_violet_dragonfire_drake_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+# Magenta Dragonfire Drake
+ship_section_template = {
+	key = "NSC_magenta_dragonfire_drake_key"
+	ship_size = NSC_magenta_dragonfire_drake
+	fits_on_slot = mid
+	entity = "NSC_magenta_dragonfire_drake_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+# Rose Dragonfire Drake
+ship_section_template = {
+	key = "NSC_rose_dragonfire_drake_key"
+	ship_size = NSC_rose_dragonfire_drake
+	fits_on_slot = mid
+	entity = "NSC_rose_dragonfire_drake_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+# White Dragonfire Drake
+ship_section_template = {
+	key = "NSC_white_dragonfire_drake_key"
+	ship_size = NSC_white_dragonfire_drake
+	fits_on_slot = mid
+	entity = "NSC_white_dragonfire_drake_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+##########################
+# Baby Dragonfire Drakes #
+##########################
+
+# Red Dragonfire baby
+ship_section_template = {
+	key = "NSC_red_dragonfire_baby_key"
+	ship_size = NSC_red_dragonfire_baby
+	fits_on_slot = mid
+	entity = "NSC_red_dragonfire_baby_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+
+
+
+# Orange Dragonfire baby
+ship_section_template = {
+	key = "NSC_orange_dragonfire_baby_key"
+	ship_size = NSC_orange_dragonfire_baby
+	fits_on_slot = mid
+	entity = "NSC_orange_dragonfire_baby_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+
+
+
+# Yellow Dragonfire baby
+ship_section_template = {
+	key = "NSC_yellow_dragonfire_baby_key"
+	ship_size = NSC_yellow_dragonfire_baby
+	fits_on_slot = mid
+	entity = "NSC_yellow_dragonfire_baby_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+
+
+
+# Chartreuse Dragonfire baby
+ship_section_template = {
+	key = "NSC_chartreuse_dragonfire_baby_key"
+	ship_size = NSC_chartreuse_dragonfire_baby
+	fits_on_slot = mid
+	entity = "NSC_chartreuse_dragonfire_baby_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+
+
+# Green Dragonfire baby
+ship_section_template = {
+	key = "NSC_green_dragonfire_baby_key"
+	ship_size = NSC_green_dragonfire_baby
+	fits_on_slot = mid
+	entity = "NSC_green_dragonfire_baby_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+# Aquamarine Dragonfire baby
+ship_section_template = {
+	key = "NSC_aquamarine_dragonfire_baby_key"
+	ship_size = NSC_aquamarine_dragonfire_baby
+	fits_on_slot = mid
+	entity = "NSC_aquamarine_dragonfire_baby_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+# Cyan Dragonfire baby
+ship_section_template = {
+	key = "NSC_cyan_dragonfire_baby_key"
+	ship_size = NSC_cyan_dragonfire_baby
+	fits_on_slot = mid
+	entity = "NSC_cyan_dragonfire_baby_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+# Azure Dragonfire baby
+ship_section_template = {
+	key = "NSC_azure_dragonfire_baby_key"
+	ship_size = NSC_azure_dragonfire_baby
+	fits_on_slot = mid
+	entity = "NSC_azure_dragonfire_baby_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+# Blue Dragonfire baby
+ship_section_template = {
+	key = "NSC_blue_dragonfire_baby_key"
+	ship_size = NSC_blue_dragonfire_baby
+	fits_on_slot = mid
+	entity = "NSC_blue_dragonfire_baby_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+# Violet Dragonfire baby
+ship_section_template = {
+	key = "NSC_violet_dragonfire_baby_key"
+	ship_size = NSC_violet_dragonfire_baby
+	fits_on_slot = mid
+	entity = "NSC_violet_dragonfire_baby_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+# Magenta Dragonfire baby
+ship_section_template = {
+	key = "NSC_magenta_dragonfire_baby_key"
+	ship_size = NSC_magenta_dragonfire_baby
+	fits_on_slot = mid
+	entity = "NSC_magenta_dragonfire_baby_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+# Rose Dragonfire baby
+ship_section_template = {
+	key = "NSC_rose_dragonfire_baby_key"
+	ship_size = NSC_rose_dragonfire_baby
+	fits_on_slot = mid
+	entity = "NSC_rose_dragonfire_baby_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}
+
+# White Dragonfire baby
+ship_section_template = {
+	key = "NSC_white_dragonfire_baby_key"
+	ship_size = NSC_white_dragonfire_baby
+	fits_on_slot = mid
+	entity = "NSC_white_dragonfire_baby_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}	
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}		
+	
+
+	aux_utility_slots = 1
+	large_utility_slots = 4
+}

@@ -1,0 +1,149 @@
+@entity_x				= 0
+@entity_y 				= -20
+
+
+industrial_complex_0 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = @entity_x y = @entity_y }
+
+	build_time = 1800
+
+	build_cost = {
+		minerals = 10000
+		influence = 50
+	}
+
+	maintenance = { energy = 15 }
+	
+	potential = { has_ascension_perk = ap_galactic_wonders }
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+		custom_tooltip = {
+			fail_text = "requires_surveyed_system"
+			NOT = {
+				any_planet = {
+					is_surveyed = {
+						who = prev.from
+						status = no
+					}
+				}
+			}
+		}
+	}
+	
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_survey_not_habitable"
+				is_surveyed = {			# prevent leaking habitability information
+					who = prev.from
+					status = yes
+				}
+				habitable_planet = no	# prevent the spaceport colliding with the think tank
+				habitable_structure = no
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = no
+			}
+			custom_tooltip = {
+				fail_text = "requires_not_ring_world"
+				is_ringworld = no
+			}
+		}
+	}
+	
+	ai_weight = { factor = 100 }
+	
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {}
+}
+
+industrial_complex_1 = {
+	entity = "thinktank_phase_01_entity"
+	construction_entity = "thinktank_phase_01_entity"
+	portrait = "GFX_megastructure_construction_background"
+	
+	place_entity_on_planet_plane = no
+	entity_offset = { x = @entity_x y = @entity_y }
+	
+	upgrade_from = { industrial_complex_0 }
+
+	build_time = 3600
+
+	build_cost = {
+		minerals = 25000
+		influence = 250
+	}
+	
+	monthly_production = {
+		minerals = 200
+		energy = 200
+	}
+
+	maintenance = { unity = 75 }
+}
+
+industrial_complex_2 = {
+	entity = "thinktank_phase_02_entity"
+	construction_entity = "thinktank_phase_02_entity"
+	portrait = "GFX_megastructure_construction_background"
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = @entity_x y = @entity_y }
+	
+	upgrade_from = { industrial_complex_1 }
+
+	build_time = 3600
+
+	build_cost = {
+		minerals = 40000
+		influence = 250
+	}
+
+	monthly_production = {
+		minerals = 400
+		energy = 400
+	}
+
+	maintenance = { unity = 150 }
+}
+
+industrial_complex_3 = {
+	entity = "thinktank_phase_03_entity"
+	construction_entity = "thinktank_phase_03_entity"
+	portrait = "GFX_megastructure_think_tank_background"
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = @entity_x y = @entity_y }
+	
+	upgrade_from = { industrial_complex_2 }
+
+	build_time = 3600
+
+	build_cost = {
+		minerals = 60000
+		influence = 250
+	}
+	
+	monthly_production = {
+		minerals = 600
+		energy = 600
+	}
+
+	maintenance = { unity = 250 }
+}

@@ -1,0 +1,140 @@
+#######################
+# Stellarite Weaponry #
+#######################
+
+#### Stellarite Titan Laser
+weapon_component_template = {
+	key = "NSC_STELLARITE_BEAM"
+	size = extra_large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	damage = { min = 750.0 max = 2225.0 }
+	windup = { min = 20.0 max = 30.0 } #vanilla Guardian values - time between aquiring target and projectile launch
+	total_fire_time = 150.0 #this value is "cooldown"
+	range = 120.0
+	accuracy = 0.85
+	tracking = 0
+	shield_damage = 0.75
+	armor_penetration = 0.90
+	
+	hidden = yes
+	icon = "GFX_ship_part_energy_lance_2"
+	icon_frame = 1
+	
+	#firing_arc = 25.0
+	min_range = 10.0
+	static_rotation = yes
+	
+	target_weights = {
+		npc_warship_01 = 50000
+		space_dragon_baby = 50000
+		massive_ship_fallen_empire = 50000
+		large_ship_fallen_empire = 50000
+		battleship = 50000
+		cruiser = 1500
+		destroyer = 500
+		small_ship_fallen_empire = 500
+		corvette = 100
+	}
+	
+	tags = { weapon_type_energy }
+	projectile_gfx = "stellarite_titan_laser"
+}
+
+weapon_component_template = {
+	key = "NSC_STELLARITE_MISSILE"
+	size = large
+	entity = "invisible_turret_entity"
+	type = missile
+	
+	damage = { min = 100.0 max = 500.0 }
+	windup = { min = 20.0 max = 30.0 } #vanilla Guardian values - time between aquiring target and projectile launch
+	total_fire_time = 60.0 #this value is "cooldown"
+	range = 100.0
+	accuracy = 1
+	tracking = 0.5
+	shield_damage = 1
+	shield_penetration = 1
+	
+	missile_speed = 10
+	missile_evasion = 1
+	missile_health = 100
+
+	hidden = yes
+	use_ship_kill_target = no
+	icon = "GFX_ship_part_energy_torpedo_2"
+	icon_frame = 1
+	
+	target_weights = {
+		npc_warship_01 = 2500
+		space_dragon_baby = 2500	
+		massive_ship_fallen_empire = 2500
+		large_ship_fallen_empire = 2500	
+		battleship = 2500
+		cruiser = 2500
+		destroyer = 500
+		small_ship_fallen_empire = 500
+		corvette = 100
+	}
+	
+	tags = { weapon_type_energy }
+	projectile_gfx = "stellarite_missile"
+}
+
+weapon_component_template = {
+	key = "NSC_STELLARITE_PLASMA"
+	size = large
+	entity = "invisible_turret_entity"
+	type = instant
+
+	hidden = yes
+	use_ship_kill_target = no
+	icon = "GFX_ship_part_plasma_3"
+	icon_frame = 1
+	
+	damage = { min = 150.0 max = 250.0 }
+	windup = { min = 2.0 max = 15.0 } #vanilla Guardian values - time between aquiring target and projectile launch
+	total_fire_time = 15.0 #this value is "cooldown"
+	range = 80.0
+	accuracy = 0.85
+	tracking = 0.75
+	shield_damage = 0.5
+	armor_penetration = 0.90
+	
+	target_weights = {
+		cruiser = 2500
+		destroyer = 1500
+		small_ship_fallen_empire = 1500
+		battleship = 1000
+		npc_warship_01 = 1000
+		space_dragon_baby = 1000		
+		massive_ship_fallen_empire = 1000
+		large_ship_fallen_empire = 1000		
+		corvette = 500	
+	}
+	
+	tags = { weapon_type_energy }
+	projectile_gfx = "stellarite_plasma"
+}
+
+weapon_component_template = {
+	key = "NSC_STELLARITE_LASER"
+	size = point_defence
+	entity = "invisible_turret_entity"
+	type = point_defence
+
+	hidden = yes
+	icon = "GFX_ship_part_laser_5"
+	icon_frame = 1
+	
+	damage = { min = 10.0 max = 20.0 }
+	windup = { min = 1.0 max = 1.0 } #vanilla Guardian values - time between aquiring target and projectile launch
+	total_fire_time = 10.0 #this value is "cooldown"
+	range = 20.0
+	accuracy = 0.8
+	tracking = 0.5
+	
+	tags = { weapon_type_point_defense weapon_type_energy }
+	projectile_gfx = "stellarite_pd"
+}

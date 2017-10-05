@@ -1,0 +1,434 @@
+###################################
+# NSC HABITABLE WORLD TILE SETUPS #
+###################################
+
+nsc_25_gaia_world_setup = {
+	while = {
+		limit = { any_tile = { has_deposit = yes } }
+		random_tile = {
+			limit = { has_deposit = yes }
+			clear_deposits = yes
+		}
+	}
+	every_tile = {
+		limit = { has_blocker = yes }
+		remove_blocker = yes
+	}
+	random_tile = { #Capital Tile - 7 Food
+		limit = { has_blocker = no has_building = no has_deposit = no num_adjacent_tiles > 3 }
+		add_deposit = d_vast_farmland_deposit
+		add_deposit = d_vast_farmland_deposit
+		add_deposit = d_farmland_deposit
+		random_neighboring_tile = { #5 Food
+			limit = { has_blocker = no has_building = no has_deposit = no }
+			add_deposit = d_vast_farmland_deposit
+			add_deposit = d_rich_farmland_deposit			
+		}
+		random_neighboring_tile = { #5 Energy + Betharian
+			limit = { has_blocker = no has_building = no has_deposit = no }
+			add_deposit = d_vast_energy_deposit
+			add_deposit = d_betharian_deposit
+		}
+		random_neighboring_tile = { #5 Minerals
+			limit = { has_blocker = no has_building = no has_deposit = no }
+			add_deposit = d_immense_mineral_deposit
+			add_deposit = d_mineral_deposit
+		}
+		random_neighboring_tile = { #5 Food
+			limit = { has_blocker = no has_building = no has_deposit = no }
+			add_deposit = d_vast_farmland_deposit
+			add_deposit = d_rich_farmland_deposit		
+		}
+	}
+	random_tile = { #5 Food
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_farmland_deposit
+		add_deposit = d_rich_farmland_deposit
+	}
+	random_tile = { #5 Minerals
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_mineral_deposit
+		add_deposit = d_rich_mineral_deposit
+	}
+	random_tile = { #5 Minerals
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_mineral_deposit
+		add_deposit = d_rich_mineral_deposit
+	}
+	random_tile = { #5 Energy
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_energy_deposit
+		add_deposit = d_rich_energy_deposit
+	}
+	random_tile = { #5 Energy
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_energy_deposit
+		add_deposit = d_rich_energy_deposit
+	}
+	random_tile = { #5 Engineering
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_engineering_deposit
+		add_deposit = d_rich_engineering_deposit
+	}
+	random_tile = { #5 Engineering
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_engineering_deposit
+		add_deposit = d_rich_engineering_deposit
+	}
+	random_tile = { #5 Engineering
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_engineering_deposit
+		add_deposit = d_rich_engineering_deposit
+	}
+	random_tile = { #5 Physics
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_physics_deposit
+		add_deposit = d_rich_physics_deposit
+	}
+	random_tile = { #5 Physics
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_physics_deposit
+		add_deposit = d_rich_physics_deposit
+	}
+	random_tile = { #5 Physics
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_physics_deposit
+		add_deposit = d_rich_physics_deposit
+	}
+	random_tile = { #5 Society
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_society_deposit
+		add_deposit = d_rich_society_deposit
+	}
+	random_tile = { #5 Society
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_society_deposit
+		add_deposit = d_rich_society_deposit
+	}
+	random_tile = { #5 Society + Pets
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_rich_society_deposit
+		add_deposit = d_alien_pets_deposit
+	}
+	#18 tiles randomized above. Leaves 7 blank for whatever.
+}
+
+nsc_25_wet_world_setup = {
+	while = {
+		limit = { any_tile = { has_deposit = yes } }
+		random_tile = {
+			limit = { has_deposit = yes }
+			clear_deposits = yes
+		}
+	}
+	every_tile = {
+		limit = { has_blocker = yes }
+		remove_blocker = yes
+	}
+	random_tile = { #Capital Tile - 9 Food
+		limit = { has_blocker = no has_building = no has_deposit = no num_adjacent_tiles > 3 }
+		add_deposit = d_vast_farmland_deposit
+		add_deposit = d_vast_farmland_deposit
+		add_deposit = d_vast_farmland_deposit
+		random_neighboring_tile = { #6 Food
+			limit = { has_blocker = no has_building = no has_deposit = no }
+			add_deposit = d_vast_farmland_deposit
+			add_deposit = d_vast_farmland_deposit			
+		}
+		random_neighboring_tile = { #5 Minerals
+			limit = { has_blocker = no has_building = no has_deposit = no }
+			add_deposit = d_vast_mineral_deposit
+			add_deposit = d_rich_mineral_deposit
+		}
+		random_neighboring_tile = { #6 Food
+			limit = { has_blocker = no has_building = no has_deposit = no }
+			add_deposit = d_vast_farmland_deposit
+			add_deposit = d_vast_farmland_deposit			
+		}
+		random_neighboring_tile = { #5 Energy
+			limit = { has_blocker = no has_building = no has_deposit = no }
+			add_deposit = d_vast_energy_deposit
+			add_deposit = d_rich_energy_deposit	
+		}
+	}
+	random_tile = { #5 Society + Pets
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_rich_society_deposit
+		add_deposit = d_alien_pets_deposit
+	}
+	random_tile = { #5 Society + Pets
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_rich_society_deposit
+		add_deposit = d_alien_pets_deposit
+	}
+	random_tile = { #6 Food
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_farmland_deposit
+		add_deposit = d_vast_farmland_deposit
+	}
+	random_tile = { #6 Food
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_farmland_deposit
+		add_deposit = d_vast_farmland_deposit
+	}
+	random_tile = { #6 Food
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_farmland_deposit
+		add_deposit = d_vast_farmland_deposit
+	}
+	random_tile = { #5 Minerals
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_mineral_deposit
+		add_deposit = d_rich_mineral_deposit
+	}
+	random_tile = { #5 Energy
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_energy_deposit
+		add_deposit = d_rich_energy_deposit
+	}
+	random_tile = { #5 Physics
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_physics_deposit
+		add_deposit = d_rich_physics_deposit
+	}
+	random_tile = { #5 Engineering
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_engineering_deposit
+		add_deposit = d_rich_engineering_deposit
+	}
+	random_tile = { #5 Society
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_society_deposit
+		add_deposit = d_rich_society_deposit
+	}
+	random_tile = { #5 Society
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_society_deposit
+		add_deposit = d_rich_society_deposit
+	}
+	random_tile = { #5 Society
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_society_deposit
+		add_deposit = d_rich_society_deposit
+	}
+	random_tile = { #5 Energy + Betharian
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_energy_deposit
+		add_deposit = d_betharian_deposit
+	}
+	#18 tiles randomized above. Leaves 7 blank for whatever.
+}
+
+nsc_25_dry_world_setup = {
+	while = {
+		limit = { any_tile = { has_deposit = yes } }
+		random_tile = {
+			limit = { has_deposit = yes }
+			clear_deposits = yes
+		}
+	}
+	every_tile = {
+		limit = { has_blocker = yes }
+		remove_blocker = yes
+	}
+	random_tile = { #Capital Tile - 7 Food
+		limit = { has_blocker = no has_building = no has_deposit = no num_adjacent_tiles > 3 }
+		add_deposit = d_vast_farmland_deposit
+		add_deposit = d_vast_farmland_deposit
+		add_deposit = d_farmland_deposit
+		random_neighboring_tile = { #5 Food
+			limit = { has_blocker = no has_building = no has_deposit = no }
+			add_deposit = d_vast_farmland_deposit
+			add_deposit = d_rich_farmland_deposit			
+		}
+		random_neighboring_tile = { #7 Energy + Betharian
+			limit = { has_blocker = no has_building = no has_deposit = no }
+			add_deposit = d_vast_energy_deposit
+			add_deposit = d_rich_energy_deposit
+			add_deposit = d_betharian_deposit
+		}
+		random_neighboring_tile = { #7 Energy + Betharian
+			limit = { has_blocker = no has_building = no has_deposit = no }
+			add_deposit = d_vast_energy_deposit
+			add_deposit = d_rich_energy_deposit
+			add_deposit = d_betharian_deposit
+		}
+		random_neighboring_tile = { #5 Food
+			limit = { has_blocker = no has_building = no has_deposit = no }
+			add_deposit = d_vast_farmland_deposit
+			add_deposit = d_rich_farmland_deposit		
+		}
+	}
+	random_tile = { #5 Minerals
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_mineral_deposit
+		add_deposit = d_rich_mineral_deposit
+	}
+	random_tile = { #5 Minerals
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_mineral_deposit
+		add_deposit = d_rich_mineral_deposit
+	}
+	random_tile = { #7 Energy
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_immense_energy_deposit
+		add_deposit = d_vast_energy_deposit
+	}
+	random_tile = { #7 Energy
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_immense_energy_deposit
+		add_deposit = d_vast_energy_deposit
+	}
+	random_tile = { #7 Energy
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_immense_energy_deposit
+		add_deposit = d_vast_energy_deposit
+	}
+	random_tile = { #7 Energy
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_immense_energy_deposit
+		add_deposit = d_vast_energy_deposit
+	}
+	random_tile = { #5 Engineering
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_engineering_deposit
+		add_deposit = d_rich_engineering_deposit
+	}
+	random_tile = { #5 Physics
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_physics_deposit
+		add_deposit = d_rich_physics_deposit
+	}
+	random_tile = { #5 Physics
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_physics_deposit
+		add_deposit = d_rich_physics_deposit
+	}
+	random_tile = { #5 Physics
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_physics_deposit
+		add_deposit = d_rich_physics_deposit
+	}
+	random_tile = { #5 Physics
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_physics_deposit
+		add_deposit = d_rich_physics_deposit
+	}
+	random_tile = { #5 Physics
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_physics_deposit
+		add_deposit = d_rich_physics_deposit
+	}
+	random_tile = { #5 Society + Pets
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_rich_society_deposit
+		add_deposit = d_alien_pets_deposit
+	}
+	#18 tiles randomized above. Leaves 7 blank for whatever.
+}
+
+nsc_25_frozen_world_setup = {
+	while = {
+		limit = { any_tile = { has_deposit = yes } }
+		random_tile = {
+			limit = { has_deposit = yes }
+			clear_deposits = yes
+		}
+	}
+	every_tile = {
+		limit = { has_blocker = yes }
+		remove_blocker = yes
+	}
+	random_tile = { #Capital Tile - 7 Food
+		limit = { has_blocker = no has_building = no has_deposit = no num_adjacent_tiles > 3 }
+		add_deposit = d_vast_farmland_deposit
+		add_deposit = d_vast_farmland_deposit
+		add_deposit = d_farmland_deposit
+		random_neighboring_tile = { #7 Minerals
+			limit = { has_blocker = no has_building = no has_deposit = no }
+			add_deposit = d_immense_mineral_deposit
+			add_deposit = d_vast_mineral_deposit
+		}
+		random_neighboring_tile = { #7 Minerals
+			limit = { has_blocker = no has_building = no has_deposit = no }
+			add_deposit = d_immense_mineral_deposit
+			add_deposit = d_vast_mineral_deposit
+		}
+		random_neighboring_tile = { #5 Food
+			limit = { has_blocker = no has_building = no has_deposit = no }
+			add_deposit = d_vast_farmland_deposit
+			add_deposit = d_rich_farmland_deposit			
+		}
+		random_neighboring_tile = { #5 Energy
+			limit = { has_blocker = no has_building = no has_deposit = no }
+			add_deposit = d_vast_energy_deposit
+			add_deposit = d_rich_energy_deposit	
+		}
+	}
+	random_tile = { #5 Society + Pets
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_rich_society_deposit
+		add_deposit = d_alien_pets_deposit
+	}
+	random_tile = { #5 Food
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_farmland_deposit
+		add_deposit = d_rich_farmland_deposit
+	}
+	random_tile = { #7 Minerals
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_immense_mineral_deposit
+		add_deposit = d_vast_mineral_deposit
+	}
+	random_tile = { #7 Minerals
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_immense_mineral_deposit
+		add_deposit = d_vast_mineral_deposit
+	}
+	random_tile = { #7 Minerals
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_immense_mineral_deposit
+		add_deposit = d_vast_mineral_deposit
+	}
+	random_tile = { #7 Minerals
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_immense_mineral_deposit
+		add_deposit = d_vast_mineral_deposit
+	}
+	random_tile = { #5 Physics
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_physics_deposit
+		add_deposit = d_rich_physics_deposit
+	}
+	random_tile = { #5 Engineering
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_engineering_deposit
+		add_deposit = d_rich_engineering_deposit
+	}
+	random_tile = { #5 Engineering
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_engineering_deposit
+		add_deposit = d_rich_engineering_deposit
+	}
+	random_tile = { #5 Engineering
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_engineering_deposit
+		add_deposit = d_rich_engineering_deposit
+	}
+	random_tile = { #5 Engineering
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_engineering_deposit
+		add_deposit = d_rich_engineering_deposit
+	}
+	random_tile = { #5 Engineering
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_engineering_deposit
+		add_deposit = d_rich_engineering_deposit
+	}
+	random_tile = { #5 Energy + Betharian
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		add_deposit = d_vast_energy_deposit
+		add_deposit = d_betharian_deposit
+	}
+	#18 tiles randomized above. Leaves 7 blank for whatever.
+}

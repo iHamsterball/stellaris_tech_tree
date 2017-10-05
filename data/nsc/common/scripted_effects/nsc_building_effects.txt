@@ -1,0 +1,30 @@
+######################################
+# NSC GOVERNOR MANSION CHECK EFFECTS #
+######################################
+
+count_nsc_mansions = {
+	set_variable = {
+		which = "nsc_mansions"
+		value = 0
+	}
+	every_owned_planet = { set_planet_flag = "nsc_mansion_count" }
+	while = {
+		limit = { any_owned_planet = { has_planet_flag = "nsc_mansion_count" } }
+		# XXX check that we also actually control the planet.
+		random_owned_planet = {
+			limit = { has_planet_flag = "nsc_mansion_count" }
+			if = {
+				limit = { any_tile = { has_building = building_governors_mansion } }
+				prev = {
+					change_variable = {
+						which = "nsc_mansions"
+						value = 1 # +1
+					}
+				}
+			}
+			# Make sure we dont loop forever.
+			remove_planet_flag = "nsc_mansion_count"
+			# Now we loop every owned planet with the while coding.
+		}
+	}
+}

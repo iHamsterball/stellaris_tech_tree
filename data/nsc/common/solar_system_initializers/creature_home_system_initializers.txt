@@ -1,0 +1,732 @@
+# Crystal Entities - Elites & Base
+NSC_crystal_home_system = {
+	class = sc_pulsar
+	
+	flags = { hostile_system elite_system }
+	
+	planet = {
+		class = star
+		orbit_distance = 0
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		count = { min = 2 max = 10 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	init_effect = {
+		create_crystal_country = yes
+		random_system_planet = {
+			limit = { is_star = yes }
+			event_target:crystal_country = {
+				save_event_target_as = elite1_owner
+				create_fleet = {
+					name = "NAME_Crystal_Nidus"
+					effect = {
+						set_owner = event_target:crystal_country
+						create_ship = {
+							name = "NAME_Crystal_Nidus"
+							design = "NAME_Crystal_Nidus"
+						}
+						set_location = {
+							target = prevprev
+							distance = 40
+							angle = 0
+						}
+						#set_fleet_stance = aggressive
+						#set_aggro_range_measure_from = return_point
+						#set_aggro_range = 500
+					}
+				}
+				create_fleet = {
+					name = "NAME_Ruby_Guardians"
+					effect = {
+						set_owner = event_target:crystal_country
+						while = {
+							count = 8
+							create_ship = {
+								name = ""
+								design = "NAME_Large_Crystal_Entity_Red_Elite"
+							}
+						}
+						while = {
+							count = 12
+							create_ship = {
+								name = ""
+								design = "NAME_Medium_Crystal_Entity_Red_Elite"
+							}
+						}
+						while = {
+							count = 15
+							create_ship = {
+								name = ""
+								design = "NAME_Small_Crystal_Entity_Red_Elite"
+							}
+						}
+						set_location = {
+							target = prevprev
+							distance = 40
+							angle = 72
+						}
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 500
+					}
+				}
+				create_fleet = {
+					name = "NAME_Topaz_Guardians"
+					effect = {
+						set_owner = event_target:crystal_country
+						while = {
+							count = 2
+							create_ship = {
+								name = ""
+								design = "NAME_Large_Crystal_Entity_Yellow_Elite"
+							}
+						}
+						while = {
+							count = 15
+							create_ship = {
+								name = ""
+								design = "NAME_Medium_Crystal_Entity_Yellow_Elite"
+							}
+						}
+						while = {
+							count = 18
+							create_ship = {
+								name = ""
+								design = "NAME_Small_Crystal_Entity_Yellow_Elite"
+							}
+						}
+						set_location = {
+							target = prevprev
+							distance = 40
+							angle = 144
+						}
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 500
+					}
+				}
+				create_fleet = {
+					name = "NAME_Sapphire_Guardians"
+					effect = {
+						set_owner = event_target:crystal_country
+						while = {
+							count = 5
+							create_ship = {
+								name = ""
+								design = "NAME_Large_Crystal_Entity_Blue_Elite"
+							}
+						}
+						while = {
+							count = 10
+							create_ship = {
+								name = ""
+								design = "NAME_Medium_Crystal_Entity_Blue_Elite"
+							}
+						}
+						while = {
+							count = 20
+							create_ship = {
+								name = ""
+								design = "NAME_Small_Crystal_Entity_Blue_Elite"
+							}
+						}
+						set_location = {
+							target = prevprev
+							distance = 40
+							angle = 216
+						}
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 500
+					}
+				}
+				create_fleet = {
+					name = "NAME_Emerald_Guardians"
+					effect = {
+						set_owner = event_target:crystal_country
+						while = {
+							count = 3
+							create_ship = {
+								name = ""
+								design = "NAME_Large_Crystal_Entity_Green_Elite"
+							}
+						}
+						while = {
+							count = 8
+							create_ship = {
+								name = ""
+								design = "NAME_Medium_Crystal_Entity_Green_Elite"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								name = ""
+								design = "NAME_Small_Crystal_Entity_Green_Elite"
+							}
+						}
+						set_location = {
+							target = prevprev
+							distance = 40
+							angle = 288
+						}
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 500
+					}
+				}
+			}
+		}
+	}
+
+	#No yellow system - sad
+	neighbor_system = {
+		distance = { min = 5 max = 50 }
+		initializer = "hostile_init_04" # Green Patrol variation
+	}
+
+	neighbor_system = {
+		distance = { min = 5 max = 50 }
+		initializer = "hostile_init_06" # Red variation
+	}
+	
+	neighbor_system = {
+		distance = { min = 5 max = 50 }
+		initializer = "hostile_init_02" # Blue variation
+	}
+}
+
+
+# Void Cloud Home System
+NSC_cloud_home_system = {
+	class = sc_black_hole
+
+	flags = { hostile_system void2_system }
+	
+	planet = {
+		class = star
+		orbit_distance = 0
+	}
+	
+	change_orbit = 60
+	
+	planet = {
+		count = { min = 0 max = 1 }
+		class = "pc_barren"
+		entity = "barren_planet_01_destroyed_entity"
+		size = { min = 10 max = 15 }
+	}
+	
+	change_orbit = 20
+	
+	planet = {
+		count = { min = 0 max = 1 }
+		class = "pc_barren_cold"
+		size = { min = 10 max = 20 }
+	}
+
+	init_effect = {
+		create_cloud_country = yes
+		random_system_planet = {
+			limit = { is_star = yes }
+			save_event_target_as = voidhome_star
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				random_list = {
+					30 = { #1 per
+						add_deposit = d_society_deposit
+						add_deposit = d_physics_deposit
+						add_deposit = d_engineering_deposit
+					}
+					25 = { #2 per
+						add_deposit = d_rich_society_deposit
+						add_deposit = d_rich_physics_deposit
+						add_deposit = d_rich_engineering_deposit
+					}
+					20 = { #3 per
+						add_deposit = d_vast_society_deposit
+						add_deposit = d_vast_physics_deposit
+						add_deposit = d_vast_engineering_deposit
+					}
+					15 = { #4 per
+						add_deposit = d_immense_society_deposit
+						add_deposit = d_immense_physics_deposit
+						add_deposit = d_immense_engineering_deposit
+					}
+					10 = { #6 per
+						add_deposit = d_enormous1_society_deposit
+						add_deposit = d_enormous1_physics_deposit
+						add_deposit = d_enormous1_engineering_deposit
+					}
+				}
+			}
+			event_target:cloud_country = {
+				save_event_target_as = voidhome_owner
+				create_fleet = {
+					name = "NAME_Abyssal_Host"
+					effect = {
+						set_owner = event_target:cloud_country
+						create_ship = {
+							name = ""
+							design = "NAME_Cloud_Entity"
+						}
+						create_ship = {
+							name = ""
+							design = "NAME_Cloud_Entity"
+						}
+						create_ship = {
+							name = ""
+							design = "NAME_Cloud_Entity"
+						}
+						create_ship = {
+							name = ""
+							design = "NAME_Cloud_Entity"
+						}
+						create_ship = {
+							name = ""
+							design = "NAME_Cloud_Entity"
+						}
+						create_ship = {
+							name = ""
+							design = "NAME_Cloud_Entity"
+						}
+						create_ship = {
+							name = ""
+							design = "NAME_Cloud_Entity"
+						}
+						create_ship = {
+							name = ""
+							design = "NAME_Cloud_Entity"
+						}
+						set_location = event_target:voidhome_star
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = return_point
+						set_aggro_range = 150
+					}
+				}
+				create_fleet = {
+					name = "NAME_Chasmal_Horde"
+					effect = {
+						set_owner = event_target:cloud_country
+						create_ship = {
+							name = ""
+							design = "NAME_Cloud_Entity"
+						}
+						create_ship = {
+							name = ""
+							design = "NAME_Cloud_Entity"
+						}
+						create_ship = {
+							name = ""
+							design = "NAME_Cloud_Entity"
+						}
+						create_ship = {
+							name = ""
+							design = "NAME_Cloud_Entity"
+						}
+						create_ship = {
+							name = ""
+							design = "NAME_Cloud_Entity"
+						}
+						create_ship = {
+							name = ""
+							design = "NAME_Cloud_Entity"
+						}
+						create_ship = {
+							name = ""
+							design = "NAME_Cloud_Entity"
+						}
+						create_ship = {
+							name = ""
+							design = "NAME_Cloud_Entity"
+						}
+						set_location = event_target:voidhome_star
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = return_point
+						set_aggro_range = 150
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+# Mining Drone Home
+NSC_mining_drone_home_system = {
+	class = "rl_standard_stars"
+	asteroids_distance = 120
+	
+	flags = { hostile_system drone_home_system }
+	
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 40 }
+		has_ring = no
+
+		init_effect = {
+			create_drone_country = yes
+		}
+	}
+	
+	change_orbit = 120
+	
+	planet = {
+		count = 3
+		class = random_asteroid
+		orbit_distance = 0
+		orbit_angle = 70
+
+		init_effect = {
+			create_fleet = {
+				name = "NAME_Mining_Corps"
+				effect = {
+					set_owner = event_target:drone_country
+					while = {
+						count = 36
+						create_ship = {
+							name = ""
+							design = "NAME_Ancient_Mining_Drone"
+						}
+					}
+					while = {
+						count = 9
+						create_ship = {
+							name = ""
+							design = "NAME_Ancient_Combat_Drone"
+						}
+					}
+					set_location = {
+						target = prev
+						distance = 20
+						angle = 0
+					}
+					set_formation_scale = 2
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = return_point
+					set_aggro_range = 200
+				}
+			}
+			create_fleet = {
+				name = "NAME_Asset_Protection_Unit"
+				effect = {
+					set_owner = event_target:drone_country
+					while = {
+						count = 20
+						create_ship = {
+							name = ""
+							design = "NAME_Ancient_Destroyer"
+						}
+					}
+					set_location = {
+						target = prev
+						distance = 20
+						angle = 180
+					}
+					set_formation_scale = 2
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = return_point
+					set_aggro_range = 200
+				}
+			}
+			if = {
+				limit = {
+					NOT = { exists = event_target:ore_grinder }
+				}
+				set_planet_flag = ore_grinder_planet
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_enormous3_mineral_deposit
+				}
+				create_fleet = {
+					name = "NAME_Central_Processing"
+					effect = {
+						set_owner = event_target:drone_country
+						create_ship = {
+							name = "NAME_Ore_Grinder"
+							design = "NAME_Drone_Home_Base"
+							graphical_culture = "drone"
+						}
+						set_location = prev
+						save_event_target_as = ore_grinder
+						set_fleet_flag = ore_grinder
+					}
+				}
+				else = {
+					create_mining_station = {
+						owner = event_target:drone_country
+					}
+				}
+			}
+		}
+	}
+	
+	change_orbit = -80
+	
+	planet = {
+		count = 1
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		init_effect = {
+
+		}
+	}
+	
+	change_orbit = 80
+	
+	planet = {
+		count = { min = 0 max = 2 }
+		orbit_distance = 40
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	########### Neighbor Systems ###########
+	
+	neighbor_system = {
+		distance = { min = 0 max = 50 }
+		initializer = "hostile_init_12"
+	}
+
+	neighbor_system = {
+		distance = { min = 0 max = 50 }
+		initializer = "hostile_init_12_drone_destroyer"
+	}
+}
+
+### Privateer Conglomerate
+NSC_pirate_home_system = {
+	class = random
+	asteroids_distance = 120
+
+	flags = { pirate_home_system pirate_system }
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 25 max = 75 } #There isn't anything else except the belt, why not?
+		has_ring = no
+
+		init_effect = {
+			create_pirate_country = yes
+			event_target:pirate_country = {
+				if = {
+					limit = {
+						NOT = { has_modifier = pirate_power }
+					}
+					add_modifier = {
+						modifier = pirate_power
+						days = -1
+					}
+				}
+			}
+			#create_fleet = {
+			#	name = "Pirate Refuge"
+			#	effect = {
+			#		set_owner = event_target:pirate_country
+			#		while = {
+			#			count = 12
+			#			create_ship = {
+			#				name = "Ingrate's Inferno"
+			#				design = "Pirate Lair"
+			#				graphical_culture = "pirate_01"
+			#			}
+			#		}
+			#		set_fleet_formation = {
+			#			position = { x = 0.0	y = 50.0 	}
+			#			position = { x = 28.0	y = 40.0	}
+			#			position = { x = 43.0	y = 23.0	}
+			#			position = { x = 50.0	y = 0.00	}
+			#			position = { x = 43.0	y = -23.0	}
+			#			position = { x = 28.0	y = -40.0	}
+			#			position = { x = 0.0	y = -50.0	}
+			#			position = { x = -28.0	y = -40.0	}
+			#			position = { x = -43.0	y = -23.0	}
+			#			position = { x = -50.0	y = 0.00	}
+			#			position = { x = -43.0	y = 23.0	}
+			#			position = { x = -28.0	y = 40.0	}
+			#		}
+			#		set_formation_scale = 1.0
+			#		set_location = {
+			#			target = prev
+			#			distance = 0
+			#			#angle = 330
+			#		}
+			#		set_fleet_flag = pirate_home_system_fleet
+			#	}
+			#}
+
+			create_fleet = {
+				name = "NAME_Old_Guard"
+				effect = {
+					set_owner = event_target:pirate_country
+					set_fleet_flag = pirate_home_system_fleet
+					while = {
+						count = 1
+						create_ship = {
+							name = random
+							design = "NAME_Pirate_Galleon"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 4
+						create_ship = {
+							name = random
+							design = "NAME_Black_Earl"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 4
+						create_ship = {
+							name = random
+							design = "NAME_Corsair"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 2
+						create_ship = {
+							name = random
+							design = "NAME_Marauder"
+							graphical_culture = "pirate_01"
+						}
+					}
+					set_formation_scale = 3.0
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 250
+					set_location = {
+						target = prev
+						distance = 90
+						angle = 330
+					}
+					set_fleet_flag = pirate_home_system_fleet
+				}
+			}
+
+			create_fleet = {
+				name = "NAME_Scarred_Veterans"
+				effect = {
+					set_owner = event_target:pirate_country
+					set_fleet_flag = pirate_home_system_fleet
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Corsair"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 10
+						create_ship = {
+							name = random
+							design = "NAME_Marauder"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 20
+						create_ship = {
+							name = random
+							design = "NAME_Black_Earl"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 4
+						create_ship = {
+							name = random
+							design = "NAME_Skull"
+							graphical_culture = "pirate_01"
+						}
+					}
+					set_fleet_flag = pirate_home_system_fleet
+					set_formation_scale = 2
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 250
+					set_location = {
+						target = prev
+						distance = 90
+						angle = 120
+					}
+				}
+			}
+
+			create_fleet = {
+				name = "NAME_Young_Blood"
+				effect = {
+					set_owner = event_target:pirate_country
+					create_ship_design = {
+						design = "NAME_Reaver"
+						ftl = warp
+					}
+					while = {
+						count = 10
+						create_ship = {
+							name = random
+							design = last_created_design
+							graphical_culture = "pirate_01"
+						}
+					}
+					create_ship_design = {
+						design = "NAME_Hunter"
+						ftl = warp
+					}
+					while = {
+						count = 10
+						create_ship = {
+							name = random
+							design = last_created_design
+							graphical_culture = "pirate_01"
+						}
+					}
+					create_ship_design = {
+						design = "NAME_Vagabond"
+						ftl = warp
+					}
+					while = {
+						count = 10
+						create_ship = {
+							name = random
+							design = last_created_design
+							graphical_culture = "pirate_01"
+						}
+					}
+					set_location = {
+						target = prev
+						distance = 90
+						angle = 200
+					}
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 150
+					set_fleet_flag = pirate_home_system_fleet
+					save_global_event_target_as = young_blood
+				}
+			}
+		}
+	}
+}

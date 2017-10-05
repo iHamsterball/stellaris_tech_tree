@@ -1,0 +1,29 @@
+ship_section_template = {
+	key = "DEFAULT_SCIENCESHIP_SECTION"
+	ship_size = science
+	fits_on_slot = mid
+	entity = "science_ship_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	cost = 100
+	
+	small_utility_slots = 4
+	aux_utility_slots = 1
+}
+
+ship_section_template = {
+	key = "SCIENCECRUISER_SECTION"
+	ship_size = science
+	fits_on_slot = mid
+	entity = "science_ship_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { tech_civilian_cruiser_upgrades }
+	
+	cost = 250
+	
+	small_utility_slots = 4
+	medium_utility_slots = 3
+	large_utility_slots = 1
+	aux_utility_slots = 1
+}

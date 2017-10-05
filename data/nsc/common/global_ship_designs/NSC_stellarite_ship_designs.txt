@@ -1,0 +1,527 @@
+# NSC Stellarite (Guardian Warp)
+ship_design = {
+	name = "NAME_Ethereal_Stellarite_Guardian_Warp"
+	ship_size = NSC_stellarite
+
+	section = {
+		template = "NSC_stellarite_key"
+		slot = "mid"
+		
+		component = {
+			slot = "EXTRA_LARGE_GUN_01"
+			template = "NSC_STELLARITE_BEAM"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_05"
+			template = "NSC_STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "NSC_STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_07"
+			template = "NSC_STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_08"
+			template = "NSC_STELLARITE_PLASMA"
+		}	
+		component = {
+			slot = "PD_01"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_02"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_03"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_04"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_05"
+			template = "NSC_STELLARITE_LASER"
+		}			
+		component = {
+			slot = "PD_06"
+			template = "NSC_STELLARITE_LASER"
+		}
+		component = {
+			slot = "PD_07"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_08"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}	
+	}
+	required_component="GUARDIAN_WARP"
+	required_component="STELLARITE_COMBAT_COMPUTER"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_5"
+}
+
+# NSC Stellarite (PSI Jump Drive)
+ship_design = {
+	name = "NAME_Ethereal_Stellarite_Psi_Jump"
+	ship_size = NSC_stellarite
+
+	section = {
+		template = "NSC_stellarite_key"
+		slot = "mid"
+		
+		component = {
+			slot = "EXTRA_LARGE_GUN_01"
+			template = "NSC_STELLARITE_BEAM"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_05"
+			template = "NSC_STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "NSC_STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_07"
+			template = "NSC_STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_08"
+			template = "NSC_STELLARITE_PLASMA"
+		}	
+		component = {
+			slot = "PD_01"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_02"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_03"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_04"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_05"
+			template = "NSC_STELLARITE_LASER"
+		}			
+		component = {
+			slot = "PD_06"
+			template = "NSC_STELLARITE_LASER"
+		}
+		component = {
+			slot = "PD_07"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_08"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}	
+	}
+	required_component="PSI_JUMP_DRIVE_1"
+	required_component="STELLARITE_COMBAT_COMPUTER"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_5"
+}
+
+# NSC Stellarite (Jump Drive)
+ship_design = {
+	name = "NAME_Ethereal_Stellarite_Jump"
+	ship_size = NSC_stellarite
+
+	section = {
+		template = "NSC_stellarite_key"
+		slot = "mid"
+		
+		component = {
+			slot = "EXTRA_LARGE_GUN_01"
+			template = "NSC_STELLARITE_BEAM"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_05"
+			template = "NSC_STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "NSC_STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_07"
+			template = "NSC_STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_08"
+			template = "NSC_STELLARITE_PLASMA"
+		}	
+		component = {
+			slot = "PD_01"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_02"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_03"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_04"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_05"
+			template = "NSC_STELLARITE_LASER"
+		}			
+		component = {
+			slot = "PD_06"
+			template = "NSC_STELLARITE_LASER"
+		}
+		component = {
+			slot = "PD_07"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_08"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}	
+	}
+	required_component="JUMP_DRIVE_1"
+	required_component="STELLARITE_COMBAT_COMPUTER"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_5"
+}
+
+# NSC Stellarite (Warp Drive)
+ship_design = {
+	name = "NAME_Ethereal_Stellarite_Warp"
+	ship_size = NSC_stellarite
+
+	section = {
+		template = "NSC_stellarite_key"
+		slot = "mid"
+		
+		component = {
+			slot = "EXTRA_LARGE_GUN_01"
+			template = "NSC_STELLARITE_BEAM"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_05"
+			template = "NSC_STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "NSC_STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_07"
+			template = "NSC_STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_08"
+			template = "NSC_STELLARITE_PLASMA"
+		}	
+		component = {
+			slot = "PD_01"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_02"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_03"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_04"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_05"
+			template = "NSC_STELLARITE_LASER"
+		}			
+		component = {
+			slot = "PD_06"
+			template = "NSC_STELLARITE_LASER"
+		}
+		component = {
+			slot = "PD_07"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_08"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}	
+	}
+	required_component="WARP_DRIVE_3"
+	required_component="STELLARITE_COMBAT_COMPUTER"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_5"
+}
+
+# NSC Stellarite (Hyperdrive)
+ship_design = {
+	name = "NAME_Ethereal_Stellarite_Hyper"
+	ship_size = NSC_stellarite
+
+	section = {
+		template = "NSC_stellarite_key"
+		slot = "mid"
+		
+		component = {
+			slot = "EXTRA_LARGE_GUN_01"
+			template = "NSC_STELLARITE_BEAM"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_05"
+			template = "NSC_STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "NSC_STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_07"
+			template = "NSC_STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_08"
+			template = "NSC_STELLARITE_PLASMA"
+		}	
+		component = {
+			slot = "PD_01"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_02"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_03"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_04"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_05"
+			template = "NSC_STELLARITE_LASER"
+		}			
+		component = {
+			slot = "PD_06"
+			template = "NSC_STELLARITE_LASER"
+		}
+		component = {
+			slot = "PD_07"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_08"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}	
+	}
+	required_component="HYPER_DRIVE_3"
+	required_component="STELLARITE_COMBAT_COMPUTER"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_5"
+}
+
+# NSC Stellarite (Wormhole Drive)
+ship_design = {
+	name = "NAME_Ethereal_Stellarite_Wormhole"
+	ship_size = NSC_stellarite
+
+	section = {
+		template = "NSC_stellarite_key"
+		slot = "mid"
+		
+		component = {
+			slot = "EXTRA_LARGE_GUN_01"
+			template = "NSC_STELLARITE_BEAM"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "NSC_STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_05"
+			template = "NSC_STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "NSC_STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_07"
+			template = "NSC_STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_08"
+			template = "NSC_STELLARITE_PLASMA"
+		}	
+		component = {
+			slot = "PD_01"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_02"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_03"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_04"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_05"
+			template = "NSC_STELLARITE_LASER"
+		}			
+		component = {
+			slot = "PD_06"
+			template = "NSC_STELLARITE_LASER"
+		}
+		component = {
+			slot = "PD_07"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "PD_08"
+			template = "NSC_STELLARITE_LASER"
+		}	
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}	
+	}
+	required_component="WORMHOLE_DRIVE"
+	required_component="STELLARITE_COMBAT_COMPUTER"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SHIP_SENSOR_5"
+}

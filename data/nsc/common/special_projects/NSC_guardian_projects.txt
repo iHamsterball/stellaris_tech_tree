@@ -1,0 +1,586 @@
+##################################
+# Automated Dreadnought Projects #
+##################################
+
+special_project = {
+	key = "guardian_dreadnought_original_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_automated_dreadnought
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_automated_dreadnought.101 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_dreadnought_alternative_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_automated_dreadnought
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_automated_dreadnought.102 } } }
+	on_fail = {}
+}
+
+###############################
+# Dimensional Horror Projects #
+###############################
+
+special_project = {
+	key = "guardian_horror_project"
+	tech_department = physics_technology
+	days_to_research = 730
+	picture = GFX_evt_dimensional_horror
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_dimensional_horror.4 } } }
+	on_fail = {}
+}
+
+###############################
+# Enigmatic Fortress Projects #
+###############################
+
+special_project = {
+	key = "guardian_fortress_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_enigmatic_fortress
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_enigmatic_fortress.11 } } }
+	on_fail = {}
+}
+
+#############################
+# Dragonfire Drake Projects #
+#############################
+
+special_project = {
+	key = "guardian_dragon_red_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake.101 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_dragon_orange_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake.102 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_dragon_yellow_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake.103 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_dragon_chartreuse_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake.104 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_dragon_green_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake.105 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_dragon_aquamarine_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake.106 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_dragon_cyan_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake.107 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_dragon_azure_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake.108 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_dragon_blue_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake.109 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_dragon_violet_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake.110 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_dragon_magenta_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake.111 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_dragon_rose_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake.112 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_dragon_white_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake.113 } } }
+	on_fail = {}
+}
+
+############################
+# Dragonfire Baby Projects #
+############################
+
+special_project = {
+	key = "guardian_baby_dragon_red_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake_baby.101 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_baby_dragon_orange_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake_baby.102 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_baby_dragon_yellow_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake_baby.103 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_baby_dragon_chartreuse_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake_baby.104 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_baby_dragon_green_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake_baby.105 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_baby_dragon_aquamarine_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake_baby.106 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_baby_dragon_cyan_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake_baby.107 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_baby_dragon_azure_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake_baby.108 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_baby_dragon_blue_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake_baby.109 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_baby_dragon_violet_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake_baby.110 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_baby_dragon_magenta_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake_baby.111 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_baby_dragon_rose_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake_baby.112 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_baby_dragon_white_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_ether_drake_baby.113 } } }
+	on_fail = {}
+}
+
+#######################
+# Stellarite Projects #
+#######################
+
+special_project = {
+	key = "guardian_stellarite_project"
+	tech_department = physics_technology
+	days_to_research = 730
+	picture = GFX_evt_stellarites
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_stellarite.4 } } }
+	on_fail = {}
+}
+
+#########################
+# Technosphere Projects #
+#########################
+
+special_project = {
+	key = "guardian_technosphere_project"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_technosphere
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_technosphere.4 } } }
+	on_fail = {}
+}
+
+###################
+# Wraith Projects #
+###################
+
+special_project = {
+	key = "guardian_wraith_red_project"
+	tech_department = physics_technology
+	days_to_research = 730
+	picture = GFX_evt_wraith
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_wraith.101 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_wraith_orange_project"
+	tech_department = physics_technology
+	days_to_research = 730
+	picture = GFX_evt_wraith
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_wraith.102 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_wraith_yellow_project"
+	tech_department = physics_technology
+	days_to_research = 730
+	picture = GFX_evt_wraith
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_wraith.103 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_wraith_green_project"
+	tech_department = physics_technology
+	days_to_research = 730
+	picture = GFX_evt_wraith
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_wraith.104 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_wraith_blue_project"
+	tech_department = physics_technology
+	days_to_research = 730
+	picture = GFX_evt_wraith
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_wraith.105 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_wraith_violet_project"
+	tech_department = physics_technology
+	days_to_research = 730
+	picture = GFX_evt_wraith
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_wraith.106 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_wraith_white_project"
+	tech_department = physics_technology
+	days_to_research = 730
+	picture = GFX_evt_wraith
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_wraith.107 } } }
+	on_fail = {}
+}
+
+special_project = {
+	key = "guardian_wraith_black_project"
+	tech_department = physics_technology
+	days_to_research = 730
+	picture = GFX_evt_wraith
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_wraith.108 } } }
+	on_fail = {}
+}
+
+###########################
+# Pirate Galleon Projects #
+###########################
+
+special_project = {
+	key = "captain_galleon_board"
+	days_to_research = 45
+	tech_department = engineering_technology
+	timelimit = 360
+	picture = GFX_evt_unknown_ships
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_transport = 3
+		leader = general
+	}
+
+	on_success = { owner = { country_event = { id = NSC_guardian_pirate.5 } } }
+
+	on_fail = { country_event = { id = NSC_guardian_pirate.6 } }
+}
+
+special_project = {
+	key = "captain_galleon_creation"
+	tech_department = engineering_technology
+	days_to_research = 730
+	picture = GFX_evt_unknown_ships
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+	on_success = { owner = { country_event = { id = NSC_guardian_pirate.102 } } }
+	on_fail = {}
+}
