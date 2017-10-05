@@ -260,8 +260,9 @@ def _localize_has_level(value):
 
 def _localize_has_expertise(value):
     expertise = localization_map[value]
-    if expertise.startswith('Expertise'):
-        truncated = expertise.replace('Expertise: ', '')
+    if expertise.find(':') != -1  or expertise.find('：') != -1:
+        colon_loc = 1 + expertise.find(':') + expertise.find('：')
+        truncated = expertise.replace(expertise[0:colon_loc+1], '')
         condition = ugettext('Is {} Expert').format(truncated)
     else:
         condition = ugettext('Is {}').format(expertise)
