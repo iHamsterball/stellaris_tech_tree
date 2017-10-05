@@ -208,9 +208,13 @@ def localized_strings(loc_file_paths, locale):
         need_escape_yaml = re.sub(r'^[ \t]+', '  ', resembles_yaml, flags=re.M)
         actual_yaml = re.sub(r'(?<![\\])\\(?![\'\"abenvtrfox])', r'\\\\', need_escape_yaml)
 
+
         file_data = yaml.load(actual_yaml, Loader=yaml.Loader)
         loc_map = file_data[locale_postfix[locale]]
-        loc_data.update(loc_map)
+        try:
+            loc_data.update(loc_map)
+        except TypeError:
+            eprint('Syntax error in {}, please recheck your mod file'.format(path.basename(file_path)))
 
     return loc_data
 
@@ -369,10 +373,6 @@ def generate_localized_tech(locale, version):
         tech = Technology(entry, armies, army_attachments, buildable_pops,
                           buildings, components, edicts, policies, resources,
                           spaceport_modules, tile_blockers, loc_data, at_vars)
-        if not tech.is_start_tech \
-           and tech.base_weight * tech.base_factor == 0 \
-           and len(tech.weight_modifiers) == 0:
-            continue
 
         technologies.append(tech)
 
