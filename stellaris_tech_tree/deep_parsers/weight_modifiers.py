@@ -360,6 +360,10 @@ def _localize_not_is_same_species(value):
     # Version 1.0 only
     return ugettext('Is NOT same species with ROOT species')
 
+def _localize_is_playable_country(value):
+    # New Ship Classes Mod
+    return ugettext('Is playable country') if value == 'yes' else ugettext('Is NOT playable country')
+
 def _localize_always(value):
     return ugettext('Always') if value == 'yes' else ugettext('Never')
 
