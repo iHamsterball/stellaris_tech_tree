@@ -119,14 +119,7 @@ class FeatureUnlocks:
 
     def _unlocks(self, tech_data):
         def localize(string):
-            try:
-                relocalize = lambda match: self._localize(match.group(1))
-                localized = re.sub(r'\$(\w+)\$', relocalize,
-                                   self._localize(string))
-            except KeyError:
-                localized = string
-
-            return localized
+            return self._localize(string)
 
         try:
             unlock_types = [unlock_type for unlock_type in next(iter(
@@ -184,7 +177,7 @@ class FeatureUnlocks:
     def _component_unlocks(self, tech_key):
         unlocked_components = [component for component in self._components
                               if tech_key in component.prerequisites]
-        return [ugettext('Unlocks Component: {}').format(component.name)
+        return [ugettext('Unlocks Component: {}').format(self._localize(component.name))
                 for component in unlocked_components]
 
     def _edict_unlocks(self, tech_key):
@@ -205,8 +198,8 @@ class FeatureUnlocks:
                                 for policy in self._policies]
                             for option in options]
 
-        return [ugettext('Unlocks Policy: {} - {}').format(option['policy_name'],
-                                                 option['name'])
+        return [ugettext('Unlocks Policy: {} - {}').format(self._localize(option['policy_name']),
+                                                 self._localize(option['name']))
                 for option in unlocked_options]
 
     def _resource_unlocks(self, tech_key):
