@@ -1,6 +1,7 @@
 from ..deep_parsers.feature_unlocks import FeatureUnlocks
 from ..deep_parsers.weight_modifiers import parse as parse_weight_modifiers
 from json import JSONEncoder
+import re
 
 
 class Technology:
@@ -81,12 +82,15 @@ class Technology:
 
         return is_rare
 
+    def _localize(self, key):
+        return self._loc_data[key]
+
     def _description(self):
         try:
             description = self._loc_data[self.key + '_desc']
-            self.description = (self._loc_data[description.replace('$', '')]
-                                if description.startswith('$')
-                                else description)
+            while '$' in description:
+                description = re.sub(r'\$([\w\|\+=]+)\$', self._localize, description)
+            self.description = description
         except KeyError:
             description = None
 
