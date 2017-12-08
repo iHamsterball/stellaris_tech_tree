@@ -35,8 +35,14 @@ def techs(request):
                 write_file.write(jsonified)
             data = json.loads(jsonified)
         except FileNotFoundError:
-            with open(os.path.join(folder_path, 'techs.json')) as data_file:
-                data = json.load(data_file)
+            try:
+                with open(os.path.join(folder_path, 'techs.json')) as data_file:
+                    data = json.load(data_file)
+            except FileNotFoundError:
+                jsonified = generate_localized_tech("en_us", version)
+                with open(os.path.join(folder_path, 'techs.json'), 'w') as write_file:
+                    write_file.write(jsonified)
+                data = json.loads(jsonified)
 
     #print(type(data))
 
