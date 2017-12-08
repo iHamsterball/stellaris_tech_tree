@@ -365,6 +365,14 @@ def _localize_is_playable_country(value):
     # New Ship Classes Mod
     return ugettext('Is playable country') if value == 'yes' else ugettext('Is NOT playable country')
 
+def _localize_has_not_government(value):
+    print(localization_map[value])
+    return ugettext('{} has not government').format(localization_map[value])
+
+def _localize_has_not_civic(value):
+    print(localization_map[value])
+    return ugettext('{} has not civic').format(localization_map[value])
+
 def _localize_always(value):
     return ugettext('Always') if value == 'yes' else ugettext('Never')
 
