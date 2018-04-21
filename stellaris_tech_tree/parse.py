@@ -82,14 +82,22 @@ def p_keys_empty(tokens):
 
 
 def p_statement_var_assign(tokens):
-    'statement : VARIABLE EQUALS NUMBER'
-    number = int(tokens[3]) if '.' not in tokens[3] else float(tokens[3])
+    '''statement : VARIABLE EQUALS NUMBER
+                 | VARIABLE EQUALS expression'''
+    if re.match(r'^-?\d+$', str(tokens[3])):
+        number = int(tokens[3])
+    elif re.match(r'^-?\d+\.\d+$', str(tokens[3])):
+        number = float(tokens[3])
+    else:
+        number = tokens[3]
+    #number = int(tokens[3]) if '.' not in tokens[3] else float(tokens[3])
     tokens[0] = [{tokens[1]: number}]
 
 
 def p_statement_binop(tokens):
     'statement : binop'
     tokens[0] = tokens[1]
+
 
 def p_statement_color(tokens):
     'statement : NUMBER NUMBER NUMBER NUMBER'
@@ -105,6 +113,7 @@ def p_expression_key(tokens):
     'expression : key'
     tokens[0] = tokens[1]
 
+
 def p_expression_number(tokens):
     'expression : NUMBER'
     tokens[0] = tokens[1]
@@ -113,7 +122,9 @@ def p_expression_number(tokens):
 def p_binop(tokens):
     '''binop : key EQUALS expression
              | key GTHAN expression
-             | key LTHAN expression'''
+             | key LTHAN expression
+             | key GTHANEQ expression
+             | key LTHANEQ expression'''
     operator = tokens[2]
 
     if re.match(r'^-?\d+$', str(tokens[3])):
@@ -122,7 +133,6 @@ def p_binop(tokens):
         roperand = float(tokens[3])
     else:
         roperand = tokens[3]
-
 
     tokens[0] = [{tokens[1]: roperand}] if operator == '=' else \
                 [{tokens[1]: {operator: roperand}}]
@@ -139,7 +149,7 @@ def p_expression_list(tokens):
 
 
 def p_block(tokens):
-    'block : LBRACE statements RBRACE'
+    '''block : LBRACE statements RBRACE'''
     tokens[0] = tokens[2]
 
 
@@ -204,10 +214,9 @@ def localized_strings(loc_file_paths, locale):
             not_yaml += line
 
         still_not_yaml = re.sub(r'£\w+  |§[A-Z!]', '', not_yaml)
-        resembles_yaml = re.sub(r'(?<=\w):\d (?=")', ': ', still_not_yaml)
+        resembles_yaml = re.sub(r'(?<=\w):\d+ (?=")', ': ', still_not_yaml)
         need_escape_yaml = re.sub(r'^[ \t]+', '  ', resembles_yaml, flags=re.M)
         actual_yaml = re.sub(r'(?<![\\])\\(?![\'\"abenvtrfox])', r'\\\\', need_escape_yaml)
-
 
         file_data = yaml.load(actual_yaml, Loader=yaml.Loader)
         loc_map = file_data[locale_postfix[locale]]
@@ -231,7 +240,7 @@ def generate_localized_tech(locale, version):
     spaceport_module_file_paths = []
     tile_blocker_file_paths = []
     loc_file_paths = []
-    # Great Synthetic Dawn DLC use synthetic_dawn_events as its file name
+    # Great, Synthetic Dawn DLC use synthetic_dawn_events as its file name
     skip_terms = ['^events?', 'tutorials?', 'pop_factions?', 'name_lists?',
                   'messages?', 'mandates?', 'projects?', 'sections?',
                   'triggers?', 'traits?']
@@ -309,6 +318,7 @@ def generate_localized_tech(locale, version):
                                             for file_path
                                             in tile_blocker_file_paths])
     pdx_parser = yacc()
+    
     parsed_scripts = {
         'technology': pdx_parser.parse(pdx_tech_scripts),
         'army': pdx_parser.parse(pdx_army_scripts),

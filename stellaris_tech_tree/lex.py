@@ -3,11 +3,13 @@ from ply.lex import lex
 import sys
 
 tokens = ('BAREWORD', 'STRING', 'VARIABLE', 'NUMBER', 'EQUALS', 'GTHAN', 'LTHAN',
-          'LBRACE', 'RBRACE')
+          'GTHANEQ', 'LTHANEQ', 'LBRACE', 'RBRACE')
 
 t_EQUALS = '='
 t_GTHAN = r'>'
 t_LTHAN = r'<'
+t_GTHANEQ = r'>='
+t_LTHANEQ = r'<='
 t_LBRACE = '{'
 t_RBRACE = '}'
 t_ignore = ' \t'
@@ -39,7 +41,7 @@ def t_BAREWORD(token):
 
 
 def t_VARIABLE(token):
-    '@[a-z]\w*'
+    '@[a-zA-Z]\w*'
     return token
 
 
