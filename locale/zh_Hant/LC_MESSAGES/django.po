@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-19 11:19+0000\n"
+"POT-Creation-Date: 2018-04-21 16:16+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,314 +17,465 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:139
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:140
 msgid "Unlocks Feature: "
 msgstr "功能解鎖："
 
-#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:154
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:155
 msgid "Unlocks Army: {}"
 msgstr "陸軍解鎖：{}"
 
-#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:161
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:162
 msgid "Unlocks Attachment: {}"
 msgstr "附件解鎖：{}"
 
-#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:168
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:169
 msgid "Unlocks Buildable Pop: {}"
 msgstr "可建造人口解鎖：{}"
 
-#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:174
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:175
 msgid "Unlocks Building: {}"
 msgstr "建築解鎖：{}"
 
-#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:180
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:181
 msgid "Unlocks Component: {}"
 msgstr "部件解鎖：{}"
 
-#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:186
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:187
 msgid "Unlocks Edict: {}"
 msgstr "法案解鎖：{}"
 
-#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:201
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:202
 msgid "Unlocks Policy: {} - {}"
 msgstr "政策解鎖：{} - {}"
 
-#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:208
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:209
 msgid "Reveals Resource: {} ([[{}]])"
 msgstr "顯示資源：{} ([[{}]])"
 
-#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:215
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:216
 msgid "Unlocks Module: {}"
 msgstr "模塊解鎖：{}"
 
-#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:221
+#: stellaris_tech_tree/deep_parsers/feature_unlocks.py:222
 msgid "Clear Blockers: {}"
 msgstr "可清除地塊解鎖：{}"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:59
-msgid "Has {} Ethic"
-msgstr "擁有思潮：{}"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:63
-msgid "Does NOT have {} Ethic"
-msgstr "沒有思潮：{}"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:67
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:71
-msgid "Has {} Government Civic"
-msgstr "擁有國家理念：{}"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:75
-msgid "Has {} Ascension Perk"
-msgstr "擁有飛升天賦：{}"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:79
-msgid "Has Megatructure {}"
-msgstr "擁有巨型建築：{}"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:83
-msgid "Has {} Policy"
-msgstr "擁有政策：{}"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:88
-msgid "Has {} Trait"
-msgstr "擁有物種特性：{}"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:92
-msgid "Has {} Authority"
-msgstr "擁有思潮：{}"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:96
-msgid "Host does has the {} DLC"
-msgstr "主機安裝了 {} DLC"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:100
-msgid "Host does NOT have the {} DLC"
-msgstr "主機沒有安裝 {} DLC"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:108
-msgid "Has {} Technology"
-msgstr "擁有科技：{}"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:117
-msgid "Does NOT have {} Technology"
-msgstr "沒有科技：{}"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:122
-msgid "Has the {} modifier"
-msgstr "擁有加成：{}"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:127
-msgid "Does NOT have the {} modifier"
-msgstr "沒有加成：{}"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:131
-msgid "Is of the {} country type"
-msgstr "國家類型為 {}"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:135
-msgid "Is ideal class"
-msgstr "是理想的星球類型"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:140
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:269
-msgid "Is {}"
-msgstr "擁有 {} 特質"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:145
-msgid "Has {}"
-msgstr "擁有 {}"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:149
-msgid "Is a Colony"
-msgstr "是殖民地"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:150
-msgid "Is NOT a Colony"
-msgstr "不是殖民地"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:154
-msgid "Allows Slavery"
-msgstr "允許奴役政策"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:155
-msgid "Does NOT allow Slavery"
-msgstr "禁止奴役政策"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:159
-msgid "Is in a Federation"
-msgstr "在聯邦中"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:160
-msgid "Is NOT in a Federation"
-msgstr "不在聯邦中"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:164
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:172
-msgid "Number of owned planets is {} {}"
-msgstr "擁有星球數量 {} {}"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:168
-msgid "Number of enslaved planets {} {}"
-msgstr "擁有的奴役星球數量 {} {}"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:176
-msgid "Has communications with your Empire"
-msgstr "與其他帝國存在外交關係"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:180
-msgid "Is AI controlled"
-msgstr "由 AI 控制"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:180
-msgid "Is NOT AI controlled"
-msgstr "不由 AI 控制"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:187
-msgid "Is of the {} Species"
-msgstr "是 {} 種族"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:196
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:203
-msgid "Is {} {}"
-msgstr "是 {} {}"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:207
-msgid "Pop is enslaved"
-msgstr "人口被奴役"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:207
-msgid "Pop is NOT enslaved"
-msgstr "人口未被奴役"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:212
-msgid "Number of years since game start is {} {}"
-msgstr "遊戲開始時間 {} {} 年"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:217
-msgid "Number of years since game start is NOT {} {}"
-msgstr "遊戲開始時間 {} {} 年"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:221
-msgid "Has {} country flag"
-msgstr "國家擁有 {} 標記"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:225
-msgid "Does NOT have {} country flag"
-msgstr "國家沒有 {} 標記"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:229
-msgid "Research Leader ({})"
-msgstr "科學家 ({})"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:231
-msgid "NOT "
-msgstr "沒有 "
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:252
-msgid "Skill level is {} {}"
-msgstr "技能等級 {} {}"
-
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:256
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:49
 msgid "Physics"
 msgstr "物理學研究"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:257
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:50
 msgid "Society"
 msgstr "社會學研究"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:258
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:51
 msgid "Engineering"
 msgstr "工程學研究"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:267
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:65
+msgid "Has {} Ethic"
+msgstr "擁有思潮：{}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:69
+msgid "Does NOT have {} Ethic"
+msgstr "沒有思潮：{}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:73
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:77
+msgid "Has {} Government Civic"
+msgstr "擁有國家理念：{}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:81
+msgid "Has {} Ascension Perk"
+msgstr "擁有飛升天賦：{}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:85
+msgid "Has Megatructure {}"
+msgstr "擁有巨型建築：{}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:89
+msgid "Has {} Policy"
+msgstr "人工智能政策：{}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:94
+msgid "Has {} Trait"
+msgstr "擁有物種特性：{}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:98
+msgid "Has {} Authority"
+msgstr "擁有思潮：{}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:102
+msgid "Host does has the {} DLC"
+msgstr "主機安裝了 {} DLC"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:106
+msgid "Host does NOT have the {} DLC"
+msgstr "主機沒有安裝 {} DLC"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:114
+msgid "Has {} Technology"
+msgstr "擁有科技：{}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:123
+msgid "Does NOT have {} Technology"
+msgstr "沒有科技：{}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:128
+msgid "Has the {} modifier"
+msgstr "擁有調整因素：{}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:133
+msgid "Does NOT have the {} modifier"
+msgstr "沒有調整因素：{}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:137
+msgid "Is of the {} country type"
+msgstr "國家類型為 {}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:141
+msgid "Is ideal class"
+msgstr "是理想的星球類型"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:146
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:268
+msgid "Is {}"
+msgstr "擁有 {} 特質"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:151
+msgid "Has {}"
+msgstr "擁有 {}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:155
+msgid "Is a Colony"
+msgstr "是殖民地"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:156
+msgid "Is NOT a Colony"
+msgstr "不是殖民地"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:160
+msgid "Allows Slavery"
+msgstr "允許奴役政策"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:161
+msgid "Does NOT allow Slavery"
+msgstr "禁止奴役政策"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:165
+msgid "Is in a Federation"
+msgstr "在聯邦中"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:166
+msgid "Is NOT in a Federation"
+msgstr "不在聯邦中"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:170
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:178
+msgid "Number of owned planets is {} {}"
+msgstr "擁有星球數量 {} {}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:174
+msgid "Number of enslaved planets {} {}"
+msgstr "擁有的奴役星球數量 {} {}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:182
+msgid "Has communications with your Empire"
+msgstr "與其他帝國存在外交關系"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:186
+msgid "Is AI controlled"
+msgstr "由 AI 控制"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:186
+msgid "Is NOT AI controlled"
+msgstr "不由 AI 控制"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:193
+msgid "Is of the {} Species"
+msgstr "是 {} 種族"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:202
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:209
+msgid "Is {} {}"
+msgstr "是 {} {}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:213
+msgid "Pop is enslaved"
+msgstr "人口被奴役"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:213
+msgid "Pop is NOT enslaved"
+msgstr "人口未被奴役"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:218
+msgid "Number of years since game start is {} {}"
+msgstr "遊戲開始時間 {} {} 年"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:223
+msgid "Number of years since game start is NOT {} {}"
+msgstr "遊戲開始時間 {} {} 年"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:227
+msgid "Has {} country flag"
+msgstr "國家擁有 {} 標記"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:231
+msgid "Does NOT have {} country flag"
+msgstr "國家沒有 {} 標記"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:235
+msgid "Research Leader ({})"
+msgstr "科學家 ({})"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:237
+msgid "NOT "
+msgstr "沒有 "
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:259
+msgid "Skill level is {} {}"
+msgstr "技能等級 {} {}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:266
 msgid "Is {} Expert"
 msgstr "是 {} 專家"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:276
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:275
+msgid "physics"
+msgstr "物理學研究"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:279
 msgid "Any System within Borders"
 msgstr "國境內存在星系"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:280
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:284
+msgid "NOT Any System within Borders"
+msgstr "國境內不存在星系"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:287
 msgid "Is in a {} Cluster"
 msgstr "擁有資源星系 {}"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:285
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:291
 msgid "Any Country"
 msgstr "存在國家"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:289
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:295
 msgid "Any Relation"
-msgstr "存在關係"
+msgstr "存在關系"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:293
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:299
 msgid "Any empire Pop"
 msgstr "存在帝國人口"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:297
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:303
 msgid "NOT any owned Pop"
 msgstr "沒有帝國人口"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:302
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:307
+msgid "Any Pop"
+msgstr "存在人口"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:312
 msgid "Any owned Planet"
 msgstr "帝國存在星球"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:307
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:316
 msgid "Any Planet"
 msgstr "存在星球"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:312
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:320
 msgid "NOT any owned Planet"
 msgstr "帝國不存在星球"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:317
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:324
+msgid "Any Planet within Borders"
+msgstr "國境內存在星球"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:328
 msgid "Any Tile"
 msgstr "存在地塊"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:322
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:333
 msgid "Has {} Tile Blocker"
 msgstr "有 {} 地塊障礙"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:327
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:338
 msgid "Any Neighbor Country"
 msgstr "存在鄰國"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:335
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:346
 msgid "Has {} {} {}"
 msgstr "擁有 {} {} {}"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:338
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:349
 msgid "Has any megastructure in empire"
 msgstr "帝國擁有任何巨型建築"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:341
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:349
+msgid "Does NOT have any megastructure in empire"
+msgstr "帝國沒有巨型建築"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:352
+msgid "Is FTL restricted"
+msgstr "超光速受限"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:352
+msgid "Is NOT FTL restricted"
+msgstr "超光速未受限"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:356
+msgid "{} has NOT authority"
+msgstr "不具有思潮：{}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:360
+msgid "{} Slavery for all species"
+msgstr "{} 奴役所有種族"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:366
+msgid "Is NOT same species with ROOT species"
+msgstr "沒有允許奴役所有種族"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:370
+msgid "Is playable country"
+msgstr "是可玩國家"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:370
+msgid "Is NOT playable country"
+msgstr "不是可玩國家"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:373
+msgid "Does NOT have {}"
+msgstr "沒有：{}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:376
+msgid "Does NOT have {} civic"
+msgstr "沒有國策：{}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:379
+msgid "Has {} tradition"
+msgstr "擁有傳統：{}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:382
+msgid "This Species is pre-sapient"
+msgstr "這個物種是未開化種族"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:383
+msgid "This Species is NOT pre-sapient"
+msgstr "這個物種不是未開化種族"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:389
+msgid "Has NOT encountered a {}"
+msgstr "沒有遇到過 {}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:395
+msgid "Has encountered a {}"
+msgstr "遇到過 {}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:401
+msgid "Does NOT control any system with a {}"
+msgstr "沒有控制一個包含 {} 的星系"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:407
+msgid "Controls a system with a {}"
+msgstr "控制包含一個 {} 的星系"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:410
+msgid "Is some degree of Pacifist"
+msgstr "具有和平主義"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:411
+msgid "Is NOT some degree of Pacifist"
+msgstr "不具有和平主義"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:414
+msgid "Is some degree of Militarist"
+msgstr "具有軍國主義"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:415
+msgid "Is NOT some degree of Militarist"
+msgstr "不具有軍國主義"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:418
+msgid "Is some degree of Materialist"
+msgstr "具有唯物主義"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:419
+msgid "Is NOT some degree of Materialist"
+msgstr "不具有唯物主義"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:422
+msgid "Is some degree of Spiritualist"
+msgstr "具有唯心主義"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:423
+msgid "Is NOT some degree of Spiritualist"
+msgstr "不具有唯心主義"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:428
+msgid "Number of Starbase {} is {} {}"
+msgstr "擁有恒星基地 {} 的數量 {} {}"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:431
 msgid "Always"
 msgstr "永久"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:341
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:431
 msgid "Never"
 msgstr "從不"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:346
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:436
 msgid "All of the following"
 msgstr "存在以下全部"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:351
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:441
 msgid "Any of the following"
 msgstr "存在以下任一"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:356
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:446
 msgid "None of the following"
 msgstr "不存在以下任何"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:377
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:467
 msgid "equal to"
 msgstr "等於"
 
-#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:381
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:471
 msgid "greater than"
 msgstr "大於"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:472
+msgid "less than"
+msgstr "小於"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:473
+msgid "greater than or equal to"
+msgstr "大於或等於"
+
+#: stellaris_tech_tree/deep_parsers/weight_modifiers.py:474
+msgid "less than or equal to"
+msgstr "小於或等於"
 
 #: templates/index.html:10
 msgid "STELLARIS_TECH_TREE"
 msgstr "群星科技樹"
+
+#: templates/index.html:95 templates/index.html:97
+msgid "SEARCH"
+msgstr "搜索"
+
+#: templates/index.html:125 templates/index.html:191
+msgid "EXPAND"
+msgstr "展開"
+
+#: templates/index.html:160 templates/index.html:173
+msgid "Loading..."
+msgstr "正在加載…"
+
+#: templates/index.html:183
+msgid "COLLAPSE"
+msgstr "折疊"
+
+#~ msgid "LAB"
+#~ msgstr "實驗室"
