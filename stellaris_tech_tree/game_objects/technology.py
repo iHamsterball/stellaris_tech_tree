@@ -11,10 +11,12 @@ class Technology:
         self.key = list(tech)[0]
         self._at_vars = at_vars
         self._loc_data = loc_data
-        self.name = loc_data.get(self.key, self.key)
+        #self.name = loc_data.get(self.key, self.key)
+        #print(self.key, self.name)
 
         tech_data = tech[self.key]
 
+        self.name = self._name()
         self.description = self._description()
         self.area = next(iter(key for key in tech_data
                               if list(key)[0] == 'area'))['area']
@@ -83,7 +85,17 @@ class Technology:
         return is_rare
 
     def _localize(self, key):
-        return self._loc_data[key]
+        return self._loc_data[key] if type(key) is str else self._loc_data[key.group(1)]
+
+    def _name(self):
+        name = ''
+        try:
+            name = self._loc_data[self.key]
+            while '$' in name:
+                name = re.sub(r'\$([\w\|\+=]+)\$', self._localize, name)
+        except KeyError:
+            pass
+        return name
 
     def _description(self):
         try:
@@ -112,9 +124,12 @@ class Technology:
         return prerequisites
 
     def _cost(self, tech_data):
-        string = next(iter(key for key
-                           in tech_data
-                           if list(key)[0] == 'cost'))['cost']
+        try:
+            string = next(iter(key for key
+                                in tech_data
+                                if list(key)[0] == 'cost'))['cost']
+        except StopIteration:
+            string = '0'
         return self._at_vars[string] if str(string).startswith('@') else string
 
     def _base_weight(self, tech_data):

@@ -127,7 +127,8 @@ class FeatureUnlocks:
                 if list(attribute)[0] == 'prereqfor_desc'
             ))['prereqfor_desc']]
             feature_unlocks = [localize(list(unlock.values())[0][0]['title'])
-                               for unlock in unlock_types]
+                               for unlock in unlock_types
+                               if list(unlock)[0] != 'hide_prereq_for_desc']
         except (StopIteration):
             feature_unlocks = []
 

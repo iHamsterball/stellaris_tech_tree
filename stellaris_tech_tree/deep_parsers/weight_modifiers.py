@@ -286,7 +286,6 @@ def _localize_not_any_system_within_border(values):
 def _localize_is_in_cluster(value):
     return ugettext('Is in a {} Cluster').format(value)
 
-
 def _localize_any_country(values):
     parsed_values = [_parse_condition(value) for value in values]
     return {ugettext('Any Country'): parsed_values}
@@ -303,21 +302,26 @@ def _localize_not_any_owned_pop(values):
     parsed_values = [_parse_condition(value) for value in values]
     return {ugettext('NOT any owned Pop'): parsed_values}
 
+def _localize_any_pop(values):
+    parsed_values = [_parse_condition(value) for value in values]
+    return {ugettext('Any Pop'): parsed_values}
+
 
 def _localize_any_owned_planet(values):
     parsed_values = [_parse_condition(value) for value in values]
     return {ugettext('Any owned Planet'): parsed_values}
 
-
 def _localize_any_planet(values):
     parsed_values = [_parse_condition(value) for value in values]
     return {ugettext('Any Planet'): parsed_values}
-
 
 def _localize_not_any_owned_planet(values):
     parsed_values = [_parse_condition(value) for value in values]
     return {ugettext('NOT any owned Planet'): parsed_values}
 
+def _localize_any_planet_within_border(values):
+    parsed_values = [_parse_condition(value) for value in values]
+    return {ugettext('Any Planet within Borders'): parsed_values}
 
 def _localize_any_tile(values):
     parsed_values = [_parse_condition(value) for value in values]
@@ -366,12 +370,62 @@ def _localize_is_playable_country(value):
     return ugettext('Is playable country') if value == 'yes' else ugettext('Is NOT playable country')
 
 def _localize_has_not_government(value):
-    print(localization_map[value])
-    return ugettext('{} has not government').format(localization_map[value])
+    return ugettext('Does NOT have {}').format(localization_map[value])
 
 def _localize_has_not_civic(value):
-    print(localization_map[value])
-    return ugettext('{} has not civic').format(localization_map[value])
+    return ugettext('Does NOT have {} civic').format(localization_map[value])
+
+def _localize_has_tradition(value):
+    return ugettext('Has {} tradition').format(localization_map[value])
+
+def _localize_is_sapient(value):
+    return ugettext('This Species is pre-sapient') if value == 'yes' \
+        else ugettext('This Species is NOT pre-sapient')
+
+def _localize_has_not_seen_any_bypass(value):
+    bypass = localization_map['bypass_{}'.format(value).upper()]
+    if bypass.startswith('$'):
+        bypass = localization_map[bypass.replace('$', '')]
+    return ugettext('Has NOT encountered a {}').format(bypass)
+
+def _localize_has_seen_any_bypass(value):
+    bypass = localization_map['bypass_{}'.format(value).upper()]
+    if bypass.startswith('$'):
+        bypass = localization_map[bypass.replace('$', '')]
+    return ugettext('Has encountered a {}').format(bypass)
+
+def _localize_not_owns_any_bypass(value):
+    bypass = localization_map['bypass_{}'.format(value).upper()]
+    if bypass.startswith('$'):
+        bypass = localization_map[bypass.replace('$', '')]
+    return ugettext('Does NOT control any system with a {}').format(bypass)
+
+def _localize_owns_any_bypass(value):
+    bypass = localization_map['bypass_{}'.format(value).upper()]
+    if bypass.startswith('$'):
+        bypass = localization_map[bypass.replace('$', '')]
+    return ugettext('Controls a system with a {}').format(bypass)
+
+def _localize_is_pacifist(value):
+    return ugettext('Is some degree of Pacifist') if value == 'yes' \
+        else ugettext('Is NOT some degree of Pacifist')
+
+def _localize_is_militarist(value):
+    return ugettext('Is some degree of Militarist') if value == 'yes' \
+        else ugettext('Is NOT some degree of Militarist')
+
+def _localize_is_materialist(value):
+    return ugettext('Is some degree of Materialist') if value == 'yes' \
+        else ugettext('Is NOT some degree of Materialist')
+
+def _localize_is_spiritualist(value):
+    return ugettext('Is some degree of Spiritualist') if value == 'yes' \
+        else ugettext('Is NOT some degree of Spiritualist')
+
+def _localize_count_starbase_sizes(value):
+    starbase_size = localization_map[value[0]['starbase_size']]
+    operator, value = _operator_and_value(value[1]['count'])
+    return ugettext('Number of Starbase {} is {} {}').format(starbase_size, operator, value)
 
 def _localize_always(value):
     return ugettext('Always') if value == 'yes' else ugettext('Never')
@@ -415,7 +469,9 @@ def _operator_and_value(data):
     elif type(data) is dict:
         operator = {
             '>': ugettext('greater than'),
-            '<': ugettext('less than')
+            '<': ugettext('less than'),
+            '>=': ugettext('greater than or equal to'),
+            '<=': ugettext('less than or equal to')
         }[list(data)[0]]
         value = next(iter(data.values()))
 
