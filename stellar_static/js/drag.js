@@ -12,8 +12,8 @@ function drag(elementId) {
   let element = document.getElementById(elementId);
   let minX = -element.scrollWidth + window.innerWidth;
   let minY = -element.scrollHeight + window.innerHeight;
-  let maxX = element.offsetLeft;
-  let maxY = element.offsetTop;
+  let maxX = 0;//TODO: 这里写死了高度，应当从header计算
+  let maxY = 58;//与该元素位置无关，只与窗口附近其他元素位置有关
 
   //响应键盘操作用于移动
   let key = {
