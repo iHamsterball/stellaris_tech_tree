@@ -64,10 +64,10 @@ let locale_map = {
   'ru': 'ru'
 };
 
-$(document).ready(function() {
-  generateTechTree(locale_map[document.querySelector('option[selected]').value], 'banks');
+function loadTech(version) {
+  generateTechTree(locale_map[document.querySelector('option[selected]').value], version);
   lazyLoadImg(100);
-});
+}
 
 function generateTechTree(locale, version) {
   $.getJSON('techs?locale=' + locale + '&version=' + version, 'techs.json', function(techData) {
@@ -190,6 +190,31 @@ function generateTechTree(locale, version) {
     }
 
     new Treant([config, rootNode].concat(techs));
+  })
+  .success(function() {
+    console.log('success')
+    setBanner('banner-success', gettext('Load complete.'));
+    //setTimeout(hideBanner(), 200000);
+  })
+  .fail(function( xhr, textStatus, error ) {
+    console.log(xhr.status);
+    let errmsg;
+    switch ( textStatus ) {
+      case 'error':
+        errmsg = gettext('An error occured. ');
+        break;
+      case 'timeout':
+        errmsg = gettext('Connection timeout. ');
+        break;
+      case 'parsererror':
+        errmsg = gettext('Parser error. ');
+        break;
+      default:
+        errmsg = gettext('Unhandled error. ');
+    }
+    errmsg += error;
+    console.log(errmsg);
+    setBanner('banner-error', errmsg);
   });
 }
 
@@ -213,4 +238,23 @@ function lazyLoadImg(time) {
       lazyLoadImg(time);
     }, time);
   }
+}
+
+//Banner actions
+function showBanner() {
+  document.getElementById('banner').parentNode.classList.remove('hidden');
+  console.log('Banner showed')
+}
+function hideBanner() {
+  document.getElementById('banner').parentNode.classList.add('hidden');
+  console.log('Banner hid')
+}
+function setBanner(mode, msg) {
+  hideBanner();
+  let banner = document.getElementById('banner');
+  let cur = banner.classList[1];
+  banner.classList.remove(cur);
+  banner.classList.add(mode);
+  banner.childNodes[1].innerText = msg;
+  showBanner();
 }
