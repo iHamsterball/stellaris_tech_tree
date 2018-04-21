@@ -9,70 +9,199 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>{% trans "STELLARIS_TECH_TREE" %}</title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="{% static "css/panel.css" %}">
+    <link rel="stylesheet" href="{% static "css/progress-bar.css" %}">
     <link rel="stylesheet" href="{% static "css/Treant.css" %}">
     <link rel="stylesheet" href="{% static "css/tech-tree.css" %}">
-    <link rel="stylesheet" href="{% static "vendor/perfect-scrollbar/perfect-scrollbar.css" %}">
+    <link rel="stylesheet" href="{% static "css/notosansscsliced.css" %}">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Material+Icons">
     <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
-    <style>
-html { overflow-x: hidden; overflow-y: hidden; }
-</style>
 </head>
 <body>
-    <div id="panel" style="z-index: 4; width: 100%; background-color: #ffffff;">
-        <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-            <input name="next" type="hidden" value="{{ redirect_to }}" />
-            <select name="language" onchange="this.form.submit()">
-                {% get_current_language as LANGUAGE_CODE %}
-                {% get_available_languages as LANGUAGES %}
-                {% get_language_info_list for LANGUAGES as languages %}
-                {% for language in languages %}
-                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-                        {{ language.name_local }} ({{ language.code }})
-                    </option>
-                {% endfor %}
-            </select>
-        </form>
+    <div class="wrapper">
+        <div class="panel-wrapper">
+            <div id="panel" class="panel">
+                <div class="project-name-wrapper">
+                    <a class="project-name-link" href="/stellaris/">
+                        <img src="/stellar_static/img/stellaris.bmp" class="project-logo" alt="Stellaris">
+                    </a>
+                    <span class="project-name">
+                        <a class="project-name-link" src="/stellaris/">
+                            <h1 class="project-name">Stellaris</h1>
+                        </a>
+                    </span>
+                </div>
+                
+                <div class="header-upper-tabs">
+                    <div class="header-upper-tab-container">
+                        <form class="language" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                            <input name="next" type="hidden" value="{{ redirect_to }}" />
+                            <select class="language selector" name="language" id="language" onchange="this.form.submit()" style="display: none">
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
+                                {% for language in languages %}
+                                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                        {{ language.name_local }} ({{ language.code }})
+                                    </option>
+                                {% endfor %}
+                            </select>
+                            <span class="selector">
+                                <div class="header-link">
+                                    {% get_current_language as CUR_LANGUAGE %}
+                                    {% get_language_info for CUR_LANGUAGE as cur %}
+                                    {{ cur.name_local }}
+                                </div>
+                                <ul class="menulist">
+                                    <!--<li class="menulistitem" value="de">Deutsch</li>-->
+                                    <li class="menulistitem" value="en" onclick="switchLanguage(this)">English</li>
+                                    <!--<li class="menulistitem" value="es">español</li>-->
+                                    <!--<li class="menulistitem" value="fr">français</li>-->
+                                    <!--<li class="menulistitem" value="pt-br">Português Brasileiro</li>-->
+                                    <!--<li class="menulistitem" value="ru">Русский</li>-->
+                                    <!--<li class="menulistitem" value="ja">日本語</li>-->
+                                    <li class="menulistitem" value="zh-hans" onclick="switchLanguage(this)">简体中文</li>        
+                                    <li class="menulistitem" value="zh-hant" onclick="switchLanguage(this)">繁體中文</li>
+                                    <!--<li class="menulistitem" value="ko">한국어</li>-->
+                                </ul>
+                            </span>
+                        </form>
+                    </div>
+                    <div class="header-upper-tab-container">
+                        <span class="selector">
+                            <div class="header-link">
+                                <span id="version"></span>
+                            </div>
+                            <ul class="menulist">
+                                <li class="menulistitem" onclick="switchVersion(this)" value="cherryh">Cherryh v2.0.3</li>
+                                <li class="menulistitem" onclick="switchVersion(this)" value="boulle">Boulle v1.9.1</li>
+                                <li class="menulistitem" onclick="switchVersion(this)" value="capek">Čapek v1.8.3</li>
+                                <li class="menulistitem" onclick="switchVersion(this)" value="adams">Adams v1.6.2</li>
+                                <li class="menulistitem" onclick="switchVersion(this)" value="banks">Banks v1.5.1</li>
+                                <li class="menulistitem" onclick="switchVersion(this)" value="kennedy">Kennedy v1.4.1</li>
+                                <li class="menulistitem" onclick="switchVersion(this)" value="heinlein">Heinlein v1.3.2</li>
+                                <li class="menulistitem" onclick="switchVersion(this)" value="asimov">Asimov v1.2.5</li>
+                                <li class="menulistitem" onclick="switchVersion(this)" value="clarke">Clarke v1.1.0</li>
+                                <li class="menulistitem" onclick="switchVersion(this)" value="launch">Launch v1.0.3</li>
+                                <li class="menulistitem" onclick="switchVersion(this)" value="alphamod">Alpha Mod</li>
+                                <li class="menulistitem" onclick="switchVersion(this)" value="isb">Improved Space Battles</li>
+                                <li class="menulistitem" onclick="switchVersion(this)" value="new_horizons">ST: New Horizons</li>
+                                <li class="menulistitem" onclick="switchVersion(this)" value="nsc">New Ship Classes</li>
+                            </ul>
+                        </span>
+                    </div>
+                </div>
+                
+                <form class="search-form hidden" action="#" method="GET" id="top-search" search-placeholder="{% trans "SEARCH" %}">
+                    <div id="searchbox" class="searchbox">
+                        <input placeholder="{% trans "SEARCH" %}" type="text" class="search-field search-query" 
+                            name="q" value="" autocomplete="off" onclick=""
+                            oninput="searchTech(this)" onpaste="searchTech(this)">
+                        <div class="search-image material-icons"></div>
+                    </div>
+                    <div class="search-results no-select" style="display: none">
+                        <div class="menu menu-vertical" role="menu" aria-haspopup="true">
+                            
+                            <div class="menuitem suggest-item" role="menuitem" id=":j">
+                                <div class="menuitem-content">
+                                    <a class="suggestion">
+                                        <span class="suggestion-fragment">搜索建议</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="menuitem suggest-footer" role="menuitem" id=":k">
+                                <div class="menuitem-content">
+                                    <a href="#" class="button button-white suggest-all-results">搜索建议</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
 
-        <select id="version" onchange="loadTech(document.getElementById('version').value)">
-            <option value="Čapek">Čapek v1.8.0</option>
-            <option value="adams">Adams v1.6.2</option>
-            <option value="banks">Banks v1.5.1</option>
-            <option value="kennedy">Kennedy v1.4.1</option>
-            <option value="heinlein">Heinlein v1.3.2</option>
-            <option value="asimov">Asimov v1.2.5*ParseError</option>
-            <option value="clarke">Clarke v1.1.0</option>
-            <option value="launch">Launch v1.0.3</option>
-            <option value="alphamod">Alpha Mod</option>
-            <option value="isb">Improved Space Battles</option>
-            <option value="new_horizons">ST: New Horizons</option>
-            <option value="nsc">New Ship Class</option>
-        </select>
+                <a class="top-button no-select hidden">  
+                    <div class="top-button-label header-link" id="switch" onclick="expandPanel(this)">
+                        {% trans "EXPAND" %}
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="banner-wrapper hidden">
+            <div class="banner banner-info" id="banner" onclick="hideBanner()">
+                <div class="banner-inner">Loading...</div>
+            </div>
+        </div>
     </div>
+    
+
+    <div class="chart no-select" id="tech-tree" unselectable="on" onselectstart="return false;">
+            <script src="{% static "vendor/raphael.js" %}"></script>
+            <script src="{% static "js/Treant.js" %}"></script>
+            <script src="{% static "vendor/jquery.min.js" %}"></script>
+            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+            <!--<script src="{% static "vendor/jquery.mousewheel.js" %}"></script>-->
+            <!--<script src="{% static "vendor/perfect-scrollbar/perfect-scrollbar.js" %}"></script>-->
+            <script src="{% static "js/tech-tree.js" %}"></script>
+            <script src="{% static "js/drag.js" %}"></script>
+        </div>
     <script>
-      window.addEventListener("load", function() {
-        document.getElementById('panel').style.height = '+' + window.innerHeight * 0.2 + 'px';
-        document.getElementById('panel').style.position = "absolute";
-        document.getElementById('tech-tree').style.top = '+' + window.innerHeight * 0.2 + 'px';
-        loadTech(document.getElementById('version').value);
-        waitLoadDrag('tech-tree');
-      });
-    </script>
+        if(!String.prototype.format) {
+            String.prototype.format = function() {
+                let args = arguments;
+                return this.replace(/{(\d+)}/g, function(match, number) {
+                    return typeof args[number] != 'undefined' ? args[number] : match;
+                });
+            };
+        }
+        
+        let techList;
+        window.addEventListener("load", function() {
+            setBanner('banner-info', "{% trans 'Loading...'%}");
+            version = 'cherryh';
+            loadTech(version);
+            document.getElementById('version').innerText = document.querySelector("li.menulistitem[value='{0}']".format(version)).innerText;
+            waitLoadDrag('tech-tree', 100);
+        });
 
-    <div class="chart" id="tech-tree" 
-        style="user-select: none; -moz-user-select:none; -webkit-user-select:none;" 
-        unselectable="on" onselectstart="return false;">
-        <script src="{% static "vendor/raphael.js" %}"></script>
-        <script src="{% static "js/Treant.js" %}"></script>
-        <script src="{% static "vendor/jquery.min.js" %}"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <!--<script src="{% static "vendor/jquery.mousewheel.js" %}"></script>-->
-        <!--<script src="{% static "vendor/perfect-scrollbar/perfect-scrollbar.js" %}"></script>-->
-        <script src="{% static "js/tech-tree.js" %}"></script>
-        <script src="{% static "js/drag.js" %}"></script>
-    </div>
-
-    <script type="text/javascript">
-        waitLoadDrag('tech-tree', 100);
+        function switchLanguage(self) {
+            let language = document.getElementById('language');
+            language.value = self.getAttribute('value');
+            language.addEventListener("change", language.form.submit(), false);
+        }
+        function switchVersion(self) { 
+            setBanner('banner-info', "{% trans 'Loading...'%}");
+            value = self.getAttribute('value');
+            document.getElementById('version').innerText = document.querySelector("li.menulistitem[value='{0}']".format(value)).innerText;
+            loadTech(value);
+            waitLoadDrag('tech-tree', 100);
+        }
+        function expandPanel(self) {
+            let element = document.getElementById('panel');
+            element.classList.add('expand');
+            self.classList.add('expand');
+            self.innerHTML = '{% trans "COLLAPSE" %}';
+            window.removeEventListener('click', expandPanel);
+            self.onclick = function() { collapsePanel(this); };
+        }
+        function collapsePanel(self) {
+            let element = document.getElementById('panel');
+            element.classList.remove('expand');
+            self.classList.remove('expand');
+            self.innerHTML = '{% trans "EXPAND" %}';
+            window.removeEventListener('click', collapsePanel);
+            self.onclick = function() { expandPanel(this); };
+        }
+        function searchTech(self) {
+            if (self.value != '') {
+                techList = Array.prototype.slice.call(document.querySelectorAll('p.node-name'));
+                let resultList = techList.reduce(function(result, cur) {
+                    if (cur.innerHTML.includes(self.value)) {
+                        result.push(cur);
+                    }
+                    return result;
+                }, []);
+                console.log(resultList);
+            }
+        }
     </script>
 </body>
 </html>
