@@ -35,6 +35,7 @@ class Technology:
         self.base_factor = self._base_factor(tech_data)
         self.weight_modifiers = self._weight_modifiers(tech_data)
         self.prerequisites = self._prerequisites(tech_data)
+        self.prerequisites_loc = self._prerequisites_loc(tech_data)
         self.is_start_tech = self._is_start_tech(tech_data)
         self.is_dangerous = self._is_dangerous(tech_data)
         self.is_rare = self._is_rare(tech_data)
@@ -122,6 +123,15 @@ class Technology:
                 prerequisites = []
 
         return prerequisites
+
+    def _prerequisites_loc(self, tech_data):
+        prerequisites = self.prerequisites
+        prerequisites_loc = []
+        for prerequisite in prerequisites:
+            prerequisites_loc.append(self._loc_data[prerequisite])
+
+        print(prerequisites_loc)
+        return prerequisites_loc
 
     def _cost(self, tech_data):
         try:

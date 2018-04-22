@@ -92,8 +92,11 @@ function generateTechTree(locale, version) {
 
       let $extraDataDiv = function() {
         let $descBtn = $('<p>');
+        let description = tech.prerequisites_loc.length > 0
+            ? tech.description + '</br></br>' + gettext('PREREQUISITES') + tech.prerequisites_loc.join(', ')
+            : tech.description + '</br></br>' + gettext('PREREQUISITES') + gettext('NONE');
         $descBtn.addClass('description');
-        $descBtn.attr('title', tech.description);
+        $descBtn.attr('title', description);
         $descBtn.attr('data-header', gettext("DESCRIPTION"));
         $descBtn.html('…');
         let weightModifiers = tech.weight_modifiers.length > 0
