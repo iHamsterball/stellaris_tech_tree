@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 17:43+0800\n"
+"POT-Creation-Date: 2018-04-22 20:50+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,50 +17,58 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:79
+#: tech-tree.js:79
 msgid "TIER"
 msgstr "Tier"
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:80
+#: tech-tree.js:80
 msgid "STARTING"
 msgstr "Starting"
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:83
+#: tech-tree.js:83
 msgid "COST"
 msgstr "Cost"
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:86
+#: tech-tree.js:86
 msgid "WEIGHT"
 msgstr "Weight"
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:97
+#: tech-tree.js:96 tech-tree.js:97
+msgid "PREREQUISITES"
+msgstr "Prerequisites: "
+
+#: tech-tree.js:97
+msgid "NONE"
+msgstr "None"
+
+#: tech-tree.js:100
 msgid "DESCRIPTION"
 msgstr "Description"
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:110
+#: tech-tree.js:113
 msgid "WEIGHT_MODIFIERS"
 msgstr "Weight Modifiers"
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:121
+#: tech-tree.js:124
 msgid "RESEARCH_EFFECT"
 msgstr "Research Effect"
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:196
+#: tech-tree.js:199
 msgid "Load complete."
 msgstr "Load complete."
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:204
+#: tech-tree.js:207
 msgid "An error occured. "
 msgstr "An error occured. "
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:207
+#: tech-tree.js:210
 msgid "Connection timeout. "
 msgstr "Connection timeout. "
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:210
+#: tech-tree.js:213
 msgid "Parser error. "
 msgstr "Parser error. "
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:213
+#: tech-tree.js:216
 msgid "Unhandled error. "
 msgstr "Unhandled error. "
