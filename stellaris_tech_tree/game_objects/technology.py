@@ -130,7 +130,6 @@ class Technology:
         for prerequisite in prerequisites:
             prerequisites_loc.append(self._loc_data[prerequisite])
 
-        print(prerequisites_loc)
         return prerequisites_loc
 
     def _cost(self, tech_data):
