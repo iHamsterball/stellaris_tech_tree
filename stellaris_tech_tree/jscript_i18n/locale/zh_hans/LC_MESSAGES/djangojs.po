@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 16:30+0800\n"
+"POT-Creation-Date: 2018-04-22 20:49+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,50 +18,58 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:79
+#: tech-tree.js:79
 msgid "TIER"
 msgstr "等级"
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:80
+#: tech-tree.js:80
 msgid "STARTING"
 msgstr "起始科技"
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:83
+#: tech-tree.js:83
 msgid "COST"
 msgstr "花费"
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:86
+#: tech-tree.js:86
 msgid "WEIGHT"
 msgstr "权重"
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:97
+#: tech-tree.js:96 tech-tree.js:97
+msgid "PREREQUISITES"
+msgstr "前置科技："
+
+#: tech-tree.js:97
+msgid "NONE"
+msgstr "无"
+
+#: tech-tree.js:100
 msgid "DESCRIPTION"
 msgstr "说明"
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:110
+#: tech-tree.js:113
 msgid "WEIGHT_MODIFIERS"
 msgstr "权重调整"
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:121
+#: tech-tree.js:124
 msgid "RESEARCH_EFFECT"
 msgstr "科技效果"
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:196
+#: tech-tree.js:199
 msgid "Load complete."
 msgstr "加载完成"
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:204
+#: tech-tree.js:207
 msgid "An error occured. "
 msgstr "加载错误："
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:207
+#: tech-tree.js:210
 msgid "Connection timeout. "
 msgstr "连接超时："
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:210
+#: tech-tree.js:213
 msgid "Parser error. "
 msgstr "解析错误："
 
-#: stellaris_tech_tree/jscript_i18n/tech-tree.js:213
+#: tech-tree.js:216
 msgid "Unhandled error. "
 msgstr "未处理的异常："
