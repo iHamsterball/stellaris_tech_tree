@@ -240,6 +240,7 @@ def generate_localized_tech(locale, version):
     spaceport_module_file_paths = []
     tile_blocker_file_paths = []
     loc_file_paths = []
+    scripted_variables_paths = []
     # Great, Synthetic Dawn DLC use synthetic_dawn_events as its file name
     skip_terms = ['^events?', 'tutorials?', 'pop_factions?', 'name_lists?',
                   'messages?', 'mandates?', 'projects?', 'sections?',
@@ -291,6 +292,10 @@ def generate_localized_tech(locale, version):
                        and filename.endswith(locale_postfix[locale] + '.yml')
                        and not has_skip_term.search(filename)]
 
+        scripted_variables_dir = path.join(directory, version, 'common/scripted_variables')
+        scripted_variables_paths = get_file_paths(scripted_variables_paths,
+                                                  scripted_variables_dir)
+
     loc_data = localized_strings(loc_file_paths, locale)
 
     pdx_tech_scripts = '\r\n'.join([open(file_path).read() for file_path
@@ -317,6 +322,8 @@ def generate_localized_tech(locale, version):
     pdx_tile_blocker_scripts = '\r\n'.join([open(file_path).read()
                                             for file_path
                                             in tile_blocker_file_paths])
+    pdx_scripted_variables = '\r\n'.join([open(file_path).read() for file_path
+                                    in scripted_variables_paths])
     pdx_parser = yacc()
     
     parsed_scripts = {
@@ -330,7 +337,8 @@ def generate_localized_tech(locale, version):
         'policy': pdx_parser.parse(pdx_policy_scripts),
         'resource': pdx_parser.parse(pdx_resource_scripts),
         'spaceport_module': pdx_parser.parse(pdx_spaceport_module_scripts),
-        'tile_blocker': pdx_parser.parse(pdx_tile_blocker_scripts)
+        'tile_blocker': pdx_parser.parse(pdx_tile_blocker_scripts),
+        'scripted_variables': pdx_parser.parse(pdx_scripted_variables)
     }
 
     armies = [Army(entry, loc_data) for entry in parsed_scripts['army']
@@ -371,23 +379,11 @@ def generate_localized_tech(locale, version):
                      for entry
                      in parsed_scripts['tile_blocker']
                      if not next(iter(entry)).startswith('@')]
-    # The hell do you delete cost and tier in files Paradox?
-    at_vars = {
-        '@fallentechcost' : 25000,
-        '@fallentechtier' : 5,
-        '@repeatableTechBaseCost' : 20000,
-        '@repeatableTechLevelCost' : 5000,
-        '@repeatableTechTier' : 5,
-        '@repeatableTechWeight' : 25,
-        '@repatableTechFactor' : 0.5,
-        '@horizontechcost' : 4000,
-        '@horizontechtier' : 3,
-        '@guardiantechcost' : 15000,
-        '@guardiantechtier' : 5
-    }
+    # Sorry my bad, nothing
+    at_vars = {}
     technologies = []
 
-    for entry in parsed_scripts['technology']:
+    for entry in parsed_scripts['scripted_variables']:
         if next(iter(entry)).startswith('@'):
             at_var = next(iter(entry))
             at_vars[at_var] = entry[at_var]
@@ -395,6 +391,8 @@ def generate_localized_tech(locale, version):
 
     for entry in parsed_scripts['technology']:
         if next(iter(entry)).startswith('@'):
+            at_var = next(iter(entry))
+            at_vars[at_var] = entry[at_var]
             continue
         print(entry)
 
