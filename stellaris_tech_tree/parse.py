@@ -371,7 +371,20 @@ def generate_localized_tech(locale, version):
                      for entry
                      in parsed_scripts['tile_blocker']
                      if not next(iter(entry)).startswith('@')]
-    at_vars = {}
+    # The hell do you delete cost and tier in files Paradox?
+    at_vars = {
+        '@fallentechcost' : 25000,
+        '@fallentechtier' : 5,
+        '@repeatableTechBaseCost' : 20000,
+        '@repeatableTechLevelCost' : 5000,
+        '@repeatableTechTier' : 5,
+        '@repeatableTechWeight' : 25,
+        '@repatableTechFactor' : 0.5,
+        '@horizontechcost' : 4000,
+        '@horizontechtier' : 3,
+        '@guardiantechcost' : 15000,
+        '@guardiantechtier' : 5
+    }
     technologies = []
 
     for entry in parsed_scripts['technology']:
@@ -379,6 +392,11 @@ def generate_localized_tech(locale, version):
             at_var = next(iter(entry))
             at_vars[at_var] = entry[at_var]
             continue
+
+    for entry in parsed_scripts['technology']:
+        if next(iter(entry)).startswith('@'):
+            continue
+        print(entry)
 
         tech = Technology(entry, armies, army_attachments, buildable_pops,
                           buildings, components, edicts, policies, resources,
