@@ -1,0 +1,481 @@
+﻿l_chinese_t:
+ ####################################
+ #	Pop factions
+ ####################################
+ # Demand TITLES are run straight from a pop faction with no
+ # assembled event scope, [Owner.GetName] to get country name.
+ # Tooltips, DESCS and events use the usual [Root.Owner.GetName]
+
+ FACTION_COUNTRY_SEPARATIST:0 "[parameter:owner.GetSpeciesAdj]分離主義者"
+
+ # Generic Actions
+ FACTION_ACTION_SUPPRESS_FOLLOWERS:0 "鎮壓追隨者"
+ FACTION_ACTION_SUPPRESS_FOLLOWERS_DESC:0 "讓那些異見同情者的生活變得更困難是種有效的威懾。"
+ FACTION_ACTION_SUPPRESS_FOLLOWERS_VALID:0 ""
+ FACTION_ACTION_ASSASSINATE_LEADER:0 "暗殺領袖"
+ FACTION_ACTION_ASSASSINATE_LEADER_DESC:0 "渲染那些派系群龍無首的氣氛確實能夠讓他們保持安靜，至少在一段時間內可以。"
+ FACTION_ACTION_ASSASSINATE_LEADER_INVALID:1 "在過去的三個月內，沒有發生針對派系領袖的暗殺行動"
+ FACTION_ACTION_FAVOR:0 "賞賜"
+ FACTION_ACTION_FAVOR_DESC:0 "賜予那些忠於政權的人。"
+ FACTION_ACTION_FAVOR_TOOLTIP:0 "為§Y[Root.GetName]§!的所有人群添加了§Y受賞賜§!的修正，稍微提升了幸福度。"
+ FACTION_ACTION_FAVOR_INVALID:0 "我們的關切只能每年被賜予一次，唯恐它變成一個效率低下的工具"
+ FACTION_ACTION_TYRANNIZE:0 "暴政"
+ FACTION_ACTION_TYRANNIZE_DESC:0 "蓄意降低政權的民眾支持度"
+ FACTION_ACTION_TYRANNIZE_TOOLTIP:0 "為§Y[Root.GetName]§!的所有人群添加了§Y暴政§!修正，稍微降低了幸福度。\n"
+ FACTION_ACTION_TYRANNIZE_INVALID:0 "我們只能每六個月施行一次暴政，唯恐它變成一個效率低下的工具。"
+ ACCEPT_DEMANDS_NO_ACTIVE_DEMANDS:0 "§R這個派系沒有需求§!"
+
+ # Generic Support Effects
+ SUPPORT_EFFECT_RADICALIZATION:0 "煽動風險"
+ SUPPORT_EFFECT_RADICALIZATION_DESC:0 "洶湧的激進言論增加了派系的好戰傾向。"
+ SUPPORT_EFFECT_REVOLT:0 "叛亂風險"
+ SUPPORT_EFFECT_REVOLT_DESC:0 "派繫在一個殖民地發動了武裝起義。"
+ SUPPORT_EFFECT_RIOT:0 "騷亂風險"
+ SUPPORT_EFFECT_RIOT_DESC:1 "派系騷亂，破壞了一個殖民地上的財產。"
+
+ # No Demands
+ POP_FACTION_NO_DEMANDS:0 "沒有訴求"
+ POP_FACTION_NO_DEMANDS_DESC:0 "$FACTION$派系忠於$COUNTRY$所以不會有政治訴求。"
+ POP_FACTION_NO_CURRENT_DEMANDS:0 "目前沒有訴求"
+ POP_FACTION_NO_CURRENT_DEMANDS_DESC:0 "這次$FACTION$派系沒有訴求。"
+
+# No effects
+ POP_FACTION_NO_EFFECTS:0 "沒有效應"
+ POP_FACTION_NO_EFFECTS_DESC:0 "$FACTION$派系將不會產生任何效應。"
+ POP_FACTION_NO_CURRENT_EFFECTS:0 "目前沒有效應"
+ POP_FACTION_NO_CURRENT_EFFECTS_DESC:0 "這次$FACTION$派系沒有產生任何效應。"
+
+ ### LOYALISTS
+ pft_loyalist:1 "保守派"
+ pft_loyalist_desc:1 "保守派包括了您治下那些最滿足的人群。他們沒什麼想要的東西，而且對現狀感到心滿意足。"
+ 
+ ### SEPARATIST
+
+ # Separatist Demands
+ POP_FACTION_SEPARATIST_DEMAND_TITLE_1:0 "§H[parameter:planet.GetName]ian§!自治"
+ POP_FACTION_SEPARATIST_DEMAND_DESC_1:0 "在§H[parameter:planet.GetName]§!建立新的星區作為其首都。"
+ POP_FACTION_SEPARATIST_DEMAND_TITLE_2:0 "§H[parameter:planet.GetName]ian§!獨立"
+ POP_FACTION_SEPARATIST_DEMAND_DESC_2:0 "解放§H[parameter:planet.GetName]§!作為一個獨立帝國的首都。"
+ 
+ ### PLANET SEPARATISTS
+ POP_FACTION_PLANET_SEPARATIST_DEMAND_TITLE:1 "獨立的[parameter:Planet.GetName]"
+ POP_FACTION_PLANET_SEPARATIST_DEMAND_DESC:0 "那些分離主義者想要一個獨立的§Y[parameter:Planet.GetName]§!。"
+ POP_FACTION_PLANET_SEPARATIST_STRIKES_TITLE:0 "罷工"
+ POP_FACTION_PLANET_SEPARATIST_STRIKES_DESC:0 "由於缺少勞力，星球的產出減少了。"
+ POP_FACTION_PLANET_SEPARATIST_REBELLION_TITLE:0 "叛亂"
+ POP_FACTION_PLANET_SEPARATIST_OCCUPIED:0 "星球被佔領。"
+ POP_FACTION_PLANET_SEPARATIST_COMBAT:0 "地面戰鬥"
+ POP_FACTION_PLANET_SEPARATIST_LEADER_IS_RULER:0 "派系領袖成為了國家元首。"
+ POP_FACTION_PLANET_SEPARATIST_REBELLION_DESC:1 "每一個參與派系的人口都會催生一個§R衛戍§!並試圖奪取星球的控制權。"
+ POP_FACTION_PLANET_SEPARATIST_GATHER_SUPPORT:0 "鞏固支持"
+ POP_FACTION_PLANET_SEPARATIST_GATHER_SUPPORT_DESC:0 "無論是通過改變思潮，還是減少其他人群的幸福度，都會使分離主義者的支持度上升。"
+ POP_FACTION_PLANET_SEPARATIST_REORGANIZING:0 "整頓"
+ POP_FACTION_PLANET_SEPARATIST_RECENTLY_FULL_SUPPORT:1 "星球上的所有人群都加入了一個派系。"
+ POP_FACTION_PLANET_SEPARATIST_IS_NOT_OCCUPIED:0 "星球未被佔領"
+ POP_FACTION_PLANET_SEPARATIST_NO_GROUND_COMBAT:0 "星球上沒有發生地面戰鬥"
+ POP_FACTION_PLANET_SEPARATIST_GRANT_INDEPENDENCE_TITLE:0 "准許獨立"
+ POP_FACTION_PLANET_SEPARATIST_GRANT_INDEPENDENCE_DESC:0 "准許在Y[parameter:Planet.GetName]§!的殖民地作為一個附庸國獨立。"
+ POP_FACTION_PLANET_SEPARATIST_SABOTAGE_TITLE:0 "暴亂"
+ POP_FACTION_PLANET_SEPARATIST_RECENT_SABOTAGE:0 "近期的暴亂"
+ POP_FACTION_PLANET_SEPARATIST_SABOTAGE_DESC:0 "星球上的暴亂§R毀壞§!了一座建築。"
+ POP_FACTION_PLANET_SEPARATIST_NOTHING_TO_RUIN:0 "沒有未被摧毀的建築"
+ 
+ ### Sector separatists
+ pft_sector_separatists:0 "星區分離主義者"
+ pft_sector_separatists_desc:0 "星區分離主義者會出現在星區的任何一個世界上，並試圖使臨近他們的主要星球從帝國的統治下解放出來，獲得自由。只要他們獲得了足夠多的支持，他們甚至會發動武裝起義\n\n§H星區分離主義者絕對不會出現在我們的直轄星區。§!"
+ POP_FACTION_SECTOR_SEPARATIST_DEMAND_TITLE:1 "獨立[parameter:sector.GetName]星區"
+ POP_FACTION_SECTOR_SEPARATIST_DEMAND_DESC:0 "那些星區分離主義者想要得到一個獨立的§Y[parameter:sector.GetName]星區。§!"
+ POP_FACTION_SECTOR_SEPARATIST_GRANT_INDEPENDENCE_TITLE:0 "准許獨立"
+ POP_FACTION_SECTOR_SEPARATIST_GRANT_INDEPENDENCE_DESC:0 "准許§Y[parameter:sector.GetName]Sector§!的殖民地獨立。"
+ POP_FACTION_SECTOR_SEPARATIST_IS_NOT_OCCUPIED:0 "沒有星區星球被佔領。"
+ POP_FACTION_SECTOR_SEPARATIST_NO_GROUND_COMBAT:0 "沒有星區星球發生地面戰鬥。"
+ 
+ 
+ 
+ ### NATIONALISTS
+
+ pft_nationalist:0 "回歸派系"
+ pft_nationalist_desc:0 "回歸派系的人口試圖將他們從我們的帝國中以獨立的國家身份被釋放出去，這樣他們就能重新建設他們所稱頌的國家。如果國內其他的人口發現他們作為外國的統治比我們更誘人的話，甚至連其他人口也有可能會加入他們。"
+
+ POP_FACTION_NATIONALIST_DEMAND_TITLE:0 "歸還§Y[parameter:country.GetName]§!"
+ POP_FACTION_NATIONALIST_DEMAND_DESC:0 "將所有有屬於這個派系人口的行星歸還給§H[parameter:country.GetName]§!。"
+ POP_FACTION_NATIONALIST_SABOTAGE_TITLE:0 "蓄意破壞"
+ POP_FACTION_NATIONALIST_SABOTAGE_DESC:0 "這個派系的成員§R毀壞§!了一棟建築"
+ POP_FACTION_NATIONALIST_CORRUPTION_TITLE:0 "腐化"
+ POP_FACTION_NATIONALIST_CORRUPTION_DESC:1 "所有星球上屬於這個派系的人口的產出減少"
+ POP_FACTION_NATIONALIST_REBELLION_TITLE:0 "叛亂"
+ POP_FACTION_NATIONALIST_REBELLION_DESC:1 "$POP_FACTION_PLANET_SEPARATIST_REBELLION_DESC$"
+ POP_FACTION_NATIONALIST_LEADER_IS_RULER:1 "派系領袖成為了國家元首"
+ POP_FACTION_NATIONALIST_RECENT_SABOTAGE:0 "近期的破壞"
+ POP_FACTION_NATIONALIST_MEMBERS_OCCUPIED:0 "佔領"
+ POP_FACTION_NATIONALIST_MEMBERS_GROUND_COMBAT:0 "地面戰鬥"
+ POP_FACTION_NATIONALIST_INTEGRATION_CAMPAIGN_1_TITLE:0 "一體化運動 I"
+ POP_FACTION_NATIONALIST_INTEGRATION_CAMPAIGN_1_DESC:0 "減少民族主義者的挫折感，幫助他們融入新社會。"
+ POP_FACTION_NATIONALIST_INTEGRATION_CAMPAIGN_2_TITLE:0 "一體化運動 II"
+ POP_FACTION_NATIONALIST_INTEGRATION_CAMPAIGN_2_DESC:0 "減少民族主義者的挫折感，幫助他們進一步融入新社會。"
+ POP_FACTION_NATIONALIST_INTEGRATION_CAMPAIGN_3_TITLE:0 "一體化運動 III"
+ POP_FACTION_NATIONALIST_INTEGRATION_CAMPAIGN_3_DESC:0 "減少民族主義者的挫折感，幫助他們更進一步融入新社會。"
+ POP_FACTION_NATIONALIST_RELEASE_PLANETS_TITLE:0 "歸還星球"
+ POP_FACTION_NATIONALIST_RELEASE_PLANETS_DESC:0 "將所有有屬於這個派系人口的所有行星歸還給§Y[parameter:country.GetName]§!。"
+ POP_FACTION_NATIONALIST_RELEASE_PLANETS_OCCUPIED:0 "行星均未被佔領。"
+ POP_FACTION_NATIONALIST_RELEASE_PLANETS_COMBAT:0 "行星均未發生地面戰鬥。"
+
+ ### SLAVES
+
+ slave_attraction_title:0 "§R---§!"
+ docile_slaves_attraction_desc:0 "被奴役的人群，如果不是沒有感情的機器人，永遠會被歸為某一個奴隸派系。其他人群不會加入。\n\n§H這個值表示的是奴隸溫順派對人群的吸引力§!"
+
+ malcontent_slaves_attraction_desc:0 "被奴役的人群，如果不是沒有感情的機器人，永遠會被歸為某一個奴隸派系。其他人群不會加入。\n\n§H這個值表示的是奴隸反抗派對人群的吸引力§!"
+
+ purged_attraction_title:1 "§R---§!"
+ purged_attraction_desc:1 "除了機械類型的 人口，被淨化的人口總是歸屬於反淨化派系。\n\n其他人口不會加入。"
+
+ # Slave Demands
+ pft_slave:1 "奴隸派系"
+ pft_slave_desc:1 "奴隸派系是由我國受奴役的人群組成的。他們的基礎要求是翻身當家做主人。\n\n§H所有被奴役的人口會自動加入這一派系§!"
+
+ pft_docile_slaves:0 "奴隸溫順派"
+ pft_docile_slaves_desc:0 "奴隸溫順派由帝國奴役人群的一部分組成。他們會順從統治者的意志，僅僅希望工作調節能有些許的改善。\n\n§H所有奴隸都會在溫順派和反抗派中選擇一個§!"
+
+ pft_malcontent_slaves:0 "奴隸反抗派"
+ pft_malcontent_slaves_desc:0 "奴隸溫順派由帝國奴役人群的一部分組成。他們永遠伺機反叛，謀求解放。\n\n§H所有奴隸都會在溫順派和反抗派中選擇一個。§!"
+
+ pft_emancipation:0 "$POP_FACTION_SLAVE_DEMAND_TITLE_1$"
+ pft_emancipation_desc:1 "這個派系希望廢除奴隸制。"
+
+ POP_FACTION_DOCILE_SLAVES_DEMAND_TITLE_1:0 "有規範的奴隸制"
+ POP_FACTION_DOCILE_SLAVES_DEMAND_DESC_1:0 "在這個派系中的人群希望能夠實行§H奴隸制規範§!政策，以改善奴隸的工作環境。"
+
+ POP_FACTION_MALCONTENT_SLAVES_DEMAND_TITLE_1:0 "$POP_FACTION_SLAVE_DEMAND_TITLE_1$"
+ POP_FACTION_MALCONTENT_SLAVES_DEMAND_DESC_1:0 "$POP_FACTION_SLAVE_DEMAND_DESC_1$"
+ POP_FACTION_SLAVE_DEMAND_TITLE_1:1 "解放者"
+ POP_FACTION_SLAVE_DEMAND_DESC_1:1 "這個派系的人口只有一個簡單的要求：得到自由。"
+ FACTION_ACTION_SLAVE_EMANCIPATE_ALL:0 "解放奴隸"
+ FACTION_ACTION_SLAVE_EMANCIPATE_ALL_DESC:1 "解放每一個被奴役的人口。"
+
+ # Slave Actions
+ FACTION_ACTION_MALCONTENT_SLAVES_INTERSTELLAR_RAILROAD_TOOLTIP_1: "派系中目前有至少§R4§!個人口。"
+ FACTION_ACTION_MALCONTENT_SLAVES_INTERSTELLAR_RAILROAD_TOOLTIP_2:1 "派系中目前有至少§R6§!個人口。"
+ FACTION_ACTION_MALCONTENT_SLAVES_INTERSTELLAR_RAILROAD_TOOLTIP_3:1 "派系中目前有至少§R8§!個人口。"
+ FACTION_ACTION_MALCONTENT_SLAVES_INTERSTELLAR_RAILROAD_TOOLTIP_4:1 "派系中目前有超過§R10§!個人口。"
+ FACTION_ACTION_SLAVE_HARSH_TREATMENT:0 "嚴正以待"
+ FACTION_ACTION_SLAVE_HARSH_TREATMENT_DESC:0 "把奴隸放回他們該待的位置。"
+ FACTION_ACTION_SLAVE_FORCE_FEEDING:0 "強制餵食"
+ FACTION_ACTION_SLAVE_FORCE_FEEDING_DESC:0 " 強行給那些絕食者們餵食。"
+
+ docile_slaves_demand_fulfilled:0 "他們的訴求已經得到滿足，現階段他們不會造成任何影響，也不會採取任何手段針對我們。"
+
+ # Slave Support Effects
+
+ POP_FACTION_DOCILE_SLAVES_UNREST:0 "不滿"
+ POP_FACTION_DOCILE_SLAVES_UNREST_DESC:0 "在奴隸內部迴盪著不滿的聲音和言論，這降低了有奴星球的產出和幸福度。"
+ POP_FACTION_DOCILE_SLAVES_RECENT_UNREST:0 "上次騷亂的餘韻還久久未曾消去。"
+
+ POP_FACTION_DOCILE_SLAVES_ROVING_GANGS:0 "暴力反抗"
+ POP_FACTION_DOCILE_SLAVES_ROVING_GANGS_DESC:0 "不滿的奴隸們選擇了罷工，並和其他非奴隸的人口產生了衝突。"
+ POP_FACTION_DOCILE_SLAVES_RECENT_ROVING_GANGS:0 "不滿的奴隸們還沒有開始組織到一塊。"
+
+ POP_FACTION_DOCILE_SLAVES_RADICALIZATION:0 "煽動行為"
+ POP_FACTION_DOCILE_SLAVES_RADICALIZATION_DESC:0 "好幾個奴隸族群被煽動，加入了奴隸反抗派。"
+ POP_FACTION_DOCILE_SLAVES_RECENT_RADICALIZATION:0 "自從上次煽動運動爆發之後，群眾的不滿還沒有達到不可收拾的地步。"
+
+ POP_FACTION_MALCONTENT_SLAVES_INTERSTELLAR_RAILROAD:0 "星際鐵路組織"
+ POP_FACTION_MALCONTENT_SLAVES_INTERSTELLAR_RAILROAD_DESC:0 "一群有組織的努力打算將幾個被奴役的人口偷偷送出我們帝國。"
+ POP_FACTION_MALCONTENT_SLAVES_RECENT_INTERSTELLAR_RAILROAD:0 "自從上次鐵路組織成功偷運之後，派系的活動就偃旗息鼓了。"
+
+ POP_FACTION_MALCONTENT_SLAVES_RIOTS:0 "奴隸暴動"
+ POP_FACTION_MALCONTENT_SLAVES_RIOTS_DESC:0 "不滿的奴隸走上街頭開始暴動，他們造成了大範圍的損失。"
+ POP_FACTION_MALCONTENT_SLAVES_RECENT_RIOTS:0 "自上次暴動爆發之後，反抗派暫時還沒能夠重新組織起來。"
+
+ POP_FACTION_MALCONTENT_SLAVES_REVOLT:0 "奴隸叛亂"
+ POP_FACTION_MALCONTENT_SLAVES_REVOLT_DESC:0 "不滿的奴隸們武裝起來成為了一直叛軍，他們打算奪取所有有奴隸正在工作的殖民地。"
+ POP_FACTION_MALCONTENT_SLAVES_RECENT_REVOLT:0 "奴隸反抗派自從上次公開叛亂之後，還沒有積攢足夠的實力。"
+
+ SUPPORT_EFFECT_SLAVE_UPRISING:0 "奴隸起義風險"
+ SUPPORT_EFFECT_SLAVE_UPRISING_DESC:0 "奴隸們拿起武器，組建了一支叛軍。"
+ SUPPORT_EFFECT_HUNGER_STRIKE:0 "絕食風險"
+ SUPPORT_EFFECT_HUNGER_STRIKE_DESC:0 "奴隸們以必死的決心進行絕食，極大地降低了他們的生產效率。"
+
+ ### EMANCIPATION MOVEMENT
+
+ # Emancipation Movement Demands
+ POP_FACTION_EMANCIPATION_DEMAND_TITLE_1:0 "奴隸6小時工作日"
+ POP_FACTION_EMANCIPATION_DEMAND_TITLE_2:0 "釋放所有奴隸"
+ POP_FACTION_EMANCIPATION_DEMAND_TITLE_3:0 "廢除奴隸制"
+ POP_FACTION_EMANCIPATION_DEMAND_DESC_1:0 "延長法定休息時間。"
+ POP_FACTION_EMANCIPATION_DEMAND_DESC_2:0 "釋放在[Root.Owner.GetName]的所有現存奴隸。"
+ POP_FACTION_EMANCIPATION_DEMAND_DESC_3:0 "廢除§Y允許蓄奴§!的政策。"
+
+ # Emancipation Movement Actions
+
+ # Emancipation Movement Support Effects
+
+ POP_FACTION_EMANCIPATION_STOKING_THE_FIRE:0 "一觸即發"
+ POP_FACTION_EMANCIPATION_STOKING_THE_FIRE_DESC:0 "派系的特務們開始在奴隸內部煽動情緒，並將他們武裝起來。"
+ POP_FACTION_EMANCIPATION_RECENT_STOKING_THE_FIRE:0 "自從上一次煽動運動之後，派系暫時還沒什麼動靜。"
+ SUPPORT_EFFECT_EMANCIPATION_RADICALIZE_SLAVES:0 "激進的奴隸們"
+ SUPPORT_EFFECT_EMANCIPATION_RADICALIZE_SLAVES_DESC:0 "一次隱秘但組織有序的煽動奴隸起義的嘗試。"
+ SUPPORT_EFFECT_EMANCIPATION_SMUGGLE_OFF_WORLD:0 "星際鐵路組織"
+ SUPPORT_EFFECT_EMANCIPATION_SMUGGLE_OFF_WORLD_DESC:0 "一個被奴役的人口被偷渡而消失，再也不曾為人所見。"
+
+ ### PEACE MOVEMENT
+
+ # Demands
+ POP_FACTION_PEACE_DEMAND_TITLE_1:0 "結束戰爭"
+ POP_FACTION_PEACE_DEMAND_DESC_1:0 "停止任何需要繼續參加與[parameter:enemy.GetName]戰爭的外交行為，宣佈無條件和平。"
+
+ # Actions
+
+ # Support Effects
+ SUPPORT_EFFECT_PEACE_STRIKE:0 "罷工"
+ SUPPORT_EFFECT_PEACE_STRIKE_DESC:0 "反對和平的傢伙們拒絕繼續工作，導致所有產出臨時性降低。"
+ SUPPORT_EFFECT_PEACE_SABOTAGE:0 "蓄意破壞"
+ SUPPORT_EFFECT_PEACE_SABOTAGE_DESC:0 "你們聽仔細了，這是一次破壞行動。"
+
+ ### PURGED
+
+ pft_purged:0 "反淨化派系"
+ pft_purged_desc:1 "反淨化派系是由所有正在被淨化的人口和他們的同情者組成的。他們最基礎的要求是能被允許活下去。\n\n§H所有將被肅清的人口將自動加入這個派系！§!"
+
+ # Demands
+ POP_FACTION_PURGED_DEMAND_TITLE_1:0 "停止所有淨化"
+ POP_FACTION_PURGED_DEMAND_DESC_1:0 "結束所有對[Root.Owner.GetName]上 人口的系統性滅絕行動。"
+
+ # Support Effects
+
+ SUPPORT_EFFECT_PURGED_DEATH_STRUGGLE:0 "垂死掙扎"
+ SUPPORT_EFFECT_PURGED_DEATH_STRUGGLE_DESC:0 "那些即將被肅清的傢伙和他們的支持者將有可能暴亂。"
+ SUPPORT_EFFECT_PURGED_DEATH_REBELLION:0 "淨化叛亂"
+ SUPPORT_EFFECT_PURGED_DEATH_REBELLION_DESC:0 "那些即將被淨化的傢伙不會默不吭聲，反而會組建叛軍。"
+
+ ### LIBERATE
+
+ # Demands
+ POP_FACTION_LIBERATE_DEMAND_TITLE_1:0 "解放§H[parameter:planet.GetName]§!"
+ POP_FACTION_LIBERATE_DEMAND_DESC_1:0 "對[parameter.enemy.GetName]宣戰，戰爭目標是收回[parameter:planet.GetName]星球。"
+
+ # Support Effects
+ SUPPORT_EFFECT_LIBERATE_INSULT_HIJACK:0 "通信劫持"
+ SUPPORT_EFFECT_LIBERATE_INSULT_HIJACK_DESC:0 "[Root.GetName]傷害了我們同§H[parameter:enemy.GetName]§!的外交關係。"
+ SUPPORT_EFFECT_LIBERATE_HAWKISH_REBELS:0 "強硬的反抗風險"
+ SUPPORT_EFFECT_LIBERATE_HAWKISH_REBELS_DESC:0 "[Root.GetName]公然反抗膽小的[Root.Owner.GetSpeciesAdj]政府。"
+
+ ### XENOSLAVER
+
+ # Demands
+ POP_FACTION_XENOSLAVER_DEMAND_TITLE_1:0 "征服異種"
+ POP_FACTION_XENOSLAVER_DEMAND_DESC_1:0 "征服所有§H[parameter:xeno.GetSpeciesAdj]§!§Y人口§!。"
+
+ # Actions
+
+ # Support Effects
+ SUPPORT_EFFECT_XENOSLAVER_TAKE_SLAVES:0 "非法奴役"
+ SUPPORT_EFFECT_XENOSLAVER_TAKE_SLAVES_DESC:0 "屬於好戰的派系的成員有可能非法的強迫人口為他們服務。"
+ SUPPORT_EFFECT_XENOSLAVER_SLAVER_CONFEDERACY:0 "奴隸聯邦"
+ SUPPORT_EFFECT_XENOSLAVER_SLAVER_CONFEDERACY_DESC:0 "這個派系動員發動了武裝起義。"
+
+ ### CRUSADER
+
+ # Demands
+ POP_FACTION_CRUSADE_DEMAND_TITLE_1:0 "十字軍"
+ POP_FACTION_CRUSADE_DEMAND_DESC_1:0 "開始了一場對抗[parameter:heathens.GetName]異教徒的聖戰。"
+
+ # Actions
+
+ # Support Effects
+ SUPPORT_EFFECT_CRUSADE_INSULT:0 "揭露褻瀆"
+ SUPPORT_EFFECT_CRUSADE_INSULT_DESC:0 "[Root.GetName]公開指責了[parameter:heathens.GetName]，使他們之間的關係進一步惡化。"
+ SUPPORT_EFFECT_CRUSADE_INSURRECTION:0 "邪教叛亂"
+ SUPPORT_EFFECT_CRUSADE_INSURRECTION_DESC:0 "在[Root.GetName]殖民地發起政變。"
+
+ ### CONQUEROR
+
+ # Support Effects
+ SUPPORT_EFFECT_CONQUER_INSULT:0 "侮辱性的公告"
+ SUPPORT_EFFECT_CONQUER_INSULT_DESC:0 "[Root.GetName]發出一份侮辱性的公告，使我們和§H[parameter:foreign_power.GetName]§!的關係變得緊張。"
+
+ ### PRETENDER
+
+ pft_pretender:0 "篡權者派系"
+ pft_pretender_desc:0 "當前篡權這的支持者被吸引到這個派系，他們被任命為為他們的統治者工作。"
+
+ POP_FACTION_PRETENDER_ATTRITION_TITLE:0 "損耗"
+ POP_FACTION_PRETENDER_ATTRITION_DESC:0 "一個人口失去了參與派系活動的理由，因此§G退出派系§!。"
+ POP_FACTION_PRETENDER_DEMAND_TITLE:0 "向§Y[parameter:pretender.GetName]§!交出王權"
+ POP_FACTION_PRETENDER_DEMAND_DESC:0 "[Root.Owner.GetRulerTitle]§Y[Root.Owner.GetRulerName]§!將會被放逐，§Y[parameter:pretender.GetName]§!將會攫取王位。"
+ POP_FACTION_PRETENDER_INSTALL_TITLE:0 "篡權者登基"
+ POP_FACTION_PRETENDER_INSTALL_DESC:0 "§Y[parameter:pretender.GetName]§!成為新的統治者。"
+ 
+ ########################################
+ # FACTION EVENTS
+ ########################################
+
+ ### Loyalists
+ faction.4.title:0 "保守黨的訴求"
+ faction.4.desc:0 "保皇黨對[Root.Owner.GetName]的[Root.Owner.GetRulerTitle][Root.Owner.GetRulerName]無條件效忠。"
+
+ ### Slaves
+ faction.6.title:0 "絕食抗議！"
+ faction.6.desc:0 "[Root.Owner.GetName]的奴隸們通過絕食組織罷工。[Root.GetName]派系的成員正在對[Root.Owner.GetName]內他們自己的人執行§Y淨化§!。\n\n如果這一情況不得到重視，我們很有可能損失很大一部分的奴役人口。我們可以坐視這些可憐蟲走向滅亡，也可以採用一些手段來處理這些不聽話的派系。"
+
+ faction.7.title:0 "奴隸起義！"
+ faction.7.desc:0 "[slave_planet.GetName]的奴隸們對他們的主人發起叛變，聯合起來打算粉碎[Root.Owner.GetName]的統治。"
+
+ faction.8.title:0 "強制餵食"
+ faction.8.desc:0 "奴隸的身體不屬於他們自己，他們無權損害或隱瞞相關情況。\n\n 對他們身體粗略的清潔已經結束，所有倖存的感染者們已被強制喂以適度的養分。"
+
+ faction.10.title:0 "奴隸不滿！"
+ faction.10.desc:0 "[unrest_planet.GetName]上的奴隸之間瀰漫的不滿情緒已經嚴重影響了生產。"
+ faction.10.desc.colle:0 "一股令人噁心的情緒在[Root.Owner.GetName]的奴隸之間擴散開來， 其中心是[unrest_planet.GetName]的[unrest_planet.GetPlanetMoon]。"
+ faction.10.a.tooltip:0 "在§H[unrest_planet.GetName]§!上的§H奴役人口§!在§Y4年內§!獲得§R不滿的奴隸§!效果修正。"
+
+ faction.15.title:0 "奴隸暴徒！"
+ faction.15.desc:0 "一群暴徒——主要由擅離職守的奴隸組重，和[roving_gangs_planet.GetName]上的其他族群產生了激烈的衝突，最終導致一個人口死亡。\n\n我們需要靜觀死者的家屬對這一事件的反應。"
+ faction.15.a.tooltip:0 "[roving_gangs_planet]：\n§Y1 人口§!§R死亡§!。"
+
+ faction.50.title:0 "星際鐵路組織！"
+ faction.50.desc:0 "顯然，在我們的奴隸之中，幾個激進的團體聯合在了一起。他們的目的是將奴隸偷渡到[Root.Owner.GetAdj]的領土之外。\n\n我們不知道這一罪行的規模有多大，但可以確定的是，已經有奴隸現在在[Root.Owner.GetAdj]勢力外逍遙法外了。"
+ faction.50.desc.colle:0 "看來，某個誤入歧途的小派系十分熱衷於通過將奴隸從自身的命運中解放出來並偷渡到[Root.Owner.GetAdj]邊界之外讓[Root.Owner.GetName]感到難堪。\n\n這些傷口對我們來說無足輕重，但我們希望那些迷途的羔羊能有一天知返，回到[Root.Owner.GetName]包容的懷抱和他們自身注定的命運之中。"
+ faction.50.a:0 "真是不幸。"
+ faction.50.1.tooltip:0 "[Root.Owner.GetName]：\n奴役人口：§R-1§!"
+ faction.50.3.tooltip:0 "[Root.Owner.GetName]：\n奴役人口：§R-3§!"
+ faction.50.4.tooltip:0 "[Root.Owner.GetName]：\n奴役人口：§R-4§!"
+ faction.50.5.tooltip:0 "[Root.Owner.GetName]：\n奴役人口：§R-5§!"
+
+ faction.55.title:0 "不滿的奴隸暴動"
+ faction.55.desc.colle:0 "[Root.GetName]派系內的某些成員醉心於破壞[Root.Owner.GetName]的長治久安。他們希望通過破壞[riots_planet.GetName]上的生產設施來達到這一目的。我們只能猜想，無論他們造成了什麼影響或損害，這一阻礙他們接受[Root.Owner.GetAdj]合法統治的愚蠢行為最後會讓他們自取滅亡。"
+ faction.55.desc:0 "暴動毀壞了[riots_planet.GetName]上的一棟建築——要想恢復生產必須先修復建築。"
+
+ faction.60.title:0 "奴隸反抗派叛亂"
+ faction.60.desc:0 "奴隸群體中的激進分子——在毫無預料的情況下——公然發動武裝叛亂反抗我們合法的統治。\n\n據報道稱，叛亂在[revolt_planet.GetName]上打響了第一槍，並有可能發展成為燎原之勢。"
+ faction.60.desc.colle:0 "為了[Root.Owner.GetName]更好的榮光而不得不執行的這一系列不得體的政令所造成的不滿近期推向了一個新的高峰。\n\n他們的鼠目寸光迫使他們在[revolt_planet.GetName]的[revolt_planet.GetPlanetMoon]上掀起叛亂——如果我們沒有做好充分的準備的話，其他的星球也可能盲目跟風。"
+ faction.60.a:0 "這是藥丸啊。"
+ faction.60.b:0 "無知的蠢貨..."
+ faction.60.a.tooltip:0 "§H奴隸反抗§!派系已經§Y叛亂§!！"
+
+ faction.80.title:0 "奴隸被煽動！"
+ faction.80.desc:0 "在[Root.GetName]上的一所本地的小禮拜堂成員成功的煽動了幾個[Root.Owner.GetAdj]奴隸，奴隸反抗派的力量又增強了。"
+
+ ### Separatists
+ # From = pop faction
+ # Parameters = planet
+
+ pft_planet_separatists:0 "行星獨立派系"
+ pft_planet_separatists_desc:0 "行星獨立派系有可能出在殖民的星域試圖去把這個行星從帝國的統治當中分離開。給他們足夠的支持，他們甚至會拿起武器。\n\n§H行星獨立派系只會出現在直轄的殖民地。§!"
+
+ # Separatists rebel
+ faction.100.title:0 "獨立叛亂！"
+ faction.100.desc:3 "動盪不安的情況在[planet.GetName]已經到達臨界值。當地的行星獨立派系試圖發起一場武裝叛亂去奪取行星。"
+
+ # Separatists riot
+ faction.101.title:1 "獨立暴動！"
+ faction.101.desc:1 "§Y[planet.GetName]§!的公民不安程度已經到達白熱化階段，一部分的§Y[Root.GetName]§!成員走上街頭示威遊行、打砸搶燒.\n\n報告表明，殖民地的主要設施被損毀。"
+
+ # Separatist leader assassinated
+ faction.102.title:1 "派系領袖被暗殺！"
+ faction.102.desc:1 "[Root.GetName]處於混亂之中導致了他們的領袖[Root.Leader.GetName]突然死亡.\n\n正如[Root.Owner.GetSpeciesAdj]公眾所關心的那樣，這是 [Root.GetName]內部權力鬥爭的結果.隨著另一個政治傀儡的上台，這起事件在一定程度上已經導致了民眾支持度的下降。"
+
+ # Separatist sector created
+ faction.103.title:0 "星區建立!"
+ faction.103.desc:0 "[Root.GetName]已被承認為一個在[parameter:planet.GetName]由當地政府管轄的半獨立的星區。"
+
+ faction.104.title:0 "釋放國家！"
+ faction.104.desc:0 "為了有效的消滅獨立主義者，[parameter:planet.GetName]的殖民地被從[Root.Owner.GetName]釋放。\n\n[Root.GetName]形成自己的國家。"
+
+ ### Crusaders
+
+ # Crusaders want to a crusade to against the heathens, conquer their capital
+ faction.200.title:0 "[Root.GetName]將[parameter:heathens.GetName]視為異教徒！"
+ faction.200.desc:0 "他們在一支外國勢力的首府設計了一個據點，希望它會被接管。"
+
+ holy_war_title:0 "聖戰"
+ holy_war_desc:0 "領導太空時代的十字軍以對抗[parameter:heathens.GetName]。"
+ holy_war_1_poi:0 "聖星系"
+ holy_war_1_poi_desc:0 "異教徒的星球。"
+ profane_planets_seized:0 "褻瀆的星球已被淨化。"
+
+ # Capital conquered
+ faction.201.title:0 "異教徒總部已被征服！"
+ faction.201.desc:0 "他們的神廟已然損毀，他們的神拋棄了他們。"
+
+ faction.202.title:0 "[parameter:heathens.GetName]受辱"
+ faction.202.desc:0 "由於一個在安保方面令人尷尬的失誤，[Root.GetName]獲得了我們外交溝通頻道的基礎通信權限。他們藉機從自己信仰的角度，對[parameter:heathens.GetName]關於各種異端的信仰和伴隨著的所謂的道德淪喪進行了譴責和侮辱。\n\n對於深度宗教化的[parameter:heathens.GetSpeciesPlural]來說，這一事件顯然無法輕鬆應對。"
+ faction.202.a:0 "這就很尷尬了！"
+ faction.202.a.tooltip:0 "§Y[parameter:enemy.GetName]§!添加了針對§你的帝國§!的的好感度修正：§派系侮辱§!。"
+ faction.203.title:0 "企圖侮辱"
+ faction.203.desc:0 "由於又一個在安保方面令人尷尬的失誤，[Root.GetName]獲得了我們外交溝通頻道的基礎通信權限.他們再次趁機貶低了[parameter:heathens.GetName]的異端信仰\n\n然而可以理解的是，[parameter:heathens.GetSpeciesPlural]並未被這次重複事件弄得措手不及，只是聳了聳肩無視了。"
+ faction.203.a:0 "媽的智障……"
+
+ faction.204.title:0 "宗教起義！"
+ faction.204.desc:0 "我們收到報告，[Root.GetName]的激進者在[planet.GetName]進行了武裝暴動。\n\n他們的叛亂還未成氣候，故在萌芽階段掐滅這一波叛亂，是非常明智的。"
+ faction.204.a:0 "非常好。"
+ faction.204.a.tooltip:0 "[planet.GetName]:\n 起義！"
+
+ ### Nationalists
+ faction.301.title:2 "民族主義者破壞！"
+ faction.301.desc:2 "[Root.GetName]的激進分子毀壞了[planet.GetPlanetMoon]的[planet.GetName]上的一棟建築。"
+ faction.301.desc.phobe:0 "[Root.GetName]的一小撮別有用心的異星暴徒已經毀壞了[planet.GetName]一棟建築，這一行為無疑是對[Root.Owner.GetAdj]利益的蓄意破壞，其目的是為了擾亂正常正確的社會秩序。"
+ faction.301.desc.phile:0 "[Root.GetName]上那些可愛的異見者們看來十分享受通過給我們的統治找不快活來表達自己的不滿——有些人口中的蓄意破壞—— 在[planet.GetName]上。"
+
+ faction.302.title:1 "民族主義者叛亂！"
+ faction.302.desc:3 "受支持者的鼓舞，[Root.GetName]決定以公然的武力奪回曾屬於他們的領土。"
+ faction.302.desc.phobe:0 "在[Root.GetName]發動叛亂的異星人決定以暴力的手段推翻[Root.Owner.GetAdj]統治！"
+ faction.302.desc.phile:0 "意識到我方無法達成他們的訴求，[Root.GetName]決定公開叛亂。"
+
+ ### Peace Movement
+
+ faction.400.title:0 "艦隊遭到破壞！"
+ faction.400.desc:0 "在某個時刻，[From.GetName]的激進成員成功地滲透入至少一艘[Root.Owner.GetSpeciesAdj]軍事艦艇並安裝爆炸物。這些爆炸物現在已被引爆，這嚴重破壞了[Root.GetName]的主權完整。\n\n[From.Leader.GetName]，[From.GetName]的領導者，已發表聲明宣稱這是令人厭惡的暴力本質的集中體現，尤其是[Root.Owner.GetName]和[From.parameter:enemy.GetName]的武裝衝突。"
+ faction.400.a:0 "偽善者。"
+ faction.400.a.tooltip:0 "§R[Root.GetName]被毀。§!"
+
+ faction.401.title:0 "敵對行動終止"
+ faction.401.desc:0 "所有需要或導致對[From.parameter:enemy.GetName]持續衝突的外交行動已經被消減，且我們已經提出了無條件和平。"
+ faction.401.a:0 "我們希望他們樂於見到這一點。"
+
+ faction.402.title:0 "敵對行動終止"
+ faction.402.desc:0 "我們向[From.parameter:enemy.GetName]提出無條件和平，希望結束戰爭。"
+ faction.402.a:0 "那有啥好處？"
+
+ ### Liberation Faction
+
+ faction.501.title:0 "[parameter:enemy.GetName]受辱"
+ faction.501.desc:0 "由於一個在安保方面令人尷尬的失誤，[Root.GetName]獲得了我們外交溝通頻道的基礎通信權限。他們趁此機會嚴重侮辱了[parameter:enemy.GetName]並且要求立即歸還[parameter:planet.GetName]。\n\n 未能與[parameter:enemy.GetSpeciesPlural]取得一致性磋商結果。"
+ faction.501.a:0 "這就很尷尬了！"
+ faction.501.a.tooltip:0 "§Y[parameter:enemy.GetName]§!添加了針對§你的帝國§!的好感度修正：§Y派系侮辱§!。"
+ faction.502.title:0 "企圖侮辱"
+ faction.502.desc:0 "作為在安保方面尷尬失誤的又一個後果，[Root.GetName]又獲得了我們外交溝通頻道的基礎通行信限。他們趁此機會再一次嚴重地侮辱了[parameter:enemy.GetName]並要求立即歸還[parameter:planet.GetName]。\n\n然而可以理解的是，[parameter:enemy.GetSpeciesPlural]並未被這次重複事件弄得措手不及，只是聳了聳肩無視了。"
+ faction.502.a:0 "媽的智障……"
+ faction.503.title:0 "強硬的反對派！"
+ faction.503.desc:0 "我們收到報告，[Root.GetName]的極端者們已經在[planet.GetName]上形成了高度組織的叛軍力量。\n\n他們的叛亂還未成氣候，故在萌芽階段掐滅這一波叛亂，是非常明智的。"
+ faction.503.a:0 "計劃通"
+ faction.503.a.tooltip:0 "[planet.GetName]：\n§R反叛！§!"
+
+ ### Emancipation Faction
+ faction.600.title:0 "煽動奴隸"
+ faction.600.desc:0 "[Root.GetName]的成員據說已在受到奴役的人群中煽起了異議。據謠傳，他們正在訓練奴隸們，甚至武裝了[parameter:slave_faction.GetName]的邊境守備， 儘管這一點難以令人置信。"
+ faction.600.a:0 "雖然擔心，然而…… "
+ faction.600.a.tooltip:0 "[parameter:slave_faction.GetName]:\n§R+50%§!Militancy\n§R+30%§!Support"
+ faction.601.title:0 "星際鐵路組織"
+ faction.601.desc:0 "有消息指出一些[Root.GetName]的更為激進的成員已經解放了一群[railroad_planet.GetName]上的奴隸，並將他們送到了[Root.Owner.GetName]的控制之外。"
+ faction.601.a:0 "我們得更密切地關注他們。"
+ faction.601.a.tooltip:0 "[railroad_planet.GetName]：\n被奴役人口:§R-1§!"
+
+ ### Xenoslaver Faction
+ faction.700.title:0 "強制奴役！"
+ faction.700.desc:0 "激進的[Root.GetName]據說已經迫使[Root.Owner.GetName]上非[Root.Owner.GetSpeciesAdj]的部分民眾變為奴隸。"
+ faction.700.a:0 "駭人聽聞的暴行！"
+ faction.700.a.tooltip:0 "奴役：\n§Y+2§!人口"
+
+ faction.701.title:0 "[parameter:rebelling_faction.GetName]叛亂！"
+ faction.701.desc:0 "據信，由於受夠了[Root.Owner.GetName]對生活在身邊的粗鄙外星人的軟弱立場，[parameter:planet.GetName]上妄圖成為奴隸主的一群人已經聚集到一起，結黨成社，宣稱獨立。"
+ faction.701.a:0 "真的真的真的無法忍受了！"
+
+ ### Purged Faction
+ faction.801.title:0 "垂死掙扎！"
+ faction.801.desc:0 "[riot_planet.GetName]上受到清洗的，充斥著絕望的一群人已經攻擊並摧毀了行星上的一處設施。"
+
+ faction.803.title:0 "[Root.GetName]叛亂！"
+ faction.803.desc:0 "[death_planet.GetName]上受到清洗的，充斥著絕望的人們現在已經武裝自己以對抗[Root.Owner.GetName]，形成了一股人喧馬嘶的叛軍力量。"
+ #mockup: "\n\n\n§HSuppress Followers§!\nCost: £influence§R150§!\n--------------\n§Y<FactionName>§!:\nMilitancy:§R+10%§!\nSupport:§G-30%§!"
+ #mockup2: "\n\n\n§HSuppress Followers§!\nCost: £influence§Y150§!\n--------------\n§Y<FactionName>§!:\nMilitancy:§R+10%§!\nSupport:§G-30%§!"

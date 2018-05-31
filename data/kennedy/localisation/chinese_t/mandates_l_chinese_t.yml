@@ -1,0 +1,136 @@
+﻿l_chinese_t:
+
+ ####################################
+ #	COMMON STRINGS
+ ####################################
+
+ mandate_influence_reward_t1:0 "£influence §G低 (40 - 100)§!"
+ mandate_influence_reward_t2:0 "£influence §G中 (80 - 175)§!"
+ mandate_influence_reward_t3:0 "£influence §G高 (125 - 250)§!"
+ mandate_influence_reward_t4:0 "£influence §G極高 (150 - 300)§!"
+ mandate_happiness_reward_t1:0 "獲得幸福度§G+15%§!§Y1年§!"
+
+ ####################################
+ #	MANDATES
+ ####################################
+
+ MANDATE_mandate_planet_separatist:0 "獨立支持者"
+ MANDATE_mandate_planet_separatist_DESC:1 "釋放[Root.GetPopFactionName]使之成為一個獨立的國家。\n\n獎勵：\n$mandate_influence_reward_t3$"
+ MANDATE_mandate_emancipation:0 "偉大的解放者"
+ MANDATE_mandate_emancipation_DESC:1 "停止[Root.Owner.GetName]上的奴役行為。\n\n獎勵：\n$mandate_influence_reward_t3$\n$mandate_happiness_reward_t1$"
+ MANDATE_mandate_emancipation2:0 "平民的解放者"
+ MANDATE_mandate_emancipation2_DESC:1 "在至少一個[Root.Owner.GetSpeciesAdj]世界中解放所有的奴隸。\n\n獎勵：\n$mandate_influence_reward_t3$\n$mandate_happiness_reward_t1$"
+ MANDATE_mandate_orbital_researcher:0 "軌道研究者"
+ MANDATE_mandate_orbital_researcher_DESC:1 "開始建設至少4個新的研究空間站，以加強[Root.Owner.GetName]的研究產出。\n\n獎勵：\n$mandate_influence_reward_t2$"
+ MANDATE_mandate_miner:0 "星際礦工"
+ MANDATE_mandate_miner_DESC:1 "建設至少4個新的礦物空間站以加強[Root.Owner.GetName]的礦產儲量上限。\n\n獎勵：\n$mandate_influence_reward_t2$"
+ MANDATE_mandate_shipwright:0 "船舶工人"
+ MANDATE_mandate_shipwright_DESC:2 "在任期結束時，維持至少佔用 75% 海軍容量的軍事艦艇，以確保[Root.Owner.GetSpeciesAdj]的公民安全保障。\n\n獎勵：\n$mandate_influence_reward_t2$"
+ MANDATE_mandate_peacemaker:0 "和平製造者"
+ MANDATE_mandate_peacemaker_DESC:1 "在統治期間，從所有[Root.Owner.GetName]捲入的戰爭中恢復到和平狀態。\n\n獎勵：\n$mandate_influence_reward_t2$"
+ MANDATE_mandate_slaver:0 "奴役者"
+ MANDATE_mandate_slaver_DESC:1 "使奴隸制合法化以確保[Root.Owner.GetName]日後的繁榮昌盛。\n\n獎勵：\n$mandate_influence_reward_t2$"
+ MANDATE_mandate_xenopurger:0 "異種清除者"
+ MANDATE_mandate_xenopurger_DESC:1 "在統治期間,消滅在我們的§Y至少一個殖民地§!之中生活的外星威脅。\n\n獎勵：\n$mandate_influence_reward_t2$\n$mandate_happiness_reward_t1$"
+ MANDATE_mandate_nationalist:0 "遣還者"
+ MANDATE_mandate_nationalist_DESC:1 "歸還屬於§Y[parameter:country.GetName]§!的行星。\n\n獎勵：\n$mandate_influence_reward_t3$"
+
+ ####################################
+ #	MANDATE CHAINS
+ ####################################
+
+ mandate_miner_chain_title:0 "礦業授案"
+ mandate_miner_chain_desc:2 "[This.GetRulerTitle][This.GetRulerName]批准在合適的小行星軌道上建造§Y礦物空間站§!，以增加 £minerals§Y礦物產出§!。\n\n獎勵：\n$mandate_influence_reward_t2$"
+ mining_stations_built:0 "礦物空間站已建成"
+
+ mandate_orbresearch_chain_title:0 "環軌科研授案"
+ mandate_orbresearch_chain_desc:2 "[This.GetRulerTitle][This.GetRulerName]批准在合適的小行星軌道上建造§Y研究空間站§!，以增加§Y研究點數產出§!。\n\n獎勵：\n$mandate_influence_reward_t2$"
+ orbresearch_built:0 "研究空間站已建成"
+
+ mandate_xenopurge_chain_title:0 "異種清除授案"
+ mandate_xenopurge_chain_desc:2 "[This.GetRulerTitle][This.GetRulerName]批准§Y淨化§!§H[purge_planet.GetName]§!上的所有§Y非[Root.GetSpeciesAdj]人口§!。\n\n獎勵：\n$mandate_influence_reward_t2$\n$mandate_happiness_reward_t1$"
+ world_purged:0 "世界已淨化"
+
+ mandate_shipwright_chain_title:0 "船舶建造授案"
+ mandate_shipwright_chain_desc:2 "[This.GetRulerTitle][This.GetRulerName]批准增加軍事預算以確保§Y在任期結束時至少使用了75%的海軍容量§!。\n\n獎勵：\n$mandate_influence_reward_t2$"
+ military_presence_maintained:0 "授案已生效"
+
+ mandate_fiscal_reserve_chain_title:0 "財政儲蓄授案"
+ mandate_fiscal_reserve_chain_desc:1 "[This.GetRulerTitle][This.GetRulerName]批准§Y節儉§!並§Y謹慎的支配能源§!以確保§Y在任期結束之前§!§H[Root.GetName]§!將享有§Y不少於 £energy 1000§!的能量幣。"
+
+ mandate_emancipation_chain_title:0 "全面解放授案"
+ mandate_emancipation_chain_desc:2 "[This.GetRulerTitle][This.GetRulerName]批准§Y廢除奴隸制§!，期望在統治期間能使其§Y非法§!。\n\n獎勵：\n$mandate_influence_reward_t3$\n$mandate_happiness_reward_t1$"
+ mandate_fulfilled:0 "授案已生效"
+
+ mandate_emancipation2_chain_title:0 "平民解放授案"
+ mandate_emancipation2_chain_desc:2 "[This.GetRulerTitle][This.GetRulerName]批准在任期結束之前，會在行星§H[free_planet.GetName]§!上§Y解放所有奴隸§!。\n\n獎勵：\n$mandate_influence_reward_t3$\n$mandate_happiness_reward_t1$"
+ planet_freed:0 "行星已得到解放"
+
+ mandate_separatist_chain_title:0 "分封授案"
+ mandate_separatist_chain_desc:2 "[This.GetRulerTitle][This.GetRulerName]批准§Y釋放§!§H[release_planet.GetName]§!行星獨立成一個國家。細節可以查看§Y派系列表§!。\n\n獎勵：\n$mandate_influence_reward_t3$"
+ empire_released:0 "國家已釋放"
+
+ mandate_peacemaker_chain_title:0 "和平製造者授案"
+ mandate_peacemaker_chain_desc:2 "[This.GetRulerTitle][This.GetRulerName]批准§Y停止[Root.GetSpeciesAdj]參加§!在他們統治期間的任何戰爭。\n\n獎勵：\n$mandate_influence_reward_t2$"
+ no_engagements:0 "所有戰爭已終結"
+
+ mandate_slaver_chain_title:0 "奴隸制授案"
+ mandate_slaver_chain_desc:2 "[This.GetRulerTitle][This.GetRulerName]批准在統治期間§Y奴役§!至少§Y5個Pops§!。\n\n獎勵：\n$mandate_influence_reward_t2$"
+ pops_enslaved:0 "人口已被奴役"
+
+ mandate_nationalist_chain_title:0 "遣還授案"
+ mandate_nationalist_chain_desc:2 "[This.GetRulerTitle][This.GetRulerName]批准在統治期間§Y遣還§!屬於§H[ceding_empire.GetName]§!的殖民地。該行動可以在派系菜單中使用。\n\n獎勵：\n$mandate_influence_reward_t3$"
+ planet_ceded:0 "行星已遣還"
+
+ ####################################
+ #	MANDATE EVENTS
+ ####################################
+
+ mandate.1.title:0 "新統治者授案"
+ mandate.1.desc:0 "[Root.GetRulerName]已被選為§H[Root.GetName]§!的§Y[Root.GetRulerTitle]§!。 \n\n翻閱§Y狀態日誌§!以查看其§Y授案§!的細節。"
+ mandate.2.title:0 "授案已失效"
+ mandate.2.desc:1 "我們的[Root.GetRulerTitle]的統治已經走向末路，競選承諾未能兌現。 "
+
+ # Separatist
+ mandate.100.title:0 "分封授案生效"
+ mandate.100.desc:0 "按照[Root.GetRulerTitle][Root.GetRulerName]的規定，§H[released_planet.GetName]§!已被§Y附庸§!為§H[Root.GetName]的一個國家。"
+
+ # Miner
+ mandate.111.title:0 "礦業授案生效"
+ mandate.111.desc:0 "按照[Root.GetRulerTitle][Root.GetRulerName]的規定，已經建設了額外的礦場。"
+
+ # Orbital Researcher
+ mandate.121.title:0 "環軌科研授案生效"
+ mandate.121.desc:0 "按照[Root.GetRulerTitle][Root.GetRulerName]的規定，已經建設了額外的研究站。"
+
+ # Xenopurger
+ mandate.132.title:0 "異種清除授案生效"
+ mandate.132.desc:0 "按照[Root.GetRulerTitle][Root.GetRulerName]的規定，在[From.GetName]的非[Root.GetSpeciesAdj]人群廣已經被徹底清除。"
+
+ # Shipwright
+ mandate.141.title:0 "船舶建造授案生效"
+ mandate.141.desc:1 "按照[Root.GetRulerTitle][Root.GetRulerName]的規定，我們正在使用至少 75% 的海軍容量。"
+ mandate.142.title:0 "授案已失效"
+ mandate.142.desc:0 "[Root.GetRulerTitle][Root.GetRulerName]在限定的時間內未能達到條例要求的目標。"
+
+ # Emancipator 1
+ mandate.150.title:0 "全面解放授案生效"
+ mandate.150.desc:0 "按照[Root.GetRulerTitle][Root.GetRulerName]的規定，§Y奴役§!在[Root.GetName]上已經是非法的行為了。"
+
+ # Emancipator 2
+ mandate.155.title:0 "平民解放授案生效"
+ mandate.155.desc:0 "按照[Root.GetRulerTitle][Root.GetRulerName]的規定，[From.GetName]上不再有被奴役的族群了。"
+
+ # Peacemaker
+ mandate.161.title:0 "和平授案生效"
+ mandate.161.desc:0 "按照[Root.GetRulerTitle][Root.GetRulerName]的規定，§H[Root.GetName]§!不再捲入目前正在進行的任何戰爭或衝突。"
+ mandate.162.title:0 "授案已失效"
+ mandate.162.desc:0 "[Root.GetRulerTitle][Root.GetRulerName]在限定的時間內未能達到決議要求的目標。"
+
+ # Slaver
+ mandate.171.title:0 "奴隸制授案生效"
+ mandate.171.desc:0 "按照[Root.GetRulerTitle][Root.GetRulerName]的規定，§H5個人口§!已被奴役。"
+
+ # Nationalist
+ mandate.180.title:0 "回歸授案生效"
+ mandate.180.desc:0 "按照[Root.GetRulerTitle]§Y[Root.GetRulerName]§!的規定，被征服的殖民地已被歸還給§H[ceding_empire.GetName]§!。"
