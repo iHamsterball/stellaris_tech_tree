@@ -74,7 +74,7 @@
                             </div>
                             <ul class="menulist">
                                 <li class="menulistitem" onclick="switchVersion(this)" value="niven">Niven v2.1.0</li>
-                                <li class="menulistitem" onclick="switchVersion(this)" value="cherryh">Cherryh v2.0.3</li>
+                                <li class="menulistitem" onclick="switchVersion(this)" value="cherryh">Cherryh v2.0.5</li>
                                 <li class="menulistitem" onclick="switchVersion(this)" value="boulle">Boulle v1.9.1</li>
                                 <li class="menulistitem" onclick="switchVersion(this)" value="capek">Čapek v1.8.3</li>
                                 <li class="menulistitem" onclick="switchVersion(this)" value="adams">Adams v1.6.2</li>
@@ -93,26 +93,26 @@
                     </div>
                 </div>
                 
-                <form class="search-form hidden" action="#" method="GET" id="top-search" search-placeholder="{% trans "SEARCH" %}">
+                <form class="search-form" action="#" method="GET" id="top-search" search-placeholder="{% trans "SEARCH" %}">
                     <div id="searchbox" class="searchbox">
                         <input placeholder="{% trans "SEARCH" %}" type="text" class="search-field search-query" 
-                            name="q" value="" autocomplete="off" onclick=""
-                            oninput="searchTech(this)" onpaste="searchTech(this)">
+                            name="q" value="" autocomplete="off"
+                            oninput="searchTech(this)" onpaste="searchTech(this)"
+                            onfocus="searchActive(this)" onfocusout="searchInactive()">
                         <div class="search-image material-icons"></div>
                     </div>
-                    <div class="search-results no-select" style="display: none">
-                        <div class="menu menu-vertical" role="menu" aria-haspopup="true">
-                            
-                            <div class="menuitem suggest-item" role="menuitem" id=":j">
-                                <div class="menuitem-content">
-                                    <a class="suggestion">
-                                        <span class="suggestion-fragment">搜索建议</span>
-                                    </a>
+                    <div class="search-popout hidden" id="search-popout">
+                        <div class="search-results no-select">
+                            <div class="menu menu-vertical" role="menu" aria-haspopup="true">
+                                <div class="menuitem search-item" role="menuitem" id="search-results">
+                                    <div class="search-category" aria-disabled="true">
+                                        <span class="search-item">{% trans "CATEGORY SAMPLE" %}</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="menuitem suggest-footer" role="menuitem" id=":k">
-                                <div class="menuitem-content">
-                                    <a href="#" class="button button-white suggest-all-results">搜索建议</a>
+                                <div class="menuitem search-footer" role="menuitem">
+                                    <div class="menuitem-content">
+                                        <span>{% trans "SEARCH BY TECHNOLOGY NAME" %}</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -192,16 +192,78 @@
             self.onclick = function() { expandPanel(this); };
         }
         function searchTech(self) {
+            let display = document.getElementById('search-results');
+            category_loc = ['{% trans "PHYSICS" %}', '{% trans "SOCIETY" %}', '{% trans "ENGINEERING" %}'];
             if (self.value != '') {
                 techList = Array.prototype.slice.call(document.querySelectorAll('p.node-name'));
-                let resultList = techList.reduce(function(result, cur) {
-                    if (cur.innerHTML.includes(self.value)) {
-                        result.push(cur);
+                console.log(techList);
+                let resultList = techList.reduce(function (result, cur) {
+                    if (typeof cur != undefined) {//To prevent Paradox or Localization Teams from providing null strings
+                        if (cur.childNodes[0].data.toLowerCase().includes(self.value.toLowerCase())) {
+                            if (cur.offsetParent.classList.contains('physics')) {
+                                result[0].push(cur);
+                            } else if (cur.offsetParent.classList.contains('society')) {
+                                result[1].push(cur);
+                            } else if (cur.offsetParent.classList.contains('engineering')) {
+                                result[2].push(cur);
+                            }
+                        }
                     }
                     return result;
-                }, []);
+                }, [[], [], []]);
                 console.log(resultList);
+                if (resultList[0].length > 0 
+                || resultList[1].length > 0
+                || resultList[2].length > 0) {
+                    while(display.hasChildNodes()) {
+                        display.removeChild(display.firstChild);
+                    }
+                    for(category in resultList) {
+                        if (resultList[category].length > 0) {
+                            let cat = document.createElement('div');
+                            cat.classList.add('search-category');
+                            cat.innerText = category_loc[category];
+                            display.appendChild(cat);
+                            for (index in resultList[category]) {
+                                console.log(resultList[index]);
+                                let node = document.createElement('div');
+                                node.classList.add('menuitem', 'search-item');
+                                let text = document.createElement('span');
+                                text.innerText = resultList[category][index].childNodes[0].data;
+                                node.appendChild(text);
+                                display.appendChild(node);
+                            }
+                        }
+                    }
+                } else {
+                    while(display.hasChildNodes()) {
+                        display.removeChild(display.firstChild);
+                    }
+                    let node = document.createElement('div');
+                    node.classList.add('search-item');
+                    node.setAttribute('aria-disabled', 'true');
+                    node.innerText = '{% trans "NO SUGGESTIONS PROVIDED" %}';
+                    display.appendChild(node);
+                }
+            } else {
+                while (display.hasChildNodes()) {
+                    display.removeChild(display.firstChild);
+                }
+                let node = document.createElement('div');
+                node.classList.add('search-item');
+                node.setAttribute('aria-disabled', 'true');
+                node.innerText = '{% trans "NO SUGGESTIONS PROVIDED" %}';
+                display.appendChild(node);
             }
+        }
+        function searchActive(self) {
+            document.getElementById('panel').classList.add('search-active');
+            document.getElementById('search-popout').classList.remove('hidden');
+            searchTech(self);
+        }
+        function searchInactive() {
+            document.getElementById('panel').classList.remove('search-active');
+            document.getElementById('search-popout').classList.add('hidden');
         }
     </script>
 </body>

@@ -73,7 +73,6 @@ blockquote {
 .banner-wrapper {
     box-shadow: 2px 0px 10px grey;
     margin: 10px auto;
-    max-width: 1400px;
     padding: 0 120px;
     position: relative;
     transition: transform .2s,visibility .2s;
@@ -230,9 +229,11 @@ hr {
     width: 200px
 }
 
-.billboard-search-active .search-form:not(.billboard-search),.top-section-wrapper:not(.billboard-search-active) .billboard-search {
-    opacity: 0;
-    pointer-events: none;
+.wrapper:not(.billboard-search-active) .panel.search-active .header-upper-tabs {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    margin: 0;
+    visibility: hidden;
     width: 0
 }
 
@@ -248,7 +249,7 @@ hr {
     background: #5e97f6
 }
 
-.top-section-wrapper:not(.billboard-search-active) .top-logo-row.search-active .search-form {
+.wrapper:not(.billboard-search-active) .panel.search-active .search-form {
     -ms-flex: 1 0 auto;
     flex: 1 0 auto
 }
@@ -359,7 +360,7 @@ input.search-field:focus {
         display:inline-block
     }
 
-    .billboard-search-active .search-button,.responsive-search-open .header-upper-tabs,.responsive-search-open .product-name-wrapper,.responsive-search-open .settings-menu-wrapper,.responsive-search-open .user-avatar,.responsive-search-open .user-signin,.top-logo-row .search-form {
+    .search-active .search-button,.responsive-search-open .header-upper-tabs,.responsive-search-open .product-name-wrapper,.responsive-search-open .settings-menu-wrapper,.responsive-search-open .user-avatar,.responsive-search-open .user-signin,.top-logo-row .search-form {
         display: none
     }
 
@@ -392,34 +393,6 @@ input.search-field:focus {
     transition: flex .2s,margin .2s,width .2s,-ms-flex .2s
 }
 
-
-.top-section-wrapper:not(.billboard-search-active) .top-logo-row.search-active .header-upper-tabs {
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    margin: 0;
-    visibility: hidden;
-    width: 0
-}
-
-
-.popout {
-    background: #fff;
-    box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24),inset 0 4px 6px -4px rgba(0,0,0,.24);
-    margin-top: 6px;
-    max-height: calc(100vh - 48px);
-    overflow-y: auto;
-    position: absolute;
-    transition: transform .2s,visibility .2s;
-    transform: translateY(0);
-    width: 100%;
-    z-index: -1
-}
-
-.popout-closed {
-    transform: translateY(-110%);
-    visibility: hidden
-}
-
 .wrapper {
     margin-top: 48px;
 }
@@ -443,14 +416,6 @@ input.search-field:focus {
     position: relative;
     z-index: 10005;
     box-shadow: 2px 0px 10px grey;
-}
-
-.panel.search-active .header-upper-tabs {
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    margin: 0;
-    visibility: hidden;
-    width: 0
 }
 
 .project-name-wrapper {
@@ -585,6 +550,93 @@ input.search-field:focus {
     background: #f7f7f7
 }
 
+
+.search-popout {
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24),inset 0 4px 6px -4px rgba(0,0,0,.24);
+    margin-top: 6px;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    position: absolute;
+    transition: transform .2s,visibility .2s;
+    transform: translateY(0);
+    width: 100%;
+    z-index: -1
+}
+
+.search-popout-closed {
+    transform: translateY(-110%);
+    visibility: hidden
+}
+
+.search-results {
+    padding: 16px 0 16px 72px
+}
+
+.search-category,.search-project {
+    color: #757575;
+    font-size: 12px
+}
+
+.search-category:not(:first-child),.search-project:not(:first-child) {
+    border-top: 1px solid #ebebeb;
+    margin: 8px 0 0;
+    padding-top: 12px
+}
+
+.search-item {
+    font: 13px 'Noto Sans SC Sliced',sans-serif;
+    margin: 0
+}
+
+.search-footer {
+    font: 14px 'Noto Sans SC Sliced',sans-serif;
+    margin: 0
+}
+
+.search-item span {
+    color: #212121;
+    display: block;
+    margin-left: -8px;
+    outline: 0;
+    padding: 8px;
+    transition: background .2s
+}
+
+.search-item.menuitem-highlight span,.search-item:not(.menuitem-highlight) span:hover,.search-item span:focus {
+    background: #f7f7f7;
+    text-decoration: none
+}
+
+.search-item.menuitem-highlight {
+    margin-left: -8px;
+    padding-left: 8px
+}
+
+.search-item b {
+    font-weight: 500
+}
+
+.search-footer {
+    border-top: 1px solid #ebebeb;
+    margin: 8px 0 0;
+    padding: 11px 0 2px
+}
+
 .version {
     display: inline;
+}
+
+.search-popout::-webkit-scrollbar {
+    height: 4px;
+    width: 4px
+}
+
+.header-upper-tabs::-webkit-scrollbar {
+    height: 0;
+    width: 0
+}
+
+.search-popout::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,.26)
 }
