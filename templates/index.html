@@ -98,7 +98,7 @@
                         <input placeholder="{% trans "SEARCH" %}" type="text" class="search-field search-query" 
                             name="q" value="" autocomplete="off"
                             oninput="searchTech(this)" onpaste="searchTech(this)"
-                            onfocus="searchActive(this)" onfocusout="searchInactive()">
+                            onfocus="searchActive(this)" onfocusout="setTimeout(searchInactive, 100);">
                         <div class="search-image material-icons"></div>
                     </div>
                     <div class="search-popout hidden" id="search-popout">
@@ -162,6 +162,25 @@
             document.getElementById('version').innerText = document.querySelector("li.menulistitem[value='{0}']".format(version)).innerText;
             waitLoadDrag('tech-tree', 100);
         });
+        let search_results = document.getElementById("search-results");
+        if (search_results.addEventListener) {
+            search_results.addEventListener("click", function (e) {
+                var e = e || window.event;
+                let target = e.target || e.srcElement;
+                target = target.parentNode;
+                if (target.hasAttribute('offset-x')) {
+                    locateTech(target);
+                }
+            }, false);
+        } else {
+            search_results.attachEvent("onclick", function (e) {
+                var e = e || window.event;
+                let target = e.target || e.srcElement;
+                if (target.hasAttribute('offset-x')) {
+                    locateTech(target);
+                }
+            });
+        };
 
         function switchLanguage(self) {
             let language = document.getElementById('language');
@@ -196,7 +215,6 @@
             category_loc = ['{% trans "PHYSICS" %}', '{% trans "SOCIETY" %}', '{% trans "ENGINEERING" %}'];
             if (self.value != '') {
                 techList = Array.prototype.slice.call(document.querySelectorAll('p.node-name'));
-                console.log(techList);
                 let resultList = techList.reduce(function (result, cur) {
                     if (typeof cur != undefined) {//To prevent Paradox or Localization Teams from providing null strings
                         if (cur.childNodes[0].data.toLowerCase().includes(self.value.toLowerCase())) {
@@ -211,7 +229,6 @@
                     }
                     return result;
                 }, [[], [], []]);
-                console.log(resultList);
                 if (resultList[0].length > 0 
                 || resultList[1].length > 0
                 || resultList[2].length > 0) {
@@ -225,9 +242,13 @@
                             cat.innerText = category_loc[category];
                             display.appendChild(cat);
                             for (index in resultList[category]) {
-                                console.log(resultList[index]);
                                 let node = document.createElement('div');
                                 node.classList.add('menuitem', 'search-item');
+                                node.setAttribute('offset-x', resultList[category][index].offsetParent.offsetLeft);
+                                node.setAttribute('offset-y', resultList[category][index].offsetParent.offsetTop);
+                                node.setAttribute('scroll-x', resultList[category][index].offsetParent.scrollWidth);
+                                node.setAttribute('scroll-y', resultList[category][index].offsetParent.scrollHeight);
+                                //node.setAttribute('onclick', 'locateTech(this);');
                                 let text = document.createElement('span');
                                 text.innerText = resultList[category][index].childNodes[0].data;
                                 node.appendChild(text);
@@ -257,6 +278,7 @@
             }
         }
         function searchActive(self) {
+            console.log('search-active');
             document.getElementById('panel').classList.add('search-active');
             document.getElementById('search-popout').classList.remove('hidden');
             searchTech(self);
@@ -264,6 +286,21 @@
         function searchInactive() {
             document.getElementById('panel').classList.remove('search-active');
             document.getElementById('search-popout').classList.add('hidden');
+        }
+        function locateTech(self) {
+            console.log('excuted');
+            let tech_tree = document.getElementById('tech-tree');
+            let offsetX = self.getAttribute('offset-x');
+            let offsetY = self.getAttribute('offset-y');
+            let scrollX = self.getAttribute('scroll-x');
+            let scrollY = self.getAttribute('scroll-y');
+            let top = (window.innerHeight -58)/2 - offsetY - scrollY/2 + 58;
+            top = top < 0 ? top : 58;
+            let left = window.innerWidth/2 - offsetX - scrollX/2;
+            left = left < 0 ? left : 0;
+            tech_tree.style.top = top + 'px';
+            tech_tree.style.left = left + 'px';
+            return false;
         }
     </script>
 </body>

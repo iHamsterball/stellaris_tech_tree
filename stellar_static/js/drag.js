@@ -14,6 +14,9 @@ function drag(elementId) {
   let minY = -element.scrollHeight + window.innerHeight;
   let maxX = 0;//TODO: 这里写死了高度，应当从header计算
   let maxY = 58;//与该元素位置无关，只与窗口附近其他元素位置有关
+  element.style.position = 'absolute';
+  element.style.top = maxY + 'px';
+  element.style.left = maxX + 'px';
 
   //响应键盘操作用于移动
   let key = {
