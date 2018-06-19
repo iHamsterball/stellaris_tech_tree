@@ -157,7 +157,7 @@
         let techList;
         window.addEventListener("load", function() {
             setBanner('banner-info', "{% trans 'Loading...'%}");
-            version = 'cherryh';
+            version = 'niven'; //TODO: Load previous selection
             loadTech(version);
             document.getElementById('version').innerText = document.querySelector("li.menulistitem[value='{0}']".format(version)).innerText;
             waitLoadDrag('tech-tree', 100);
