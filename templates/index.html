@@ -157,8 +157,16 @@
         let techList;
         window.addEventListener("load", function() {
             setBanner('banner-info', "{% trans 'Loading...'%}");
-            version = 'niven'; //TODO: Load previous selection
-            loadTech(version);
+            let version;
+            if (window.localStorage) {
+                version = localStorage.getItem('version');
+            }
+            if(version) {// Load previous selected version
+                loadTech(version);
+            } else {// Load newest version
+                version = document.querySelectorAll('div > span.selector > ul > li.menulistitem')[0].getAttribute('value');
+                loadTech(version);
+            }
             document.getElementById('version').innerText = document.querySelector("li.menulistitem[value='{0}']".format(version)).innerText;
             waitLoadDrag('tech-tree', 100);
         });
@@ -182,6 +190,11 @@
             });
         };
 
+        function probeSave(version) {
+            if (window.localStorage) {
+                localStorage.setItem('version', version);
+            }
+        }
         function switchLanguage(self) {
             let language = document.getElementById('language');
             language.value = self.getAttribute('value');
@@ -192,6 +205,7 @@
             value = self.getAttribute('value');
             document.getElementById('version').innerText = document.querySelector("li.menulistitem[value='{0}']".format(value)).innerText;
             loadTech(value);
+            probeSave(value);
             waitLoadDrag('tech-tree', 100);
         }
         function expandPanel(self) {
