@@ -456,11 +456,12 @@
             let scrollX = self.getAttribute('scroll-x');
             let scrollY = self.getAttribute('scroll-y');
             let top = (window.innerHeight -58)/2 - offsetY - scrollY/2 + 58;
-            top = top < 0 ? top : 58;
+            top = (top < 0 ? top : 58) + "px";
             let left = window.innerWidth/2 - offsetX - scrollX/2;
-            left = left < 0 ? left : 0;
-            tech_tree.style.top = top + 'px';
-            tech_tree.style.left = left + 'px';
+            left = (left < 0 ? left : 0) + "px";
+            //tech_tree.style.top = top + 'px';
+            //tech_tree.style.left = left + 'px';
+            tech_tree.style.transform = "translate(" + left + "," + top + ")";
             return false;
         }
     </script>
