@@ -9,18 +9,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>{% trans "STELLARIS_TECH_TREE" %}</title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Material+Icons">
     <link rel="stylesheet" href="{% static "css/panel.css" %}">
-    <link rel="stylesheet" href="{% static "css/progress-bar.css" %}">
     <link rel="stylesheet" href="{% static "css/Treant.css" %}">
     <link rel="stylesheet" href="{% static "css/tech-tree.css" %}">
     <link rel="stylesheet" href="{% static "css/notosansscsliced.css" %}">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Material+Icons">
     <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
 </head>
 <body>
     <div class="wrapper">
         <div class="panel-wrapper">
             <div id="panel" class="panel">
+                <button type="button" class="expand-section-nav header-icon-button button-flat material-icons" 
+                        data-label="Hamburger menu" onclick="showHamburger()"></button>
                 <div class="project-name-wrapper">
                     <a class="project-name-link" href="/stellaris/">
                         <img src="/stellar_static/img/stellaris.bmp" class="project-logo" alt="Stellaris">
@@ -94,7 +95,7 @@
                 </div>
                 
                 <form class="search-form" action="#" method="GET" id="top-search" search-placeholder="{% trans "SEARCH" %}">
-                    <div id="searchbox" class="searchbox">
+                    <div id="search-box">
                         <input placeholder="{% trans "SEARCH" %}" type="text" class="search-field search-query" 
                             name="q" value="" autocomplete="off"
                             oninput="searchTech(this)" onpaste="searchTech(this)"
@@ -118,12 +119,134 @@
                         </div>
                     </div>
                 </form>
-
-                <a class="top-button no-select hidden">  
-                    <div class="top-button-label header-link" id="switch" onclick="expandPanel(this)">
-                        {% trans "EXPAND" %}
-                    </div>
-                </a>
+                <button id="search-button" class="search-button header-icon-button button-flat material-icons" 
+                        onclick="searchActive()"></button>
+            </div>
+        </div>
+        <div class="site-mask" id="mask" style="opacity: 0; display: none;" onclick="hideHamburger(this)"></div>
+        <div class="nav-responsive nav nocontent" id="nav">
+            <div class="nav-responsive-tabs-panel">
+                <div class="nav-responsive-tabs nav">
+                    <ul class="nav-list">
+                        <li class="nav-item nav-item-heading">
+                            <a href="#" class="nav-responsive-tab nav-title nav-active">
+                                <span>语言</span>
+                            </a>
+                            <nav class="nav-responsive-tabs nav">
+                                <ul class="nav-list">
+                                    <li class="nav-item nav-item-heading">
+                                        <span class="nav-responsive-tab nav-title" id="en">
+                                            <span>English</span>
+                                        </span>
+                                    </li>
+                                    <li class="nav-item nav-item-heading">
+                                        <span class="nav-responsive-tab nav-title" id="zh-hans">
+                                            <span>简体中文</span>
+                                        </span>
+                                    </li>
+                                    <li class="nav-item nav-item-heading">
+                                        <span class="nav-responsive-tab nav-title" id="zh-hant">
+                                            <span>繁體中文</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </li>
+                        <li class="nav-item nav-item-heading">
+                            <a href="#" class="nav-responsive-tab nav-title nav-active">
+                                <span>版本</span>
+                            </a>
+                            <nav class="nav-responsive-tabs nav">
+                                <ul class="nav-list">
+                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
+                                        value="niven" id="niven">
+                                        <span class="nav-responsive-tab nav-title">
+                                            <span>Niven v2.1.0</span>
+                                        </span>
+                                    </li>
+                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
+                                        value="boulle" id="boulle">
+                                        <span class="nav-responsive-tab nav-title">
+                                            <span>Boulle v1.9.1</span>
+                                        </span>
+                                    </li>
+                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
+                                        value="capek" id="capek">
+                                        <span class="nav-responsive-tab nav-title">
+                                            <span>Čapek v1.8.3</span>
+                                        </span>
+                                    </li>
+                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
+                                        value="adams" id="adams">
+                                        <span class="nav-responsive-tab nav-title">
+                                            <span>Adams v1.6.2</span>
+                                        </span>
+                                    </li>
+                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
+                                        value="banks" id="banks">
+                                        <span class="nav-responsive-tab nav-title">
+                                            <span>Banks v1.5.1</span>
+                                        </span>
+                                    </li>
+                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
+                                        value="kennedy" id="kennedy">
+                                        <span class="nav-responsive-tab nav-title">
+                                            <span>Kennedy v1.4.1</span>
+                                        </span>
+                                    </li>
+                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
+                                        value="heinlein" id="heinlein">
+                                        <span class="nav-responsive-tab nav-title">
+                                            <span>Heinlein v1.3.2</span>
+                                        </span>
+                                    </li>
+                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
+                                        value="asimov" id="asimov">
+                                        <span class="nav-responsive-tab nav-title">
+                                            <span>Asimov v1.2.5</span>
+                                        </span>
+                                    </li>
+                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
+                                        value="clarke" id="clarke">
+                                        <span class="nav-responsive-tab nav-title">
+                                            <span>Clarke v1.1.0</span>
+                                        </span>
+                                    </li>
+                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
+                                        value="launch" id="launch">
+                                        <span class="nav-responsive-tab nav-title">
+                                            <span>Launch v1.0.3</span>
+                                        </span>
+                                    </li>
+                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
+                                        value="alphamod" id="alphamod">
+                                        <span class="nav-responsive-tab nav-title">
+                                            <span>Alpha Mod</span>
+                                        </span>
+                                    </li>
+                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
+                                        value="isb" id="isb">
+                                        <span class="nav-responsive-tab nav-title">
+                                            <span>Improved Space Battles</span>
+                                        </span>
+                                    </li>
+                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
+                                        value="new_horizons" id="new_horizons">
+                                        <span class="nav-responsive-tab nav-title">
+                                            <span>ST: New Horizons</span>
+                                        </span>
+                                    </li>
+                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
+                                        value="nsc" id="nsc">
+                                        <span class="nav-responsive-tab nav-title">
+                                            <span>New Ship Classes</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="banner-wrapper hidden">
@@ -168,6 +291,10 @@
                 loadTech(version);
             }
             document.getElementById('version').innerText = document.querySelector("li.menulistitem[value='{0}']".format(version)).innerText;
+            document.getElementById(version).children[0].classList.add('nav-active');
+            let language = "{% get_current_language as CUR_LANGUAGE %}{% get_language_info for CUR_LANGUAGE as cur %}{{ cur.code }}";
+            console.log(language);
+            document.getElementById(language).classList.add('nav-active');
             waitLoadDrag('tech-tree', 100);
         });
         let search_results = document.getElementById("search-results");
@@ -200,29 +327,15 @@
             language.value = self.getAttribute('value');
             language.addEventListener("change", language.form.submit(), false);
         }
-        function switchVersion(self) { 
+        function switchVersion(self) {
             setBanner('banner-info', "{% trans 'Loading...'%}");
             value = self.getAttribute('value');
             document.getElementById('version').innerText = document.querySelector("li.menulistitem[value='{0}']".format(value)).innerText;
+            document.querySelector('li[value] > span.nav-active').classList.remove('nav-active');
+            document.getElementById(value).children[0].classList.add('nav-active');
             loadTech(value);
             probeSave(value);
             waitLoadDrag('tech-tree', 100);
-        }
-        function expandPanel(self) {
-            let element = document.getElementById('panel');
-            element.classList.add('expand');
-            self.classList.add('expand');
-            self.innerHTML = '{% trans "COLLAPSE" %}';
-            window.removeEventListener('click', expandPanel);
-            self.onclick = function() { collapsePanel(this); };
-        }
-        function collapsePanel(self) {
-            let element = document.getElementById('panel');
-            element.classList.remove('expand');
-            self.classList.remove('expand');
-            self.innerHTML = '{% trans "EXPAND" %}';
-            window.removeEventListener('click', collapsePanel);
-            self.onclick = function() { expandPanel(this); };
         }
         function searchTech(self) {
             let display = document.getElementById('search-results');
@@ -291,15 +404,49 @@
                 display.appendChild(node);
             }
         }
-        function searchActive(self) {
-            console.log('search-active');
-            document.getElementById('panel').classList.add('search-active');
-            document.getElementById('search-popout').classList.remove('hidden');
-            searchTech(self);
+        function searchActive(self) {            
+            switch(arguments.length) {
+                case 0:
+                    if (document.getElementById('panel').classList.contains('responsive-search-open')) {
+                        searchInactive();
+                        break;
+                    }
+                    document.getElementById('panel').classList.add('responsive-search-open');
+                    document.getElementById('panel').classList.add('search-active');
+                    document.getElementById('search-popout').classList.remove('hidden');
+                    break;
+                case 1:
+                    document.getElementById('panel').classList.add('search-active');
+                    document.getElementById('search-popout').classList.remove('hidden');
+                    searchTech(self);
+                    break;
+            }
         }
         function searchInactive() {
             document.getElementById('panel').classList.remove('search-active');
+            document.getElementById('panel').classList.remove('responsive-search-open');
             document.getElementById('search-popout').classList.add('hidden');
+        }
+        function showHamburger() {
+            document.getElementById('nav').classList.add('nav-responsive-open');
+            let mask = document.getElementById('mask');
+            mask.style.opacity || (c.style.opacity = 0);
+            mask.style.display || (c.style.display = "none");
+            mask.style.transform = "opacity .2s";
+            mask.style.display = "block"
+            window.setTimeout(function () {
+                mask.style.opacity = .5;
+            }, 0);
+        }
+        function hideHamburger(self) {
+            document.getElementById('nav').classList.remove('nav-responsive-open');
+            self.style.opacity || (c.style.opacity = .5);
+            self.style.display || (c.style.display = "block");
+            self.style.transform = "opacity .6s";
+            self.style.opacity = 0;
+            window.setTimeout(function () {
+                self.style.display = "none";
+            }, 600);
         }
         function locateTech(self) {
             console.log('excuted');
