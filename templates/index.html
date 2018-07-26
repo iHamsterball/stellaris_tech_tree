@@ -130,21 +130,21 @@
                     <ul class="nav-list">
                         <li class="nav-item nav-item-heading">
                             <a href="#" class="nav-responsive-tab nav-title nav-active">
-                                <span>语言</span>
+                                <span>{% trans "LANGUAGE" %}</span>
                             </a>
                             <nav class="nav-responsive-tabs nav">
                                 <ul class="nav-list">
-                                    <li class="nav-item nav-item-heading">
+                                    <li class="nav-item nav-item-heading" onclick="switchLanguage(this)">
                                         <span class="nav-responsive-tab nav-title" id="en">
                                             <span>English</span>
                                         </span>
                                     </li>
-                                    <li class="nav-item nav-item-heading">
+                                    <li class="nav-item nav-item-heading" onclick="switchLanguage(this)">
                                         <span class="nav-responsive-tab nav-title" id="zh-hans">
                                             <span>简体中文</span>
                                         </span>
                                     </li>
-                                    <li class="nav-item nav-item-heading">
+                                    <li class="nav-item nav-item-heading" onclick="switchLanguage(this)">
                                         <span class="nav-responsive-tab nav-title" id="zh-hant">
                                             <span>繁體中文</span>
                                         </span>
@@ -154,7 +154,7 @@
                         </li>
                         <li class="nav-item nav-item-heading">
                             <a href="#" class="nav-responsive-tab nav-title nav-active">
-                                <span>版本</span>
+                                <span>{% trans "VERSION" %}</span>
                             </a>
                             <nav class="nav-responsive-tabs nav">
                                 <ul class="nav-list">
@@ -324,7 +324,7 @@
         }
         function switchLanguage(self) {
             let language = document.getElementById('language');
-            language.value = self.getAttribute('value');
+            language.value = self.getAttribute('value') || self.children[0].getAttribute('id');
             language.addEventListener("change", language.form.submit(), false);
         }
         function switchVersion(self) {
