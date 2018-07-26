@@ -12,11 +12,11 @@ function drag(elementId) {
   let element = document.getElementById(elementId);
   let minX = -element.scrollWidth + window.innerWidth;
   let minY = -element.scrollHeight + window.innerHeight;
-  let maxX = 0;//TODO: 这里写死了高度，应当从header计算
-  let maxY = 58;//与该元素位置无关，只与窗口附近其他元素位置有关
+  let maxX = 0;
+  let maxY = 0;
   element.style.position = 'absolute';
-  element.style.top = maxY + 'px';
-  element.style.left = maxX + 'px';
+  element.style.top = '58px';//初态的位置
+  element.style.left = '0px';
 
   //响应键盘操作用于移动
   let key = {
@@ -50,6 +50,9 @@ function drag(elementId) {
     }
   }
 
+  let tempY = 0;
+  let tempX = 0;
+
   function keyboardMove() {
     let offsetX = 0, offsetY = 0;
     if (key['UP']) {
@@ -65,8 +68,8 @@ function drag(elementId) {
       offsetX += 20;
     }
     element.style.position = 'absolute';
-    tempY = parseInt(element.style.top, 10) - offsetY;
-    tempX = parseInt(element.style.left, 10) - offsetX;
+    tempY -= offsetY;
+    tempX -= offsetX;
     if (isNaN(tempY))
       tempY = maxY;
     if (isNaN(tempX))
@@ -85,9 +88,9 @@ function drag(elementId) {
     if (tempX > maxX) {
       tempX = maxX;
     }
-    element.style.top = ((tempY > 0) ? '+' + tempY : tempY) + 'px';
-    element.style.left = ((tempX > 0) ? '+' + tempX : tempX) + 'px';
+    element.style.transform = 'translate(' + tempX + 'px, ' + tempY + 'px)';
   }
+
 
   let position = {
     offsetX: 0, //点击处偏移元素的X
