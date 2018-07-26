@@ -394,7 +394,6 @@ def generate_localized_tech(locale, version):
             at_var = next(iter(entry))
             at_vars[at_var] = entry[at_var]
             continue
-        print(entry)
 
         tech = Technology(entry, armies, army_attachments, buildable_pops,
                           buildings, components, edicts, policies, resources,
