@@ -50,9 +50,6 @@ function drag(elementId) {
     }
   }
 
-  let tempY = 0;
-  let tempX = 0;
-
   function keyboardMove() {
     let offsetX = 0, offsetY = 0;
     if (key['UP']) {
@@ -68,8 +65,9 @@ function drag(elementId) {
       offsetX += 20;
     }
     element.style.position = 'absolute';
-    tempY -= offsetY;
-    tempX -= offsetX;
+    let curTransform = new WebKitCSSMatrix(window.getComputedStyle(element).webkitTransform);
+    tempY = curTransform.m42 - offsetY;
+    tempX = curTransform.m41 - offsetX;
     if (isNaN(tempY))
       tempY = maxY;
     if (isNaN(tempX))
