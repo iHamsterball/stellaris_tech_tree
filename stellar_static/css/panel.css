@@ -591,7 +591,8 @@ input.search-field:focus {
 
 .selector:hover .menulist {
     display: block !important;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     text-overflow: ellipsis;
     width: 100%
 }
@@ -705,7 +706,7 @@ input.search-field:focus {
     display: inline;
 }
 
-.search-popout::-webkit-scrollbar {
+.search-popout::-webkit-scrollbar,.nav-responsive::-webkit-scrollbar,.menulist::-webkit-scrollbar{
     height: 4px;
     width: 4px
 }
@@ -715,7 +716,7 @@ input.search-field:focus {
     width: 0
 }
 
-.search-popout::-webkit-scrollbar-thumb {
+.search-popout::-webkit-scrollbar-thumb,.nav-responsive::-webkit-scrollbar-thumb,.menulist::-webkit-scrollbar-thumb {
     background: rgba(0,0,0,.26)
 }
 
