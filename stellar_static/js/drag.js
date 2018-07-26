@@ -108,31 +108,22 @@ function drag(elementId) {
     //设置绝对位置在文档中，鼠标当前位置-开始拖拽时的偏移位置
     if (position.state == 1) {
       element.style.position = 'absolute';
-      if ((position.endY - position.offsetY) < maxY) {
-        translateY = (position.endY - position.offsetY) + "px";
-      } else {
-        translateY = maxY;
-        position.offsetY = position.endY - maxY;
-      }
-      if ((position.endX - position.offsetX) < maxX) {
-        translateX = (position.endX - position.offsetX) + "px";
-      } else {
-        translateX = maxX;
-        position.offsetX = position.endX - maxX;
-      }
-      if ((position.endY - position.offsetY) > minY) {
-        translateY = (position.endY - position.offsetY) + "px";
-      } else {
+      let curTransform = new WebKitCSSMatrix(window.getComputedStyle(element).webkitTransform);
+      translateX = curTransform.m41 + (position.endX - position.offsetX);
+      translateY = curTransform.m42 + (position.endY - position.offsetY);
+      if (translateY < minY) {
         translateY = minY;
-        position.offsetY = position.endY - minY;
       }
-      if ((position.endX - position.offsetX) > minX) {
-        translateX = (position.endX - position.offsetX) + "px";
-      } else {
+      if (translateY > maxY) {
+        translateY = maxY;
+      }
+      if (translateX < minX) {
         translateX = minX;
-        position.offsetX = position.endX - minX;
       }
-      element.style.transform = "translate(" + translateX + "," + translateY + ")";
+      if (translateX > maxX) {
+        translateX = maxX;
+      }
+      element.style.transform = "translate(" + translateX + "px," + translateY + "px)";
     }
   }
 
@@ -140,18 +131,8 @@ function drag(elementId) {
   function onMousedown(event) {
     //获得偏移的位置以及更改状态
     let e = getEvent(event);
-    position.offsetX = e.offsetX;
-    position.offsetY = e.offsetY;
-    if (event.target.nodeName != 'svg') {
-      let tmp = event.target;
-      while (tmp.className.split(' ')[0] != 'chart') {
-        tmp = tmp.parentNode;
-      }
-      position.offsetX += event.target.getBoundingClientRect().left - tmp.getBoundingClientRect().left;
-      position.offsetY += event.target.getBoundingClientRect().top - tmp.getBoundingClientRect().top;
-    } else {
-      console.log(position.offsetX, position.offsetY);
-    }
+    position.offsetX = e.clientX;
+    position.offsetY = e.clientY;
     position.state = 1;
   }
  
@@ -161,18 +142,8 @@ function drag(elementId) {
     let e = getEvent(event);
 
     //只用第一个触控点（暂时）
-    position.offsetX = e.touches.item(0).clientX - e.target.getBoundingClientRect().left;
-    position.offsetY = e.touches.item(0).clientY - e.target.getBoundingClientRect().top;
-    if (event.target.nodeName != 'svg') {
-      let tmp = event.target;
-      while (tmp.className.split(' ')[0] != 'chart') {
-        tmp = tmp.parentNode;
-      }
-      position.offsetX += event.target.getBoundingClientRect().left - tmp.getBoundingClientRect().left;
-      position.offsetY += event.target.getBoundingClientRect().top - tmp.getBoundingClientRect().top;
-    } else {
-      console.log(position.offsetX, position.offsetY);
-    }
+    position.offsetX = e.touches.item(0).clientX;
+    position.offsetY = e.touches.item(0).clientY;
     position.state = 1;
   }
 
@@ -183,6 +154,8 @@ function drag(elementId) {
       position.endX = e.clientX;
       position.endY = e.clientY;
       setLocation();
+      position.offsetX = position.endX;
+      position.offsetY = position.endY;
     }
   }
 
@@ -193,6 +166,8 @@ function drag(elementId) {
       position.endX = e.touches.item(0).clientX;
       position.endY = e.touches.item(0).clientY;
       setLocation();
+      position.offsetX = position.endX;
+      position.offsetY = position.endY;
     }
   }
 
