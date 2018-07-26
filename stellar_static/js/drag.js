@@ -105,30 +105,33 @@ function drag(elementId) {
   //移动元素
   function setLocation() {
     //设置绝对位置在文档中，鼠标当前位置-开始拖拽时的偏移位置
-    element.style.position = 'absolute';
-    if ((position.endY - position.offsetY) < maxY) {
-      element.style.top = position.endY - position.offsetY + 'px';
-    } else {
-      element.style.top = ((maxY > 0) ? '+' + maxY : maxY) + 'px';
-      position.offsetY = position.endY - maxY;
-    }
-    if ((position.endX - position.offsetX) < maxX) {
-      element.style.left = position.endX - position.offsetX + 'px';
-    } else {
-      element.style.left = ((maxX > 0) ? '+' + maxX : maxX) + 'px';
-      position.offsetX = position.endX - maxX;
-    }
-    if ((position.endY - position.offsetY) > minY) {
-      element.style.top = position.endY - position.offsetY + 'px';
-    } else {
-      element.style.top = ((minY > 0) ? '+' + minY : minY) + 'px';
-      position.offsetY = position.endY - minY;
-    }
-    if ((position.endX - position.offsetX) > minX) {
-      element.style.left = position.endX - position.offsetX + 'px';
-    } else {
-      element.style.left = ((minX > 0) ? '+' + minX : minX) + 'px';
-      position.offsetX = position.endX - minX;
+    if (position.state == 1) {
+      element.style.position = 'absolute';
+      if ((position.endY - position.offsetY) < maxY) {
+        translateY = (position.endY - position.offsetY) + "px";
+      } else {
+        translateY = maxY;
+        position.offsetY = position.endY - maxY;
+      }
+      if ((position.endX - position.offsetX) < maxX) {
+        translateX = (position.endX - position.offsetX) + "px";
+      } else {
+        translateX = maxX;
+        position.offsetX = position.endX - maxX;
+      }
+      if ((position.endY - position.offsetY) > minY) {
+        translateY = (position.endY - position.offsetY) + "px";
+      } else {
+        translateY = minY;
+        position.offsetY = position.endY - minY;
+      }
+      if ((position.endX - position.offsetX) > minX) {
+        translateX = (position.endX - position.offsetX) + "px";
+      } else {
+        translateX = minX;
+        position.offsetX = position.endX - minX;
+      }
+      element.style.transform = "translate(" + translateX + "," + translateY + ")";
     }
   }
 
