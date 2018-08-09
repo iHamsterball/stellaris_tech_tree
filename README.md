@@ -7,5 +7,7 @@ The [foundation](https://gitlab.com/bipedalshark/stellaris-tech-tree "foundation
 Stellaris Tech Tree Project is an Open Source project covered by the GNU General Public License version 2. It is written by Cother based on the project mentioned above.
 
 Please read the file [DEPLOY.md](docs/DEPLOY.md) if you want to deploy this project on your own server.
+
 Please read the file [LOCALIZATION.md](docs/LOCALIZATION.md) if you want to contribute to this project with a new language support.
+
 Please send mails to <feedback@cother.org> or open issues if you meet some abnormal behavior, or if you have any suggestions.
