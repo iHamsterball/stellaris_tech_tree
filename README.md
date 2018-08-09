@@ -10,4 +10,4 @@ Please read the file [DEPLOY.md](docs/DEPLOY.md) if you want to deploy this proj
 
 Please read the file [LOCALIZATION.md](docs/LOCALIZATION.md) if you want to contribute to this project with a new language support.
 
-Please send mails to <feedback@cother.org> or open issues if you meet some abnormal behavior, or if you have any suggestions.
+Please send mails to <feedback@cother.org> or open issues if you meet any abnormal behaviors, or if you have any suggestions.
