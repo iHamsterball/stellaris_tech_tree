@@ -6,9 +6,6 @@ import yaml
 from django.http import JsonResponse, HttpResponseBadRequest
 from .parse import generate_localized_tech
 
-# Debug
-from pprint import pprint
-
 def techs(request):
     # Fetch techs from specified version
     version = request.GET.get('version')
