@@ -39,6 +39,7 @@ class Technology:
         self.is_start_tech = self._is_start_tech(tech_data)
         self.is_dangerous = self._is_dangerous(tech_data)
         self.is_rare = self._is_rare(tech_data)
+        self.is_not_reverse_engineerable = self._is_not_reverse_engineerable(tech_data)
 
         unlock_parser = FeatureUnlocks(armies, army_attachments,
                                        buildable_pops, buildings, components,
@@ -84,6 +85,16 @@ class Technology:
             is_rare = False
 
         return is_rare
+
+    def _is_not_reverse_engineerable(self, tech_data):
+        try:
+            yes_no = next(iter(key for key in tech_data
+                                if list(key)[0] == 'is_reverse_engineerable'))['is_reverse_engineerable']
+            is_not_reverse_engineerable = True if yes_no == 'no' else False
+        except StopIteration:
+            is_not_reverse_engineerable = False
+
+        return is_not_reverse_engineerable
 
     def _localize(self, key):
         return self._loc_data[key] if type(key) is str else self._loc_data[key.group(1)]
