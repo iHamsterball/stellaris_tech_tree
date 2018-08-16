@@ -45,9 +45,9 @@ But it cannot work if there isn't a corresponding UI language. So you need to ad
 
 Add a project language is a little more harder and requires Python environment. But it's still easy to proceed.
 
-First go to the root folder (or you have already done that), and excute`python3 manage.py makemessages -l fr_FR` `python3 manage.py makemessages -d djangojs -l fr_FR`
+First go to the root folder (or you have already done that), and excute`python3 manage.py makemessages -l fr_FR` `python3 manage.py makemessages -d djangojs -l fr_FR`, replace the language code with the language you want to add.
 
-It might take some time, after the commands are finished, go to **locale/** directory and find the corresponding language code folder. Open **LC_MESSAGES/django.po**, **LC_MESSAGES/djangojs.po** and translate from english.
+It might take some time, after the commands are finished, go to **locale/** directory and find the corresponding language code folder. Open **LC_MESSAGES/django.po**, **LC_MESSAGES/djangojs.po** and translate from English.
 
 Then go to [settings.py](stellaris_tech_tree/settings.py), find this, and add the language code and language name you just made. Note that the language code is linked by a minus sign instead of underscores.
 
@@ -59,7 +59,7 @@ LANGUAGES = (
 )
 ```
 
-Then go to [index.html](templates/index.html), find this, and add or uncomment the language code and language name for the language you just made. There are 2 `<li >`tags that are required to add totally. Note that the language code is linked by a minus sign instead of underscores.
+Then go to [index.html](templates/index.html), find this, and add or uncomment the language code and language name for the language you just made. Please add onclick event if there isn't one in comment. There are 2 `<li >`tags that are required to add totally. Note that the language code is linked by a minus sign instead of underscores.
 
 ```html
 <ul class="menulist">
