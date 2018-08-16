@@ -282,9 +282,9 @@
                 });
             };
         }
-        
+
         let techList;
-        window.addEventListener("load", function() {
+        window.addEventListener("DOMContentLoaded", function() {
             setBanner('banner-info', "{% trans 'Loading...'%}");
             let version;
             if (window.localStorage) {
