@@ -95,6 +95,7 @@ function generateTechTree(locale, version) {
         let description = tech.prerequisites_loc.length > 0
             ? tech.description + '</br></br>' + gettext('PREREQUISITES') + tech.prerequisites_loc.join(', ')
             : tech.description + '</br></br>' + gettext('PREREQUISITES') + gettext('NONE');
+        description += tech.is_not_reverse_engineerable ? '</br><font color="red">' + gettext('IS_NOT_REVERSE_ENGINEERABLE') + '</font>' : '';
         $descBtn.addClass('description');
         $descBtn.attr('title', description);
         $descBtn.attr('data-header', gettext("DESCRIPTION"));
