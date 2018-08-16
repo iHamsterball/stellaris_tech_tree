@@ -23,7 +23,9 @@ Remember the path you put this repository at, and compile localization files.
 ### Configuration
 
 **[Important]Change your secret key in settings.py, and turn debug to False**
+
 If you exposed your secret key, your server would lost many Django's security protections, and could lead to privilege escalation and remote code execution vulnerabilities.
+
 If you leave debug on, potential attackers could gather more information about your server.
 
     # SECURITY WARNING: keep the secret key used in production secret!
@@ -33,6 +35,7 @@ If you leave debug on, potential attackers could gather more information about y
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = True
 Nginx or Apache is used to serve static files and handle django application.
+
 Modify the following configuration and add to your nginx config file.
 
     # Static Files
