@@ -14,6 +14,7 @@ Switch to a non-privileged user or create one.
 git clone https://github.com/iHamsterball/stellaris_tech_tree.git
 cd stellaris_tech_tree
 pip3 install -r requirement.txt
+python3 manage.py migrate
 ```
 
 Remember the path you put this repository at, and compile localization files.
