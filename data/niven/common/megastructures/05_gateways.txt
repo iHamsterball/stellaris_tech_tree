@@ -20,6 +20,7 @@ gateway_0 = {
 	}
 
 	possible = {
+		exists = starbase
 		custom_tooltip = {
 			fail_text = "requires_inside_border"
 			is_inside_border = from
@@ -135,6 +136,7 @@ gateway_ruined = {
 	build_outside_gravity_well = yes
 	bypass_type = gateway
 	show_galactic_map_icon = no
+	construction_blocks_others = no
 
 	potential = {
 		always = no

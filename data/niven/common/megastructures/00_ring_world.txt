@@ -21,6 +21,7 @@ ring_world_1 = {
 	}
 	
 	possible = {
+		exists = starbase
 		custom_tooltip = {
 			fail_text = "requires_inside_border"
 			is_inside_border = from
@@ -107,7 +108,7 @@ ring_world_1 = {
 					owner = { is_same_value = from } 
 				}
 			}
-		}		
+		}
 	}
 	
 	on_build_start = {}

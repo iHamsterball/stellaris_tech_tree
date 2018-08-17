@@ -90,7 +90,12 @@ imperialist = {
 		}
 
 		trigger = {
-			owner = { has_policy_flag = unrestricted_wars }
+			owner = { 
+				OR = {
+					has_policy_flag = unrestricted_wars 
+					has_policy_flag = liberation_wars
+				}
+			}
 		}
 	}
 
@@ -392,6 +397,10 @@ imperialist = {
 					owner = {
 						has_ethic = ethic_militarist
 					}
+				}
+				modifier = {
+					factor = 0
+					owner = { has_valid_civic = civic_fanatic_purifiers }
 				}
 				modifier = {
 					factor = 0
