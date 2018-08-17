@@ -60,43 +60,6 @@ LANGUAGES = (
 )
 ```
 
-Then go to [index.html](templates/index.html), find this, and add or uncomment the language code and language name for the language you just made. Please add onclick event if there isn't one in comment. There are 2 `<li >`tags that are required to add totally. Note that the language code is linked by a minus sign instead of underscores.
-
-```html
-<ul class="menulist">
-    <!--<li class="menulistitem" value="de">Deutsch</li>-->
-    <li class="menulistitem" value="en" onclick="switchLanguage(this)">English</li>
-    <!--<li class="menulistitem" value="es">español</li>-->
-    <!--<li class="menulistitem" value="fr">français</li>-->
-    <!--<li class="menulistitem" value="pt-br">Português Brasileiro</li>-->
-    <!--<li class="menulistitem" value="ru">Русский</li>-->
-    <!--<li class="menulistitem" value="ja">日本語</li>-->
-    <li class="menulistitem" value="zh-hans" onclick="switchLanguage(this)">简体中文</li>
-    <li class="menulistitem" value="zh-hant" onclick="switchLanguage(this)">繁體中文</li>
-    <!--<li class="menulistitem" value="ko">한국어</li>-->
-</ul>
-```
-
-```html
-<ul class="nav-list">
-    <li class="nav-item nav-item-heading" onclick="switchLanguage(this)">
-        <span class="nav-responsive-tab nav-title" id="en">
-            <span>English</span>
-        </span>
-    </li>
-    <li class="nav-item nav-item-heading" onclick="switchLanguage(this)">
-        <span class="nav-responsive-tab nav-title" id="zh-hans">
-            <span>简体中文</span>
-        </span>
-    </li>
-    <li class="nav-item nav-item-heading" onclick="switchLanguage(this)">
-        <span class="nav-responsive-tab nav-title" id="zh-hant">
-            <span>繁體中文</span>
-        </span>
-    </li>
-</ul>
-```
-
 **NOTICE:** You need to compile languages after translatiion by excuting `python3 manage.py compilemessages`, and restart django after compiling.
 
 Thank you for contributing to this project, you can help making it much more awesome.
