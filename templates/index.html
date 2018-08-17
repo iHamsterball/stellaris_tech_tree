@@ -350,13 +350,15 @@
                 techList = Array.prototype.slice.call(document.querySelectorAll('p.node-name'));
                 let resultList = techList.reduce(function (result, cur) {
                     if (typeof cur != undefined) {//To prevent Paradox or Localization Teams from providing null strings
-                        if (cur.childNodes[0].data.toLowerCase().includes(self.value.toLowerCase())) {
-                            if (cur.offsetParent.classList.contains('physics')) {
-                                result[0].push(cur);
-                            } else if (cur.offsetParent.classList.contains('society')) {
-                                result[1].push(cur);
-                            } else if (cur.offsetParent.classList.contains('engineering')) {
-                                result[2].push(cur);
+                        if (cur.childNodes.length > 0) {
+                            if (cur.childNodes[0].data.toLowerCase().includes(self.value.toLowerCase())) {
+                                if (cur.offsetParent.classList.contains('physics')) {
+                                    result[0].push(cur);
+                                } else if (cur.offsetParent.classList.contains('society')) {
+                                    result[1].push(cur);
+                                } else if (cur.offsetParent.classList.contains('engineering')) {
+                                    result[2].push(cur);
+                                }
                             }
                         }
                     }
