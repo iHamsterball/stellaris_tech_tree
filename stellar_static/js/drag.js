@@ -65,9 +65,23 @@ function drag(elementId) {
       offsetX += 20;
     }
     element.style.position = 'absolute';
-    let curTransform = new WebKitCSSMatrix(window.getComputedStyle(element).webkitTransform);
-    tempY = curTransform.m42 - offsetY;
-    tempX = curTransform.m41 - offsetX;
+    let cst = window.getComputedStyle(element);
+    let curTransform = cst.webkitTransform ||
+                       cst.mozTransform ||
+                       cst.msTransform ||
+                       cst.oTransform ||
+                       "err";// No transform set("none") or browser not supported
+    let values;
+    if (curTransform == "none") {
+      values = [1, 0, 0, 1, 0, 0];
+    } else {
+      values = curTransform.split('(')[1],
+      values = values.split(')')[0],
+      values = values.split(',');
+    }
+    // values[0:5]: matrix(cos(a), sin(a), -sin(a), cos(a), x, y)
+    tempY = parseInt(values[5]) - offsetY;
+    tempX = parseInt(values[4]) - offsetX;
     if (isNaN(tempY))
       tempY = maxY;
     if (isNaN(tempX))
@@ -108,9 +122,23 @@ function drag(elementId) {
     //设置绝对位置在文档中，鼠标当前位置-开始拖拽时的偏移位置
     if (position.state == 1) {
       element.style.position = 'absolute';
-      let curTransform = new WebKitCSSMatrix(window.getComputedStyle(element).webkitTransform);
-      translateX = curTransform.m41 + (position.endX - position.offsetX);
-      translateY = curTransform.m42 + (position.endY - position.offsetY);
+      let cst = window.getComputedStyle(element);
+      let curTransform = cst.webkitTransform ||
+                         cst.mozTransform ||
+                         cst.msTransform ||
+                         cst.oTransform ||
+                         "err";// No transform set("none") or browser not supported
+      let values;
+      if (curTransform == "none") {
+        values = [1, 0, 0, 1, 0, 0];
+      } else {
+        values = curTransform.split('(')[1],
+        values = values.split(')')[0],
+        values = values.split(',');
+      }
+      // values[0:5]: matrix(cos(a), sin(a), -sin(a), cos(a), x, y)
+      translateX = parseInt(values[4]) + (position.endX - position.offsetX);
+      translateY = parseInt(values[5]) + (position.endY - position.offsetY);
       if (translateY < minY) {
         translateY = minY;
       }
