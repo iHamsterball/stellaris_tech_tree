@@ -1141,6 +1141,7 @@ on_tech_increased = {
 		apoc.300
 		distar.12000
 		distar.1085
+		distar.10903
 	}
 }
 
@@ -1351,6 +1352,15 @@ on_pop_migration_end = {
 # Root = pop
 # From = previous tile
 on_pop_moved = {
+	events = {
+		action.66
+	}
+}
+
+# A pop has been added to the planet
+# Root = pop
+# From = planet
+on_pop_added = {
 	events = {
 		action.66
 	}

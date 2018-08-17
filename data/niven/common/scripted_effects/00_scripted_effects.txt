@@ -4378,7 +4378,7 @@ create_fallen_empire_reinforcements = {
 		effect = {
 			set_owner = prev.owner
 			while = {
-				count = 2
+				count = 4
 				create_fallen_empire_large_ship = yes
 			}
 			while = {
@@ -4425,11 +4425,11 @@ create_fallen_empire_fleet = {
 		effect = {
 			set_owner = prev.owner
 			while = {
-				count = 5
+				count = 8
 				create_fallen_empire_large_ship = yes
 			}
 			while = {
-				count = 15
+				count = 16
 				create_fallen_empire_small_ship = yes
 			}
 			random_list = {
@@ -4654,6 +4654,24 @@ apply_robotic_pop_growth_behavior = {
 refugee_pop_effect = {
 	remove_modifier = "pop_recently_conquered"
 	remove_culture_shock = yes
+	planet = { 	
+		save_event_target_as = RefugeeEscapedPlanet 
+		if = {
+			limit = {
+				is_under_crisis_bombardment = yes
+			}
+			solar_system = {
+				random_fleet_in_system = {
+					limit = {
+						owner = {
+							is_crisis_faction = yes
+						}
+					}
+					owner = { save_event_target_as = RefugeeEscapedCrisis }
+				}
+			}
+		}		
+	}
 	owner = {
 		save_event_target_as = RefugeeEscapedFrom
 		random_relation = {
@@ -6083,6 +6101,74 @@ create_very_large_marauder_auxiliaries = {
 			can_change_composition = no 
 			can_change_leader = no 
 			uses_naval_capacity = no
+		}
+	}
+}
+
+create_marauder_successor_fleet = {
+	random_owned_planet = { save_event_target_as = fleet_position }
+	create_leader = {
+		type = admiral
+		species = owner_main_species
+		name = random
+		skill = 3
+		leader_age_min = 25
+		leader_age_max = 45
+		traits = {
+			trait = leader_trait_mercenary_warrior
+			trait = random_trait
+		}
+	}
+	create_fleet = {
+		effect = {
+			set_owner = prev
+			while = {
+				count = 16
+				create_ship = {
+					name = random
+					design = "NAME_Outrider"
+					prefix = no
+					graphical_culture = "pirate_01"
+				}
+			}
+			while = {
+				count = 8
+				create_ship = {
+					name = random
+					design = "NAME_Lancer"
+					prefix = no
+					graphical_culture = "pirate_01"
+				}
+			}
+			while = {
+				count = 6
+				create_ship = {
+					name = random
+					design = "NAME_Void_Champion"
+					prefix = no
+					graphical_culture = "pirate_01"
+				}
+			}
+			while = {
+				count = 1
+				create_ship = {
+					name = random
+					design = "NAME_Ancestral_Glory"
+					prefix = no
+					graphical_culture = "pirate_01"
+				}
+			}
+			assign_leader = last_created_leader
+			set_location = {
+				target = event_target:fleet_position
+				distance = 45
+				angle = random
+			}
+		}
+		settings = { 
+			uses_naval_capacity = no
+			can_upgrade = no 
+			can_change_composition = no
 		}
 	}
 }
@@ -9358,7 +9444,7 @@ generate_lcluster_clue = {
 			}
 			custom_tooltip = l_cluster_openable
 			set_country_flag = completed_lcluster_chain
-			country_event = { id = distar.10900}
+			country_event = { id = distar.10904 }
 		}
 	}
 }
@@ -9389,7 +9475,10 @@ pop_lcluster_event = {
 					}
 				}
 			}
-			country_event = { id = distar.9000 days = 10 }
+			random_list = {
+				7 = {}
+				3 = { country_event = { id = distar.9000 days = 10 } }
+			}
 		}
 	}
 }
