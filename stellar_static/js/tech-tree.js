@@ -63,8 +63,12 @@ let locale_map = {
   'pt-br': 'pt_br',
   'ru': 'ru'
 };
+let tree;
 
 function loadTech(version) {
+  if (typeof tree != "undefined") {
+    tree.destroy();
+  }
   generateTechTree(locale_map[document.querySelector('option[selected]').value], version);
   lazyLoadImg(100);
 }
@@ -193,7 +197,7 @@ function generateTechTree(locale, version) {
       }
     }
 
-    new Treant([config, rootNode].concat(techs));
+    tree = new Treant([config, rootNode].concat(techs));
   })
   .success(function() {
     console.log('success')
