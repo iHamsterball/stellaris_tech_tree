@@ -100,6 +100,21 @@ div.extra-data {
     color: #444;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles*/
+    .tech {
+        width: 287px;
+        height: 78px;
+    }
+
+    .tech p.description,
+    .tech p.weight-modifiers,
+    .tech p.feature-unlocks {
+        width: 20px;
+        height: 20px;
+    }
+}
+
 .ui-tooltip {
     font-size: 12px;
     display: block;
