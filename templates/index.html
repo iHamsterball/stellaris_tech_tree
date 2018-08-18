@@ -335,7 +335,7 @@
                 let resultList = techList.reduce(function (result, cur) {
                     if (typeof cur != undefined) {//To prevent Paradox or Localization Teams from providing null strings
                         if (cur.childNodes.length > 0) {
-                            if (cur.childNodes[0].data.toLowerCase().includes(self.value.toLowerCase())) {
+                            if (cur.childNodes[0].data.toLowerCase().indexOf(self.value.toLowerCase()) != -1) {
                                 if (cur.offsetParent.classList.contains('physics')) {
                                     result[0].push(cur);
                                 } else if (cur.offsetParent.classList.contains('society')) {
