@@ -11,3 +11,9 @@ Please read the [file](docs/DEPLOY.md) if you want to deploy this project on you
 Please read the [file](docs/LOCALIZATION.md) if you want to contribute to this project with a new language support.
 
 Please send mails to <feedback@cother.org> or open issues if you meet any abnormal behaviors, or if you have any suggestions.
+
+## Browser support
+
+| <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" /></br>IE / Edge | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" /></br>Firefox | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" /></br>Chrome | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" /></br>Safari | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" /></br>Opera |
+| --------- | --------- | --------- | --------- | --------- |
+| IE11, Edge| 44+| 41+| 11.1+| 15+
