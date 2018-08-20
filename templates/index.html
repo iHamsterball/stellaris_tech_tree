@@ -32,7 +32,7 @@
                         </a>
                     </span>
                 </div>
-                
+
                 <div class="header-upper-tabs">
                     <div class="header-upper-tab-container">
                         <form class="language" action="{% url 'set_language' %}" method="post">{% csrf_token %}
@@ -66,26 +66,14 @@
                                 <span id="version"></span>
                             </div>
                             <ul class="menulist">
-                                <li class="menulistitem" onclick="switchVersion(this)" value="niven">Niven v2.1.2</li>
-                                <li class="menulistitem" onclick="switchVersion(this)" value="cherryh">Cherryh v2.0.5</li>
-                                <li class="menulistitem" onclick="switchVersion(this)" value="boulle">Boulle v1.9.1</li>
-                                <li class="menulistitem" onclick="switchVersion(this)" value="capek">Čapek v1.8.3</li>
-                                <li class="menulistitem" onclick="switchVersion(this)" value="adams">Adams v1.6.2</li>
-                                <li class="menulistitem" onclick="switchVersion(this)" value="banks">Banks v1.5.1</li>
-                                <li class="menulistitem" onclick="switchVersion(this)" value="kennedy">Kennedy v1.4.1</li>
-                                <li class="menulistitem" onclick="switchVersion(this)" value="heinlein">Heinlein v1.3.2</li>
-                                <li class="menulistitem" onclick="switchVersion(this)" value="asimov">Asimov v1.2.5</li>
-                                <li class="menulistitem" onclick="switchVersion(this)" value="clarke">Clarke v1.1.0</li>
-                                <li class="menulistitem" onclick="switchVersion(this)" value="launch">Launch v1.0.3</li>
-                                <li class="menulistitem" onclick="switchVersion(this)" value="alphamod">Alpha Mod</li>
-                                <li class="menulistitem" onclick="switchVersion(this)" value="isb">Improved Space Battles</li>
-                                <li class="menulistitem" onclick="switchVersion(this)" value="new_horizons">ST: New Horizons</li>
-                                <li class="menulistitem" onclick="switchVersion(this)" value="nsc">New Ship Classes</li>
+                                {% for version, name in version_list.items %}
+                                    <li class="menulistitem" onclick="switchVersion(this)" value="{{ version }}">{{ name }}</li>
+                                {% endfor %}
                             </ul>
                         </span>
                     </div>
                 </div>
-                
+
                 <form class="search-form" action="#" method="GET" id="top-search" search-placeholder="{% trans "SEARCH" %}">
                     <div id="search-box">
                         <input placeholder="{% trans "SEARCH" %}" type="text" class="search-field search-query" 
@@ -142,96 +130,14 @@
                             </a>
                             <nav class="nav-responsive-tabs nav">
                                 <ul class="nav-list">
-                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
-                                        value="niven" id="niven">
-                                        <span class="nav-responsive-tab nav-title">
-                                            <span>Niven v2.1.2</span>
-                                        </span>
-                                    </li>
-                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
-                                        value="cherryh" id="cherryh">
-                                        <span class="nav-responsive-tab nav-title">
-                                            <span>Cherryh v2.0.5</span>
-                                        </span>
-                                    </li>
-                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
-                                        value="boulle" id="boulle">
-                                        <span class="nav-responsive-tab nav-title">
-                                            <span>Boulle v1.9.1</span>
-                                        </span>
-                                    </li>
-                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
-                                        value="capek" id="capek">
-                                        <span class="nav-responsive-tab nav-title">
-                                            <span>Čapek v1.8.3</span>
-                                        </span>
-                                    </li>
-                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
-                                        value="adams" id="adams">
-                                        <span class="nav-responsive-tab nav-title">
-                                            <span>Adams v1.6.2</span>
-                                        </span>
-                                    </li>
-                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
-                                        value="banks" id="banks">
-                                        <span class="nav-responsive-tab nav-title">
-                                            <span>Banks v1.5.1</span>
-                                        </span>
-                                    </li>
-                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
-                                        value="kennedy" id="kennedy">
-                                        <span class="nav-responsive-tab nav-title">
-                                            <span>Kennedy v1.4.1</span>
-                                        </span>
-                                    </li>
-                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
-                                        value="heinlein" id="heinlein">
-                                        <span class="nav-responsive-tab nav-title">
-                                            <span>Heinlein v1.3.2</span>
-                                        </span>
-                                    </li>
-                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
-                                        value="asimov" id="asimov">
-                                        <span class="nav-responsive-tab nav-title">
-                                            <span>Asimov v1.2.5</span>
-                                        </span>
-                                    </li>
-                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
-                                        value="clarke" id="clarke">
-                                        <span class="nav-responsive-tab nav-title">
-                                            <span>Clarke v1.1.0</span>
-                                        </span>
-                                    </li>
-                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
-                                        value="launch" id="launch">
-                                        <span class="nav-responsive-tab nav-title">
-                                            <span>Launch v1.0.3</span>
-                                        </span>
-                                    </li>
-                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
-                                        value="alphamod" id="alphamod">
-                                        <span class="nav-responsive-tab nav-title">
-                                            <span>Alpha Mod</span>
-                                        </span>
-                                    </li>
-                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
-                                        value="isb" id="isb">
-                                        <span class="nav-responsive-tab nav-title">
-                                            <span>Improved Space Battles</span>
-                                        </span>
-                                    </li>
-                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
-                                        value="new_horizons" id="new_horizons">
-                                        <span class="nav-responsive-tab nav-title">
-                                            <span>ST: New Horizons</span>
-                                        </span>
-                                    </li>
-                                    <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
-                                        value="nsc" id="nsc">
-                                        <span class="nav-responsive-tab nav-title">
-                                            <span>New Ship Classes</span>
-                                        </span>
-                                    </li>
+                                    {% for version, name in version_list.items %}
+                                        <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
+                                            value="niven" id="{{ version }}">
+                                            <span class="nav-responsive-tab nav-title">
+                                                <span>{{ name }}</span>
+                                            </span>
+                                        </li>
+                                    {% endfor %}
                                 </ul>
                             </nav>
                         </li>
@@ -245,7 +151,7 @@
             </div>
         </div>
     </div>
-    
+
 
     <div class="chart no-select" id="tech-tree" unselectable="on" onselectstart="return false;">
             <script src="{% static "vendor/raphael.js" %}"></script>
@@ -348,7 +254,7 @@
                     }
                     return result;
                 }, [[], [], []]);
-                if (resultList[0].length > 0 
+                if (resultList[0].length > 0
                 || resultList[1].length > 0
                 || resultList[2].length > 0) {
                     while(display.hasChildNodes()) {
@@ -396,7 +302,7 @@
                 display.appendChild(node);
             }
         }
-        function searchActive(self) {            
+        function searchActive(self) {
             switch(arguments.length) {
                 case 0:
                     if (document.getElementById('panel').classList.contains('responsive-search-open')) {
