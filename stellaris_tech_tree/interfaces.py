@@ -4,8 +4,10 @@ import os
 import re
 import yaml
 from django.http import JsonResponse, HttpResponseBadRequest
+from django.views.decorators.gzip import gzip_page
 from .parse import generate_localized_tech
 
+@gzip_page
 def techs(request):
     # Fetch techs from specified version
     version = request.GET.get('version')
