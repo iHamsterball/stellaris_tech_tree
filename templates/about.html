@@ -1,0 +1,65 @@
+{% load i18n %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <title>{% trans "STELLARIS_TECH_TREE" %}</title>
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Material+Icons">
+        <link rel="stylesheet" href="{% static "css/panel.css" %}">
+        <link rel="stylesheet" href="{% static "css/notosansscsliced.css" %}">
+        <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="panel-wrapper">
+                <div id="panel" class="panel">
+                    <button type="button" class="expand-section-nav header-icon-button button-flat material-icons" 
+                        data-label="Hamburger menu" onclick="showHamburger()"></button>
+                    <div class="project-name-wrapper">
+                        <a class="project-name-link" href="/stellaris/">
+                            <img src="/stellar_static/img/stellaris.bmp" class="project-logo" alt="Stellaris">
+                        </a>
+                        <span class="project-name">
+                            <a class="project-name-link" src="/stellaris/">
+                                <h1 class="project-name">Stellaris</h1>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="header-upper-tabs">
+                        <div class="header-upper-tab-container">
+                            <form class="language" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                                <input name="next" type="hidden" value="{{ redirect_to }}" />
+                                <select class="language selector" name="language" id="language" onchange="this.form.submit()" style="display: none">
+                                    {% get_current_language as LANGUAGE_CODE %}
+                                    {% get_available_languages as LANGUAGES %}
+                                    {% get_language_info_list for LANGUAGES as languages %}
+                                    {% for language in languages %}
+                                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                            {{ language.name_local }} ({{ language.code }})
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                                <span class="selector">
+                                    <div class="header-link">
+                                        {% get_language_info for LANGUAGE_CODE as cur %}
+                                        {{ cur.name_local }}
+                                    </div>
+                                    <ul class="menulist">
+                                        {% for language in languages %}
+                                            <li class="menulistitem" value="{{ language.code }}" onclick="switchLanguage(this)">{{ language.name_local}}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% include "analytics.html" %}
+    </body>
+</html>
