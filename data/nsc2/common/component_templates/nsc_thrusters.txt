@@ -1,0 +1,652 @@
+# Icons set here are the ones show in the actual slot.
+
+############
+### COST ###
+############
+
+@StrikeCruiser_cost1 = 15
+@StrikeCruiser_cost2 = 30
+@StrikeCruiser_cost3 = 45
+@StrikeCruiser_cost4 = 60
+@StrikeCruiser_cost5 = 75
+
+@Battlecruiser_cost1 = 20
+@Battlecruiser_cost2 = 40
+@Battlecruiser_cost3 = 60
+@Battlecruiser_cost4 = 80
+@Battlecruiser_cost5 = 100
+
+@Carrier_cost1 = 24
+@Carrier_cost2 = 48
+@Carrier_cost3 = 72
+@Carrier_cost4 = 96
+@Carrier_cost5 = 120
+
+@Dreadnought_cost1 = 36
+@Dreadnought_cost2 = 60
+@Dreadnought_cost3 = 84
+@Dreadnought_cost4 = 108
+@Dreadnought_cost5 = 132
+
+@Flagship_cost1 = 60
+@Flagship_cost2 = 120
+@Flagship_cost3 = 180
+@Flagship_cost4 = 240
+@Flagship_cost5 = 300
+
+#############
+### POWER ###
+#############
+
+@StrikeCruiser_power_1 = -60
+@StrikeCruiser_power_2 = -80
+@StrikeCruiser_power_3 = -100
+@StrikeCruiser_power_4 = -120
+@StrikeCruiser_power_5 = -140
+
+@Battlecruiser_power_1 = -70
+@Battlecruiser_power_2 = -100
+@Battlecruiser_power_3 = -130
+@Battlecruiser_power_4 = -160
+@Battlecruiser_power_5 = -190
+
+@Carrier_power_1 = -85
+@Carrier_power_2 = -125
+@Carrier_power_3 = -165
+@Carrier_power_4 = -205
+@Carrier_power_5 = -245
+
+@Dreadnought_power_1 = -120
+@Dreadnought_power_2 = -140
+@Dreadnought_power_3 = -180
+@Dreadnought_power_4 = -220
+@Dreadnought_power_5 = -260
+
+@Flagship_power_1 = -180
+@Flagship_power_2 = -260
+@Flagship_power_3 = -340
+@Flagship_power_4 = -420
+@Flagship_power_5 = -500
+
+##################
+### SPEED MULT ###
+##################
+
+@thruster_2 = 0.25
+@thruster_3 = 0.5
+@thruster_4 = 0.75
+@thruster_5 = 1.0
+
+###################
+### EVASION ADD ###
+###################
+
+@StrikeCruiser_evade_2 = 3
+@StrikeCruiser_evade_3 = 7
+@StrikeCruiser_evade_4 = 10
+@StrikeCruiser_evade_5 = 14
+
+@Battlecruiser_evade_2 = 2
+@Battlecruiser_evade_3 = 5
+@Battlecruiser_evade_4 = 7
+@Battlecruiser_evade_5 = 10
+
+@Carrier_evade_2 = 2
+@Carrier_evade_3 = 5
+@Carrier_evade_4 = 6
+@Carrier_evade_5 = 8
+
+@Dreadnought_evade_2 = 1
+@Dreadnought_evade_3 = 3
+@Dreadnought_evade_4 = 4
+@Dreadnought_evade_5 = 6
+
+#############
+# THRUSTERS #
+#############
+
+### 1
+
+utility_component_template = {
+	key = "STRIKECRUISER_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	power = @StrikeCruiser_power_1
+	cost = @StrikeCruiser_cost1
+	
+	modifier = {
+	}
+		
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	size_restriction = { StrikeCruiser supportship }
+	upgrades_to = "STRIKECRUISER_SHIP_THRUSTER_2"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "BATTLECRUISER_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	power = @Battlecruiser_power_1
+	cost = @Battlecruiser_cost1
+	
+	modifier = {
+	}
+		
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	size_restriction = { Battlecruiser }
+	upgrades_to = "BATTLECRUISER_SHIP_THRUSTER_2"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "CARRIER_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	power = @Carrier_power_1
+	cost = @Carrier_cost1
+	
+	modifier = {
+	}
+		
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	size_restriction = { Carrier }
+	upgrades_to = "CARRIER_SHIP_THRUSTER_2"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "DREADNOUGHT_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	power = @Dreadnought_power_1
+	cost = @Dreadnought_cost1
+	
+	modifier = {
+	}
+		
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	size_restriction = { Dreadnought }
+	upgrades_to = "DREADNOUGHT_SHIP_THRUSTER_2"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "FLAGSHIP_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	power = @Flagship_power_1
+	cost = @Flagship_cost1
+	
+	modifier = {
+	}
+		
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	size_restriction = { Flagship }
+	upgrades_to = "FLAGSHIP_SHIP_THRUSTER_2"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+### 2
+
+utility_component_template = {
+	key = "STRIKECRUISER_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	power = @StrikeCruiser_power_2
+	cost = @StrikeCruiser_cost2
+	modifier = {
+		ship_base_speed_mult = @thruster_2
+		ship_evasion_add = @StrikeCruiser_evade_2
+	}
+
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	size_restriction = { StrikeCruiser supportship }
+	upgrades_to = "STRIKECRUISER_SHIP_THRUSTER_3"
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	KEY = "BATTLECRUISER_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	power = @Battlecruiser_power_2
+	cost = @Battlecruiser_cost2
+	
+	modifier = {
+		ship_base_speed_mult = @thruster_2
+		ship_evasion_add = @Battlecruiser_evade_2
+	}
+		
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	size_restriction = { Battlecruiser }
+	upgrades_to = "BATTLECRUISER_SHIP_THRUSTER_3"
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	KEY = "CARRIER_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	power = @Carrier_power_2
+	cost = @Carrier_cost2
+	
+	modifier = {
+		ship_base_speed_mult = @thruster_2
+		ship_evasion_add = @Carrier_evade_2
+	}
+		
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	size_restriction = { Carrier }
+	upgrades_to = "CARRIER_SHIP_THRUSTER_3"
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	KEY = "DREADNOUGHT_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	power = @Dreadnought_power_2
+	cost = @Dreadnought_cost2
+	
+	modifier = {
+		ship_base_speed_mult = @thruster_2
+		ship_evasion_add = @Dreadnought_evade_2
+	}
+		
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	size_restriction = { Dreadnought }
+	upgrades_to = "DREADNOUGHT_SHIP_THRUSTER_3"
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	KEY = "FLAGSHIP_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	power = @Flagship_power_2
+	cost = @Flagship_cost2
+	
+	modifier = {
+		ship_base_speed_mult = @thruster_2
+	}
+		
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	size_restriction = { Flagship }
+	upgrades_to = "FLAGSHIP_SHIP_THRUSTER_3"
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+
+### 3
+
+utility_component_template = {
+	key = "STRIKECRUISER_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	power = @StrikeCruiser_power_3
+	cost = @StrikeCruiser_cost3
+	modifier = {
+		ship_base_speed_mult = @thruster_3
+		ship_evasion_add = @StrikeCruiser_evade_3
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	size_restriction = { StrikeCruiser supportship }
+	upgrades_to = "STRIKECRUISER_SHIP_THRUSTER_4"
+	
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "BATTLECRUISER_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	power = @Battlecruiser_power_3
+	cost = @Battlecruiser_cost3
+	modifier = {
+		ship_base_speed_mult = @thruster_3
+		ship_evasion_add = @Battlecruiser_evade_3
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	size_restriction = { Battlecruiser }
+	upgrades_to = "BATTLECRUISER_SHIP_THRUSTER_4"
+	
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "CARRIER_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	power = @Carrier_power_3
+	cost = @Carrier_cost3
+	modifier = {
+		ship_base_speed_mult = @thruster_3
+		ship_evasion_add = @Carrier_evade_3
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	size_restriction = { Carrier }
+	upgrades_to = "CARRIER_SHIP_THRUSTER_4"
+	
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "DREADNOUGHT_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	power = @Dreadnought_power_3
+	cost = @Dreadnought_cost3
+	modifier = {
+		ship_base_speed_mult = @thruster_3
+		ship_evasion_add = @Dreadnought_evade_3
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	size_restriction = { Dreadnought }
+	upgrades_to = "DREADNOUGHT_SHIP_THRUSTER_4"
+	
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "FLAGSHIP_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	power = @Flagship_power_3
+	cost = @Flagship_cost3
+	modifier = {
+		ship_base_speed_mult = @thruster_3
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	size_restriction = { Flagship }
+	upgrades_to = "FLAGSHIP_SHIP_THRUSTER_4"
+	
+	ai_weight = {
+		weight = 3
+	}
+}
+
+### 4
+
+utility_component_template = {
+	key = "STRIKECRUISER_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	power = @StrikeCruiser_power_4
+	cost = @StrikeCruiser_cost4
+	modifier = {
+		ship_base_speed_mult = @thruster_4
+		ship_evasion_add = @StrikeCruiser_evade_4
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	size_restriction = { StrikeCruiser supportship }
+	upgrades_to = "STRIKECRUISER_SHIP_THRUSTER_5"
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "BATTLECRUISER_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	power = @Battlecruiser_power_4
+	cost = @Battlecruiser_cost4
+	modifier = {
+		ship_base_speed_mult = @thruster_4
+		ship_evasion_add = @Battlecruiser_evade_4
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	size_restriction = { Battlecruiser }
+	upgrades_to = "BATTLECRUISER_SHIP_THRUSTER_5"
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "CARRIER_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	power = @Carrier_power_4
+	cost = @Carrier_cost4
+	modifier = {
+		ship_base_speed_mult = @thruster_4
+		ship_evasion_add = @Carrier_evade_4
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	size_restriction = { Carrier }
+	upgrades_to = "CARRIER_SHIP_THRUSTER_5"
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "DREADNOUGHT_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	power = @Dreadnought_power_4
+	cost = @Dreadnought_cost4
+	modifier = {
+		ship_base_speed_mult = @thruster_4
+		ship_evasion_add = @Dreadnought_evade_4
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	size_restriction = { Dreadnought }
+	upgrades_to = "DREADNOUGHT_SHIP_THRUSTER_5"
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "FLAGSHIP_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	power = @Flagship_power_4
+	cost = @Flagship_cost4
+	modifier = {
+		ship_base_speed_mult = @thruster_4
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	size_restriction = { Flagship }
+	upgrades_to = "FLAGSHIP_SHIP_THRUSTER_5"
+	ai_weight = {
+		weight = 4
+	}
+}
+
+### 5
+
+utility_component_template = {
+	key = "STRIKECRUISER_SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_thruster_5"
+	icon_frame = 1
+	power = @StrikeCruiser_power_5
+	cost = @StrikeCruiser_cost5
+	modifier = {
+		ship_base_speed_mult = @thruster_5
+		ship_evasion_add = @StrikeCruiser_evade_5
+	}
+
+	prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	size_restriction = { StrikeCruiser supportship }
+	
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "BATTLECRUISER_SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_thruster_5"
+	icon_frame = 1
+	power = @Battlecruiser_power_5
+	cost = @Battlecruiser_cost5
+	modifier = {
+		ship_base_speed_mult = @thruster_5
+		ship_evasion_add = @Battlecruiser_evade_5
+	}
+
+	prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	size_restriction = { Battlecruiser }
+	
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "CARRIER_SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_thruster_5"
+	icon_frame = 1
+	power = @Carrier_power_5
+	cost = @Carrier_cost5
+	modifier = {
+		ship_base_speed_mult = @thruster_5
+		ship_evasion_add = @Carrier_evade_5
+	}
+
+	prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	size_restriction = { Carrier }
+	
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "DREADNOUGHT_SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_thruster_5"
+	icon_frame = 1
+	power = @Dreadnought_power_5
+	cost = @Dreadnought_cost5
+	modifier = {
+		ship_base_speed_mult = @thruster_5
+		ship_evasion_add = @Dreadnought_evade_5
+	}
+
+	prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	size_restriction = { Dreadnought }
+	
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "FLAGSHIP_SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_thruster_5"
+	icon_frame = 1
+	power = @Flagship_power_5
+	cost = @Flagship_cost5
+	modifier = {
+		ship_base_speed_mult = @thruster_5
+	}
+
+	prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	size_restriction = { Flagship }
+	
+	ai_weight = {
+		weight = 5
+	}
+}

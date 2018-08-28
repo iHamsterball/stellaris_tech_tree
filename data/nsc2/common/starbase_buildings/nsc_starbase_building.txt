@@ -1,0 +1,1036 @@
+###############
+### VANILLA ###
+###############
+
+fleet_academy = {
+	icon = "GFX_spaceport_module_fleet_academy"
+	construction_days = 360
+	
+	potential = {
+		exists = owner
+		owner = { has_technology = tech_interstellar_fleet_traditions }
+	}	
+	
+	possible = {
+		OR = {
+			has_starbase_module = shipyard
+			has_starbase_module = drydock
+		}
+	}
+	
+	ship_modifier = {
+		ship_starting_experience_add = 100
+	}
+	
+	cost = {
+		minerals = 200
+	}
+	
+	upkeep_resources = {
+		energy = 2
+	}
+
+	show_in_tech = "tech_interstellar_fleet_traditions"
+	
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 200
+		modifier = {
+			factor = 0
+			count_starbase_modules = {
+				type = shipyard
+				count < 3
+			}
+		}
+	}
+}
+
+titan_yards = {
+	icon = "GFX_spaceport_module_titan_assembly_yard"
+	construction_days = 720
+	
+	potential = {
+		exists = owner
+		owner = { has_technology = tech_titans }			
+	}
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_citadel"
+			has_starbase_size >= starbase_citadel
+		}
+		OR = {
+			has_starbase_module = shipyard
+			has_starbase_module = drydock
+		}
+	}
+	
+	cost = {
+		minerals = 1000
+	}
+	
+	upkeep_resources = {
+		energy = 10
+	}
+	
+	custom_tooltip = sm_titan_yards_desc_modifier
+	
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 200
+		modifier = {
+			factor = 0
+			count_starbase_modules = {
+				type = shipyard
+				count < 3
+			}
+		}
+	}
+}
+
+colossus_yards = {
+	icon = "GFX_spaceport_module_colossus_assembly_yard"
+	construction_days = 720
+	
+	potential = {
+		exists = owner
+		owner = { has_technology = tech_colossus }		
+	}
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_citadel"
+			has_starbase_size >= starbase_citadel
+		}
+		OR = {
+			has_starbase_module = shipyard
+			has_starbase_module = drydock
+		}
+	}
+	
+	cost = {
+		minerals = 2000
+	}
+	
+	upkeep_resources = {
+		energy = 20
+	}
+	
+	custom_tooltip = sm_colossus_yards_desc_modifier
+	show_in_tech = "tech_colossus"
+	
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 200
+		modifier = {
+			factor = 0
+			count_starbase_modules = {
+				type = shipyard
+				count < 3
+			}
+		}
+	}
+}
+
+############
+### NSC2 ###
+############
+
+sensor_station = {
+	icon = "GFX_sb_sensor_station"
+	construction_days = 360
+	
+	cost = {
+		minerals = 300
+	}
+	
+	potential = {
+		exists = owner
+		owner = { has_technology = tech_sensorstation_1 }
+	}
+	
+	possible = {
+		has_starbase_building = listening_post
+	}
+	
+	station_modifier = {
+		ship_sensor_range_add = 2
+		ship_hyperlane_range_add = 2
+	}
+	
+	upkeep_resources = {
+		energy = 3
+	}
+	
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = no
+	ai_weight = {
+		weight = 50
+	}	
+	
+	show_in_tech = "tech_sensorstation_1"
+}
+
+hq_annex = {
+	icon = "GFX_sb_hq_annex"
+	construction_days = 180
+	
+	cost = {
+		minerals = 1000
+	}
+	
+	potential = {
+		exists = owner
+		custom_tooltip = {
+			fail_text = "requires_stronghold"
+			has_starbase_size = starbase_stronghold
+		}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "hq_limit"
+			owner = {
+				NOT = {
+					any_owned_starbase = {
+						has_starbase_building = hq_annex
+					}
+				}
+			}
+		}
+	}
+	
+	upkeep_resources = {
+		energy = 5
+	}
+	
+	country_modifier = {
+		country_sector_cap_add = 2
+		country_leader_cap = 5
+		country_ship_upgrade_cost_mult = -0.25
+		starbase_defense_platform_capacity_add = 8
+		ship_experience_gain_mult = 0.1
+		admiral_skill_levels = 1
+		ship_upkeep_mult = -0.15
+		country_naval_cap_add = 100
+		country_command_limit_add = 80
+	}
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 25
+	}
+}
+
+starbase_management = {
+	icon = "GFX_sb_starbase_administration"
+	construction_days = 180
+
+	cost = {
+		minerals = 1000
+		energy = 1000
+		influence = 50
+	}
+	
+	produced_resources = { 
+		influence = 1 
+		unity = 5 
+	}
+	
+	potential = {
+		exists = owner
+		owner = {
+			NOR = {
+				has_authority = auth_machine_intelligence
+				has_authority = auth_hive_mind
+			}
+		}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "starbase_management_limit"
+			owner = {
+				NOT = {
+					any_owned_starbase = {
+						has_starbase_building = starbase_management
+						count < 5
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_colonized_planet"
+			solar_system = {
+				any_planet = {
+					is_owned_by = from
+				}
+			}
+		}
+	}
+	
+	upkeep_resources = {
+		energy = 3
+	}
+	
+	country_modifier= {
+		max_influence = 100
+	}
+	
+	system_modifier = {
+		pop_happiness = 0.10
+	}
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 25
+	}
+}
+
+starbase_management_machine = {
+	icon = "GFX_sb_starbase_administration"
+	construction_days = 180
+	
+	cost = {
+		minerals = 1000
+		energy = 1000
+		influence = 50
+	}
+	
+	produced_resources = { 
+		influence = 1 
+		unity = 5 
+	}
+	
+	potential = {
+		exists = owner
+		owner = { has_authority = auth_machine_intelligence }
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "starbase_management_machine_limit"
+			owner = {
+				NOT = {
+					any_owned_starbase = {
+						has_starbase_building = starbase_management_machine
+						count < 5
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_colonized_planet"
+			solar_system = {
+				any_planet = {
+					is_owned_by = from
+				}
+			}
+		}
+	}
+	
+	upkeep_resources = {
+		energy = 3
+	}
+	
+	country_modifier= {
+		max_influence = 100
+	}
+	
+	system_modifier = {
+		pop_robot_production_output = 0.10
+	}
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 25
+	}
+}
+
+starbase_management_hive = {
+	icon = "GFX_sb_starbase_administration"
+	construction_days = 180
+	
+	
+	cost = {
+		minerals = 1000
+		energy = 1000
+		influence = 50
+	}
+	
+	produced_resources = { 
+		influence = 1 
+		unity = 5 
+	}
+	
+	potential = {
+		exists = owner
+		owner = { has_authority = auth_hive_mind }
+	}
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "starbase_management_hive_limit"
+			owner = {
+				NOT = {
+					any_owned_starbase = {
+						has_starbase_building = starbase_management_hive
+						count < 5
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_colonized_planet"
+			solar_system = {
+				any_planet = {
+					is_owned_by = from
+				}
+			}
+		}
+	}
+	
+	upkeep_resources = {
+		energy = 3
+	}
+	
+	country_modifier= {
+		max_influence = 100
+	}
+	
+	system_modifier = {
+		pop_growth_speed = 0.1
+	}
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 25
+	}
+}
+
+mining_base = {
+	icon = "GFX_starbase_mining_terminal"
+	construction_days = 180
+	
+	cost = {
+		minerals = 1000
+		energy = 1000
+		influence = 50
+	}
+	
+	potential = {
+		exists = owner
+		owner = { has_technology = tech_mining_base }
+	}
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "mining_base_limit"
+			owner = {
+				NOT = {
+					any_owned_starbase = {
+						has_starbase_building = mining_base
+						count < 5
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_colonized_planet"
+			solar_system = {
+				any_planet = {
+					is_owned_by = from
+				}
+			}
+		}
+	}
+	
+	upkeep_resources = {
+		energy = 5
+		influence = 0.10
+	}
+	
+	country_modifier = {
+		max_minerals = 2500
+	}
+	
+	system_modifier = {
+		tile_resource_minerals_mult = 0.25
+	}
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 25
+	}
+}
+
+power_station = {
+	icon = "GFX_sb_power_station"
+	construction_days = 180
+	
+	cost = {
+		minerals = 1000
+		energy = 1000
+		influence = 50
+	}
+	
+	potential = {
+		exists = owner
+		owner = { has_technology = tech_power_station }
+	}
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "power_station_limit"
+			owner = {
+				NOT = {
+					any_owned_starbase = {
+						has_starbase_building = power_station
+						count < 5
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_colonized_planet"
+			solar_system = {
+				any_planet = {
+					is_owned_by = from
+				}
+			}
+		}
+	}
+	
+	upkeep_resources = {
+		minerals = 5
+		influence = 0.10
+	}
+	
+	country_modifier = {
+		max_energy = 2500
+	}
+	
+	system_modifier = {
+		tile_resource_energy_mult = 0.25
+	}
+	
+	custom_tooltip = sm_power_station_desc_modifier
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 25
+	}
+}
+
+customs_office = {
+	icon = "GFX_sb_customs_office"
+	construction_days = 180
+	
+	potential = {
+		exists = owner
+		owner = { has_technology = tech_starbase_2 }
+		
+		custom_tooltip = {
+			fail_text = "requires_colonized_planet"
+			solar_system = {
+				any_planet = {
+					is_owned_by = from
+				}
+			}
+		}
+	}
+
+	cost = {
+		minerals = 250
+		influence = 15
+	}
+
+	upkeep_resources = {
+		energy = 1
+	}
+
+	triggered_system_modifier = {
+		potential = {
+			owner = {
+				NOR = { has_authority = auth_machine_intelligence
+						has_authority = auth_hive_mind	}
+				 }
+			}
+		planet_unrest_mult = -0.25
+		pop_government_ethic_attraction = 0.2
+		pop_migration_speed = 0.15
+		planet_migration_xeno_pull = -0.15
+	}
+
+	triggered_system_modifier = {
+		potential = {
+			owner = { has_authority = auth_hive_mind }
+				 }
+		planet_unrest_mult = -0.25
+		pop_processing_output = 0.05		 
+	}
+
+	triggered_system_modifier = {
+		potential = {
+				owner = { 
+					has_authority = auth_machine_intelligence
+					NOT ={ has_civic = civic_machine_servitor}}}
+		planet_unrest_mult = -0.25
+		pop_processing_output = 0.05
+	}
+
+	triggered_system_modifier = {
+		potential = {
+				owner = { has_civic = civic_machine_servitor }}
+		biological_pop_happiness = 0.05
+		tile_resource_food_mult = 0.1
+	}
+	
+	ai_weight = { weight = 0 }
+}
+
+solar_panel_01 = {
+	icon = "GFX_sb_solar_panel_network"
+	construction_days = 180
+	
+	potential = {
+		NOT = { has_starbase_building = solar_panel_01 }
+	}
+	
+	cost = {
+		minerals = 125
+	}
+	
+	produced_resources = {
+		energy = 2
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			hidden_trigger = { exists = this }		
+			has_starbase_building = power_station
+			resources = { energy = 1 }
+		}
+	}
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 25
+	}
+}
+
+solar_panel_02 = {
+	icon = "GFX_sb_solar_panel_network"
+	construction_days = 180
+	
+	potential = {
+		has_starbase_building = solar_panel_01
+		NOT = { has_starbase_building = solar_panel_02 }
+	}
+	
+	cost = {
+		minerals = 125
+	}
+	
+	produced_resources = {
+		energy = 2
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			hidden_trigger = { exists = this }		
+			has_starbase_building = power_station
+			resources = { energy = 1 }
+		}
+	}
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 25
+	}
+}
+
+solar_panel_03 = {
+	icon = "GFX_sb_solar_panel_network"
+	construction_days = 180
+	
+	potential = {
+		has_starbase_building = solar_panel_01
+		has_starbase_building = solar_panel_02
+		NOT = { has_starbase_building = solar_panel_03 }
+	}
+	
+	cost = {
+		minerals = 125
+	}
+	
+	produced_resources = {
+		energy = 2
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			hidden_trigger = { exists = this }		
+			has_starbase_building = power_station
+			resources = { energy = 1 }
+		}
+	}
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 25
+	}
+}
+
+solar_panel_04 = {
+	icon = "GFX_sb_solar_panel_network"
+	construction_days = 180
+	
+	potential = {
+		has_starbase_building = solar_panel_01
+		has_starbase_building = solar_panel_02
+		has_starbase_building = solar_panel_03
+		NOT = { has_starbase_building = solar_panel_04 }
+	}
+	
+	cost = {
+		minerals = 125
+	}
+	
+	produced_resources = {
+		energy = 2
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			hidden_trigger = { exists = this }		
+			has_starbase_building = power_station
+			resources = { energy = 1 }
+		}
+	}
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 25
+	}
+}
+
+solar_panel_05 = {
+	icon = "GFX_sb_solar_panel_network"
+	construction_days = 180
+	
+	potential = {
+		has_starbase_building = solar_panel_01
+		has_starbase_building = solar_panel_02
+		has_starbase_building = solar_panel_03
+		has_starbase_building = solar_panel_04
+		NOT = { has_starbase_building = solar_panel_05 }
+	}
+	
+	cost = {
+		minerals = 125
+	}
+	
+	produced_resources = {
+		energy = 2
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			hidden_trigger = { exists = this }		
+			has_starbase_building = power_station
+			resources = { energy = 1 }
+		}
+	}
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 25
+	}
+}
+
+solar_panel_06 = {
+	icon = "GFX_sb_solar_panel_network"
+	construction_days = 180
+	
+	potential = {
+		has_starbase_building = solar_panel_01
+		has_starbase_building = solar_panel_02
+		has_starbase_building = solar_panel_03
+		has_starbase_building = solar_panel_04
+		has_starbase_building = solar_panel_05
+		NOT = { has_starbase_building = solar_panel_06 }
+	}
+	
+	cost = {
+		minerals = 125
+	}
+	
+	produced_resources = {
+		energy = 2
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			hidden_trigger = { exists = this }		
+			has_starbase_building = power_station
+			resources = { energy = 1 }
+		}
+	}
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 25
+	}
+}
+
+solar_panel_07 = {
+	icon = "GFX_sb_solar_panel_network"
+	construction_days = 180
+	
+	potential = {
+		has_starbase_building = solar_panel_01
+		has_starbase_building = solar_panel_02
+		has_starbase_building = solar_panel_03
+		has_starbase_building = solar_panel_04
+		has_starbase_building = solar_panel_05
+		has_starbase_building = solar_panel_06
+		NOT = { has_starbase_building = solar_panel_07 }
+	}
+	
+	cost = {
+		minerals = 125
+	}
+	
+	produced_resources = {
+		energy = 2
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			hidden_trigger = { exists = this }		
+			has_starbase_building = power_station
+			resources = { energy = 1 }
+		}
+	}
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 25
+	}
+}
+
+solar_panel_08 = {
+	icon = "GFX_sb_solar_panel_network"
+	construction_days = 180
+	
+	potential = {
+		has_starbase_building = solar_panel_01
+		has_starbase_building = solar_panel_02
+		has_starbase_building = solar_panel_03
+		has_starbase_building = solar_panel_04
+		has_starbase_building = solar_panel_05
+		has_starbase_building = solar_panel_06
+		has_starbase_building = solar_panel_07
+		NOT = { has_starbase_building = solar_panel_08 }
+	}
+	
+	cost = {
+		minerals = 125
+	}
+	
+	produced_resources = {
+		energy = 2
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			hidden_trigger = { exists = this }		
+			has_starbase_building = power_station
+			resources = { energy = 1 }
+		}
+	}
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 25
+	}
+}
+
+solar_panel_09 = {
+	icon = "GFX_sb_solar_panel_network"
+	construction_days = 180
+	
+	potential = {
+		has_starbase_building = solar_panel_01
+		has_starbase_building = solar_panel_02
+		has_starbase_building = solar_panel_03
+		has_starbase_building = solar_panel_04
+		has_starbase_building = solar_panel_05
+		has_starbase_building = solar_panel_06
+		has_starbase_building = solar_panel_07
+		has_starbase_building = solar_panel_08
+		NOT = { has_starbase_building = solar_panel_09 }
+	}
+	
+	cost = {
+		minerals = 125
+	}
+	
+	produced_resources = {
+		energy = 2
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			hidden_trigger = { exists = this }		
+			has_starbase_building = power_station
+			resources = { energy = 1 }
+		}
+	}
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 25
+	}
+}
+
+solar_panel_10 = {
+	icon = "GFX_sb_solar_panel_network"
+	construction_days = 180
+	
+	potential = {
+		has_starbase_building = solar_panel_01
+		has_starbase_building = solar_panel_02
+		has_starbase_building = solar_panel_03
+		has_starbase_building = solar_panel_04
+		has_starbase_building = solar_panel_05
+		has_starbase_building = solar_panel_06
+		has_starbase_building = solar_panel_07
+		has_starbase_building = solar_panel_08
+		has_starbase_building = solar_panel_09
+		NOT = { has_starbase_building = solar_panel_10 }
+	}
+	
+	cost = {
+		minerals = 125
+	}
+	
+	produced_resources = {
+		energy = 2
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			hidden_trigger = { exists = this }		
+			has_starbase_building = power_station
+			resources = { energy = 1 }
+		}
+	}
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 25
+	}
+}
+
+solar_panel_11 = {
+	icon = "GFX_sb_solar_panel_network"
+	construction_days = 180
+	
+	potential = {
+		has_starbase_building = solar_panel_01
+		has_starbase_building = solar_panel_02
+		has_starbase_building = solar_panel_03
+		has_starbase_building = solar_panel_04
+		has_starbase_building = solar_panel_05
+		has_starbase_building = solar_panel_06
+		has_starbase_building = solar_panel_07
+		has_starbase_building = solar_panel_08
+		has_starbase_building = solar_panel_09
+		has_starbase_building = solar_panel_10
+		NOT = { has_starbase_building = solar_panel_11 }
+	}
+	
+	cost = {
+		minerals = 125
+	}
+	
+	produced_resources = {
+		energy = 2
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			hidden_trigger = { exists = this }		
+			has_starbase_building = power_station
+			resources = { energy = 1 }
+		}
+	}
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 25
+	}
+}
+
+solar_panel_12 = {
+	icon = "GFX_sb_solar_panel_network"
+	construction_days = 180
+	
+	potential = {
+		has_starbase_building = solar_panel_01
+		has_starbase_building = solar_panel_02
+		has_starbase_building = solar_panel_03
+		has_starbase_building = solar_panel_04
+		has_starbase_building = solar_panel_05
+		has_starbase_building = solar_panel_06
+		has_starbase_building = solar_panel_07
+		has_starbase_building = solar_panel_08
+		has_starbase_building = solar_panel_09
+		has_starbase_building = solar_panel_10
+		has_starbase_building = solar_panel_11
+	}
+	
+	cost = {
+		minerals = 125
+	}
+	
+	produced_resources = {
+		energy = 2
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			hidden_trigger = { exists = this }		
+			has_starbase_building = power_station
+			resources = { energy = 1 }
+		}
+	}
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 25
+	}
+}

@@ -1,0 +1,50 @@
+drydock = {
+	icon = "GFX_modules_nsc_drydock"
+	section = "ASSEMBLYYARD_STARBASE_SECTION"
+	construction_days = 360
+
+	cost = {
+		minerals = 250
+	}
+	
+	potential = {
+		exists = owner
+		owner = { has_technology = tech_drydock_1 }
+	}
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "drydock_limit"
+			NOT = { 
+				owner = {
+					any_owned_starbase = {
+						has_starbase_module = drydock
+					}
+				}
+			}
+		}
+	}
+
+	station_modifier = {
+		starbase_shipyard_capacity_add = 6
+		starbase_shipyard_build_cost_mult = -0.10
+	}
+	
+	orbit_modifier = {
+		ship_orbit_upkeep_mult = -0.25
+	}
+	
+	upkeep_resources = {
+		energy = 3
+	}
+	
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 100
+			NOT = { has_starbase_module = shipyard }
+		}
+	}
+}

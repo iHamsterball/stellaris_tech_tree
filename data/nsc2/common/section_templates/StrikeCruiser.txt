@@ -1,0 +1,453 @@
+# AI Weight Guide:
+# Factor 10 means this this segment will be used for said AI personality as primary.
+# Factor 5 means an "unlock" segment has higher priority elsewhere.
+
+#BOW
+
+ship_section_template = {
+	key = "STRIKECRUISER_BOW_M2S2"
+	ship_size = StrikeCruiser
+	fits_on_slot = bow
+	entity = "StrikeCruiser_bow_M1S2_entity"
+	icon = "GFX_ship_part_core_bow"
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	medium_utility_slots = 5
+	
+	cost = 200
+}
+
+ship_section_template = {
+	key = "STRIKECRUISER_BOW_M2PD2"
+	ship_size = StrikeCruiser
+	fits_on_slot = bow
+	entity = "StrikeCruiser_bow_M1S2_entity"
+	icon = "GFX_ship_part_core_bow"
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	component_slot = {
+		name = "PD_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "PD_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	medium_utility_slots = 5
+	
+	cost = 200
+}
+
+ship_section_template = {
+	key = "STRIKECRUISER_BOW_G1S4"
+	ship_size = StrikeCruiser
+	fits_on_slot = bow
+	entity = "StrikeCruiser_bow_M1S2_entity"
+	icon = "GFX_ship_part_core_bow"
+	
+	component_slot = {
+		name = "TORPEDO_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_04"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	medium_utility_slots = 4
+	
+	cost = 300
+}
+
+ship_section_template = {
+	key = "STRIKECRUISER_BOW_G2"
+	ship_size = StrikeCruiser
+	fits_on_slot = bow
+	entity = "StrikeCruiser_bow_M2_entity"
+	icon = "GFX_ship_part_core_bow"
+	
+	component_slot = {
+		name = "TORPEDO_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	component_slot = {
+		name = "TORPEDO_02"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+	
+	medium_utility_slots = 4
+	
+	cost = 400
+}
+
+ship_section_template = {
+	key = "STRIKECRUISER_BOW_L1"
+	ship_size = StrikeCruiser
+	fits_on_slot = bow
+	entity = "StrikeCruiser_bow_L1_entity"
+	icon = "GFX_ship_part_core_bow"
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+	
+	medium_utility_slots = 4
+	
+	cost = 400
+}
+
+ship_section_template = {
+	key = "STRIKECRUISER_BOW_M3"
+	ship_size = StrikeCruiser
+	fits_on_slot = bow
+	entity = "StrikeCruiser_bow_M2_entity"
+	icon = "GFX_ship_part_core_bow"
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	medium_utility_slots = 3
+	
+	cost = 400
+}
+
+
+
+#MID
+
+ship_section_template = {
+	key = "STRIKECRUISER_MID_M2S2"
+	ship_size = StrikeCruiser
+	fits_on_slot = mid
+	entity = "StrikeCruiser_mid_M2S2_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	medium_utility_slots = 5
+	
+	cost = 300
+}
+
+
+ship_section_template = {
+	key = "STRIKECRUISER_MID_S6"
+	ship_size = StrikeCruiser
+	fits_on_slot = mid
+	entity = "StrikeCruiser_mid_S2HB_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_04"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_05"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_06"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	medium_utility_slots = 3
+	large_utility_slots = 3
+	
+	cost = 200
+}
+
+ship_section_template = {
+	key = "STRIKECRUISER_MID_M3"
+	ship_size = StrikeCruiser
+	fits_on_slot = mid
+	entity = "StrikeCruiser_mid_M3_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_03"
+	}
+	
+	medium_utility_slots = 4
+	
+	cost = 400
+}
+
+
+
+#STERN
+
+ship_section_template = {
+	key = "STRIKECRUISER_STERN_M2"
+	ship_size = StrikeCruiser
+	fits_on_slot = stern
+	entity = "StrikeCruiser_stern_M1_entity"
+	icon = "GFX_ship_part_core_stern"
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	aux_utility_slots = 2
+	
+	cost = 400
+}
+
+ship_section_template = {
+	key = "STRIKECRUISER_STERN_S2PD2"
+	ship_size = StrikeCruiser
+	fits_on_slot = stern
+	entity = "StrikeCruiser_stern_S2_entity"
+	icon = "GFX_ship_part_core_stern"
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	component_slot = {
+		name = "PD_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "PD_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	aux_utility_slots = 3
+	
+	cost = 300
+}
+
+ship_section_template = {
+	key = "STRIKECRUISER_STERN_S4"
+	ship_size = StrikeCruiser
+	fits_on_slot = stern
+	entity = "StrikeCruiser_stern_S2_entity"
+	icon = "GFX_ship_part_core_stern"
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_04"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	aux_utility_slots = 3
+	
+	cost = 300
+}

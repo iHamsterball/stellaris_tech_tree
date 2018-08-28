@@ -369,6 +369,11 @@ def _localize_is_playable_country(value):
     # New Ship Classes Mod
     return ugettext('Is playable country') if value == 'yes' else ugettext('Is NOT playable country')
 
+def _localize_mid_game_years_passed(value):
+    # New Ship Classes 2 Mod
+    operator, value = _operator_and_value(value)
+    return ugettext('Number of years since mid game is {} {}').format(operator, value)
+
 def _localize_has_not_government(value):
     return ugettext('Does NOT have {}').format(localization_map[value])
 

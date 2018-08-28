@@ -1,0 +1,161 @@
+#BOW
+
+ship_section_template = {
+	key = "SUPPORTSHIP_BOW_M1S2"
+	ship_size = supportship
+	fits_on_slot = bow
+	entity = "supportship_bow_M1S2_entity"
+	icon = "GFX_ship_part_core_bow"
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "PD_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "PD_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	medium_utility_slots = 4
+	
+	cost = 1000
+}
+
+
+
+#MID1
+
+ship_section_template = {
+	key = "SUPPORTSHIP_MID1_S2"
+	ship_size = supportship
+	fits_on_slot = mid1
+	entity = "supportship_mid1_S2HB_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PD_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "PD_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	medium_utility_slots = 4
+	
+	cost = 1000
+}
+
+
+
+#MID2
+
+ship_section_template = {
+	key = "SUPPORTSHIP_MID2_S2"
+	ship_size = supportship
+	fits_on_slot = mid2
+	entity = "supportship_mid2_S2HB_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PD_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "PD_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	medium_utility_slots = 4
+	
+	cost = 1000
+}
+
+
+
+#MID3
+
+ship_section_template = {
+	key = "SUPPORTSHIP_MID3_S2"
+	ship_size = supportship
+	fits_on_slot = mid3
+	entity = "supportship_mid2_S2HB_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "PD_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "PD_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	medium_utility_slots = 4
+	
+	cost = 1000
+}
+
+
+
+#STERN
+
+ship_section_template = {
+	key = "SUPPORTSHIP_STERN_S3"
+	ship_size = supportship
+	fits_on_slot = stern
+	entity = "supportship_stern_S2_entity"
+	icon = "GFX_ship_part_core_stern"
+	
+	component_slot = {
+		name = "PD_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "PD_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	component_slot = {
+		name = "PD_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_03"
+	}
+	
+	aux_utility_slots = 3
+	
+	cost = 1000
+}

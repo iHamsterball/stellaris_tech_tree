@@ -1,0 +1,162 @@
+weapon_component_template = {
+	key = "PERDITION_BEAM_FLAGSHIP"
+	size = titanic
+	entity = "invisible_turret_entity"
+	type = instant
+	prio_projectile = yes
+	damage = { min = 7000 max = 12000 }
+	windup = { min = 80 max = 120 }
+	total_fire_time = 120
+	range = 250
+	accuracy = 0.85
+	type = instant
+	power = -500
+	cost = 500
+	hull_damage = 1.25
+	armor_damage = 1.50
+	shield_damage = 0.75
+	
+	icon = "GFX_ship_part_perdition_beam"
+	icon_frame = 1
+	
+	firing_arc = 10.0
+	min_range = 30.0
+	static_rotation = yes
+	use_ship_kill_target = no
+	
+	prerequisites = { "tech_Flagship_1" }
+	component_set = "PERDITION_BEAM_FLAGSHIP"
+	projectile_gfx = "perdition_beam"
+	size_restriction = { Flagship }
+}
+
+weapon_component_template = {
+	key = "PERDITION_BEAM_STARBASE"
+	size = titanic
+	entity = "large_laser_gun_entity"
+	type = instant
+	prio_projectile = yes
+	damage = { min = 10000 max = 15000 }
+	windup = { min = 30 max = 45 }
+	total_fire_time = 120
+	range = 350
+	accuracy = 0.95
+	type = instant
+	power = -1000
+	cost = 1000
+	hull_damage = 1.25
+	armor_damage = 1.50
+	shield_damage = 0.75
+	
+	icon = "GFX_ship_part_perdition_beam"
+	icon_frame = 1
+	
+	firing_arc = 360.0
+	min_range = 30.0
+	static_rotation = yes
+	use_ship_kill_target = no
+	
+	component_set = "PERDITION_BEAM_STARBASE"
+	projectile_gfx = "perdition_beam"
+	size_restriction = { starbase_stronghold }
+}
+
+weapon_component_template = {
+	key = "XL_BEAM_STARBASE"
+	size = extra_large
+	entity = "invisible_turret_entity"
+	damage = { min = 1200 max = 2400 }
+	windup = { min = 10 max = 20 }
+	total_fire_time = 70
+	range = 350
+	accuracy = 0.85
+	type = instant
+	power = -350
+	cost = 0
+	hull_damage = 1.50
+	armor_damage = 2.00
+	shield_damage = 0.50
+	
+	icon = "GFX_ship_part_energy_lance_2"
+	icon_frame = 1
+	
+	firing_arc = 360.0
+	min_range = 10.0
+	static_rotation = yes
+	use_ship_kill_target = no
+	
+	component_set = "XL_BEAM_STARBASE"
+	projectile_gfx = "tachyon_lance"
+	size_restriction = { starbase_stronghold }
+}
+
+weapon_component_template = {
+	key = "TOMAHAWK_CRUISE_MISSILE"
+	size = torpedo
+	icon = "GFX_ship_part_cruise_missile_1"
+	icon_frame = 1
+	entity = "turret_missile_medium_entity"	
+	type = missile
+	static_rotation = no
+
+	damage = { min = 200 max = 300 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 90
+
+	range = 250
+	accuracy = 1.0
+	missile_speed = 12 # 264 -- apparently, the game doesn't auto-convert speed for non-vanilla components
+	missile_evasion = 0.1
+	missile_health = 18
+	missile_retarget_range = 100
+	power = -150
+	cost = 150
+
+	hull_damage = 1.5
+	armor_damage = 1.0
+	armor_penetration = 0.0
+	shield_damage = 1.0
+	shield_penetration = 1.0
+	tracking = 0.0
+
+	prerequisites = { "tech_tomahawk_cruise_missile_1" }
+	component_set = "TOMAHAWK_CRUISE_MISSILE"
+	projectile_gfx = "large_missile"
+	size_restriction = { Battlecruiser battleship Carrier Dreadnought titan Flagship military_station_small military_station_medium military_station_large }
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery }
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+weapon_component_template = {
+	key = "BATTLESHIP_SNIPER_GUN_1"
+	size = small
+	icon = "GFX_ship_part_nsc_bb_sniper_1"
+	icon_frame = 1	
+     entity = "small_kinetic_gun_entity"
+	type = instant
+
+	damage = { min = 15 max = 55 }
+	windup = { min = 1.0 max = 15.0 }
+	total_fire_time = 20
+	range = 100
+	accuracy = 0.90
+	power = -45
+	cost = 100
+	hull_damage = 1.25
+	armor_penetration = 0.0
+	armor_damage = 0.5
+	shield_penetration = 0.0
+	shield_damage = 1.5
+	tracking = 0.80
+
+	prerequisites = { tech_spitfire_1 }
+	component_set = "NSC_BB_SNIPER"
+	projectile_gfx = "gauss_cannon_s"
+	size_restriction = { battleship Flagship }
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+}

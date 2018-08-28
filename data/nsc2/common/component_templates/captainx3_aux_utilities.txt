@@ -1,0 +1,71 @@
+####################
+# Enhanced Reactor Boosters #
+####################
+##Vanilla Reactor Booster 3##
+
+utility_component_template = {
+	key = "REACTOR_BOOSTER_3"
+	size = aux
+	icon = "GFX_ship_part_reactor_booster_3"
+	icon_frame = 1
+	power = 100
+	cost = 15
+	
+	prerequisites = { "tech_reactor_boosters_3" }
+	component_set = "REACTOR_BOOSTER_3"
+    upgrades_to = "NSC_REACTOR_BOOSTER_1"
+	ai_weight = {
+		weight = 5
+	}
+}
+
+## Advanced Reactor Boosters ##
+utility_component_template = {
+	key = "NSC_REACTOR_BOOSTER_1"
+	size = aux
+	icon = "GFX_nsc_reactor_booster_4"
+	icon_frame = 1
+	power = 150
+	cost = 20
+	
+	prerequisites = { "tech_nsc_reactor_boosters_1" }
+	component_set = "NSC_REACTOR_BOOSTER_1"
+	upgrades_to = "NSC_REACTOR_BOOSTER_2"
+	
+	ai_weight = {
+		weight = 6
+	}
+}
+
+utility_component_template = {
+	key = "NSC_REACTOR_BOOSTER_2"
+	size = aux
+	icon = "GFX_nsc_reactor_booster_5"
+	icon_frame = 1
+	power = 200
+	cost = 25
+	
+	prerequisites = { "tech_nsc_reactor_boosters_2" }
+	component_set = "NSC_REACTOR_BOOSTER_2"
+	upgrades_to = "NSC_REACTOR_BOOSTER_3"
+
+	ai_weight = {
+		weight = 7
+	}
+}
+
+utility_component_template = {
+	key = "NSC_REACTOR_BOOSTER_3"
+	size = aux
+	icon = "GFX_nsc_reactor_booster_6"
+	icon_frame = 1
+	power = 250
+	cost = 30
+	
+	prerequisites = { "tech_nsc_reactor_boosters_3" }
+	component_set = "NSC_REACTOR_BOOSTER_3"
+
+	ai_weight = {
+		weight = 8
+	}
+}

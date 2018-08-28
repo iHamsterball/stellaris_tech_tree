@@ -1,0 +1,1016 @@
+l_chinese_t:
+
+ TAB: "    "
+
+ ################################################################################################################################################
+ # HULL SIZES & MODULES
+ ################################################################################################################################################
+
+ STRIKECRUISER: "打擊巡洋艦"
+ BATTLECRUISER: "戰列巡洋艦"
+ CARRIER: "航空母艦"
+ DREADNOUGHT: "無畏艦"
+ FLAGSHIP: "旗艦"
+ SUPPORTSHIP: "艦隊支援艦"
+
+ StrikeCruiser: "打擊巡洋艦"
+ StrikeCruiser_plural: "打擊巡洋艦"
+ Battlecruiser: "戰列巡洋艦"
+ Battlecruiser_plural: "戰列巡洋艦" 
+ Carrier: "航空母艦"
+ Carrier_plural: "航空母艦"
+ Dreadnought: "無畏艦"
+ Dreadnought_plural: "無畏艦"
+ Flagship: "旗艦"
+ Flagship_plural: "旗艦"
+ supportship: "艦隊支援艦"
+ supportship_plural: "艦隊支援艦"
+
+ starbase_stronghold: "恒星據點"
+ starbase_stronghold_plural: "恒星據點"
+
+ xl_cannon: "殲滅者加農炮"
+ xl_cannon_plural: "殲滅者加農炮"
+ 
+ military_station_small: "防禦平臺"
+ military_station_small_plural: "防禦平臺"
+ military_station_medium: "防禦空間站"
+ military_station_medium_plural: "防禦空間站"
+ military_station_large: "防禦要塞"
+ military_station_large_plural: "防禦要塞"
+ 
+ sm_drydock: "幹船塢"
+ sm_drydock_desc: "幹船塢是壹種恒星基地上的大型標準造船廠,可以壹次建造兩艘船艦。\n"
+
+ sm_sensor_station: "預警站"
+ sm_sensor_station_desc: "在恒星基地上建立壹個預警站以便監控我們的邊境。\n"
+
+ sm_solar_panel_01: "太陽能面板網絡"
+ sm_solar_panel_01_desc: "小型太陽能板網路可以分擔太空站的維護費用。"
+ sm_solar_panel_02:0 "$sm_solar_panel_01$"
+ sm_solar_panel_02_desc:0 "$sm_solar_panel_01_desc$"
+ sm_solar_panel_03:0 "$sm_solar_panel_01$"
+ sm_solar_panel_03_desc:0 "$sm_solar_panel_01_desc$"
+ sm_solar_panel_04:0 "$sm_solar_panel_01$"
+ sm_solar_panel_04_desc:0 "$sm_solar_panel_01_desc$"
+ sm_solar_panel_05:0 "$sm_solar_panel_01$"
+ sm_solar_panel_05_desc:0 "$sm_solar_panel_01_desc$"
+ sm_solar_panel_06:0 "$sm_solar_panel_01$"
+ sm_solar_panel_06_desc:0 "$sm_solar_panel_01_desc$"
+ sm_solar_panel_07:0 "$sm_solar_panel_01$"
+ sm_solar_panel_07_desc:0 "$sm_solar_panel_01_desc$"
+ sm_solar_panel_08:0 "$sm_solar_panel_01$"
+ sm_solar_panel_08_desc:0 "$sm_solar_panel_01_desc$"
+ sm_solar_panel_09:0 "$sm_solar_panel_01$"
+ sm_solar_panel_09_desc:0 "$sm_solar_panel_01_desc$"
+ sm_solar_panel_10:0 "$sm_solar_panel_01$"
+ sm_solar_panel_10_desc:0 "$sm_solar_panel_01_desc$"
+ sm_solar_panel_11:0 "$sm_solar_panel_01$"
+ sm_solar_panel_11_desc:0 "$sm_solar_panel_01_desc$"
+ sm_solar_panel_12:0 "$sm_solar_panel_01$"
+ sm_solar_panel_12_desc:0 "$sm_solar_panel_01_desc$"
+
+ sm_hq_annex: "海軍總部"
+ sm_hq_annex_desc: "壹個建立在星堡上的先進指揮中心,為我們的帝國提供不俗的加成。"
+
+ sm_starbase_management: "恒星基地管理中心"
+ starbase_management_desc: "先進的微觀管理使大量作業更有效率。"
+
+ sm_customs_office: "海關"
+ sm_customs_office_desc: "星系移民的管理中心。"
+
+ sm_starbase_management_machine: "恒星基地網絡樞紐"
+ starbase_management_machine_desc: "01000101 01110010 01110010 01101111 01110010 00100000 00110100 00110000 00110100 0001010\n(譯者註:即為Error 404, 最後壹組數字由於少壹碼因此無法判讀。)"
+
+ sm_starbase_management_hive: "恒星基地巢穴"
+ starbase_management_hive_desc: "我們是壹個整體。"
+
+ stb_headquarters: "指揮部"
+ stb_headquarters_desc: "所有船艦的主要指揮中心。"
+
+ sm_mining_base: "星系礦物精煉廠"
+ sm_mining_base_desc: "增加星系的礦物產量。"
+
+ sm_power_station: "星系能量網絡"
+ sm_power_station_desc: "增加星系的能量產量。"
+ sm_power_station_desc_modifier:0 "$SYSTEM_MODIFIER$\n$TAB$$tile_resource_energy_mult$ §G+25%§!\n$COUNTRY_MODIFIER$\n$TAB$$max_energy$ §G+2500§!\n$STATION_MODIFIER$\n$TAB$$sm_solar_panel_01$: §G+1§! £能量\n\n"
+
+ STRIKE_CRAFT_HANGAR_1: "基礎戰鬥機"
+ STRIKE_CRAFT_HANGAR_1_DESC: "壹種擁有最低負載的轟炸機,必須貼進敵人的大型船艦才能發動攻擊。"
+
+ STRIKE_CRAFT_HANGAR_2: "改良戰鬥機"
+ STRIKE_CRAFT_HANGAR_2_DESC: "改良轟炸機可以更有效的破壞敵方軍事船艦。"
+
+ STRIKE_CRAFT_HANGAR_3: "先進戰鬥機"
+ STRIKE_CRAFT_HANGAR_3_DESC: "先進轟炸機可以靈巧的穿過星際戰場並以刁鉆的角度對敵艦輸出爆發性的傷害。"
+ 
+ STRIKE_CRAFT_HANGAR_4: "基礎轟炸機"
+ STRIKE_CRAFT_HANGAR_4_DESC: "壹種擁有最低負載的轟炸機,必須貼進敵人的大型船艦才能發動攻擊。"
+
+ STRIKE_CRAFT_HANGAR_5: "改良轟炸機"
+ STRIKE_CRAFT_HANGAR_5_DESC: "改良轟炸機可以更有效的破壞敵方軍事船艦。"
+
+ STRIKE_CRAFT_HANGAR_6: "先進轟炸機"
+ STRIKE_CRAFT_HANGAR_6_DESC: "先進轟炸機可以靈巧的穿過星際戰場並以刁鉆的角度對敵艦輸出爆發性的傷害。"
+
+ 
+ 
+ 
+ 
+ 
+ ################################################################################################################################################
+ # MEGASTRUCTURES
+ ################################################################################################################################################
+ 
+ industrial_complex_0_MEGASTRUCTURE_DETAILS: "壹個大型工業復合體,提供前所未有的礦物以及能量產量。"
+
+ industrial_complex_0: "工業復合體設置"
+ industrial_complex_0_DESC: "壹個大型工業復合體。"
+ industrial_complex_0_CONSTRUCTION_INFO_DELAYED: "壹個大型工業復合體。"
+
+ industrial_complex_1: "工業中心"
+ industrial_complex_1_DESC: "壹個工業制造中心。"
+ industrial_complex_1_CONSTRUCTION_INFO_DELAYED: "壹個工業制造中心。"
+ industrial_complex_1_MEGASTRUCTURE_DETAILS: "壹個工業制造中心。"
+
+ industrial_complex_2: "工業樞紐"
+ industrial_complex_2_DESC: "壹個工業制造樞紐。"
+ industrial_complex_2_CONSTRUCTION_INFO_DELAYED: "壹個工業制造樞紐。"
+ industrial_complex_2_MEGASTRUCTURE_DETAILS: "壹個工業制造樞紐。"
+
+ industrial_complex_3: "工業復合體"
+ industrial_complex_3_DESC: "壹個大型工業復合體。"
+ industrial_complex_3_CONSTRUCTION_INFO_DELAYED: "壹個大型工業復合體。"
+ industrial_complex_3_MEGASTRUCTURE_DETAILS: "壹個大型工業復合體。"
+
+ 
+ 
+ 
+ 
+ ################################################################################################################################################
+ # TECH STUFF
+ ################################################################################################################################################
+ 
+ tech_pd_destroyer_1: "點防禦驅逐艦升級"
+ tech_pd_destroyer_1_desc: "先進的結構技術使驅逐艦可以裝備大型的點防禦陣列武器。"
+
+ tech_StrikeCruiser_1: "打擊巡洋艦"
+ tech_StrikeCruiser_1_desc: "工廠與結構技術的發展使我們可以建造打擊巡洋艦級別的軍事船艦。"
+
+ tech_Battlecruiser_1: "戰列巡洋艦"
+ tech_Battlecruiser_1_desc: "工廠與結構技術的發展使我們可以建造戰列巡洋艦級別的軍事船艦。"
+
+ tech_lightcarrier_1: "輕航母升級"
+ tech_lightcarrier_1_desc: "隨著我們的船艦建造技術發展,我們持續尋找新的船艦布局以改進現有船艦。這種特化的戰列巡洋艦升級會將其轉化成輕型航空母艦,使其擁有搭載少量艦載機的能力。"
+
+ tech_Carrier_1: "航空母艦"
+ tech_Carrier_1_desc: "工廠與結構技術的發展使我們可以建造航空母艦級別的軍事船艦。"
+
+ tech_heavycarrier_1: "重航母升級"
+ tech_heavycarrier_1_desc: "隨著我們的船艦建造技術發展,我們持續尋找新的船艦布局以改進現有船艦。這種特化的航空母艦升級會將其轉化成重型航空母艦,大幅強化艦載機搭載量。"
+
+ tech_supercarrier_1: "超級航空母艦升級"
+ tech_supercarrier_1_desc: "隨著我們的船艦建造技術發展,我們持續尋找新的船艦布局以改進現有船艦。這種特化的戰列巡洋艦升級會將其轉化成超級航空母艦,使其擁有搭載巨大的艦載機搭載量。"
+
+ tech_spitfire_1: "噴火式戰列艦特化"
+ tech_spitfire_1_desc: "隨著小型軍事船艦的演進,它們逐漸擁有威脅主力艦的能力。我們的工程師有壹些可以針對此問題改進的戰列艦圖紙,雖然會提高造價,但可以讓戰列艦追加反輕型護衛艦/驅逐艦模塊。"
+
+ tech_Dreadnought_1: "無畏艦"
+ tech_Dreadnought_1_desc: "工廠與結構技術的發展使我們可以建造無畏艦級別的軍事船艦。"
+
+ tech_Flagship_1: "旗艦"
+ tech_Flagship_1_desc: "經過數十年的戰鬥以及工程經驗累積,我們現在有能力建造強大且獨特的旗艦來作為我們的帝國象征。" 
+
+ tech_supportship_1:0 "艦隊支援艦"
+ tech_supportship_1_desc:0 "隨著我們的艦隊數量成長的同時,艦隊的活動區域離母星越來越遠,勢必要發展壹種船艦來取代日益增長的補給線,艦隊支援艦因應而生。" 
+
+ tech_drydock_1: "恒星基地幹船塢"
+ tech_drydock_1_desc: "幹船塢是壹種恒星基地上的大型標準造船廠,可以壹次建造兩艘船艦。"
+
+ tech_sensorstation_1: "預警站"
+ tech_sensorstation_1_desc: "在恒星基地上建立壹個預警站以便監控我們的邊境。"
+
+ tech_starbase_6: "恒星據點基地"
+ tech_starbase_6_desc: "作為恒星基地的最終升級版本,恒星據點基地是終極的指揮總部兼防禦據點。"
+
+ tech_space_defense_station_2: "深空防禦2"
+ tech_space_defense_station_2_desc: "建造深空防禦站來保護我們的恒星基地。"
+
+ tech_space_defense_station_3: "深空防禦3"
+ tech_space_defense_station_3_desc: "建造深空防禦要塞來保護我們的恒星基地。"
+
+ tech_specialcomponents_1: "先進船艦組件"
+ tech_specialcomponents_1_desc: "解鎖壹系列擁有特殊加成的戰艦模快來強化並進壹步特化船艦。"
+
+ tech_ship_upkeep_1: "高效船艦補給線"
+ tech_ship_upkeep_1_desc: "先進的科技使我們的補給線更有效率,進而明顯的減少船艦維護費用。"
+
+ tech_starbase_upkeep_1: "高效恒星基地維護"
+ tech_starbase_upkeep_1_desc: "恒星基地的工作人員在經過專業的訓練後可以用更高效的方法維護恒星基地,進而明顯的減少恒星基地維護費用。"
+ 
+ tech_singularity_power: "奇點動力"
+ tech_singularity_power_desc: "由量子奇點供能的反應堆。"
+
+ tech_bh_power_3: "先進旗艦反應堆"
+ tech_bh_power_3_desc: "由人工黑洞供能的反應堆。"
+
+ tech_bh_power_2: "改良旗艦反應堆"
+ tech_bh_power_2_desc: "由人工黑洞供能的反應堆。"
+
+ tech_optimized_enigmatic_power: "優化暗物質反應堆"
+ tech_optimized_enigmatic_power_desc: "強化暗物質反應堆。"
+
+ tech_graviton_power: "引力反應堆"
+ tech_graviton_power_desc: "加入重力以及粒子重力來強化反物質反應,使反應堆可以產生更多能量。"
+
+ tech_multidimensional_power: "多維反應堆"
+ tech_multidimensional_power_desc: "多維反應堆是通過真空能量流實現供能的次世代反應堆,但是需要要在不同的維度以及現實之間建立壹個物質橋接器來保持穩定。"
+
+ tech_naquadria_power: "奎達反應堆"
+ tech_naquadria_power_desc: "使用古老而稀有的水晶供能的特殊反應堆。"
+
+ nsc_sec_power_核心: "第二反應堆"
+ nsc_sec_power_核心_desc: "要塞和太空站的第二反應堆槽位。"
+ 
+ tech_nsc_reactor_boosters_1: "引力反應堆助推器"
+ tech_nsc_reactor_boosters_1_desc: "引力反應堆的發現可以應用在反應堆助推器上,使其更符合我們的船只需求。"
+ tech_nsc_reactor_boosters_2: "奎達反應堆助推器"
+ tech_nsc_reactor_boosters_2_desc: "奎達反應堆的發現可以應用在反應堆助推器上,使其更符合我們的船只需求。"
+ tech_nsc_reactor_boosters_3: "奇點反應堆助推器"
+ tech_nsc_reactor_boosters_3_desc: "奇點反應堆的發現可以應用在反應堆助推器上,使其更符合我們的船只需求。"
+
+ tech_nsc_dlc_check: "現在是Apocalypse?"
+ tech_nsc_dlc_check_desc: "用來偵測Apocalypse DLC的起始科技。"
+
+ tech_strikecruiser_build_speed: "標準化打擊巡洋艦模塊"
+ tech_strikecruiser_build_speed_desc: "藉由模塊化打擊巡洋艦結構可以更有效的改善船艦生產線效率。"
+ tech_strikecruiser_hull_1: "改良打擊巡洋艦船體"
+ tech_strikecruiser_hull_1_desc: "先進的建造技術使打擊巡洋艦的結構更加堅固且耐用。"
+ tech_strikecruiser_hull_2: "先進打擊巡洋艦船體"
+ tech_strikecruiser_hull_2_desc: "新世代的打擊巡洋艦船體技術包括了先進的結構完整性力場以及強化過的艙壁。"
+
+ tech_battlecruiser_build_speed: "標準化戰列巡洋艦模塊"
+ tech_battlecruiser_build_speed_desc: "藉由模塊化戰列巡洋艦結構可以更有效的改善船艦生產線效率。"
+ tech_battlecruiser_hull_1: "改良戰列巡洋艦船體"
+ tech_battlecruiser_hull_1_desc: "先進的建造技術使戰列巡洋艦的結構更加堅固且耐用。"
+ tech_battlecruiser_hull_2: "先進戰列巡洋艦船體"
+ tech_battlecruiser_hull_2_desc: "新世代的戰列巡洋艦船體技術包括了先進的結構完整性力場以及強化過的艙壁。"
+
+ tech_carrier_build_speed: "標準化巡洋艦模塊"
+ tech_carrier_build_speed_desc: "藉由模塊化巡洋艦結構可以更有效的改善船艦生產線效率。"
+ tech_carrier_hull_1: "改良巡洋艦船體"
+ tech_carrier_hull_1_desc: "先進的建造技術使巡洋艦的結構更加堅固且耐用。"
+ tech_carrier_hull_2: "先進巡洋艦船體"
+ tech_carrier_hull_2_desc: "新世代的巡洋艦船體技術包括了先進的結構完整性力場以及強化過的艙壁。"
+
+ tech_dreadnought_build_speed: "標準化無畏艦模塊"
+ tech_dreadnought_build_speed_desc: "藉由模塊化旗艦結構可以更有效的改善船艦生產線效率。"
+ tech_dreadnought_hull_1: "改良無畏艦船體"
+ tech_dreadnought_hull_1_desc: "先進的建造技術使無畏艦的結構更加堅固且耐用。"
+ tech_dreadnought_hull_2: "先進無畏艦船體"
+ tech_dreadnought_hull_2_desc: "新世代的無畏艦船體技術包括了先進的結構完整性力場以及強化過的艙壁。"
+
+ tech_flagship_build_speed: "標準化旗艦模塊"
+ tech_flagship_build_speed_desc: "藉由模塊化 the旗艦結構可以更有效的改善船艦生產線效率。"
+ tech_flagship_hull_1: "改良旗艦船體"
+ tech_flagship_hull_1_desc: "先進的建造技術使旗艦。"
+ tech_flagship_hull_2: "先進旗艦船體"
+ tech_flagship_hull_2_desc: "新世代的旗艦船體技術包括了先進的結構完整性力場以及強化過的艙壁。"
+
+ tech_stronghold_upgrades: "改良恒星基地"
+ tech_stronghold_upgrades_desc: "建立壹種新的模組與建築標準以改善所有恒星基地的生產效率。"
+
+ tech_mining_base: "星系礦物處理中心"
+ tech_mining_base_desc: "隨著我們在星辰中擴展,我們需要更多資源供我們的人民使用。特化過的太空礦物精煉廠可以有效的集中礦物生產並提高礦物生產量。"
+
+ tech_power_station: "星系能量網絡"
+ tech_power_station_desc: "隨著我們的帝國在星辰中擴展,我們需要更多能源供我們的帝國使用。特化過的太空發電廠可以有效的集中能量生產,使我們在關鍵星系有更多的能量生產給我們的國家使用。"
+
+ tech_defense_platforms_1: "防禦平臺增建 – 等級1"
+ tech_defense_platforms_1_desc: "隨著技術進步，我們可以在恒星據點旁建造更多的防禦平臺。"
+
+ tech_defense_platforms_2: "防禦平臺增建 – 等級2"
+ tech_defense_platforms_2_desc: "隨著技術進步，我們可以在恒星據點旁建造更多的防禦平臺。"
+
+ tech_defense_platforms_3: "防禦平臺增建 – 等級3"
+ tech_defense_platforms_4_desc: "隨著技術進步，我們可以在恒星據點旁建造更多的防禦平臺。"
+
+ tech_defense_platforms_4: "防禦平臺增建 – 等級4"
+ tech_defense_platforms_4_desc: "隨著技術進步，我們可以在恒星據點旁建造更多的防禦平臺。"
+
+ tech_nsc_ai_computer_1: "人工智能戰鬥系統"
+ tech_nsc_ai_computer_1_desc: "最先進的電腦系統能夠在無人操作船艦的狀況下全面接管船艦,並運行所有的戰鬥系統。可運用在航空母艦、艦隊支援艦以及旗艦上。"
+
+ tech_tomahawk_cruise_missile_1: "先進戰斧巡航飛彈"
+ tech_tomahawk_cruise_missile_1_desc: "壹種非常昂貴的反主力艦飛彈,擁有非常長的射程以及強大的火力。壹般用在防禦站或擅長長程打擊的軍事船艦上。"
+ 
+  ech_nsc_disabled_sections: "關閉NSC船艦區塊"
+ tech_nsc_disabled_sections_desc: "如果妳看到了這個科技代表了代表出了問題或者妳使用了控制臺。"
+ 
+ TECH_UNLOCK_GRAVITON_POWER_TITLE: "§H解鎖組件:§! $GRAVITON_REACTOR$"
+ TECH_UNLOCK_GRAVITON_POWER_DESC: "§H$GRAVITON_REACTOR$§!\n$GRAVITON_REACTOR_DESC$"
+  
+ TECH_UNLOCK_NAQUADRIA_POWER_TITLE: "§H解鎖組件:§! $NAQUADRIA_REACTOR$"
+ TECH_UNLOCK_NAQUADRIA_POWER_DESC: "§H$NAQUADRIA_REACTOR$§!\n$NAQUADRIA_REACTOR_DESC$"
+ 
+ TECH_UNLOCK_SINGULARITY_POWER_TITLE: "§H解鎖組件:§! $SINGULARITY_REACTOR$"
+ TECH_UNLOCK_SINGULARITY_POWER_DESC: "§H$SINGULARITY_REACTOR$§!\n$SINGULARITY_REACTOR_DESC$"
+ 
+ TECH_UNLOCK_MULTIDIMENSIONAL_POWER_TITLE: "§H解鎖組件:§! $MULTIDIMENSIONAL_REACTOR$"
+ TECH_UNLOCK_MULTIDIMENSIONAL_POWER_DESC: "§H$MULTIDIMENSIONAL_REACTOR$§!\n$MULTIDIMENSIONAL_REACTOR_DESC$"
+ 
+ TECH_UNLOCK_OPTIMIZED_ENIGMATIC_POWER_TITLE: "§H解鎖組件:§! $OPTIMIZED_ENIGMATIC_REACTOR$"
+ TECH_UNLOCK_OPTIMIZED_ENIGMATIC_POWER_DESC: "§H$OPTIMIZED_ENIGMATIC_REACTOR$§!\n$OPTIMIZED_ENIGMATIC_REACTOR_DESC$"
+ 
+ TECH_UNLOCK_OPTIMIZED_ENIGMATIC_POWER_TITLE: "§H解鎖組件:§! $OPTIMIZED_ENIGMATIC_REACTOR$"
+ TECH_UNLOCK_OPTIMIZED_ENIGMATIC_POWER_DESC: "§H$OPTIMIZED_ENIGMATIC_REACTOR$§!\n$OPTIMIZED_ENIGMATIC_REACTOR_DESC$"
+ 
+ TECH_UNLOCK_BH_POWER_TITLE: "§H解鎖組件:§! $FLAGSHIP_BLACK_HOLE_REACTOR_1$"
+ TECH_UNLOCK_BH_POWER_DESC: "§H$FLAGSHIP_BLACK_HOLE_REACTOR_1$§!\n$FLAGSHIP_BLACK_HOLE_REACTOR_1_DESC$"
+
+ TECH_UNLOCK_PD_DESTROYER_CONSTRUCTION_TITLE: "§H解鎖新模塊:§! 點防禦驅逐艦"
+ TECH_UNLOCK_PD_DESTROYER_CONSTRUCTION_DESC: "§H點防禦驅逐艦§!\n先進的結構技術使驅逐艦可以裝備大型的點防禦陣列武器。"
+
+ TECH_UNLOCK_STRIKECRUISER_CONSTRUCTION_TITLE: "§H解鎖船艦類型:§! 打擊巡洋艦"
+ TECH_UNLOCK_STRIKECRUISER_CONSTRUCTION_DESC: "§H打擊巡洋艦§!\n打擊巡洋艦的主要任務是利用特殊的光環降低敵人的逃跑速度,使大型船艦可以捕捉到它們並進入交戰。"
+
+ TECH_UNLOCK_BATTLECRUISER_CONSTRUCTION_TITLE: "§H解鎖船艦類型:§! 戰列巡洋艦"
+ TECH_UNLOCK_BATTLECRUISER_CONSTRUCTION_DESC: "§H戰列巡洋艦§!\n戰列巡洋艦是壹種笨重而強力的巡洋艦。它的主要是分擔戰列艦的戰鬥任務,且擁有更快的速度以及更便宜的價格。然而這些優勢的代價是來自於火力以及防禦能力的犧牲。"
+
+ TECH_UNLOCK_LIGHTCARRIER_CONSTRUCTION_TITLE: "§H解鎖船艦模塊:§! 輕航母"
+ TECH_UNLOCK_LIGHTCARRIER_CONSTRUCTION_DESC: "§H輕航母§!\n這種特化升級將戰鬥巡洋艦轉化成輕航母,使其擁有搭載艦載機的能力。"
+
+ TECH_UNLOCK_CARRIER_CONSTRUCTION_TITLE: "§H解鎖船艦類型:§! 航空母艦"
+ TECH_UNLOCK_CARRIER_CONSTRUCTION_DESC: "§H航空母艦§!\n航空母艦是作為轟炸機的基地而存在,其機庫設計可以讓它的搭載數最大化。"
+
+ TECH_UNLOCK_HEAVYCARRIER_CONSTRUCTION_TITLE: "§H解鎖新模塊:§! 重航母"
+ TECH_UNLOCK_HEAVYCARRIER_CONSTRUCTION_DESC: "§H重航母§!\n先進的微型化以及優化技術使新的航母模塊可以搭載更大量的艦載機。"
+
+ TECH_UNLOCK_SUPERCARRIER_CONSTRUCTION_TITLE: "§H解鎖新模塊:§! 超級航母"
+ TECH_UNLOCK_SUPERCARRIER_CONSTRUCTION_DESC: "§H超級航空母艦§!\n先進的微型化以及優化技術使新的航母模塊可以搭載巨量的艦載機。"
+
+ TECH_UNLOCK_SPITFIRE_CONSTRUCTION_TITLE: "§H噴火式戰列艦升級§!"
+ TECH_UNLOCK_SPITFIRE_CONSTRUCTION_DESC: "充滿S槽的戰列艦船體設計可以有效的將小型船艦從我們的主力艦旁驅離。"
+
+ TECH_UNLOCK_DREADNOUGHT_CONSTRUCTION_TITLE: "§H解鎖船艦類型:§! 無畏艦"
+ TECH_UNLOCK_DREADNOUGHT_CONSTRUCTION_DESC: "§H無畏艦§!\n無畏艦是壹種超重型戰艦,擁有強大的火力以及防禦,可以有效的打擊敵人。"
+
+ TECH_UNLOCK_FLAGSHIP_CONSTRUCTION_TITLE: "§H解鎖船艦類型:§! 旗艦"
+ TECH_UNLOCK_FLAGSHIP_CONSTRUCTION_DESC: "§H旗艦§!\n作為有史以來最巨型的船艦,旗艦擁有難以想象的火力以及防禦能力,而且還可以提供額外的加成,因此它需要整個帝國的資源來加以建造與維護。"
+
+ TECH_UNLOCK_SUPPORTSHIP_CONSTRUCTION_TITLE:0 "艦隊支援艦"
+ TECH_UNLOCK_SUPPORTSHIP_CONSTRUCTION_DESC:0 "§H艦隊支援艦§!\n隨著我們的艦隊數量成長的同時,艦隊的活動區域離母星越來越遠,勢必要發展壹種船艦來取代日益增長的補給線,艦隊支援艦因應而生。"
+
+ TECH_UNLOCK_DRYDOCK_CONSTRUCTION_TITLE: "§H解鎖恒星基地模塊:§! 幹船塢"
+ TECH_UNLOCK_DRYDOCK_CONSTRUCTION_DESC: "§H幹船塢§!\n幹船塢是壹種恒星基地上的大型標準造船廠,可以壹次建造兩艘船艦。"
+
+ TECH_UNLOCK_SENSORSTATION_CONSTRUCTION_TITLE: "§H解鎖恒星基地建築:§! 預警站"
+ TECH_UNLOCK_SENSORSTATION_CONSTRUCTION_DESC: "§H預警站§!\n壹種可以增加偵測範圍的恒星基地建築,對於監測我們的邊界大有幫助。"
+
+ TECH_UNLOCK_STRONGHOLD_CONSTRUCTION_TITLE: "§H解鎖恒星基地升級:§! 恒星據點"
+ TECH_UNLOCK_STRONGHOLD_CONSTRUCTION_DESC: "§H恒星據點§!\n這不是月球,這是壹個太空站。"
+
+ TECH_UNLOCK_DEFENSESTATION_CONSTRUCTION_TITLE: "§H解鎖太空站:§! 恒星基地防禦站"
+ TECH_UNLOCK_DEFENSESTATION_CONSTRUCTION_DESC: "§H恒星基地防禦站§!\n壹種擁有更優秀武器與裝甲的防禦平臺。"
+
+ TECH_UNLOCK_DEFENSEFORTRESS_CONSTRUCTION_TITLE: "§H解鎖太空站:§! 恒星基地防禦要塞"
+ TECH_UNLOCK_DEFENSEFORTRESS_CONSTRUCTION_DESC: "§H恒星基地防禦要塞§!\n壹種更大型的恒星基地防禦站,擁有更強大的武裝以及裝甲。"
+
+ TECH_UNLOCK_SPECIALCOMPONENTS_CONSTRUCTION_TITLE: "§H解鎖船艦組件:§! 先進船艦組件"
+ TECH_UNLOCK_SPECIALCOMPONENTS_CONSTRUCTION_DESC: "§H先進船艦組件§!\n各種特化的組件會以不同的方式來強化船艦。"
+
+ TECH_UNLOCK_NSC_DLC_CONSTRUCTION_TITLE: "用來偵測ApocalypseDLC的起始科技。"
+ TECH_UNLOCK_NSC_DLC_CONSTRUCTION_DESC: "用來偵測ApocalypseDLC的起始科技。"
+
+ TECH_UNLOCK_MINING_BASE_CONSTRUCTION_TITLE: "§H解鎖恒星基地建築:§! 星系礦物精煉廠"
+ TECH_UNLOCK_MINING_BASE_CONSTRUCTION_DESC: "§H礦物基地§!\n星系中的礦物生產中心可以有效的強化整個星系的礦物生產量。"
+
+ TECH_UNLOCK_POWER_STATON_CONSTRUCTION_TITLE: "§H解鎖恒星基地建築:§! 星系能量網絡"
+ TECH_UNLOCK_POWER_STATON_CONSTRUCTION_DESC: "§H發電站§!\n星系中的能量網絡可以有效的強化整個星系的能量生產量。"
+ 
+ TECH_UNLOCK_AICOMPUTER_CONSTRUCTION_TITLE: "§H解鎖戰鬥電腦:§! 人工智能戰鬥系統"
+ TECH_UNLOCK_AICOMPUTER_CONSTRUCTION_DESC: "§HAI戰鬥系統§!\n最先進的電腦系統能夠在無人操作船艦的狀況下全面接管船艦,並運行所有的戰鬥系統。可運用在航空母艦、艦隊支援艦以及旗艦上。"
+
+ TECH_UNLOCK_CRUISEMISSILE_CONSTRUCTION_TITLE: "§H解鎖武器:§! 先進戰斧巡航飛彈"
+ TECH_UNLOCK_CRUISEMISSILE_CONSTRUCTION_DESC: "§H先進戰斧巡航飛彈§!\n壹種非常昂貴的反主力艦飛彈,擁有非常長的射程以及強大的火力。壹般用在防禦站或擅長長程打擊的軍事船艦上。"
+ 
+ 
+ 
+ 
+ ################################################################################################################################################
+ # COMPONENTS
+ ################################################################################################################################################
+
+ NSC_STRIKE_CRUISER_AURA_EMPTY: "空槽"
+ NSC_TITAN_AURA_EMPTY: "空槽"
+ NSC_FLAGSHIP_AURA_EMPTY: "空槽"
+ SPECIAL_SLOT_EMPTY: "空槽"
+ NSC_SUPPORTSHIP_AURA_EMPTY:0 "空槽"
+ 
+ nsc_supportship_hull_aura:0 "支援艦光環 - 船體"
+ NSC_SUPPORTSHIP_HULL_AURA:0 "支援艦光環 - 船體"
+ nsc_supportship_upkeep_aura:0 "支援艦光環 - 維護"
+ NSC_SUPPORTSHIP_UPKEEP_AURA:0 "支援艦光環 - 維護"
+ nsc_supportship_ftl_aura:0 "支援艦光環 - FTL"
+ NSC_SUPPORTSHIP_FTL_AURA:0 "支援艦光環 - FTL"
+ nsc_supportship_armor_aura:0 "支援艦光環 - 裝甲"
+ NSC_SUPPORTSHIP_ARMOR_AURA:0 "支援艦光環 - 裝甲"
+ nsc_supportship_shield_aura:0 "支援艦光環 - 護盾"
+ NSC_SUPPORTSHIP_SHIELD_AURA:0 "支援艦光環 - 護盾"
+ nsc_supportship_invasion_aura:0 "支援艦光環 - 侵略"
+ NSC_SUPPORTSHIP_INVASION_AURA:0 "支援艦光環 - 侵略"
+
+ NSC_AI_COMBAT_COMPUTER: "人工智能戰鬥系統"
+ nsc_ai: "人工智能戰鬥系統"
+ NSC_AI_BEHAVIOR_DESC: "最先進的電腦系統能夠在無人操作船艦的狀況下全面接管船艦,並運行所有的戰鬥系統。可運用在航空母艦、艦隊支持艦以及旗艦上。" 
+ 
+ nsc_strike_cruiser_aura: "打擊巡洋艦先進戰鬥系統"
+ nsc_titan_aura: "泰坦指揮網絡"
+ nsc_flagship_aura: "旗艦指揮網絡"
+ 
+ NSC_STRIKE_CRUISER_AURA: "打擊巡洋艦先進戰鬥系統"
+ NSC_TITAN_AURA: "泰坦指揮網絡"
+ NSC_FLAGSHIP_AURA: "旗艦指揮網絡"
+
+ special_ship_slot: "特殊組件"
+ special_ship_slot_DESC: "壹個特殊組件槽。"
+ 
+ SPECIAL_SLOT_MULTIPHASIC_SENSORS: "多相傳感器"
+ SPECIAL_SLOT_MULTIPHASIC_SENSORS_DESC: "利用多相技術增加傳感器範圍。"
+ SPECIAL_SLOT_DAMAGE_CONTROL: "損害控制小組"
+ SPECIAL_SLOT_DAMAGE_CONTROL_DESC: "專門訓練來緊急維修船只的小組。"
+ SPECIAL_SLOT_READY_ROOM: "船長待命室"
+ SPECIAL_SLOT_READY_ROOM_DESC: "壹個可以讓船長放松的時仍然可以隨時回到崗位的房間。"
+ SPECIAL_SLOT_CREW_LOUNGE: "船員休息室"
+ SPECIAL_SLOT_CREW_LOUNGE_DESC: "讓船員放松以及休息的房間。"
+ SPECIAL_SLOT_FIRE_CONTROL: "火控系統"
+ SPECIAL_SLOT_FIRE_CONTROL_DESC: "讓武器可以快速瞄準並開火的先進系統。"
+ SPECIAL_SLOT_STRUCTURAL_INTEGRITY: "結構完整性力場"
+ SPECIAL_SLOT_STRUCTURAL_INTEGRITY_DESC: "使用力場強化船體結構的先進系統。"
+ SPECIAL_SLOT_AUXILIARY_SHIELDS: "輔助護盾系統"
+ SPECIAL_SLOT_AUXILIARY_SHIELDS_DESC: "備用的第二套護盾產生器。"
+ SPECIAL_SLOT_QUANTUM_THRUSTERS: "量子推進器"
+ SPECIAL_SLOT_QUANTUM_THRUSTERS_DESC: "壹組可以增加船只速度以及機動力的高級推進系統。"
+ SPECIAL_SLOT_DEFLECTOR_ARRAY: "偏轉陣列"
+ SPECIAL_SLOT_DEFLECTOR_ARRAY_DESC: "用來提供船只額外防護的大型陣列。"
+ SPECIAL_SLOT_KITCHEN_SINK: "廚房水槽"
+ SPECIAL_SLOT_KITCHEN_SINK_DESC: "幹凈使船員快樂。快樂的船員學習東西。不,我們不知道它為何如此有效。"
+ SPECIAL_SLOT_STELLAR_CARTOGRAPHY: "恒星繪圖"
+ SPECIAL_SLOT_STELLAR_CARTOGRAPHY_DESC: "用來繪制周遭星系的大型系統。"
+ SPECIAL_SLOT_NAVIGATIONAL_ARRAY: "導航陣列"
+ SPECIAL_SLOT_NAVIGATIONAL_ARRAY_DESC: "壹種先進的三維導航系統。"
+ 
+ NSC_REACTOR_BOOSTER_1: "引力反應堆助推器"
+ NSC_REACTOR_BOOSTER_1_DESC: "使用引力能量技術的反應堆助推器。"
+ NSC_REACTOR_BOOSTER_2: "奎達反應堆助推器"
+ NSC_REACTOR_BOOSTER_2_DESC: "使用奎達能量技術的反應堆助推器。"
+ NSC_REACTOR_BOOSTER_3: "奇點反應堆助推器"
+ NSC_REACTOR_BOOSTER_3_DESC: "使用奇點能量技術的反應堆助推器。"
+
+ 
+ 
+ 
+ 
+ 
+################################################################################################################################################
+# REACTORS
+################################################################################################################################################
+
+ ## Fission Reactors ##
+ 
+ STRIKECRUISER_FISSION_REACTOR: "$FISSION_REACTOR$"
+ BATTLECRUISER_FISSION_REACTOR: "$FISSION_REACTOR$"
+ CARRIER_FISSION_REACTOR: "$FISSION_REACTOR$"
+ DREADNOUGHT_FISSION_REACTOR: "$FISSION_REACTOR$"
+ 
+ ## 核融合反應堆s ##
+ 
+ STRIKECRUISER_FUSION_REACTOR: "$FUSION_REACTOR$"
+ BATTLECRUISER_FUSION_REACTOR: "$FUSION_REACTOR$"
+ CARRIER_FUSION_REACTOR: "$FUSION_REACTOR$"
+ DREADNOUGHT_FUSION_REACTOR: "$FUSION_REACTOR$"
+ 
+ ## Cold 核融合反應堆s ##
+ 
+ STRIKECRUISER_COLD_FUSION_REACTOR: "$COLD_FUSION_REACTOR$"
+ BATTLECRUISER_COLD_FUSION_REACTOR: "$COLD_FUSION_REACTOR$"
+ CARRIER_COLD_FUSION_REACTOR: "$COLD_FUSION_REACTOR$"
+ DREADNOUGHT_COLD_FUSION_REACTOR: "$COLD_FUSION_REACTOR$"
+ 
+ ## Antimatter Reactors ##
+ 
+ STRIKECRUISER_ANTIMATTER_REACTOR: "$ANTIMATTER_REACTOR$"
+ BATTLECRUISER_ANTIMATTER_REACTOR: "$ANTIMATTER_REACTOR$"
+ CARRIER_ANTIMATTER_REACTOR: "$ANTIMATTER_REACTOR$"
+ DREADNOUGHT_ANTIMATTER_REACTOR: "$ANTIMATTER_REACTOR$"
+ 
+ ## Zero Point Reactor ##
+ 
+ STRIKECRUISER_ZERO_POINT_REACTOR: "$ZERO_POINT_REACTOR$"
+ BATTLECRUISER_ZERO_POINT_REACTOR: "$ZERO_POINT_REACTOR$"
+ CARRIER_ZERO_POINT_REACTOR: "$ZERO_POINT_REACTOR$"
+ DREADNOUGHT_ZERO_POINT_REACTOR: "$ZERO_POINT_REACTOR$"
+ 
+ ## Dark Matter Reactor ##
+ 
+ STRIKECRUISER_DARK_MATTER_REACTOR: "$DARK_MATTER_REACTOR$"
+ BATTLECRUISER_DARK_MATTER_REACTOR: "$DARK_MATTER_REACTOR$"
+ CARRIER_DARK_MATTER_REACTOR: "$DARK_MATTER_REACTOR$"
+ DREADNOUGHT_DARK_MATTER_REACTOR: "$DARK_MATTER_REACTOR$"
+ 
+ ## 引力反應堆s ##
+ 
+ CORVETTE_GRAVITON_REACTOR: "引力反應堆"
+ DESTROYER_GRAVITON_REACTOR: "引力反應堆"
+ CRUISER_GRAVITON_REACTOR: "引力反應堆"
+ STRIKECRUISER_GRAVITON_REACTOR: "引力反應堆"
+ BATTLECRUISER_GRAVITON_REACTOR: "引力反應堆"
+ CARRIER_GRAVITON_REACTOR: "引力反應堆"
+ BATTLESHIP_GRAVITON_REACTOR: "引力反應堆"
+ DREADNOUGHT_GRAVITON_REACTOR: "引力反應堆"
+ TITAN_GRAVITON_REACTOR: "引力反應堆"
+ PLATFORM_GRAVITON_REACTOR: "引力反應堆"
+ STATION_GRAVITON_REACTOR: "引力反應堆"
+ FORTRESS_GRAVITON_REACTOR: "引力反應堆"
+ 
+ GRAVITON_REACTOR: "引力反應堆"
+ GRAVITON_REACTOR_DESC: "加入重力以及粒子重力來強化反物質反應,使反應堆可以產生更多能量。"
+ 
+ ## 奎達反應堆s ##
+ 
+ CORVETTE_NAQUADRIA_REACTOR: "奎達反應堆"
+ DESTROYER_NAQUADRIA_REACTOR: "奎達反應堆"
+ CRUISER_NAQUADRIA_REACTOR: "奎達反應堆"
+ STRIKECRUISER_NAQUADRIA_REACTOR: "奎達反應堆"
+ BATTLECRUISER_NAQUADRIA_REACTOR: "奎達反應堆"
+ CARRIER_NAQUADRIA_REACTOR: "奎達反應堆"
+ BATTLESHIP_NAQUADRIA_REACTOR: "奎達反應堆"
+ DREADNOUGHT_NAQUADRIA_REACTOR: "奎達反應堆"
+ TITAN_NAQUADRIA_REACTOR: "奎達反應堆"
+ PLATFORM_NAQUADRIA_REACTOR: "奎達反應堆"
+ STATION_NAQUADRIA_REACTOR: "奎達反應堆"
+ FORTRESS_NAQUADRIA_REACTOR: "奎達反應堆"
+ 
+ NAQUADRIA_REACTOR: "奎達反應堆" 
+ NAQUADRIA_REACTOR_DESC: "使用高能量水晶來提供能量的特殊反應堆。"
+ 
+ ## Singularity Reactors ##
+ 
+ CORVETTE_SINGULARITY_REACTOR: "奇點反應堆"
+ DESTROYER_SINGULARITY_REACTOR: "奇點反應堆"
+ CRUISER_SINGULARITY_REACTOR: "奇點反應堆"
+ STRIKECRUISER_SINGULARITY_REACTOR: "奇點反應堆"
+ BATTLECRUISER_SINGULARITY_REACTOR: "奇點反應堆"
+ CARRIER_SINGULARITY_REACTOR: "奇點反應堆"
+ BATTLESHIP_SINGULARITY_REACTOR: "奇點反應堆"
+ DREADNOUGHT_SINGULARITY_REACTOR: "奇點反應堆"
+ TITAN_SINGULARITY_REACTOR: "奇點反應堆"
+ PLATFORM_SINGULARITY_REACTOR: "奇點反應堆"
+ STATION_SINGULARITY_REACTOR: "奇點反應堆"
+ FORTRESS_SINGULARITY_REACTOR: "奇點反應堆"
+ 
+ SINGULARITY_REACTOR: "奇點反應堆" 
+ SINGULARITY_REACTOR_DESC: "使用人工黑洞來提供能量的特殊反應堆。"
+ 
+ ## Multi Dimensional Reactors ##
+ 
+ CORVETTE_MULTIDIMENSIONAL_REACTOR: "多維反應堆"
+ DESTROYER_MULTIDIMENSIONAL_REACTOR: "多維反應堆"
+ CRUISER_MULTIDIMENSIONAL_REACTOR: "多維反應堆"
+ STRIKECRUISER_MULTIDIMENSIONAL_REACTOR: "多維反應堆"
+ BATTLECRUISER_MULTIDIMENSIONAL_REACTOR: "多維反應堆"
+ CARRIER_MULTIDIMENSIONAL_REACTOR: "多維反應堆"
+ BATTLESHIP_MULTIDIMENSIONAL_REACTOR: "多維反應堆"
+ DREADNOUGHT_MULTIDIMENSIONAL_REACTOR: "多維反應堆"
+ TITAN_MULTIDIMENSIONAL_REACTOR: "多維反應堆"
+ PLATFORM_MULTIDIMENSIONAL_REACTOR: "多維反應堆"
+ STATION_MULTIDIMENSIONAL_REACTOR: "多維反應堆"
+ FORTRESS_MULTIDIMENSIONAL_REACTOR: "多維反應堆"
+ 
+ MULTIDIMENSIONAL_REACTOR: "多維反應堆" 
+ MULTIDIMENSIONAL_REACTOR_DESC: "多維反應堆是通過真空能量流實現供能的次世代反應堆,但是需要要在不同的維度以及現實之間建立壹個物質橋接器來保持穩定。"
+ 
+ ## Optimized Dark Matter Reactors ##
+ 
+ CORVETTE_OPTIMIZED_ENIGMATIC_REACTOR: "優化暗物質反應堆"
+ DESTROYER_OPTIMIZED_ENIGMATIC_REACTOR: "優化暗物質反應堆"
+ CRUISER_OPTIMIZED_ENIGMATIC_REACTOR: "優化暗物質反應堆"
+ STRIKECRUISER_OPTIMIZED_ENIGMATIC_REACTOR: "優化暗物質反應堆"
+ BATTLECRUISER_OPTIMIZED_ENIGMATIC_REACTOR: "優化暗物質反應堆"
+ CARRIER_OPTIMIZED_ENIGMATIC_REACTOR: "優化暗物質反應堆"
+ BATTLESHIP_OPTIMIZED_ENIGMATIC_REACTOR: "優化暗物質反應堆"
+ DREADNOUGHT_OPTIMIZED_ENIGMATIC_REACTOR: "優化暗物質反應堆"
+ TITAN_OPTIMIZED_ENIGMATIC_REACTOR: "優化暗物質反應堆"
+ PLATFORM_OPTIMIZED_ENIGMATIC_REACTOR: "優化暗物質反應堆"
+ STATION_OPTIMIZED_ENIGMATIC_REACTOR: "優化暗物質反應堆"
+ FORTRESS_OPTIMIZED_ENIGMATIC_REACTOR: "優化暗物質反應堆"
+ 
+ OPTIMIZED_ENIGMATIC_REACTOR: "優化暗物質反應堆" 
+ NSC_OPTIMIZED_ENIGMATIC_REACTOR_DESC: "將我們自身以及我們在神秘堡壘中發現的知識作結合,現在我們可以不再冒著產生外來粒子的風險,直接從我們宇宙的亞空間取得零點能量,如此壹來我們取得能量唯壹的限制就只剩下我們控制能量流的能力。"
+ 
+ ## Special Reactors ##
+ FLAGSHIP_BLACK_HOLE_REACTOR_1: "黑洞反應堆"
+ FLAGSHIP_BLACK_HOLE_REACTOR_1_DESC: "使用人工黑洞供能的反應堆。"
+ FLAGSHIP_BLACK_HOLE_REACTOR_2: "黑洞反應堆II"
+ FLAGSHIP_BLACK_HOLE_REACTOR_2_DESC: "使用人工黑洞供能的反應堆。"
+ FLAGSHIP_BLACK_HOLE_REACTOR_3: "黑洞反應堆III"
+ FLAGSHIP_BLACK_HOLE_REACTOR_3_DESC: "使用人工黑洞供能的反應堆。"
+ CITADEL_DARK_MATTER_REACTOR: "暗物質反應堆"
+ 
+ ## Defense Station Secondary Reactors ##
+ STATION_FISSION_REACTOR: "第二核裂變反應堆"
+ STATION_FUSION_REACTOR: "第二核融合反應堆"
+ STATION_COLD_FUSION_REACTOR: "第二冷融合反應堆"
+ STATION_ANTIMATTER_REACTOR: "第二反物質反應堆"
+ STATION_ZERO_POINT_REACTOR: "第二零點反應堆"
+
+ ## Defense Fortress Secondary Reactors ##
+ FORTRESS_FISSION_REACTOR: "第二裂變反應堆"
+ FORTRESS_FUSION_REACTOR: "第二核融合反應堆"
+ FORTRESS_COLD_FUSION_REACTOR: "第二冷融合反應堆"
+ FORTRESS_ANTIMATTER_REACTOR: "第二反物質反應堆"
+ FORTRESS_ZERO_POINT_REACTOR: "第二零點反應堆"
+ 
+ XL_CANNON_ZERO_POINT_REACTOR: "巨型加農炮零點反應堆"
+ XL_CANNON_DARK_MATTER_REACTOR: "巨型加農炮暗物質反應堆"
+ 
+ 
+ 
+ 
+ 
+ 
+################################################################################################################################################
+# THRUSTERS
+################################################################################################################################################
+ 
+ ## Level 1 Thrusters ##
+ 
+ STRIKECRUISER_THRUSTER_1: "$SHIP_THRUSTER_1$"
+ STRIKECRUISE_SHIP_THRUSTER_1_DESC: "$SHIP_THRUSTER_1_DESC$"
+ BATTLECRUISER_SHIP_THRUSTER_1: "$SHIP_THRUSTER_1$"
+ BATTLECRUISER_SHIP_THRUSTER_1_DESC: "$SHIP_THRUSTER_1_DESC$"
+ CARRIER_SHIP_THRUSTER_1: "$SHIP_THRUSTER_1$"
+ CARRIER_SHIP_THRUSTER_1_DESC: "$SHIP_THRUSTER_1_DESC$"
+ DREADNOUGHT_SHIP_THRUSTER_1: "$SHIP_THRUSTER_1$"
+ DREADNOUGHT_SHIP_THRUSTER_1_DESC: "$SHIP_THRUSTER_1_DESC$"
+ FLAGSHIP_SHIP_THRUSTER_1: "$SHIP_THRUSTER_1$"
+ FLAGSHIP_SHIP_THRUSTER_1_DESC: "$SHIP_THRUSTER_1_DESC$"
+ 
+ ## Level 2 Thrusters ##
+ 
+ STRIKECRUISER_THRUSTER_2: "$SHIP_THRUSTER_2$"
+ STRIKECRUISERSHIP_THRUSTER_2_DESC: "$SHIP_THRUSTER_2_DESC$"
+ BATTLECRUISER_SHIP_THRUSTER_2: "$SHIP_THRUSTER_2$"
+ BATTLECRUISER_SHIP_THRUSTER_2_DESC: "$SHIP_THRUSTER_2_DESC$"
+ CARRIER_SHIP_THRUSTER_2: "$SHIP_THRUSTER_2$"
+ CARRIER_SHIP_THRUSTER_2_DESC: "$SHIP_THRUSTER_2_DESC$"
+ DREADNOUGHT_SHIP_THRUSTER_2: "$SHIP_THRUSTER_2$"
+ DREADNOUGHT_SHIP_THRUSTER_2_DESC: "$SHIP_THRUSTER_2_DESC$"
+ FLAGSHIP_SHIP_THRUSTER_2: "$SHIP_THRUSTER_2$"
+ FLAGSHIP_SHIP_THRUSTER_2_DESC: "$SHIP_THRUSTER_2_DESC$"
+ 
+ ## Level 3 Thrusters ##
+ 
+ STRIKECRUISER_THRUSTER_3: "$SHIP_THRUSTER_3$"
+ STRIKECRUISER_THRUSTER_3_DESC: "$SHIP_THRUSTER_3_DESC$"
+ BATTLECRUISER_SHIP_THRUSTER_3: "$SHIP_THRUSTER_3$"
+ BATTLECRUISER_SHIP_THRUSTER_3_DESC: "$SHIP_THRUSTER_3_DESC$"
+ CARRIER_SHIP_THRUSTER_3: "$SHIP_THRUSTER_3$"
+ CARRIER_SHIP_THRUSTER_3_DESC: "$SHIP_THRUSTER_3_DESC$"
+ DREADNOUGHT_SHIP_THRUSTER_3: "$SHIP_THRUSTER_3$"
+ DREADNOUGHT_SHIP_THRUSTER_3_DESC: "$SHIP_THRUSTER_3_DESC$"
+ FLAGSHIP_SHIP_THRUSTER_3: "$SHIP_THRUSTER_3$"
+ FLAGSHIP_SHIP_THRUSTER_3_DESC: "$SHIP_THRUSTER_3_DESC$"
+ 
+ ## Level 4 Thrusters ##
+ 
+ STRIKECRUISER_THRUSTER_4: "$SHIP_THRUSTER_4$"
+ STRIKECRUISER_THRUSTER_4_DESC: "$SHIP_THRUSTER_4_DESC$"
+ BATTLECRUISER_SHIP_THRUSTER_4: "$SHIP_THRUSTER_4$"
+ BATTLECRUISER_SHIP_THRUSTER_4_DESC: "$SHIP_THRUSTER_4_DESC$"
+ CARRIER_SHIP_THRUSTER_4: "$SHIP_THRUSTER_4$"
+ CARRIER_SHIP_THRUSTER_4_DESC: "$SHIP_THRUSTER_4_DESC$"
+ DREADNOUGHT_SHIP_THRUSTER_4: "$SHIP_THRUSTER_4$"
+ DREADNOUGHT_SHIP_THRUSTER_4_DESC: "$SHIP_THRUSTER_4_DESC$"
+ FLAGSHIP_SHIP_THRUSTER_4: "$SHIP_THRUSTER_4$"
+ FLAGSHIP_SHIP_THRUSTER_4_DESC: "$SHIP_THRUSTER_4_DESC$"
+ 
+ ## Level 5 Thrusters ##
+ 
+ STRIKECRUISER_THRUSTER_5: "$SHIP_THRUSTER_5$"
+ STRIKECRUISER_THRUSTER_5_DESC: "$SHIP_THRUSTER_5_DESC$"
+ BATTLECRUISER_SHIP_THRUSTER_5: "$SHIP_THRUSTER_5$"
+ BATTLECRUISER_SHIP_THRUSTER_5_DESC: "$SHIP_THRUSTER_5_DESC$"
+ CARRIER_SHIP_THRUSTER_5: "$SHIP_THRUSTER_5$"
+ CARRIER_SHIP_THRUSTER_5_DESC: "$SHIP_THRUSTER_5_DESC$"
+ DREADNOUGHT_SHIP_THRUSTER_5: "$SHIP_THRUSTER_5$"
+ DREADNOUGHT_SHIP_THRUSTER_5_DESC: "$SHIP_THRUSTER_5_DESC$"
+ FLAGSHIP_SHIP_THRUSTER_5: "$SHIP_THRUSTER_5$"
+ FLAGSHIP_SHIP_THRUSTER_5_DESC: "$SHIP_THRUSTER_5_DESC$"
+ 
+ 
+ 
+ 
+ 
+ 
+################################################################################################################################################
+# WEAPONS
+################################################################################################################################################
+
+ PERDITION_BEAM_FLAGSHIP: "正義使者"
+ PERDITION_BEAM_FLAGSHIP_DESC: "因為領袖不夠偉大，因此需要現存最大型的雷射武器,裝備在最大型的船艦上來補償。"
+
+ PERDITION_BEAM_STARBASE: "原子相位粉碎機"
+ PERDITION_BEAM_STARBASE_DESC: "噠咯噠咯噠咯。"
+ 
+ XL_BEAM_STARBASE: "偏振電子調制器"
+ XL_BEAM_STARBASE_DESC: "噠咯噠咯噠咯。"
+
+ TOMAHAWK_CRUISE_MISSILE: "先進戰斧巡航飛彈"
+ TOMAHAWK_CRUISE_MISSILE_DESC: "壹種非常昂貴的反主力艦飛彈,擁有非常長的射程以及強大的火力。壹般用在防禦站或擅長長程打擊的軍事船艦上。"
+
+ BATTLESHIP_SNIPER_GUN_1: "電磁線圈炮"
+ BATTLESHIP_SNIPER_GUN_1_DESC: "這種炮專門用來對付敏捷的輕型護衛艦，雖然對於有堅固結構的大型艦非常無力，但是即使在長距離也有相當好的精度。"
+
+ NSC_BB_SNIPER: "電磁線圈炮"
+ NSC_BB_SNIPER_DESC: "這種炮專門用來對付敏捷的輕型護衛艦，雖然對於有堅固結構的大型艦非常無力，但是即使在長距離也有相當好的精度。"
+ 
+################################################################################################################################################
+# SECTION NAMES
+################################################################################################################################################
+
+#######################################
+ CORVETTE_MID_M1S1: "飛彈艇"
+ CORVETTE_MID_S3: "攔截者"
+ CORVETTE_MID_S2PD1: "警戒艦"
+#######################################
+ DESTROYER_BOW_M1S2: "炮艇 艦艏"
+ DESTROYER_BOW_S3: "警戒 艦艏"
+ DESTROYER_BOW_PD4_U: "護衛 艦艏"
+
+ DESTROYER_STERN_S2: "攔截者 艦尾"
+ DESTROYER_STERN_M1: "炮艇 艦尾"
+ DESTROYER_STERN_PD2_U: "護衛 艦尾"
+#######################################
+ CRUISER_BOW_L1: "大炮 艦艏"
+ CRUISER_BOW_M1S2: "飛彈 艦艏"
+ CRUISER_BOW_M2: "舷炮 艦艏"
+
+ CRUISER_MID_L1M1: "大炮 核心"
+ CRUISER_MID_M3: "舷炮 核心"
+ CRUISER_MID_M2S2: "飛彈 核心"
+
+ CRUISER_STERN_M1: "舷炮 艦尾"
+ CRUISER_STERN_S2: "噴火 艦尾"
+#######################################
+ STRIKECRUISER_BOW_M2S2: "齊射 艦艏"
+ STRIKECRUISER_BOW_M2PD2: "精準 艦艏"
+ STRIKECRUISER_BOW_G1S4: "猛射 艦艏"
+ STRIKECRUISER_BOW_G2: "飛彈 艦艏"
+ STRIKECRUISER_BOW_L1: "重炮 艦艏"
+ STRIKECRUISER_BOW_M3: "舷炮 艦艏"
+
+ STRIKECRUISER_MID_M2S2: "齊射 核心"
+ STRIKECRUISER_MID_S6: "噴火 核心"
+ STRIKECRUISER_MID_M3: "舷炮 核心"
+
+ STRIKECRUISER_STERN_M2: "舷炮 艦尾"
+ STRIKECRUISER_STERN_S2PD2: "精準 艦尾"
+ STRIKECRUISER_STERN_S4: "噴火 艦尾"
+ #######################################
+ BATTLECRUISER_BOW_L2: "大炮 艦艏"
+ BATTLECRUISER_BOW_G2S2: "猛射 艦艏"
+ BATTLECRUISER_BOW_M3: "舷炮 艦艏"
+
+ BATTLECRUISER_MID1_L1G2: "彈幕 核心 1"
+ BATTLECRUISER_MID1_M2S2: "齊射 核心 1"
+ BATTLECRUISER_MID1_G4: "飛彈 核心 1"
+ BATTLECRUISER_MID1_M4: "舷炮 核心 1"
+ BATTLECRUISER_MID1_LC: "輕航母 核心 1"
+
+ BATTLECRUISER_MID2_L1G2: "彈幕 核心 2"
+ BATTLECRUISER_MID2_M2S2: "齊射 核心 1"
+ BATTLECRUISER_MID2_G4: "飛彈 核心 2"
+ BATTLECRUISER_MID2_M4: "舷炮 核心 2"
+ BATTLECRUISER_MID2_LC: "輕航母 核心 2"
+
+ BATTLECRUISER_STERN_M2: "舷炮 艦尾"
+ BATTLECRUISER_STERN_S3: "噴火 艦尾"
+ BATTLECRUISER_STERN_PD3: "點防 艦尾"
+#######################################
+ BATTLESHIP_BOW_L1M1S2: "覆蓋 艦艏"
+ BATTLESHIP_BOW_L3: "大炮 艦艏"
+ BATTLESHIP_BOW_L2S4: "臼炮 艦艏"
+ BATTLESHIP_BOW_M4S4: "齊射 艦艏"
+ BATTLESHIP_BOW_SFU: "噴火 艦艏"
+
+ BATTLESHIP_MID_L3M3: "轟擊 核心" 
+ BATTLESHIP_MID_L4: "大炮 核心"
+ BATTLESHIP_MID_L2M6: "舷炮 核心"
+ BATTLESHIP_MID_L3S5: "臼炮 核心"
+ BATTLESHIP_MID_SFU: "噴火 核心"
+
+ BATTLESHIP_STERN_L2: "大炮 艦尾"
+ BATTLESHIP_STERN_M5: "舷炮 艦尾"
+ BATTLESHIP_STERN_M3S4: "齊射 艦尾"
+ BATTLESHIP_STERN_M3PD3: "點防 艦尾"
+ BATTLESHIP_STERN_SFU: "噴火 艦尾"
+#######################################
+ DREADNOUGHT_BOW_L2M4S4: "覆蓋 艦艏"
+ DREADNOUGHT_BOW_L4: "大炮 艦艏"
+ DREADNOUGHT_BOW_L2S2PD6: "臼炮 艦艏"
+ DREADNOUGHT_BOW_X2: "殲滅者 艦艏"
+
+ DREADNOUGHT_MID1_L2G5: "彈幕 核心 1"
+ DREADNOUGHT_MID1_L6: "大炮 核心 1"
+ DREADNOUGHT_MID1_L2M7: "轟擊 核心 1"
+ DREADNOUGHT_MID1_L2PD9: "精準 核心 1"
+
+ DREADNOUGHT_MID2_L2G5: "彈幕 核心 2"
+ DREADNOUGHT_MID2_L6: "大炮 核心 2"
+ DREADNOUGHT_MID2_L2M7: "轟擊 核心 2"
+ DREADNOUGHT_MID2_L2PD9: "精準 核心 2"
+
+ DREADNOUGHT_STERN_L2: "大炮 艦尾"
+ DREADNOUGHT_STERN_M6: "舷炮 艦尾"
+ DREADNOUGHT_STERN_M4S4PD2: "齊射 艦尾"
+ DREADNOUGHT_STERN_G4: "飛彈 艦尾" 
+#######################################
+ CARRIER_BOW_M1S2PD2: "齊射 艦艏"
+ CARRIER_BOW_M1G2PD4: "點防 艦艏"
+ CARRIER_BOW_L1G2PD2: "彈幕 艦艏"
+ CARRIER_BOW_L2S4PD2: "臼炮 艦艏"
+
+ CARRIER_MID1_G2HB: "飛彈 核心 1"
+ CARRIER_MID1_S2PD2HB: "精準 核心 1"
+ CARRIER_MID1_PD4HB: "點防 核心 1"
+ CARRIER_MID1_G4HB_HU: "重航母 飛彈 核心 1"
+ CARRIER_MID1_S2PD2HB_HU: "重航母 精準 核心 1"
+ CARRIER_MID1_PD4HB_HU: "重航母 點防 核心 1"
+ CARRIER_MID1_G4HB_SU: "超級航母 飛彈 核心 1"
+ CARRIER_MID1_S2PD2HB_SU: "超級航母 精準 核心 1"
+ CARRIER_MID1_PD4HB_SU: "超級航母 點防 核心 1"
+
+ CARRIER_MID2_G2HB: "飛彈 核心 2"
+ CARRIER_MID2_S2PD2HB: "精準 核心 2"
+ CARRIER_MID2_PD4HB: "點防 核心 2"
+ CARRIER_MID2_G4HB_HU: "重航母 飛彈 核心 2"
+ CARRIER_MID2_S2PD2HB_HU: "重航母 精準 核心 2"
+ CARRIER_MID2_PD4HB_HU: "重航母 點防 核心 2"
+ CARRIER_MID2_G4HB_SU: "超級航母 飛彈 核心 2"
+ CARRIER_MID2_S2PD2HB_SU: "超級航母 精準 核心 2"
+ CARRIER_MID2_PD4HB_SU: "超級航母 點防 核心 2"
+
+ CARRIER_STERN_G2: "飛彈 艦尾"
+ CARRIER_STERN_M1PD2: "覆蓋 艦尾"
+ CARRIER_STERN_S2PD2: "精準 艦尾"
+#######################################
+ TITAN_BOW_T1: "新星 艦艏"
+ TITAN_BOW_XL3: "殲滅 艦艏"
+
+ TITAN_MID1_G12: "飛彈 核心 1"
+ TITAN_MID1_L2G8PD4: "彈幕 核心 1"
+ TITAN_MID1_L8PD2: "重炮 核心 1"
+
+ TITAN_MID2_G12: "飛彈 核心 2"
+ TITAN_MID2_L2G8PD4: "彈幕 核心 2"
+ TITAN_MID2_L8PD2: "重炮 核心 2"
+
+ TITAN_STERN_G9: "飛彈 艦尾"
+ TITAN_STERN_L2G6PD4: "彈幕 艦尾"
+ TITAN_STERN_L6PD2: "重炮 艦尾"
+#######################################
+ FLAGSHIP_BOW_T3H6_1: "突圍 艦艏 1"
+ FLAGSHIP_BOW_T3H6_2: "突圍 艦艏 2"
+ FLAGSHIP_BOW_T3H6_3: "突圍 艦艏 3"
+ FLAGSHIP_BOW_T1XL4H6_1: "翼蜥 艦艏 1"
+ FLAGSHIP_BOW_T1XL4H6_2: "翼蜥 艦艏 2"
+ FLAGSHIP_BOW_T1XL4H6_3: "翼蜥 艦艏 3"
+ FLAGSHIP_BOW_XL8H6_1: "風暴使者 艦艏 1"
+ FLAGSHIP_BOW_XL8H6_2: "風暴使者 艦艏 2"
+ FLAGSHIP_BOW_XL8H6_3: "風暴使者 艦艏 3"
+ FLAGSHIP_BOW_G6S4H6: "冰雹火 艦艏"
+ FLAGSHIP_BOW_M7S2H6: "舷炮 艦艏"
+
+ FLAGSHIP_MID1_L12: "重炮 核心 1"
+ FLAGSHIP_MID1_L7M8: "轟擊 核心 1"
+ FLAGSHIP_MID1_L5S6PD4: "臼炮 核心 1"
+ FLAGSHIP_MID1_L6G6: "彈幕 核心 1"
+ FLAGSHIP_MID1_G12: "飛彈 核心 1"
+ FLAGSHIP_MID1_M12: "舷炮 核心 1"
+ FLAGSHIP_MID1_G6M6: "齊射 核心 1"
+ FLAGSHIP_MID1_H8PD4: "航母 核心 1"
+ 
+ FLAGSHIP_MID2_L12: "重炮 核心 2"
+ FLAGSHIP_MID2_L7M8: "轟擊 核心 2"
+ FLAGSHIP_MID2_L5S6PD4: "臼炮 核心 2"
+ FLAGSHIP_MID2_L6G6: "彈幕 核心 2"
+ FLAGSHIP_MID2_G12: "飛彈 核心 2"
+ FLAGSHIP_MID2_M12: "舷炮 核心 2"
+ FLAGSHIP_MID2_G6M6: "齊射 核心 2"
+ FLAGSHIP_MID2_H8PD4: "航母 核心 2"
+
+ FLAGSHIP_MID3_L12: "重炮 核心 3"
+ FLAGSHIP_MID3_L7M8: "轟擊 核心 3"
+ FLAGSHIP_MID3_L5S6PD4: "臼炮 核心 3"
+ FLAGSHIP_MID3_L6G6: "彈幕 核心 3"
+ FLAGSHIP_MID3_G12: "飛彈 核心 3"
+ FLAGSHIP_MID3_M12: "舷炮 核心 3"
+ FLAGSHIP_MID3_G6M6: "齊射 核心 3"
+ FLAGSHIP_MID3_H8PD4: "航母 核心 3"
+
+ FLAGSHIP_STERN_L8: "重炮 艦尾"
+ FLAGSHIP_STERN_M6H2: "舷炮 艦尾"
+ FLAGSHIP_STERN_G6H2: "飛彈 艦尾"
+ FLAGSHIP_STERN_M4H2PD2: "狂轟 艦尾"
+ FLAGSHIP_STERN_G4H2PD2: "齊射 艦尾"
+ FLAGSHIP_STERN_H2PD6: "點防 艦尾"
+#######################################
+ STRONGHOLD_STARBASE_SECTION_T: "恒星據點模塊"
+ STRONGHOLD_STARBASE_SECTION_XL: "恒星據點模塊"
+#######################################
+ SUPPORTSHIP_BOW_M1S2:0 "支援艦 艦艏"
+ SUPPORTSHIP_MID1_S2:0 "支援艦 船身 1"
+ SUPPORTSHIP_MID2_S2:0 "支援艦 船身 2"
+ SUPPORTSHIP_MID3_S2:0 "支援艦 船身 3"
+ SUPPORTSHIP_STERN_S3:0 "支援艦 艦尾"
+#######################################
+ HEAVY_MISSILE_MILITARY_STATION_SECTION: "飛彈發射站模塊"
+ PDSMALL_MILITARY_STATION_SECTION: "輕/點防空間站模塊"
+#######################################
+ XL_CANNON_核心: "巨型加農炮 核心"
+  
+ 
+ 
+ 
+################################################################################################################################################
+# MISCELLANEOUS
+################################################################################################################################################
+
+ hq_limit: "§R每個帝國只允許壹個§Y$sm_hq_annex$§!存在。§!"
+ drydock_limit: "§R每個帝國只允許壹個§Y$sm_drydock$§!存在。§!"
+ starbase_management_limit: "§R每個帝國只允許五個§Y$sm_starbase_management$§!存在。§!"
+ starbase_management_machine_limit: "§R每個帝國只允許五個§Y$sm_starbase_management_machine$§!存在。§!"
+ starbase_management_hive_limit: "§R每個帝國只允許五個§Y$sm_starbase_management_hive$§!存在。§!"
+
+ mining_base_limit: "§R每個帝國只允許五個§Y$sm_mining_base$§!存在。§!"
+ power_station_limit: "§R每個帝國只允許五個§Y$sm_power_station$§!存在。§!"
+ requires_colony: "需要已殖民行星"
+ requires_stronghold: "需要恒星據點"
+ 
+ 
+ 
+ 
+
+################################################################################################################################################
+# NAME LISTS
+################################################################################################################################################
+
+ name_list_NSC-Arthopoid: "NSC 節肢類"
+ name_list_NSC-Avian: "NSC 鳥類"
+ name_list_NSC-Fungoid: "NSC 真菌類"
+ name_list_NSC-Human: "NSC 人型生物"
+ name_list_NSC-Mammalian: "NSC 哺乳類"
+ name_list_NSC-Molluscoid: "NSC 軟體類"
+ name_list_NSC-Plantoid: "NSC 植物"
+ name_list_NSC-Reptilian: "NSC 爬行類"
+
+
+ 
+ 
+  
+ 
+################################################################################################################################################
+# MODIFIERS
+################################################################################################################################################
+
+ shipsize_StrikeCruiser_upkeep_mult: "打擊巡洋艦維護"
+ shipsize_StrikeCruiser_construction_speed_mult: "打擊巡洋艦建造速度"
+ shipsize_StrikeCruiser_hull_add: "打擊巡洋艦船體值"
+ shipsize_StrikeCruiser_build_speed_mult: "打擊巡洋艦建造速度"
+ shipsize_StrikeCruiser_build_cost_mult: "打擊巡洋艦建造消耗"
+
+ shipsize_Battlecruiser_upkeep_mult: "戰列巡洋艦維護"
+ shipsize_Battlecruiser_construction_speed_mult: "戰列巡洋艦建造速度"
+ shipsize_Battlecruiser_hull_add: "戰列巡洋艦船體值"
+ shipsize_Battlecruiser_build_speed_mult: "戰列巡洋艦建造速度"
+ shipsize_Battlecruiser_build_cost_mult: "戰列巡洋艦建造消耗"
+
+ shipsize_Carrier_upkeep_mult: "巡洋艦維護"
+ shipsize_Carrier_construction_speed_mult: "巡洋艦建造速度"
+ shipsize_Carrier_hull_add: "巡洋艦船體值"
+ shipsize_Carrier_build_speed_mult: "巡洋艦建造速度"
+ shipsize_Carrier_build_cost_mult: "巡洋艦建造消耗"
+
+ shipsize_Dreadnought_upkeep_mult: "無畏艦維護"
+ shipsize_Dreadnought_construction_speed_mult: "無畏艦建造速度"
+ shipsize_Dreadnought_hull_add: "無畏艦船體值"
+ shipsize_Dreadnought_build_speed_mult: "無畏艦建造速度"
+ shipsize_Dreadnought_build_cost_mult: "無畏艦建造消耗"
+
+ shipsize_Flagship_upkeep_mult: "旗艦維護"
+ shipsize_Flagship_construction_speed_mult: "旗艦建造速度"
+ shipsize_Flagship_hull_add: "旗艦船體值"
+ shipsize_Flagship_build_speed_mult: "旗艦建造速度"
+ shipsize_Flagship_build_cost_mult: "旗艦建造消耗"
+ 

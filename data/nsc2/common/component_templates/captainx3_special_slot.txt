@@ -1,0 +1,287 @@
+### Empty Slot
+
+utility_component_template = {
+	key = "SPECIAL_SLOT_EMPTY"
+	size = medium
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+	cost = 0
+	
+	class_restriction = { shipclass_military }
+
+	component_set = "special_ship_slot"
+	
+	ai_weight = { weight = 1 }
+}
+
+
+
+utility_component_template = {
+	key = "SPECIAL_SLOT_MULTIPHASIC_SENSORS"
+	size = medium
+	icon = "GFX_special_slot_multiphasic_sensors"
+	icon_frame = 1
+	power = -100
+	cost = 150
+
+	ship_modifier = { 
+		ship_sensor_range_add = 2
+	}
+
+	prerequisites = { tech_specialcomponents_1 }
+	
+	class_restriction = { shipclass_military }
+
+	component_set = "special_ship_slot"
+	
+	ai_weight = { weight = 1 }	
+}
+
+utility_component_template = {
+	key = "SPECIAL_SLOT_DAMAGE_CONTROL"
+	size = medium
+	icon = "GFX_special_slot_damage_control"
+	icon_frame = 1
+	power = -100
+	cost = 100
+	
+	modifier = { 
+		ship_hull_regen_add_perc = 0.5
+		ship_armor_regen_add_perc = 0.5
+	}
+	
+	class_restriction = { shipclass_military }
+
+	prerequisites = { tech_specialcomponents_1 }
+
+	component_set = "special_ship_slot"
+	
+	ai_weight = { weight = 1 }	
+}
+
+utility_component_template = {
+	key = "SPECIAL_SLOT_READY_ROOM"
+	size = medium
+	icon = "GFX_special_slot_ready_room"
+	icon_frame = 1
+	power = -75
+	cost = 100
+	
+	modifier = { 
+		ship_evasion_mult = 0.10
+	}
+	
+	class_restriction = { shipclass_military }
+
+	component_set = "special_ship_slot"
+	
+	ai_weight = { weight = 1 }	
+}
+
+utility_component_template = {
+	key = "SPECIAL_SLOT_CREW_LOUNGE"
+	size = medium
+	icon = "GFX_special_slot_crew_lounge"
+	icon_frame = 1
+	power = -50
+	cost = 100
+	
+	ship_modifier = { 
+		ship_accuracy_mult = 0.10 
+	}
+	
+	class_restriction = { shipclass_military }
+
+	component_set = "special_ship_slot"
+	
+	ai_weight = { weight = 1 }	
+}
+
+utility_component_template = {
+	key = "SPECIAL_SLOT_FIRE_CONTROL"
+	size = medium
+	icon = "GFX_special_slot_fire_control"
+	icon_frame = 1
+	power = -100
+	cost = 150
+	
+	modifier = {
+		ship_weapon_damage = 0.10
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.10
+	}
+
+	prerequisites = { tech_specialcomponents_1 }
+
+	class_restriction = { shipclass_military }
+	
+	component_set = "special_ship_slot"
+	
+	ai_weight = { weight = 1 }	
+}
+
+utility_component_template = {
+	key = "SPECIAL_SLOT_STRUCTURAL_INTEGRITY"
+	size = medium
+	icon = "GFX_special_slot_structural_integrity"
+	icon_frame = 1
+	power = -100
+	cost = 150
+	
+	modifier = { 
+		ship_hull_mult = 0.10 
+	}
+
+	prerequisites = { tech_specialcomponents_1 }
+	
+	class_restriction = { shipclass_military }
+
+	component_set = "special_ship_slot"
+	
+	ai_weight = { weight = 1 }	
+}
+
+utility_component_template = {
+	key = "SPECIAL_SLOT_AUXILIARY_SHIELDS"
+	size = medium
+	icon = "GFX_special_slot_auxiliary_shields"
+	icon_frame = 1
+	power = -100
+	cost = 150
+	
+	modifier = { 
+		ship_shield_mult = 0.10
+	}
+
+	prerequisites = { tech_specialcomponents_1 }
+	
+	class_restriction = { shipclass_military }
+
+	component_set = "special_ship_slot"
+	
+	ai_weight = { weight = 1 }	
+}
+
+utility_component_template = {
+	key = "SPECIAL_SLOT_QUANTUM_THRUSTERS"
+	size = medium
+	icon = "GFX_special_slot_quantum_thrusters"
+	icon_frame = 1
+	power = -100
+	cost = 100
+	
+	modifier = {
+		ship_speed_mult = 0.20
+		ship_upkeep_mult = 0.05
+	}
+
+	prerequisites = { tech_specialcomponents_1 }
+	
+	class_restriction = { shipclass_military }
+
+	component_set = "special_ship_slot"
+	
+	ai_weight = { weight = 1 }	
+}
+
+utility_component_template = {
+	key = "SPECIAL_SLOT_DEFLECTOR_ARRAY"
+	size = medium
+	icon = "GFX_special_slot_deflector_array"
+	icon_frame = 1
+	power = -75
+	cost = 100
+	
+	modifier = { 
+		ship_shield_regen_add_perc = 0.5
+	}
+	
+	class_restriction = { shipclass_military }
+
+	component_set = "special_ship_slot"
+	
+	ai_weight = { weight = 1 }	
+}
+
+
+utility_component_template = {
+	key = "SPECIAL_SLOT_NAVIGATIONAL_ARRAY"
+	size = medium
+	icon = "GFX_special_slot_navigational_array"
+	icon_frame = 1
+	power = -75
+	cost = 100
+	
+	ship_modifier = {
+		ship_ftl_jumpdrive_range_mult = 0.25
+		ship_tracking_mult = 0.10
+	}
+
+	prerequisites = { tech_specialcomponents_1 }
+	
+	class_restriction = { shipclass_military }
+
+	component_set = "special_ship_slot"
+	
+	ai_weight = { weight = 1 }
+}
+
+utility_component_template = {
+	key = "SPECIAL_SLOT_KITCHEN_SINK"
+	size = medium
+	icon = "GFX_special_slot_kitchen_sink"
+	icon_frame = 1
+	power = -25
+	cost = 50
+	
+	ship_modifier = { 
+		ship_experience_gain_mult = 0.10
+	}
+	
+	class_restriction = { shipclass_military }
+
+	component_set = "special_ship_slot"
+	
+	ai_weight = { weight = 1 }
+}
+
+utility_component_template = {
+	key = "SPECIAL_SLOT_STELLAR_CARTOGRAPHY"
+	size = medium
+	icon = "GFX_special_slot_stellar_cartography"
+	icon_frame = 1
+	power = -75
+	cost = 150
+
+	ship_modifier = {
+		ship_windup_mult = -0.20
+		ship_winddown_mult = -0.20
+		ship_interstellar_speed_mult = 0.20
+	}
+
+	prerequisites = { tech_specialcomponents_1 }
+	
+	class_restriction = { shipclass_military }
+
+	component_set = "special_ship_slot"
+	
+	ai_weight = { weight = 1 }
+}
+
+utility_component_template = {
+	key = "SPECIAL_NO_SEC_REACTOR"
+	size = medium
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+	cost = 0
+	
+	class_restriction = { shipclass_military_station }
+	size_restriction = { military_station_large military_station_medium }
+
+	component_set = "nsc_sec_power_core"
+	
+	ai_weight = { weight = 1 }
+}

@@ -1,0 +1,73 @@
+stb_shipyard = {
+	potential = {
+		has_starbase_size >= starbase_starport
+		OR = {
+			count_starbase_modules = {
+				type = shipyard
+				count > 0
+			}
+			count_starbase_modules = {
+				type = drydock
+				count > 0
+			}
+		}
+	}
+
+	weight_modifier = {
+		base = 100
+		modifier = {
+			add = 500
+			count_starbase_modules = {
+				type = drydock
+				count > 0
+			}
+		}
+		modifier = {
+			add = 100
+			count_starbase_modules = {
+				type = shipyard
+				count > 1
+			}
+		}		
+		modifier = {
+			add = 100
+			count_starbase_modules = {
+				type = shipyard
+				count > 2
+			}
+		}
+		modifier = {
+			add = 100
+			count_starbase_modules = {
+				type = shipyard
+				count > 3
+			}
+		}
+		modifier = {
+			add = 100
+			count_starbase_modules = {
+				type = shipyard
+				count > 4
+			}
+		}	
+		modifier = {
+			add = 100
+			count_starbase_modules = {
+				type = shipyard
+				count > 5
+			}
+		}
+	}
+}
+
+
+stb_headquarters = {
+    potential = {
+        has_starbase_size = starbase_stronghold
+        has_starbase_building = hq_annex
+        }
+
+    weight_modifier = {
+        base = 50000
+    }
+}

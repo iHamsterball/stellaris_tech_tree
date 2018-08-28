@@ -1,0 +1,21 @@
+#this file ( and all files in this folder ) is reloadable with console command "reload behavior"
+#filewatcher is enabled for all files in this folder
+
+ship_behavior = {
+	name = "nsc_ai"
+
+	preferred_attack_range = 0
+	formation_distance = 0
+	return_to_formation_distance = 0
+	
+	collision_awareness = 0
+	collision_strafe = 0
+	collision_radius = 0
+
+	attack_move_pattern = none
+	passive_move_pattern = none
+
+	ignore_combat_movement = yes
+	
+	desc = "NSC_AI_BEHAVIOR_DESC"
+}

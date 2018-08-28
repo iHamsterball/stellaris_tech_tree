@@ -24,6 +24,7 @@ def index(request):
         'isb' : 'Improved Space Battles',
         'new_horizons' : 'ST: New Horizons',
         'nsc' : 'New Ship Classes',
+        'nsc2' : 'New Ship Classes 2',
     }
     return HttpResponse(template.render({'version_list' : version_list}, request))
 
