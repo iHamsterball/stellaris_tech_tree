@@ -1,0 +1,462 @@
+﻿l_simp_chinese:
+
+isb_titan:0 "Heavy Titan"
+isb_titan_plural:0 "Heavy Titans"
+ISB_TITAN_BOW:0 "Sky Star"
+ISB_TITAN_MID:0 "Unwavering Faith"
+ISB_TITAN_STERN:0 "Light of Dawn"
+
+leviathan:0 "Leviathan"
+leviathan_plural:0 "Leviathans"
+LEVIATHAN_BOW:0 "Hades' Bident"
+LEVIATHAN_MID:0 "Cornucopia"
+LEVIATHAN_STERN:0 "Aegis"
+
+titan_ship_fallen_empire:0 "Fallen Titan"
+titan_ship_fallen_empire_plural:0 "Fallen Titans"
+
+ai_ship_upkeep:0 "Titan / Leviathan AI Fix"
+tech_isb_base:0 "Improved Space Battles"
+tech_isb_base_desc:0 "Balance changes for Improved Space Battles"
+
+SWARM_STRIKE_CRAFT_PREONLY:0 "Prethoryn Swarm Strike Craft"
+CORE_SWARM_AGGRESSIVE:0 "Swarm Aggressive"
+CORE_SWARM_DEFEND:0 "Swarm Defensive"
+leader_trait_hive_regeneration:0 "Hive Breed : Metabolism"
+leader_trait_hive_regeneration_desc:0 " The gestalt conciousness that controls the actions of Prethoryn fleets has modified the fleet to enhance their healing speed."
+leader_trait_hive_hp:0 "Hive Breed : Toughness"
+leader_trait_hive_hp_desc:0 " The gestalt conciousness that controls the actions of Prethoryn fleets has modified the fleet to enhance their toughness."
+leader_trait_hive_speed:0 "Hive Mind"
+leader_trait_hive_speed_desc:0 " The gestalt conciousness that controls the actions of Prethoryn fleets has proven capable of tremendous multi-tasking."
+
+CORE_ED_AGGRO:0 "ED Aggressive"
+CORE_ED_DEFEND:0 "ED Defensive"
+
+CORE_SENTINEL:0 "Sentinel Core"
+
+opinion_crisis_threat:0 "Ragnarok"
+
+#Titan techs and pre-reqs
+
+TECH_UNLOCK_TITAN_CONSTRUCTION_TITLE:0 "§HUnlocks Ship type:§! Titan"
+TECH_UNLOCK_TITAN_CONSTRUCTION_DESC:0 "§HTitan§!\nThe culmination of decades of research. The Titan is the first in the line of Super Capital Ships and represents a profound shift in weapons platform design."
+
+TECH_UNLOCK_TITAN_WEAPON_MODULES_TITLE:0 "§EUnlocks Titan modules research chain§!"
+TECH_UNLOCK_TITAN_WEAPON_MODULES_DESC:0 "Titan modules are specialised modules for the Titan."
+
+TECH_UNLOCK_TITAN_CHAIN_TITLE:0 "§ETitan Research Chain§!"
+TECH_UNLOCK_TITAN_CHAIN_DESC:0 "Researching all technologies in this research chain will unlock the Titan ship type"
+
+#titan weapon modules tech and pre-reqs
+TECH_UNLOCK_TITAN_MODULE_CHAIN_TITLE:0 "§ETitan Module Research Chain§!"
+TECH_UNLOCK_TITAN_MODULE_CHAIN_DESC:0 "This research chain will unlock various Titan modules"
+
+titan_weapon_components:0 "Titan Modules"
+titan_weapon_components_DESC:0 "Well, we went and built that big thing you wanted. Now what do we do with it?"
+
+TITAN_NO_WEAPON:0 "Empty Slot"
+
+TITAN_PROJECTED_DEFENSES:0 "Projected Defenses"
+TITAN_PROJECTED_DEFENSES_DESC:0 "Advanced shield manipulation technologies allows the Titan to project shields at incoming enemy fire, shielding all ships within range."
+aura_projected_defenses:0 "$aura_category_defensive$ - $aura_type_support$"
+
+TITAN_INERTIA_DAMPENERS:0 "Inertia Dampeners"
+TITAN_INERTIA_DAMPENERS_DESC:0 "Deploying additional inertia dampeners on the Titan allows us to greatly increase sublight speed."
+
+TITAN_CENTRALISED_COMMAND:0 "Centralised Fleet Operations"
+TITAN_CENTRALISED_COMMAND_DESC:0 "Networking the fleet's FTL computers to the Titan's significantly speeds up jump calculations."
+aura_centralised_command:0 "$aura_category_defensive$ - $aura_type_support$"
+
+TITAN_NETWORKED_TARGET:0 "Networked Targeting Systems"
+TITAN_NETWORKED_TARGET_DESC:0 "By analysing sensor data from the fleet during combat, the Titan is able to increase effective weapons range of all ships."
+aura_networked_target:0 "$aura_category_defensive$ - $aura_type_support$"
+
+TITAN_VIRUS:0 "AI Warfare"
+TITAN_VIRUS_DESC:0 "The Titan's AI attacks the systems of all enemy ships in range, decreasing their accuracy and rate of fire."
+aura_titan_virus:0 "$aura_category_offensive$ - $aura_type_debuff$"
+
+TITAN_CORE_01:0 "Avenger Core"
+TITAN_CORE_02:0 "Bastion Core"
+TITAN_CORE_03:0 "Sentinel Core"
+
+TITAN_CORE_FALLEN:0 "Templar Core"
+
+LEVIATHAN_CORE_01:0 "Ares Core"
+LEVIATHAN_CORE_02:0 "Artemis Core"
+
+#Doomsday weapons
+TECH_UNLOCK_TITAN_DOOMSDAY_TITLE:0 "§EUnlocks Titan doomsday weapons research chain§!"
+TECH_UNLOCK_TITAN_DOOMSDAY_DESC:0 "Doomsday weapons are planet killing weapons designed to destroy entire colonies.\n\nYou will have to select a doomsday weapon after researching them from empire policy screen and authorise their use through an empire edict."
+
+#Titan Doomsday Device
+edict_doomsday_authorisation:0 "Authorise Doomsday Weapons"
+edict_doomsday_authorisation_desc:0 "\nRequires doomsday weapons to not be outlawed.\n\nAuthorise the use of doomsday weapons. You can select a different doomsday weapon from the empire policies menu.\n\n"
+
+policy_isb_doomsday_policy:0 "Doomsday Weapons"
+policy_isb_doomsday_policy_desc:0 "'Should they be used? I think it is frightening that we have come this far and still have to ask that question.'\n"
+
+doomsday_outlawed:0 "Outlawed"
+doomsday_outlawed_name:0 "Doomsday weapons outlawed"
+doomsday_outlawed_desc:1 "Long have I gazed into the abyss. But I shall not waver.\n\n§EYour empire will not use doomsday weapons.§!\n"
+
+doomsday_kinetic:0 "Kinetic Bombardment"
+doomsday_kinetic_name:0 "Only Neutronium Kinetic Bombardment can be used"
+doomsday_kinetic_desc:1 "When you are together, you can share a common catastrophe. You can be exterminated together.\n\n§EEvery month, any planet being bombarded with less than 10% hp and a Titan / Avatar size ship in system will have 4 - 5 tiles converted to radioactive wastelands. This will continue until bombardment stops or all populations are dead.\n\nAfter selecting this weapon you have to authorise its use under empire edicts for you to activate it.§!\n"
+
+doomsday_virus:0 "Evolutionary Virus"
+doomsday_virus_name:0 "Only the Evolutionary Virus can be used"
+doomsday_virus_desc:1 "What can make, can just as easily unmake.\n\n§EEvery month, any planet being bombarded with less than 10% hp and a Titan / Avatar size ship in system will lose 3 populations. This will continue until bombardment stops or all populations are dead.\n\n5% chance of turning the planet barren.\n\nAfter selecting this weapon you have to authorise its use under empire edicts for you to activate it.§!\n"
+
+opinion_doomsday_low:0 "Doomsday weapon user"
+
+# Doomsday Weapon - Sun Crusher
+TECH_UNLOCK_SUN_CRUSHER_CHAIN_TITLE:0 "§ESun Crusher Research Chain§!"
+TECH_UNLOCK_SUN_CRUSHER_CHAIN_DESC:0 "Researching all technologies in this research chain will unlock Doomsday Weapon : Sun Crusher"
+
+TECH_UNLOCK_SUN_CRUSHER_CONSTRUCTION_TITLE:0 "§HUnlocks Doomsday Weapon:§! Sun Crusher"
+TECH_UNLOCK_SUN_CRUSHER_CONSTRUCTION_DESC:0 "§HSun Crusher§!\n$tech_sun_crusher_desc$"
+
+sun_crusher:0 "Sun Crusher"
+sun_crusher_plural:0 "Sun Crushers"
+
+SUN_CRUSHER_SECTION:0 "Redemption"
+SUN_CRUSHER_CORE:0 "Nova Core"
+
+exploding_bunny:0 "Exploding Bunny"
+exploding_bunny_plural:0 "Exploding Bunnies"
+
+pc_destroyed:0 "Shattered Planet"
+pc_destroyed_desc:0 "The crust of this dying planet has been ripped open by incredible forces, exposing its molten core."
+
+pc_nova:0 "Glassed Planet"
+pc_nova_desc:0 "This planet was destroyed by incredible energies. Most of its atmosphere has been stripped away and its surface turned into glass. Fires will continue to rage across the entire planet for millenia."
+
+pc_nova_gas:0 "Burning Gas Giant"
+pc_nova_gas_desc:0 "This gas giant was set on fire by incredible energies. The heavier elements ejected during the nova will continue to consume and burn what remains of the gas giant's atmosphere until it is depleted."
+
+pc_ringworld_habitable_nova:0 "Burning Ring World"
+pc_ringworld_habitable_nova_desc:0 "An immense band encircling the system's sun.\n\nThis section of the superstructure appears irreparably damaged."
+pc_ringworld_tech_nova:0 "Burning Ring World"
+pc_ringworld_tech_nova_desc:0 "An immense band encircling the system's sun.\n\nThis section of the superstructure appears irreparably damaged."
+pc_ringworld_seam_nova:0 "Burning Ring World"
+pc_ringworld_seam_nova_desc:0 "An immense band encircling the system's sun.\n\nThis section of the superstructure appears irreparably damaged."
+
+edict_doomsday_nova_authorisation:0 "Authorise Sun Crusher Use"
+edict_doomsday_nova_authorisation_desc:0 "\nRequires doomsday weapons to not be outlawed.\n\nTo activate the weapon, move the Sun Crusher into orbit around the system's star, activate this edict, then disband the Sun Crusher fleet.\n\nYou can only use the Sun Crusher on systems outside our borders with hostile colonies, or empty systems within our borders.\n\n§HWARNING: Use of the Sun Crusher is explicitly prohibited by the Galactic Rules of Engagement. Other empires will condemn us for using it except in the most dire of circumstances.§!\n\n"
+
+#Sun Crusher opinion modifiers
+opinion_doomsday_outlawed:0 "Outlawed doomsday weapons"
+opinion_doomsday_allowed:0 "Allowed doomsday weapons"
+opinion_doomsday_low:0 "Used basic level doomsday weapons"
+opinion_doomsday_destroy_planet:0 "Destroyed planet(s)"
+opinion_doomsday_destroy_planet_owner:0 "Destroyed my planet(s)"
+opinion_doomsday_destroy_star:0 "Destroyed star system(s)"
+opinion_doomsday_destroy_star_empty:0 "Conducted Sun Crusher weapons test"
+opinion_doomsday_destroy_star_owner:0 "Destroyed my star system(s)"
+opinion_doomsday_has_nova_small:0 "Has a Sun Crusher stockpile"
+opinion_doomsday_has_nova_large:0 "Has a large Sun Crusher stockpile"
+
+error_nova_01.name:0 "Activation Failed"
+error_nova_01.desc:0 "Alert : Weapon activation has failed.\n\nThe weapon cannot be used on a black hole, neutron star or pulsar. It is also ineffective against planets. Please find a main sequence star and try again."
+error_nova_01.a:0 "Understood"
+
+error_nova_02.name:0 "Activation Failed"
+error_nova_02.desc:0 "Alert : Weapon activation has failed.\n\nThe weapon can only be used in hostile systems outside of our borders, or in empty systems.\n\nYou monster."
+error_nova_02.a:0 "Understood"
+
+error_nova_03.name:0 "Activation Failed"
+error_nova_03.desc:0 "Alert : Weapon activation has failed.\n\nThe weapon must be activated while the ship is in orbit around a star. Right click the star and order the ship to enter orbit and try again."
+error_nova_03.a:0 "Understood"
+
+error_nova_04.name:0 "Activation Failed"
+error_nova_04.desc:0 "Alert : Weapon activation has failed.\n\nYou cannot destroy two stars at the same time. Please wait for the first star to go nova before activating this weapon again."
+error_nova_04.a:0 "Understood"
+
+titan_doomsday.105.title:0 "Confirmation"
+titan_doomsday.105.desc:0 "Are you sure you want to scrap this Sun Crusher?\n\nIf you are trying to activate the weapon, please ensure the (Authorise Sun Crusher Use) edict is activated in the empire edicts screen."
+titan_doomsday.105.a:0 "Destroy the Sun Crusher"
+titan_doomsday.105.b:0 "Cancel the order"
+
+nova_success.name:0 " "
+nova_success.desc:0 "With all activation checks complete, the final authorisation code is sent to the onboard AI. The weapon switches into full autonomous mode, powering up its core and preparing for a final, short jump into the core of the star. Then it disappears, almost nonchalantly, giving no hint of the cataclysm it is about to unleash, leaving behind only the silently raging surface of the star.\n\nWithin hours the star changes colour, its surface collapsing as the internal fusion processes keeping it alive are subverted and repurposed. This system, and everything in it, is doomed.\n\nThe star has begun to go nova. "
+nova_success.a:0 "..."
+
+#Leviathan Tech
+
+TECH_UNLOCK_LEVIATHAN_CONSTRUCTION_TITLE:0 "§HUnlocks Ship type:§! Leviathan"
+TECH_UNLOCK_LEVIATHAN_CONSTRUCTION_DESC:0 "§HLeviathan§!\nThe second super-capital ship designed. The Leviathan is a purely offensive capital ship killer that utilises the latest advances in phased materials for incredible speed and maneuverability."
+
+TECH_UNLOCK_LEVIATHAN_CHAIN_TITLE:0 "§ELeviathan Research Chain§!"
+TECH_UNLOCK_LEVIATHAN_CHAIN_DESC:0 "Researching all technologies in this research chain will unlock the Leviathan ship type"
+
+SHIELD_ISB_01:0 "Phased Shields"
+SHIELD_ISB_01_DESC:0 "$tech_phased_shields_desc$"
+SMALL_SHIELD_ISB_01:0 "Small Phased Shields"
+MEDIUM_SHIELD_ISB_01:0 "Medium Phased Shields"
+LARGE_SHIELD_ISB_01:0 "Large Phased Shields"
+
+CRYSTAL_ARMOR_ISB_01:0 "Phased Armor"
+CRYSTAL_ARMOR_ISB_01_DESC:0 "Improvements in matter manipulation allow us to increase the integrity of the ship's hull."
+SMALL_CRYSTAL_ARMOR_ISB_01:0 "Small Phased Armor"
+MEDIUM_CRYSTAL_ARMOR_ISB_01:0 "Medium Phased Armor"
+LARGE_CRYSTAL_ARMOR_ISB_01:0 "Large Phased Armor"
+
+# v1.3 - Avatar and Doomsday Weapons
+
+avatar:0 "Avatar"
+avatar_plural:0 "Avatars"
+
+exploding_bunny_avatar:0 "Exploding Avatar Bunny"
+exploding_bunny_avatar_plural:0 "Exploding Avatar Bunnies"
+
+avatar_frame:0 "Avatar Construction Framework"
+avatar_frame_plural:0 "Avatar Construction Frameworks"
+
+avatar_constructor:0 "Avatar Construction Ship"
+avatar_constructor_plural:0 "Avatar Construction Ships"
+
+AVATAR_CONSTRUCTOR_SECTION:0 "Frame Constructor"
+AVATAR_FRAME_SECTION:0 " Avatar Frame"
+
+mod_avatar_raider:0 "Avatar Raider Buffs"
+mod_avatar_frame_active:0 "Avatar Construction in Progress"
+
+TECH_UNLOCK_AVATAR_CHAIN_TITLE:0 "§EAvatar Research Chain§!"
+TECH_UNLOCK_AVATAR_CHAIN_DESC:0 "Researching all technologies in this research chain will unlock The Avatar Project."
+
+TECH_UNLOCK_AVATAR_CONSTRUCTION_TITLE:0 "§HUnlocks Ship type:§! Avatar Constructor"
+TECH_UNLOCK_AVATAR_CONSTRUCTION_DESC:0 "The Avatar Project is an Empire-wide construction project that will allow us to build the Avatar, our largest and most destructive weapons platform yet. Powered by an artificial black hole, it is capable of unleashing enough energy to destroy entire planets. The Avatar will cause weak empires to fear us, making them more likely to bow to our wishes. However, it will also antagonise strong Empires.§!\n\n§EThe constructor will allow you to create an Avatar frame and start the Avatar construction project.\n\nWARNING: The other Empires that already distrust us will not sit idly by while we construct this Doomsday Station. Be prepared for massive assaults by enemy fleets seeking to destroy it before construction completes.§!\n\n§HMove the constructor to a well-defended system and click disband fleet to begin construction of the frame."
+
+edict_doomsday_longinus_authorisation:0 "Authorise Spear of Longinus"
+edict_doomsday_longinus_authorisation_desc:0 "\nRequires doomsday weapons to not be outlawed.\n\nTo activate the weapon, move the Avatar into orbit around a planet, then activate this edict. You may only destroy hostile planets and empty planets in hostile, neutral (ie. not inside any borders) or your own borders.\n\nYou can only use the Spear of Longinus on hostile or empty planets.\n\n"
+
+doomsday_nanite:0 "Nanite Disassemblers"
+doomsday_nanite_name:0 "Only Nanite Disassemblers can be used"
+doomsday_nanite_desc:1 "\n§EEvery month, any planet being bombarded with less than 10% hp and a Titan / Avatar size ship in system will have 1 building and 1 population destroyed. This will continue until bombardment stops or there are no buildings and populations left.\n\nEach building destroyed will generate about 350 minerals and 50 energy. Each population destroyed will generate about 350 energy and 50 minerals.\n\nAfter selecting this weapon you have to authorise its use under empire edicts for you to activate it.\n\nWARNING: Nanite Disassemblers are considered a brutal doomsday weapon.§!\n"
+
+# Avatar construction projects
+PROJ_AVATAR_CONSTRUCT_01:0 "Avatar Construction Frame (Deactivated)"
+PROJ_AVATAR_CONSTRUCT_01_DESC:0 "This is the framework for the automated construction of the Avatar. Research this project to activate the frame and begin construction.\n\nConstruction of the Avatar will take 10 years and cost us approximately 700 energy and minerals per month.\n\n§HWARNING: The other Empires that already distrust us will not sit idly by while we construct this Doomsday Station. Be prepared for assaults by enemy fleets seeking to destroy it before construction completes.§!"
+
+PROJ_AVATAR_CONSTRUCT_02:0 "Avatar Construction Frame (Activated)"
+PROJ_AVATAR_CONSTRUCT_02_DESC:0 "Avatar construction in progress. This special project cannot be researched. Construction will complete when this project times out."
+
+PROJ_AVATAR_ERROR_02:0 "Ship Deactivated"
+PROJ_AVATAR_ERROR_02_DESC:0 "WARNING: The Avatar / Ragnarok cannot be be placed in a fleet with other ships. Ensure the it is the only ship in a fleet to reactivate it."
+
+# Avatar construction events
+avatar_constructor_01.name:0 "Confirmation"
+avatar_constructor_01.desc:0 "Please confirm your orders.\n\n§HWARNING: Deploy the Avatar construction frame in a well defended system. It will be attacked during construction, and cannot be moved once it has been deployed.§!"
+avatar_constructor_01.a:0 "Begin Avatar Construction Frame Deployment"
+avatar_constructor_01.b:0 "Destroy the Avatar Construction Ship"
+avatar_constructor_01.c:0 "Cancel"
+
+avatar_construction_start.name:0 "Avatar Frame Activated"
+avatar_construction_start.desc:0 "Construction of the Avatar has begun. The Avatar special project will display how much time is left before construction completes\n\nOur activation of the frame has not gone unnoticed. Several empires have already lodged formal complaints against our construction of this station. However, no one has yet dared to move openly against us.\n\nThere has, however, been a sudden increase of border incursions by unidentified ships. It appears our enemies have chosen to make their move covertly. High Command's AI predicts an attack will likely occur within the next 12 months. The size of the attack fleet will be indicative of how much support our enemies have managed to garner."
+avatar_construction_start.a:0 "Place all fleets on high alert."
+
+avatar_construction_complete.name:0 "Construction Complete"
+avatar_construction_complete.desc:0 "Now witness the firepower of this fully armed and operational battlestation."
+avatar_construction_complete.a:0 "Fire at will, Commander."
+
+avatar_raid_01.name:0 "Enemy Fleet Detected"
+avatar_raid_01.desc:0 "A fleet of unmarked vessels has been detected heading towards the Avatar construction system.\n\nFleet composition appears to be largely corvettes and destroyers. We are unable to identify any specific Empire affliations. They appear to be raiders, though that is unlikely.\n\nThis must be a scouting fleet to test our defences. "
+avatar_raid_01.a:0 "Signal our defences and prepare for combat."
+
+avatar_raid_02.name:0 "Enemy Fleet Detected"
+avatar_raid_02.desc:0 "A fleet of unmarked vessels has been detected heading towards the Avatar construction system.\n\nFleet composition is mostly corvettes and destroyers, with some cruisers and unidentifed larger vessels."
+avatar_raid_02.a:0 "Again? They don't know when to give up."
+
+avatar_raid_03.name:0 "Enemy Fleet Detected"
+avatar_raid_03.desc:0 "A fleet of unmarked vessels has been detected heading towards the Avatar construction system.\n\nFleet composition ranges from corvettes to battleships and some larger unidentified vessels. They are still posing as raiders, but no mere raider would be able field a fleet of this size.\n\nThis has to be the main battle fleet of our enemies."
+avatar_raid_03.a:0 "They will be defeated."
+
+avatar_raid_04.name:0 "Enemy Fleet Detected"
+avatar_raid_04.desc:0 "Our enemies have dropped all pretenses and are no longer attacking disguised as raiders.\n\nA fleet of alliance ships has been detected heading towards the Avatar construction system. A final, desperate attempt to destroy our Doomsday Station before it becomes operational."
+avatar_raid_04.a:0 "It's a trap!"
+
+avatar_raid_break.name:0 "Signs of Fleet Activity"
+avatar_raid_break.desc:0 "We have detected an usually large number of incursions by unidentified vessels. However, these vessels appear to be focused on avoiding our sensors rather than regrouping into a fleet.\n\nIt appears our enemies are still preparing for an assault. It is unlikely that they will attack soon, but when they do it will be in far greater numbers than before."
+avatar_raid_break.a:0 "We will be ready."
+
+avatar_error_01.name:0 "Unable to start Avatar Project"
+avatar_error_01.desc:0 "Our empire cannot support more than one Avatar."
+avatar_error_01.a:0 "Understood"
+
+avatar_error_02.name:0 "Ship Deactivated"
+avatar_error_02.desc:0 "WARNING: The Avatar / Ragnarok cannot be be placed in a fleet with other ships. Ensure it is the only ship in a fleet to reactivate it."
+avatar_error_02.a:0 "Understood"
+
+avatar_error_03.name:0 "Error"
+avatar_error_03.desc:0 "§HWARNING: Authorise Spear of Longinus Edict is active.§!\n\nYou are attempting to destroy an invalid target with your Avatar. You may only destroy hostile planets and empty planets in hostile, neutral (ie. not inside any borders) or your own borders.\n\nThe weapon also cannot destroy asteroids and planets already destroyed by doomsday weapons.\n\nPlease choose a different target or deactivate the edict to stop seeing this warning."
+avatar_error_03.a:0 "Understood"
+
+#Avatar Components
+
+AVATAR_ENERGY_GUN_01:0 "A.T. Projection"
+AVATAR_CORE:0 "S² Core"
+
+# Avatar Opinions
+opinion_has_avatar:0 "Fear will keep them in line"
+opinion_doomsday_med:0 "Brutal doomsday weapon user"
+
+#Crisis normal mode balance
+mod_normal_ed:0 "Extra-dimensional Balance - Normal"
+mod_normal_swarm:0 "Prethoryn Scourge Balance - Normal"
+
+# v1.4 Erebus
+erebus:0 "Erebus"
+erebus_plural:0 "Erebuses"
+erebus_drone:0 "Combat Drone"
+erebus_drone_plural:0 "Combat Drones"
+
+EREBUS_SECTION:0 "Purgatory"
+
+EREBUS_DRONE_GUN_01:0 "Pulse Cannon"
+EREBUS_DRONE_CORE:0 "Drone Core"
+EREBUS_CORE:0 "Darkness Core"
+
+TECH_UNLOCK_EREBUS_CHAIN_TITLE:0 "§EErebus Research Chain§!"
+TECH_UNLOCK_EREBUS_CHAIN_DESC:0 "Researching all technologies in this research chain will unlock the Erebus ship type"
+
+TECH_UNLOCK_EREBUS_CONSTRUCTION_TITLE:0 "§HUnlocks Ship type:§! Erebus"
+TECH_UNLOCK_EREBUS_CONSTRUCTION_DESC:0 "§HErebus§!\nA massive super-carrier that manufactures and launches fully-autonomous combat drones during engagements.\n\nThe Erebus launches one drone squadron (10 drones) every 25 days during combat. The drone squadrons last for 90 days, after which they will automatically self-destruct."
+
+# Doomsday weapons
+doomsday_nanite_nonorganic:0 "Nanite Deconstructors"
+doomsday_nanite_nonorganic_name:0 "Only Nanite Deconstructors can be used"
+doomsday_nanite_nonorganic_desc:1 "\n§EEvery month, any planet being bombarded with less than 10% hp and a Titan / Avatar size ship in system will have 3 buildings destroyed. This will continue until bombardment stops or there are no buildings left.\n\nWARNING: Nanite Deconstructors are considered a brutal doomsday weapon.§!\n"
+
+doomsday_mood_alteration:0 "Mind Control Stimulants"
+doomsday_mood_alteration_name:0 "Only Mind Control Stimulants can be used"
+doomsday_mood_alteration_desc:1 "\n§EEvery month, any planet being bombarded with less than 10% hp and a Titan / Avatar size ship in system will gain a -10% happiness, +20% ethics divergence modifier. The modifier will last for 2 years. \n\nWARNING: Mind Control Stimulants are considered a brutal doomsday weapon.§!\n"
+
+doomsday_weapon_06:0 "Mind Control Stimulants"
+doomsday_weapon_06_desc:0 "$tech_titan_doomsday_weapons_06_desc$"
+
+doomsday_nanite_gene:0 "Primal Mutation"
+doomsday_nanite_gene_name:0 "Only Primal Mutation can be used"
+doomsday_nanite_gene_desc:1 "\n§EEvery month, any planet being bombarded with less than 10% hp and a Titan / Avatar size ship in system will have one population killed and converted into 2 xenomorph armies under your control. The armies will automatically attack the planet. This doomsday weapon costs 700 energy per use. \n\nWARNING: Primal Mutation is considered a brutal doomsday weapon.§!\n"
+
+doomsday_abduction:0 "Forced Assimilation"
+doomsday_abduction_name:0 "Only Forced Assimilation can be used"
+doomsday_abduction_desc:1 "\n§EEvery two months, any planet being bombarded with less than 10% hp and a Titan / Avatar size ship in system will have one population relocated to a suitable planet under your control. The relocated population will have its ethos changed to match your Empire. This doomsday weapon costs 250 energy / 500 minerals per month.\n\nYou have to bombard the planet for two consecutive months for assimilation to occur. The process will be cancelled if you do not have any free space on your planets for a new population.\n\nWARNING: Forced Assimilation is considered a brutal doomsday weapon.§!\n"
+
+# 1.5 Ragnarok
+TECH_UNLOCK_RAGNAROK_CONSTRUCTION_TITLE:0 "§HUnlocks Ship type:§! Ragnarok"
+TECH_UNLOCK_RAGNAROK_CONSTRUCTION_DESC:0 "§HRagnarok§!\nA super-capital class ship grown from the organic matter discovered near our galactic core. While we do not fully understand the ship or its technologies, we are able to exert some manner of control. It is able to deploy both the Spear of Longinus and Spear of Cassius doomsday weapons.§!\n\n§EThe Ragnarok starts out in an infantile stage. In order to grow its organic core to maturity, it has to consume planets through use of the Spear of Longinus. More details can be found in the associated event chain in the Situation Log once it has been constructed.§!\n\n§RWARNING: You may only own one Ragnarok at any time. Constructing another Ragnarok will result in its destruction due to core instabilities.§!"
+
+TECH_UNLOCK_RAGNAROK_CHAIN_TITLE:0 "§ERagnarok Research Chain§!"
+TECH_UNLOCK_RAGNAROK_CHAIN_DESC:0 "Researching all technologies in this research chain will unlock the Ragnarok ship type"
+
+ragnarok:0 "Ragnarok"
+ragnarok_plural:0 "Ragnaroks"
+consume_planet_bunny:0 "Planet Devourer"
+consume_planet_bunny_plural:0 "Planet Devourers"
+rag_effect_ship:0 "Fires of Ragnarok"
+rag_effect_ship_plural:0 "Fires of Ragnarok"
+rag_effect_explosion_ship:0 "Ragnarok Explosion Bunny"
+rag_effect_explosion_ship_plural: "Ragnarok Explosion Bunnies"
+rag_effect_damage_ship:0 "Spawn of Ragnarok"
+rag_effect_damage_ship_plural:0 "Spawns of Ragnarok"
+RAGNAROK_SECTION:0 "Jörmungandr"
+
+ISB_RAGNAROK_EXPLOSION_01:0 "EXPLOOOOOSIIIOOOOON"
+ISB_RAGNAROK_EXPLOSION_02:0 "EXPLOSIIIIIIIOOOOOOOONNNNNNN"
+
+ragnarok_consumed:0 "Planets Consumed"
+ragnarok_power_chain_title:0 "Ragnarok - Activation Phase"
+ragnarok_power_chain_desc:0 "§HThe Ragnarok will remain severely weakened until it has consumed 40 planets. \n\nNOTE: The Ragnarok cannot be placed in a fleet along with other ships. Ensure it is the only vessel in the fleet.§!\n\n§RWARNING: You may only own one Ragnarok at any time. Constructing another Ragnarok will result in its destruction due to core instabilities.§!"
+ragnarok_doomsday_charge_chain_title:0 "Spear of Cassius - Depleted"
+ragnarok_doomsday_charge_chain_desc:0 "The Spear of Cassius doomsday weapon has been depleted and requires recharging.\n\nThe weapon can be recharged by consuming 4 planets."
+
+ragnarok_construct_01.name:0 "Ragnarok - Gestation Complete"
+ragnarok_construct_01.desc:0 "The Ragnarok has completed its gestation cycle and is now FTL capable.\n\nHowever, its core is still in an infantile stage and must be fed to continue maturing. Our scientists believe that the Ragnarok is currently capable of utilising the Spear of Longinus to consume planets and grow. However, the process will render the planets uninhabitable.\n\nIt is estimated that 40 planets will be required for the Ragnarok to reach full maturity.\n\n§HThe Ragnarok will remain severely weakened until it has consumed 40 planets. You may track the number of planets consumed through the 'Ragnarok - Activation Phase' event in the situation log.\n\nNOTE: The Ragnarok cannot be placed in a fleet along with other ships. Ensure it is the only vessel in the fleet.§!\n\n§RWARNING: You may only own one Ragnarok at any time. Constructing another Ragnarok will result in its destruction due to core instabilities.§!"
+ragnarok_construct_01.a:0 "40 planets? A small price to pay for such power."
+
+ragnarok_construct_02.name:0 "Ragnarok - Activation Complete"
+ragnarok_construct_02.desc:0 "The Ragnarok is now fully mature. Its power has increased significantly and it is now able to deploy the Spear of Cassius doomsday weapon. \n\n§HTo use to Spear of Cassius, select the Ragnarok's fleet after entering combat. If the weapon is charged, a button called 'Spear of Cassius' will appear. \n\nClick the button (or press F) to activate targeting mode. A beacon will appear showing the expected area of effect. Move the beacon to the target location, then click the 'Spear of Cassius' button again (or press F).\n\nThe Ragnarok will take 31 days to charge the weapon before firing, and will be disabled for an additional 39 days after that.\n\nThe Spear of Cassius can be used only once before it must be recharged. You may recharge it by consuming 4 planets. The 'Spear of Cassius - Depleted' event will appear in the Situation log after you fire the weapon to help keep track of the number of planets required for recharge.§!"
+ragnarok_construct_02.a:0 "Excellent."
+
+ragnarok_recharge_02.name:0 "Spear of Cassius - Recharged"
+ragnarok_recharge_02.desc:0 "The Spear of Cassius has been recharged and is ready to fire again."
+ragnarok_recharge_02.a:0 "Excellent."
+
+ragnarok_error_01.name:0 "Ragnarok - Gestation Failed"
+ragnarok_error_01.desc:0 "The Ragnarok we were growing unexpectedly went berserk as it completed gestation. We were forced to enact safety protocols that resulted in its complete destruction.\n\n§RWARNING: You may only own one Ragnarok at any time. Constructing another Ragnarok will result in its destruction due to core instabilities.§!"
+ragnarok_error_01.a:0 "..."
+
+ragnarok_error_02.name:0 "Unable to fire - Spear of Cassius"
+ragnarok_error_02.desc:0 "The Spear of Cassius doomsday weapon has been depleted and requires recharging.\n\nThe weapon can be recharged by consuming 4 planets."
+ragnarok_error_02.a:0 "..."
+
+isb_rag_create_marker_tip:0 "§HSpear of Cassius§!\n\n§EClick this button and use the WASD keys or the arrow buttons to move the fire locator to target location, then press F or click the button again to active the Spear of Cassius.§!"
+isb_rag_fire_tip:0 "§HFire the Spear of Cassius§!"
+isb_rag_cancel_tip:0 "§RCancel§!"
+isb_rag_marker_move_tip:0 "§HMoves the fire beacon§!"
+isb_rag_marker_bunny_object:0 "§HSpear of Cassius§!"
+
+flag_rag_mode_delay:0 "§YUNPAUSE THE GAME TO ACTIVATE THE BUTTONS, you can pause again after they become clickable§!"
+
+RAGNAROK_CORE:0 "Awakened S² Core"
+ragnarok_components:0 "$RAGNAROK_CORE$"
+
+# Heinlein Compatibility Patch (v1.5.1)
+STATION_SENSOR_BOOST_ISB_SMALL:0 "Subspace Array"
+STATION_SENSOR_BOOST_ISB_SMALL_DESC:0 "Boosts the sensor range of military space stations"
+STATION_SENSOR_BOOST_ISB_MEDIUM:0 "Advanced Subspace Array"
+STATION_SENSOR_BOOST_ISB_MEDIUM_DESC:0 "Boosts the sensor range of military space stations"
+STATION_SENSOR_BOOST_ISB_LARGE:0 "Overcharged Subspace Array"
+STATION_SENSOR_BOOST_ISB_LARGE_DESC:0 "Boosts the sensor range of military space stations"
+
+STATION_SENSOR_BOOST_PART_ISB_SMALL:0 "Subspace Array"
+STATION_SENSOR_BOOST_PART_ISB_MEDIUM:0 "Advanced Subspace Array"
+STATION_SENSOR_BOOST_PART_ISB_LARGE:0 "Overcharged Subspace Array"
+
+# Heinlein Patch 2 (v1.5.2)
+sm_isb_defense_platform_01:0 "Sentinel Defense System : E-Class"
+sm_isb_defense_platform_02:0 "Sentinel Defense System : D-Class"
+sm_isb_defense_platform_03:0 "Sentinel Defense System : C-Class"
+
+# Updated crisis difficulty settings
+policy_isb_crisis_diff_policy:0 "ISB - Crisis Difficulty"
+policy_isb_crisis_diff_policy_desc:0 "\nAllows you to modify the difficulty of the end game crises"
+crisis_diff_normal:0 "Normal §Y(Default)§!"
+crisis_diff_normal_desc:0 "\nThe default difficulty setting, should provide a good challenge for veteran players.\n\n"
+crisis_diff_very_easy:0 "Fluffy Pillows"
+crisis_diff_very_easy_desc:0 "\nTime for a pillow fight!\n\n"
+crisis_diff_easy:0 "Easy"
+crisis_diff_easy_desc:0 "\nCrisis fleets are weaker than they appear. Useful if you're playing in smaller galaxies.\n\n"
+crisis_diff_hard:0 "Hard"
+crisis_diff_hard_desc:0 "\nCrisis fleets are a lot stronger than they appear. Not for the faint of heart.\n\n"
+crisis_diff_insane:0 "The Long Dark"
+crisis_diff_insane_desc:0 "\n§RDeep into the darkness peering,\nLong I stood there, wondering,\nfearing, doubting,\nDreaming dreams no mortal ever\ndared to dream before...§!\n\n"
+
+
+# Guardian, AE and FE difficulty settings
+policy_isb_guardian_diff_policy:0 "ISB - Guardian Difficulty"
+policy_isb_guardian_diff_policy_desc:0 "\nAllows you to modify the difficulty of Guardians and how their power scales with time."
+guardian_diff_off:0 "Off"
+guardian_diff_off_desc:0 "\nGuardians do not grow stronger with time."
+guardian_diff_easy:0 "Easy"
+guardian_diff_easy_desc:0 "\nGuardians still grow stronger as time passes, but at a greatly reduced rate.\n\n"
+guardian_diff_normal:0 "Normal §Y(Default)§!"
+guardian_diff_normal_desc:0 "\nThe default difficulty setting. Guardians grow stronger as time passes.\n\n"
+
+policy_isb_awakened_diff_policy:0 "ISB - Awakened Empire Difficulty"
+policy_isb_awakened_diff_policy_desc:0 "\nAllows you to modify the difficulty of Awakened Empires. Does not affect Fallen Empires."
+awakened_diff_easy:0 "Easy"
+awakened_diff_easy_desc:0 "\nAwakened Empire ships are weaker. Suited for smaller galaxies."
+awakened_diff_normal:0 "Normal §Y(Default)§!"
+awakened_diff_normal_desc:0 "\nDefault difficulty setting."
+awakened_diff_hard:0 "Hard"
+awakened_diff_hard_desc:0 "\nAwakened Empire ships are stronger, expect a challenge."
+
+policy_isb_fallen_diff_policy:0 "ISB - Fallen Empire Difficulty"
+policy_isb_fallen_diff_policy_desc:0 "\nAllows you to modify the difficulty of Fallen Empires. Does not affect Awakened Empires."
+fallen_diff_easy:0 "Easy"
+fallen_diff_easy_desc:0 "\nFallen Empire ships are weaker. Suited for smaller galaxies."
+fallen_diff_normal:0 "Normal §Y(Default)§!"
+fallen_diff_normal_desc:0 "\nDefault difficulty setting."
+fallen_diff_hard:0 "Hard"
+fallen_diff_hard_desc:0 "\nFallen Empire ships are stronger, expect a challenge."

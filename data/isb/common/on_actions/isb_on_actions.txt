@@ -1,0 +1,74 @@
+# Triggers when the game starts
+on_game_start = {
+	events = {
+		isb.1
+	}
+}
+on_monthly_pulse = {
+	events = {
+		isb.11
+		avatar_doomsday.6
+		titan_doomsday.3
+	}
+}
+
+# This = owner of fleet
+# From = disbanded fleet
+on_fleet_disbanded = {
+	events = {
+		titan_doomsday.101
+		avatar_doomsday.101
+	}
+}
+
+# No scope, like on_game_start
+on_yearly_pulse = {
+	events = {
+		# Doomsday weapons yearly check
+		titan_doomsday.801		
+	}
+}
+
+# No scope, like on_game_start
+on_bi_yearly_pulse = {
+	events = {
+		# Crisis bi yearly check
+		isb.2
+	}
+}
+
+# No scope, like on_game_start
+on_decade_pulse = {
+	events = {
+		isb.4
+	}
+}
+
+# This = owner of fleet 1
+# From = owner of fleet 2
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_entering_battle = {
+	events = {
+		isb_erebus.1
+	}
+}
+
+# This = owner of fleet 1
+# From = owner of fleet 2
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+#on_entering_battle = {
+#	events = {
+#		isb.6
+#	}
+#}
+
+# A fleet has entered a system
+# Scope = Fleet
+# From = System
+#on_entering_system_fleet = {
+#	events = {
+#		isb.4
+#	}
+#}

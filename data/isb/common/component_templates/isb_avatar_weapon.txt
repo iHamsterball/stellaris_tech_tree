@@ -1,0 +1,56 @@
+weapon_component_template = {
+	key = "AVATAR_ENERGY_GUN_01"
+	size = extra_large
+	entity = "large_space_cloud_weapon_entity"
+	damage = { min = 2750.0 max = 3000.0 }
+	windup = { min = 30.0 max = 170.0 }
+	total_fire_time = 100
+	range = 120.0
+	accuracy = 1.0
+	
+	type = instant
+	
+	shield_damage = 1.0
+	shield_penetration = 1.0
+	armor_penetration = 0.90
+	
+	icon = "GFX_ship_part_energy_lance_2"
+	icon_frame = 1
+	#color = { 0.1 1.0 0.1 1 }
+	power = -7500
+	cost = 10000
+	prerequisites = { "tech_avatar" }
+	#component_set = "avatar_weapon_components"
+	projectile_gfx = "titan_laser"
+	tags = { weapon_type_energy }
+	
+	size_restriction = { avatar }
+	use_ship_kill_target = no
+}
+
+utility_component_template = {
+	key = "AVATAR_CORE"
+	size = small
+	icon = "GFX_ship_part_hyper_drive_3"
+	icon_frame = 1	
+	cost = 35000
+	sensor_range = 5
+	ftl = yes
+	jumpdrive = yes
+	power = 15000
+	military_power = 30000	
+	
+	ship_behavior = "avatar"
+	
+	ship_modifier = {
+		ship_windup_mult = -0.5
+		ship_ftl_jumpdrive_range_mult = 0.5
+		ship_winddown_mult = -0.75
+		
+		#ship_speed_mult = 5.0
+		#ship_combat_speed_mult = 5.0
+		ship_weapon_damage = 3.0
+	}
+		
+	component_set = "avatar_components"	
+}

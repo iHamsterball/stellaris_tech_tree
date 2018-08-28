@@ -1,0 +1,99 @@
+ship_section_template = {
+	key = "EREBUS_SECTION"
+	ship_size = erebus
+	fits_on_slot = mid
+	entity = "erebus_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	#weapon_preferences = { weapon_role_long_range weapon_role_long_range }
+
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_02"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "large_gun_02"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_03"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_03"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_04"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_04"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_05"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_05"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_06"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_06"
+	}
+	
+	large_utility_slots = 6
+	aux_utility_slots = 3
+
+	cost = 20000
+}
+
+
+ship_section_template = {
+	key = "EREBUS_DRONE_SECTION"
+	ship_size = erebus_drone
+	fits_on_slot = mid
+	entity = "erebus_drone_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "root"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_02"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "root"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_03"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "root"
+	}
+	
+	component_slot = {
+		name = "LARGE_GUN_04"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "root"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 0
+
+	cost = 0
+}

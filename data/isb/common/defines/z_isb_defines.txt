@@ -1,0 +1,43 @@
+﻿# To fix Avatar planet destroyer inconsistencies
+NGraphics = {
+	#DEFAULT_PLANET_PLANE				= -175.0
+	PLANET_SCALE_SYSTEM 				= { 0.425 0.325 0.35 0.5 0.5 0.5 0.75 0.75 0.75 0.75 0.75} # Scale for each System zoom steps
+}
+
+NAI = {
+	ARSENAL_FLEET_SIZE = 300
+	CRISIS_NAVY_SIZE_LIMIT = 300
+	EXPAND_NAVY_LIMIT_FACTOR = 5.0			# If the AI Navy maintenance is this much bigger than the opponents, navy will not be expanded
+}
+
+NShip = {
+	#DESIGNER_WEAPON_PREF_MUL			= 2.0			# How much does weapon preference tags in the ship designer affect the weight it assigns a weapon?
+	#DESIGNER_WEAPON_STACKING_DIV		= 0.25
+
+	#MILITARY_POWER_ESTIMATED_ARMOR_PENETRATION	= 0.5	# use as an estimated armor penetration in formula damage_reduction *= 1 - armor_penetration.
+	#MILITARY_POWER_SCALE				= 1.5
+	#MILITARY_POWER_HEALTH_WEIGHT		= 0.3
+	#MILITARY_POWER_DAMAGE_WEIGHT		= 0.3
+	#MILITARY_POWER_SHIELD_WEIGHT		= 0.66	# compared to health
+	#MILITARY_POWER_EXPONENT				= 0.5	# math: power = ( ( effective_health * damage_per_day ) ^ exponent ) * scale
+}
+
+NCombat = {
+	SIZE_MULTIPLIER_DAMAGE_REDUCTION_EFFECT = 0.25
+	DAMAGE_REDUCTION_MAX_SHIP_SIZE = 5
+}
+
+
+NCamera = {
+	# Make default game look better
+	SYSTEM_SPACE_SCALE_MULT = 20.0
+
+	#ZOOM_STEPS_SYSTEM_PERCENTAGES = { 0.02, 0.035, 0.075, 0.1, 0.125, 0.15, 0.175, 0.20, 0.25, 0.5, 0.75, 1.0, 1.5, 3.0 }
+	ZOOM_STEPS_SYSTEM_PERCENTAGES = { 0.025 0.1 0.175 0.25 0.375 0.5 0.75 1.0 1.5 2.25 3.0 } # System zoom steps in percent relative to the system size
+	LEAVE_SYSTEM_ZOOM_STEP 			= 3
+	ENTER_SYSTEM_ZOOM_STEP = 6  #Controls which zoom step is used after entering system
+	SYSTEM_FOCUS_PLANET_STEP = 1  #Controls which zoom step to planet zoom to in a system
+	FOCUS_START_ZOOM_STEP = 5 	 #which zoom step will be used when focusing on a new object
+
+	SYSTEM_SLIDE_RADIUS_FACTOR = 1.8 #Fix clicking to zoom to other systems
+}

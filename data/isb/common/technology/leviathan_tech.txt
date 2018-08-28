@@ -1,0 +1,701 @@
+##################
+### TECH COSTS ###
+##################
+#If you change any of these, use replace in files so the values are the same across all files
+
+@tier1cost1 = 240
+@tier1cost2 = 360
+@tier1cost3 = 480
+@tier1cost4 = 600
+
+@tier2cost1 = 900
+@tier2cost2 = 1200
+@tier2cost3 = 1500
+@tier2cost4 = 1800
+
+@tier3cost1 = 2320
+@tier3cost2 = 2840
+@tier3cost3 = 3360
+@tier3cost4 = 3880
+@tier3cost5 = 3880
+@tier3cost6 = 4520
+
+####################
+### TECH WEIGHTS ###
+####################
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+@tier1weight4 = 85
+
+@tier2weight1 = 75
+@tier2weight2 = 70
+@tier2weight3 = 65
+@tier2weight4 = 60
+
+@tier3weight1 = 50
+@tier3weight2 = 45
+@tier3weight3 = 40
+@tier3weight4 = 35
+
+tech_leviathan = {
+	cost = @tier3cost5
+	area = engineering
+	tier = 3
+	category = { voidcraft }	
+	prerequisites = { "tech_leviathan_eng_02" "tech_leviathan_phy_02" "tech_leviathan_soc_02"}
+	weight = @tier3weight2
+	is_rare = yes
+		
+	## unlock titans	
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_LEVIATHAN_CONSTRUCTION_TITLE"
+			desc = "TECH_UNLOCK_LEVIATHAN_CONSTRUCTION_DESC"
+		}
+	}
+	
+	modifier = {
+		max_minerals = 5000
+		max_energy = 1500
+	}
+	
+	feature_flags = { }
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOT = { years_passed > 90 }
+		}	
+		modifier = {
+			factor = 2
+			any_neighbor_country = {
+				has_technology = tech_leviathan
+			}
+		}
+		modifier = {
+			factor = 6
+			years_passed > 100
+		}
+		modifier = {
+			factor = 9
+			years_passed > 110
+		}
+		modifier = {
+			factor = 12
+			years_passed > 120
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100 #higher factor due to battleship hull
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+# Theory : Specialised weapons platform
+tech_leviathan_soc_01 = {
+	cost = @tier3cost5
+	area = society
+	tier = 3
+	category = { military_theory }
+	prerequisites = { "tech_titan_weapon_module_02" "tech_titan_weapon_module_03" "tech_titan_weapon_module_04" }
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LEVIATHAN_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_LEVIATHAN_CHAIN_DESC"
+		}
+	}
+	
+	modifier = { 
+		country_starbase_capacity_add = 1
+		max_energy = 250
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 4
+			years_passed > 90
+		}
+		modifier = {
+			factor = 6
+			years_passed > 100
+		}
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+		
+	
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 3
+			years_passed > 80
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+}
+
+# Doctrine : Capital Ship Warfare
+tech_leviathan_soc_02 = {
+	cost = @tier3cost5
+	area = society
+	tier = 3
+	category = { military_theory }
+	prerequisites = { "tech_leviathan_soc_01" }
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LEVIATHAN_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_LEVIATHAN_CHAIN_DESC"
+		}
+	}
+	
+	modifier = { 		
+		max_energy = 250
+	}
+	
+	weight_modifier = {		
+		modifier = {
+			factor = 4
+			years_passed > 95
+		}
+		modifier = {
+			factor = 6
+			years_passed > 100
+		}
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 20 #Good bonus
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 3
+			years_passed > 85
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+}
+
+# Framework : Multi-Dimensional Construction
+tech_leviathan_eng_01 = {
+	cost = @tier3cost5
+	area = engineering
+	tier = 3
+	category = { industry }	
+	prerequisites = { "tech_leviathan_phy_01" }
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LEVIATHAN_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_LEVIATHAN_CHAIN_DESC"
+		}
+	}
+	
+	modifier = {
+		shipclass_military_station_build_cost_mult = -0.05
+		shipclass_military_station_hull_mult = 0.1
+		max_energy = 250
+	}
+		
+	feature_flags = { }
+	
+	weight_modifier = {		
+		modifier = {
+			factor = 4
+			years_passed > 90
+		}
+		modifier = {
+			factor = 6
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 3
+			years_passed > 80
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+# Framework : Energy Amplification
+tech_leviathan_eng_02 = {
+	cost = @tier3cost5
+	area = engineering
+	tier = 3
+	category = { industry }	
+	prerequisites = { "tech_leviathan_eng_01" }
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LEVIATHAN_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_LEVIATHAN_CHAIN_DESC"
+		}
+	}
+	
+	modifier = {
+		tile_resource_energy_mult = 0.05
+		max_energy = 250
+	}
+		
+	feature_flags = { }
+	
+	weight_modifier = {
+		modifier = {
+			factor = 4
+			years_passed > 95
+		}
+		modifier = {
+			factor = 6
+			years_passed > 100
+		}	
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 3
+			years_passed > 85
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+# Theory : Multi-dimensional Structuring
+tech_leviathan_phy_01 = {
+	area = physics
+	cost = @tier3cost5
+	tier = 3
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_leviathan_soc_01"}
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LEVIATHAN_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_LEVIATHAN_CHAIN_DESC"
+		}
+	}
+	
+	modifier = {
+		tile_resource_minerals_mult = 0.05		
+		max_energy = 500
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 4
+			years_passed > 90
+		}
+		modifier = {
+			factor = 6
+			years_passed > 100
+		}			
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 20 #good component
+		modifier = {
+			factor = 3
+			years_passed > 80
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+# Theory : Dimensionally Phased Materials
+tech_leviathan_phy_02 = {
+	area = physics
+	cost = @tier3cost5
+	tier = 3
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_leviathan_phy_01" }
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LEVIATHAN_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_LEVIATHAN_CHAIN_DESC"
+		}
+	}
+	
+	modifier = {
+		
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 4
+			years_passed > 95
+		}
+		modifier = {
+			factor = 6
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 3
+			years_passed > 85
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+# Phased Shields
+tech_phased_shields = {
+	area = physics
+	cost = @tier3cost4
+	tier = 3
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_leviathan_phy_02" }
+	weight = @tier3weight4
+	is_rare = yes		
+	
+	weight_modifier = {
+		modifier = {
+			factor = 4
+			years_passed > 95
+		}
+		modifier = {
+			factor = 6
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 3
+			years_passed > 85
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+# Sun Crusher
+tech_sun_crusher = {
+	area = engineering
+	cost = @tier3cost5
+	tier = 3
+	category = { voidcraft }
+	ai_update_type = military
+	prerequisites = { "tech_sun_crusher_phy_02" }
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_SUN_CRUSHER_CONSTRUCTION_TITLE"
+			desc = "TECH_UNLOCK_SUN_CRUSHER_CONSTRUCTION_DESC"
+		}
+	}
+	
+	modifier = {
+		country_resource_influence_add = 1.0
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 4
+			years_passed > 105
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 4	
+	}
+}
+
+# Doctrine : Autonomous Weapons Systems
+tech_sun_crusher_soc_01 = {
+	cost = @tier3cost5
+	area = society
+	tier = 3
+	category = { military_theory }
+	prerequisites = { "tech_leviathan" "tech_titan_doomsday_weapons_02" "tech_titan_doomsday_weapons_03" }
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_SUN_CRUSHER_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_SUN_CRUSHER_CHAIN_DESC"
+		}
+	}
+		
+	modifier = {
+		country_resource_influence_add = 0.5
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 4
+			years_passed > 90
+		}		
+	}
+		
+	
+	ai_weight = {
+		factor = 20		
+	}
+}
+
+# Theory : Localised Reality Manipulation
+tech_sun_crusher_phy_01 = {
+	cost = @tier3cost5
+	area = physics
+	tier = 3
+	category = { field_manipulation }
+	prerequisites = { "tech_sun_crusher_soc_01" }
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_SUN_CRUSHER_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_SUN_CRUSHER_CHAIN_DESC"
+		}
+	}
+	
+	modifier = {
+		
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 4
+			years_passed > 90
+		}		
+	}
+		
+	
+	ai_weight = {
+		factor = 20		
+	}
+}
+
+# Theory : Internal Stellar Manipulation
+tech_sun_crusher_phy_02 = {
+	cost = @tier3cost5
+	area = physics
+	tier = 3
+	category = { field_manipulation }
+	prerequisites = { "tech_sun_crusher_phy_01" }
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_SUN_CRUSHER_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_SUN_CRUSHER_CHAIN_DESC"
+		}
+	}
+	
+	modifier = {		
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 4
+			years_passed > 90
+		}		
+	}
+		
+	
+	ai_weight = {
+		factor = 20		
+	}
+}

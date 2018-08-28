@@ -1,0 +1,154 @@
+# Available requirements:
+#
+#	SKILLS
+#	skill = 2
+#
+#	LEADER
+#	leader = scientist
+#	leader = admiral
+#	leader = general
+#	leader = ruler
+#	leader = governor
+#
+#	MILITARY SHIPS
+#	shipclass_military = 1
+#
+#	CIVILIAN SHIPS
+#	shipclass_constructor = 2
+#	shipclass_science_ship = 1
+#	shipclass_colonizer = 2
+#
+#	ARMIES
+#	shipclass_transport = 1
+#	assault_armies = 2
+#	defense_armies = 1
+#
+#	STATIONS
+#	research_station = yes
+#	mining_station = yes
+#	observation_station = yes
+#
+#	SCOPES
+#	abort_trigger
+#	this = country (project owner)
+#	from = event scope (planet or ship, MIGHT NOT EXIST)
+#	fromfrom = project creation scope (usually equals location)
+#
+#	on_success
+#	this = event scope (ship or planet)
+#	from = project creation scope (usually equals location)
+#
+#	on_fail
+#	this = country (project owner)
+#	from = project creation scope (usually equals location)
+
+# Frame preparation
+special_project = {
+	key = "PROJ_AVATAR_CONSTRUCT_01"
+	#event_chain = "radical_cult"
+	cost = 0
+	days_to_research = 10
+	tech_department = engineering_technology
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		#skill = 4
+	}
+
+	on_success = {
+		ship_event = { id = avatar_doomsday.102 }
+	}
+	
+	# Frame destroyed
+	abort_trigger = {
+		THIS = { 
+			NOT = { 
+				any_owned_ship = {
+					is_ship_size = avatar_frame
+				}
+			}
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# Start Construction
+special_project = {
+	key = "PROJ_AVATAR_CONSTRUCT_02"
+	timelimit=3650
+	cost = 0
+	days_to_research = 0
+	#tech_department = engineering_technology
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = governor
+		skill = 10
+	}
+
+	on_success = {
+
+	}
+
+	# Frame destroyed
+	abort_trigger = {
+		THIS = { 
+			NOT = { 
+				any_owned_ship = {
+					is_ship_size = avatar_frame
+				}
+			}
+		}
+	}
+
+	# Construction complete
+	on_fail = {
+		THIS = { country_event = { id = avatar_doomsday.103 } }
+	}
+}
+
+# Avatar Error 01 - Cannot be in a fleet
+special_project = {
+	key = "PROJ_AVATAR_ERROR_02"
+	#timelimit=3650
+	cost = 0
+	days_to_research = 0
+	#tech_department = engineering_technology
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = governor
+		skill = 10
+	}
+
+	on_success = {
+
+	}
+	
+	abort_trigger = {
+		THIS = { 
+			NOT = {
+				any_owned_ship = {
+					OR = {
+						is_ship_size = avatar
+						is_ship_size = ragnarok
+					}					
+					is_disabled = yes
+				}
+			}
+		}
+	}
+
+	on_fail = {
+
+	}
+}

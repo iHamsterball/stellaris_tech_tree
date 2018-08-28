@@ -1,0 +1,235 @@
+#BOW
+
+ship_section_template = {
+	key = "ISB_TITAN_BOW"
+	ship_size = isb_titan
+	fits_on_slot = bow
+	entity = "isb_titan_bow_entity"
+	icon = "GFX_ship_part_core_bow"
+
+	# Small guns
+	#weapon_preferences = { weapon_role_long_range }	
+
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "large_gun_02"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_02"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "large_gun_03"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_03"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "large_gun_05"
+	}	
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_02"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_04"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+
+	large_utility_slots = 4
+	aux_utility_slots = 1
+
+	cost = 3500
+}
+
+#MID
+
+ship_section_template = {
+	key = "ISB_TITAN_MID"
+	ship_size = isb_titan
+	fits_on_slot = mid
+	entity = "isb_titan_mid_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	# Missiles & Strike Craft
+	#weapon_preferences = { weapon_role_anti_shield }
+	ai_weight = {
+		modifier = {
+			factor = 8.0
+			OR = {
+				has_ai_personality = peaceful_traders
+				has_ai_personality = slaving_despots
+				has_ai_personality = migrating_flock
+			}
+		}
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_02"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_02"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_03"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_03"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "strike_craft_locator_01"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = -90
+		locatorname = "strike_craft_locator_02"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "strike_craft_locator_03"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = -90
+		locatorname = "strike_craft_locator_04"
+	}
+
+	large_utility_slots = 3
+	aux_utility_slots = 1
+
+	cost = 3500
+}
+
+#STERN
+
+ship_section_template = {
+	key = "ISB_TITAN_STERN"
+	ship_size = isb_titan
+	fits_on_slot = stern
+	entity = "isb_titan_stern_entity"
+	icon = "GFX_ship_part_core_stern"
+
+	#weapon_preferences = { weapon_role_long_range }
+	ai_weight = {
+		factor = 1
+		modifier = {
+			factor = 100.0
+			has_ai_personality = migrating_flock
+		}
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_02"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_02"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_03"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_03"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	large_utility_slots = 3
+	aux_utility_slots = 1
+
+	cost = 3500
+}
+
+#Titan Weapon Modules

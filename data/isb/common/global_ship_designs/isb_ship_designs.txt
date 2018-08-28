@@ -1,0 +1,357 @@
+# Sun Crusher
+ship_design = {
+	name = "NAME_Sun_Crusher"
+	ship_size = sun_crusher
+
+	section = {
+		template = "SUN_CRUSHER_SECTION"
+		slot = "mid"
+
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_ARMOR_5"
+		}
+	}
+
+	required_component="SUN_CRUSHER_CORE"
+}
+
+# Exploding Bunny
+ship_design = {
+	name = "NAME_explosion"
+	ship_size = exploding_bunny
+}
+
+# Exploding Bunny Avatar
+ship_design = {
+	name = "NAME_destroy_planet"
+	ship_size = exploding_bunny_avatar
+}
+
+ship_design = {
+	name = "NAME_Avatar_Construction"
+	ship_size = avatar_frame
+
+	section = {
+		template = "AVATAR_FRAME_SECTION"
+		slot = "mid"
+	}
+}
+
+# Avatar
+ship_design = {
+	name = "NAME_Doom_Star"
+	ship_size = avatar
+
+	section = {
+		template = "AVATAR_SECTION"
+		slot = "mid"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "AVATAR_ENERGY_GUN_01"
+		}
+
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "AVATAR_ENERGY_GUN_01"
+		}
+	}
+
+	required_component="AVATAR_CORE"
+}
+
+# Avatar Construction Fallen Empire designs
+ship_design = {
+	name = "NAME_Demi"
+	ship_size = large_ship_fallen_empire
+	section = {
+		template = "fallen_empire_large_warship_key"
+		slot = "mid"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_DISRUPTOR_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "MEDIUM_DISRUPTOR_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "MEDIUM_DISRUPTOR_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_04"
+			template = "MEDIUM_DISRUPTOR_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_04"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_SHIELD_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_SHIELD_5"
+		}		
+	}
+	required_component="SENSOR_4"
+	required_component="JUMP_DRIVE_1"
+	required_component="COMBAT_COMPUTER_LINE_SAPIENT"
+}
+
+
+ship_design = {
+	name = "NAME_Judicator"
+	ship_size = titan_ship_fallen_empire
+	section = {
+		template = "fallen_empire_titan_warship_key"
+		slot = "mid"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_DISRUPTOR_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "MEDIUM_DISRUPTOR_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "MEDIUM_DISRUPTOR_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_04"
+			template = "MEDIUM_DISRUPTOR_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_05"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_06"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_07"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_08"
+			template = "MEDIUM_PLASMA_3"
+		}		
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "MEDIUM_ARMOR_5"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "MEDIUM_ARMOR_5"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_4"
+			template = "MEDIUM_ARMOR_5"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_5"
+			template = "MEDIUM_ARMOR_5"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_6"
+			template = "MEDIUM_ARMOR_5"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_7"
+			template = "MEDIUM_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_SHIELD_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_SHIELD_5"
+		}
+	}
+	required_component="SENSOR_4"
+	required_component="JUMP_DRIVE_1"	
+	required_component = "TITAN_CORE_FALLEN"
+	required_component = "TITAN_VIRUS"
+}
+
+# Drone
+ship_design = {
+	name = "NAME_Erebus-Drone"
+	ship_size = erebus_drone
+
+	section = {
+		template = "EREBUS_DRONE_SECTION"
+		slot = "mid"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "EREBUS_DRONE_GUN_01"
+		}
+
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "EREBUS_DRONE_GUN_01"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "EREBUS_DRONE_GUN_01"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "FLAK_BATTERY_2"
+		}
+	}
+
+	required_component = "EREBUS_DRONE_CORE"
+}
+
+#FE Titan
+ship_design = {
+	name = "NAME_Arbitrator"
+	ship_size = titan_ship_fallen_empire
+	section = {
+		template = "fallen_empire_titan_warship_key"
+		slot = "mid"
+		
+		component = {
+			slot = "EXTRA_LARGE_GUN_01"
+			template = "TITAN_LASER"
+		}		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_DISRUPTOR_3"
+		}		
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "MEDIUM_DISRUPTOR_3"
+		}		
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "MEDIUM_DISRUPTOR_3"
+		}		
+		component = {
+			slot = "MEDIUM_GUN_04"
+			template = "MEDIUM_DISRUPTOR_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_05"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_06"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_07"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_08"
+			template = "MEDIUM_PLASMA_3"
+		}		
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "MEDIUM_ARMOR_5"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "MEDIUM_ARMOR_5"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "MEDIUM_ARMOR_5"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_4"
+			template = "MEDIUM_ARMOR_5"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_5"
+			template = "MEDIUM_ARMOR_5"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_6"
+			template = "MEDIUM_ARMOR_5"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_7"
+			template = "MEDIUM_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_SHIELD_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_SHIELD_5"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_SHIELD_5"
+		}			
+	}
+	required_component="SENSOR_4"
+	required_component="JUMP_DRIVE_1"	
+	required_component = "TITAN_CORE_FALLEN"
+	required_component = "TITAN_NETWORKED_TARGET"
+	
+	# For special buildable
+	is_special_buildable = yes
+	allow_buildable_trigger = is_awakened_fallen_empire
+}

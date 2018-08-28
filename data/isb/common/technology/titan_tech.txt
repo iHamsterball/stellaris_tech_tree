@@ -1,0 +1,1001 @@
+##################
+### TECH COSTS ###
+##################
+#If you change any of these, use replace in files so the values are the same across all files
+
+@tier1cost1 = 240
+@tier1cost2 = 360
+@tier1cost3 = 480
+@tier1cost4 = 600
+
+@tier2cost1 = 900
+@tier2cost2 = 1200
+@tier2cost3 = 1500
+@tier2cost4 = 1800
+
+@tier3cost1 = 2320
+@tier3cost2 = 2840
+@tier3cost3 = 3360
+@tier3cost4 = 3880
+@tier3cost5 = 3360
+@tier3cost6 = 4520
+
+####################
+### TECH WEIGHTS ###
+####################
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+@tier1weight4 = 85
+
+@tier2weight1 = 75
+@tier2weight2 = 70
+@tier2weight3 = 65
+@tier2weight4 = 60
+
+@tier3weight1 = 50
+@tier3weight2 = 45
+@tier3weight3 = 40
+@tier3weight4 = 35
+
+@titanweight = 80
+
+tech_isb_base = {
+	cost = @tier1cost1
+	area = engineering
+	tier = 1
+	category = { industry }	
+	prerequisites = { }
+	weight = @tier1weight1
+	is_dangerous = yes
+	start_tech = yes
+	
+	modifier = {
+		max_minerals = 5000
+		max_energy = 5000
+	}
+	
+	feature_flags = { }
+	
+	weight_modifier = {		
+	}
+	
+	ai_weight = {
+		
+	}
+}
+
+tech_isb_titan = {
+	cost = @tier3cost5
+	area = engineering
+	tier = 3
+	category = { voidcraft }	
+	prerequisites = { "tech_titan_eng_02_drone_swarm" "tech_titan_phy_02_inertia_dampeners" "tech_titan_soc_02_super_capital"}
+	weight = @titanweight
+	is_rare = yes
+		
+	## unlock titans	
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_TITAN_CONSTRUCTION_TITLE"
+			desc = "TECH_UNLOCK_TITAN_CONSTRUCTION_DESC"
+		}
+	}
+	
+	modifier = {
+		max_minerals = 4000
+		max_energy = 2000
+	}
+	
+	feature_flags = { }
+	
+	weight_modifier = {
+		#modifier = {
+		#	factor = 0.1
+		#	NOT = { years_passed > 70 }
+		#}	
+		modifier = {
+			factor = 4
+			any_neighbor_country = {
+				has_technology = tech_isb_titan
+			}
+		}
+		modifier = {
+			factor = 4
+			years_passed > 90
+		}
+		modifier = {
+			factor = 6
+			years_passed > 100
+		}
+		modifier = {
+			factor = 8
+			years_passed > 110
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100 #higher factor due to battleship hull
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_titan_soc_01_weapons_platform = {
+	cost = @tier3cost5
+	area = society
+	tier = 3
+	category = { military_theory }
+	prerequisites = { "tech_doctrine_fleet_size_5" }
+	weight = @titanweight
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_TITAN_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_TITAN_CHAIN_DESC"
+		}
+	}
+	
+	modifier = { 
+		country_starbase_capacity_add = 1
+		max_energy = 250
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 3
+			years_passed > 70
+		}
+		modifier = {
+			factor = 6
+			years_passed > 80
+		}
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+		
+	
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 3
+			years_passed > 70
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+}
+
+tech_titan_soc_02_super_capital = {
+	cost = @tier3cost5
+	area = society
+	tier = 3
+	category = { military_theory }
+	prerequisites = { "tech_titan_soc_01_weapons_platform" }
+	weight = @titanweight
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_TITAN_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_TITAN_CHAIN_DESC"
+		}
+	}
+	
+	modifier = { 
+		ship_upkeep_mult = -0.05
+		max_energy = 250
+	}
+	
+	weight_modifier = {		
+		modifier = {
+			factor = 3
+			years_passed > 80
+		}
+		modifier = {
+			factor = 6
+			years_passed > 85
+		}
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 20 #Good bonus
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 3
+			years_passed > 75
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+}
+
+tech_titan_eng_01_massive_construction = {
+	cost = @tier3cost5
+	area = engineering
+	tier = 3
+	category = { industry }	
+	prerequisites = { "tech_starbase_4" "tech_titan_soc_01_weapons_platform" }
+	weight = @titanweight
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_TITAN_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_TITAN_CHAIN_DESC"
+		}
+	}
+	
+	modifier = {
+		shipclass_military_station_build_cost_mult = -0.05
+		shipclass_military_station_hull_mult = 0.1
+		max_energy = 250
+	}
+		
+	feature_flags = { }
+	
+	weight_modifier = {		
+		modifier = {
+			factor = 3
+			years_passed > 70
+		}
+		modifier = {
+			factor = 6
+			years_passed > 80
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 3
+			years_passed > 70
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_titan_eng_02_drone_swarm = {
+	cost = @tier3cost5
+	area = engineering
+	tier = 3
+	category = { industry }	
+	prerequisites = { "tech_titan_eng_01_massive_construction" }
+	weight = @titanweight
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_TITAN_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_TITAN_CHAIN_DESC"
+		}
+	}
+	
+	modifier = {
+		building_time_mult = -0.05
+		max_energy = 250
+	}
+		
+	feature_flags = { }
+	
+	weight_modifier = {
+		modifier = {
+			factor = 3
+			years_passed > 80
+		}
+		modifier = {
+			factor = 6
+			years_passed > 85
+		}	
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 3
+			years_passed > 75
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+#Titan Physics tech req #1
+tech_titan_phy_01_mass_manipulation = {
+	area = physics
+	cost = @tier3cost5
+	tier = 3
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_shields_5" "tech_titan_soc_01_weapons_platform"}
+	weight = @titanweight
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_TITAN_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_TITAN_CHAIN_DESC"
+		}
+	}
+	
+	modifier = {
+		tile_resource_minerals_mult = 0.05
+		max_energy = 500
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 3
+			years_passed > 70
+		}
+		modifier = {
+			factor = 6
+			years_passed > 80
+		}			
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 20 #good component
+		modifier = {
+			factor = 3
+			years_passed > 70
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+#Titan Physics tech req #2
+tech_titan_phy_02_inertia_dampeners = {
+	area = physics
+	cost = @tier3cost5
+	tier = 3
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_titan_phy_01_mass_manipulation" }
+	weight = @titanweight
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_TITAN_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_TITAN_CHAIN_DESC"
+		}
+	}
+	
+	modifier = {
+		tile_resource_energy_mult = 0.1
+		max_energy = 500
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 3
+			years_passed > 80
+		}
+		modifier = {
+			factor = 6
+			years_passed > 85
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 3
+			years_passed > 75
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_titan_weapon_module_01 = {
+	area = physics
+	cost = @tier3cost5
+	tier = 3
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_isb_titan" }
+	weight = @titanweight
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_TITAN_MODULE_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_TITAN_MODULE_CHAIN_DESC"
+		}
+	}
+	
+	weight_modifier = {
+		factor = 1.25		
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 40
+		modifier = {
+			factor = 6
+			years_passed > 80
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+#Projected Defenses
+tech_titan_weapon_module_02 = {
+	area = physics
+	cost = @tier3cost2
+	tier = 3
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_titan_weapon_module_01" }
+	weight = @titanweight
+	is_rare = yes
+	
+	weight_modifier = {
+		factor = 4
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 20 #AI shouldn't use this
+		
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+#Centralised Command
+tech_titan_weapon_module_03 = {
+	area = physics
+	cost = @tier3cost2
+	tier = 3
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_titan_weapon_module_01" }
+	weight = @titanweight
+	is_rare = yes
+	
+	weight_modifier = {
+		factor = 4
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 20 #AI shouldnt use this
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+}
+
+#Networked Targeting
+tech_titan_weapon_module_04 = {
+	area = physics
+	cost = @tier3cost2
+	tier = 3
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_titan_weapon_module_01" }
+	weight = @titanweight
+	is_rare = yes
+	
+	weight_modifier = {
+		factor = 4
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 2
+			years_passed > 80
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+}
+
+#Virus
+tech_titan_weapon_module_05 = {
+	area = physics
+	cost = @tier3cost2
+	tier = 3
+	category = { computing }
+	ai_update_type = military
+	prerequisites = { "tech_titan_weapon_module_01" "tech_combat_computers_3" }
+	weight = @tier3weight4
+	is_rare = yes
+	
+	weight_modifier = {
+		factor = 4
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 2
+			years_passed > 80
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+}
+
+tech_titan_doomsday_weapons_01 = {
+	area = society
+	cost = @tier3cost5
+	tier = 3
+	category = { military_theory }
+	ai_update_type = military
+	prerequisites = { "tech_titan_weapon_module_01" }
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_TITAN_DOOMSDAY_TITLE"
+			desc = "TECH_UNLOCK_TITAN_DOOMSDAY_DESC"
+		}
+	}
+	
+	modifier = {
+		country_resource_influence_add = 1
+	}
+	
+	weight_modifier = {
+		factor = 4
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.25
+	}
+}
+
+tech_titan_doomsday_weapons_02 = {
+	area = engineering
+	cost = @tier3cost5
+	tier = 3
+	category = { biology }
+	ai_update_type = military
+	prerequisites = { "tech_titan_doomsday_weapons_01"}
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_TITAN_DOOMSDAY_TITLE"
+			desc = "TECH_UNLOCK_TITAN_DOOMSDAY_DESC"
+		}
+	}
+	
+	modifier = {
+		country_resource_influence_add = 0.25
+	}
+	
+	weight_modifier = {
+		factor = 1.25		
+	}
+	
+	ai_weight = {
+		factor = 1.25
+	}
+}
+
+tech_titan_doomsday_weapons_03 = {
+	area = society
+	cost = @tier3cost5
+	tier = 3
+	category = { biology }
+	ai_update_type = military
+	prerequisites = { "tech_titan_doomsday_weapons_01" }
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_TITAN_DOOMSDAY_TITLE"
+			desc = "TECH_UNLOCK_TITAN_DOOMSDAY_DESC"
+		}
+	}
+	
+	modifier = {
+		country_resource_influence_add = 0.25
+	}
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.25
+	}
+}
+
+# Von Neumann Machines
+tech_titan_doomsday_weapons_04 = {
+	area = engineering
+	cost = @tier3cost5
+	tier = 3
+	category = { industry }
+	ai_update_type = military
+	prerequisites = { "tech_titan_doomsday_weapons_02" "tech_titan_doomsday_weapons_03" }
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_TITAN_DOOMSDAY_TITLE"
+			desc = "TECH_UNLOCK_TITAN_DOOMSDAY_DESC"
+		}
+	}
+	
+	modifier = {		
+	}
+	
+	weight_modifier = {
+		factor = 1.0		
+	}
+	
+	ai_weight = {
+		factor = 1.25
+	}
+}
+
+# Nanite Disassemblers
+tech_titan_doomsday_weapons_05 = {
+	area = engineering
+	cost = @tier3cost5
+	tier = 3
+	category = { industry }
+	ai_update_type = military
+	prerequisites = { "tech_titan_doomsday_weapons_04"}
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_TITAN_DOOMSDAY_TITLE"
+			desc = "TECH_UNLOCK_TITAN_DOOMSDAY_DESC"
+		}
+	}
+	
+	modifier = {
+		country_resource_influence_add = 0.25
+	}
+	
+	weight_modifier = {
+		factor = 1.0		
+	}
+	
+	ai_weight = {
+		factor = 1.25
+	}
+}
+
+
+# Atmospheric Stimulants
+tech_titan_doomsday_weapons_06 = {
+	area = society
+	cost = @tier3cost6
+	tier = 3
+	category = { biology }
+	ai_update_type = military
+	prerequisites = { "tech_titan_doomsday_weapons_05" }
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_TITAN_DOOMSDAY_TITLE"
+			desc = "TECH_UNLOCK_TITAN_DOOMSDAY_DESC"
+		}
+	}
+	
+	modifier = {
+		country_resource_influence_add = 0.25
+	}
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.25
+	}
+}
+
+# Primal Mutation
+tech_titan_doomsday_weapons_07 = {
+	area = society
+	cost = @tier3cost6
+	tier = 3
+	category = { biology }
+	ai_update_type = military
+	prerequisites = { "tech_titan_doomsday_weapons_06" }
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_TITAN_DOOMSDAY_TITLE"
+			desc = "TECH_UNLOCK_TITAN_DOOMSDAY_DESC"
+		}
+	}
+	
+	modifier = {
+		country_resource_influence_add = 0.25
+	}
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.25
+	}
+}
+
+# Population Assimilation
+tech_titan_doomsday_weapons_08 = {
+	area = engineering
+	cost = @tier3cost6
+	tier = 3
+	category = { industry }
+	ai_update_type = military
+	prerequisites = { "tech_titan_doomsday_weapons_07"}
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_TITAN_DOOMSDAY_TITLE"
+			desc = "TECH_UNLOCK_TITAN_DOOMSDAY_DESC"
+		}
+	}
+	
+	modifier = {
+		country_resource_influence_add = 0.25
+	}
+	
+	weight_modifier = {
+		factor = 1.0		
+	}
+	
+	ai_weight = {
+		factor = 1.25
+	}
+}

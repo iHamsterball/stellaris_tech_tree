@@ -1,0 +1,205 @@
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes. 
+
+#############
+#	POWER	#
+#############
+
+@power_S6 = -15
+@power_M6 = -30
+@power_L6 = -60
+
+#############
+#	COST	#
+#############
+           
+@cost_S6 = 20
+@cost_M6 = 40
+@cost_L6 = 80
+
+#############
+#	SHIELD	#
+#############
+
+@shield_S6 = 187
+@shield_M6 = 375
+@shield_L6 = 750
+
+#############
+# UTILITIES #
+#############
+
+# Phased Shields
+utility_component_template = {
+	key = "SMALL_SHIELD_ISB_01"
+	size = small
+	icon = "GFX_ship_part_shield_isb_01"
+	icon_frame = 1
+	power = @power_S6
+	cost = @cost_S6
+	
+	military_power = 2	
+	
+	modifier = {
+		ship_hull_add = -37
+		ship_shield_add = @shield_S6
+		ship_shield_regen_add_static = 5.4 #Regeneration per day
+	}
+	prerequisites = { "tech_phased_shields" }
+	component_set = "SHIELD_ISB_01"
+}
+
+utility_component_template = {
+	key = "MEDIUM_SHIELD_ISB_01"
+	size = medium
+	icon = "GFX_ship_part_shield_isb_01"
+	icon_frame = 1
+	power = @power_M6
+	cost = @cost_M6
+	
+	military_power = 5	
+	
+	modifier = {
+		ship_hull_add = -75
+		ship_shield_add = @shield_M6
+		ship_shield_regen_add_static = 8.7 #Regeneration per day
+	}
+	prerequisites = { "tech_phased_shields" }
+	component_set = "SHIELD_ISB_01"
+}
+
+utility_component_template = {
+	key = "LARGE_SHIELD_ISB_01"
+	size = large
+	icon = "GFX_ship_part_shield_isb_01"
+	icon_frame = 1
+	power = @power_L6
+	cost = @cost_L6
+	
+	military_power = 30	
+	
+	modifier = {
+		ship_hull_add = -150
+		ship_shield_add = @shield_L6
+		ship_shield_regen_add_static = 12.2 #Regeneration per day
+	}
+	prerequisites = { "tech_phased_shields" }
+	component_set = "SHIELD_ISB_01"
+}
+
+# Crystal-Forged Plating 
+utility_component_template = {
+	key = "SMALL_CRYSTAL_ARMOR_ISB_01"
+	size = small
+	icon = "GFX_ship_part_crystal_armor_isb_01"
+	icon_frame = 1
+	power = 0
+	cost = 54
+	military_power = 5	
+	
+	modifier = {
+		ship_hull_add = 231
+	}
+	
+	prerequisites = { "tech_leviathan_phy_02" }
+	component_set = "CRYSTAL_ARMOR_ISB_01"
+}
+
+utility_component_template = {
+	key = "MEDIUM_CRYSTAL_ARMOR_ISB_01"
+	size = medium
+	icon = "GFX_ship_part_crystal_armor_isb_01"
+	icon_frame = 1
+	power = 0
+	cost = 108
+	military_power = 15	
+	
+	modifier = {
+		ship_hull_add = 575
+	}
+	
+	prerequisites = { "tech_leviathan_phy_02" }
+	component_set = "CRYSTAL_ARMOR_ISB_01"
+}
+
+utility_component_template = {
+	key = "LARGE_CRYSTAL_ARMOR_ISB_01"
+	size = large
+	icon = "GFX_ship_part_crystal_armor_isb_01"
+	icon_frame = 1
+	power = 0
+	cost = 216
+	military_power = 150	
+	
+	modifier = {
+		ship_hull_add = 1437
+	}
+	
+	prerequisites = { "tech_leviathan_phy_02" }
+	component_set = "CRYSTAL_ARMOR_ISB_01"
+}
+
+utility_component_template = {
+	key = "STATION_SENSOR_BOOST_PART_ISB_SMALL"
+	size = aux
+	icon = "GFX_ship_part_sensor_1"
+	icon_frame = 1
+	power = -200
+	cost = 200
+	class_restriction = { shipclass_military_station }
+	#size_restriction = { military_station_small military_station_medium military_station_large }
+	
+	prerequisites = { "tech_sensors_2" }
+	component_set = "STATION_SENSOR_BOOST_ISB_SMALL"
+	
+	ship_modifier = {
+		ship_sensor_range_add = 1
+	}
+		
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
+	key = "STATION_SENSOR_BOOST_PART_ISB_MEDIUM"
+	size = aux
+	icon = "GFX_ship_part_sensor_2"
+	icon_frame = 1
+	power = -500
+	cost = 500
+	class_restriction = { shipclass_military_station }
+	#size_restriction = { military_station_small military_station_medium military_station_large }
+	
+	prerequisites = { "tech_sensors_3" }
+	component_set = "STATION_SENSOR_BOOST_ISB_MEDIUM"
+	
+	ship_modifier = {
+		ship_sensor_range_add = 3
+	}
+		
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
+	key = "STATION_SENSOR_BOOST_PART_ISB_LARGE"
+	size = aux
+	icon = "GFX_ship_part_sensor_3"
+	icon_frame = 1
+	power = -800
+	cost = 800
+	class_restriction = { shipclass_military_station }
+	#size_restriction = { military_station_small military_station_medium military_station_large }
+	
+	prerequisites = { "tech_sensors_4" }
+	component_set = "STATION_SENSOR_BOOST_ISB_LARGE"
+	
+	ship_modifier = {
+		ship_sensor_range_add = 5
+	}
+		
+	ai_weight = {
+		weight = 0
+	}
+}

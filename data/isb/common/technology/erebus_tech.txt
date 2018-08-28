@@ -1,0 +1,444 @@
+##################
+### TECH COSTS ###
+##################
+#If you change any of these, use replace in files so the values are the same across all files
+
+@tier1cost1 = 240
+@tier1cost2 = 360
+@tier1cost3 = 480
+@tier1cost4 = 600
+
+@tier2cost1 = 900
+@tier2cost2 = 1200
+@tier2cost3 = 1500
+@tier2cost4 = 1800
+
+@tier3cost1 = 2320
+@tier3cost2 = 2840
+@tier3cost3 = 3360
+@tier3cost4 = 3880
+@tier3cost5 = 3880
+@tier3cost6 = 4520
+
+####################
+### TECH WEIGHTS ###
+####################
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+@tier1weight4 = 85
+
+@tier2weight1 = 75
+@tier2weight2 = 70
+@tier2weight3 = 65
+@tier2weight4 = 60
+
+@tier3weight1 = 50
+@tier3weight2 = 45
+@tier3weight3 = 40
+@tier3weight4 = 35
+
+tech_erebus = {
+	cost = @tier3cost6
+	area = engineering
+	tier = 3
+	category = { voidcraft }	
+	prerequisites = { "tech_erebus_eng_02" "tech_erebus_phy_02" "tech_erebus_soc_02"}
+	weight = @tier3weight2
+	is_rare = yes
+		
+	## unlock titans	
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_EREBUS_CONSTRUCTION_TITLE"
+			desc = "TECH_UNLOCK_EREBUS_CONSTRUCTION_DESC"
+		}
+	}
+	
+	modifier = {
+		max_minerals = 6000
+		max_energy = 1000
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOT = { years_passed > 95 }
+		}	
+		modifier = {
+			factor = 2
+			any_neighbor_country = {
+				has_technology = tech_erebus
+			}
+		}
+		modifier = {
+			factor = 2
+			years_passed > 110
+		}
+		modifier = {
+			factor = 3
+			years_passed > 120
+		}
+		modifier = {
+			factor = 4
+			years_passed > 130
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100 #higher factor due to battleship hull
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+# Theory : Super-Carriers
+tech_erebus_soc_01 = {
+	cost = @tier3cost6
+	area = society
+	tier = 3
+	category = { military_theory }
+	prerequisites = { "tech_avatar" }
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_EREBUS_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_EREBUS_CHAIN_DESC"
+		}
+	}
+	
+	modifier = { 
+		country_starbase_capacity_add = 2
+		max_energy = 250
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			years_passed > 105
+		}
+		modifier = {
+			factor = 2
+			years_passed > 110
+		}		
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+		
+	
+	ai_weight = {
+		factor = 20		
+		modifier = {
+			factor = 3
+			years_passed > 90
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+}
+
+# Doctrine : Drone Warfare
+tech_erebus_soc_02 = {
+	cost = @tier3cost6
+	area = society
+	tier = 3
+	category = { military_theory }
+	prerequisites = { "tech_erebus_soc_01" }
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_EREBUS_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_EREBUS_CHAIN_DESC"
+		}
+	}
+	
+	modifier = { 
+		ship_upkeep_mult = -0.05
+		max_energy = 250
+	}
+	
+	weight_modifier = {		
+		modifier = {
+			factor = 1.5
+			years_passed > 110
+		}
+		modifier = {
+			factor = 2
+			years_passed > 115
+		}		
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 20 #Good bonus		
+		modifier = {
+			factor = 3
+			years_passed > 95
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+}
+
+# Framework : Mobile Construction Facilities
+tech_erebus_eng_01 = {
+	cost = @tier3cost6
+	area = engineering
+	tier = 3
+	category = { industry }	
+	prerequisites = { "tech_erebus_soc_01" }
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_EREBUS_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_EREBUS_CHAIN_DESC"
+		}
+	}
+	
+	modifier = {
+		shipclass_military_station_build_cost_mult = -0.05
+		shipclass_military_station_hull_mult = 0.1
+		max_energy = 250
+	}
+	
+	weight_modifier = {		
+		modifier = {
+			factor = 1.5
+			years_passed > 105
+		}
+		modifier = {
+			factor = 2
+			years_passed > 110
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 3
+			years_passed > 90
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+# Framework : Combat Drones
+tech_erebus_eng_02 = {
+	cost = @tier3cost6
+	area = engineering
+	tier = 3
+	category = { industry }	
+	prerequisites = { "tech_erebus_eng_01" }
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_EREBUS_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_EREBUS_CHAIN_DESC"
+		}
+	}
+	
+	modifier = {
+		building_time_mult = -0.05
+		max_energy = 250
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			years_passed > 110
+		}
+		modifier = {
+			factor = 2
+			years_passed > 115
+		}	
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 3
+			years_passed > 95
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+# Energy-Matter Reconstruction
+tech_erebus_phy_01 = {
+	area = physics
+	cost = @tier3cost6
+	tier = 3
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_erebus_soc_01"}
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_EREBUS_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_EREBUS_CHAIN_DESC"
+		}
+	}
+	
+	modifier = {
+		tile_resource_minerals_mult = 0.05		
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			years_passed > 105
+		}
+		modifier = {
+			factor = 2
+			years_passed > 110
+		}			
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 20 #good component
+		modifier = {
+			factor = 3
+			years_passed > 90
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+# Theory : Layered Shielding
+tech_erebus_phy_02 = {
+	area = physics
+	cost = @tier3cost6
+	tier = 3
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_erebus_phy_01" }
+	weight = @tier3weight4
+	is_rare = yes
+	
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_EREBUS_CHAIN_TITLE"
+			desc = "TECH_UNLOCK_EREBUS_CHAIN_DESC"
+		}
+	}
+	
+	modifier = {
+		tile_resource_energy_mult = 0.1		
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			years_passed > 110
+		}
+		modifier = {
+			factor = 2
+			years_passed > 115
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 3
+			years_passed > 95
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}

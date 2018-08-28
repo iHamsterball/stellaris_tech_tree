@@ -1,0 +1,257 @@
+ai_ship_upkeep = {
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		OR = {
+			is_country_type = default
+			is_country_type = awakened_fallen_empire
+		}
+		is_ai = yes
+	}
+
+	ship_upkeep_mult = -0.20
+	max_minerals = 25000
+	max_energy = 5000
+	influence_gain_add = 4.0
+
+	shipsize_titan_build_cost_mult = -0.5
+	shipsize_leviathan_build_cost_mult = -0.5
+	shipsize_erebus_build_cost_mult = -0.6
+	spaceport_module_cost_mult = -0.9
+}
+
+#trigger_avatar_under_construction = {
+#	potential = {
+#		always = yes
+#	}
+
+#	trigger = {
+#		is_ai = no
+#		is_country_type = default
+#		has_special_project = PROJ_AVATAR_CONSTRUCT_02
+#	}
+
+	#ship_upkeep_mult = -0.10
+	#minerals = -500
+	#energy = -500
+	#shipsize_titan_build_cost_mult = -0.5
+	#shipsize_leviathan_build_cost_mult = -0.5
+#}
+
+trigger_mod_crisis_very_easy = {
+	potential = {
+		has_global_flag = flag_crisis_very_easy
+	}
+
+	trigger = {
+		OR = {
+			is_country_type = swarm
+			is_country_type = extradimensional
+			is_country_type = extradimensional_2
+			is_country_type = extradimensional_3
+			is_country_type = ai_empire
+		}
+		#is_ai = yes
+	}
+
+	ship_weapon_damage = -1.5
+	ship_fire_rate_mult = -0.5
+
+	ship_armor_mult = -0.5
+	SHIP_EVASION_MULT = -0.5
+
+	ship_hitpoints_mult = -1.0
+	SHIP_SHIELD_HP_MULT = -0.75
+
+	SHIP_ACCURACY_ADD = -30
+	SHIP_WEAPON_RANGE_MULT = -0.2
+}
+
+trigger_mod_crisis_easy = {
+	potential = {
+		has_global_flag = flag_crisis_easy
+	}
+
+	trigger = {
+		OR = {
+			is_country_type = swarm
+			is_country_type = extradimensional
+			is_country_type = extradimensional_2
+			is_country_type = extradimensional_3
+			is_country_type = ai_empire
+		}
+		#is_ai = yes
+	}
+
+	ship_weapon_damage = -1.0
+	ship_fire_rate_mult = -0.25
+
+	ship_armor_mult = -0.25
+	SHIP_EVASION_MULT = -0.25
+
+	ship_hitpoints_mult = -0.5
+	SHIP_SHIELD_HP_MULT = -0.5
+
+	SHIP_ACCURACY_ADD = -15
+}
+
+trigger_mod_crisis_hard = {
+	potential = {
+		has_global_flag = flag_crisis_hard
+	}
+
+	trigger = {
+		OR = {
+			is_country_type = swarm
+			is_country_type = extradimensional
+			is_country_type = extradimensional_2
+			is_country_type = extradimensional_3
+			is_country_type = ai_empire
+		}
+		#is_ai = yes
+	}
+
+	ship_weapon_damage = 1.0
+	ship_fire_rate_mult = 0.2
+
+	ship_armor_mult = 0.25
+
+	ship_hitpoints_mult = 0.5
+	SHIP_SHIELD_HP_MULT = 0.5
+
+	SHIP_ACCURACY_ADD = 15
+	ship_tracking_add = 15
+
+	SHIP_AUTO_REPAIR_ADD = 0.05
+	ship_combat_speed_mult = 0.15
+}
+
+trigger_mod_crisis_insane = {
+	potential = {
+		has_global_flag = flag_crisis_insane
+	}
+
+	trigger = {
+		OR = {
+			is_country_type = swarm
+			is_country_type = extradimensional
+			is_country_type = extradimensional_2
+			is_country_type = extradimensional_3
+			is_country_type = ai_empire
+		}
+		#is_ai = yes
+	}
+
+	ship_weapon_damage = 2.0
+	ship_fire_rate_mult = 0.3
+	SHIP_WEAPON_RANGE_MULT = 0.2
+
+	ship_armor_mult = 0.25
+
+	ship_hitpoints_mult = 1.5
+	SHIP_SHIELD_HP_MULT = 1.5
+
+	SHIP_ACCURACY_ADD = 30
+	ship_tracking_add = 30
+
+	SHIP_AUTO_REPAIR_ADD = 0.1
+	ship_combat_speed_mult = 0.3
+}
+
+trigger_mod_awakened_easy = {
+	potential = {
+		has_global_flag = flag_awakened_easy
+	}
+
+	trigger = {
+		is_country_type = awakened_fallen_empire
+	}
+
+	ship_weapon_damage = -0.5
+	ship_fire_rate_mult = -0.3
+
+	ship_armor_mult = -0.3
+	SHIP_EVASION_MULT = -0.3
+
+	ship_hitpoints_mult = -0.5
+	SHIP_SHIELD_HP_MULT = -0.5
+
+	SHIP_ACCURACY_ADD = -30
+	SHIP_WEAPON_RANGE_MULT = -0.2
+}
+
+trigger_mod_awakened_hard = {
+	potential = {
+		has_global_flag = flag_awakened_hard
+	}
+
+	trigger = {
+		is_country_type = awakened_fallen_empire
+	}
+
+	ship_weapon_damage = 0.5
+	ship_fire_rate_mult = 0.35
+
+	ship_armor_mult = 0.25
+
+	ship_hitpoints_mult = 0.25
+	SHIP_SHIELD_HP_MULT = 0.25
+
+	SHIP_ACCURACY_ADD = 15
+	ship_tracking_add = 15
+
+	SHIP_AUTO_REPAIR_ADD = 0.05
+	ship_combat_speed_mult = 0.15
+
+	SHIP_WEAPON_RANGE_MULT = 0.2
+}
+
+trigger_mod_fallen_easy = {
+	potential = {
+		has_global_flag = flag_fallen_easy
+	}
+
+	trigger = {
+		is_country_type = fallen_empire
+	}
+
+	ship_weapon_damage = -0.5
+	ship_fire_rate_mult = -0.3
+
+	ship_armor_mult = -0.3
+	SHIP_EVASION_MULT = -0.3
+
+	ship_hitpoints_mult = -0.5
+	SHIP_SHIELD_HP_MULT = -0.5
+
+	SHIP_ACCURACY_ADD = -30
+	SHIP_WEAPON_RANGE_MULT = -0.2
+}
+
+trigger_mod_fallen_hard = {
+	potential = {
+		has_global_flag = flag_fallen_hard
+	}
+
+	trigger = {
+		is_country_type = fallen_empire
+	}
+
+	ship_weapon_damage = 0.5
+	ship_fire_rate_mult = 0.35
+
+	ship_armor_mult = 0.25
+
+	ship_hitpoints_mult = 0.25
+	SHIP_SHIELD_HP_MULT = 0.25
+
+	SHIP_ACCURACY_ADD = 15
+	ship_tracking_add = 15
+
+	SHIP_AUTO_REPAIR_ADD = 0.05
+	ship_combat_speed_mult = 0.15
+
+	SHIP_WEAPON_RANGE_MULT = 0.2
+}

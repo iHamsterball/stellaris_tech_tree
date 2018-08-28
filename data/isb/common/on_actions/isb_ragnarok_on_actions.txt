@@ -1,0 +1,35 @@
+on_yearly_pulse = {
+	events = {
+		# Ragnarok checks
+		isb_ragnarok.102
+	}
+}
+
+
+# This = owner of fleet 1
+# From = owner of fleet 2
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_entering_battle = {
+	events = {
+		isb_ragnarok.6
+	}
+}
+
+# A ship has been built
+# Root = Ship
+# From = Planet
+on_ship_built = {
+	events = {
+		isb_ragnarok.51
+	}
+}
+
+# A fleet has entered a system
+# Scope = Fleet
+# From = System
+#on_entering_system_fleet = {
+#	events = {
+#		isb.4
+#	}
+#}
