@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-16 12:22+0800\n"
+"POT-Creation-Date: 2018-08-28 19:29+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -338,166 +338,186 @@ msgid "Is NOT same species with ROOT species"
 msgstr "沒有允許奴役所有種族"
 
 #: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:370
+msgid "Has building {}"
+msgstr "擁有建築 {}"
+
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:374
+msgid "Does NOT have any dark matter in empire"
+msgstr "帝國境內沒有戰略資源：暗物質"
+
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:374
+msgid "Has any dark matter in empire"
+msgstr "帝國境內有暗物質"
+
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:378
+msgid "Does NOT have {} tradition"
+msgstr "沒有傳統：{}"
+
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:382
 msgid "Is playable country"
 msgstr "是可玩國家"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:370
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:382
 msgid "Is NOT playable country"
 msgstr "不是可玩國家"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:373
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:387
+msgid "Number of years since mid game is {} {}"
+msgstr "距遊戲中期事件開始時間 {} {} 年"
+
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:390
 msgid "Does NOT have {}"
 msgstr "沒有：{}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:376
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:393
 msgid "Does NOT have {} civic"
 msgstr "沒有國策：{}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:379
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:396
 msgid "Has {} tradition"
 msgstr "擁有傳統：{}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:382
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:399
 msgid "This Species is pre-sapient"
 msgstr "這個物種是未開化種族"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:383
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:400
 msgid "This Species is NOT pre-sapient"
 msgstr "這個物種不是未開化種族"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:389
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:406
 msgid "Has NOT encountered a {}"
 msgstr "沒有遇到過 {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:395
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:412
 msgid "Has encountered a {}"
 msgstr "遇到過 {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:401
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:418
 msgid "Does NOT control any system with a {}"
 msgstr "沒有控制一個包含 {} 的星系"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:407
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:424
 msgid "Controls a system with a {}"
 msgstr "控制包含一個 {} 的星系"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:410
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:427
 msgid "Is some degree of Pacifist"
 msgstr "具有和平主義"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:411
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:428
 msgid "Is NOT some degree of Pacifist"
 msgstr "不具有和平主義"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:414
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:431
 msgid "Is some degree of Militarist"
 msgstr "具有軍國主義"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:415
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:432
 msgid "Is NOT some degree of Militarist"
 msgstr "不具有軍國主義"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:418
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:435
 msgid "Is some degree of Materialist"
 msgstr "具有唯物主義"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:419
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:436
 msgid "Is NOT some degree of Materialist"
 msgstr "不具有唯物主義"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:422
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:439
 msgid "Is some degree of Spiritualist"
 msgstr "具有唯心主義"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:423
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:440
 msgid "Is NOT some degree of Spiritualist"
 msgstr "不具有唯心主義"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:428
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:445
 msgid "Number of Starbase {} is {} {}"
 msgstr "擁有恒星基地 {} 的數量 {} {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:431
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:448
 msgid "Always"
 msgstr "永久"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:431
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:448
 msgid "Never"
 msgstr "從不"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:436
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:453
 msgid "All of the following"
 msgstr "存在以下全部"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:441
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:458
 msgid "Any of the following"
 msgstr "存在以下任一"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:446
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:463
 msgid "None of the following"
 msgstr "不存在以下任何"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:467
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:484
 msgid "equal to"
 msgstr "等於"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:471
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:488
 msgid "greater than"
 msgstr "大於"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:472
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:489
 msgid "less than"
 msgstr "小於"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:473
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:490
 msgid "greater than or equal to"
 msgstr "大於或等於"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:474
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:491
 msgid "less than or equal to"
 msgstr "小於或等於"
 
-#: .\templates\index.html:10
+#: .\templates\about.html:10 .\templates\index.html:10
 msgid "STELLARIS_TECH_TREE"
 msgstr "群星科技樹"
 
-#: .\templates\index.html:97 .\templates\index.html:99
+#: .\templates\index.html:77 .\templates\index.html:79
 msgid "SEARCH"
 msgstr "搜索"
 
-#: .\templates\index.html:110
+#: .\templates\index.html:90
 msgid "CATEGORY SAMPLE"
 msgstr "示例分類"
 
-#: .\templates\index.html:115
+#: .\templates\index.html:95
 msgid "SEARCH BY TECHNOLOGY NAME"
 msgstr "根據科技名稱檢索"
 
-#: .\templates\index.html:133
+#: .\templates\index.html:113
 msgid "LANGUAGE"
 msgstr "語言"
 
-#: .\templates\index.html:157
+#: .\templates\index.html:129
 msgid "VERSION"
 msgstr "版本"
 
-#: .\templates\index.html:282 .\templates\index.html:331
+#: .\templates\index.html:178 .\templates\index.html:227
 msgid "Loading..."
 msgstr "正在加載…"
 
-#: .\templates\index.html:342
+#: .\templates\index.html:238
 msgid "PHYSICS"
 msgstr "物理學"
 
-#: .\templates\index.html:342
+#: .\templates\index.html:238
 msgid "SOCIETY"
 msgstr "社會學"
 
-#: .\templates\index.html:342
+#: .\templates\index.html:238
 msgid "ENGINEERING"
 msgstr "工程學"
 
-#: .\templates\index.html:393 .\templates\index.html:403
+#: .\templates\index.html:291 .\templates\index.html:301
 msgid "NO SUGGESTIONS PROVIDED"
 msgstr "沒有與您的查詢相關的建議。"
 

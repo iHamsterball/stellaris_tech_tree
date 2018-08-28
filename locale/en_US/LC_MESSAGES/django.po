@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-16 12:22+0800\n"
+"POT-Creation-Date: 2018-08-28 19:25+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Cother <ihamsterball@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -338,166 +338,186 @@ msgid "Is NOT same species with ROOT species"
 msgstr "Is NOT same species with ROOT species"
 
 #: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:370
+msgid "Has building {}"
+msgstr "Has building {}"
+
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:374
+msgid "Does NOT have any dark matter in empire"
+msgstr "Does NOT have any dark matter in empire"
+
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:374
+msgid "Has any dark matter in empire"
+msgstr "Has any dark matter in empire"
+
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:378
+msgid "Does NOT have {} tradition"
+msgstr "Does NOT have {} tradition"
+
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:382
 msgid "Is playable country"
 msgstr "Is playable country"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:370
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:382
 msgid "Is NOT playable country"
 msgstr "Is NOT playable country"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:373
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:387
+msgid "Number of years since mid game is {} {}"
+msgstr "Number of years since mid game is {} {}"
+
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:390
 msgid "Does NOT have {}"
 msgstr "Does NOT have {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:376
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:393
 msgid "Does NOT have {} civic"
 msgstr "Does NOT have {} civic"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:379
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:396
 msgid "Has {} tradition"
 msgstr "Has {} tradition"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:382
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:399
 msgid "This Species is pre-sapient"
 msgstr "This Species is pre-sapient"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:383
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:400
 msgid "This Species is NOT pre-sapient"
 msgstr "This Species is NOT pre-sapient"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:389
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:406
 msgid "Has NOT encountered a {}"
 msgstr "Has NOT encountered a {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:395
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:412
 msgid "Has encountered a {}"
 msgstr "Has encountered a {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:401
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:418
 msgid "Does NOT control any system with a {}"
 msgstr "Does NOT control any system with a {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:407
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:424
 msgid "Controls a system with a {}"
 msgstr "Controls a system with a {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:410
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:427
 msgid "Is some degree of Pacifist"
 msgstr "Is some degree of Pacifist"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:411
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:428
 msgid "Is NOT some degree of Pacifist"
 msgstr "Is NOT some degree of Pacifist"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:414
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:431
 msgid "Is some degree of Militarist"
 msgstr "Is some degree of Militarist"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:415
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:432
 msgid "Is NOT some degree of Militarist"
 msgstr "Is NOT some degree of Militarist"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:418
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:435
 msgid "Is some degree of Materialist"
 msgstr "Is some degree of Materialist"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:419
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:436
 msgid "Is NOT some degree of Materialist"
 msgstr "Is NOT some degree of Materialist"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:422
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:439
 msgid "Is some degree of Spiritualist"
 msgstr "Is some degree of Spiritualist"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:423
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:440
 msgid "Is NOT some degree of Spiritualist"
 msgstr "Is NOT some degree of Spiritualist"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:428
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:445
 msgid "Number of Starbase {} is {} {}"
 msgstr "Number of Starbase {} is {} {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:431
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:448
 msgid "Always"
 msgstr "Always"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:431
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:448
 msgid "Never"
 msgstr "Never"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:436
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:453
 msgid "All of the following"
 msgstr "All of the following"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:441
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:458
 msgid "Any of the following"
 msgstr "Any of the following"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:446
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:463
 msgid "None of the following"
 msgstr "None of the following"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:467
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:484
 msgid "equal to"
 msgstr "equal to"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:471
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:488
 msgid "greater than"
 msgstr "greater than"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:472
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:489
 msgid "less than"
 msgstr "less than"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:473
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:490
 msgid "greater than or equal to"
 msgstr "greater than or equal to"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:474
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:491
 msgid "less than or equal to"
 msgstr "less than or equal to"
 
-#: .\templates\index.html:10
+#: .\templates\about.html:10 .\templates\index.html:10
 msgid "STELLARIS_TECH_TREE"
 msgstr "Stellaris Tech Tree"
 
-#: .\templates\index.html:97 .\templates\index.html:99
+#: .\templates\index.html:77 .\templates\index.html:79
 msgid "SEARCH"
 msgstr "Search"
 
-#: .\templates\index.html:110
+#: .\templates\index.html:90
 msgid "CATEGORY SAMPLE"
 msgstr "Category Sample"
 
-#: .\templates\index.html:115
+#: .\templates\index.html:95
 msgid "SEARCH BY TECHNOLOGY NAME"
 msgstr "Search by technology name"
 
-#: .\templates\index.html:133
+#: .\templates\index.html:113
 msgid "LANGUAGE"
 msgstr "Language"
 
-#: .\templates\index.html:157
+#: .\templates\index.html:129
 msgid "VERSION"
 msgstr "Version"
 
-#: .\templates\index.html:282 .\templates\index.html:331
+#: .\templates\index.html:178 .\templates\index.html:227
 msgid "Loading..."
 msgstr "Loading..."
 
-#: .\templates\index.html:342
+#: .\templates\index.html:238
 msgid "PHYSICS"
 msgstr "Physics"
 
-#: .\templates\index.html:342
+#: .\templates\index.html:238
 msgid "SOCIETY"
 msgstr "Society"
 
-#: .\templates\index.html:342
+#: .\templates\index.html:238
 msgid "ENGINEERING"
 msgstr "Engineering"
 
-#: .\templates\index.html:393 .\templates\index.html:403
+#: .\templates\index.html:291 .\templates\index.html:301
 msgid "NO SUGGESTIONS PROVIDED"
 msgstr "There are no suggestions for your query."
 
