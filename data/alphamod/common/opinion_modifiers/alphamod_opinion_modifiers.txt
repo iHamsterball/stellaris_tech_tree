@@ -1,0 +1,66 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+
+opinion_open_consulate = {
+	opinion = {
+		base = 10
+		modifier = {
+			add = 15
+			OR = {
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
+		modifier = {
+			add = 5
+			OR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_pacifist"
+			}
+		}
+	}
+}
+
+opinion_policy_land_ownership = {
+	opinion = {
+		base = 0
+		modifier = {
+			add = 5
+			OR = {
+				has_ethic = "ethic_fanatic_authoritarian"
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+			has_policy_flag = alp_land_ownership_none
+			FROM = {
+				has_policy_flag = alp_land_ownership_none
+			}
+		}
+
+		modifier = {
+			add = -5
+			has_ethic = "ethic_fanatic_egalitarian"
+			not = { has_policy_flag = alp_land_ownership_statesubsidies }
+			not = { has_policy_flag = alp_land_ownership_none }
+			FROM = {
+				OR = {
+					has_policy_flag = alp_land_ownership_statesubsidies
+					has_policy_flag = alp_land_ownership_none
+				}
+			}
+		}
+		
+		modifier = {
+			add = -5
+			has_ethic = "ethic_fanatic_authoritarian"
+			not = { has_policy_flag = alp_land_ownership_pioneerrights }
+			not = { has_policy_flag = alp_land_ownership_freemarket }
+			FROM = {
+				OR = {
+					has_policy_flag = alp_land_ownership_freemarket
+					has_policy_flag = alp_land_ownership_pioneerrights
+				}
+			}
+		}
+	}
+}

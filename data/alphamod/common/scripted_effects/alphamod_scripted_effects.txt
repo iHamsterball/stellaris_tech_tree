@@ -1,0 +1,197 @@
+alphamod_effect_autobuild = {
+	planet_event = { id = alphamod_autobuild.1 }
+}
+
+increase_popcenters = {
+	if = {
+		limit = {
+			has_planet_flag = pf_popcenters_1
+		}
+		set_planet_flag = pf_popcenters_2
+		else = {
+			set_planet_flag = pf_popcenters_1
+		}
+	}
+}
+
+decrease_popcenters = {
+	if = {
+		limit = {
+			has_planet_flag = pf_popcenters_1
+		}
+		remove_planet_flag = pf_popcenters_1
+	}
+	if = {
+		limit = {
+			has_planet_flag = pf_popcenters_2
+		}
+		remove_planet_flag = pf_popcenters_2
+		set_planet_flag = pf_popcenters_1
+	}
+}
+
+increase_frontiertowns = {
+	if = {
+		limit = {
+			has_planet_flag = pf_frontiertown_1
+		}
+		set_planet_flag = pf_frontiertown_2
+		else = {
+			set_planet_flag = pf_frontiertown_1
+		}
+	}
+}
+	
+decrease_frontiertowns = {
+	if = {
+		limit = {
+			has_planet_flag = pf_frontiertown_1
+		}
+		remove_planet_flag = pf_frontiertown_1
+	}
+	if = {
+		limit = {
+			has_planet_flag = pf_frontiertown_2
+		}
+		remove_planet_flag = pf_frontiertown_2
+		set_planet_flag = pf_frontiertown_1
+	}
+}
+
+clean_strategic_resources = {
+	while = {
+		limit = {
+			has_resource = {
+				type = sr_natural_fuels
+				amount > 0
+			}
+		}
+		add_resource = {
+			resource = sr_natural_fuels
+			amount = -1
+		}
+	}
+	while = {
+		limit = {
+			has_resource = {
+				type = sr_ice
+				amount > 0
+			}
+		}
+		add_resource = {
+			resource = sr_ice
+			amount = -1
+		}
+	}
+	while = {
+		limit = {
+			has_resource = {
+				type = sr_biomass
+				amount > 0
+			}
+		}
+		add_resource = {
+			resource = sr_biomass
+			amount = -1
+		}
+	}
+	while = {
+		limit = {
+			has_resource = {
+				type = sr_actinides
+				amount > 0
+			}
+		}
+		add_resource = {
+			resource = sr_actinides
+			amount = -1
+		}
+	}
+	while = {
+		limit = {
+			has_resource = {
+				type = sr_h2o
+				amount > 0
+			}
+		}
+		add_resource = {
+			resource = sr_h2o
+			amount = -1
+		}
+	}
+}
+
+clean_basic_resources = {
+	while = {
+		limit = {
+			has_resource = {
+				type = food
+				amount > 0
+			}
+		}
+		add_resource = {
+			resource = food
+			amount = -1
+		}
+	}
+	while = {
+		limit = {
+			has_resource = {
+				type = energy
+				amount > 0
+			}
+		}
+		add_resource = {
+			resource = energy
+			amount = -1
+		}
+	}
+	while = {
+		limit = {
+			has_resource = {
+				type = minerals
+				amount > 0
+			}
+		}
+		add_resource = {
+			resource = minerals
+			amount = -1
+		}
+	}
+	while = {
+		limit = {
+			has_resource = {
+				type = engineering_research
+				amount > 0
+			}
+		}
+		add_resource = {
+			resource = engineering_research
+			amount = -1
+		}
+	}
+	while = {
+		limit = {
+			has_resource = {
+				type = society_research
+				amount > 0
+			}
+		}
+		add_resource = {
+			resource = society_research
+			amount = -1
+		}
+	}
+	while = {
+		limit = {
+			has_resource = {
+				type = physics_research
+				amount > 0
+			}
+		}
+		add_resource = {
+			resource = physics_research
+			amount = -1
+		}
+	}
+}

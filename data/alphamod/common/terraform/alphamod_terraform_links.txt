@@ -1,0 +1,95 @@
+terraform_link = {
+	from = "pc_barren"
+	to = "pc_desert"
+	
+	duration = 3600	
+	energy = 12000
+	
+	condition = {
+		AND = {
+		from = {
+			not = { has_modifier = terraforming_candidate }
+		}
+		OR = {
+			AND = {
+				has_technology = "tech_alpha_genesis_device"
+				is_ai = no
+			}
+			AND = {
+				has_technology = "tech_alpha_genesis_device"
+				is_ai = yes
+				energy > 24000
+				OR = {
+				has_trait = trait_pc_desert_preference
+				has_trait = trait_pc_arid_preference
+				has_trait = trait_pc_savannah_preference
+				}
+			}
+		}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_barren"
+	to = "pc_arctic"
+	
+	duration = 3600	
+	energy = 12000
+	
+	condition = {
+		AND = {
+		from = {
+			not = { has_modifier = terraforming_candidate }
+		}
+		OR = {
+			AND = {
+				has_technology = "tech_alpha_genesis_device"
+				is_ai = no
+			}
+			AND = {
+				has_technology = "tech_alpha_genesis_device"
+				is_ai = yes
+				energy > 24000
+				OR = {
+				has_trait = trait_pc_arctic_preference
+				has_trait = trait_pc_alpine_preference
+				has_trait = trait_pc_tundra_preference
+				}
+			}
+		}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_barren"
+	to = "pc_tropical"
+	
+	duration = 3600	
+	energy = 12000
+	
+	condition = {
+		AND = {
+		from = {
+			not = { has_modifier = terraforming_candidate }
+		}
+		OR = {
+			AND = {
+				has_technology = "tech_alpha_genesis_device"
+				is_ai = no
+			}
+			AND = {
+				has_technology = "tech_alpha_genesis_device"
+				is_ai = yes
+				energy > 24000
+				OR = {
+				has_trait = trait_pc_tropical_preference
+				has_trait = trait_pc_continental_preference
+				has_trait = trait_pc_ocean_preference
+				}
+			}
+		}
+		}
+	}
+}

@@ -1,0 +1,106 @@
+
+# All leaders will have a common trait-point value set in defines, which they use to grab traits
+
+# leader_trait = yes - this tags the trait as a leader-trait and not a species-trait
+# initial = no - if set to no, this trait can not be granted to leaders when they are generated
+# leader_class = { admiral scientist }  -- OR  - if not set, it can be given to all leader-types except Rulers
+# requires_traits = { trait_psionic } -- AND - leader-trait can only be randomly given on generation if the leaders species has this trait
+# requires_governments = { despotic_hegemony ai_overlordship } -- OR - leader-trait can only be randomly given on generation if the Empire has this type of government form
+# prerequisites = { tech_psionic_theory } - AND - leader-trait can only be given if the technology specified has been researched by the Empire
+
+###################
+# Governor Traits #
+###################
+
+leader_trait_ecologist_alpha = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ecologist_alpha.dds"
+	modifier = {
+		pop_environment_tolerance = 0.05
+		tile_resource_energy_mult = 0.05
+		tile_resource_minerals_mult = -0.10
+	}
+	leader_trait = yes
+	leader_class = { governor }
+	prerequisites = { tech_alpha_pacifism }
+}
+
+leader_trait_delegator_alpha = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_delegator_alpha.dds"
+	modifier = {
+		tile_resource_food_mult = 0.1
+		spaceport_ship_build_speed_mult = 0.1
+		tile_resource_unity_mult = -0.1
+		planet_building_build_speed_mult = 0.10
+	}
+	leader_trait = yes
+	leader_class = { governor }
+	opposites = { "leader_trait_iron_fist" }
+}
+
+leader_trait_marshall_alpha = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_marshall_alpha.dds"
+	modifier = {
+		planet_unrest_add = -15
+		planet_migration_all_pull = -0.25
+		tile_resource_energy_mult = -0.05
+	}
+	leader_trait = yes
+	leader_class = { governor }
+	prerequisites = { tech_alpha_xenophobia }
+	opposites = { "leader_trait_iron_fist" }
+}
+
+leader_trait_diplomat_alpha = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_diplomat_alpha.dds"
+	modifier = {
+		pop_government_ethic_attraction = 0.05
+		pop_happiness = 0.05
+		tile_resource_unity_mult = 0.1
+	}
+	leader_trait = yes
+	leader_class = { governor }
+	prerequisites = { tech_alpha_diplomatic_corps }
+	opposites = { "leader_trait_iron_fist" }
+	
+	ai_weight = {
+		weight = 50
+	}
+}
+
+leader_trait_bureaucrat_alpha = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_bureaucrat_alpha.dds"
+	modifier = {
+		tile_resource_energy_mult = 0.15
+		pop_happiness = -0.05
+	}
+	leader_trait = yes
+	leader_class = { governor }
+	prerequisites = { tech_colonial_administrations_alpha }
+}
+
+leader_trait_pioneer_alpha = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_pioneer_alpha.dds"
+	modifier = {
+		tile_resource_minerals_mult = 0.05
+		pop_environment_tolerance = 0.05
+	}
+	leader_trait = yes
+	leader_class = { governor }
+	prerequisites = { tech_alpha_shuttlecraft }
+	
+	ai_weight = {
+		weight = 50
+	}
+}

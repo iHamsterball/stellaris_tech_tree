@@ -1,0 +1,183 @@
+@b0time = 120
+@b0cost = 30
+@b0effect = 1
+@b0upkeep = 1
+
+@b1time = 210
+@b1cost = 60
+@b1effect = 2
+@b1upkeep = 1
+
+@b2time = 180
+@b2cost = 90
+@b2effect = 3
+@b2upkeep = 1.5
+
+@b3time = 180
+@b3cost = 120
+@b3effect = 4
+@b3upkeep = 2
+
+@b4time = 180
+@b4cost = 150
+@b4effect = 5
+@b4upkeep = 2.5
+
+@b5time = 180
+@b5cost = 180
+@b5effect = 8
+@b5upkeep = 30
+
+@weightnormal = 2.5
+@weightuseful = 10
+@weightimportant = 100
+@weightcritical = 1000
+
+building_open_embassy_2 = {
+	base_buildtime = 360
+	planet_unique = yes
+	is_listed = no
+	
+	cost = {
+		minerals = @mincostcheap
+		energy = @engcostlow
+		influence = @infcostlow
+	}
+	
+	produced_resources = {
+		society_research = 3
+		sr_ambassadors = 2
+		sr_signs_peace = @srlow
+	}
+	
+	planet_modifier = {
+		#pop_xenophobia = -0.05
+		planet_migration_xeno_pull = 0.1
+		pop_government_ethic_attraction = -0.03
+	}
+	
+	country_modifier = {
+		diplomacy_influence_cost = -0.02
+		country_trust_growth = 0.02
+	}
+	
+	prerequisites = {
+		"tech_alpha_mediation"
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @weightuseful
+			from = {
+				has_building = "building_visitor_center"			
+			}
+		}
+		modifier = {
+			factor = 1.5
+			from = { owner = {
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_xenophile
+			}
+			}}
+		}
+		modifier = {
+			factor = 2.0
+			from = { owner = {
+			OR = {
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_xenophile
+			}
+			}}
+		}
+		modifier = {
+			factor = 0
+			from = { is_still_small_colony = yes }
+		}
+	}
+}
+
+building_refuge = {
+	base_buildtime = 180
+	planet_unique = yes
+
+	cost = {
+		minerals = 100
+		energy = 150
+	}
+	
+	required_resources = {
+		sr_signs_peace = 1
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				has_building = "building_open_embassy_2"
+				has_building = "building_peace_corps"
+			}
+		}
+	}
+	
+	planet_modifier = {
+		pop_government_ethic_attraction = -0.05
+		pop_environment_tolerance = 0.05
+		pop_growth_speed = -0.1
+		planet_border_mult = 0.5
+		#pop_xenophobia = -0.10
+		planet_migration_xeno_pull = 0.50
+	}
+	
+	prerequisites = {
+		"tech_alpha_pacifism"
+	}
+	
+	ai_weight = {
+		weight = @weightuseful
+		modifier = {
+			factor = 0
+			from = { sector_controlled = yes }
+		}	
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+}
+
+building_peace_corps = {
+	base_buildtime = 360
+	empire_unique = yes
+	is_listed = no
+	
+	cost = {
+		minerals = 200
+		energy = 100
+		influence = 50
+	}
+	
+	produced_resources = {
+		influence = 1
+		sr_ambassadors = 1
+		sr_signs_peace = 1
+	}
+
+	country_modifier = {
+		diplomacy_influence_cost = -0.15
+		country_trust_growth = 0.1
+	}
+	
+	prerequisites = {
+		"tech_alpha_pacifism"
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = @weightcritical
+	}
+}

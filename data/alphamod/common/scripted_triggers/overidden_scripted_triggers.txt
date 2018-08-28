@@ -1,0 +1,72 @@
+is_non_sentient_robot = {
+	OR = {
+		is_species = "ROBOT_POP_SPECIES_1"
+		is_species = "ROBOT_POP_SPECIES_2"
+		is_species = "ROBOT_POP_SPECIES_ENERGY"
+		is_species = "ROBOT_POP_SPECIES_FARMER"
+	}
+}
+
+uninhabitable_regular_planet = {
+	OR = {
+		is_planet_class = pc_molten
+		is_planet_class = pc_barren_cold
+		is_planet_class = pc_toxic
+		is_planet_class = pc_frozen
+		is_planet_class = pc_asteroid_2
+	}
+}
+
+colonizeable_planet = {
+	OR = {
+		is_planet_class = pc_nuked
+		habitable_structure = yes
+		habitable_planet = yes
+	}
+}
+
+habitable_planet = {
+	OR = {
+		is_planet_class = pc_gaia
+		is_planet_class = pc_barren
+		is_planet_class = pc_asteroid
+		is_planet_class = pc_desert
+		is_planet_class = pc_tropical
+		is_planet_class = pc_arid
+		is_planet_class = pc_continental
+		is_planet_class = pc_ocean
+		is_planet_class = pc_tundra
+		is_planet_class = pc_arctic
+		is_planet_class = pc_alpine
+		is_planet_class = pc_savannah
+		is_planet_class = pc_gas_giant_habitable
+		is_planet_class = pc_toxic_habitable
+		is_planet_class = pc_frozen_habitable
+		is_planet_class = pc_molten_habitable
+	}
+}
+
+habitable_structure = {
+	OR = {
+		is_planet_class = pc_ringworld_habitable
+		is_planet_class = pc_habitat
+		is_planet_class = pc_ringworld_shipyard
+	}
+}
+
+can_build_megastructure_on_planet = {
+	has_any_megastructure = no
+	NOR = {
+		has_planet_flag = megastructure
+		has_planet_flag = has_megastructure
+		# is_planet_class = pc_ringworld_habitable
+		# is_planet_class = pc_ringworld_habitable_damaged
+		# is_planet_class = pc_ringworld_tech
+		# is_planet_class = pc_ringworld_tech_damaged
+		# is_planet_class = pc_ringworld_seam
+		# is_planet_class = pc_ringworld_seam_damaged										 
+		solar_system = {
+			has_star_flag = ring_world_built
+		}
+	}
+}

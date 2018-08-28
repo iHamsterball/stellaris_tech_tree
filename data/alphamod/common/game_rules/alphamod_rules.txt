@@ -1,0 +1,51 @@
+#Root = country
+#This = pop
+#also evaluates true if pop_can_live_planet is false on current planet
+can_auto_migrate_pop = {
+	root = { is_country_type = default }
+	is_sentient = yes
+	is_enslaved = no
+	is_being_purged = no
+	has_migration_control = no
+	is_robot_pop = no
+	NOT = { has_modifier = recently_migrated }
+	NOT = { has_modifier = recent_refugee }
+}
+
+#Root = planet
+#This = pop
+pop_can_live_on_planet = {
+	AND = {
+		OR = {
+			planet = { not = { has_planet_flag = plf_mass_exodus } }
+			AND = {
+				planet = { has_planet_flag = plf_mass_exodus }
+				has_pop_flag = pof_not_exodite
+			}
+		}
+		OR = {
+			is_robot_pop = yes
+			planet = { sector_controlled = yes }
+			AND = {
+				has_citizenship_type = { type = citizenship_purge }
+				NOT = { has_purge_type = { type = purge_displacement } }
+			}
+			OR = {
+				has_citizenship_type = { type = citizenship_full }
+				has_citizenship_type = { type = citizenship_caste_system }
+			}
+			AND = {
+				exists = owner
+				OR = {
+					owner = { has_policy_flag = core_worlds_all }
+					owner = { has_authority = auth_hive_mind }
+				}				
+			}
+			AND = {
+				exists = owner
+				has_citizenship_type = { type = citizenship_slavery }
+				owner = { has_policy_flag = core_worlds_citizens_and_slaves }
+			}		
+		}
+	}
+}

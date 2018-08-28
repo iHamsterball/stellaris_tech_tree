@@ -1,0 +1,993 @@
+# Sets the edict-cost for all edicts with this variable
+@standardEdictCost = 150
+
+planet_edict = {
+	name = "alpha_satnet"
+	influence_cost = 50
+	
+	length = 0
+	
+	potential = {
+		not = { has_modifier = satellite_network }
+		has_spaceport = yes
+		OR = {
+			has_building = building_rocket_launchsite
+			has_building = building_shuttle_port
+			has_building = building_advanced_shuttleport
+		}			
+	}
+	
+	effect = {
+		add_modifier = {
+			modifier = satellite_network
+			days = -1
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			weight = 0
+			owner = {
+				influence < 200
+			}
+		}
+	}
+}
+
+planet_edict = {
+	name = "alpha_hydronet"
+	influence_cost = 100
+	
+	length = 18000
+
+	modifier = {
+		pop_growth_speed = 0.2
+		tile_resource_energy_mult = -0.05
+		tile_resource_food_mult = 0.15
+		pop_environment_tolerance = 0.025
+	}
+	
+	potential = {
+		has_building = building_water_distributor
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			weight = 2
+			num_pops < 5
+		}
+		modifier = {
+			weight = 0
+			num_pops > 10
+		}
+		modifier = {
+			weight = 0
+			owner = {
+				or = {
+					energy < 1000
+					influence < 250
+				}
+			}
+		}
+	}
+}
+
+planet_edict = {
+	name = "prison_of_war"
+	influence_cost = 150
+	
+	length = 1800
+
+	modifier = {
+		pop_growth_speed = -0.25
+		#pop_government_ethic_attraction = 0.2
+		pop_ethic_militarist_attraction_mult = -0.25
+		planet_army_build_speed_mult = -0.5
+		planet_migration_all_pull = -0.75
+		tile_resource_energy_mult = -0.5
+		tile_resource_minerals_mult = 0.25
+		tile_resource_food_mult = 0.2
+		tile_resource_unity_mult = -0.5
+		tile_resource_engineering_research_mult = -0.25
+		tile_resource_physics_research_mult = -0.5
+		planet_building_build_speed_mult = 0.25
+		planet_building_cost_mult = 0.5
+		planet_unrest_add = -100
+	}
+	
+	potential = {
+		not = { has_modifier = gulag_world }
+		any_pop = {
+			has_modifier = "pop_recently_conquered"
+		}
+		owner = {
+			OR = {
+				has_ethic = "ethic_fanatic_authoritarian"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+planet_edict = {
+	name = "alpha_more_mechs_light"
+	influence_cost = 100
+	
+	length = 0
+
+	potential = {
+		has_building = "building_lightmechbay"
+		not = { has_building = "building_assaultmechbay" }
+		check_variable = {
+			which = "lightmech_soldier_count" 
+			value = 5
+		}		
+	}
+
+	effect = {
+		set_variable = {
+			which = "lightmech_soldier_count" 
+			value = 0
+		}	
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			owner = {
+				is_at_war = no
+			}
+		}
+	}
+}
+
+planet_edict = {
+	name = "alpha_more_mechs_medium"
+	influence_cost = 150
+	
+	length = 0
+
+	potential = {
+		has_building = "building_mediummechbay"
+		not = { has_building = "building_assaultmechbay" }
+		check_variable = {
+			which = "lightmech_soldier_count" 
+			value = 5
+		}
+		check_variable = {
+			which = "mediummech_soldier_count" 
+			value = 4
+		}		
+	}
+
+	effect = {
+		set_variable = {
+			which = "lightmech_soldier_count" 
+			value = 0
+		}
+		set_variable = {
+			which = "mediummech_soldier_count" 
+			value = 0
+		}		
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			owner = {
+				is_at_war = no
+			}
+		}
+	}
+}
+
+planet_edict = {
+	name = "alpha_more_mechs_heavy"
+	influence_cost = 200
+	
+	length = 0
+
+	potential = {
+		has_building = "building_heavymechbay"
+		not = { has_building = "building_assaultmechbay" }
+		check_variable = {
+			which = "lightmech_soldier_count" 
+			value = 5
+		}
+		check_variable = {
+			which = "mediummech_soldier_count" 
+			value = 4
+		}
+		check_variable = {
+			which = "heavymech_soldier_count" 
+			value = 3
+		}		
+	}
+
+	effect = {
+		set_variable = {
+			which = "lightmech_soldier_count" 
+			value = 0
+		}
+		set_variable = {
+			which = "mediummech_soldier_count" 
+			value = 0
+		}
+		set_variable = {
+			which = "heavymech_soldier_count" 
+			value = 0
+		}	
+	}
+	
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 0
+			owner = {
+				is_at_war = no
+			}
+		}
+	}
+}
+
+planet_edict = {
+	name = "alpha_more_mechs_assault"
+	influence_cost = 250
+	
+	length = 0
+
+	potential = {
+		has_building = "building_assaultmechbay"
+		check_variable = {
+			which = "lightmech_soldier_count" 
+			value = 5
+		}
+		check_variable = {
+			which = "mediummech_soldier_count" 
+			value = 4
+		}
+		check_variable = {
+			which = "heavymech_soldier_count" 
+			value = 3
+		}
+		check_variable = {
+			which = "assaultmech_soldier_count" 
+			value = 2
+		}		
+	}
+
+	effect = {
+		set_variable = {
+			which = "lightmech_soldier_count" 
+			value = 0
+		}
+		set_variable = {
+			which = "mediummech_soldier_count" 
+			value = 0
+		}
+		set_variable = {
+			which = "heavymech_soldier_count" 
+			value = 0
+		}
+		set_variable = {
+			which = "assaultmech_soldier_count" 
+			value = 0
+		}		
+	}
+	
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 0
+			owner = {
+				is_at_war = no
+			}
+		}
+	}
+}
+
+planet_edict = {
+	name = "alpha_festival"
+	influence_cost = 50
+	
+	modifier = {
+		pop_happiness = 0.25
+		pop_growth_speed = 0.25
+		pop_food_req_mult = 0.1
+		tile_resource_energy_mult = -0.1
+		planet_fortification_strength = -0.5
+	}
+	
+	length = 360
+	
+	potential = {
+		not = { has_modifier = gulag_world }
+		NOT = { has_edict = food_rationing }
+		NOT = { has_edict = martial_law }
+		OR = {
+			has_building = "building_cantina"
+			has_building = "building_culture"
+			has_building = "building_great_sanctuary"
+		}
+		owner = {
+			OR = {
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_xenophile
+			}
+			NOR = {
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_materialist
+			}
+			not = { is_at_war = yes }
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			owner = {
+				is_at_war = yes
+			}
+		}
+	}
+}
+
+planet_edict = {
+	name = "food_rationing"
+	influence_cost = 100
+	
+	modifier = {
+		pop_happiness = -0.1
+		pop_growth_speed = -0.25
+		pop_food_req_mult = -0.5
+		planet_unrest_add = 10
+	}
+	
+	length = 1800
+	
+	potential = {
+		not = { has_modifier = gulag_world }
+		NOT = { has_modifier = exporting_food }
+		NOT = { has_modifier = food_is_love }
+		NOT = { has_edict = alpha_festival }
+		NOT = { has_edict = alpha_breeding_program }
+		NOT = { has_edict = family_incentives_campaign }
+		has_building = "building_frontier_provisioner"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			num_pops > 10
+		}
+		modifier = {
+			factor = 2
+			owner = {
+				is_at_war = yes
+			}
+			num_pops > 15
+		}
+	}
+}
+
+planet_edict = {
+	name = "alpha_doming"
+	influence_cost = 50
+	
+	modifier = {		
+	}
+	
+	potential = {
+		NOT = {
+			has_modifier = alpha_doming
+		}
+		has_building = "building_exo_ops"
+	}
+	
+	ai_weight = {
+		weight = 2
+	}
+	
+	effect = {
+		planet_event = { id = relocate_megacitizens.5 }
+	}
+}
+
+planet_edict = {
+	name = "food_is_love_on"
+	influence_cost = 25
+
+	modifier = {
+	}
+	
+	potential = {
+		NOT = {
+			has_modifier = food_is_love
+		}
+		NOT = {
+			has_edict = alpha_breeding_program
+		}
+		NOT = {
+			has_edict = family_incentives_campaign
+		}
+		NOT = {
+			has_edict = food_rationing
+		}
+		not = { has_modifier = gulag_world }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	effect = {
+		planet_event = { id = relocate_megacitizens.3 }
+	}
+	
+	prerequisites = { 
+		"tech_alpha_preservations"
+	}
+}
+
+planet_edict = {
+	name = "food_is_love_off"
+	influence_cost = 50
+
+	modifier = {
+	}
+	
+	potential = {
+		has_modifier = food_is_love
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	effect = {
+		planet_event = { id = relocate_megacitizens.4 }
+	}
+	
+	prerequisites = { 
+		"tech_alpha_preservations"
+	}
+}
+
+planet_edict = {
+	name = "alpha_relocate_megacitizens"
+	influence_cost = 0
+	
+	modifier = {
+		pop_growth_speed = -0.15
+	}
+	
+	potential = {
+		has_building = "building_large_city"
+		free_pop_tiles > 1
+		num_pops < 9
+	}
+	
+	length = 1800
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			num_pops > 8
+		}
+	}
+	
+	effect = {
+		custom_tooltip = edict_relocate_megacitizens.tooltip
+		planet_event = { id = relocate_megacitizens.1 }
+	}
+}
+
+planet_edict = {
+	name = "alpha_assign_ambassador"
+	influence_cost = 0
+	
+	modifier = {
+	}
+	
+	potential = {
+		not = { has_planet_flag = pf_assigned_ambassador }
+		has_spaceport = yes
+		has_spaceport_module = open_consulate
+		not = { is_capital = yes }
+		owner = {
+			has_country_flag = cf_has_free_ambassadors
+		}
+	}
+	
+	length = 0
+	
+	effect = {
+		hidden_effect = {
+			planet_event = { id = almbuildings.4 }
+			set_planet_flag = pf_assigned_ambassador
+			random_tile = {
+				limit = {
+					OR = {
+						has_building = "building_exo_ops"
+						has_building = "building_colony_shelter"
+						has_building = "building_capital_1"
+						has_building = "building_capital_2"
+						has_building = "building_capital_3"
+						has_building = "building_mining_guild"
+						has_building = "building_central_databank"
+						has_building = "building_farming_guild"
+						has_building = "building_commerce_coord"
+					}
+				}
+				add_resource = {
+					resource = sr_ambassadors
+					amount = 1
+					replace = no
+				}
+			}
+			owner = {
+				every_owned_planet = {
+					limit = {
+						OR = {
+							has_building = "building_peace_corps"
+							has_building = "building_xeno_diplomacy_corp"
+						}
+					}
+					random_tile = {
+						limit = {
+							OR = {
+								has_building = "building_peace_corps"
+								has_building = "building_xeno_diplomacy_corp"
+							}					
+						}
+						add_resource = {
+							resource = sr_ambassadors
+							amount = -1
+							replace = no						
+						}
+						if = {
+							limit = {
+								this = {
+									has_resource = {
+										type = sr_ambassadors
+										amount < 1					
+									}								
+								}
+							}
+							prevprev = {
+								remove_country_flag = cf_has_free_ambassadors
+							}
+						}
+					}
+				}
+				country_event = { id = almbuildings.7 }
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+planet_edict = {
+	name = "alpha_unassign_ambassador"
+	influence_cost = 0
+	
+	modifier = {
+	}
+	
+	potential = {
+		has_planet_flag = pf_assigned_ambassador
+	}
+	
+	length = 0
+	
+	effect = {
+		hidden_effect = {
+			planet_event = { id = almbuildings.5 }
+			remove_planet_flag = pf_assigned_ambassador
+			random_tile = {
+				limit = {
+					has_resource = {
+						type = sr_ambassadors
+						amount > 0
+					}
+				}
+				add_resource = {
+					resource = sr_ambassadors
+					amount = -1
+					replace = no
+				}
+			}
+			owner = {
+				if = {
+					limit = {
+						any_owned_planet = {
+							OR = {
+								has_building = "building_peace_corps"
+								has_building = "building_xeno_diplomacy_corp"
+							}
+						}
+					}
+					set_country_flag = cf_has_free_ambassadors
+					random_owned_planet = {
+						limit = {
+							OR = {
+								has_building = "building_xeno_diplomacy_corp"
+								has_building = "building_peace_corps"
+							}					
+						}
+						random_tile = {
+							limit = {
+								OR = {
+									has_building = "building_peace_corps"
+									has_building = "building_xeno_diplomacy_corp"
+								}					
+							}
+							add_resource = {
+								resource = sr_ambassadors
+								amount = 1
+								replace = no						
+							}
+						}
+					}
+				}
+				country_event = { id = almbuildings.7 }
+			}			
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+planet_edict = {
+	name = "alpha_relax_borders"
+	influence_cost = 50
+	
+	modifier = {
+		planet_migration_all_pull = 0.25
+		planet_migration_xeno_pull = 0.1
+		pop_ethic_xenophobe_attraction_mult = -0.2
+		pop_ethic_xenophile_attraction_mult = 0.1
+		#pop_government_ethic_attraction = -0.1
+		planet_border_mult = 0.1
+	}
+	
+	potential = {
+		not = { has_modifier = gulag_world }
+		NOR = { 
+			has_edict = alpha_tighten_borders
+			has_edict = martial_law
+		}
+		has_spaceport = yes
+		has_spaceport_module = border_control
+		owner = {
+			NOT = { has_policy_flag = refugees_not_allowed }
+		}
+	}
+	
+	length = 3600
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			num_pops > 3
+		}
+	}	
+}
+
+planet_edict = {
+	name = "alpha_tighten_borders"
+	influence_cost = 50
+	
+	modifier = {
+		planet_migration_all_pull = -0.75
+		planet_migration_xeno_pull = -0.25
+		#pop_government_ethic_attraction = 0.1
+		pop_ethic_xenophobe_attraction_mult = 0.15
+		pop_ethic_xenophile_attraction_mult = -0.1
+		planet_border_mult = 0.15
+		planet_fortification_strength = 0.1
+		tile_resource_energy_mult = -0.1
+	}
+	
+	potential = {
+		NOR = { 
+			has_edict = alpha_relax_borders
+			has_edict = alpha_decriminalisation
+		}
+		has_spaceport = yes
+		has_spaceport_module = border_control
+		owner = {
+			has_policy_flag = refugees_not_allowed
+		}
+	}
+	
+	length = 3600
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			num_pops > 15
+		}
+	}	
+}
+
+planet_edict = {
+	name = "holo_network"
+	influence_cost = 100
+	
+	modifier = {
+		pop_happiness = 0.05
+		pop_government_ethic_attraction = 0.2
+		tile_resource_energy_mult = -0.05
+	}
+	
+	potential = {
+		OR = {
+			has_building = "building_state_media"
+			has_building = "building_intelligence_directorate_2"
+			has_building = "building_surveillance_center_2"
+			has_building = "building_security_center_2"
+		}
+	}
+	
+	length = 3600
+	
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 0
+			num_pops < 10
+		}
+		modifier = {
+			factor = 0
+			happiness_planet > 0.70
+		}
+		modifier = {
+			factor = 2
+			happiness_planet < 0.40
+		}
+	}	
+}
+
+planet_edict = {
+	name = "alpha_decriminalisation"
+	influence_cost = 25
+	
+	modifier = {
+		pop_happiness = -0.1
+		#pop_government_ethic_attraction = -0.1
+		pop_ethic_xenophobe_attraction_mult = 0.1
+		pop_ethic_militarist_attraction_mult = 0.15
+		pop_ethic_authoritarian_attraction_mult = -0.25
+		tile_resource_energy_mult = 0.25
+		tile_resource_influence_mult = 0.5
+		pop_growth_speed = -0.1
+		planet_fortification_strength = 0.5
+		planet_migration_all_pull = 0.25
+		army_damage_mult = 0.25
+		planet_unrest_add = 25
+	}
+	
+	potential = {
+		not = { has_modifier = gulag_world }
+		owner = {
+			NOT = { has_policy_flag = alp_law_enforcement_personal }
+		}
+		NOR = {
+			has_edict = martial_law
+			has_edict = family_incentives_campaign
+			has_edict = alpha_tighten_borders
+		}
+		OR = {
+			has_building = "building_governerspalace"
+			has_building = "building_militia_hq"
+		}
+	}
+	
+	length = 3600
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			owner = {
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+					has_ethic = ethic_fanatic_xenophile
+					has_ethic = ethic_fanatic_egalitarian
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			happiness_planet < 0.80
+		}
+	}	
+}
+
+planet_edict = {
+	name = "family_incentives_campaign"
+	influence_cost = 50
+	modifier = {
+		pop_growth_speed = 0.5
+		tile_resource_energy_mult = -0.15
+	}
+	
+	potential = {
+		OR = {
+			has_building = building_clinic
+			has_building = building_hospital
+		}
+		not = { has_modifier = gulag_world }
+		NOT = { has_edict = food_rationing }
+		NOR = {
+			has_edict = alpha_decriminalisation
+			has_edict = alpha_breeding_program
+		}
+		NOT = { has_modifier = food_is_love }
+		owner = {
+			NOT = { has_ethic = ethic_fanatic_egalitarian }
+		}
+	}
+	
+	prerequisites = { 
+		"tech_frontier_health"
+	}
+	
+	length = 3600
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 2
+			num_pops < 4
+		}
+	}	
+}
+
+planet_edict = {
+	name = "pioneer_benefits"
+	influence_cost = 50
+	modifier = {
+		tile_resource_energy_mult = -0.2
+		planet_migration_all_pull = 0.75
+		pop_ethic_authoritarian_attraction_mult = -0.1
+		planet_unrest_add = 5
+	}
+	
+	potential = {
+		not = { has_modifier = gulag_world }
+		owner = {
+			has_policy_flag = alp_land_ownership_pioneerrights
+			not = { has_policy_flag = refugees_not_allowed }
+		}
+	}
+	
+	prerequisites = { 
+		"tech_alpha_frontier_supply"
+	}
+	
+	length = 1800
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			num_pops < 3
+		}
+	}	
+}
+
+planet_edict = {
+	name = "alpha_breeding_program"
+	influence_cost = 100
+	modifier = {
+		pop_growth_speed = 0.9
+		pop_government_ethic_attraction = -0.1
+		pop_happiness = -0.1
+		planet_unrest_add = 10
+	}
+	
+	potential = {
+		not = { has_modifier = gulag_world }
+		NOT = {
+			has_edict = family_incentives_campaign
+		}
+		NOT = {
+			has_modifier = food_is_love
+		}
+		has_building = "building_genetic_pairing"
+		has_building = "building_child_rearing"		
+		owner = {
+			has_ethic = ethic_fanatic_xenophobe
+		}
+	}
+	
+	length = 1800
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			num_pops < 3
+		}
+	}	
+}
+
+planet_edict = {
+	name = "martial_law"
+	influence_cost = 50
+	modifier = {
+		pop_ethic_militarist_attraction_mult = -0.1
+		pop_ethic_authoritarian_attraction_mult = 0.1
+		#pop_government_ethic_attraction = 0.1
+		pop_happiness = -0.1
+		planet_fortification_strength = 0.25
+		planet_army_build_speed_mult = 0.5
+		planet_migration_all_pull = -0.25
+		planet_unrest_add = -50
+	}
+
+	length = 1800
+	
+	potential = {
+		owner = {
+			NOT = { has_policy_flag = alp_law_enforcement_personal }
+		}
+		NOT = { has_edict = alpha_festival }
+		NOR = {
+			has_edict = alpha_decriminalisation
+			has_edict = alpha_relax_borders
+		}
+		OR = {
+			has_building = "building_governerspalace"
+			has_building = "building_hallofwarriors"
+			has_building = "building_military_base"
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			num_pops > 8
+			owner = {
+				OR = {
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				is_at_war = yes
+			}
+			happiness_planet < 0.50
+		}
+	}	
+}

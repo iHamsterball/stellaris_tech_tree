@@ -1,0 +1,106 @@
+@cost = 56
+
+tr_supremacy_adopt = {
+	cost = { unity = @cost }
+	modifier = {
+		country_border_mult = 0.20
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_militarist
+		}	
+		modifier = {
+			factor = 2
+			has_ethic = ethic_xenophobe
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_xenophobe
+		}		
+	}
+}
+
+tr_supremacy_finish = {
+	modifier = {
+		ship_fire_rate_mult = 0.15
+		ascension_perks_add = 1
+	}
+}
+
+tr_supremacy_great_game = {
+	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_supremacy_overwhelming_force
+		has_tradition = tr_supremacy_right_of_conquest
+	}
+	
+	#implementation in the "should_apply_neighbor_rival_modifier" game rule
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_supremacy_right_of_conquest = {
+	cost = { unity = @cost }
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_supremacy_master_shipwrights = {
+	cost = { unity = @cost }
+	modifier = {
+		spaceport_ship_build_speed_mult = 0.15
+		navy_size_mult = 0.10		
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_supremacy_war_games = {
+	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_supremacy_master_shipwrights
+		has_tradition = tr_supremacy_right_of_conquest
+	}
+	modifier = {
+		admiral_skill_levels = 2
+	}
+	on_enabled = {
+		every_owned_leader = {
+			limit = { leader_class = admiral }
+			add_skill = 2
+		}
+		every_pool_leader = {
+			limit = { leader_class = admiral }
+			add_skill = 2
+		}
+	}	
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_supremacy_overwhelming_force = {
+	cost = { unity = @cost }
+	
+	modifier = {
+		army_damage_mult = 0.25
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}

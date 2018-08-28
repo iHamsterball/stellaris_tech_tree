@@ -1,0 +1,280 @@
+building_hydro_plant = {
+	base_buildtime = 360
+	
+	cost = {
+		minerals = 90
+		energy = 25
+	}
+	
+	produced_resources = {
+		energy = 3
+		sr_h2o = 2
+	}
+	
+	potential = {
+		planet = { 
+			any_tile = { has_water_deposit = yes }
+			not = { is_hab_or_ringyard = yes }			
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_large_water"
+			tile = { has_water_deposit = yes }
+		}
+	}
+	
+	upgrades = {
+		building_hydro_plant_2
+	}
+	
+	ai_weight = {
+		weight = 0	
+		modifier = {
+			weight = 2
+			from = {
+				any_tile = {
+					AND = {
+						has_water_deposit = yes
+						has_energy_deposit = yes
+					}
+				} 
+			}
+		}
+	}
+}
+
+building_hydro_plant_2 = {
+	base_buildtime = 360
+	is_listed = no
+	
+	cost = {
+		minerals = 120
+		energy = 50
+	}
+	
+	produced_resources = {
+		energy = 5
+		sr_h2o = 3
+	}
+	
+	prerequisites = {
+		"tech_alpha_adv_renewable"
+	}
+}
+
+building_steam_plant = {
+	base_buildtime = 180
+	planet_unique = yes
+	
+	cost = {
+		minerals = 50
+		energy = 100
+	}
+	
+	produced_resources = {
+		energy = 10
+		sr_h2o = 3
+	}
+	
+	planet_modifier = {
+		pop_environment_tolerance = -0.02
+	}
+	
+	prerequisites = {
+		"tech_alpha_steam_plants"
+	}
+	
+	potential = {
+		planet = { 
+			any_tile = { has_ice_deposit = yes } 
+			not = { is_hab_or_ringyard = yes }			
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_has_ice"
+			tile = { has_ice_deposit = yes }
+		}
+	}
+	
+	ai_weight = {
+		weight = 0	
+		modifier = {
+			weight = 1
+			from = { any_tile = { has_ice_deposit = yes } }
+		}
+		modifier = {
+			factor = 0
+			from = { any_tile = { has_water_deposit = yes } }
+		}
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+}
+
+building_hydro_cell_bank = {
+	base_buildtime = 720
+	planet_unique = yes
+	
+	cost = {
+		minerals = 200
+		energy = 150
+		influence = 10
+	}
+	
+	required_resources = {
+		sr_actinides = 2
+		sr_h2o = 1
+	}
+	
+	produced_resources = {
+		energy = 12
+		sr_h2o = 1
+	}
+	
+	country_modifier = {
+		max_energy = 250
+	}
+	
+	prerequisites = {
+		"tech_alpha_hydro_cells"
+	}
+	
+	potential = {
+		planet = {
+			AND = {
+				any_tile = { has_water_deposit = yes }
+				owner = { empire_has_actinides_2 = yes }
+				not = { is_hab_or_ringyard = yes }
+			}
+		}
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requirement_large_water"
+				tile = { has_water_deposit = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requirement_no_actinides_deposit"
+				tile = { not = { has_actinides_deposit = yes } }
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0	
+		modifier = {
+			weight = 2
+			from = {
+				any_tile = {
+					AND = {
+						has_water_deposit = yes
+						has_energy_deposit = yes
+					}
+				} 
+			}
+		}
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+}
+
+building_geothermal_tap = {
+	base_buildtime = 360
+	
+	cost = {
+		minerals = 150
+		energy = 100
+	}
+	
+	produced_resources = {
+		energy = 5
+		engineering_research = 3
+	}
+	
+	potential = {
+		planet = {
+			not = { is_hab_or_ringyard = yes }
+			OR = {
+				any_tile = {
+					OR = {
+						has_blocker = "tb_alpha_volcano_chain"
+						has_blocker = "tb_active_volcano"
+						has_blocker = "tb_active_volcano_locked"
+					}			
+				}
+				is_planet_class = pc_molten_habitable
+			}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_volcano"
+			OR = {
+				tile = {
+					any_neighboring_tile = {
+						AND = {
+							OR = {
+								has_blocker = "tb_alpha_volcano_chain"
+								has_blocker = "tb_active_volcano"
+								has_blocker = "tb_active_volcano_locked"
+							}
+							has_building_construction = no
+						}
+					}
+				}
+				planet = {
+					is_planet_class = pc_molten_habitable
+				}
+			}
+		}
+	}
+	
+	on_queued = {
+		tile = {
+			every_neighboring_tile = {
+				limit = {
+					has_blocker = "tb_active_volcano"
+					has_building_construction = no
+				}
+				remove_blocker = yes
+				clear_deposits = yes
+				clean_strategic_resources = yes
+				clean_basic_resources = yes
+				set_blocker = "tb_active_volcano_locked"
+			}
+			every_neighboring_tile = {
+				limit = {
+					has_blocker = "tb_active_volcano_locked"
+				}
+				clean_strategic_resources = yes
+				clean_basic_resources = yes
+				clear_deposits = yes
+			}
+			every_neighboring_tile = {
+				limit = {
+					has_blocker = "tb_alpha_volcano_chain"
+				}
+				clean_strategic_resources = yes
+				clean_basic_resources = yes
+				clear_deposits = yes
+			}			
+		}
+	}
+	
+	prerequisites = {
+		"tech_alpha_geothermal_stations"
+	}
+	
+	ai_weight = {
+		weight = 2
+	}
+}

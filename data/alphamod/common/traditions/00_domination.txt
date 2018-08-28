@@ -1,0 +1,122 @@
+@cost = 56
+
+tr_domination_adopt = {
+	cost = { unity = @cost }
+	
+	# bonus: reduce all subjugation wargoal costs (see 00_subject_war_demands.txt)
+	modifier = {
+		country_subject_acceptance_add = 20
+	}
+	
+	ai_weight = {
+		factor = 20		
+		# generally don't pick unless we have subjects
+		modifier = {
+			factor = 0.01
+			NOT = {
+				any_subject = {
+					OR = {
+						is_subject_type = tributary
+						is_subject_type = vassal
+					}
+				}			
+			}
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_authoritarian
+		}		
+	}
+}
+
+tr_domination_finish = {
+	modifier = {
+		ascension_perks_add = 1
+		country_subject_technology_sharing_mult = 0.30
+	}
+}
+
+tr_domination_colonial_viceroys = {
+	cost = { unity = @cost }
+	modifier = {
+		governor_skill_levels = 2
+		country_leader_cap = 2
+	}
+
+	on_enabled = {
+		every_owned_leader = {
+			limit = { leader_class = governor }
+			add_skill = 2
+		}
+		every_pool_leader = {
+			limit = { leader_class = governor }
+			add_skill = 2
+		}
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_domination_protection_racket = {
+	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_domination_colonial_viceroys
+	}
+	modifier = {
+		country_unrest_unhappy_slave_effect_mult = -0.25
+		subject_tribute_mult = 0.10
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_domination_star_lords = {
+	cost = { unity = @cost }
+	
+	# bonus: subject opinion increased (see triggered_opinion_tr_domination_star_lords)
+	modifier = {
+		country_integration_cooldown_mult = -0.50	
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_domination_fleet_levies = {
+	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_domination_colonial_viceroys
+		has_tradition = tr_domination_star_lords
+	}
+	
+	modifier = {
+		country_vassal_naval_capacity_contribution_mult = 0.20
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_domination_vassal_acculturation = {
+	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_domination_star_lords
+	}
+	
+	modifier = {
+		subject_integration_influence_cost_mult = -0.33
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}

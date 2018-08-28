@@ -1,0 +1,1320 @@
+@b0time = 120
+@b0cost = 30
+@b0effect = 1
+@b0upkeep = 1
+
+@b1time = 210
+@b1cost = 60
+@b1effect = 2
+@b1upkeep = 1
+
+@b2time = 180
+@b2cost = 90
+@b2effect = 3
+@b2upkeep = 1.5
+
+@b3time = 180
+@b3cost = 120
+@b3effect = 4
+@b3upkeep = 2
+
+@b4time = 180
+@b4cost = 150
+@b4effect = 5
+@b4upkeep = 2.5
+
+@b5time = 180
+@b5cost = 180
+@b5effect = 8
+@b5upkeep = 3
+
+building_steammaker = {
+	base_buildtime = 180
+	
+	cost = {
+		minerals = 50
+		energy = 50
+	}
+	
+	produced_resources = {
+		sr_h2o = 1
+		energy = 3
+	}
+	
+	potential = {
+		planet = {
+			any_tile = { has_ice_deposit = yes }
+		}
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requirement_has_ice"
+				tile = { has_ice_deposit = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_no_water_deposit"
+				tile = { not = { has_water_deposit = yes } }
+			}
+		}
+	}
+	
+	planet_modifier = {
+		pop_environment_tolerance = -0.03
+	}
+	
+	upgrades = {
+		building_steammaker_2
+	}
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+building_steammaker_2 = {
+	base_buildtime = 180
+	is_listed = no
+	
+	cost = {
+		minerals = 100
+		energy = 50
+	}
+	
+	produced_resources = {
+		sr_h2o = 2
+		energy = 4
+	}
+	
+	potential = {
+		planet = {
+			any_tile = { has_ice_deposit = yes }
+		}
+	}
+	
+	prerequisites = {
+		"tech_alpha_arctic_exploitation_2"
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requirement_has_ice"
+				tile = { has_ice_deposit = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_no_water_deposit"
+				tile = { not = { has_water_deposit = yes } }
+			}
+		}
+	}
+	
+	planet_modifier = {
+		pop_environment_tolerance = -0.02
+	}
+	
+	upgrades = {
+		building_steam_plant
+	}
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+building_stormtower = {
+	base_buildtime = 180
+	
+	cost = {
+		minerals = 50
+		energy = 25
+	}
+	
+	required_resources = {
+		sr_biomass = 1
+	}
+	
+	produced_resources = {
+		energy = 2
+		sr_h2o = 1
+		sr_biomass = 1
+	}
+	
+	planet_modifier = {
+		pop_environment_tolerance = 0.01
+	}
+	
+	potential = {
+		planet = {
+			is_planet_class = pc_tropical
+			any_tile = { has_biomass_deposit = yes }
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_biomass_deposit"
+			tile = { has_biomass_deposit = yes }		
+		}
+	}
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+building_desalinator = {
+	base_buildtime = 180
+	
+	cost = {
+		minerals = 50
+		energy = 75
+	}
+	
+	produced_resources = {
+		sr_h2o = 2
+		minerals = 1
+	}
+	
+	potential = {
+		planet = {
+			is_planet_class = pc_ocean
+			any_tile = { has_water_deposit = yes }	
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_has_water"
+			tile = { has_water_deposit = yes }			
+		}
+	}
+	
+	planet_modifier = {
+		pop_environment_tolerance = -0.01
+		tile_resource_food_mult = 0.05
+	}
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+building_fishing_yard = {
+	tags = { hydroponics_farm }
+	base_buildtime = 90
+	
+	cost = {
+		minerals = 25
+		energy = 10
+	}
+	
+	required_resources = {
+		sr_h2o = 1
+	}
+	
+	produced_resources = {
+		food = 1
+		sr_biomass = 1
+		sr_h2o = 1
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_civic = civic_agrarian_idyll
+			resources = {
+				unity = 1
+			}
+		}
+	}
+	
+	potential = {
+		planet = {
+			is_planet_class = pc_ocean
+			any_tile = {
+				has_biomass_deposit = yes
+				has_water_deposit = yes
+			}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_biomass_and_water"
+			tile = {
+				has_biomass_deposit = yes
+				has_water_deposit = yes				
+			}			
+		}
+	}
+	
+	prerequisites = {
+		"tech_alpha_traditional_farming"
+	}
+}
+
+building_traditional_plantation = {
+	tags = { hydroponics_farm }
+	base_buildtime = 90
+	
+	cost = {
+		minerals = 25
+		energy = 10
+	}
+	
+	produced_resources = {
+		food = 2
+		sr_biomass = 1
+		unity = 1
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_civic = civic_agrarian_idyll
+			resources = {
+				unity = 1
+			}
+		}
+	}
+	
+	potential = {
+		planet = {
+			is_planet_class = pc_tropical
+			any_tile = {
+				has_food_deposit = yes
+				has_biomass_deposit = yes	
+			}
+		}
+	}
+	
+	planet_modifier = {
+		pop_environment_tolerance = 0.01
+	}
+
+	allow = {
+		custom_tooltip = {
+			text = "requirement_biomass_and_food"
+			tile = {
+				has_food_deposit = yes
+				has_biomass_deposit = yes				
+			}			
+		}
+	}
+	
+	upgrades = {
+		building_preservation
+	}
+}
+
+building_atlantis = {
+	base_buildtime = 720
+	empire_unique = yes
+	
+	cost = {
+		minerals = 300
+		energy = 400
+		influence = 25
+	}
+	
+	potential = {
+		planet = {
+			is_planet_class = pc_ocean
+			any_tile = { has_water_deposit = yes }
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_has_water"
+			tile = { has_water_deposit = yes }			
+		}
+	}
+	
+	required_resources = {
+		energy = 10
+	}
+	
+	produced_resources = {
+		unity = 10
+		sr_wealth = 2
+		sr_h2o = 1
+	}
+	
+	planet_modifier = {
+		tile_resource_society_research_mult = 0.1
+		tile_resource_engineering_research_mult = 0.25
+		tile_resource_physics_research_mult = 0.25
+		pop_environment_tolerance = 0.2
+	}
+	
+	prerequisites = {
+		"tech_alpha_ocean_exploitation_2"
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		factor = 2000
+	}
+}
+
+building_moisture_farm = {
+	base_buildtime = 180
+	
+	cost = {
+		minerals = 25
+		energy = 25
+	}
+	
+	produced_resources = {
+		sr_h2o = 1	
+		energy = 1
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_civic = civic_agrarian_idyll
+			resources = {
+				unity = 1
+			}
+		}
+	}
+	
+	planet_modifier = {
+		pop_environment_tolerance = 0.01
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				is_planet_class = pc_desert
+				is_planet_class = pc_arid
+				is_planet_class = pc_savannah
+				is_planet_class = pc_nuked
+				is_planet_class = pc_gas_giant_habitable
+				is_planet_class = pc_toxic_habitable
+			}
+		}
+	}
+	
+	upgrades = {
+		building_moisture_farm_2
+	}
+	
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 0
+			from = {
+				any_tile = { has_water_deposit = yes }
+			}			
+		}
+		modifier = {
+			factor = 2
+			from = {
+				not = { any_tile = { has_water_deposit = yes } }
+			}			
+		}
+	}
+}
+
+building_moisture_farm_2 = {
+	base_buildtime = 180
+	is_listed = no
+	
+	cost = {
+		minerals = 50
+		energy = 50
+	}
+	
+	produced_resources = {
+		sr_h2o = 1.5
+		energy = 1.5
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_civic = civic_agrarian_idyll
+			resources = {
+				unity = 1
+			}
+		}
+	}
+	
+	planet_modifier = {
+		pop_environment_tolerance = 0.02
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				is_planet_class = pc_desert
+				is_planet_class = pc_arid
+				is_planet_class = pc_savannah
+				is_planet_class = pc_nuked
+				is_planet_class = pc_gas_giant_habitable
+				is_planet_class = pc_toxic_habitable
+			}
+		}
+	}
+	
+	upgrades = {
+		building_moisture_farm_3
+	}
+	
+	prerequisites = {
+		"tech_alpha_desert_exploitation_1"
+	}
+	
+	ai_weight = {
+		weight = 5
+	}
+}
+
+building_moisture_farm_3 = {
+	base_buildtime = 180
+	is_listed = no
+	
+	cost = {
+		minerals = 100
+		energy = 100
+	}
+	
+	produced_resources = {
+		sr_h2o = 2
+		energy = 2
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_civic = civic_agrarian_idyll
+			resources = {
+				unity = 1
+			}
+		}
+	}
+	
+	planet_modifier = {
+		pop_environment_tolerance = 0.03
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				is_planet_class = pc_desert
+				is_planet_class = pc_arid
+				is_planet_class = pc_savannah
+				is_planet_class = pc_nuked
+				is_planet_class = pc_gas_giant_habitable
+				is_planet_class = pc_toxic_habitable
+			}
+		}
+	}
+	
+	prerequisites = {
+		"tech_alpha_desert_exploitation_2"
+	}
+	
+	ai_weight = {
+		weight = 5
+	}
+}
+
+building_spice_harvester = {
+	base_buildtime = 360
+	
+	cost = {
+		minerals = 100
+		energy = 200
+		influence = 10
+	}
+	
+	potential = {
+		planet = {
+			any_tile = {
+				has_blocker = "tb_sandworm_activity"
+			}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_sandworm_activity"
+			tile = {
+				AND = {
+					has_resource = {
+						type = sr_wormspice
+						amount > 0					
+					}
+					any_neighboring_tile = {
+						has_blocker = "tb_sandworm_activity"
+					}
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		sr_wormspice = 1
+	}
+	
+	prerequisites = {
+		"tech_alpha_spice_harvesting"
+	}
+	
+	ai_replace = no
+	
+	ai_weight = {
+		factor = 200
+	}
+}
+
+building_spice_processing = {
+	base_buildtime = 720
+	empire_unique = yes
+	
+	cost = {
+		minerals = 250
+		energy = 250
+		influence = 50
+	}
+	
+	required_resources = {
+		sr_wormspice = 1
+	}
+	
+	produced_resources = {		
+		sr_redspice = 2
+		sr_greenspice = 2
+	}
+	
+	potential = {
+		planet = {
+			AND = {
+				any_tile = {
+					has_blocker = "tb_sandworm_activity"
+				}
+				owner = {
+					has_country_strategic_resource = {
+						type = sr_wormspice
+						amount > 0
+					}
+				}
+			}
+		}
+	}
+	
+	prerequisites = {
+		"tech_alpha_spice_harvesting_2"
+	}
+	
+	ai_replace = no
+	ai_special_building = yes
+	
+	ai_weight = {
+		factor = 500
+	}
+}
+
+building_sand_sifter = {
+	base_buildtime = 180
+	
+	cost = {
+		minerals = 40
+		energy = 25
+	}
+	
+	required_resources = {
+		energy = 1
+	}
+	
+	produced_resources = {
+		minerals = 1
+		food = 1
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				is_planet_class = pc_desert
+				is_planet_class = pc_nuked
+			}
+		}
+	}
+	
+	upgrades = {
+		building_sand_sifter_2
+	}
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+building_solar_power_plant = {
+	base_buildtime = 90
+	
+	cost = {
+		minerals = 50
+		energy = 25
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_energy_add = 0.5
+	}
+	
+	produced_resources = {
+		energy = 5
+	}
+
+	planet_modifier = {
+		pop_environment_tolerance = 0.01
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				is_planet_class = pc_desert
+				is_planet_class = pc_arid
+				is_planet_class = pc_savannah
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_alpha_desert_exploitation_1"
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			from = {
+				any_tile = { has_large_energy_deposit = yes }
+			}			
+		}
+	}	
+}
+
+building_sand_sifter_2 = {
+	base_buildtime = 270
+	is_listed = no
+	
+	cost = {
+		minerals = 80
+		energy = 50
+	}
+	
+	required_resources = {
+		energy = 0.5
+	}
+	
+	produced_resources = {
+		minerals = 2
+		food = 1.5
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				is_planet_class = pc_desert
+				is_planet_class = pc_nuked
+			}
+		}
+	}
+	
+	prerequisites = {
+		"tech_alpha_desert_exploitation_2"
+	}
+	
+	ai_weight = {
+		weight = 5
+	}
+}
+
+building_ice_rig_2 = {
+	base_buildtime = 270
+	
+	cost = {
+		minerals = 150
+		energy = 100
+	}
+	
+	produced_resources = {
+		sr_ice = 2
+		minerals = 1
+		food = 0.5
+	}
+	
+	potential = {
+		planet = {
+			any_tile = { has_ice_deposit = yes }
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_has_ice"
+			tile = { has_ice_deposit = yes }			
+		}
+	}
+	
+	prerequisites = {
+		"tech_alpha_arctic_exploitation_2"
+	}
+}
+
+building_straka_ice = {
+	base_buildtime = 360	
+	planet_unique = yes
+	
+	cost = {
+		minerals = 250
+		energy = 200
+	}
+	
+	required_resources = {
+		energy = 3
+	}
+	
+	produced_resources = {
+		sr_ice = 2
+		sr_h2o = 1
+	}
+	
+	planet_modifier = {
+		planet_fortification_strength = 0.5
+		pop_environment_tolerance = 0.1
+	}
+
+	potential = {
+		planet = {
+			OR = {
+				is_planet_class = pc_arctic
+				is_planet_class = pc_frozen_habitable
+			}
+			any_tile = { has_ice_deposit = yes }
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_has_ice"
+			tile = { has_ice_deposit = yes }			
+		}
+	}
+	
+	prerequisites = {
+		"tech_alpha_arctic_exploitation_2"
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+
+	ai_weight = {
+		factor = 1000
+		modifier = {
+			factor = 0
+			from = { sector_controlled = yes }
+		}
+	}
+}
+
+building_exo_mine = {
+	base_buildtime = @b2time
+	
+	cost = {
+		minerals = @b2cost
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				is_planet_class = pc_asteroid
+				is_planet_class = pc_barren
+				is_planet_class = pc_nuked
+				is_planet_class = pc_toxic_habitable
+				is_planet_class = pc_molten_habitable
+				is_planet_class = pc_frozen_habitable
+			}
+		}
+	}
+
+	produced_resources = {
+		minerals = @b2effect
+		sr_natural_fuels = 1
+	}
+	
+	planet_modifier = {
+		pop_environment_tolerance = 0.025
+	}
+	
+	prerequisites = {
+		"tech_alpha_exo_mining"
+	}
+
+	ai_weight = {
+		weight = 5
+	}	
+}
+
+building_exo_labs = {
+	tags = { science_production }
+	base_buildtime = 180
+	
+	cost = {
+		minerals = 100
+		energy = 50
+	}
+	
+	produced_resources = {
+		engineering_research = 2.5
+		physics_research = 2.5
+		society_research = 2.5
+	}
+	
+	required_resources = {
+		sr_atmos_regulators = 1
+		energy = 2
+	}	
+	
+	potential = {
+		planet = {
+			OR = {
+				is_planet_class = pc_asteroid
+				is_planet_class = pc_barren
+				is_planet_class = pc_nuked
+				is_planet_class = pc_toxic_habitable
+				is_planet_class = pc_molten_habitable
+				is_planet_class = pc_frozen_habitable
+			}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_has_atmosregulators"
+			planet = {
+				OR = {
+					has_building = "building_exo_ops"
+					has_building = "building_planet_surveyors_corp"
+				}
+			}			
+		}
+	}
+	
+	prerequisites = {
+		"tech_alpha_exo_ops"
+	}
+
+	ai_allow = {
+		NOR = {
+			has_resource = {
+				type = sr_betharian2
+				amount > 0
+			}	
+			has_resource = {
+				type = sr_alien_pets
+				amount > 0
+			}
+			has_resource = {
+				type = food
+				amount > 0
+			}
+			has_resource = {
+				type = minerals
+				amount > 0
+			}
+			has_resource = {
+				type = energy
+				amount > 0
+			}				
+		}		
+	}
+	
+	planet_modifier = {
+		pop_environment_tolerance = 0.01
+	}
+
+	ai_weight = {
+		factor = 3
+	}	
+}
+
+building_exo_power_plant = {
+	base_buildtime = @b2time
+	
+	cost = {
+		minerals = @b2cost
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				is_planet_class = pc_asteroid
+				is_planet_class = pc_barren
+				is_planet_class = pc_nuked
+				is_planet_class = pc_toxic_habitable
+				is_planet_class = pc_molten_habitable
+				is_planet_class = pc_frozen_habitable
+				is_planet_class = pc_gas_giant_habitable
+			}
+		}
+	}
+	
+	produced_resources = {
+		energy = 4
+		sr_ice = 1
+	}
+	
+	planet_modifier = {
+		pop_environment_tolerance = 0.025
+	}
+
+	prerequisites = {
+		"tech_alpha_exo_power"
+	}
+	
+	upgrades = {
+		building_exo_power_plant2
+	}
+
+	ai_weight = {
+		weight = 5
+	}		
+}
+
+building_exo_power_plant2 = {
+	base_buildtime = @b3time
+	is_listed = no
+	
+	cost = {
+		minerals = @b3cost
+	}
+	
+	potential = {
+		planet = {
+			owner = { 
+				has_ascension_perk = ap_technological_ascendancy
+				has_technology = tech_alpha_exo_power
+			}
+			OR = {
+				is_planet_class = pc_asteroid
+				is_planet_class = pc_barren
+				is_planet_class = pc_nuked
+				is_planet_class = pc_toxic_habitable
+				is_planet_class = pc_molten_habitable
+				is_planet_class = pc_frozen_habitable
+				is_planet_class = pc_gas_giant_habitable
+			}
+		}
+	}
+	
+	produced_resources = {
+		energy = 5
+		sr_ice = 1
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_energy_add = 0.5
+	}
+	
+	planet_modifier = {
+		pop_environment_tolerance = 0.025
+	}
+	
+	upgrades = {
+		building_exo_power_plant3
+	}
+
+	ai_weight = {
+		weight = 5
+	}		
+}
+
+building_exo_power_plant3 = {
+	base_buildtime = @b3time
+	is_listed = no
+	planet_unique = yes
+	
+	cost = {
+		minerals = @b3cost
+	}
+	
+	potential = {
+		planet = {
+			owner = { 
+				has_ascension_perk = ap_technological_ascendancy
+				has_technology = tech_alpha_exo_power
+				has_technology = tech_alpha_micro_fission
+			}
+			OR = {
+				is_planet_class = pc_asteroid
+				is_planet_class = pc_barren
+				is_planet_class = pc_nuked
+				is_planet_class = pc_toxic_habitable
+				is_planet_class = pc_molten_habitable
+				is_planet_class = pc_frozen_habitable
+				is_planet_class = pc_gas_giant_habitable
+			}
+		}
+	}
+	
+	produced_resources = {
+		energy = 8
+		sr_ice = 1
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_energy_add = 1
+	}
+	
+	planet_modifier = {
+		pop_environment_tolerance = 0.05
+	}
+
+	# prerequisites = {
+		# "tech_alpha_exo_power"
+	# }
+
+	ai_weight = {
+		weight = 5
+	}		
+}
+
+building_exo_barracks = {
+	base_buildtime = 360
+	
+	cost = {
+		minerals = 100
+		energy = 50
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				is_planet_class = pc_asteroid
+				is_planet_class = pc_barren
+				is_planet_class = pc_nuked
+				is_planet_class = pc_toxic_habitable
+				is_planet_class = pc_molten_habitable
+				is_planet_class = pc_frozen_habitable
+				is_planet_class = pc_gas_giant_habitable
+			}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_has_atmosregulators"
+			planet = {
+				OR = {
+					has_building = "building_exo_ops"
+					has_building = "building_planet_surveyors_corp"
+				}
+			}			
+		}
+	}
+	
+	required_resources = {
+		sr_atmos_regulators = 1
+		energy = 1
+		sr_h2o = 1
+	}
+	
+	produced_resources = {
+		food = 1.5
+		minerals = 1
+	}
+	
+	adjacency_bonus = {
+		#tile_building_resource_minerals_add = 1
+		#tile_building_resource_engineering_research_add = 1
+	}
+	
+	planet_modifier = {
+		pop_environment_tolerance = 0.05
+	}
+	
+	prerequisites = {
+		"tech_alpha_exo_barracks"
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 2
+			from = { is_still_small_colony = yes }
+		}
+	}	
+}
+
+building_atmos_gen = {
+	base_buildtime = 360
+	
+	cost = {
+		minerals = 150
+		energy = 100
+	}
+	
+	required_resources = {
+		sr_actinides = 1
+		sr_ice = 1
+	}
+	
+	produced_resources = {
+		sr_ice = 1
+		energy = 1
+	}
+	
+	planet_modifier = {
+		pop_environment_tolerance = 0.1
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				is_planet_class = pc_asteroid
+				is_planet_class = pc_barren
+				is_planet_class = pc_nuked
+				is_planet_class = pc_toxic_habitable
+				is_planet_class = pc_frozen_habitable
+			}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_has_ice_no_actinides"
+			tile = {
+				has_ice_deposit = yes
+				not = { has_actinides_deposit = yes }				
+			}			
+		}
+	}
+	
+	prerequisites = {
+		"tech_alpha_exo_atmospheres"
+	}
+	
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			from = { is_still_small_colony = yes }
+		}
+	}	
+}
+
+building_greenhousing = {
+	tags = { hydroponics_farm }
+	base_buildtime = 270
+	
+	cost = {
+		minerals = 80
+		energy = 25
+	}
+	
+	required_resources = {
+		minerals = 0.5
+	}
+	
+	produced_resources = {
+		food = 2.5
+		energy = 0.5
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_civic = civic_agrarian_idyll
+			resources = {
+				unity = 1
+			}
+		}
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				is_planet_class = pc_arid
+				is_planet_class = pc_tundra
+			}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_no_minerals_deposit"
+			tile = {
+				not = {
+					has_resource = {
+						type = minerals
+						amount > 0						
+					}
+				}
+			}
+		}
+	}
+	
+	upgrades = {
+		building_vertical_farms
+	}
+	
+	ai_weight = {
+		weight = 2
+		modifier = {
+			weight = 2
+			from = { is_still_small_colony = yes }
+		}
+	}	
+}
+
+building_vertical_farms = {
+	tags = { hydroponics_farm }
+	base_buildtime = 360
+	is_listed = no
+	
+	cost = {
+		minerals = 150
+		energy = 50
+	}
+	
+	required_resources = {
+		minerals = 1
+	}
+	
+	produced_resources = {
+		food = 4
+		energy = 1
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_civic = civic_agrarian_idyll
+			resources = {
+				unity = 1
+			}
+		}
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				is_planet_class = pc_arid
+				is_planet_class = pc_tundra
+			}
+		}
+	}
+	
+	prerequisites = {
+		"tech_alpha_verticalfarms"
+	}
+	
+	ai_weight = {
+		weight = 5
+	}
+}

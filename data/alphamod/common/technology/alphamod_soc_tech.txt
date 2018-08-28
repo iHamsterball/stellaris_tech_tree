@@ -1,0 +1,4511 @@
+##################
+### TECH COSTS ###
+##################
+#If you change any of these, use replace in files so the values are the same across all files
+
+@tier1cost1 = 240
+@tier1cost2 = 360
+@tier1cost3 = 480
+@tier1cost4 = 600
+
+@tier2cost1 = 900
+@tier2cost2 = 1200
+@tier2cost3 = 1500
+@tier2cost4 = 1800
+
+@tier3cost1 = 2320
+@tier3cost2 = 2840
+@tier3cost3 = 3360
+@tier3cost4 = 3880
+
+@stubcost = 1
+
+####################
+### TECH WEIGHTS ###
+####################
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+@tier1weight4 = 85
+
+@tier2weight1 = 75
+@tier2weight2 = 70
+@tier2weight3 = 65
+@tier2weight4 = 60
+
+@tier3weight1 = 50
+@tier3weight2 = 45
+@tier3weight3 = 40
+@tier3weight4 = 35
+
+@stubweight = 0
+
+tech_alpha_commercial_colonies = {
+	cost = @tier1cost2
+	area = society
+	category = { computing }
+	tier = 1
+	prerequisites = { "tech_power_hub_1" }
+	weight = @tier1weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2.5
+			has_ethic = ethic_fanatic_egalitarian
+		}
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_egalitarian
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 0.75
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		modifier = {
+			factor = 0.5
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 0
+			has_ethic = ethic_hive_mind
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 2.5
+			has_ethic = ethic_fanatic_egalitarian
+		}
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_egalitarian
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 0.75
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		modifier = {
+			factor = 0.5
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 0
+			has_ethic = ethic_hive_mind
+		}
+	}
+}
+
+# Planet Type Exploitation
+tech_alpha_ocean_exploitation_1 = {
+	cost = @stubcost
+	#cost = @tier1cost3
+	area = society
+	category = { new_worlds }
+	tier = 1
+	weight = @stubweight
+	#weight = @tier1weight3
+	is_rare = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = { #for those who are only one step away in ideal planet class
+			factor = 2
+			ideal_planet_class = pc_ocean
+		}
+		modifier = { #deny those who are too far away in ideal planet class, except if they have a Pop in the Empire that prefers that planet-type. Robots can live anywhere
+			factor = 0
+			AND = {
+				ideal_planet_class = pc_desert
+				NOT = {
+					any_owned_pop = {
+						has_trait = trait_pc_ocean_preference
+					}
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = {
+			factor = 10
+			ideal_planet_class = pc_ocean
+		}
+	}
+}
+
+tech_alpha_ocean_exploitation_2 = {
+	cost = @tier2cost3
+	area = society
+	category = { new_worlds }
+	#prerequisites = { "tech_alpha_ocean_exploitation_1" }
+	tier = 2
+	weight = @tier2weight3
+	is_rare = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = { #for those who are only one step away in ideal planet class
+			factor = 2
+			ideal_planet_class = pc_ocean
+		}
+		modifier = { #deny those who are too far away in ideal planet class, except if they have a Pop in the Empire that prefers that planet-type. Robots can live anywhere
+			factor = 0
+			AND = {
+				ideal_planet_class = pc_desert
+				NOT = {
+					any_owned_pop = {
+						has_trait = trait_pc_ocean_preference
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet =  {
+					is_planet_class = pc_ocean
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			num_owned_planets < 2
+		}
+	}
+	
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = {
+			factor = 10
+			ideal_planet_class = pc_ocean
+		}
+	}
+}
+
+tech_alpha_tropical_exploitation_1 = {
+	#cost = @tier1cost3
+	cost = @stubcost
+	area = society
+	category = { new_worlds }
+	tier = 1
+	#prerequisites = { "tech_tropical_colonization" }
+	weight = @stubweight
+	#weight = @tier1weight3
+	is_rare = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = { #for those who are only one step away in ideal planet class
+			factor = 2
+			ideal_planet_class = pc_tropical
+		}
+		modifier = { #deny those who are too far away in ideal planet class, except if they have a Pop in the Empire that prefers that planet-type. Robots can live anywhere
+			factor = 0
+			AND = {
+				ideal_planet_class = pc_arctic
+				NOT = {
+					any_owned_pop = {
+						has_trait = trait_pc_tropical_preference
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet =  {
+					is_planet_class = pc_tropical
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			num_owned_planets < 2
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = {
+			factor = 10
+			ideal_planet_class = pc_tropical
+		}
+	}
+}
+
+tech_alpha_tropical_exploitation_2 = {
+	#cost = @tier2cost3
+	cost = @stubcost
+	area = society
+	category = { new_worlds }
+	tier = 2
+	#prerequisites = { "tech_alpha_tropical_exploitation_1" }
+	#weight = @tier2weight3
+	weight = @stubweight
+	is_rare = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = { #for those who are only one step away in ideal planet class
+			factor = 2
+			ideal_planet_class = pc_tropical
+		}
+		modifier = { #deny those who are too far away in ideal planet class, except if they have a Pop in the Empire that prefers that planet-type. Robots can live anywhere
+			factor = 0
+			AND = {
+				ideal_planet_class = pc_arctic
+				NOT = {
+					any_owned_pop = {
+						has_trait = trait_pc_tropical_preference
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet =  {
+					is_planet_class = pc_tropical
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			num_owned_planets < 2
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = {
+			factor = 10
+			ideal_planet_class = pc_tropical
+		}
+	}
+}
+
+tech_alpha_arctic_exploitation_1 = {
+	#cost = @tier1cost3
+	cost = @stubcost
+	area = society
+	category = { new_worlds }
+	tier = 1
+	#prerequisites = { "tech_arctic_colonization" }
+	#weight = @tier1weight3
+	weight = @stubweight
+	is_rare = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = { #for those who are only one step away in ideal planet class
+			factor = 2
+			ideal_planet_class = pc_arctic
+		}
+		modifier = { #deny those who are too far away in ideal planet class, except if they have a Pop in the Empire that prefers that planet-type. Robots can live anywhere
+			factor = 0
+			AND = {
+				ideal_planet_class = pc_desert
+				NOT = {
+					any_owned_pop = {
+						has_trait = trait_pc_arctic_preference
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet =  {
+					is_planet_class = pc_arctic
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			num_owned_planets < 2
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = {
+			factor = 10
+			ideal_planet_class = pc_arctic
+		}
+	}
+}
+
+tech_alpha_arctic_exploitation_2 = {
+	cost = @tier2cost3
+	area = society
+	category = { new_worlds }
+	tier = 2
+	#prerequisites = { "tech_alpha_arctic_exploitation_1" }
+	#prerequisites = { "tech_arctic_colonization" }
+	weight = @tier2weight3
+	is_rare = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = { #for those who are only one step away in ideal planet class
+			factor = 2
+			ideal_planet_class = pc_arctic
+		}
+		modifier = { #deny those who are too far away in ideal planet class, except if they have a Pop in the Empire that prefers that planet-type. Robots can live anywhere
+			factor = 0
+			AND = {
+				ideal_planet_class = pc_desert
+				NOT = {
+					any_owned_pop = {
+						has_trait = trait_pc_arctic_preference
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet =  {
+					is_planet_class = pc_arctic
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			num_owned_planets < 2
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = {
+			factor = 10
+			ideal_planet_class = pc_arctic
+		}
+	}
+}
+
+tech_alpha_desert_exploitation_1 = {
+	cost = @tier1cost3
+	area = society
+	category = { new_worlds }
+	tier = 1
+	#prerequisites = { "tech_desert_colonization" }
+	weight = @tier1weight3
+	is_rare = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = { #for those who are only one step away in ideal planet class
+			factor = 2
+			ideal_planet_class = pc_desert
+		}
+		modifier = { #deny those who are too far away in ideal planet class, except if they have a Pop in the Empire that prefers that planet-type. Robots can live anywhere
+			factor = 0
+			AND = {
+				ideal_planet_class = pc_arctic
+				NOT = {
+					any_owned_pop = {
+						has_trait = trait_pc_desert_preference
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet =  {
+					is_planet_class = pc_desert
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			num_owned_planets < 2
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = {
+			factor = 10
+			ideal_planet_class = pc_desert
+		}
+	}
+}
+
+tech_alpha_desert_exploitation_2 = {
+	cost = @tier2cost3
+	area = society
+	category = { new_worlds }
+	tier = 2
+	prerequisites = { "tech_alpha_desert_exploitation_1" }
+	weight = @tier2weight4
+	is_rare = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = { #for those who are only one step away in ideal planet class
+			factor = 2
+			ideal_planet_class = pc_desert
+		}
+		modifier = { #deny those who are too far away in ideal planet class, except if they have a Pop in the Empire that prefers that planet-type. Robots can live anywhere
+			factor = 0
+			AND = {
+				ideal_planet_class = pc_arctic
+				NOT = {
+					any_owned_pop = {
+						has_trait = trait_pc_desert_preference
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet =  {
+					is_planet_class = pc_desert
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			num_owned_planets < 3
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = {
+			factor = 10
+			ideal_planet_class = pc_desert
+		}
+	}
+}
+
+# Farming and Food
+tech_alpha_farming_capitals = {
+	cost = @tier2cost2
+	area = society
+	category = { biology }
+	tier = 2
+	prerequisites = { "tech_nano_vitality_crops" }
+	weight = @tier2weight2
+	is_rare = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_militarist
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_militarist
+			}
+		}
+	}
+}
+
+tech_alpha_preservations = {
+	cost = @tier2cost1
+	area = society
+	category = { biology }
+	tier = 2
+	prerequisites = { "tech_alpha_traditional_farming" }
+	weight = @tier2weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 0
+			has_ethic = ethic_hive_mind
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 0
+			has_ethic = ethic_hive_mind
+		}
+	}
+}
+
+tech_alpha_traditional_farming = {
+	cost = @tier1cost1
+	area = society
+	category = { biology }
+	tier = 1
+	prerequisites = { "tech_eco_simulation" }
+	weight = @tier1weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 2.5
+			OR = {
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier= {
+			factor = 0.25
+			OR = {
+				ideal_planet_class = pc_desert
+				ideal_planet_class = pc_arctic
+			}
+		}
+		modifier= {
+			factor = 0.75
+			OR = {
+				ideal_planet_class = pc_tundra
+				ideal_planet_class = pc_arid
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_planet =  {
+				OR = {
+					is_planet_class = pc_ocean
+					is_planet_class = pc_tropical
+					is_planet_class = pc_continental
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_militarist
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier= {
+			factor = 0.25
+			OR = {
+				ideal_planet_class = pc_desert
+				ideal_planet_class = pc_arctic
+			}
+		}
+		modifier= {
+			factor = 0.75
+			OR = {
+				ideal_planet_class = pc_tundra
+				ideal_planet_class = pc_arid
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_planet =  {
+				OR = {
+					is_planet_class = pc_ocean
+					is_planet_class = pc_tropical
+					is_planet_class = pc_continental
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_militarist
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+}
+
+tech_alpha_food_hybrids = {
+	cost = @tier2cost2
+	area = society
+	category = { biology }
+	tier = 2
+	prerequisites = { "tech_gene_crops" }
+	weight = @tier2weight2
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+}
+
+tech_alpha_intensive_hydroponics = {
+	cost = @tier1cost2
+	area = society
+	category = { biology }
+	tier = 1
+	prerequisites = { "tech_hydroponics" "tech_biolab_1" }
+	weight = @tier1weight2
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.2
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier= {
+			factor = 0.25
+			OR = {
+				ideal_planet_class = pc_desert
+				ideal_planet_class = pc_arctic
+			}
+		}
+		modifier= {
+			factor = 0.75
+			OR = {
+				ideal_planet_class = pc_tundra
+				ideal_planet_class = pc_arid
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_planet =  {
+				OR = {
+					is_planet_class = pc_ocean
+					is_planet_class = pc_tropical
+					is_planet_class = pc_continental
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_militarist
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier= {
+			factor = 0.25
+			OR = {
+				ideal_planet_class = pc_desert
+				ideal_planet_class = pc_arctic
+			}
+		}
+		modifier= {
+			factor = 0.75
+			OR = {
+				ideal_planet_class = pc_tundra
+				ideal_planet_class = pc_arid
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_planet =  {
+				OR = {
+					is_planet_class = pc_ocean
+					is_planet_class = pc_tropical
+					is_planet_class = pc_continental
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_militarist
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+}
+
+tech_alpha_intensive_hydroponics_2 = {
+	cost = @tier2cost1
+	area = society
+	category = { biology }
+	tier = 2
+	prerequisites = { "tech_alpha_intensive_hydroponics" "tech_biolab_2" "tech_alpha_food_hybrids" }
+	weight = @tier2weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.2
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier= {
+			factor = 0.25
+			OR = {
+				ideal_planet_class = pc_desert
+				ideal_planet_class = pc_arctic
+			}
+		}
+		modifier= {
+			factor = 0.75
+			OR = {
+				ideal_planet_class = pc_tundra
+				ideal_planet_class = pc_arid
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_planet =  {
+				OR = {
+					is_planet_class = pc_ocean
+					is_planet_class = pc_tropical
+					is_planet_class = pc_continental
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_militarist
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier= {
+			factor = 0.25
+			OR = {
+				ideal_planet_class = pc_desert
+				ideal_planet_class = pc_arctic
+			}
+		}
+		modifier= {
+			factor = 0.75
+			OR = {
+				ideal_planet_class = pc_tundra
+				ideal_planet_class = pc_arid
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_planet =  {
+				OR = {
+					is_planet_class = pc_ocean
+					is_planet_class = pc_tropical
+					is_planet_class = pc_continental
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_militarist
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+}
+
+tech_alpha_intensive_hydroponics_3 = {
+	cost = @tier3cost1
+	area = society
+	category = { biology }
+	tier = 3
+	prerequisites = { "tech_alpha_intensive_hydroponics_2" "tech_biolab_3" "tech_frontier_trade_alpha" }
+	weight = @tier3weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.2
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier= {
+			factor = 0.25
+			OR = {
+				ideal_planet_class = pc_desert
+				ideal_planet_class = pc_arctic
+			}
+		}
+		modifier= {
+			factor = 0.75
+			OR = {
+				ideal_planet_class = pc_tundra
+				ideal_planet_class = pc_arid
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_planet =  {
+				OR = {
+					is_planet_class = pc_ocean
+					is_planet_class = pc_tropical
+					is_planet_class = pc_continental
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_militarist
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier= {
+			factor = 0.25
+			OR = {
+				ideal_planet_class = pc_desert
+				ideal_planet_class = pc_arctic
+			}
+		}
+		modifier= {
+			factor = 0.75
+			OR = {
+				ideal_planet_class = pc_tundra
+				ideal_planet_class = pc_arid
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_planet =  {
+				OR = {
+					is_planet_class = pc_ocean
+					is_planet_class = pc_tropical
+					is_planet_class = pc_continental
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_militarist
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+}
+
+# Diplomacy
+tech_alpha_diplomatic_corps = {
+	cost = @tier1cost2
+	area = society
+	category = { statecraft }
+	tier = 1
+	#prerequisites = { "tech_xeno_outreach" }
+	weight = @tier1weight2
+
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 0.2
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 0.2
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+}
+
+tech_alpha_pacifism = {
+	cost = @tier1cost4
+	area = society
+	category = { statecraft }
+	tier = 1
+	weight = @tier1weight2
+	is_rare = yes
+	
+	#prerequisites = { "tech_alpha_diplomatic_corps" }
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 4.0
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		modifier = {
+			factor = 4.0
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 8.0
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+}
+
+tech_alpha_mediation = {
+	cost = @tier2cost1
+	area = society
+	category = { statecraft }
+	tier = 2
+	weight = @tier2weight1
+	is_rare = yes
+	
+	prerequisites = { "tech_alpha_open_embassies" "tech_alpha_pacifism" }
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		modifier = {
+			factor = 1.0
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 4.0
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		modifier = {
+			factor = 4.0
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 8.0
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+}
+
+tech_alpha_promise_eden = {
+	cost = @tier3cost1
+	area = society
+	category = { statecraft }
+	tier = 3
+	weight = @tier3weight1
+	is_rare = yes
+	
+	prerequisites = { "tech_alpha_mediation" }
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		modifier = {
+			factor = 0.25
+			NOR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = { 
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+}
+
+tech_alpha_open_embassies = {
+	cost = @tier1cost4
+	area = society
+	category = { statecraft }
+	tier = 1
+	prerequisites = { "tech_alpha_diplomatic_corps" "tech_alpha_survey_corps" }
+	weight = @tier1weight4
+
+	weight_modifier = {
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 0.2
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 0.2
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+}
+
+# Colony Local Government
+tech_alpha_colony_control = {
+	cost = @tier1cost2
+	area = society
+	category = { new_worlds }
+	tier = 1
+	prerequisites = { "tech_alpha_shuttlecraft" }
+	weight = @tier1weight2
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2.0
+			years_passed > 1
+		}
+		modifier = {
+			factor = 3.0
+			years_passed > 2
+		}		
+		modifier = {
+			factor = 5.0
+			years_passed > 3
+		}		
+		modifier = {
+			factor = 10
+			years_passed > 5
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}			
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 10
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+	}		
+}
+
+tech_colonial_administrations_alpha = {
+	cost = @tier1cost4
+	area = society
+	category = { statecraft }
+	tier = 1
+	prerequisites = { "tech_alpha_colony_control" }
+	weight = @tier1weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.2
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = { 
+				has_authority = auth_democratic
+				has_authority = auth_oligarchic
+			}
+		}
+		modifier = {
+			factor = 0.2
+			NOR = {
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_materialist
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOR = {
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_egalitarian
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 3.0
+		}
+	}
+}
+
+tech_colonial_corporations_alpha = {
+	cost = @tier1cost4
+	area = society
+	category = { statecraft }
+	tier = 1
+	prerequisites = { "tech_alpha_colony_control" "tech_alpha_commercial_colonies" }
+	weight = @tier2weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			or = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+		modifier = {
+			factor = 1.2
+			has_tradition = tr_prosperity_trans_stellar_corporations
+		}
+		modifier = {
+			factor = 2.0
+			has_valid_civic = civic_corporate_dominion
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { has_tradition = tr_prosperity_trans_stellar_corporations }
+			NOR = {
+				has_government = gov_plutocratic_oligarchy
+				has_government = gov_megacorporation
+				has_government = gov_irenic_bureaucracy
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 0
+			or = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 3.0
+		}
+		modifier = {
+			factor = 2.0
+			has_tradition = tr_prosperity_trans_stellar_corporations
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_tradition = tr_prosperity_trans_stellar_corporations }
+			NOR = {
+				has_government = gov_plutocratic_oligarchy
+				has_government = gov_megacorporation
+				has_government = gov_irenic_bureaucracy
+			}
+		}
+	}
+}
+
+tech_colonial_corporations_alpha_2 = {
+	cost = @tier2cost2
+	area = society
+	category = { statecraft }
+	tier = 2
+	prerequisites = { "tech_colonial_corporations_alpha" "tech_trade_ports" }
+	weight = @tier2weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			or = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+		modifier = {
+			factor = 2.0
+			has_valid_civic = civic_corporate_dominion
+		}
+		modifier = {
+			factor = 0.1
+			NOR = {
+				has_government = gov_plutocratic_oligarchy
+				has_government = gov_megacorporation
+				has_government = gov_irenic_bureaucracy
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 0
+			or = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 3.0
+		}
+	}
+}
+
+tech_colonial_warlords_alpha = {
+	cost = @tier1cost4
+	area = society
+	category = { statecraft }
+	tier = 1
+	prerequisites = { "tech_alpha_colony_control" "tech_centralized_command" }
+	weight = @tier2weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 2.0
+			has_valid_civic = civic_warrior_culture
+		}
+		modifier = {
+			factor = 0.2
+			NOR = {
+				has_authority = auth_dictatorial
+				has_authority = auth_imperial
+			}
+		}
+		modifier = {
+			factor = 0.25
+			NOR = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_pacifist	
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 3.0
+		}
+	}
+}
+
+tech_colonial_dictatorship_alpha = {
+	cost = @tier1cost4
+	area = society
+	category = { statecraft }
+	tier = 1
+	prerequisites = { "tech_alpha_colony_control" "tech_homeworld_security" }
+	weight = @tier2weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.2
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_authority = auth_dictatorial }
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 3.0
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_authority = auth_dictatorial }
+		}
+	}
+}
+
+tech_colonial_spiritualleaders_alpha = {
+	cost = @tier1cost4
+	area = society
+	category = { statecraft }
+	tier = 1
+	prerequisites = { "tech_alpha_colony_control" }
+	weight = @tier2weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.2
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_authority = auth_imperial
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_exalted_priesthood
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 0
+			has_authority = auth_democratic
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 3.0
+		}
+	}
+}
+
+tech_colonial_councils_alpha = {
+	cost = @tier1cost4
+	area = society
+	category = { statecraft }
+	tier = 1
+	prerequisites = { "tech_alpha_colony_control" }
+	weight = @tier2weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_authority = auth_democratic }
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 3.0
+		}
+	}
+}
+
+# Ethics Specific
+
+# Fanatic Collectivists
+# tech_alpha_hivemind = {
+	# cost = @tier1cost2
+	# area = society
+	# category = { biology }
+	# tier = 1
+	# weight = @tier1weight3
+	# is_rare = yes
+	
+	# weight_modifier = {
+		# modifier = {
+			# factor = 0
+			# NOT = {
+				# has_ethic = ethic_fanatic_authoritarian
+			# }
+		# }
+		# modifier = {
+			# factor = 2.5
+			# has_ethic = ethic_fanatic_authoritarian
+		# }
+	# }
+	# ai_weight = {
+		# modifier = {
+			# factor = 0
+			# NOT = {
+				# has_ethic = ethic_fanatic_authoritarian
+			# }
+		# }
+		# modifier = {
+			# factor = 200
+			# has_ethic = ethic_fanatic_authoritarian
+		# }
+	# }
+# }
+
+# tech_alpha_hivemind_2 = {
+	# cost = @tier1cost3
+	# area = society
+	# category = { biology }
+	# tier = 1
+	# weight = @tier1weight3
+	# is_rare = yes
+	# prerequisites = { "tech_alpha_hivemind" "tech_genome_mapping" }
+	
+	# weight_modifier = {
+		# modifier = {
+			# factor = 0
+			# NOT = {
+				# has_ethic = ethic_fanatic_authoritarian
+			# }
+		# }
+		# modifier = {
+			# factor = 2.0
+			# has_ethic = ethic_fanatic_authoritarian
+		# }
+	# }
+	# ai_weight = {
+		# modifier = {
+			# factor = 0
+			# NOT = {
+				# has_ethic = ethic_fanatic_authoritarian
+			# }
+		# }
+		# modifier = {
+			# factor = 100
+			# has_ethic = ethic_fanatic_authoritarian
+		# }
+	# }
+# }
+
+# tech_alpha_hivemind_3 = {
+	# cost = @tier2cost2
+	# area = society
+	# category = { biology }
+	# tier = 2
+	# weight = @tier2weight2
+	# is_rare = yes
+	# prerequisites = { "tech_alpha_hivemind_2" "tech_improved_databank_uplinks" }
+	
+	# weight_modifier = {
+		# modifier = {
+			# factor = 0
+			# NOT = {
+				# has_ethic = ethic_fanatic_authoritarian
+			# }
+		# }
+		# modifier = {
+			# factor = 2.0
+			# has_ethic = ethic_fanatic_authoritarian
+		# }
+	# }
+	# ai_weight = {
+		# modifier = {
+			# factor = 0
+			# NOT = {
+				# has_ethic = ethic_fanatic_authoritarian
+			# }
+		# }
+		# modifier = {
+			# factor = 100
+			# has_ethic = ethic_fanatic_authoritarian
+		# }
+	# }
+# }
+
+# Collectivists
+tech_alpha_castes = {
+	cost = @tier1cost4
+	area = society
+	category = { statecraft }
+	tier = 1
+	weight = @tier1weight2
+	is_rare = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 3.0
+			has_ethic = ethic_fanatic_authoritarian
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 3.0
+			has_ethic = ethic_fanatic_authoritarian
+		}
+	}
+}
+
+tech_alpha_castes_2 = {
+	cost = @tier1cost3
+	area = society
+	category = { statecraft }
+	tier = 2
+	weight = @tier2weight1
+	is_rare = yes
+	
+	prerequisites = { "tech_alpha_castes" }
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 3.0
+			has_ethic = ethic_fanatic_authoritarian
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 3.0
+			has_ethic = ethic_fanatic_authoritarian
+		}
+	}
+}
+
+# Misc
+tech_alpha_military_service = {
+	cost = @tier1cost1
+	area = society
+	category = { military_theory }
+	prerequisites = { "tech_centralized_command" }
+	tier = 1	
+	weight = @tier1weight2
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+		modifier = {
+			factor = 2.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_xenophobe
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 5.0
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}		
+	}
+}
+
+tech_alpha_military_service_2 = {
+	cost = @tier1cost3
+	area = society
+	category = { military_theory }
+	prerequisites = { "tech_alpha_military_service" }
+	tier = 1	
+	weight = @tier1weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+		modifier = {
+			factor = 2.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_xenophobe
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 5.0
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}		
+	}
+}
+
+tech_alpha_military_service_3 = {
+	cost = @tier1cost4
+	area = society
+	category = { military_theory }
+	prerequisites = { "tech_alpha_military_service" }
+	tier = 1	
+	weight = @tier1weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+		modifier = {
+			factor = 2.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_xenophobe
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 5.0
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}		
+	}
+}
+
+tech_alpha_fanatic_military = {
+	cost = @tier2cost2
+	area = society
+	category = { military_theory }
+	prerequisites = { "tech_alpha_military_service" }
+	tier = 2	
+	weight = @tier2weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOT = {
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 100
+			has_ethic = ethic_fanatic_militarist
+		}		
+	}
+}
+
+tech_alpha_fanatic_military_2 = {
+	cost = @tier2cost3
+	area = society
+	category = { military_theory }
+	prerequisites = { "tech_alpha_fanatic_military" }
+	tier = 2	
+	weight = @tier2weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOT = {
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 100
+			has_ethic = ethic_fanatic_militarist
+		}		
+	}
+}
+
+tech_alpha_academies = {
+	cost = @tier1cost4
+	area = society
+	category = { statecraft }
+	tier = 1	
+	prerequisites = { "tech_space_recreation" }
+	weight = 80
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0
+			has_ethic = ethic_hive_mind
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0
+			has_ethic = ethic_hive_mind
+		}
+	}
+}
+
+# Xenophobes
+tech_alpha_xenophobia = {
+	cost = @tier1cost4
+	area = society
+	category = { statecraft }
+	tier = 1
+	weight = @tier1weight2
+	is_rare = yes
+	
+	prerequisites = { "tech_homeworld_security" }
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_fanatic_xenophobe
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 2.5
+			has_ethic = ethic_fanatic_xenophobe
+		}
+	}
+}
+
+tech_alpha_gene_analytics = {
+	cost = @tier1cost2
+	area = society
+	category = { biology }
+	tier = 1
+	weight = @tier1weight1
+	is_rare = yes
+	
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_fanatic_xenophobe
+		}
+	}
+	
+	prerequisites = { "tech_alpha_xenophobia" "tech_genome_mapping" }
+}
+
+tech_alpha_fanatic_xenophobia = {
+	cost = @tier2cost3
+	area = society
+	category = { statecraft }
+	tier = 2
+	weight = @tier2weight1
+	is_rare = yes
+	
+	prerequisites = { "tech_alpha_xenophobia" "tech_alpha_aggressive_security" }
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+}
+
+tech_alpha_fanatic_xenophobia_2 = {
+	cost = @tier1cost3
+	area = society
+	category = { statecraft }
+	tier = 1
+	weight = @tier1weight3
+	is_rare = yes
+	
+	prerequisites = { "tech_alpha_xenophobia" }
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 100
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+}
+
+tech_alpha_gene_analytics_2 = {
+	cost = @tier2cost2
+	area = society
+	category = { biology }
+	tier = 2
+	weight = @tier2weight2
+	is_dangerous = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 10
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	prerequisites = { "tech_alpha_fanatic_xenophobia" "tech_alpha_gene_analytics" }
+}
+
+tech_alpha_gene_analytics_3 = {
+	cost = @tier2cost3
+	area = society
+	category = { biology }
+	tier = 2
+	weight = @tier2weight1
+	is_dangerous = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 10
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	prerequisites = { "tech_alpha_gene_analytics_2" }
+}
+
+# Materialists and Individualists
+tech_alpha_materialism = {
+	cost = @tier1cost4
+	area = society
+	category = { statecraft }
+	tier = 1
+	weight = @tier1weight2
+	is_rare = yes
+	
+	prerequisites = { "tech_trade_ports" }
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+	}
+}
+
+tech_alpha_luxury_industries = {
+	cost = @tier1cost2
+	area = society
+	category = { statecraft }
+	tier = 1
+	weight = @tier1weight3
+	is_rare = yes
+	
+	prerequisites = { "tech_alpha_materialism" "tech_space_recreation" }
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+	}
+}
+
+# Fanatic Materialists and Fanatic Individualists
+tech_alpha_fanatic_materialism = {
+	cost = @tier2cost4
+	area = society
+	category = { statecraft }
+	tier = 2
+	weight = @tier2weight1
+	is_rare = yes
+	
+	prerequisites = { "tech_alpha_materialism" }
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_fanatic_egalitarian
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_fanatic_egalitarian
+		}
+	}
+}
+
+tech_alpha_fanatic_materialism_2 = {
+	cost = @tier2cost4
+	area = society
+	category = { statecraft }
+	tier = 2
+	weight = @tier2weight2
+	is_rare = yes
+	
+	prerequisites = { "tech_alpha_fanatic_materialism" }
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_fanatic_egalitarian
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_fanatic_egalitarian
+		}
+	}
+}
+
+# Population Centers
+tech_alpha_hives = {
+	cost = @tier2cost2
+	area = society
+	category = { new_worlds }
+	tier = 2	
+	prerequisites = { "tech_frontier_growth_alpha" }
+	weight = @tier2weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+	}
+}
+
+tech_alpha_sprawls = {
+	cost = @tier2cost2
+	area = society
+	category = { new_worlds }
+	tier = 2	
+	prerequisites = { "tech_frontier_growth_alpha" "tech_space_recreation" }
+	weight = @tier2weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+	}
+}
+
+tech_alpha_retreats = {
+	cost = @tier2cost2
+	area = society
+	category = { new_worlds }
+	tier = 2	
+	prerequisites = { "tech_frontier_growth_alpha" }
+	weight = @tier2weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+}
+
+tech_alpha_cultures = {
+	cost = @tier2cost2
+	area = society
+	category = { new_worlds }
+	tier = 2	
+	prerequisites = { "tech_frontier_growth_alpha" "tech_merchant_companies" }
+	weight = @tier2weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+	}
+}
+
+tech_alpha_citadels = {
+	cost = @tier2cost2
+	area = society
+	category = { new_worlds }
+	tier = 2	
+	prerequisites = { "tech_frontier_growth_alpha" }
+	weight = @tier2weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+}
+
+tech_alpha_sanctuaries = {
+	cost = @tier2cost2
+	area = society
+	category = { new_worlds }
+	tier = 2	
+	prerequisites = { "tech_frontier_growth_alpha" }
+	weight = @tier2weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+}
+
+tech_alpha_orders = {
+	cost = @tier2cost2
+	area = society
+	category = { new_worlds }
+	tier = 2	
+	prerequisites = { "tech_frontier_growth_alpha" }
+	weight = @tier2weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+}
+
+tech_alpha_arcologies = {
+	cost = @tier2cost2
+	area = society
+	category = { new_worlds }
+	tier = 2	
+	prerequisites = { "tech_frontier_growth_alpha" "tech_alpha_micro_fission" }
+	weight = @tier2weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+	}
+}
+
+# Security
+tech_homeworld_security = {
+	cost = @tier1cost2
+	area = society
+	category = { new_worlds }
+	tier = 1	
+	#prerequisites = { "tech_xeno_outreach" }
+	weight = @tier1weight2
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.2
+			years_passed > 1
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 3
+		}		
+		modifier = {
+			factor = 1.6
+			years_passed > 5
+		}		
+		modifier = {
+			factor = 1.8
+			years_passed > 10
+		}
+		modifier = {
+			factor = 3.0
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_pacifist
+			}
+		}
+		modifier = {
+			factor = 0.1
+			OR = {
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 3
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_pacifist
+			}
+		}
+		modifier = {
+			factor = 0.1
+			OR = {
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+}
+
+# tech_alpha_surveillance_stations = {
+	# cost = @tier1cost1
+	# area = society
+	# category = { military_theory }
+	# tier = 1	
+	# prerequisites = { "tech_homeworld_security" }
+	# weight = @tier1weight3
+	
+	# weight_modifier = {		
+		# modifier = {
+			# factor = 1.2
+			# years_passed > 5
+		# }		
+		# modifier = {
+			# factor = 1.5
+			# years_passed > 10
+		# }
+		# modifier = {
+			# factor = 3.0
+			# OR = {
+				# has_ethic = ethic_xenophobe
+				# has_ethic = ethic_fanatic_xenophobe
+				# has_ethic = ethic_fanatic_militarist
+			# }
+		# }
+		# modifier = {
+			# factor = 0.25
+			# OR = {
+				# has_ethic = ethic_xenophile
+				# has_ethic = ethic_pacifist
+			# }
+		# }
+		# modifier = {
+			# factor = 0
+			# OR = {
+				# has_ethic = ethic_fanatic_xenophile
+				# has_ethic = ethic_fanatic_pacifist
+			# }
+		# }
+	# }
+	
+	# ai_weight = {
+		# modifier = {
+			# factor = 3
+			# OR = {
+				# has_ethic = ethic_xenophobe
+				# has_ethic = ethic_fanatic_xenophobe
+				# has_ethic = ethic_fanatic_militarist
+			# }
+		# }
+		# modifier = {
+			# factor = 0.25
+			# OR = {
+				# has_ethic = ethic_xenophile
+				# has_ethic = ethic_pacifist
+			# }
+		# }
+		# modifier = {
+			# factor = 0
+			# OR = {
+				# has_ethic = ethic_fanatic_xenophile
+				# has_ethic = ethic_fanatic_pacifist
+			# }
+		# }
+	# }
+# }
+
+tech_alpha_surveillance_centers = {
+	cost = @tier1cost2
+	area = society
+	category = { military_theory }
+	tier = 1	
+	prerequisites = { "tech_homeworld_security" }
+	weight = @tier1weight2
+	
+	weight_modifier = {		
+		modifier = {
+			factor = 3.0
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_pacifist
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 3
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_pacifist
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+}
+
+tech_alpha_aggressive_security = {
+	cost = @tier1cost1
+	area = society
+	category = { military_theory }
+	tier = 1	
+	prerequisites = { "tech_homeworld_security" }
+	weight = @tier1weight3
+	
+	weight_modifier = {		
+		modifier = {
+			factor = 1.2
+			years_passed > 3
+		}		
+		modifier = {
+			factor = 1.5
+			years_passed > 10
+		}
+		modifier = {
+			factor = 3.0
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_pacifist
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 3
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_pacifist
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+}
+
+# Trade
+tech_trade_ports = {
+	cost = @tier1cost2
+	area = society
+	category = { new_worlds }
+	tier = 1	
+	prerequisites = { "tech_alpha_shuttlecraft" "tech_alpha_commercial_colonies" }
+	weight = @tier1weight1
+	
+	# cost = 0
+	# area = society
+	# start_tech = yes
+	# category = { new_worlds }
+	# tier = 0
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			years_passed > 2
+		}
+		modifier = {
+			factor = 3
+			years_passed > 5
+		}		
+		modifier = {
+			factor = 4
+			years_passed > 10
+		}		
+		modifier = {
+			factor = 5
+			years_passed > 20
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0
+			has_ethic = ethic_hive_mind
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 3.0
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.1
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0
+			has_ethic = ethic_hive_mind
+		}
+	}
+}
+
+tech_merchant_companies = {
+	cost = @tier2cost3
+	area = society
+	category = { statecraft }
+	tier = 2
+	prerequisites = { "tech_trade_ports" "tech_matter_replication_alpha" }
+	weight = @tier2weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.2
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_egalitarian
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0
+			has_ethic = ethic_hive_mind
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_materialist
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0
+			has_ethic = ethic_hive_mind
+		}
+	}
+}
+
+tech_merchant_companies_2 = {
+	cost = @tier2cost1
+	area = society
+	category = { statecraft }
+	tier = 2
+	prerequisites = { "tech_merchant_companies" }
+	weight = @tier2weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.2
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_egalitarian
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0
+			has_ethic = ethic_hive_mind
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_materialist
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0
+			has_ethic = ethic_hive_mind
+		}
+	}
+}
+
+# Frontiers
+tech_frontier_trade_alpha = {
+	cost = @tier1cost2
+	area = society
+	category = { new_worlds }
+	tier = 1	
+	prerequisites = { "tech_trade_ports" }
+	weight = @tier1weight2
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			years_passed > 3
+		}
+		modifier = {
+			factor = 3
+			years_passed > 10
+		}		
+		modifier = {
+			factor = 4
+			years_passed > 15
+		}		
+		modifier = {
+			factor = 5
+			years_passed > 20
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 2.5
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+}
+
+tech_alpha_frontier_supply = {
+	cost = @tier1cost3
+	area = society
+	category = { new_worlds }
+	tier = 1
+	prerequisites = { "tech_frontier_trade_alpha" }
+	weight = @tier1weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			years_passed > 10
+		}		
+		modifier = {
+			factor = 3
+			years_passed > 15
+		}		
+		modifier = {
+			factor = 4
+			years_passed > 20
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 2.5
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+}
+
+tech_frontier_growth_alpha = {
+	cost = @tier2cost1
+	area = society
+	category = { new_worlds }
+	tier = 2	
+	prerequisites = { "tech_alpha_frontier_supply" }
+	weight = @tier2weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			years_passed > 20
+		}
+		modifier = {
+			factor = 2
+			years_passed > 30
+		}		
+		modifier = {
+			factor = 2
+			years_passed > 40
+		}		
+		modifier = {
+			factor = 2
+			years_passed > 50
+		}
+		modifier = {
+			factor = 1.2
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.1
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+}
+
+# Health and Happiness
+tech_space_recreation = {
+	cost = @tier1cost2
+	area = society
+	category = { new_worlds }
+	tier = 1	
+	#prerequisites = { "tech_xeno_outreach" }
+	weight = @tier1weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			years_passed > 1
+		}
+		modifier = {
+			factor = 3
+			years_passed > 2
+		}		
+		modifier = {
+			factor = 4
+			years_passed > 3
+		}		
+		modifier = {
+			factor = 5
+			years_passed > 4
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0
+			has_ethic = ethic_hive_mind
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.1
+			OR = {
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0
+			has_ethic = ethic_hive_mind
+		}
+	}
+}
+
+tech_alpha_medical_advances = {
+	cost = @tier2cost1
+	area = society
+	tier = 2
+	category = { biology }
+	prerequisites = { "tech_frontier_hospital" }
+	weight = @tier2weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2.0
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 10
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 15
+		}		
+		modifier = {
+			factor = 1.8
+			years_passed > 20
+		}		
+		modifier = {
+			factor = 2.0
+			years_passed > 30
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0		
+			has_ascension_perk = ap_the_flesh_is_weak
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 1.2
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		modifier = {
+			factor = 0.9
+			OR = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0		
+			has_ascension_perk = ap_the_flesh_is_weak
+		}
+	}
+}
+
+tech_alpha_medical_advances_2 = {
+	cost = @tier2cost3
+	area = society
+	tier = 2
+	category = { biology }
+	prerequisites = { "tech_alpha_medical_advances" "tech_genome_mapping" }
+	weight = @tier2weight3
+	
+	modifier = {
+		pop_growth_speed = 0.05
+		leader_age = 10
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2.0
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0		
+			has_ascension_perk = ap_the_flesh_is_weak
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 1.2
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		modifier = {
+			factor = 0.9
+			OR = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0		
+			has_ascension_perk = ap_the_flesh_is_weak
+		}
+	}
+}
+
+tech_alpha_medical_advances_3 = {
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	category = { biology }
+	prerequisites = { "tech_alpha_medical_advances_2" }
+	weight = @tier3weight1
+	
+	modifier = {
+		pop_growth_speed = 0.05
+		pop_environment_tolerance = 0.05
+		leader_age = 15
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2.0
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0		
+			has_ascension_perk = ap_the_flesh_is_weak
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 1.2
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		modifier = {
+			factor = 0.9
+			OR = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0		
+			has_ascension_perk = ap_the_flesh_is_weak
+		}
+	}
+}
+
+tech_alpha_medical_advances_4 = {
+	cost = @tier3cost3
+	area = society
+	tier = 3
+	category = { biology }
+	prerequisites = { "tech_alpha_medical_advances_3" "tech_cloning" }
+	weight = @tier3weight3
+	
+	modifier = {
+		pop_happiness = 0.05
+		leader_age = 25
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2.0
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0		
+			has_ascension_perk = ap_the_flesh_is_weak
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 1.2
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		modifier = {
+			factor = 0.9
+			OR = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 0		
+			has_ascension_perk = ap_the_flesh_is_weak
+		}
+	}
+}
+	
+tech_alpha_orbital_community = {
+	cost = @tier1cost2
+	area = society
+	category = { new_worlds }
+	tier = 1	
+	prerequisites = { "tech_space_recreation" }
+	weight = @tier1weight2
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			years_passed > 1
+		}
+		modifier = {
+			factor = 3
+			years_passed > 2
+		}		
+		modifier = {
+			factor = 4
+			years_passed > 3
+		}		
+		modifier = {
+			factor = 5
+			years_passed > 4
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 0
+			has_ethic = ethic_hive_mind
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 0
+			has_ethic = ethic_hive_mind
+		}
+	}
+}
+	
+tech_alpha_orbital_faith = {
+	cost = @tier1cost1
+	area = society
+	category = { new_worlds }
+	tier = 1	
+	prerequisites = { "tech_colonial_spiritualleaders_alpha" }
+	weight = @tier1weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_spiritualist
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOT = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_fanatic_spiritualist
+		}
+	}
+}
+
+tech_fallen_food = {
+	cost = @tier3cost3
+	area = society
+	category = { biology }
+	tier = 3
+	prerequisites = { "tech_alpha_intensive_hydroponics_3" }
+	weight = @tier3weight2
+	is_rare = yes
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			not = {
+				any_owned_planet = {
+					has_building = building_agri_processing_complex
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 100
+		}
+	}
+}

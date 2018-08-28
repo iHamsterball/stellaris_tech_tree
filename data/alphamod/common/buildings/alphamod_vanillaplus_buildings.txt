@@ -1,0 +1,459 @@
+@b0time = 90
+@b0cost = 30
+@b0effect = 1
+@b0upkeep = 0.5
+
+@b1time = 180
+@b1cost = 60
+@b1effect = 2
+@b1upkeep = 1
+
+@b2time = 180
+@b2cost = 90
+@b2effect = 3
+@b2upkeep = 1.5
+
+@b3time = 180
+@b3cost = 120
+@b3effect = 4
+@b3upkeep = 2
+
+@b4time = 180
+@b4cost = 150
+@b4effect = 5
+@b4upkeep = 2.5
+
+@b5time = 360
+@b5cost = 200
+@b5effect = 8
+@b5upkeep = 3
+
+@feupkeep = 4
+@feproduction = 12
+
+# AlphaMod Make research buildings stronger
+@science1 = 2
+@science2 = 3
+@science3 = 5
+@science4 = 6
+@science5 = 8
+
+building_betharian_mine = {
+	base_buildtime = @b2time
+	
+	cost = {
+		minerals = @b1cost
+	}
+	
+	produced_resources = {
+		minerals = 2
+		sr_betharian2 = 1
+		engineering_research = 1
+	}
+	
+	potential = {
+		planet = {
+			any_tile = {
+				has_resource = {
+					type = sr_betharian2
+					amount > 0						
+				}
+			}			
+		}
+	}
+	
+	prerequisites = {
+		"tech_mine_betharian"
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_betharian_deposit"
+			tile = {
+				has_resource = {
+					type = sr_betharian2
+					amount > 0						
+				}
+			}				
+		}
+	}
+	
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.1
+			from = { is_still_small_colony = yes }
+		}
+	}
+}
+
+# building_mining_smelter_1 = {
+	# base_buildtime = @b1time
+	
+	# cost = {
+		# minerals = @b0cost
+	# }
+	
+	# produced_resources = {
+		# minerals = 1
+		# energy = 2
+	# }
+	
+	# planet_modifier = {
+		# pop_environment_tolerance = -0.03
+	# }
+	
+	# adjacency_bonus = {
+		# tile_building_resource_energy_add = 0.5
+	# }
+	
+	# upgrades = {
+		# building_mining_smelter_2
+	# }	
+	
+	# prerequisites = {
+		# "tech_basic_industry"
+	# }
+	
+	# allow = {
+		# custom_tooltip = {
+			# text = "requires_minerals_deposit"
+			# tile = {
+				# has_resource = {
+					# type = minerals
+					# amount > 0						
+				# }
+			# }
+		# }
+	# }
+# }
+
+# building_mining_smelter_2 = {
+	# base_buildtime = @b2time
+	# is_listed = no
+	
+	# cost = {
+		# minerals = @b2cost
+		# energy = @b1cost
+	# }
+	
+	# produced_resources = {
+		# minerals = 1.5
+		# energy = 4
+	# }
+	
+	# planet_modifier = {
+		# pop_environment_tolerance = -0.02
+	# }
+	
+	# adjacency_bonus = {
+		# tile_building_resource_energy_add = 0.5
+	# }
+	
+	# upgrades = {
+		# building_mining_smelter_3
+	# }	
+	
+	# prerequisites = {
+		# "tech_mining_network_2"
+	# }
+	
+	# allow = {
+		# custom_tooltip = {
+			# text = "requires_minerals_deposit"
+			# tile = {
+				# has_resource = {
+					# type = minerals
+					# amount > 0						
+				# }
+			# }
+		# }
+	# }
+# }
+
+# building_mining_smelter_3 = {
+	# base_buildtime = @b3time
+	# is_listed = no
+	
+	# cost = {
+		# minerals = @b3cost
+		# energy = @b2cost
+	# }
+	
+	# produced_resources = {
+		# minerals = 2
+		# energy = 6
+	# }
+	
+	# adjacency_bonus = {
+		# tile_building_resource_energy_add = 1.0
+	# }
+	
+	# planet_modifier = {
+		# pop_environment_tolerance = -0.01
+	# }
+	
+	# upgrades = {
+		# building_mining_smelter_4
+	# }	
+	
+	# prerequisites = {
+		# "tech_mining_network_3"
+	# }
+	
+	# allow = {
+		# custom_tooltip = {
+			# text = "requires_minerals_deposit"
+			# tile = {
+				# has_resource = {
+					# type = minerals
+					# amount > 0						
+				# }
+			# }
+		# }
+	# }
+# }
+
+# building_mining_smelter_4 = {
+	# base_buildtime = @b4time
+	# is_listed = no
+	
+	# cost = {
+		# minerals = @b4cost
+		# energy = @b2cost
+	# }
+	
+	# produced_resources = {
+		# minerals = 3
+		# energy = 8
+	# }
+	
+	# adjacency_bonus = {
+		# tile_building_resource_energy_add = 1.5
+	# }
+	
+	# prerequisites = {
+		# "tech_mining_network_4"
+	# }
+	
+	# allow = {
+		# custom_tooltip = {
+			# text = "requires_minerals_deposit"
+			# tile = {
+				# has_resource = {
+					# type = minerals
+					# amount > 0						
+				# }
+			# }
+		# }
+	# }
+# }
+
+# building_production_plant_1 = {
+	# base_buildtime = @b1time
+	
+	# cost = {
+		# minerals = @b1cost
+	# }
+	
+	# produced_resources = {
+		# energy = 1
+		# minerals = 2
+	# }
+	
+	# upgrades = {
+		# building_production_plant_2
+	# }
+	
+	# adjacency_bonus = {
+		# tile_building_resource_minerals_add = 0.5
+	# }
+	
+	# planet_modifier = {
+		# pop_environment_tolerance = -0.02
+	# }
+	
+	# prerequisites = {
+		# "tech_power_plant_1"
+	# }
+	
+	# allow = {
+		# custom_tooltip = {
+			# text = "requires_energy_deposit"
+			# tile = {
+				# has_resource = {
+					# type = energy
+					# amount > 0						
+				# }
+			# }
+		# }
+	# }
+# }
+
+# building_production_plant_2 = {
+	# base_buildtime = @b2time
+	# is_listed = no
+	
+	# cost = {
+		# minerals = @b2cost
+	# }
+	
+	# produced_resources = {
+		# energy = 1.5
+		# minerals = 3
+	# }
+	
+	# upgrades = {
+		# building_production_plant_3
+	# }
+	
+	# adjacency_bonus = {
+		# tile_building_resource_minerals_add = 0.5
+	# }
+	
+	# planet_modifier = {
+		# pop_environment_tolerance = -0.01
+	# }
+	
+	# prerequisites = {
+		# "tech_power_plant_2"
+	# }
+	
+	# allow = {
+		# custom_tooltip = {
+			# text = "requires_energy_deposit"
+			# tile = {
+				# has_resource = {
+					# type = energy
+					# amount > 0						
+				# }
+			# }
+		# }
+	# }
+# }
+
+# building_production_plant_3 = {
+	# base_buildtime = @b3time
+	# is_listed = no
+	
+	# cost = {
+		# minerals = @b3cost
+	# }
+	
+	# produced_resources = {
+		# energy = 2
+		# minerals = 4
+	# }
+	
+	# upgrades = {
+		# building_production_plant_4
+	# }
+	
+	# adjacency_bonus = {
+		# tile_building_resource_minerals_add = 1
+	# }
+	
+	# planet_modifier = {
+		# pop_environment_tolerance = -0.01
+	# }
+	
+	# prerequisites = {
+		# "tech_power_plant_3"
+	# }
+	
+	# allow = {
+		# custom_tooltip = {
+			# text = "requires_energy_deposit"
+			# tile = {
+				# has_resource = {
+					# type = energy
+					# amount > 0						
+				# }
+			# }
+		# }
+	# }
+# }
+
+# building_production_plant_4 = {
+	# base_buildtime = @b4time
+	# is_listed = no
+	
+	# cost = {
+		# minerals = @b4cost
+	# }
+	
+	# produced_resources = {
+		# energy = 2.5
+		# minerals = 6
+	# }
+	
+	# adjacency_bonus = {
+		# tile_building_resource_minerals_add = 1
+	# }
+	
+	# prerequisites = {
+		# "tech_power_plant_4"
+	# }
+	
+	# allow = {
+		# custom_tooltip = {
+			# text = "requires_energy_deposit"
+			# tile = {
+				# has_resource = {
+					# type = energy
+					# amount > 0						
+				# }
+			# }
+		# }
+	# }
+# }
+
+# building_betharian_power_plant_5 = {
+	# base_buildtime = @b5time
+	# is_listed = no
+	
+	# cost = {
+		# minerals = @b4cost
+		# energy = @b5cost
+	# }
+	
+	# potential = {
+		# planet = {
+			# OR = {
+				# has_building = "building_capital_2"
+				# has_building = "building_capital_3"
+				# has_building = "building_commerce_coord"
+			# }
+			# owner = {
+				# has_technology = "tech_antimatter_power"
+				# has_technology = "tech_power_plant_4"
+				# OR = {
+					# has_ethic = ethic_militarist
+					# has_ethic = ethic_fanatic_militarist
+					# has_ethic = ethic_materialist
+					# has_ethic = ethic_fanatic_materialist
+					# has_ethic = ethic_fanatic_egalitarian
+				# }
+			# }
+		# }
+	# }
+	
+	# adjacency_bonus = {
+		# tile_building_resource_energy_add = 2.5
+	# }
+	
+	# produced_resources = {
+		# energy = 15
+	# }
+	
+	# required_resources = {
+		# sr_betharian2 = 1
+		# sr_antimatter = 1
+	# }
+	
+	# planet_modifier = {
+		# pop_environment_tolerance = -0.02
+	# }
+# }

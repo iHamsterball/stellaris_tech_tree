@@ -1,0 +1,325 @@
+@base_moon_distance = 10
+
+# Yummy 1
+alphamod_init_01 = {
+	class = "rl_standard_stars"
+	
+	usage = misc_system_init
+	usage_odds = 5
+	max_instances = 2
+	
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 40
+
+	planet = {
+		count = { min = 1 max = 3 }
+		orbit_distance = { min = 10 max = 20 }
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 2 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = { min = 5 max = 10 }
+		}
+	}
+	
+	change_orbit = 25
+	
+	planet = {
+		count = 1
+		orbit_distance = 5
+		orbit_angle = { min = 90 max = 270 }
+		class = random_colonizable
+		size = { min = 16 max = 25 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = 1
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+			class = random_colonizable
+			size = { min = 8 max = 13 }
+		}
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		count = 1
+		orbit_distance = 5
+		orbit_angle = { min = 90 max = 270 }
+		class = pc_gaia
+		size = { min = 12 max = 16 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = 1
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 10
+			class = pc_gaia
+			size = { min = 6 max = 10 }
+		}
+	}
+	
+	change_orbit = 25
+
+	planet = {
+		count = { min = 1 max = 3 }
+		orbit_distance = { min = 10 max = 20 }
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 2 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = { min = 5 max = 10 }
+		}
+	}
+}
+
+# Basic 1
+alphamod_init_02 = {
+	class = "rl_standard_stars"
+	
+	usage = misc_system_init
+	usage_odds = 25
+	max_instances = 5
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 25
+	
+	planet = {
+		count = { min = 1 max = 4 }
+		orbit_distance = { min = 10 max = 20 }
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 2 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = { min = 5 max = 10 }
+		}
+	}
+	
+	change_orbit = 40
+	
+	planet = {
+		count = { min = 0 max = 2 }
+		orbit_distance = { min = 10 max = 25 }
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 2 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = { min = 5 max = 10 }
+		}
+	}
+	
+	change_orbit = 35
+	
+	planet = {
+		count = 1
+		orbit_distance = { min = 10 max = 25 }
+		orbit_angle = { min = 90 max = 270 }
+		class = random_colonizable
+		size = { min = 10 max = 20 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = { min = 5 max = 10 }
+		}
+	}
+	
+	change_orbit = 20
+	
+	planet = {
+		count = { min = 1 max = 3 }
+		orbit_distance = { min = 10 max = 25 }
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 3 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = { min = 5 max = 10 }
+		}
+	}
+}
+
+# Gas Giant with big habitable moon
+alphamod_init_03 = {
+	class = "rl_standard_stars"
+	
+	usage = misc_system_init
+	usage_odds = 25
+	max_instances = 5
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		count = 1
+		orbit_distance = { min = 5 max = 15 }
+		orbit_angle = { min = 90 max = 270 }
+		class = pc_gas_giant
+		size = { min = 20 max = 25 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = 1
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = { min = 10 max = 15 }
+			class = random_colonizable
+			size = { min = 14 max = 22 }
+		}
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		count = { min = 0 max = 2 }
+		orbit_distance = { min = 10 max = 25 }
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 2 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = { min = 5 max = 10 }
+		}
+	}
+	
+	change_orbit = 35
+	
+	planet = {
+		count = { min = 0 max = 1 }
+		orbit_distance = { min = 10 max = 25 }
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = { min = 5 max = 10 }
+		}
+	}
+}
+
+# Gas Giant with two big habitable moons
+alphamod_init_04 = {
+	class = "rl_standard_stars"
+	
+	usage = misc_system_init
+	usage_odds = 15
+	max_instances = 3
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		count = 1
+		orbit_distance = { min = 5 max = 15 }
+		orbit_angle = { min = 90 max = 270 }
+		class = pc_gas_giant
+		size = { min = 20 max = 25 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = 1
+			orbit_angle = { min = 90 max = 180 }
+			orbit_distance = { min = 10 max = 15 }
+			class = random_colonizable
+			size = { min = 14 max = 22 }
+		}
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = 1
+			orbit_angle = { min = 190 max = 270 }
+			orbit_distance = { min = 10 max = 15 }
+			class = random_colonizable
+			size = { min = 14 max = 22 }
+		}
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		count = { min = 0 max = 2 }
+		orbit_distance = { min = 10 max = 25 }
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 2 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = { min = 5 max = 10 }
+		}
+	}
+	
+	change_orbit = 35
+	
+	planet = {
+		count = { min = 0 max = 1 }
+		orbit_distance = { min = 10 max = 25 }
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = { min = 5 max = 10 }
+		}
+	}
+}

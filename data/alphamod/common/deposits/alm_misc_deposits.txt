@@ -1,0 +1,320 @@
+# Possible Deposit Variables
+# modifier - weight, will replace the weight value
+# modifier - factor, will multiply the weight value
+# resources, resource and amount
+# station = station class in orbit to gather
+# if you mix resources that are not supposed to be collected by an orbital station remember to put is_orbital_slot = no
+   
+ d_exotic_foods_deposit = {
+	resources = {
+		sr_exotic_foods = 1
+	}
+	is_orbital_slot = no
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			planet = {
+				AND = {
+					OR = {
+						is_planet_class = pc_gaia
+						is_planet_class = pc_continental
+					}
+				}
+			}
+		}
+		modifier = {
+			weight = 1.5
+			planet = {
+				AND = {
+					OR = {
+						is_planet_class = pc_tropical
+						is_planet_class = pc_ocean
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			planet = {
+				OR = {
+					has_planet_modifier = "pm_lush"
+					has_planet_modifier = "pm_dangerous_wildlife"
+				}
+			}
+		}
+	}
+}
+  
+ d_great_oasis_deposit = {
+	resources = {
+		sr_h2o = 1
+		food = 2
+		sr_biomass = 1
+	}
+	is_orbital_slot = no
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			planet = {
+				OR = {
+					is_planet_class = pc_desert
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			planet = {
+				OR = {
+					has_deposit = "d_great_oasis_deposit"
+				}
+			}
+		}
+	}
+ }
+ 
+ d_geothermalsprings_deposit = {
+	resources = {
+		sr_h2o = 1
+		sr_actinides = 1
+		energy = 3
+	}
+	is_orbital_slot = no
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			planet = {
+				OR = {
+					is_planet_class = pc_arctic
+					is_planet_class = pc_tundra
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			planet = {
+				OR = {
+					has_deposit = "d_massivecaverns_deposit"
+					has_deposit = "d_geothermalsprings_deposit"
+				}
+			}
+		}
+	}
+ }
+ 
+ d_jurassicvalley_deposit = {
+	resources = {
+		society_research = 3
+		sr_natural_fuels = 2
+		sr_actinides = 1
+	}
+	is_orbital_slot = no
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			planet = {
+				OR = {
+					is_planet_class = pc_arid
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			planet = {
+				OR = {
+					has_deposit = "d_jurassicvalley_deposit"
+				}
+			}
+		}
+	}
+ }
+ 
+ d_jungleofriches_deposit = {
+	resources = {
+		sr_exotic_foods = 2
+		food = 2
+		sr_biomass = 2
+	}
+	is_orbital_slot = no
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			planet = {
+				OR = {
+					is_planet_class = pc_tropical
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			planet = {
+				OR = {
+					has_deposit = "d_jungleofriches_deposit"
+				}
+			}
+		}
+	}
+ }
+
+ d_precursorruins_deposit = {
+	resources = {
+		engineering_research = 4
+		sr_actinides = 2
+		society_research = 3
+	}
+	is_orbital_slot = no
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			planet = {
+				OR = {
+					is_planet_class = pc_ocean
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			planet = {
+				OR = {
+					has_deposit = "d_precursorruins_deposit"
+				}
+			}
+		}
+	}
+ }
+ 
+ d_massivecaverns_deposit = {
+	resources = {
+		engineering_research = 3
+		sr_natural_fuels = 2
+		minerals = 3
+	}
+	is_orbital_slot = no
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			planet = {
+				OR = {
+					is_planet_class = pc_continental
+					is_planet_class = pc_tundra
+					is_planet_class = pc_savannah
+					is_planet_class = pc_alpine
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			planet = {
+				OR = {
+					has_deposit = "d_massivecaverns_deposit"
+					has_deposit = "d_geothermalsprings_deposit"
+				}
+			}
+		}
+	}
+ }
+	
+ d_gas_giant_special_deposit = {
+	resources = {
+		sr_natural_fuels = 2
+		energy = 3
+	}
+
+	station = shipclass_mining_station
+	orbital_weight = {
+		weight = 75
+	}
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			planet = {
+				OR = {
+					is_planet_class = pc_gas_giant
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			planet = {
+				AND = {
+					is_planet_class = pc_gas_giant
+					is_inside_nebula = yes
+				}
+			}			
+		}
+		modifier = {
+			factor = 0
+			planet = {
+				OR = {
+					has_deposit = "d_gas_giant_special_deposit"
+				}
+			}
+		}
+	}
+ }
+ 
+ d_sun_special_deposit = {
+	resources = {
+		sr_actinides = 1
+		energy = 4
+	}
+
+	station = shipclass_mining_station
+	orbital_weight = {
+		weight = 75
+	}
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 2
+			planet = {
+				OR = {
+ 					is_planet_class = pc_a_star
+					is_planet_class = pc_b_star
+					is_planet_class = pc_f_star
+					is_planet_class = pc_g_star
+					is_planet_class = pc_k_star
+					is_planet_class = pc_m_star
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			planet = {
+				OR = {
+ 					is_planet_class = pc_a_star
+					is_planet_class = pc_b_star
+					is_planet_class = pc_f_star
+					is_planet_class = pc_g_star
+					is_planet_class = pc_k_star
+					is_planet_class = pc_m_star
+				}
+				is_inside_nebula = yes
+			}			
+		}
+		modifier = {
+			factor = 0
+			planet = {
+				OR = {
+					has_deposit = "d_sun_special_deposit"
+				}
+			}
+		}
+	}
+ }

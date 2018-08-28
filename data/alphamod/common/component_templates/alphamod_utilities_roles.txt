@@ -1,0 +1,141 @@
+#############
+# UTILITIES ROLES #
+#############
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_INTERDICTOR"
+	size = aux
+	icon = "GFX_ship_part_computer_interdictor"
+	icon_frame = 1
+	power = -10
+	cost = 15
+	#ship_behavior = "aggressive"
+	
+	modifier = {
+		ship_windup_mult = -0.25
+		ship_speed_mult = 0.1
+		ship_interstellar_speed_mult = 0.25
+		ship_winddown_mult = -0.25
+	}
+	
+	ai_weight = {
+		weight = 0.5
+		modifier = {
+			factor = 1.2
+			has_country_flag = ai_flag_aggressive_personality
+		}
+		modifier = {
+			factor = 0.5
+			has_country_flag = ai_flag_defensive_personality
+		}
+	}
+
+	class_restriction = { shipclass_military }
+	size_restriction = { corvette destroyer cruiser battleship }
+	prerequisites = { "tech_alpha_interdiction" }
+	component_set = "COMBAT_COMPUTER_INTERDICTOR"
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_INTERCEPTOR"
+	size = small
+	icon = "GFX_ship_part_computer_interceptor"
+	icon_frame = 1
+	power = -10
+	cost = 15
+	ship_behavior = "aggressive"
+	
+	modifier = {
+		ship_combat_speed_mult = 0.2
+		ship_speed_mult = 0.1
+		ship_interstellar_speed_mult = 0.2
+		ship_evasion_add = 10
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.1
+		ship_weapon_range_mult = -0.4
+		ship_weapon_damage = 0.2
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 1.5
+			has_country_flag = ai_flag_aggressive_personality
+		}
+		modifier = {
+			factor = 0.5
+			has_country_flag = ai_flag_defensive_personality
+		}
+	}
+	
+	class_restriction = { shipclass_military }
+	size_restriction = { corvette }
+	prerequisites = { "tech_combat_computers_1" }
+	component_set = "combat_computers"
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_SNIPER"
+	size = small
+	icon = "GFX_ship_part_computer_sniper"
+	icon_frame = 1
+	power = -10
+	cost = 15
+	ship_behavior = "defensive"
+	
+	ship_modifier = {
+		ship_accuracy_add = 25
+		ship_fire_rate_mult = -0.5
+		ship_weapon_range_mult = 0.25
+		ship_tracking_add = 5
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+
+	class_restriction = { shipclass_military }
+	size_restriction = { cruiser battleship }
+	prerequisites = { "tech_combat_computers_2" }
+	component_set = "combat_computers"
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_SCOUT"
+	size = small
+	icon = "GFX_ship_part_computer_scout"
+	icon_frame = 1
+	power = -5
+	cost = 10
+	ship_behavior = "defensive"
+	
+	modifier = {
+		ship_evasion_add = 12
+		ship_combat_speed_mult = 0.1
+		ship_speed_mult = 0.25
+		fleet_emergency_ftl_min_days_mult = -0.75
+		ship_winddown_mult = -0.25
+	}
+	ship_modifier = {
+		ship_weapon_damage = -0.25
+		ship_weapon_range_mult = 0.1
+	}
+	
+	ai_weight = {
+		weight = 0.5
+		modifier = {
+			factor = 0
+			has_country_flag = ai_flag_aggressive_personality
+		}
+		modifier = {
+			factor = 2.0
+			has_country_flag = ai_flag_defensive_personality
+		}
+	}
+	
+	class_restriction = { shipclass_military }
+	prerequisites = { "tech_alpha_shuttlecraft" }
+	size_restriction = { corvette destroyer }
+	component_set = "combat_computers"
+}

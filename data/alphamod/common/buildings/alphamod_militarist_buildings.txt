@@ -1,0 +1,456 @@
+@b0time = 120
+@b0cost = 30
+@b0effect = 1
+@b0upkeep = 1
+
+@b1time = 210
+@b1cost = 60
+@b1effect = 2
+@b1upkeep = 1
+
+@b2time = 180
+@b2cost = 90
+@b2effect = 3
+@b2upkeep = 1.5
+
+@b3time = 180
+@b3cost = 120
+@b3effect = 4
+@b3upkeep = 2
+
+@b4time = 180
+@b4cost = 150
+@b4effect = 5
+@b4upkeep = 2.5
+
+@b5time = 180
+@b5cost = 180
+@b5effect = 8
+@b5upkeep = 30
+
+@weightnormal = 2.5
+@weightuseful = 10
+@weightimportant = 100
+@weightcritical = 1000
+
+building_military_base = {
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+		minerals = 200
+		energy = 100
+	}
+
+	produced_resources = {
+		sr_brands_fealty = 2
+		engineering_research = 2
+		society_research = 2
+	}
+
+	army_modifier = {
+		army_damage_mult = 0.2
+		army_health = 0.1
+	}
+	
+	planet_modifier = {
+		planet_army_build_speed_mult = 0.5
+		planet_unrest_add = -10
+		planet_fortification_strength = 0.5
+	}
+	
+	prerequisites = {
+		"tech_alpha_military_service"
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		factor = @weightcritical
+		modifier = {
+			factor = 0
+			from = { sector_controlled = yes }
+		}	
+	}
+}
+
+building_hunting_lodge = {
+	base_buildtime = 180
+	
+	cost = {
+		minerals = 25
+		energy = 50
+	}
+
+	required_resources = {
+		sr_sacred_weapons = 1
+	}
+	
+	produced_resources = {
+		food = 1.5
+	}
+
+	army_modifier = {
+		army_damage_mult = 0.1
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.05
+		pop_food_req_mult = -0.05
+	}
+	
+	potential = {
+		planet = {
+			AND = {
+				OR = {
+					has_building = "building_warrior_house"
+					has_building = "building_hallofwarriors"
+				}
+				any_tile = {
+					has_blocker = "tb_dangerous_wildlife"	
+				}
+				owner = { empire_has_sacred_weapons_1 = yes }
+			}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_dangerous_wildlife"
+			tile = {
+				any_neighboring_tile = {
+					has_blocker = "tb_dangerous_wildlife"
+					has_building_construction = no
+				}
+			}
+		}
+	}
+	
+	on_queued = {
+		tile = {
+			every_neighboring_tile = {
+				limit = {
+					has_blocker = "tb_dangerous_wildlife"
+					has_building_construction = no
+				}
+				remove_blocker = yes
+				set_blocker = "tb_dangerous_wildlife_locked"
+			}
+			every_neighboring_tile = {
+				limit = {
+					has_blocker = "tb_dangerous_wildlife_locked"
+				}
+				clear_deposits = yes
+				clean_strategic_resources = yes
+				clean_basic_resources = yes
+			}
+		}
+	}
+	
+	prerequisites = {
+		"tech_alpha_fanatic_military"
+	}
+	
+	ai_weight = {
+		factor = @weightuseful	
+	}
+	
+	ai_replace = no
+}
+
+building_war_monastery = {
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+		minerals = 100
+		energy = 150
+		influence = 25
+	}
+
+	required_resources = {
+		sr_sacred_weapons = 2
+	}
+	
+	produced_resources = {
+		influence = 0.5
+		unity = 5
+	}
+
+	army_modifier = {
+		army_damage_mult = 0.2
+	}
+	
+	planet_modifier = {
+		planet_fortification_strength = 0.5
+	}
+	
+	potential = {
+		planet = {
+			AND = {
+				has_building = "building_warrior_house"
+				OR = {
+					has_building = "building_hallofwarriors"
+					has_building = "building_templeofrule"
+				}
+				owner = { empire_has_sacred_weapons_2 = yes }
+			}
+		}
+	}
+	
+	prerequisites = {
+		"tech_alpha_fanatic_military_2"
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_religion_allowed"
+			planet = {
+				owner = {
+					not = { has_policy_flag = religious_freedom_ban }
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = @weightimportant
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+}
+
+building_warrior_house = {
+	base_buildtime = 360
+	
+	cost = {
+		minerals = 50
+		energy = 100
+		influence = 10
+	}
+
+	required_resources = {
+		sr_brands_fealty = 1
+	}
+	
+	produced_resources = {
+		food = 1
+		minerals = 1
+		sr_sacred_weapons = 1
+	}
+	
+	army_modifier = {
+		army_damage_mult = 0.05
+		garrison_health = 0.1
+	}
+	
+	country_modifier = {
+		navy_size_mult = 0.05
+	}
+	
+	planet_modifier = {
+		planet_fortification_strength = 0.1
+		planet_army_build_cost_mult = -0.1
+		shipsize_corvette_build_cost_mult = -0.1
+		shipsize_destroyer_build_cost_mult = -0.1
+		shipsize_corvette_construction_speed_mult = 0.1
+		shipsize_destroyer_construction_speed_mult = 0.1
+	}
+		
+	potential = {
+		planet = {
+			AND = {
+				not = { has_planet_flag = pf_warrior_house_2 }
+				OR = {
+					has_building = "building_military_base"
+					has_building = "building_great_citadel"
+				}
+				owner = { empire_has_brands_fealty_1 = yes }
+			}
+		}
+	}
+	
+	prerequisites = {
+		"tech_alpha_military_service_3"
+	}
+	
+	ai_weight = {
+		weight = 0
+		factor = @weightimportant
+	}
+	
+	on_queued = {
+		planet = {
+			if = {
+				limit = {
+					has_planet_flag = pf_warrior_house_1
+				}
+				set_planet_flag = pf_warrior_house_2
+				else = {
+					set_planet_flag = pf_warrior_house_1
+				}
+			}
+		}
+	}
+	
+	on_unqueued = {
+		planet = {
+			if = {
+				limit = {
+					has_planet_flag = pf_warrior_house_1
+				}
+				remove_planet_flag = pf_warrior_house_1
+			}
+			if = {
+				limit = {
+					has_planet_flag = pf_warrior_house_2
+				}
+				remove_planet_flag = pf_warrior_house_2
+				set_planet_flag = pf_warrior_house_1
+			}
+		}
+	}
+	
+	ai_replace = no
+}
+
+building_aerofighter_base = {
+	base_buildtime = 360
+	
+	cost = {
+		minerals = 100
+		energy = 100
+	}
+
+	required_resources = {
+		sr_brands_fealty = 1
+		minerals = 1
+		energy = 1
+	}
+	
+	produced_resources = {
+		engineering_research = 1
+	}
+	
+	army_modifier = {
+		garrison_health = 0.5	
+	}
+
+	planet_modifier = {
+		planet_fortification_strength = 1.0
+	}
+	
+	potential = {
+		planet = {
+			AND = {
+				OR = {
+					has_building = "building_shuttle_port"
+					has_building = "building_advanced_shuttleport"
+					has_building = "building_warrior_house"
+				}	
+				OR = {
+					has_building = "building_military_base"
+					has_building = "building_great_citadel"
+				}
+				owner = { empire_has_brands_fealty_1 = yes }
+			}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_adjacent_shuttleport_or_warrior_house"		
+			tile = {
+				any_neighboring_tile = {
+					OR = {
+						has_building = "building_shuttle_port"
+						has_building = "building_advanced_shuttleport"
+						has_building = "building_warrior_house"
+						has_building = "building_military_base"
+					}
+				}
+			}
+		}		
+	}
+	
+	prerequisites = {
+		"tech_alpha_military_service_2"
+	}
+	
+	ai_weight = {
+		factor = @weightuseful
+	}
+	
+	ai_replace = no
+}
+
+building_dry_dock = {
+	base_buildtime = 720
+	planet_unique = yes
+	
+	cost = {
+		minerals = 50
+		energy = 100
+		influence = 25
+	}
+
+	required_resources = {
+		sr_brands_fealty = 2
+		minerals = 5
+		energy = 5
+	}
+	
+	produced_resources = {
+		engineering_research = 2
+	}
+	
+	planet_modifier = {
+		spaceport_module_cost_mult = -0.25
+		shipsize_destroyer_build_cost_mult = -0.25
+		shipsize_cruiser_build_cost_mult = -0.2
+		shipsize_battleship_build_cost_mult = -0.1
+	}
+	
+	potential = {
+		planet = {
+			AND = {
+				OR = {
+					has_building = "building_shuttle_port"
+					has_building = "building_advanced_shuttleport"
+				}	
+				OR = {
+					has_building = "building_military_base"
+					has_building = "building_great_citadel"
+				}
+				owner = { empire_has_brands_fealty_2 = yes }
+			}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_adjacent_shuttleport"		
+			tile = {
+				any_neighboring_tile = {
+					OR = {
+						has_building = "building_shuttle_port"
+						has_building = "building_advanced_shuttleport"
+					}
+				}
+			}
+		}		
+	}
+	
+	prerequisites = {
+		"tech_alpha_military_service_2"
+	}
+	
+	ai_weight = {
+		factor = @weightimportant
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+}

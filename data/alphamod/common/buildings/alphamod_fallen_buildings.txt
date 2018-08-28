@@ -1,0 +1,72 @@
+@feupkeep = 4
+@feproduction = 12
+
+# Fallen Empire buildings
+building_ancient_factory_b = {
+	icon = "building_ancient_factory"
+	base_buildtime = 1800
+	
+	cost = {
+		minerals = 500
+	}
+	
+	produced_resources = {
+		minerals = @feproduction
+	}
+	
+	required_resources = {
+		energy = @feupkeep
+	}	
+	
+	prerequisites = {
+		tech_fallen_minerals
+	}
+	
+	ai_replace = no
+}
+
+building_dark_matter_power_plant_b = {
+	icon = "building_dark_matter_power_plant"
+	base_buildtime = 1800
+	
+	cost = {
+		minerals = 500
+	}
+	
+	potential = {
+		
+	}
+	
+	produced_resources = {
+		energy = 15
+	}
+	
+	prerequisites = {
+		tech_fallen_energy
+	}
+	
+	ai_replace = no
+}
+
+building_agri_processing_complex_b = {
+	icon = "building_agri_processing_complex"
+	base_buildtime = 1800
+	
+	cost = {
+		minerals = 500
+	}
+	
+	produced_resources = {
+		food = @feproduction
+	}
+	
+	required_resources = {
+		energy = @feupkeep
+	}
+	
+	prerequisites = {
+		tech_fallen_food
+	}
+	
+	ai_replace = no
+}

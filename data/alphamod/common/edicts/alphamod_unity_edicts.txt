@@ -1,0 +1,18 @@
+country_edict = { 
+	name = "alpha_open_arms"
+	
+	influence_cost = 0.5
+	
+	modifier = {
+		planet_migration_xeno_pull = 0.1
+		tile_resource_unity_mult = -0.1
+	}
+	
+	potential = {
+		has_tradition = tr_diplomacy_alien_tourism	
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

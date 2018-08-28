@@ -1,0 +1,201 @@
+planet_edict = {
+	name = "show_weighting_edicts"
+	
+	influence_cost = 0
+	length = 0
+	
+	potential = {
+		sector_controlled = yes
+		NOT = { has_planet_flag = weighting_edicts_on }
+		owner = {
+			has_country_edict = enable_sector_weighting_controls
+		}
+	}
+	
+	effect = {
+		set_planet_flag = "weighting_edicts_on"
+	}
+	 
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+planet_edict = {
+	name = "hide_weighting_edicts"
+	
+	influence_cost = 0
+	length = 0
+	
+	potential = {
+		has_planet_flag = weighting_edicts_on
+	}
+	
+	effect = {
+		remove_planet_flag = "weighting_edicts_on"
+	}
+	 
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+planet_edict = {
+	name = "no_vanilla_powerplants"
+	
+	influence_cost = 0
+	length = 0
+	
+	potential = {
+		sector_controlled = yes
+		not = { has_planet_flag = "no_vanilla_powerplants" }
+		has_planet_flag = weighting_edicts_on
+	}
+	
+	effect = {
+		set_planet_flag = "no_vanilla_powerplants"
+	}
+	 
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+planet_edict = {
+	name = "allow_vanilla_powerplants"
+	
+	influence_cost = 0
+	length = 0
+	
+	potential = {		
+		has_planet_flag = "no_vanilla_powerplants"
+	}
+	
+	effect = {
+		remove_planet_flag = "no_vanilla_powerplants"
+	}
+	 
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+planet_edict = {
+	name = "no_vanilla_farms"
+	
+	influence_cost = 0
+	length = 0
+	
+	potential = {
+		sector_controlled = yes
+		not = { has_planet_flag = "no_vanilla_farms" }
+		has_planet_flag = weighting_edicts_on
+	}
+	
+	effect = {
+		set_planet_flag = "no_vanilla_farms"
+	}
+	 
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+planet_edict = {
+	name = "allow_vanilla_farms"
+	
+	influence_cost = 0
+	length = 0
+	
+	potential = {		
+		has_planet_flag = "no_vanilla_farms"
+	}
+	
+	effect = {
+		remove_planet_flag = "no_vanilla_farms"
+	}
+	 
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+planet_edict = {
+	name = "no_vanilla_mines"
+	
+	influence_cost = 0
+	length = 0
+	
+	potential = {
+		sector_controlled = yes
+		not = { has_planet_flag = "no_vanilla_mines" }
+		has_planet_flag = weighting_edicts_on
+	}
+	
+	effect = {
+		set_planet_flag = "no_vanilla_mines"
+	}
+	 
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+planet_edict = {
+	name = "allow_vanilla_mines"
+	
+	influence_cost = 0
+	length = 0
+	
+	potential = {		
+		has_planet_flag = "no_vanilla_mines"
+	}
+	
+	effect = {
+		remove_planet_flag = "no_vanilla_mines"
+	}
+	 
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+planet_edict = {
+	name = "no_vanilla_science"
+	
+	influence_cost = 0
+	length = 0
+	
+	potential = {
+		sector_controlled = yes
+		not = { has_planet_flag = "no_vanilla_science" }
+		has_planet_flag = weighting_edicts_on
+	}
+	
+	effect = {
+		set_planet_flag = "no_vanilla_science"
+	}
+	 
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+planet_edict = {
+	name = "allow_vanilla_science"
+	
+	influence_cost = 0
+	length = 0
+	
+	potential = {		
+		has_planet_flag = "no_vanilla_science"
+	}
+	
+	effect = {
+		remove_planet_flag = "no_vanilla_science"
+	}
+	 
+	ai_weight = {
+		weight = 0
+	}	
+}

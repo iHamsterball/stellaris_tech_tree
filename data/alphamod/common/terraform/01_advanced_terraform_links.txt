@@ -1,0 +1,2843 @@
+#################
+## Continental ##
+#################
+
+terraform_link = {
+	from = "pc_continental"
+	to = "pc_desert"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_desert_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_continental_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_desert_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_continental"
+	to = "pc_arid"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_arid_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_continental_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_arid_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_continental"
+	to = "pc_savannah"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_savannah_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_continental_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_savannah_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_continental"
+	to = "pc_arctic"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_arctic_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_continental_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_arctic_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_continental"
+	to = "pc_tundra"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_tundra_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_continental_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_tundra_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_continental"
+	to = "pc_alpine"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_alpine_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_continental_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_alpine_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+##############
+## Tropical ##
+##############
+
+terraform_link = {
+	from = "pc_tropical"
+	to = "pc_desert"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_desert_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_tropical_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_desert_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_tropical"
+	to = "pc_arid"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_arid_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_tropical_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_arid_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_tropical"
+	to = "pc_savannah"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_savannah_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_tropical_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_savannah_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_tropical"
+	to = "pc_arctic"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_arctic_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_tropical_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_arctic_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_tropical"
+	to = "pc_tundra"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_tundra_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_tropical_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_tundra_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_tropical"
+	to = "pc_alpine"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_alpine_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_tropical_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_alpine_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+###########
+## Ocean ##
+###########
+
+terraform_link = {
+	from = "pc_ocean"
+	to = "pc_desert"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_desert_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_ocean_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_desert_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_ocean"
+	to = "pc_arid"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_arid_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_ocean_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_arid_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_ocean"
+	to = "pc_savannah"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_savannah_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_ocean_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_savannah_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_ocean"
+	to = "pc_arctic"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_arctic_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_ocean_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_arctic_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_ocean"
+	to = "pc_tundra"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_tundra_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_ocean_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_tundra_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_ocean"
+	to = "pc_alpine"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_alpine_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_ocean_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_alpine_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+###########
+## Arid ##
+###########
+
+terraform_link = {
+	from = "pc_arid"
+	to = "pc_tropical"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_tropical_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_arid_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_tropical_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_arid"
+	to = "pc_continental"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_continental_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_arid_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_continental_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_arid"
+	to = "pc_ocean"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_ocean_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_arid_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_ocean_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_arid"
+	to = "pc_arctic"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_arctic_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_arid_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_arctic_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_arid"
+	to = "pc_tundra"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_tundra_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_arid_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_tundra_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_arid"
+	to = "pc_alpine"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_alpine_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_arid_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_alpine_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+############
+## Desert ##
+############
+
+terraform_link = {
+	from = "pc_desert"
+	to = "pc_tropical"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_tropical_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_desert_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_tropical_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_desert"
+	to = "pc_continental"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_continental_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_desert_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_continental_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_desert"
+	to = "pc_ocean"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_ocean_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_desert_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_ocean_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_desert"
+	to = "pc_arctic"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_arctic_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_desert_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_arctic_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_desert"
+	to = "pc_tundra"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_tundra_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_desert_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_tundra_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_desert"
+	to = "pc_alpine"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_alpine_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_desert_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_alpine_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#############
+## Savanna ##
+#############
+
+terraform_link = {
+	from = "pc_savannah"
+	to = "pc_tropical"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_tropical_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_savannah_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_tropical_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_savannah"
+	to = "pc_continental"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_continental_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_savannah_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_continental_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_savannah"
+	to = "pc_ocean"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_ocean_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_savannah_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_ocean_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_savannah"
+	to = "pc_arctic"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_arctic_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_savannah_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_arctic_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_savannah"
+	to = "pc_tundra"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_tundra_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_savannah_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_tundra_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_savannah"
+	to = "pc_alpine"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_alpine_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_savannah_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_alpine_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+############
+## Arctic ##
+############
+
+terraform_link = {
+	from = "pc_arctic"
+	to = "pc_tropical"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_tropical_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_arctic_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_tropical_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_arctic"
+	to = "pc_continental"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_continental_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_arctic_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_continental_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_arctic"
+	to = "pc_ocean"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_ocean_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_arctic_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_ocean_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_arctic"
+	to = "pc_arid"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_arid_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_arctic_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_arid_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_arctic"
+	to = "pc_desert"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_desert_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_arctic_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_desert_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_arctic"
+	to = "pc_savannah"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_savannah_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_arctic_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_savannah_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+############
+## Tundra ##
+############
+
+terraform_link = {
+	from = "pc_tundra"
+	to = "pc_tropical"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_tropical_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_tundra_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_tropical_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_tundra"
+	to = "pc_continental"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_continental_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_tundra_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_continental_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_tundra"
+	to = "pc_ocean"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_ocean_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_tundra_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_ocean_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_tundra"
+	to = "pc_arid"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_arid_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_tundra_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_arid_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_tundra"
+	to = "pc_desert"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_desert_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_tundra_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_desert_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_tundra"
+	to = "pc_savannah"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_savannah_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_tundra_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_savannah_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+############
+## Alpine ##
+############
+
+terraform_link = {
+	from = "pc_alpine"
+	to = "pc_tropical"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_tropical_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_alpine_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_tropical_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_alpine"
+	to = "pc_continental"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_continental_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_alpine_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_continental_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_alpine"
+	to = "pc_ocean"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_ocean_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_alpine_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_ocean_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_alpine"
+	to = "pc_arid"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_arid_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_alpine_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_arid_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_alpine"
+	to = "pc_desert"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_desert_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_alpine_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_desert_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_alpine"
+	to = "pc_savannah"
+	
+	energy = 5000
+	duration = 3600
+	
+	condition = {
+		has_technology = "tech_atmospheric_manipulation"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_savannah_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_alpine_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_savannah_preference	# cross-group terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do cross-group terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}

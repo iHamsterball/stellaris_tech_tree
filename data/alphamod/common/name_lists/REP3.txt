@@ -1,0 +1,182 @@
+﻿### Reptilian 3
+### Created by Maximilian Olbers
+REP3 = {
+	ship_names = {
+		generic = {
+			Lorod-Kalen Lorod-Kluven Lorod-Drexom Lorod-Kuxel Lorod-Durgal Lorod-Cadrom Lorod-Kendril Lorod-Ferad Lorod-Defer Lorod-Doxerga Lorod-Kundex Lorod-Cladet Lorod-Klonol Lorod-Rekad Lorod-Gexad Lorod-Falder Lorod-Gaclen Lorod-Celdaren Lorod-Deklor Lorod-Droxag Lorod-Nergal Lorod-Fikren Lorod-Nadlig
+		}
+
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		mining_station = { }
+		research_station = { }
+		wormhole_station = { }
+		#terraform_station = { }
+		observation_station = { }
+		outpost_station = {
+			#random_names = { }
+			#sequential_name = "%O% Frontier Outpost"
+		}
+
+		military_station_small = {}
+		military_station_medium = {}
+		military_station_large = {}	
+	}
+
+	fleet_names = {
+		random_names = {
+			"Dronolog Void Skulkers" "Gafereka Void Skulkers" "Kotalla Void Skulkers" "Golorod Void Skulkers" "Dirixelo Void Skulkers" "Kundere Void Skulkers" "Trellock Void Skulkers" "Korux Void Skulkers" "Dulkara Void Skulkers" "Kluxadoru Void Skulkers" "Foreskax Void Skulkers" "Krundoal Void Skulkers" "Lugec Void Skulkers" "Koogol Void Skulkers"
+		}
+		sequential_name = "%O% Void Skulkers"
+	}
+	
+	### ARMIES
+	army_names = {	
+		defense_army = {
+			sequential_name = "%O% Defense Legion"
+		}
+			
+		assault_army = {
+			sequential_name = "%O% Attack Legion"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Slave Horde"
+		}
+		
+		clone_army = { 
+			sequential_name = "%O% Doppleganger Horde"
+		}
+		
+		robotic_army = {
+			sequential_name = "%O% Automaton Army"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "%O% Automaton Army"
+		}
+		
+		android_army = {
+			sequential_name = "%O% Mimic Warriors"
+		}
+
+		android_defense_army = {
+			sequential_name = "%O% Mimic Warriors"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O% Mind Masters"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Chaos Changelings"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% Enhanced Legion"
+		}
+	}
+
+	### PLANETS
+
+	planet_names = {
+
+		generic = {
+			names = {
+				Galan Nadex Gefarak Kutel Gulec Faradex Ralefek Gelard Derokem Dexalon Kitadul Dukalex Kluxared Dolok Gekoler Forexod Futexom Darakun Traglec Kregux
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+
+	### CHARACTERS
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+				Faragulek Klandrax Kulegaf Ludremex Maxerdok Tredagik Rukagikex Trokaxeg Tolodem Loxodal Ropadef Frelaxod Axemekat Frolaxen Dakalenex Dronafeg Mixrodem Tidarulek Raxuked Koxurem Guferal
+			}
+			
+			# Always combined with a second name
+			first_names = {
+			}
+			
+			# Always combined with a first name
+			second_names = {
+			}
+			
+			regnal_first_names = {
+				Faragulek Klandrax Kulegaf Ludremex Maxerdok Tredagik Rukagikex Trokaxeg
+			}
+			
+			regnal_second_names = {
+				Raxeg
+			}
+		}
+	}
+}

@@ -1,0 +1,760 @@
+building_large_city = {
+	is_listed = no
+	
+	upgrades = {
+		building_hive
+		building_sprawl
+		building_great_citadel
+		building_great_order
+		building_great_sanctuary
+		building_arcology
+		building_retreat
+		building_culture
+		building_prison_city
+		building_jewel_city
+		building_apex_city
+	}
+	
+	produced_resources = {
+		energy = 2
+		sr_wealth = 1
+		food = 1
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_energy_add = 1
+	}
+	
+	planet_modifier = {
+		pop_growth_speed = 0.15
+		tile_resource_energy_mult = 0.1
+	}
+}
+
+building_jewel_city = {
+	is_listed = no
+	empire_unique = yes
+	base_buildtime = 1800
+	
+	cost = {
+		energy = 500
+		minerals = 500
+		influence = 100
+	}
+	
+	produced_resources = {
+		energy = 10
+		sr_wealth = 2
+		food = 1
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_energy_add = 2
+	}
+	
+	planet_modifier = {
+		pop_growth_speed = 0.2
+		tile_resource_energy_mult = 0.2
+	}
+	
+	potential = {
+		planet = {
+			owner = {
+				AND = {
+					has_technology = tech_frontier_growth_alpha
+					has_technology = tech_alpha_micro_fission
+				}
+			}
+		}
+	}
+}
+
+building_apex_city = {
+	is_listed = no
+	empire_unique = yes
+	base_buildtime = 1800
+	
+	cost = {
+		energy = 500
+		minerals = 500
+		influence = 100
+	}
+	
+	produced_resources = {
+		energy = 10
+		sr_wealth = 2
+		food = 1
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_energy_add = 2
+	}
+	
+	planet_modifier = {
+		pop_growth_speed = 0.2
+		tile_resource_society_research_mult = 0.15
+		tile_resource_engineering_research_mult = 0.15
+		tile_resource_physics_research_mult = 0.15
+	}
+	
+	potential = {
+		planet = {
+			owner = {
+				AND = {
+					has_technology = tech_frontier_growth_alpha
+					has_technology = tech_alpha_intensive_hydroponics
+				}
+			}
+		}
+	}
+}
+
+building_prison_city = {
+	base_buildtime = 360
+	is_listed = no
+	planet_unique = yes
+	
+	cost = {
+		energy = 50
+		minerals = 100
+	}
+	
+	produced_resources = {
+		minerals = 1
+		food = 1
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_minerals_add = 1
+	}
+	
+	planet_modifier = {
+		slave_production_output = 0.25
+		tile_resource_minerals_mult = 0.1
+		planet_unrest_add = -25
+	}
+	
+	prerequisites = {
+		"tech_alpha_xenophobia"
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		factor = 95
+	}
+}
+
+building_hive = {
+	base_buildtime = 720
+	is_listed = no
+	
+	cost = {
+		minerals = 200
+		energy = 150
+	}
+	
+	required_resources = {
+		energy = 2
+		sr_h2o = 2
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requires_pops_10"
+				planet = { has_10_pops = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_source_of_water"
+				planet = { has_water_source = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_no_water_deposit"
+				tile = { not = { has_water_deposit = yes } }
+			}
+		}
+	}
+	
+	produced_resources = {
+		minerals = 2
+		food = 2
+		sr_wealth = 1
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_minerals_add = 2
+		tile_building_resource_food_add = 2
+	}
+
+	planet_modifier = {	
+		pop_growth_speed = 0.3
+		pop_food_req_mult = -0.05
+	}
+	
+	prerequisites = {
+		"tech_alpha_hives"
+	}
+	
+	on_queued = {
+		planet = { increase_popcenters = yes }
+	}
+	
+	on_unqueued = {
+		planet = { decrease_popcenters = yes }
+	}
+	
+	ai_weight = {
+		weight = 95
+	}
+}
+
+building_sprawl = {
+	base_buildtime = 720
+	is_listed = no
+	
+	cost = {
+		minerals = 300
+		energy = 200
+	}
+	
+	required_resources = {
+		sr_tradegoods = 1
+		sr_synthehol = 1
+		sr_h2o = 2
+	}
+	
+	potential = {
+		planet = {
+			owner = {
+				AND = {
+					empire_has_tradegoods_1 = yes
+					empire_has_synthehol_1 = yes 
+				}
+			}
+		}
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requires_pops_10"
+				planet = { has_10_pops = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_source_of_water"
+				planet = { has_water_source = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_no_water_deposit"
+				tile = { not = { has_water_deposit = yes } }
+			}
+		}
+	}
+	
+	produced_resources = {
+		minerals = 2
+		food = 2
+		sr_wealth = 1
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_minerals_add = 1.5
+		tile_building_resource_energy_add = 1
+		tile_building_resource_food_add = 1
+	}
+
+	planet_modifier = {	
+		pop_growth_speed = 0.25
+		planet_army_build_speed_mult = 0.10
+	}
+	
+	prerequisites = {
+		"tech_alpha_sprawls"
+	}
+	
+	on_queued = {
+		planet = { increase_popcenters = yes }
+	}
+	
+	on_unqueued = {
+		planet = { decrease_popcenters = yes }
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 95
+			from = {
+				has_tradegoods = yes
+				has_synthehol = yes
+			}
+		}
+	}
+}
+
+building_sprawl_district = {
+	base_buildtime = 720
+	
+	cost = {
+		minerals = 200
+		energy = 150
+	}
+	
+	required_resources = {
+		sr_h2o = 1
+		energy = 1
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				has_building = "building_sprawl"
+				has_building = "building_sprawl_district"
+			}
+		}
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requires_pops_10"
+				planet = { has_10_pops = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_adjacent_sprawl"
+				tile = { has_adjacent_sprawl = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_no_water_deposit"
+				tile = { not = { has_water_deposit = yes } }
+			}
+		}
+	}
+	
+	produced_resources = {
+		minerals = 1.5
+		sr_wealth = 1
+		food = 1
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_minerals_add = 1
+		tile_building_resource_energy_add = 1
+	}
+
+	planet_modifier = {	
+		pop_growth_speed = 0.05
+	}
+	
+	prerequisites = {
+		"tech_alpha_sprawls"
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+building_retreat = {
+	base_buildtime = 720
+	is_listed = no
+	
+	cost = {
+		minerals = 300
+		energy = 200
+	}
+	
+	required_resources = {
+		energy = 2
+		sr_h2o = 2
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requires_pops_10"
+				planet = { has_10_pops = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_source_of_water"
+				planet = { has_water_source = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_no_water_deposit"
+				tile = { not = { has_water_deposit = yes } }
+			}
+		}
+	}
+	
+	produced_resources = {
+		food = 2.5
+		minerals = 2
+		unity = 5
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_minerals_add = 1.5
+		tile_building_resource_food_add = 1
+	}
+
+	planet_modifier = {	
+		planet_migration_all_pull = -0.1
+		pop_growth_speed = 0.2
+		planet_fortification_strength = 0.25
+	}
+	
+	prerequisites = {
+		"tech_alpha_retreats"
+	}
+	
+	on_queued = {
+		planet = { increase_popcenters = yes }
+	}
+	
+	on_unqueued = {
+		planet = { decrease_popcenters = yes }
+	}
+	
+	ai_weight = {
+		weight = 95
+	}
+}
+
+building_culture = {
+	base_buildtime = 720
+	is_listed = no
+	
+	cost = {
+		minerals = 300
+		energy = 200
+	}
+	
+	required_resources = {
+		energy = 2
+		sr_h2o = 2
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requires_pops_10"
+				planet = { has_10_pops = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_source_of_water"
+				planet = { has_water_source = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_no_water_deposit"
+				tile = { not = { has_water_deposit = yes } }
+			}
+		}
+	}
+	
+	produced_resources = {
+		food = 2
+		minerals = 1.5
+		unity = 5
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_minerals_add = 1.5
+		tile_building_resource_food_add = 1
+	}
+
+	planet_modifier = {	
+		planet_migration_all_pull = 0.25
+		pop_happiness = 0.05
+		pop_growth_speed = 0.3
+	}
+	
+	prerequisites = {
+		"tech_alpha_cultures"
+	}
+	
+	on_queued = {
+		planet = { increase_popcenters = yes }
+	}
+	
+	on_unqueued = {
+		planet = { decrease_popcenters = yes }
+	}
+	
+	ai_weight = {
+		weight = 95
+	}
+}
+
+building_great_citadel = {
+	base_buildtime = 720
+	is_listed = no
+	
+	cost = {
+		minerals = 300
+		energy = 200
+	}
+	
+	required_resources = {
+		sr_h2o = 2
+		energy = 2
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requires_pops_10"
+				planet = { has_10_pops = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_source_of_water"
+				planet = { has_water_source = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_no_water_deposit"
+				tile = { not = { has_water_deposit = yes } }
+			}
+		}
+	}
+	
+	produced_resources = {
+		minerals = 2
+		food = 1.5
+		sr_brands_fealty = 1
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_minerals_add = 1.5
+		tile_building_resource_food_add = 1
+	}
+
+	army_modifier = {
+		garrison_health = 0.25
+	}
+	
+	planet_modifier = {	
+		planet_fortification_strength = 0.25
+		planet_army_build_speed_mult = 0.1
+		pop_growth_speed = 0.2
+	}
+	
+	prerequisites = {
+		"tech_alpha_citadels"
+	}
+	
+	on_queued = {
+		planet = { increase_popcenters = yes }
+	}
+	
+	on_unqueued = {
+		planet = { decrease_popcenters = yes }
+	}
+	
+	ai_weight = {
+		weight = 95
+	}
+}
+
+building_great_sanctuary = {
+	base_buildtime = 720
+	is_listed = no
+	
+	cost = {
+		minerals = 300
+		energy = 200
+	}
+	
+	required_resources = {
+		energy = 2
+		sr_h2o = 2
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requires_pops_10"
+				planet = { has_10_pops = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_source_of_water"
+				planet = { has_water_source = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_no_water_deposit"
+				tile = { not = { has_water_deposit = yes } }
+			}
+		}
+	}
+	
+	produced_resources = {
+		food = 3
+		unity = 5
+		minerals = 1.5
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_minerals_add = 1.5
+		tile_building_resource_food_add = 1
+	}
+
+	planet_modifier = {	
+		planet_migration_all_pull = -0.2
+		pop_growth_speed = 0.3
+		planet_fortification_strength = 0.20
+	}
+	
+	prerequisites = {
+		"tech_alpha_sanctuaries"
+	}
+	
+	on_queued = {
+		planet = { increase_popcenters = yes }
+	}
+	
+	on_unqueued = {
+		planet = { decrease_popcenters = yes }
+	}
+	
+	ai_weight = {
+		weight = 95
+	}
+}
+
+building_great_order = {
+	base_buildtime = 720
+	is_listed = no
+	
+	cost = {
+		minerals = 300
+		energy = 200
+	}
+	
+	required_resources = {
+		energy = 2
+		sr_h2o = 2
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requires_pops_10"
+				planet = { has_10_pops = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_source_of_water"
+				planet = { has_water_source = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_no_water_deposit"
+				tile = { not = { has_water_deposit = yes } }
+			}
+		}
+	}
+	
+	produced_resources = {
+		influence = 0.25
+		food = 2
+		minerals = 1.5
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_minerals_add = 1.5
+		tile_building_resource_food_add = 1
+	}
+
+	planet_modifier = {	
+		pop_government_ethic_attraction = 0.05
+		planet_army_build_speed_mult = 0.2
+		planet_border_mult = 0.1
+		pop_growth_speed = 0.2
+	}
+	
+	prerequisites = {
+		"tech_alpha_orders"
+	}
+	
+	on_queued = {
+		planet = { increase_popcenters = yes }
+	}
+	
+	on_unqueued = {
+		planet = { decrease_popcenters = yes }
+	}
+	
+	ai_weight = {
+		weight = 95
+	}
+}
+
+building_arcology = {
+	base_buildtime = 720
+	is_listed = no
+	
+	cost = {
+		minerals = 300
+		energy = 250
+	}
+	
+	required_resources = {
+		energy = 3
+		sr_h2o = 2
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requires_pops_10"
+				planet = { has_10_pops = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_source_of_water"
+				planet = { has_water_source = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_no_water_deposit"
+				tile = { not = { has_water_deposit = yes } }
+			}
+		}
+	}
+	
+	produced_resources = {
+		minerals = 1.5
+		food = 1.5
+		engineering_research = 10
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_minerals_add = 1.5
+		tile_building_resource_food_add = 1
+		tile_building_resource_engineering_research_add = 0.5
+		tile_building_resource_society_research_add = 1
+		tile_building_resource_physics_research_add = 1
+	}
+	
+	planet_modifier = {	
+		pop_growth_speed = 0.2
+	}
+	
+	prerequisites = {
+		"tech_alpha_arcologies"
+	}
+	
+	on_queued = {
+		planet = { increase_popcenters = yes }
+	}
+	
+	on_unqueued = {
+		planet = { decrease_popcenters = yes }
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 95
+			from = {
+				has_micro_cores = yes			
+			}
+		}
+	}
+}

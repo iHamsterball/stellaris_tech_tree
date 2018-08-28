@@ -1,0 +1,41 @@
+planet_edict = {
+	name = "disallow_shanty_towns"
+	influence_cost = 0
+	length = 0
+	
+	potential = {
+		NOT = { has_planet_flag = pf_disallow_shanty_towns }
+		owner = {
+			not = { has_country_edict = shantys_disallow_all }
+		}
+	}
+	
+	effect = {
+		set_planet_flag = pf_disallow_shanty_towns
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+planet_edict = {
+	name = "allow_shanty_towns"
+	influence_cost = 0
+	length = 0
+	
+	potential = {
+		has_planet_flag = pf_disallow_shanty_towns
+		owner = {
+			not = { has_country_edict = shantys_disallow_all }
+		}
+	}
+	
+	effect = {
+		remove_planet_flag = pf_disallow_shanty_towns
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

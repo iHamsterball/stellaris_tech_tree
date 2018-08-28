@@ -1,0 +1,109 @@
+defined_text = {
+	name = GetEdibleName
+	text = {
+		trigger = {
+			is_species_class = AVI
+		}
+		localization_key = edible_avi
+	}
+	text = {
+		trigger = {
+			is_species_class = MAM
+		}
+		localization_key = edible_mam
+	}
+	text = {
+		trigger = {
+			is_species_class = REP
+		}
+		localization_key = edible_rep
+	}
+	text = {
+		trigger = {
+			is_species_class = FUN
+		}
+		localization_key = edible_fun
+	}
+	text = {
+		trigger = {
+			is_species_class = MOL
+		}
+		localization_key = edible_mol
+	}
+	text = {
+		trigger = {
+			is_species_class = HUM
+		}
+		localization_key = edible_hum
+	}
+	text = {
+		trigger = {
+			is_species_class = ART
+		}
+		localization_key = edible_art
+	}
+	text = {
+		trigger = {
+			is_species_class = PLANT
+		}
+		localization_key = edible_plant
+	}
+	text = {
+		localization_key = edible_fallback
+	}
+}
+
+defined_text = {
+	name = GetEdibleNamePlural
+	text = {
+		trigger = {
+			is_species_class = AVI
+		}
+		localization_key = edible_avi_plural
+	}
+	text = {
+		trigger = {
+			is_species_class = MAM
+		}
+		localization_key = edible_mam_plural
+	}
+	text = {
+		trigger = {
+			is_species_class = REP
+		}
+		localization_key = edible_rep_plural
+	}
+	text = {
+		trigger = {
+			is_species_class = FUN
+		}
+		localization_key = edible_fun_plural
+	}
+	text = {
+		trigger = {
+			is_species_class = MOL
+		}
+		localization_key = edible_mol_plural
+	}
+	text = {
+		trigger = {
+			is_species_class = HUM
+		}
+		localization_key = edible_hum_plural
+	}
+	text = {
+		trigger = {
+			is_species_class = ART
+		}
+		localization_key = edible_art_plural
+	}
+	text = {
+		trigger = {
+			is_species_class = PLANT
+		}
+		localization_key = edible_plant_plural
+	}
+	text = {
+		localization_key = edible_fallback_plural
+	}
+}

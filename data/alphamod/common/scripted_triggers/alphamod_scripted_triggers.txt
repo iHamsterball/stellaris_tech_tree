@@ -1,0 +1,857 @@
+system_has_uncolonised_asteroid = {
+	solar_system = {
+		any_planet = {
+			is_planet_class = pc_asteroid
+			is_colony = no
+		}
+	}
+}
+
+empire_has_sr_dark_matter = {
+	has_country_strategic_resource = {
+		type = sr_dark_matter
+		amount > 0
+	}
+}
+
+empire_has_spice = {
+	has_country_strategic_resource = {
+		type = sr_wormspice
+		amount > 0
+	}
+}
+
+empire_has_betharian_1 = {
+	has_country_strategic_resource = {
+		type = sr_betharian2
+		amount > 0
+	}
+}
+
+empire_has_exotic_foods_1 = {
+	has_country_strategic_resource = {
+		type = sr_exotic_foods
+		amount > 0
+	}
+}
+
+empire_has_exotic_foods_2 = {
+	has_country_strategic_resource = {
+		type = sr_exotic_foods
+		amount > 1
+	}
+}
+
+empire_has_natural_fuels_1 = {
+	has_country_strategic_resource = {
+		type = sr_natural_fuels
+		amount > 0
+	}
+}
+
+empire_has_natural_fuels_10 = {
+	has_country_strategic_resource = {
+		type = sr_natural_fuels
+		amount > 9
+	}
+}
+
+empire_has_natural_fuels_2 = {
+	has_country_strategic_resource = {
+		type = sr_natural_fuels
+		amount > 1
+	}
+}
+
+empire_has_natural_fuels_3 = {
+	has_country_strategic_resource = {
+		type = sr_natural_fuels
+		amount > 2
+	}
+}
+
+empire_has_wealth_1 = {
+	has_country_strategic_resource = {
+		type = sr_wealth
+		amount > 0
+	}
+}
+
+empire_has_wealth_2 = {
+	has_country_strategic_resource = {
+		type = sr_wealth
+		amount > 1
+	}
+}
+
+empire_has_wealth_3 = {
+	has_country_strategic_resource = {
+		type = sr_wealth
+		amount > 2
+	}
+}
+
+empire_has_actinides_1 = {
+	has_country_strategic_resource = {
+		type = sr_actinides
+		amount > 0
+	}
+}
+
+empire_has_actinides_2 = {
+	has_country_strategic_resource = {
+		type = sr_actinides
+		amount > 1
+	}
+}
+
+empire_has_actinides_3 = {
+	has_country_strategic_resource = {
+		type = sr_actinides
+		amount > 2
+	}
+}
+
+empire_has_ice_1 = {
+	has_country_strategic_resource = {
+		type = sr_ice
+		amount > 0
+	}
+}
+
+empire_has_ice_2 = {
+	has_country_strategic_resource = {
+		type = sr_ice
+		amount > 1
+	}
+}
+
+empire_has_ice_3 = {
+	has_country_strategic_resource = {
+		type = sr_ice
+		amount > 2
+	}
+}
+
+empire_has_tradegoods_1 = {
+	has_country_strategic_resource = {
+		type = sr_tradegoods
+		amount > 0
+	}
+}
+
+empire_has_luxuries_1 = {
+	has_country_strategic_resource = {
+		type = sr_luxuries
+		amount > 0
+	}
+}
+
+empire_has_sacred_weapons_1 = {
+	has_country_strategic_resource = {
+		type = sr_sacred_weapons
+		amount > 0
+	}
+}
+
+empire_has_brands_fealty_1 = {
+	has_country_strategic_resource = {
+		type = sr_brands_fealty
+		amount > 0
+	}
+}
+
+empire_has_intelligence_1 = {
+	has_country_strategic_resource = {
+		type = sr_intelligence
+		amount > 0
+	}
+}
+
+empire_has_personal_defences_1 = {
+	has_country_strategic_resource = {
+		type = sr_personal_defences
+		amount > 0
+	}
+}
+
+empire_has_prescribed_media_1 = {
+	has_country_strategic_resource = {
+		type = sr_prescribed_media
+		amount > 0
+	}
+}
+
+empire_has_brands_fealty_2 = {
+	has_country_strategic_resource = {
+		type = sr_brands_fealty
+		amount > 1
+	}
+}
+
+empire_has_sacred_weapons_2 = {
+	has_country_strategic_resource = {
+		type = sr_sacred_weapons
+		amount > 1
+	}
+}
+
+empire_has_synthehol_1 = {
+	has_country_strategic_resource = {
+		type = sr_synthehol
+		amount > 0
+	}
+}
+
+empire_has_atmos_regulators_1 = {
+	has_country_strategic_resource = {
+		type = sr_atmos_regulators
+		amount > 0
+	}
+}
+
+empire_has_micro_cores_1 = {
+	has_country_strategic_resource = {
+		type = sr_micro_cores
+		amount > 0
+	}
+}
+
+empire_has_replicator_gems_1 = {
+	has_country_strategic_resource = {
+		type = sr_replicator_gems
+		amount > 0
+	}
+}
+
+# empire_has_hivemind_implants_1 = {
+	# has_country_strategic_resource = {
+		# type = sr_hivemind_implants
+		# amount > 0
+	# }
+# }
+
+empire_has_marks_caste_1 = {
+	has_country_strategic_resource = {
+		type = sr_marks_caste
+		amount > 0
+	}
+}
+
+empire_has_biomass_pods_5 = {
+	has_country_strategic_resource = {
+		type = sr_biomass
+		amount > 4
+	}
+}
+
+empire_has_biomass_pods_2 = {
+	has_country_strategic_resource = {
+		type = sr_biomass
+		amount > 1
+	}
+}
+
+empire_has_gigarelays_4 = {
+	has_country_strategic_resource = {
+		type = sr_gigarelays
+		amount > 3
+	}
+}
+
+has_tradegoods = {
+	OR = {
+		has_building = "building_tradestation"
+		has_building = "building_trade_company"
+		has_building = "building_tradestation_ex"
+		has_building = "building_trade_company_ex"
+		any_tile = {
+			has_resource = {
+				type = sr_tradegoods
+				amount > 0
+			}	
+		}
+	}
+}
+
+has_luxuries = {
+	OR = {
+		has_building = "building_luxuries_manufacturing"
+		has_building = "building_luxuries_manufacturing_ex"
+		has_building = "building_trade_company"
+		has_building = "building_trade_company_ex"
+		has_building = "building_paradise_dome"
+		has_building = "building_hypermall"		
+		any_tile = {
+			has_resource = {
+				type = sr_luxuries
+				amount > 0
+			}	
+		}
+	}
+}
+
+has_nutrient_rations = {
+	OR = {
+		has_building = "building_frontier_provisioner"
+		has_building = "building_frontier_provisioner_ex"
+		has_building = "building_hydroponics_farm_4_adv"
+		any_tile = {
+			has_resource = {
+				type = sr_nutrient_rations
+				amount > 0
+			}	
+		}
+	}
+}
+
+has_micro_cores = {
+	OR = {
+		has_building = "building_power_hub_2"
+		has_building = "building_alpha_fuel_converter_3"
+		any_tile = {
+			has_resource = {
+				type = sr_micro_cores
+				amount > 0
+			}	
+		}
+	}
+}
+
+has_synthehol = {
+	OR = {
+		any_tile = {
+			has_resource = {
+				type = sr_synthehol
+				amount > 0
+			}	
+		}
+		OR = {
+			has_building = "building_frontier_brewery"
+			has_building = "building_frontier_brewery_ex"
+		}
+	}
+}
+
+has_food_deposit = {
+	has_resource = {
+		type = food
+		amount > 0
+	}
+}
+
+has_exotic_foods_deposit = {
+	has_resource = {
+		type = sr_exotic_foods
+		amount > 0
+	}
+}
+
+has_large_food_deposit = {
+	has_resource = {
+		type = food
+		amount > 1
+	}
+}
+
+has_water_deposit = {
+	has_resource = {
+		type = sr_h2o
+		amount > 0
+	}
+}
+
+has_minerals_deposit = {
+	has_resource = {
+		type = minerals
+		amount > 0
+	}
+}
+
+has_energy_deposit = {
+	has_resource = {
+		type = energy
+		amount > 0
+	}
+}
+
+has_large_energy_deposit = {
+	has_resource = {
+		type = energy
+		amount > 1
+	}
+}
+
+has_ice_deposit = {
+	has_resource = {
+		type = sr_ice
+		amount > 0
+	}
+}
+
+has_actinides_deposit = {
+	has_resource = {
+		type = sr_actinides
+		amount > 0
+	}
+}
+
+has_natural_fuels_deposit = {
+	has_resource = {
+		type = sr_natural_fuels
+		amount > 0
+	}
+}
+
+has_biomass_deposit = {
+	has_resource = {
+		type = sr_biomass
+		amount > 0
+	}
+}
+
+has_society_deposit = {
+	has_resource = {
+		type = society_research
+		amount > 0
+	}
+}
+
+has_10_pops = {
+	count_pops = {
+		count > 9
+		limit = {
+			is_colony_pop = yes
+		}
+	}
+}
+
+has_17_pops = {
+	count_pops = {
+		count > 16
+		limit = {
+			is_colony_pop = yes
+		}
+	}
+}
+
+has_19_pops = {
+	count_pops = {
+		count > 18
+		limit = {
+			is_colony_pop = yes
+		}
+	}
+}
+
+is_still_medium_colony = {
+	count_pops = {
+		count < 8
+		limit = {
+			is_colony_pop = yes
+		}
+	}
+}
+
+is_still_small_colony = {
+	count_pops = {
+		count < 4
+		limit = {
+			is_colony_pop = yes
+		}
+	}
+}
+
+has_water_building = {
+	OR = {
+		has_building = "building_hydro_cell_bank"
+		has_building = "building_water_excavator"
+		has_building = "building_water_excavator_2"
+		has_building = "building_reservoir"
+		has_building = "building_reservoir_2"
+		has_building = "building_reservoir_3"
+		has_building = "building_water_distributor"
+		has_building = "building_water_treatment"
+		has_building = "building_hydro_plant"
+		has_building = "building_hydro_plant_2"
+		has_building = "building_desalinator"
+		has_building = "building_stormtower"
+		has_building = "building_ice_processor"
+		has_building = "building_ice_factory"
+		has_building = "building_ice_factory_ex"
+		has_building = "building_steammaker"
+		has_building = "building_moisture_farm"
+		has_building = "building_moisture_farm_2"
+		has_building = "building_moisture_farm_3"
+		has_building = "building_straka_ice"
+		has_building = "building_farming_guild"
+		has_building = "building_colony_control_pre"
+		has_building = "building_colony_control"
+		has_building = "building_libraryofadministration"
+		has_building = "building_chamberofexecutives"
+		has_building = "building_chamberofexecutives_2"
+		has_building = "building_hallofwarriors"
+		has_building = "building_governerspalace"
+		has_building = "building_templeofrule"
+		has_building = "building_councilhall"
+		has_building = "building_wet_farm"
+		has_building = "building_atlantis"
+	}
+}
+
+has_water_source = {
+	OR = {
+		has_water_building = yes
+		any_tile = {
+			has_water_deposit = yes
+		}
+	}
+}
+
+has_biomass_building = {
+	OR = {
+		has_building = "building_forestry"
+		has_building = "building_fishing_yard"
+		has_building = "building_traditional_plantation"
+		has_building = "building_hydroponics_farm_1_adv"
+		has_building = "building_hydroponics_farm_2_adv"
+		has_building = "building_hydroponics_farm_3_adv"
+		has_building = "building_hydroponics_farm_4_adv"
+		has_building = "building_biomass_sourcer"
+	}
+}
+
+has_ice_building = {
+	OR = {
+		has_building = "building_ice_rig_2"
+		has_building = "building_ice_rig"
+		has_building = "building_straka_ice"
+		has_building = "building_exo_power_plant"
+		has_building = "building_atmos_gen"
+		has_building = "building_ice_factory"
+		has_building = "building_ice_factory_ex"
+	}
+}
+
+has_ice_source = {
+	OR = {
+		has_ice_building = yes
+		any_tile = {
+			has_ice_deposit = yes
+		}
+	}
+}
+
+has_actinides_building = {
+	OR = {
+		has_building = "building_fuel_refinery_2"
+		has_building = "building_nuclear_research"
+		has_building = "building_fuel_refinery_2_ex"
+		has_building = "building_nuclear_research_ex"
+	}
+}
+
+has_actinides_source = {
+	OR = {
+		has_actinides_building = yes
+		any_tile = {
+			has_actinides_deposit = yes
+		}
+	}
+}
+
+has_natural_fuels_sourcer = {
+	OR = {
+		has_building = "building_fuel_sourcer"
+		has_building = "building_fuel_sourcer_2"
+		has_building = "building_fuel_sourcer_3"
+	}
+}
+
+has_natural_fuels_source = {
+	OR = {
+		has_natural_fuels_sourcer = yes
+		any_tile = {
+			has_natural_fuels_deposit = yes
+		}
+	}
+}
+
+has_biomass_source = {
+	OR = {
+		has_biomass_building = yes
+		any_tile = {
+			has_biomass_deposit = yes
+		}
+	}
+}
+
+has_adjacent_sprawl = {
+	any_neighboring_tile = {
+		OR = {
+			has_building = "building_sprawl"
+			has_building = "building_sprawl_district"
+		}
+	}
+}
+
+has_biodiversity = {
+	OR = {
+		has_blocker = "tb_dangerous_wildlife"
+		has_blocker = "tb_dangerous_wildlife_locked"
+		has_blocker = "tb_noxious_swamp"
+		has_blocker = "tb_noxious_swamp_locked"
+		has_blocker = "tb_toxic_kelp"
+		has_blocker = "tb_toxic_kelp_locked"
+		has_blocker = "tb_ancient_forest"
+		has_blocker = "tb_ancient_forest_locked"
+		has_blocker = "tb_jungle_riches"
+		has_blocker = "tb_dense_jungle"
+		has_blocker = "tb_dense_jungle_locked"
+		has_blocker = "tb_wild_crops"
+		has_blocker = "tb_wild_crops_locked"
+	}
+}
+
+has_adjacent_biodiversity = {
+	any_neighboring_tile = { has_biodiversity = yes }
+}
+
+has_jungle_or_forest = {
+	OR = {
+		has_blocker = "tb_dense_jungle"
+		has_blocker = "tb_ancient_forest"
+		has_blocker = "tb_alpine_forest"
+		has_blocker = "tb_dense_jungle_locked"
+		has_blocker = "tb_ancient_forest_locked"
+		has_blocker = "tb_jungle_riches"
+	}
+}
+
+has_adjacent_capital_or_hive = {
+	any_neighboring_tile = {
+		OR = {
+			has_building = "building_colony_shelter"
+			has_building = "building_capital_1"
+			has_building = "building_capital_2"
+			has_building = "building_capital_3"
+			has_building = "building_exo_ops"
+			has_building = "building_commerce_coord"
+			has_building = "building_mining_guild"
+			has_building = "building_central_databank"
+			has_building = "building_farming_guild"
+			#has_building = "building_capital_mega"
+		}
+	}
+}
+
+planet_has_tier1_capital = {
+	planet = {
+		OR = {
+			has_building = "building_capital_1"
+			has_building = "building_capital_2"
+			has_building = "building_capital_3"
+			has_building = "building_exo_ops"
+			has_building = "building_commerce_coord"
+			has_building = "building_mining_guild"
+			has_building = "building_central_databank"
+			has_building = "building_farming_guild"
+			#has_building = "building_capital_mega"
+		}
+	}
+}
+
+planet_has_tier1_capital_or_labmod = {
+	planet = {
+		OR = {
+			has_building = "building_capital_1"
+			has_building = "building_capital_2"
+			has_building = "building_capital_3"
+			has_building = "building_exo_ops"
+			has_building = "building_commerce_coord"
+			has_building = "building_mining_guild"
+			has_building = "building_central_databank"
+			has_building = "building_farming_guild"
+			#has_building = "building_capital_mega"
+			has_building = "building_hab_laboratory_module"
+		}
+	}
+}
+
+planet_has_tier2_or_exminelabmod = {
+	planet = {
+		OR = {
+			has_building = "building_capital_2"
+			has_building = "building_capital_3"
+			#has_building = "building_capital_mega"
+			has_building = "building_exo_ops"
+			has_building = "building_central_databank"
+			has_building = "building_mining_guild"
+			has_building = "building_hab_laboratory_module"
+		}
+	}
+}
+
+planet_has_tier2_or_excommlabmod = {
+	planet = {
+		OR = {
+			has_building = "building_capital_2"
+			has_building = "building_capital_3"
+			#has_building = "building_capital_mega"
+			has_building = "building_exo_ops"
+			has_building = "building_central_databank"
+			has_building = "building_commerce_coord"
+			has_building = "building_hab_laboratory_module"
+		}
+	}
+}
+
+planet_has_tier2_or_exfarmlabmod = {
+	planet = {
+		OR = {
+			has_building = "building_capital_2"
+			has_building = "building_capital_3"
+			#has_building = "building_capital_mega"
+			has_building = "building_exo_ops"
+			has_building = "building_central_databank"
+			has_building = "building_farming_guild"
+			has_building = "building_hab_laboratory_module"
+		}
+	}
+}
+
+planet_has_tier2_or_exlabmod = {
+	planet = {
+		OR = {
+			has_building = "building_capital_2"
+			has_building = "building_capital_3"
+			#has_building = "building_capital_mega"
+			has_building = "building_exo_ops"
+			has_building = "building_central_databank"
+			has_building = "building_hab_laboratory_module"
+		}
+	}
+}
+
+planet_has_tier3_or_exlabmod = {
+	planet = {
+		OR = {
+			has_building = "building_capital_3"
+			has_building = "building_exo_ops"
+			has_building = "building_central_databank"
+			has_building = "building_hab_laboratory_module"
+		}
+	}
+}
+
+planet_has_tier2_capital = {
+	planet = {
+		OR = {
+			has_building = "building_capital_2"
+			has_building = "building_capital_3"
+			has_building = "building_exo_ops"
+			has_building = "building_commerce_coord"
+			has_building = "building_mining_guild"
+			has_building = "building_central_databank"
+			has_building = "building_farming_guild"
+			#has_building = "building_capital_mega"
+		}
+	}
+}
+
+planet_has_tier2_or_commerce_capital = {
+	planet = {
+		OR = {
+			has_building = "building_capital_2"
+			has_building = "building_capital_3"
+			has_building = "building_commerce_coord"
+			#has_building = "building_capital_mega"
+		}
+	}
+}
+
+planet_has_tier2_or_farming_capital = {
+	planet = {
+		OR = {
+			has_building = "building_capital_2"
+			has_building = "building_capital_3"
+			has_building = "building_farming_guild"
+			#has_building = "building_capital_mega"
+		}
+	}
+}
+
+planet_has_tier2_or_mining_capital = {
+	planet = {
+		OR = {
+			has_building = "building_capital_2"
+			has_building = "building_capital_3"
+			has_building = "building_mining_guild"
+			#has_building = "building_capital_mega"
+			has_building = "building_exo_ops"
+		}
+	}
+}
+
+planet_has_tier2_or_research_capital = {
+	planet = {
+		OR = {
+			has_building = "building_capital_2"
+			has_building = "building_capital_3"
+			has_building = "building_central_databank"
+			#has_building = "building_capital_mega"
+		}
+	}
+}
+
+planet_has_tier3_or_commerce_capital = {
+	planet = {
+		OR = {
+			has_building = "building_capital_3"
+			has_building = "building_commerce_coord"
+			has_building = "building_hab_capital"
+			#has_building = "building_capital_mega"
+		}
+	}
+}
+
+planet_has_tier3_or_farming_capital = {
+	planet = {
+		OR = {
+			has_building = "building_capital_3"
+			has_building = "building_farming_guild"
+			has_building = "building_hab_capital"
+			#has_building = "building_capital_mega"
+		}
+	}
+}
+
+planet_has_tier3_or_mining_capital = {
+	planet = {
+		OR = {
+			has_building = "building_capital_3"
+			has_building = "building_mining_guild"
+			has_building = "building_hab_capital"
+			#has_building = "building_capital_mega"
+			has_building = "building_exo_ops"
+		}
+	}
+}
+
+planet_has_tier3_or_research_capital = {
+	planet = {
+		OR = {
+			has_building = "building_capital_3"
+			has_building = "building_central_databank"
+			has_building = "building_hab_capital"
+			#has_building = "building_capital_mega"
+		}
+	}
+}
+
+is_hab_or_ringyard = {
+	OR = {
+		is_planet_class = pc_habitat
+		is_planet_class = pc_ringworld_shipyard
+	}
+}

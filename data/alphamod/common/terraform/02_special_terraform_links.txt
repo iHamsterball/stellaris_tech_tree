@@ -1,0 +1,1028 @@
+################
+## Tomb World ##
+################
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_desert"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_desert_preference	# special terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							OR = {
+								has_trait = trait_pc_nuked_preference
+								has_trait = trait_presentient_irradiated
+							}
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_desert_preference	# special terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do special terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_arid"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_arid_preference	# special terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							OR = {
+								has_trait = trait_pc_nuked_preference
+								has_trait = trait_presentient_irradiated
+							}
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_arid_preference	# special terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do special terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_savannah"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_savannah_preference	# special terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							OR = {
+								has_trait = trait_pc_nuked_preference
+								has_trait = trait_presentient_irradiated
+							}
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_savannah_preference	# special terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do special terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_arctic"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_arctic_preference	# special terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							OR = {
+								has_trait = trait_pc_nuked_preference
+								has_trait = trait_presentient_irradiated
+							}
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_arctic_preference	# special terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do special terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_tundra"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_tundra_preference	# special terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							OR = {
+								has_trait = trait_pc_nuked_preference
+								has_trait = trait_presentient_irradiated
+							}
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_tundra_preference	# special terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do special terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_alpine"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_alpine_preference	# special terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							OR = {
+								has_trait = trait_pc_nuked_preference
+								has_trait = trait_presentient_irradiated
+							}
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_alpine_preference	# special terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do special terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_continental"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_continental_preference	# special terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							OR = {
+								has_trait = trait_pc_nuked_preference
+								has_trait = trait_presentient_irradiated
+							}
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_continental_preference	# special terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do special terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_tropical"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_tropical_preference	# special terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							OR = {
+								has_trait = trait_pc_nuked_preference
+								has_trait = trait_presentient_irradiated
+							}
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_tropical_preference	# special terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do special terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_ocean"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					has_trait = trait_pc_ocean_preference	# special terraforming for main species only
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							OR = {
+								has_trait = trait_pc_nuked_preference
+								has_trait = trait_presentient_irradiated
+							}
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+				}
+				AND = {	# for ai, colonized
+					has_trait = trait_pc_ocean_preference	# special terraforming for main species only
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						any_owned_pop = {	# don't do special terraforming if everyone on planet lives without trouble
+							is_sentient = yes
+							is_being_purged = no
+							from = { habitability = { who = prev value < 0.5 } }
+						}
+						count_owned_pops = {	# don't do either if at least 10 living pops there live comfortably
+							limit = {
+								is_sentient = yes
+								is_being_purged = no
+								is_robot_pop = no
+								from = { habitability = { who = prev value > 0.55 } }
+							}
+							count < 9
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+################
+## Gaia World ##
+################
+
+terraform_link = {
+	to = "pc_gaia"
+	from = "pc_desert"
+	
+	energy = 20000
+	duration = 14600
+	
+	condition = {
+		has_technology = "tech_gaia_creation"
+	}
+}
+
+terraform_link = {
+	from = "pc_arid"
+	to = "pc_gaia"
+	
+	energy = 20000
+	duration = 14600
+	
+	condition = {
+		has_technology = "tech_gaia_creation"
+	}
+}
+
+terraform_link = {
+	to = "pc_gaia"
+	from = "pc_savannah"
+	
+	energy = 20000
+	duration = 14600
+	
+	condition = {
+		has_technology = "tech_gaia_creation"
+	}
+}
+
+terraform_link = {
+	to = "pc_gaia"
+	from = "pc_arctic"
+	
+	energy = 20000
+	duration = 14600
+	
+	condition = {
+		has_technology = "tech_gaia_creation"
+	}
+}
+
+terraform_link = {
+	to = "pc_gaia"
+	from = "pc_tundra"
+	
+	energy = 20000
+	duration = 14600
+	
+	condition = {
+		has_technology = "tech_gaia_creation"
+	}
+}
+
+terraform_link = {
+	to = "pc_gaia"
+	from = "pc_alpine"
+	
+	energy = 20000
+	duration = 14600
+	
+	condition = {
+		has_technology = "tech_gaia_creation"
+	}
+}
+
+terraform_link = {
+	to = "pc_gaia"
+	from = "pc_continental"
+	
+	energy = 20000
+	duration = 14600
+	
+	condition = {
+		has_technology = "tech_gaia_creation"
+	}
+}
+
+terraform_link = {
+	to = "pc_gaia"
+	from = "pc_tropical"
+	
+	energy = 20000
+	duration = 14600
+	
+	condition = {
+		has_technology = "tech_gaia_creation"
+	}
+}
+
+terraform_link = {
+	to = "pc_gaia"
+	from = "pc_ocean"
+	
+	energy = 20000
+	duration = 14600
+	
+	condition = {
+		has_technology = "tech_gaia_creation"
+	}
+}
+
+##################
+## Barren World ##
+##################
+
+terraform_link = {
+	from = "pc_barren"
+	to = "pc_desert"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		from = { has_modifier = terraforming_candidate }
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				has_trait = trait_pc_desert_preference	# for ai, special terraforming for main species only
+			}
+		}
+	}
+	
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+}
+
+terraform_link = {
+	from = "pc_barren"
+	to = "pc_arid"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		from = { has_modifier = terraforming_candidate }
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				has_trait = trait_pc_arid_preference	# for ai, special terraforming for main species only
+			}
+		}
+	}
+	
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+}
+
+terraform_link = {
+	from = "pc_barren"
+	to = "pc_savannah"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		from = { has_modifier = terraforming_candidate }
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				has_trait = trait_pc_savannah_preference	# for ai, special terraforming for main species only
+			}
+		}
+	}
+	
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+}
+
+terraform_link = {
+	from = "pc_barren"
+	to = "pc_arctic"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		from = { has_modifier = terraforming_candidate }
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				has_trait = trait_pc_arctic_preference	# for ai, special terraforming for main species only
+			}
+		}
+	}
+	
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+}
+
+terraform_link = {
+	from = "pc_barren"
+	to = "pc_tundra"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		from = { has_modifier = terraforming_candidate }
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				has_trait = trait_pc_tundra_preference	# for ai, special terraforming for main species only
+			}
+		}
+	}
+	
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+}
+
+terraform_link = {
+	from = "pc_barren"
+	to = "pc_alpine"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		from = { has_modifier = terraforming_candidate }
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				has_trait = trait_pc_alpine_preference	# for ai, special terraforming for main species only
+			}
+		}
+	}
+	
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+}
+
+terraform_link = {
+	from = "pc_barren"
+	to = "pc_continental"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		from = { has_modifier = terraforming_candidate }
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				has_trait = trait_pc_continental_preference	# for ai, special terraforming for main species only
+			}
+		}
+	}
+	
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+}
+
+terraform_link = {
+	from = "pc_barren"
+	to = "pc_tropical"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		from = { has_modifier = terraforming_candidate }
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				has_trait = trait_pc_tropical_preference	# for ai, special terraforming for main species only
+			}
+		}
+	}
+	
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+}
+
+terraform_link = {
+	from = "pc_barren"
+	to = "pc_ocean"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		from = { has_modifier = terraforming_candidate }
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				has_trait = trait_pc_ocean_preference	# for ai, special terraforming for main species only
+			}
+		}
+	}
+	
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+}
+
+terraform_link = {
+	from = "pc_barren_cold"
+	to = "pc_desert"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		from = { has_modifier = terraforming_candidate }
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				has_trait = trait_pc_desert_preference	# for ai, special terraforming for main species only
+			}
+		}
+	}
+	
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+}
+
+terraform_link = {
+	from = "pc_barren_cold"
+	to = "pc_arid"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		from = { has_modifier = terraforming_candidate }
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				has_trait = trait_pc_arid_preference	# for ai, special terraforming for main species only
+			}
+		}
+	}
+	
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+}
+
+terraform_link = {
+	from = "pc_barren_cold"
+	to = "pc_savannah"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		from = { has_modifier = terraforming_candidate }
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				has_trait = trait_pc_savannah_preference	# for ai, special terraforming for main species only
+			}
+		}
+	}
+	
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+}
+
+terraform_link = {
+	from = "pc_barren_cold"
+	to = "pc_arctic"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		from = { has_modifier = terraforming_candidate }
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				has_trait = trait_pc_arctic_preference	# for ai, special terraforming for main species only
+			}
+		}
+	}
+	
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+}
+
+terraform_link = {
+	from = "pc_barren_cold"
+	to = "pc_tundra"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		from = { has_modifier = terraforming_candidate }
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				has_trait = trait_pc_tundra_preference	# for ai, special terraforming for main species only
+			}
+		}
+	}
+	
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+}
+
+terraform_link = {
+	from = "pc_barren_cold"
+	to = "pc_alpine"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		from = { has_modifier = terraforming_candidate }
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				has_trait = trait_pc_alpine_preference	# for ai, special terraforming for main species only
+			}
+		}
+	}
+	
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+}
+
+terraform_link = {
+	from = "pc_barren_cold"
+	to = "pc_continental"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		from = { has_modifier = terraforming_candidate }
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				has_trait = trait_pc_continental_preference	# for ai, special terraforming for main species only
+			}
+		}
+	}
+	
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+}
+
+terraform_link = {
+	from = "pc_barren_cold"
+	to = "pc_tropical"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		from = { has_modifier = terraforming_candidate }
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				has_trait = trait_pc_tropical_preference	# for ai, special terraforming for main species only
+			}
+		}
+	}
+	
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+}
+
+terraform_link = {
+	from = "pc_barren_cold"
+	to = "pc_ocean"
+	
+	energy = 10000
+	duration = 7300
+	
+	condition = {
+		has_technology = "tech_climate_restoration"
+		from = { has_modifier = terraforming_candidate }
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				has_trait = trait_pc_ocean_preference	# for ai, special terraforming for main species only
+			}
+		}
+	}
+	
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+}

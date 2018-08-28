@@ -1,0 +1,376 @@
+# Sets the edict-cost for all edicts with this variable
+@standardEdictCost = 150
+
+planet_edict = {
+	name = "toggle_production_on"
+	
+	influence_cost = 0
+	length = 0
+	 
+	potential = {
+		NOT = { has_planet_flag = production_on }
+		OR = {
+			has_building = "building_mineral_transformer"
+			has_building = "building_mineral_transformer_plus"
+			has_building = "building_mineral_transformer_ex"
+			has_building = "building_tradestation"
+			has_building = "building_trade_company"
+			has_building = "building_tradestation_ex"
+			has_building = "building_trade_company_ex"
+			has_building = "building_power_hub_2"
+			has_building = "building_power_hub_2_plus"
+			has_building = "building_power_hub_2_ex"
+			has_building = "building_mineral_processing_plant_2"
+			has_building = "building_mineral_processing_plant_2_plus"
+			has_building = "building_mineral_processing_plant_2_ex"
+			has_building = "building_ice_factory"
+			has_building = "building_ice_processor"
+			has_planet_flag = pf_processing_ice
+			has_planet_flag = pf_processing_water
+			has_modifier = increase_tradegoods
+			has_modifier = increase_cores
+			has_modifier = increase_gems
+			has_modifier = increase_gems_tr
+		}
+	}
+	
+	effect = {
+		set_planet_flag = "production_on"
+	}
+	 
+	ai_weight = {
+		weight = 1
+	}
+}
+
+planet_edict = {
+	name = "toggle_production_off"
+	
+	influence_cost = 0
+	length = 0
+	 
+	potential = {
+		has_planet_flag = production_on
+	}
+	
+	effect = {
+		remove_planet_flag = production_on
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+planet_edict = {
+	name = "alpha_increase_tradegoods"
+	
+	influence_cost = 0
+	length = 0
+
+	potential = {
+		NOT = { has_modifier = increase_tradegoods }
+		has_planet_flag = production_on
+		OR = {
+			has_building = "building_tradestation"
+			has_building = "building_trade_company"
+			has_building = "building_tradestation_ex"
+			has_building = "building_trade_company_ex"
+		}
+	}
+	
+	effect = {
+		planet_event = { id = manage_trade.900 }
+	}
+	 
+	ai_weight = {
+		weight = 1
+	}
+}
+
+planet_edict = {
+	name = "alpha_reduce_tradegoods"
+
+	influence_cost = 0
+	length = 0
+
+	potential = {
+		has_planet_flag = production_on
+		has_modifier = increase_tradegoods
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_not_exporting_goods"
+			NOT = { has_planet_flag = pf_export_tradegoods }
+		}
+	}
+
+	effect = {
+		planet_event = { id = manage_trade.950 }
+	}
+	 
+	ai_weight = {
+		weight = 0
+	}
+}
+
+planet_edict = {
+	name = "alpha_increase_cores"
+	
+	influence_cost = 0
+	length = 0
+	 
+	prerequisites = { 
+		"tech_alpha_micro_fission"
+	}
+
+	potential = {
+		NOT = { has_modifier = increase_cores }
+		has_planet_flag = production_on
+		has_building = "building_power_hub_2"
+	}
+	
+	effect = {
+		planet_event = { id = manage_trade.905 }
+	}
+	 
+	ai_weight = {
+		weight = 1
+	}
+}
+
+planet_edict = {
+	name = "alpha_reduce_cores"
+
+	influence_cost = 0
+	length = 0
+
+	potential = {
+		has_planet_flag = production_on
+		has_modifier = increase_cores
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_not_exporting_cores"
+			NOT = { has_planet_flag = pf_export_cores }
+		}
+	}
+
+	effect = {
+		planet_event = { id = manage_trade.955 }
+	}
+	 
+	ai_weight = {
+		weight = 0
+	}
+}
+
+planet_edict = {
+	name = "alpha_increase_gems"
+	
+	influence_cost = 0
+	length = 0
+	 
+	prerequisites = { 
+		"tech_matter_replication_alpha"
+	}
+
+	potential = {
+		NOT = { has_modifier = increase_gems }
+		has_planet_flag = production_on
+		has_building = "building_mineral_processing_plant_2"
+	}
+	
+	effect = {
+		planet_event = { id = manage_trade.915 }
+	}
+	 
+	ai_weight = {
+		weight = 1
+	}
+}
+
+planet_edict = {
+	name = "alpha_reduce_gems"
+
+	influence_cost = 0
+	length = 0
+
+	potential = {
+		has_planet_flag = production_on
+		has_modifier = increase_gems
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_not_exporting_gems"
+			NOT = { has_planet_flag = pf_export_gems}
+		}
+	}
+
+	effect = {
+		planet_event = { id = manage_trade.965 }
+	}
+	 
+	ai_weight = {
+		weight = 0
+	}
+}
+
+planet_edict = {
+	name = "alpha_increase_gems_tr"
+	
+	influence_cost = 0
+	length = 0
+	 
+	prerequisites = { 
+		"tech_matter_replication_alpha"
+	}
+
+	potential = {
+		NOT = { has_modifier = increase_gems_tr }
+		has_planet_flag = production_on
+		has_building = "building_mineral_transformer"
+	}
+	
+	effect = {
+		planet_event = { id = manage_trade.925 }
+	}
+	 
+	ai_weight = {
+		weight = 1
+	}
+}
+
+planet_edict = {
+	name = "alpha_reduce_gems_tr"
+
+	influence_cost = 0
+	length = 0
+
+	potential = {
+		has_planet_flag = production_on
+		has_modifier = increase_gems_tr
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_not_exporting_gems_tr"
+			NOT = { has_planet_flag = pf_export_gems_tr}
+		}
+	}
+
+	effect = {
+		planet_event = { id = manage_trade.975 }
+	}
+	 
+	ai_weight = {
+		weight = 0
+	}
+}
+
+planet_edict = {
+	name = "process_surplus_ice"
+	influence_cost = 0
+	
+	length = 0
+	
+	potential = {
+		has_planet_flag = production_on
+		has_building = "building_ice_processor"
+		not = { has_planet_flag = pf_processing_ice }
+		not = { has_planet_flag = pf_processing_water }
+	}
+	
+	modifier = {		
+	}
+	
+	effect = {
+		planet_event = { id = manage_trade.2300 }
+		set_planet_flag = pf_processing_ice
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+planet_edict = {
+	name = "stop_process_surplus_ice"
+	influence_cost = 0
+	
+	length = 0
+	
+	potential = {
+		has_planet_flag = production_on
+		has_planet_flag = pf_processing_ice
+	}
+	
+	modifier = {		
+	}
+	
+	effect = {
+		planet_event = { id = manage_trade.2400 }
+		remove_planet_flag = pf_processing_ice
+		remove_planet_flag = pf_allow_coastal_flooding
+		remove_planet_flag = pf_coastal_flooding
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+planet_edict = {
+	name = "process_surplus_water"
+	influence_cost = 0
+	
+	length = 0
+	
+	potential = {
+		has_planet_flag = production_on
+		has_building = "building_ice_factory"
+		not = { has_planet_flag = pf_processing_water }
+		not = { has_planet_flag = pf_processing_ice }
+	}
+	
+	modifier = {		
+	}
+	
+	effect = {
+		planet_event = { id = manage_trade.2100 }
+		set_planet_flag = pf_processing_water
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+planet_edict = {
+	name = "stop_process_surplus_water"
+	influence_cost = 0
+	
+	length = 0
+	
+	potential = {
+		has_planet_flag = production_on
+		has_planet_flag = pf_processing_water
+	}
+	
+	modifier = {		
+	}
+	
+	effect = {
+		planet_event = { id = manage_trade.2200 }
+		remove_planet_flag = pf_processing_water
+		remove_planet_flag = pf_allow_global_freezing
+		remove_planet_flag = pf_global_freezing
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

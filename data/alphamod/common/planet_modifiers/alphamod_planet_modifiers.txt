@@ -1,0 +1,303 @@
+### Planet Modifiers
+
+pm_stockpiling_ice = {
+	modifier = "stocking_ice"
+}
+pm_stockpiling_actinides = {
+	modifier = "stocking_actinides"
+}
+pm_stockpiling_fuels = {
+	modifier = "stocking_fuels"
+}
+
+pm_thin_atmosphere = {
+	spawn_chance = {
+		modifier = {
+			add = 5
+			is_planet_class = "pc_barren"
+		}
+		modifier = {
+			add = 1
+			is_planet_class = "pc_asteroid"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_thin_atmosphere"
+		}		
+		modifier = {
+			factor = 0
+			num_modifiers > 3
+		}
+	}
+	
+	modifier = "thin_atmosphere"
+}
+
+pm_engineers_paradise = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_planet_class = "pc_barren"
+		}
+		modifier = {
+			add = 25
+			is_planet_class = "pc_asteroid"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_engineers_paradise"
+		}		
+		modifier = {
+			factor = 0
+			num_modifiers > 3
+		}
+	}
+	
+	modifier = "engineers_paradise"
+}
+
+pm_micro_organisms = {
+	spawn_chance = {
+		modifier = {
+			add = 3
+			is_planet_class = "pc_barren"
+		}
+		modifier = {
+			add = 1
+			is_planet_class = "pc_asteroid"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_micro_organisms"
+		}		
+		modifier = {
+			factor = 0
+			num_modifiers > 3
+		}
+	}
+	
+	modifier = "micro_organisms"
+}
+
+pm_subterranean_lifeforms = {
+	spawn_chance = {
+		modifier = {
+			add = 5
+			is_planet_class = "pc_barren"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_asteroid"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_subterranean_lifeforms"
+		}		
+		modifier = {
+			factor = 0
+			num_modifiers > 3
+		}
+	}
+	
+	modifier = "subterranean_lifeforms"
+}
+
+pm_underground_caverns = {
+	spawn_chance = {
+		modifier = {
+			add = 5
+			is_planet_class = "pc_barren"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_asteroid"
+		}
+		modifier = {
+			factor = 3
+			has_planet_modifier = "pm_subterranean_lifeforms"
+		}	
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_underground_caverns"
+		}		
+	}
+	
+	modifier = "underground_caverns"
+}
+
+pm_crystalline_formations = {
+	spawn_chance = {
+		modifier = {
+			add = 5
+			is_planet_class = "pc_barren"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_asteroid"
+		}
+		modifier = {
+			factor = 2
+			has_planet_modifier = "pm_underground_caverns"
+		}
+		modifier = {
+			factor = 1.5
+			has_planet_modifier = "pm_geothermal_activity"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_crystalline_formations"
+		}		
+	}
+	
+	modifier = "crystalline_formations"
+}
+
+pm_geothermal_activity = {
+	spawn_chance = {
+		modifier = {
+			add = 5
+			is_planet_class = "pc_barren"
+		}
+		modifier = {
+			add = 1
+			is_planet_class = "pc_asteroid"
+		}
+		modifier = {
+			factor = 2
+			has_planet_modifier = "pm_underground_caverns"
+		}	
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_geothermal_activity"
+		}		
+	}
+	
+	modifier = "geothermal_activity"
+}
+
+pm_physicists_paradise = {
+	spawn_chance = {
+		modifier = {
+			add = 25
+			is_planet_class = "pc_barren"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_asteroid"
+		}	
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_physicists_paradise"
+		}	
+		modifier = {
+			factor = 0
+			num_modifiers > 3
+		}
+	}
+	
+	modifier = "physicists_paradise"
+}
+
+pm_volcanic_ash_clouds = {
+	spawn_chance = {
+		#None - From anomaly 
+	}
+	
+	modifier = "volcanic_ash_clouds"
+}
+
+pm_alpha_storms = {
+	spawn_chance = {
+		#None - From anomaly 
+	}
+	
+	modifier = "alpha_storms"
+}
+
+pm_food_is_love = {
+	spawn_chance = {
+		#None - From anomaly 
+	}
+	
+	modifier = "food_is_love"
+}
+
+pm_blinding_curse = {
+	spawn_chance = {
+		#None - From anomaly 
+	}
+	
+	modifier = "blinding_curse"
+}
+
+pm_importing_food = {
+	spawn_chance = {
+		#None - From anomaly 
+	}
+	
+	modifier = "importing_food"
+}
+
+pm_exporting_food = {
+	spawn_chance = {
+		#None - From anomaly 
+	}
+	
+	modifier = "exporting_food"
+}
+
+pm_importing_minerals = {
+	spawn_chance = {
+		#None - From anomaly 
+	}
+	
+	modifier = "importing_minerals"
+}
+
+pm_exporting_minerals = {
+	spawn_chance = {
+		#None - From anomaly 
+	}
+	
+	modifier = "exporting_minerals"
+}
+
+pm_trade_routes_1 = {
+	spawn_chance = {
+		#None - From anomaly 
+	}
+	
+	modifier = "trade_routes_1"
+}
+
+pm_trade_routes_2 = {
+	spawn_chance = {
+		#None - From anomaly 
+	}
+	
+	modifier = "trade_routes_2"
+}
+
+pm_trade_routes_3 = {
+	spawn_chance = {
+		#None - From anomaly 
+	}
+	
+	modifier = "trade_routes_3"
+}
+
+pm_trade_routes_4 = {
+	spawn_chance = {
+		#None - From anomaly 
+	}
+	
+	modifier = "trade_routes_4"
+}
+
+pm_alpha_doming = {
+	spawn_chance = {
+		#None - From anomaly 
+	}
+	
+	modifier = "alpha_doming"
+}

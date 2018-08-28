@@ -1,0 +1,97 @@
+building_shanty_town = {
+	base_buildtime = 0
+	is_listed = no
+	
+	produced_resources = {
+		food = 1
+	}
+	
+	planet_modifier = {
+		pop_happiness = -0.04
+		pop_government_ethic_attraction = -0.04
+	}
+	
+	upgrades = {
+		building_shanty_farm
+		building_shanty_mine
+		building_shanty_market
+		building_shanty_school
+	}
+}
+
+building_shanty_farm = {
+	base_buildtime = 60
+	is_listed = no
+	
+	produced_resources = {
+		food = 1.5
+	}
+	
+	planet_modifier = {
+		pop_happiness = -0.02
+		pop_government_ethic_attraction = -0.02
+	}
+	
+	upgrades = {
+		building_basic_farm
+		building_cantina
+	}
+}
+
+building_shanty_mine = {
+	base_buildtime = 120
+	is_listed = no
+	
+	produced_resources = {
+		minerals = 1
+	}
+	
+	planet_modifier = {
+		pop_happiness = -0.02
+		pop_government_ethic_attraction = -0.02
+	}
+	
+	upgrades = {
+		building_basic_mine
+		building_frontier_town
+		building_water_excavator
+		building_ice_rig		
+	}
+}
+
+building_shanty_market = {
+	base_buildtime = 120
+	is_listed = no
+	
+	produced_resources = {
+		energy = 1
+	}
+	
+	planet_modifier = {
+		pop_happiness = -0.02
+		pop_government_ethic_attraction = -0.02
+	}
+	
+	upgrades = {
+		building_basic_power_plant
+	}
+}
+
+building_shanty_school = {
+	base_buildtime = 180
+	is_listed = no
+	
+	produced_resources = {
+		society_research = 1
+		engineering_research = 1
+	}
+	
+	planet_modifier = {
+		pop_happiness = -0.02
+		pop_government_ethic_attraction = -0.02
+	}
+	
+	upgrades = {
+		building_basic_science_lab_1
+	}
+}

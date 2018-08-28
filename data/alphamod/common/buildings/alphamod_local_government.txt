@@ -1,0 +1,603 @@
+@lots = 10
+@lotsandlots = 20
+
+@infcosthigh = 50
+@infcostmed = 25
+@infcostlow = 10
+
+@engcostcheap = 40
+@engcostlow = 80
+@engcostmed = 175
+@engcosthigh = 250
+
+@mincostcheap = 25
+@mincostlow = 50
+@mincostmed = 125
+@mincosthigh = 250
+
+@srlow = 1
+@srmed = 2
+@srhigh = 4
+
+@buildquick = 90
+@buildnormal = 150
+@buildlong = 240
+@buildhuge = 360
+
+@weightnormal = 2
+@weightuseful = 8
+@weightimportant = 14
+@weightcritical = 30
+
+@b0effect = 1
+@b1effect = 1.5
+@b2effect = 2
+@b3effect = 3
+@b4effect = 4
+@b5effect = 5
+
+@b1upkeep = 1
+@b2upkeep = 1.5
+@b3upkeep = 2
+@b4upkeep = 3
+@b5upkeep = 5
+
+building_colony_control_pre = {
+	base_buildtime = @buildquick
+	planet_unique = yes
+	
+	cost = {
+		energy = @engcostcheap
+	}
+	
+	produced_resources = {
+		food = @b0effect
+		sr_h2o = 1
+		minerals = @b0effect
+	}
+
+	adjacency_bonus = {
+		tile_building_resource_food_add = 1
+	}
+	
+	planet_modifier = {
+		planet_building_build_speed_mult = 0.1
+		planet_migration_all_pull = 0.05
+	}
+	
+	potential = {
+		planet = { NOT = { has_modifier = "capital" } }	
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_adjacent_colonyship"
+			tile = {
+				any_neighboring_tile = {
+					OR = {
+						has_building = "building_colony_shelter"
+						has_building = "building_capital_1"
+						has_building = "building_capital_2"
+						has_building = "building_exo_ops"
+						has_building = "building_commerce_coord"
+						has_building = "building_mining_guild"
+						has_building = "building_central_databank"
+						has_building = "building_farming_guild"
+						has_building = "building_hab_capital"
+					}
+				}
+			}
+		}		
+	}
+	
+	upgrades = {
+		building_colony_control
+	}
+
+	ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 250
+		modifier = {
+			factor = 5
+			from = { is_still_small_colony = yes }
+		}
+	}
+}
+
+building_colony_control = {
+	base_buildtime = @buildquick
+	planet_unique = yes
+	is_listed = no
+	
+	cost = {
+		minerals = @mincostlow
+		energy = @engcostcheap
+	}
+	
+	produced_resources = {
+		food = @b1effect
+		sr_h2o = 1
+		minerals = @b0effect
+	}
+
+	adjacency_bonus = {
+		tile_building_resource_food_add = 1
+		tile_building_resource_minerals_add = 1
+	}
+	
+	planet_modifier = {
+		planet_building_build_speed_mult = 0.2
+		planet_migration_all_pull = 0.05
+	}
+	
+	prerequisites = {
+		"tech_alpha_colony_control"
+	}
+	
+	upgrades = {
+		building_libraryofadministration
+		building_chamberofexecutives
+		building_hallofwarriors
+		building_governerspalace
+		building_templeofrule
+		building_councilhall
+	}
+
+	ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			from = { is_still_small_colony = yes }
+		}
+	}
+}
+
+building_libraryofadministration = {
+	base_buildtime = 180
+	planet_unique = yes
+	is_listed = no
+	
+	cost = {
+		minerals = 100
+		energy = 100
+		influence = 25
+	}
+
+	# allow = {
+		# custom_tooltip = {
+			# text = "requirement_wrong_government"
+			# planet = {
+				# owner = {
+					# OR = {
+						# has_government = subconscious_consensus
+						# has_government = science_directorate
+						# has_government = illuminated_technocracy
+						# has_government = ai_overlordship
+						# has_government = irenic_protectorate
+					# }
+				# }
+			# }
+		# }		
+	# }
+	
+	adjacency_bonus = {
+		tile_building_resource_engineering_research_add = 1
+		tile_building_resource_physics_research_add = 1
+		tile_building_resource_society_research_add = 1
+		tile_building_resource_food_add = 1
+		tile_building_resource_minerals_add = 1
+	}
+	
+	produced_resources = {
+		unity = 3
+		sr_h2o = 1
+		food = 1
+	}
+	
+	planet_modifier = {
+		tile_resource_energy_mult = -0.05
+	}
+	
+	country_modifier = {
+		all_technology_research_speed = 0.01
+	}
+
+	prerequisites = {
+		"tech_colonial_administrations_alpha"
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		factor = 25
+		modifier = {
+			factor = 0			
+			from = { is_still_small_colony = yes }
+		}
+	}
+}
+
+building_chamberofexecutives = {
+	base_buildtime = 180
+	planet_unique = yes
+	is_listed = no
+	
+	cost = {
+		minerals = 100
+		energy = 150
+		influence = 25
+	}
+
+	# allow = {
+		# custom_tooltip = {
+			# text = "requirement_wrong_government"
+			# planet = {
+				# owner = {
+					# OR = {
+						# has_government = plutocratic_oligarchy
+						# has_government = mega_corporation
+						# has_government = peaceful_bureaucracy
+					# }
+				# }
+			# }
+		# }		
+	# }
+	
+	adjacency_bonus = {
+		tile_building_resource_minerals_add = 1
+		tile_building_resource_food_add = 1
+	}
+	
+	produced_resources = {
+		unity = 3
+		food = 1
+		sr_wealth = 1
+		sr_h2o = 1
+	}
+	
+	planet_modifier = {
+		tile_resource_energy_mult = -0.05
+		tile_resource_minerals_mult = 0.05
+	}
+	
+	country_modifier = {
+		country_trade_attractiveness = 0.01
+	}
+
+	prerequisites = {
+		"tech_colonial_corporations_alpha"
+	}
+	
+	upgrades = {
+		building_chamberofexecutives_2
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		factor = 25
+		modifier = {
+			factor = 0			
+			from = { is_still_small_colony = yes }
+		}
+	}
+}
+
+building_chamberofexecutives_2 = {
+	base_buildtime = 360
+	planet_unique = yes
+	is_listed = no
+	
+	cost = {
+		minerals = 200
+		energy = 300
+		influence = 25
+	}
+
+	# allow = {
+		# custom_tooltip = {
+			# text = "requirement_wrong_government"
+			# planet = {
+				# owner = {
+					# OR = {
+						# has_government = plutocratic_oligarchy
+						# has_government = mega_corporation
+						# has_government = peaceful_bureaucracy
+					# }
+				# }
+			# }
+		# }		
+	# }
+	
+	adjacency_bonus = {
+		tile_building_resource_minerals_add = 1.5
+		tile_building_resource_food_add = 1
+	}
+	
+	produced_resources = {
+		unity = 3
+		food = 1.5
+		sr_wealth = 2
+		sr_h2o = 1
+	}
+	
+	planet_modifier = {
+		tile_resource_minerals_mult = 0.05
+		pop_government_ethic_attraction = 0.05
+	}
+	
+	country_modifier = {
+		country_trade_attractiveness = 0.02
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+
+	prerequisites = {
+		"tech_colonial_corporations_alpha_2"
+	}
+	
+	ai_weight = {
+		factor = 25
+		modifier = {
+			factor = 0			
+			from = { is_still_medium_colony = yes }
+		}
+	}
+}
+
+building_hallofwarriors = {
+	base_buildtime = 180
+	planet_unique = yes
+	is_listed = no
+	
+	cost = {
+		minerals = 150
+		energy = 50
+		influence = 25
+	}
+	
+	# allow = {
+		# custom_tooltip = {
+			# text = "requirement_wrong_government"
+			# planet = {
+				# owner = {
+					# OR = {
+						# has_government = ordered_stratocracy
+						# has_government = martial_empire
+						# has_government = star_empire						
+					# }
+				# }
+			# }
+		# }		
+	# }
+	
+	produced_resources = {
+		unity = 3
+		sr_sacred_weapons = 1
+		food = 1
+		sr_h2o = 1
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_food_add = 1
+		tile_building_resource_minerals_add = 1
+	}
+	
+	planet_modifier = {
+		tile_resource_energy_mult = -0.05
+		planet_fortification_strength = 0.20
+	}
+	
+	army_modifier = {
+		army_damage_mult = 0.10
+	}
+
+	prerequisites = {
+		"tech_colonial_warlords_alpha"
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		factor = 25
+		modifier = {
+			factor = 0			
+			from = { is_still_small_colony = yes }
+		}
+	}
+}
+
+building_governerspalace = {
+	base_buildtime = 360
+	planet_unique = yes
+	is_listed = no
+	
+	cost = {
+		minerals = 150
+		energy = 50
+		influence = 25
+	}
+	
+	# allow = {
+		# custom_tooltip = {
+			# text = "requirement_wrong_government"
+			# planet = {
+				# owner = {
+					# OR = {
+						# has_government = military_dictatorship
+						# has_government = military_junta
+						# has_government = despotic_hegemony
+						# has_government = despotic_empire
+					# }
+				# }
+			# }
+		# }		
+	# }
+	
+	produced_resources = {
+		unity = 3
+		sr_wealth = 1
+		food = 1
+		sr_h2o = 1
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_food_add = 1
+		tile_building_resource_minerals_add = 1
+	}
+	
+	planet_modifier = {
+		tile_resource_energy_mult = -0.05
+		planet_army_build_speed_mult = 0.15
+		slave_production_output = 0.1
+	}
+
+	prerequisites = {
+		"tech_colonial_dictatorship_alpha"
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		factor = 25
+		modifier = {
+			factor = 0			
+			from = { is_still_small_colony = yes }
+		}
+	}
+}
+
+building_templeofrule = {
+	base_buildtime = 360
+	planet_unique = yes
+	is_listed = no
+	
+	cost = {
+		minerals = 200
+		energy = 100
+		influence = 25
+	}
+	
+	# allow = {
+		# custom_tooltip = {
+			# text = "requirement_wrong_government"
+			# planet = {
+				# owner = {
+					# OR = {
+						# has_government = theocratic_republic
+						# has_government = transcendent_republic
+						# has_government = theocratic_oligarchy
+						# has_government = transcendent_oligarchy
+						# has_government = divine_mandate
+						# has_government = transcendent_empire
+					# }
+				# }
+			# }
+		# }		
+	# }
+	
+	produced_resources = {
+		unity = 3
+		sr_artefacts_faith = 1
+		food = 1.5
+		sr_h2o = 1
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_food_add = 1
+		tile_building_resource_minerals_add = 1
+	}
+	
+	planet_modifier = {
+		pop_government_ethic_attraction = 0.05
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+
+	prerequisites = {
+		"tech_colonial_spiritualleaders_alpha"
+	}
+	
+	ai_weight = {
+		factor = 25
+		modifier = {
+			factor = 0			
+			from = { is_still_small_colony = yes }
+		}
+	}
+}
+
+building_councilhall = {
+	base_buildtime = 180
+	planet_unique = yes
+	is_listed = no
+	
+	cost = {
+		minerals = 100
+		energy = 50
+		influence = 25
+	}
+	
+	# allow = {
+		# custom_tooltip = {
+			# text = "requirement_wrong_government"
+			# planet = {
+				# owner = {
+					# OR = {
+						# has_government = direct_democracy
+						# has_government = moral_democracy
+						# has_government = indirect_democracy
+						# has_government = democratic_utopia
+						# has_government = military_republic
+						# has_government = martial_demarchy
+						# has_government = enlightened_monarchy
+						# has_government = irenic_monarchy
+					# }
+				# }
+			# }
+		# }		
+	# }
+	
+	produced_resources = {
+		unity = 3
+		food = 1.5
+		sr_h2o = 1
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_energy_add = 1
+		tile_building_resource_food_add = 1
+		tile_building_resource_minerals_add = 1
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.03
+		tile_resource_energy_mult = -0.05
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+
+	prerequisites = {
+		"tech_colonial_councils_alpha"
+	}
+	
+	ai_weight = {
+		factor = 25
+		modifier = {
+			factor = 0			
+			from = { is_still_small_colony = yes }
+		}
+	}
+}
