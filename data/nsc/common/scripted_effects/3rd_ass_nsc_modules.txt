@@ -1,0 +1,88 @@
+#NOTICE: This file is Folk's and for his "ass constructor mod"... Folk humor.
+
+###############################################################################
+# These effects can be changed however you want, as long as you
+# end up setting the required flags, variables, and ass_target if you
+# find a suitable planet for the module.
+
+# THIS is the blueprint planet
+# ROOT is the assembler
+nsc_check_customs_office = {
+	if = {
+		limit = {
+			ROOT = { NOT = { has_ship_flag = "ass_op_spaceport_modules" } }
+			has_spaceport_module = customs_office
+		}
+		owner = {
+			random_owned_planet = {
+				limit = {
+					NOT = { has_planet_flag = "ass_target" }
+					has_spaceport = yes
+					has_spaceport_construction = no
+					has_free_spaceport_module_slot = yes
+					is_occupied_flag = no
+					has_ground_combat = no
+					controller = { is_same_value = ROOT.owner }
+					NOT = { has_spaceport_module = customs_office }
+					can_build_spaceport_module = customs_office
+				}
+				ROOT = {
+					fleet = { set_variable = { which = "AssOperationCost"          value = 250 } }
+					fleet = { set_variable = { which = "AssOperationCostInfluence" value = 15 } }
+					fleet = { set_variable = { which = "AssConstructionTime"       value = 180 } }
+					set_ship_flag = "ass_op_sm_customs_office"
+					set_ship_flag = "ass_op_spaceport_modules"
+				}
+				log = "[root.GetName]: Constructing customs_office at [this.GetName]."
+				save_event_target_as = ass_target
+			}
+		}
+	}
+}
+
+ass_op_sm_customs_office = {
+	switch = {
+		trigger = has_ship_flag
+		ass_op_sm_slot_1 = { remove_ship_flag = "ass_op_sm_build" event_target:ass_target = { set_spaceport_module = { module = "customs_office" slot = 1 } } }
+		ass_op_sm_slot_2 = { remove_ship_flag = "ass_op_sm_build" event_target:ass_target = { set_spaceport_module = { module = "customs_office" slot = 2 } } }
+		ass_op_sm_slot_3 = { remove_ship_flag = "ass_op_sm_build" event_target:ass_target = { set_spaceport_module = { module = "customs_office" slot = 3 } } }
+		ass_op_sm_slot_4 = { remove_ship_flag = "ass_op_sm_build" event_target:ass_target = { set_spaceport_module = { module = "customs_office" slot = 4 } } }
+		ass_op_sm_slot_5 = { remove_ship_flag = "ass_op_sm_build" event_target:ass_target = { set_spaceport_module = { module = "customs_office" slot = 5 } } }
+		ass_op_sm_slot_6 = { remove_ship_flag = "ass_op_sm_build" event_target:ass_target = { set_spaceport_module = { module = "customs_office" slot = 6 } } }
+		ass_op_sm_slot_7 = { remove_ship_flag = "ass_op_sm_build" event_target:ass_target = { set_spaceport_module = { module = "customs_office" slot = 7 } } }
+		ass_op_sm_slot_8 = { remove_ship_flag = "ass_op_sm_build" event_target:ass_target = { set_spaceport_module = { module = "customs_office" slot = 8 } } }
+		ass_op_sm_slot_9 = { remove_ship_flag = "ass_op_sm_build" event_target:ass_target = { set_spaceport_module = { module = "customs_office" slot = 9 } } }
+		ass_op_sm_slot_10 = { remove_ship_flag = "ass_op_sm_build" event_target:ass_target = { set_spaceport_module = { module = "customs_office" slot = 10 } } }
+		ass_op_sm_slot_11 = { remove_ship_flag = "ass_op_sm_build" event_target:ass_target = { set_spaceport_module = { module = "customs_office" slot = 11 } } }
+		ass_op_sm_slot_12 = { remove_ship_flag = "ass_op_sm_build" event_target:ass_target = { set_spaceport_module = { module = "customs_office" slot = 12 } } }
+		ass_op_sm_slot_13 = { remove_ship_flag = "ass_op_sm_build" event_target:ass_target = { set_spaceport_module = { module = "customs_office" slot = 13 } } }
+		ass_op_sm_slot_14 = { remove_ship_flag = "ass_op_sm_build" event_target:ass_target = { set_spaceport_module = { module = "customs_office" slot = 14 } } }
+		ass_op_sm_slot_15 = { remove_ship_flag = "ass_op_sm_build" event_target:ass_target = { set_spaceport_module = { module = "customs_office" slot = 15 } } }
+		ass_op_sm_slot_16 = { remove_ship_flag = "ass_op_sm_build" event_target:ass_target = { set_spaceport_module = { module = "customs_office" slot = 16 } } }
+		ass_op_sm_slot_17 = { remove_ship_flag = "ass_op_sm_build" event_target:ass_target = { set_spaceport_module = { module = "customs_office" slot = 17 } } }
+		ass_op_sm_slot_18 = { remove_ship_flag = "ass_op_sm_build" event_target:ass_target = { set_spaceport_module = { module = "customs_office" slot = 18 } } }
+		ass_op_sm_slot_19 = { remove_ship_flag = "ass_op_sm_build" event_target:ass_target = { set_spaceport_module = { module = "customs_office" slot = 19 } } }
+	}
+}
+
+###############################################################################
+# These effect names can not be changed.
+#
+
+# Prioritize these modules over vanilla ones
+nsc_ass_stage1_sm_pre = {
+	nsc_check_customs_office = yes
+}
+# Prioritize vanilla modules over these ones
+nsc_ass_stage1_sm_post = {}
+
+# Remove our custom ship flags etc
+nsc_ass_stage4_sm_remove_data = {
+	remove_ship_flag = "ass_op_sm_customs_office"
+}
+nsc_ass_stage4_sm_complete = {
+	switch = {
+		trigger = has_ship_flag
+		ass_op_sm_customs_office = { ass_op_sm_customs_office = yes }
+	}
+}

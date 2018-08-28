@@ -2,6 +2,409 @@
 # NSC HABITABLE WORLD TILE SETUPS #
 ###################################
 
+nsc_rich_random_25_tile_world_setup = {
+	while = {
+		limit = { any_tile = { has_deposit = yes } }
+		random_tile = {
+			limit = { has_deposit = yes }
+			clear_deposits = yes
+		}
+	}
+	every_tile = {
+		limit = { has_blocker = yes }
+		remove_blocker = yes
+	}
+	random_tile = { #Capital Tile - Must be energy - 4/6/8 energy from capital
+		limit = { has_blocker = no has_building = no has_deposit = no num_adjacent_tiles > 3 }
+		random_list = {
+			50 = { add_deposit = d_immense_energy_deposit } #4 Energy
+			30 = { #6 Energy
+				add_deposit = d_vast_energy_deposit
+				add_deposit = d_vast_energy_deposit
+			}
+			20 = { #8 Energy
+				add_deposit = d_immense_energy_deposit
+				add_deposit = d_immense_energy_deposit
+			}
+		}
+		random_neighboring_tile = { #Food
+			limit = { has_blocker = no has_building = no has_deposit = no }
+			random_list = {
+				50 = { add_deposit = d_vast_farmland_deposit } #3 Food
+				30 = { #5 Food
+					add_deposit = d_vast_farmland_deposit
+					add_deposit = d_rich_farmland_deposit
+				}
+				20 = { # 7 Food
+					add_deposit = d_immense_farmland_deposit
+					add_deposit = d_vast_farmland_deposit
+				}
+			}
+		}
+		random_neighboring_tile = { #Energy/Betharian
+			limit = { has_blocker = no has_building = no has_deposit = no }
+			random_list = {
+				50 = { add_deposit = d_vast_energy_deposit } #3 Energy
+				30 = { #5 Energy
+					add_deposit = d_vast_energy_deposit
+					add_deposit = d_rich_energy_deposit
+				}
+				20 = { #7 Energy
+					add_deposit = d_immense_energy_deposit
+					add_deposit = d_vast_energy_deposit
+				}
+				20 = { #5 Energy + Betharian
+					add_deposit = d_vast_energy_deposit
+					add_deposit = d_betharian_deposit
+				}
+				10 = { #7 Energy + Betharian
+					add_deposit = d_vast_energy_deposit
+					add_deposit = d_rich_energy_deposit
+					add_deposit = d_betharian_deposit
+				}
+			}
+		}
+		random_neighboring_tile = { #Minerals
+			limit = { has_blocker = no has_building = no has_deposit = no }
+			random_list = {
+				50 = { add_deposit = d_vast_mineral_deposit } #3 Minerals
+				30 = { #5 Minerals
+					add_deposit = d_immense_mineral_deposit
+					add_deposit = d_mineral_deposit
+				}
+				20 = { #7 Minerals
+					add_deposit = d_immense_mineral_deposit
+					add_deposit = d_vast_mineral_deposit
+				}
+			}
+		}
+		random_neighboring_tile = { #Food
+			limit = { has_blocker = no has_building = no has_deposit = no }
+			random_list = {
+				50 = { add_deposit = d_vast_farmland_deposit } #3 Food
+				30 = { #5 Food
+					add_deposit = d_vast_farmland_deposit
+					add_deposit = d_rich_farmland_deposit
+				}
+				20 = { # 7 Food
+					add_deposit = d_immense_farmland_deposit
+					add_deposit = d_vast_farmland_deposit
+				}
+			}
+		}
+	}
+	random_tile = { #Food/Society
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		random_list = {
+			50 = { add_deposit = d_vast_farmland_deposit } #3 Food
+			30 = { #5 Food
+				add_deposit = d_vast_farmland_deposit
+				add_deposit = d_rich_farmland_deposit
+			}
+			20 = { # 7 Food
+				add_deposit = d_immense_farmland_deposit
+				add_deposit = d_vast_farmland_deposit
+			}
+			20 = { #5 Society
+				add_deposit = d_vast_society_deposit
+				add_deposit = d_rich_society_deposit
+			}
+			10 = { #7 Society
+				add_deposit = d_immense_society_deposit
+				add_deposit = d_vast_society_deposit
+			}
+		}
+	}
+	random_tile = { #Minerals/Engineering
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		random_list = {
+			50 = { add_deposit = d_vast_mineral_deposit } #3 Minerals
+			30 = { #5 Minerals
+				add_deposit = d_immense_mineral_deposit
+				add_deposit = d_mineral_deposit
+			}
+			20 = { #7 Minerals
+				add_deposit = d_immense_mineral_deposit
+				add_deposit = d_vast_mineral_deposit
+			}
+			20 = { #5 Engineering
+				add_deposit = d_vast_engineering_deposit
+				add_deposit = d_rich_engineering_deposit
+			}
+			10 = { #7 Engineering
+				add_deposit = d_immense_engineering_deposit
+				add_deposit = d_vast_engineering_deposit
+			}
+		}
+	}
+	random_tile = { #Minerals/Engineering
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		random_list = {
+			50 = { add_deposit = d_vast_mineral_deposit } #3 Minerals
+			30 = { #5 Minerals
+				add_deposit = d_immense_mineral_deposit
+				add_deposit = d_mineral_deposit
+			}
+			20 = { #7 Minerals
+				add_deposit = d_immense_mineral_deposit
+				add_deposit = d_vast_mineral_deposit
+			}
+			20 = { #5 Engineering
+				add_deposit = d_vast_engineering_deposit
+				add_deposit = d_rich_engineering_deposit
+			}
+			10 = { #7 Engineering
+				add_deposit = d_immense_engineering_deposit
+				add_deposit = d_vast_engineering_deposit
+			}
+		}
+	}
+	random_tile = { #Energy/Betharian/Physics
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		random_list = {
+			50 = { add_deposit = d_vast_energy_deposit } #3 Energy
+			30 = { #5 Energy
+				add_deposit = d_vast_energy_deposit
+				add_deposit = d_rich_energy_deposit
+			}
+			20 = { #7 Energy
+				add_deposit = d_immense_energy_deposit
+				add_deposit = d_vast_energy_deposit
+			}
+			20 = { #5 Energy + Betharian
+				add_deposit = d_vast_energy_deposit
+				add_deposit = d_betharian_deposit
+			}
+			10 = { #7 Energy + Betharian
+				add_deposit = d_vast_energy_deposit
+				add_deposit = d_rich_energy_deposit
+				add_deposit = d_betharian_deposit
+			}
+			20 = { #5 Physics
+				add_deposit = d_vast_physics_deposit
+				add_deposit = d_rich_physics_deposit
+			}
+			10 = { #7 Physics
+				add_deposit = d_immense_physics_deposit
+				add_deposit = d_vast_physics_deposit
+			}
+		}
+	}
+	random_tile = { #Food Only
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		random_list = {
+			50 = { add_deposit = d_vast_farmland_deposit } #3 Food
+			30 = { #5 Food
+				add_deposit = d_vast_farmland_deposit
+				add_deposit = d_rich_farmland_deposit
+			}
+			20 = { # 7 Food
+				add_deposit = d_immense_farmland_deposit
+				add_deposit = d_vast_farmland_deposit
+			}
+		}
+	}
+	random_tile = { #Engineering/Minerals
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		random_list = {
+			50 = { add_deposit = d_vast_engineering_deposit } #3 Engineering
+			30 = { #5 Engineering
+				add_deposit = d_vast_engineering_deposit
+				add_deposit = d_rich_engineering_deposit
+			}
+			20 = { #7 Engineering
+				add_deposit = d_immense_engineering_deposit
+				add_deposit = d_vast_engineering_deposit
+			}
+			20 = { #5 Minerals
+				add_deposit = d_immense_mineral_deposit
+				add_deposit = d_mineral_deposit
+			}
+			10 = { #7 Minerals
+				add_deposit = d_immense_mineral_deposit
+				add_deposit = d_vast_mineral_deposit
+			}
+		}
+	}
+	random_tile = { #Engineering/Minerals
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		random_list = {
+			50 = { add_deposit = d_vast_engineering_deposit } #3 Engineering
+			30 = { #5 Engineering
+				add_deposit = d_vast_engineering_deposit
+				add_deposit = d_rich_engineering_deposit
+			}
+			20 = { #7 Engineering
+				add_deposit = d_immense_engineering_deposit
+				add_deposit = d_vast_engineering_deposit
+			}
+			20 = { #5 Minerals
+				add_deposit = d_immense_mineral_deposit
+				add_deposit = d_mineral_deposit
+			}
+			10 = { #7 Minerals
+				add_deposit = d_immense_mineral_deposit
+				add_deposit = d_vast_mineral_deposit
+			}
+		}
+	}
+	random_tile = { #Engineering
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		random_list = {
+			50 = { add_deposit = d_vast_engineering_deposit } #3 Engineering
+			30 = { #5 Engineering
+				add_deposit = d_vast_engineering_deposit
+				add_deposit = d_rich_engineering_deposit
+			}
+			20 = { #7 Engineering
+				add_deposit = d_immense_engineering_deposit
+				add_deposit = d_vast_engineering_deposit
+			}
+		}
+	}
+	random_tile = { #Physics/Energy
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		random_list = {
+			50 = { add_deposit = d_vast_physics_deposit } #3 Physics
+			30 = { #5 Physics
+				add_deposit = d_vast_physics_deposit
+				add_deposit = d_rich_physics_deposit
+			}
+			20 = { #7 Physics
+				add_deposit = d_immense_physics_deposit
+				add_deposit = d_vast_physics_deposit
+			}
+			20 = { #5 Energy
+				add_deposit = d_vast_energy_deposit
+				add_deposit = d_rich_energy_deposit
+			}
+			10 = { #7 Energy
+				add_deposit = d_immense_energy_deposit
+				add_deposit = d_vast_energy_deposit
+			}
+		}
+	}
+	random_tile = { #Physics/Energy
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		random_list = {
+			50 = { add_deposit = d_vast_physics_deposit } #3 Physics
+			30 = { #5 Physics
+				add_deposit = d_vast_physics_deposit
+				add_deposit = d_rich_physics_deposit
+			}
+			20 = { #7 Physics
+				add_deposit = d_immense_physics_deposit
+				add_deposit = d_vast_physics_deposit
+			}
+			20 = { #5 Energy
+				add_deposit = d_vast_energy_deposit
+				add_deposit = d_rich_energy_deposit
+			}
+			10 = { #7 Energy
+				add_deposit = d_immense_energy_deposit
+				add_deposit = d_vast_energy_deposit
+			}
+		}
+	}
+	random_tile = { #Physics
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		random_list = {
+			50 = { add_deposit = d_vast_physics_deposit } #3 Physics
+			30 = { #5 Physics
+				add_deposit = d_vast_physics_deposit
+				add_deposit = d_rich_physics_deposit
+			}
+			20 = { #7 Physics
+				add_deposit = d_immense_physics_deposit
+				add_deposit = d_vast_physics_deposit
+			}
+		}
+	}
+	random_tile = { #Society/Pets/Food
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		random_list = {
+			50 = { add_deposit = d_vast_society_deposit } #3 Society
+			30 = { #5 Society
+				add_deposit = d_vast_society_deposit
+				add_deposit = d_rich_society_deposit
+			}
+			20 = { #7 Society
+				add_deposit = d_immense_society_deposit
+				add_deposit = d_vast_society_deposit
+			}
+			20 = { #5 Society + Pets
+				add_deposit = d_rich_society_deposit
+				add_deposit = d_alien_pets_deposit
+			}
+			10 = { #7 Society + Pets
+				add_deposit = d_immense_society_deposit
+				add_deposit = d_alien_pets_deposit
+			}
+			20 = { #5 Food
+				add_deposit = d_vast_farmland_deposit
+				add_deposit = d_rich_farmland_deposit
+			}
+			10 = { #7 Food
+				add_deposit = d_immense_farmland_deposit
+				add_deposit = d_vast_farmland_deposit
+			}
+		}
+	}
+	random_tile = { #Society/Pets/Food
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		random_list = {
+			50 = { add_deposit = d_vast_society_deposit } #3 Society
+			30 = { #5 Society
+				add_deposit = d_vast_society_deposit
+				add_deposit = d_rich_society_deposit
+			}
+			20 = { #7 Society
+				add_deposit = d_immense_society_deposit
+				add_deposit = d_vast_society_deposit
+			}
+			20 = { #5 Society + Pets
+				add_deposit = d_rich_society_deposit
+				add_deposit = d_alien_pets_deposit
+			}
+			10 = { #7 Society + Pets
+				add_deposit = d_immense_society_deposit
+				add_deposit = d_alien_pets_deposit
+			}
+			20 = { #5 Food
+				add_deposit = d_vast_farmland_deposit
+				add_deposit = d_rich_farmland_deposit
+			}
+			10 = { #7 Food
+				add_deposit = d_immense_farmland_deposit
+				add_deposit = d_vast_farmland_deposit
+			}
+		}
+	}
+	random_tile = { #Society/Pets
+		limit = { has_blocker = no has_building = no has_deposit = no }
+		random_list = {
+			50 = { add_deposit = d_vast_society_deposit } #3 Society
+			30 = { #5 Society
+				add_deposit = d_vast_society_deposit
+				add_deposit = d_rich_society_deposit
+			}
+			20 = { #7 Society
+				add_deposit = d_immense_society_deposit
+				add_deposit = d_vast_society_deposit
+			}
+			20 = { #5 Society + Pets
+				add_deposit = d_rich_society_deposit
+				add_deposit = d_alien_pets_deposit
+			}
+			10 = { #7 Society + Pets
+				add_deposit = d_immense_society_deposit
+				add_deposit = d_alien_pets_deposit
+			}
+		}
+	}
+	#18 tiles randomized above. Leaves 7 blank for whatever.
+}
+
 nsc_25_gaia_world_setup = {
 	while = {
 		limit = { any_tile = { has_deposit = yes } }
@@ -14,11 +417,10 @@ nsc_25_gaia_world_setup = {
 		limit = { has_blocker = yes }
 		remove_blocker = yes
 	}
-	random_tile = { #Capital Tile - 7 Food
+	random_tile = { #Capital Tile - Must be Energy - 4/6/8 From Capitals
 		limit = { has_blocker = no has_building = no has_deposit = no num_adjacent_tiles > 3 }
-		add_deposit = d_vast_farmland_deposit
-		add_deposit = d_vast_farmland_deposit
-		add_deposit = d_farmland_deposit
+		add_deposit = d_vast_energy_deposit
+		add_deposit = d_rich_energy_deposit
 		random_neighboring_tile = { #5 Food
 			limit = { has_blocker = no has_building = no has_deposit = no }
 			add_deposit = d_vast_farmland_deposit
@@ -55,10 +457,10 @@ nsc_25_gaia_world_setup = {
 		add_deposit = d_vast_mineral_deposit
 		add_deposit = d_rich_mineral_deposit
 	}
-	random_tile = { #5 Energy
+	random_tile = { #5 Food
 		limit = { has_blocker = no has_building = no has_deposit = no }
-		add_deposit = d_vast_energy_deposit
-		add_deposit = d_rich_energy_deposit
+		add_deposit = d_immense_farmland_deposit
+		add_deposit = d_farmland_deposit
 	}
 	random_tile = { #5 Energy
 		limit = { has_blocker = no has_building = no has_deposit = no }
@@ -125,11 +527,10 @@ nsc_25_wet_world_setup = {
 		limit = { has_blocker = yes }
 		remove_blocker = yes
 	}
-	random_tile = { #Capital Tile - 9 Food
+	random_tile = { #Capital Tile - Must be Energy - 4/6/8 from Capitals
 		limit = { has_blocker = no has_building = no has_deposit = no num_adjacent_tiles > 3 }
-		add_deposit = d_vast_farmland_deposit
-		add_deposit = d_vast_farmland_deposit
-		add_deposit = d_vast_farmland_deposit
+		add_deposit = d_vast_energy_deposit
+		add_deposit = d_rich_energy_deposit
 		random_neighboring_tile = { #6 Food
 			limit = { has_blocker = no has_building = no has_deposit = no }
 			add_deposit = d_vast_farmland_deposit
@@ -181,10 +582,10 @@ nsc_25_wet_world_setup = {
 		add_deposit = d_vast_mineral_deposit
 		add_deposit = d_rich_mineral_deposit
 	}
-	random_tile = { #5 Energy
+	random_tile = { #6 Food
 		limit = { has_blocker = no has_building = no has_deposit = no }
-		add_deposit = d_vast_energy_deposit
-		add_deposit = d_rich_energy_deposit
+		add_deposit = d_vast_farmland_deposit
+		add_deposit = d_vast_farmland_deposit
 	}
 	random_tile = { #5 Physics
 		limit = { has_blocker = no has_building = no has_deposit = no }
@@ -231,11 +632,10 @@ nsc_25_dry_world_setup = {
 		limit = { has_blocker = yes }
 		remove_blocker = yes
 	}
-	random_tile = { #Capital Tile - 7 Food
+	random_tile = { #Capital Tile - Must be Energy - 4/6/8 From Capitals
 		limit = { has_blocker = no has_building = no has_deposit = no num_adjacent_tiles > 3 }
-		add_deposit = d_vast_farmland_deposit
-		add_deposit = d_vast_farmland_deposit
-		add_deposit = d_farmland_deposit
+		add_deposit = d_immense_energy_deposit
+		add_deposit = d_vast_energy_deposit
 		random_neighboring_tile = { #5 Food
 			limit = { has_blocker = no has_building = no has_deposit = no }
 			add_deposit = d_vast_farmland_deposit
@@ -269,10 +669,10 @@ nsc_25_dry_world_setup = {
 		add_deposit = d_vast_mineral_deposit
 		add_deposit = d_rich_mineral_deposit
 	}
-	random_tile = { #7 Energy
+	random_tile = { #5 Food
 		limit = { has_blocker = no has_building = no has_deposit = no }
-		add_deposit = d_immense_energy_deposit
-		add_deposit = d_vast_energy_deposit
+		add_deposit = d_immense_farmland_deposit
+		add_deposit = d_farmland_deposit
 	}
 	random_tile = { #7 Energy
 		limit = { has_blocker = no has_building = no has_deposit = no }
@@ -339,11 +739,10 @@ nsc_25_frozen_world_setup = {
 		limit = { has_blocker = yes }
 		remove_blocker = yes
 	}
-	random_tile = { #Capital Tile - 7 Food
+	random_tile = { #Capital Tile - Must be Energy - 4/6/8 From Capitals
 		limit = { has_blocker = no has_building = no has_deposit = no num_adjacent_tiles > 3 }
-		add_deposit = d_vast_farmland_deposit
-		add_deposit = d_vast_farmland_deposit
-		add_deposit = d_farmland_deposit
+		add_deposit = d_vast_energy_deposit
+		add_deposit = d_rich_energy_deposit
 		random_neighboring_tile = { #7 Minerals
 			limit = { has_blocker = no has_building = no has_deposit = no }
 			add_deposit = d_immense_mineral_deposit
@@ -361,8 +760,8 @@ nsc_25_frozen_world_setup = {
 		}
 		random_neighboring_tile = { #5 Energy
 			limit = { has_blocker = no has_building = no has_deposit = no }
-			add_deposit = d_vast_energy_deposit
-			add_deposit = d_rich_energy_deposit	
+			add_deposit = d_immense_farmland_deposit
+			add_deposit = d_vast_farmland_deposit
 		}
 	}
 	random_tile = { #5 Society + Pets
@@ -431,4 +830,665 @@ nsc_25_frozen_world_setup = {
 		add_deposit = d_betharian_deposit
 	}
 	#18 tiles randomized above. Leaves 7 blank for whatever.
+}
+
+#########################################
+# NSC HABITABLE WORLD CLASS/100% SETUPS #
+#########################################
+
+nsc_perfect_random_world_setup = {
+	random_list = {
+		10 = { change_pc = "pc_gaia" }
+		10 = { 
+			change_pc = "pc_desert"
+			add_modifier = {
+				modifier = built_world
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_tropical"
+			add_modifier = {
+				modifier = built_world
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_arid"
+			add_modifier = {
+				modifier = built_world
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_continental"
+			add_modifier = {
+				modifier = built_world
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_ocean"
+			add_modifier = {
+				modifier = built_world
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_tundra"
+			add_modifier = {
+				modifier = built_world
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_arctic"
+			add_modifier = {
+				modifier = built_world
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_alpine"
+			add_modifier = {
+				modifier = built_world
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_savannah"
+			add_modifier = {
+				modifier = built_world
+				days = -1
+			}
+		}
+	}
+	random_list = {
+		50 = { set_ring = yes }
+		50 = { set_ring = no }
+	}
+}
+
+nsc_dreadnought_world_class_setup = {
+	random_list = {
+		10 = { change_pc = "pc_gaia" }
+		10 = { 
+			change_pc = "pc_desert"
+			add_modifier = {
+				modifier = guardian_paradise_dreadnought
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_tropical"
+			add_modifier = {
+				modifier = guardian_paradise_dreadnought
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_arid"
+			add_modifier = {
+				modifier = guardian_paradise_dreadnought
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_continental"
+			add_modifier = {
+				modifier = guardian_paradise_dreadnought
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_ocean"
+			add_modifier = {
+				modifier = guardian_paradise_dreadnought
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_tundra"
+			add_modifier = {
+				modifier = guardian_paradise_dreadnought
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_arctic"
+			add_modifier = {
+				modifier = guardian_paradise_dreadnought
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_alpine"
+			add_modifier = {
+				modifier = guardian_paradise_dreadnought
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_savannah"
+			add_modifier = {
+				modifier = guardian_paradise_dreadnought
+				days = -1
+			}
+		}
+	}
+	random_list = {
+		50 = { set_ring = yes }
+		50 = { set_ring = no }
+	}
+}
+
+nsc_horror_world_class_setup = {
+	random_list = {
+		10 = { change_pc = "pc_gaia" }
+		10 = { 
+			change_pc = "pc_desert"
+			add_modifier = {
+				modifier = guardian_paradise_horror
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_tropical"
+			add_modifier = {
+				modifier = guardian_paradise_horror
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_arid"
+			add_modifier = {
+				modifier = guardian_paradise_horror
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_continental"
+			add_modifier = {
+				modifier = guardian_paradise_horror
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_ocean"
+			add_modifier = {
+				modifier = guardian_paradise_horror
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_tundra"
+			add_modifier = {
+				modifier = guardian_paradise_horror
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_arctic"
+			add_modifier = {
+				modifier = guardian_paradise_horror
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_alpine"
+			add_modifier = {
+				modifier = guardian_paradise_horror
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_savannah"
+			add_modifier = {
+				modifier = guardian_paradise_horror
+				days = -1
+			}
+		}
+	}
+	random_list = {
+		50 = { set_ring = yes }
+		50 = { set_ring = no }
+	}
+}
+
+nsc_fortress_world_class_setup = {
+	random_list = {
+		10 = { change_pc = "pc_gaia" }
+		10 = { 
+			change_pc = "pc_desert"
+			add_modifier = {
+				modifier = guardian_paradise_fortress
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_tropical"
+			add_modifier = {
+				modifier = guardian_paradise_fortress
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_arid"
+			add_modifier = {
+				modifier = guardian_paradise_fortress
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_continental"
+			add_modifier = {
+				modifier = guardian_paradise_fortress
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_ocean"
+			add_modifier = {
+				modifier = guardian_paradise_fortress
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_tundra"
+			add_modifier = {
+				modifier = guardian_paradise_fortress
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_arctic"
+			add_modifier = {
+				modifier = guardian_paradise_fortress
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_alpine"
+			add_modifier = {
+				modifier = guardian_paradise_fortress
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_savannah"
+			add_modifier = {
+				modifier = guardian_paradise_fortress
+				days = -1
+			}
+		}
+	}
+	random_list = {
+		50 = { set_ring = yes }
+		50 = { set_ring = no }
+	}
+}
+
+nsc_drake_world_class_setup = {
+	random_list = {
+		10 = { change_pc = "pc_gaia" }
+		10 = { 
+			change_pc = "pc_desert"
+			add_modifier = {
+				modifier = guardian_paradise_drake
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_tropical"
+			add_modifier = {
+				modifier = guardian_paradise_drake
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_arid"
+			add_modifier = {
+				modifier = guardian_paradise_drake
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_continental"
+			add_modifier = {
+				modifier = guardian_paradise_drake
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_ocean"
+			add_modifier = {
+				modifier = guardian_paradise_drake
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_tundra"
+			add_modifier = {
+				modifier = guardian_paradise_drake
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_arctic"
+			add_modifier = {
+				modifier = guardian_paradise_drake
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_alpine"
+			add_modifier = {
+				modifier = guardian_paradise_drake
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_savannah"
+			add_modifier = {
+				modifier = guardian_paradise_drake
+				days = -1
+			}
+		}
+	}
+	random_list = {
+		50 = { set_ring = yes }
+		50 = { set_ring = no }
+	}
+}
+
+nsc_hive_world_class_setup = {
+	random_list = {
+		10 = { change_pc = "pc_gaia" }
+		10 = { 
+			change_pc = "pc_desert"
+			add_modifier = {
+				modifier = guardian_paradise_hive
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_tropical"
+			add_modifier = {
+				modifier = guardian_paradise_hive
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_arid"
+			add_modifier = {
+				modifier = guardian_paradise_hive
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_continental"
+			add_modifier = {
+				modifier = guardian_paradise_hive
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_ocean"
+			add_modifier = {
+				modifier = guardian_paradise_hive
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_tundra"
+			add_modifier = {
+				modifier = guardian_paradise_hive
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_arctic"
+			add_modifier = {
+				modifier = guardian_paradise_hive
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_alpine"
+			add_modifier = {
+				modifier = guardian_paradise_hive
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_savannah"
+			add_modifier = {
+				modifier = guardian_paradise_hive
+				days = -1
+			}
+		}
+	}
+	random_list = {
+		50 = { set_ring = yes }
+		50 = { set_ring = no }
+	}
+}
+
+nsc_stellarite_world_class_setup = {
+	random_list = {
+		10 = { change_pc = "pc_gaia" }
+		10 = { 
+			change_pc = "pc_desert"
+			add_modifier = {
+				modifier = guardian_paradise_stellarite
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_tropical"
+			add_modifier = {
+				modifier = guardian_paradise_stellarite
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_arid"
+			add_modifier = {
+				modifier = guardian_paradise_stellarite
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_continental"
+			add_modifier = {
+				modifier = guardian_paradise_stellarite
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_ocean"
+			add_modifier = {
+				modifier = guardian_paradise_stellarite
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_tundra"
+			add_modifier = {
+				modifier = guardian_paradise_stellarite
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_arctic"
+			add_modifier = {
+				modifier = guardian_paradise_stellarite
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_alpine"
+			add_modifier = {
+				modifier = guardian_paradise_stellarite
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_savannah"
+			add_modifier = {
+				modifier = guardian_paradise_stellarite
+				days = -1
+			}
+		}
+	}
+	random_list = {
+		50 = { set_ring = yes }
+		50 = { set_ring = no }
+	}
+}
+
+nsc_technosphere_world_class_setup = {
+	random_list = {
+		10 = { change_pc = "pc_gaia" }
+		10 = { 
+			change_pc = "pc_desert"
+			add_modifier = {
+				modifier = guardian_paradise_techno
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_tropical"
+			add_modifier = {
+				modifier = guardian_paradise_techno
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_arid"
+			add_modifier = {
+				modifier = guardian_paradise_techno
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_continental"
+			add_modifier = {
+				modifier = guardian_paradise_techno
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_ocean"
+			add_modifier = {
+				modifier = guardian_paradise_techno
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_tundra"
+			add_modifier = {
+				modifier = guardian_paradise_techno
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_arctic"
+			add_modifier = {
+				modifier = guardian_paradise_techno
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_alpine"
+			add_modifier = {
+				modifier = guardian_paradise_techno
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_savannah"
+			add_modifier = {
+				modifier = guardian_paradise_techno
+				days = -1
+			}
+		}
+	}
+	random_list = {
+		50 = { set_ring = yes }
+		50 = { set_ring = no }
+	}
+}
+
+nsc_wraith_world_class_setup = {
+	random_list = {
+		10 = { change_pc = "pc_gaia" }
+		10 = { 
+			change_pc = "pc_desert"
+			add_modifier = {
+				modifier = guardian_paradise_wraith
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_tropical"
+			add_modifier = {
+				modifier = guardian_paradise_wraith
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_arid"
+			add_modifier = {
+				modifier = guardian_paradise_wraith
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_continental"
+			add_modifier = {
+				modifier = guardian_paradise_wraith
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_ocean"
+			add_modifier = {
+				modifier = guardian_paradise_wraith
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_tundra"
+			add_modifier = {
+				modifier = guardian_paradise_techno
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_arctic"
+			add_modifier = {
+				modifier = guardian_paradise_wraith
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_alpine"
+			add_modifier = {
+				modifier = guardian_paradise_wraith
+				days = -1
+			}
+		}
+		10 = { 
+			change_pc = "pc_savannah"
+			add_modifier = {
+				modifier = guardian_paradise_wraith
+				days = -1
+			}
+		}
+	}
+	random_list = {
+		50 = { set_ring = yes }
+		50 = { set_ring = no }
+	}
 }

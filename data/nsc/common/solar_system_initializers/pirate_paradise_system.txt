@@ -1,8 +1,9 @@
 ### Spawned System with the Captain's Pirate Galleon in it.
+
 guardians_init_pirate = {
 	name = "NAME_Hidden_Paradise"
 	class = "rl_standard_stars"
-	asteroids_distance = 65 #why is it that my asteroid belt must always be 5 units further than my asteroids?
+	asteroids_distance = 65 #Why is it that my asteroid belt must always be 5 units further than my asteroids?
 	flags = { guardians_pirate_system guardian hostile_system }
 	
 	planet = {
@@ -10,7 +11,7 @@ guardians_init_pirate = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 0
-		size = 75
+		size = 70
 		has_ring = yes
 		init_effect = {
 			set_planet_flag = guardian_pirate_star
@@ -18,7 +19,110 @@ guardians_init_pirate = {
 		}
 	}
 	
-	change_orbit = 60
+	change_orbit = 45
+	
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "NAME_NSC_FirstRing_1"
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = { 
+			prevent_anomaly = yes
+			nsc_rich_random_25_tile_world_setup = yes
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_NSC_FirstRing_2"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "NAME_NSC_FirstRing_6"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "NAME_NSC_FirstRing_3"
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = { 
+			prevent_anomaly = yes
+			nsc_rich_random_25_tile_world_setup = yes
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_NSC_FirstRing_5"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "NAME_NSC_FirstRing_7"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "NAME_NSC_FirstRing_4"
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = { 
+			prevent_anomaly = yes
+			nsc_rich_random_25_tile_world_setup = yes
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_NSC_FirstRing_9"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "NAME_NSC_FirstRing_8"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "NAME_NSC_FirstRing_10"
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = { 
+			prevent_anomaly = yes
+			nsc_rich_random_25_tile_world_setup = yes
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_NSC_FirstRing_12"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "NAME_NSC_FirstRing_11"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	
+	change_orbit = 15
 	
 	planet = {
 		class = random_asteroid
@@ -122,26 +226,6 @@ guardians_init_pirate = {
 			save_event_target_as = guardian_pirate_nuked_planet
 			set_planet_flag = guardian_pirate_nuked_planet
 		}
-		
-		change_orbit = 10
-	
-		moon = {
-			name = "NAME_Paradise"
-			class = "pc_gaia"
-			orbit_distance = 9
-			orbit_angle = random
-			size = 25
-			has_ring = yes
-			tile_blockers = none
-			modifiers = none
-		
-			init_effect = {
-				prevent_anomaly = yes
-				set_planet_flag = guardian_pirate_paradise
-				save_event_target_as = guardian_pirate_paradise
-				nsc_25_gaia_world_setup = yes
-			}
-		}
 	}
 	
 	change_orbit = 40
@@ -197,9 +281,7 @@ guardians_init_pirate = {
 		create_pirate_country = yes
 		event_target:pirate_country = {
 			if = {
-				limit = {
-					NOT = { has_modifier = pirate_power }
-				}
+				limit = { NOT = { has_modifier = pirate_power } }
 				add_modifier = {
 					modifier = pirate_power
 					days = -1
@@ -213,7 +295,7 @@ guardians_init_pirate = {
 				set_owner = event_target:pirate_country
 				set_fleet_flag = pirate_paradise_fleet
 				while = {
-					count = 1 #This means the number of ships that will appear *per* created ship, thus the 3 desired will appear if set to 1.
+					count = 1 #This means the number of ships that will appear *per* created ship, thus the 5 desired will appear if set to 1.
 					create_ship = {
 						name = "NAME_The_Blackened_Gold"
 						design = "NAME_Master_Pirate_Galleon"
@@ -229,8 +311,20 @@ guardians_init_pirate = {
 						design = "NAME_First_Mate's_Guardian_Galleon"
 						graphical_culture = "pirate_01"
 					}
+					create_ship = {
+						name = "NAME_Pirate_Ranger"
+						design = "NAME_First_Mate's_Guardian_Galleon"
+						graphical_culture = "pirate_01"
+					}
+					create_ship = {
+						name = "NAME_Fallen_Revenge"
+						design = "NAME_First_Mate's_Guardian_Galleon"
+						graphical_culture = "pirate_01"
+					}
 				}
 				set_fleet_formation = {
+					position = { x = -10.0 y = -10.0 } #5
+					position = { x = 10.0 y = -10.0 } #4
 					position = { x = -5.0 y = -5.0 } #3
 					position = { x = 5.0 y = -5.0 } #2
 					position = { x = 0.0 y = 0.0 } #1
@@ -240,7 +334,7 @@ guardians_init_pirate = {
 				set_aggro_range_measure_from = self
 				set_aggro_range = 400
 				set_location = {
-					target = event_target:guardian_pirate_paradise
+					target = event_target:guardian_pirate_nuked_planet
 					distance = 0
 					angle = 180
 				}
@@ -264,15 +358,15 @@ guardians_init_pirate = {
 guardians_init_pirate_alt = {
 	name = "NAME_Hidden_Paradise"
 	class = "rl_standard_stars"
-	asteroids_distance = 65 #why is it that my asteroid belt must always be 5 units further than my asteroids?
-	flags = { guardians_pirate_alt_system guardian hostile_system }
+	asteroids_distance = 65 #Why is it that my asteroid belt must always be 5 units further than my asteroids?
+	flags = { guardians_pirate_system guardian hostile_system }
 	
 	planet = {
 		count = 1
 		class = star
 		orbit_distance = 0
 		orbit_angle = 0
-		size = 75
+		size = 70
 		has_ring = yes
 		init_effect = {
 			set_planet_flag = guardian_pirate_star
@@ -280,7 +374,110 @@ guardians_init_pirate_alt = {
 		}
 	}
 	
-	change_orbit = 60
+	change_orbit = 45
+	
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "NAME_NSC_FirstRing_1"
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = { 
+			prevent_anomaly = yes
+			nsc_rich_random_25_tile_world_setup = yes
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_NSC_FirstRing_2"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "NAME_NSC_FirstRing_6"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "NAME_NSC_FirstRing_3"
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = { 
+			prevent_anomaly = yes
+			nsc_rich_random_25_tile_world_setup = yes
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_NSC_FirstRing_5"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "NAME_NSC_FirstRing_7"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "NAME_NSC_FirstRing_4"
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = { 
+			prevent_anomaly = yes
+			nsc_rich_random_25_tile_world_setup = yes
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_NSC_FirstRing_9"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "NAME_NSC_FirstRing_8"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "NAME_NSC_FirstRing_10"
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = { 
+			prevent_anomaly = yes
+			nsc_rich_random_25_tile_world_setup = yes
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_NSC_FirstRing_12"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "NAME_NSC_FirstRing_11"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	
+	change_orbit = 15
 	
 	planet = {
 		class = random_asteroid
@@ -384,26 +581,6 @@ guardians_init_pirate_alt = {
 			save_event_target_as = guardian_pirate_nuked_planet
 			set_planet_flag = guardian_pirate_nuked_planet
 		}
-		
-		change_orbit = 10
-	
-		moon = {
-			name = "NAME_Paradise"
-			class = "pc_gaia"
-			orbit_distance = 9
-			orbit_angle = random
-			size = 25
-			has_ring = yes
-			tile_blockers = none
-			modifiers = none
-		
-			init_effect = {
-				prevent_anomaly = yes
-				set_planet_flag = guardian_pirate_paradise
-				save_event_target_as = guardian_pirate_paradise
-				nsc_25_gaia_world_setup = yes
-			}
-		}
 	}
 	
 	change_orbit = 40
@@ -459,9 +636,7 @@ guardians_init_pirate_alt = {
 		create_pirate_country = yes
 		event_target:pirate_country = {
 			if = {
-				limit = {
-					NOT = { has_modifier = pirate_power }
-				}
+				limit = { NOT = { has_modifier = pirate_power } }
 				add_modifier = {
 					modifier = pirate_power
 					days = -1
@@ -475,7 +650,7 @@ guardians_init_pirate_alt = {
 				set_owner = event_target:pirate_country
 				set_fleet_flag = pirate_paradise_fleet
 				while = {
-					count = 1 #This means the number of ships that will appear *per* created ship, thus the 3 desired will appear if set to 1.
+					count = 1 #This means the number of ships that will appear *per* created ship, thus the 5 desired will appear if set to 1.
 					create_ship = {
 						name = "NAME_The_Blackened_Gold"
 						design = "NAME_Master_Pirate_Galleon"
@@ -491,8 +666,20 @@ guardians_init_pirate_alt = {
 						design = "NAME_First_Mate's_Guardian_Galleon"
 						graphical_culture = "pirate_01"
 					}
+					create_ship = {
+						name = "NAME_Pirate_Ranger"
+						design = "NAME_First_Mate's_Guardian_Galleon"
+						graphical_culture = "pirate_01"
+					}
+					create_ship = {
+						name = "NAME_Fallen_Revenge"
+						design = "NAME_First_Mate's_Guardian_Galleon"
+						graphical_culture = "pirate_01"
+					}
 				}
 				set_fleet_formation = {
+					position = { x = -10.0 y = -10.0 } #5
+					position = { x = 10.0 y = -10.0 } #4
 					position = { x = -5.0 y = -5.0 } #3
 					position = { x = 5.0 y = -5.0 } #2
 					position = { x = 0.0 y = 0.0 } #1
@@ -502,7 +689,7 @@ guardians_init_pirate_alt = {
 				set_aggro_range_measure_from = self
 				set_aggro_range = 400
 				set_location = {
-					target = event_target:guardian_pirate_paradise
+					target = event_target:guardian_pirate_nuked_planet
 					distance = 0
 					angle = 180
 				}

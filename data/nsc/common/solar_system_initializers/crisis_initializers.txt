@@ -440,6 +440,9 @@ cybrex_beta = {
 						distance = 45
 						angle = random
 					}
+					set_aggro_range = 500
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
 				}
 				settings = {
 					garrison = yes
@@ -474,7 +477,7 @@ cybrex_beta = {
 			set_planet_health = 20000
 			
 			create_fleet = {
-				name = "NAME_AI_Core"
+				name = "NAME_Cybrex_Station_1"
 				effect = {
 					set_owner = event_target:cybrex
 					create_ship = {
@@ -526,6 +529,9 @@ cybrex_beta = {
 						distance = 45
 						angle = random
 					}
+					set_aggro_range = 500
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
 				}
 			}
 		}
@@ -557,7 +563,7 @@ cybrex_beta = {
 			set_planet_health = 20000
 			
 			create_fleet = {
-				name = "NAME_AI_Core"
+				name = "NAME_Cybrex_Station_1"
 				effect = {
 					set_owner = event_target:cybrex
 					create_ship = {
@@ -609,6 +615,9 @@ cybrex_beta = {
 						distance = 45
 						angle = random
 					}
+					set_aggro_range = 500
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
 				}
 			}
 		}
@@ -640,7 +649,7 @@ cybrex_beta = {
 			set_planet_health = 20000
 			
 			create_fleet = {
-				name = "NAME_AI_Core"
+				name = "NAME_Cybrex_Station_1"
 				effect = {
 					set_owner = event_target:cybrex
 					create_ship = {
@@ -692,6 +701,9 @@ cybrex_beta = {
 						distance = 45
 						angle = random
 					}
+					set_aggro_range = 500
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
 				}
 			}
 		}

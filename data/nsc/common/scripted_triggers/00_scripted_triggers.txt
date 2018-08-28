@@ -341,8 +341,15 @@ can_be_military_leader = {
 		owner = { has_authority = auth_machine_intelligence }
 	}
 	OR = {
-		has_citizenship_type = { type = citizenship_full_machine }
-		has_military_service_type = { type = military_service_full }
+		AND = { # MIs only accept Fully Integrated leaders
+			owner = { has_authority = auth_machine_intelligence }
+			has_citizenship_type = { type = citizenship_full_machine }
+			has_military_service_type = { type = military_service_full }
+		}
+		AND = { # non-MIs accept whatever
+			NOT = { owner = { has_authority = auth_machine_intelligence } }
+			has_military_service_type = { type = military_service_full }
+		}
 	}
 }
 
@@ -489,10 +496,12 @@ has_culture_shock = {
 
 # Checks if a planet is under any kind of orbital bombardment
 under_bombardment = {
-	orbital_bombardment = soft
-	orbital_bombardment = limited
-	orbital_bombardment = full
-	orbital_bombardment = armageddon
+	OR = {
+		orbital_bombardment = soft
+		orbital_bombardment = limited
+		orbital_bombardment = full
+		orbital_bombardment = armageddon	
+	}
 }
 
 has_any_megastructure_in_empire = {

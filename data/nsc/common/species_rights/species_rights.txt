@@ -141,11 +141,15 @@ citizenship_assimilation = {
 		}
 		custom_tooltip = {
 			fail_text = "lonely_hive_mind_pops_kill_themselves_citizenship"
-			is_lonely_hive_mind_pop = no
-		}
-		custom_tooltip = {
-			fail_text = "disconnected_machine_pops_kill_themselves_citizenship"
-			is_disconnected_machine_pop = no
+			OR = {
+				is_lonely_hive_mind_pop = no
+				AND = {
+					is_lonely_hive_mind_pop = yes
+					from = {
+						has_ascension_perk = ap_evolutionary_mastery
+					}
+				}
+			}
 		}
 		custom_tooltip = {
 			fail_text = "disconnected_machine_pops_collapse_citizenship"
@@ -212,7 +216,10 @@ citizenship_assimilation = {
 					NOR = {
 						has_trait = trait_mechanical
 						has_trait = trait_mechanical
-						has_trait = trait_cybernetic
+						AND = {
+							has_trait = trait_cybernetic
+							from = { NOT = { has_country_flag = synthetic_empire } }
+						}
 					}
 				}
 			}
@@ -380,6 +387,13 @@ citizenship_caste_system = {
 	potential = {
 		exists = from
 		NOT = { from = { has_ethic = ethic_gestalt_consciousness } }
+		NAND = {
+			exists = this
+			OR = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit			
+			}
+		}		
 	}
 
 	allow = {
@@ -439,12 +453,19 @@ citizenship_caste_system_limited = {
 	
 	pop_modifier = {
 		pop_happiness = -0.1
-		pop_consumer_goods_mult = -0.15
+		pop_consumer_goods_mult = -0.25
 	}
 
 	potential = {
 		exists = from
 		from = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+		NAND = {
+			exists = this
+			OR = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit			
+			}
+		}
 	}
 
 	allow = {
@@ -723,12 +744,18 @@ military_service_full = {
 	token = military_service_full
 	
 	potential = {
-		NAND = {
-			from = { has_authority = auth_machine_intelligence }
-			NOR = {
-				has_trait = trait_machine_unit
-				has_trait = trait_mechanical	
-			}			
+		OR = {
+			NAND = {
+				from = { has_authority = auth_machine_intelligence }
+				NOR = {
+					has_trait = trait_machine_unit
+					has_trait = trait_mechanical	
+				}			
+			}
+			AND = {
+				from = { has_authority = auth_machine_intelligence }
+				has_trait = trait_cybernetic
+			}
 		}
 	}
 
@@ -854,7 +881,7 @@ military_service_none = {
 			}
 		}
 		custom_tooltip = {
-			fail_text = MACHINE_SPECIES_MACHINE
+			fail_text = MACHINE_SPECIES_NOT_MACHINE
 			OR = {
 				NOT = { from = { has_authority = auth_machine_intelligence } }
 				NOR = {
@@ -954,9 +981,12 @@ slavery_matrix = {
 		hidden_trigger = { exists = from }
 		custom_tooltip = {
 			fail_text = species_is_not_organic
-			NOR = {
-				has_trait = trait_mechanical
-				has_trait = trait_machine_unit
+			NAND = {
+				from = { is_mechanical_empire = no }
+				OR = {
+					has_trait = trait_mechanical
+					has_trait = trait_machine_unit				
+				}
 			}
 		}
 	}
@@ -1305,7 +1335,7 @@ living_standard_deassimilation = {
 	name = living_standard_deassimilation
 
 	pop_modifier = {
-		pop_consumer_goods_add = 1.0
+		pop_consumer_goods_add = 2.0
 	}
 
 	potential = {
@@ -1419,7 +1449,7 @@ living_standard_organic_trophy = {
 
 	pop_modifier = {
 		pop_happiness = 0.4
-		pop_consumer_goods_add = 3.0
+		pop_consumer_goods_add = 2.0
 		pop_resettlement_cost_mult = -0.5
 	}
 	
@@ -1454,7 +1484,7 @@ living_standard_chemical_bliss = {
 
 	pop_modifier = {
 		pop_happiness = 0.4
-		pop_consumer_goods_add = 3.0
+		pop_consumer_goods_add = 2.0
 		tile_resource_food_mult = -0.6
 		tile_resource_minerals_mult = -0.6
 		tile_resource_energy_mult = -0.6
@@ -1517,7 +1547,7 @@ living_standard_academic_privilege = {
 
 	pop_modifier = {
 		pop_happiness = 0.1
-		pop_consumer_goods_add = 2.0
+		pop_consumer_goods_add = 1.5
 		tile_resource_engineering_research_mult = 0.1
 		tile_resource_physics_research_mult = 0.1
 		tile_resource_society_research_mult = 0.1		
@@ -1532,9 +1562,12 @@ living_standard_academic_privilege = {
 		hidden_trigger = { exists = from }
 		custom_tooltip = {
 			fail_text = species_is_not_organic
-			NOR = {
-				has_trait = trait_mechanical
-				has_trait = trait_machine_unit
+			NAND = {
+				from = { is_mechanical_empire = no }
+				OR = {
+					has_trait = trait_mechanical
+					has_trait = trait_machine_unit				
+				}
 			}
 		}
 		custom_tooltip = {
@@ -1612,7 +1645,7 @@ living_standard_utopian = {
 
 	pop_modifier = {
 		pop_happiness = 0.2
-		pop_consumer_goods_add = 2.0
+		pop_consumer_goods_add = 1.5
 	}
 	
 	potential = {
@@ -1704,7 +1737,7 @@ living_standard_good = {
 
 	pop_modifier = {
 		pop_happiness = 0.1
-		pop_consumer_goods_add = 1.5
+		pop_consumer_goods_add = 1.25
 	}
 	
 	potential = {
@@ -1716,9 +1749,12 @@ living_standard_good = {
 		hidden_trigger = { exists = from }
 		custom_tooltip = {
 			fail_text = species_is_not_organic
-			NOR = {
-				has_trait = trait_mechanical
-				has_trait = trait_machine_unit
+			NAND = {
+				from = { is_mechanical_empire = no }
+				OR = {
+					has_trait = trait_mechanical
+					has_trait = trait_machine_unit				
+				}
 			}
 		}
 		NOR = {
@@ -1806,6 +1842,15 @@ living_standard_normal = {
 	
 	allow = {
 		hidden_trigger = { exists = from }
+		custom_tooltip = {
+			fail_text = SPECIES_MUST_NOT_BE_ASSIMILATING
+			NOT = {
+				has_citizenship_type = {
+					type = citizenship_assimilation
+					country = from
+				}
+			}
+		}
 		NOR = {
 			custom_tooltip = {
 				AND = {
@@ -2111,7 +2156,10 @@ population_control_yes = {
 		hidden_trigger = { exists = from }
 		custom_tooltip = {
 			fail_text = same_species_disallowed
-			NOT = { is_same_species = from }
+			OR = {
+				NOT = { is_same_species = from }
+				from = { has_authority = auth_machine_intelligence }
+			}
 		}
 		custom_tooltip = {
 			fail_text = empire_xenophile
@@ -2132,7 +2180,7 @@ population_control_yes = {
 					NOT = { has_authority = auth_machine_intelligence }
 					AND = {
 						has_authority = auth_machine_intelligence
-						has_valid_civic = civic_machine_servitor
+						has_valid_civic = civic_machine_assimilator
 					}
 				}
 			}
@@ -2144,12 +2192,11 @@ population_control_no = {
 	token = population_control_no
 
 	potential = {
-		NOR = {
-			has_trait = trait_machine_unit
-			has_trait = trait_mechanical
-			AND = {
-				from = { has_authority = auth_machine_intelligence }
-				has_trait = trait_cybernetic
+		NAND = {
+			from = { is_mechanical_empire = no }
+			OR = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit				
 			}
 		}
 	}
@@ -2203,6 +2250,11 @@ colonization_control_yes = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0
+			has_trait = trait_cybernetic
+			from = { has_valid_civic = civic_machine_assimilator }		
+		}
 	}
 }
 
@@ -2215,6 +2267,10 @@ colonization_control_no = {
 			NOR = {
 				has_trait = trait_machine_unit
 				has_trait = trait_mechanical	
+				AND = {
+					has_trait = trait_cybernetic
+					from = { has_valid_civic = civic_machine_assimilator }		
+				}
 			}			
 		}
 	}

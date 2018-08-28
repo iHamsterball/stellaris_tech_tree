@@ -1,6 +1,6 @@
 trait_agrarian = {
 	cost = 2
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		tile_resource_food_mult = 0.15
 	}
@@ -8,7 +8,7 @@ trait_agrarian = {
 
 trait_thrifty = {
 	cost = 2
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		tile_resource_energy_mult = 0.15
 	}
@@ -16,7 +16,7 @@ trait_thrifty = {
 
 trait_industrious = {
 	cost = 2
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		tile_resource_minerals_mult = 0.15
 	}
@@ -25,7 +25,7 @@ trait_industrious = {
 trait_intelligent = {
 	cost = 2
 	opposites = { "trait_nerve_stapled" "trait_erudite" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		tile_resource_engineering_research_mult = 0.1
 		tile_resource_physics_research_mult = 0.1
@@ -36,7 +36,7 @@ trait_intelligent = {
 trait_natural_engineers = {
 	cost = 1
 	opposites = { "trait_natural_physicists" "trait_natural_sociologists" "trait_nerve_stapled" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		tile_resource_engineering_research_mult = 0.15
 	}
@@ -45,7 +45,7 @@ trait_natural_engineers = {
 trait_natural_physicists = {
 	cost = 1
 	opposites = { "trait_natural_engineers" "trait_natural_sociologists" "trait_nerve_stapled" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		tile_resource_physics_research_mult = 0.15
 	}
@@ -54,7 +54,7 @@ trait_natural_physicists = {
 trait_natural_sociologists = {
 	cost = 1
 	opposites = { "trait_natural_physicists" "trait_natural_engineers" "trait_nerve_stapled" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		tile_resource_society_research_mult = 0.15
 	}
@@ -63,7 +63,7 @@ trait_natural_sociologists = {
 trait_extremely_adaptive = {
 	cost = 4
 	opposites = { "trait_nonadaptive" "trait_adaptive" "trait_robust" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		pop_environment_tolerance = 0.20
 	}
@@ -72,7 +72,7 @@ trait_extremely_adaptive = {
 trait_adaptive = {
 	cost = 2
 	opposites = { "trait_nonadaptive" "trait_extremely_adaptive" "trait_robust" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		pop_environment_tolerance = 0.10
 	}
@@ -81,7 +81,7 @@ trait_adaptive = {
 trait_nonadaptive = {
 	cost = -2
 	opposites = { "trait_adaptive" "trait_extremely_adaptive" "trait_robust" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		pop_environment_tolerance = -0.10
 	}
@@ -93,7 +93,7 @@ trait_nonadaptive = {
 trait_rapid_breeders = {
 	cost = 1
 	opposites = { "trait_slow_breeders" "trait_fertile" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		pop_growth_speed = 0.20
 	}
@@ -102,7 +102,7 @@ trait_rapid_breeders = {
 trait_slow_breeders = {
 	cost = -1
 	opposites = { "trait_rapid_breeders" "trait_fertile" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		pop_growth_speed = -0.20
 	}
@@ -110,7 +110,7 @@ trait_slow_breeders = {
 
 trait_talented = {
 	cost = 1
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		leader_skill_levels = 1
 	}
@@ -119,7 +119,7 @@ trait_talented = {
 trait_quick_learners = {
 	cost = 1
 	opposites = { "trait_slow_learners" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		species_leader_exp_gain = 0.25
 	}
@@ -128,7 +128,7 @@ trait_quick_learners = {
 trait_slow_learners = {
 	cost = -1
 	opposites = { "trait_quick_learners" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		species_leader_exp_gain = -0.25
 	}
@@ -140,7 +140,7 @@ trait_slow_learners = {
 trait_very_strong = {
 	cost = 3
 	opposites = { "trait_weak" "trait_strong" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		army_damage_mult = 0.40
 		tile_resource_minerals_mult = 0.10
@@ -150,7 +150,7 @@ trait_very_strong = {
 trait_strong = {
 	cost = 1
 	opposites = { "trait_weak" "trait_very_strong" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		army_damage_mult = 0.20
 		tile_resource_minerals_mult = 0.05
@@ -160,7 +160,7 @@ trait_strong = {
 trait_weak = {
 	cost = -1
 	opposites = { "trait_strong" "trait_very_strong" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		army_damage_mult = -0.20
 		tile_resource_minerals_mult = -0.05
@@ -173,7 +173,7 @@ trait_weak = {
 trait_nomadic = {
 	cost = 1
 	opposites = { "trait_sedentary" "trait_hive_mind" "trait_machine_unit" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		pop_migration_speed = 0.5
 		pop_resettlement_cost_mult = -0.25
@@ -183,7 +183,7 @@ trait_nomadic = {
 trait_sedentary = {
 	cost = -1
 	opposites = { "trait_nomadic" "trait_hive_mind" "trait_machine_unit" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		pop_migration_speed = -0.5
 		pop_resettlement_cost_mult = 0.25
@@ -197,7 +197,7 @@ trait_communal = {
 	cost = 1
 	opposites = { "trait_solitary" "trait_hive_mind" "trait_machine_unit" }
 
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	
 	modifier = {
 		pop_happiness = 0.05
@@ -208,7 +208,7 @@ trait_solitary = {
 	cost = -1
 	opposites = { "trait_communal" "trait_hive_mind" "trait_machine_unit" }
 
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 		
 	modifier = {
 		pop_happiness = -0.05
@@ -225,7 +225,7 @@ trait_charismatic = {
 		pop_other_species_owner_happiness = 0.05
 	}	
 	opposites = { "trait_repugnant" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	custom_tooltip = TRAIT_CHARISMATIC_EFFECT
 }
 
@@ -235,7 +235,7 @@ trait_repugnant = {
 		pop_other_species_owner_happiness = -0.05
 	}
 	opposites = { "trait_charismatic" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	custom_tooltip = TRAIT_REPUGNANT_EFFECT
 	ai_weight = {
 		weight = 0
@@ -249,7 +249,7 @@ trait_uplifted = {
 	modification = no
 	randomized = no
 
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	ai_weight = {
 		weight = 0
 	}
@@ -259,7 +259,7 @@ trait_conformists = {
 	cost = 2
 	modifier = { pop_government_ethic_attraction = 0.30 }
 
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	
 	opposites = { "trait_deviants" "trait_hive_mind" "trait_machine_unit" }
 	ai_weight = {
@@ -271,7 +271,7 @@ trait_deviants = {
 	cost = -1
 	modifier = { pop_government_ethic_attraction = -0.15 }
 
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	
 	opposites = { "trait_conformists" "trait_hive_mind" "trait_machine_unit" }
 	ai_weight = {
@@ -283,21 +283,21 @@ trait_venerable = {
 	cost = 4
 	modifier = { leader_age = 80 }
 	opposites = { "trait_enduring" "trait_fleeting" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 }
 
 trait_enduring = {
 	cost = 1
 	modifier = { leader_age = 20 }
 	opposites = { "trait_venerable" "trait_fleeting" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 }
 
 trait_fleeting = {
 	cost = -1
 	modifier = { leader_age = -10 }
 	opposites = { "trait_venerable" "trait_enduring" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	ai_weight = {
 		weight = 0
 	}
@@ -305,8 +305,10 @@ trait_fleeting = {
 
 trait_decadent = {
 	cost = -1
+	
+	opposites = { "trait_hive_mind" }
 
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	
 	modifier = {
 		pop_eff_wo_slaves = -0.1
@@ -318,7 +320,7 @@ trait_decadent = {
 
 trait_resilient = {
 	cost = 1
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		garrison_health = 1.0
 		pop_fortification_defense = 0.5
@@ -328,7 +330,7 @@ trait_resilient = {
 trait_conservational = {
 	cost = 1
 	opposites = { "trait_wasteful" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		pop_consumer_goods_mult = -0.15
 	}
@@ -337,7 +339,7 @@ trait_conservational = {
 trait_wasteful = {
 	cost = -1
 	opposites = { "trait_conservational" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		pop_consumer_goods_mult = 0.15
 	}
@@ -355,7 +357,7 @@ trait_cybernetic = {
 	modification = no
 	alters_species_identity = yes
 
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	
 	modifier = {
 		pop_environment_tolerance = 0.20
@@ -372,8 +374,9 @@ trait_latent_psionic = {
 	initial = no
 	randomized = no
 	modification = no
+	alters_species_identity = yes
 
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	
 	modifier = {
 		tile_resource_engineering_research_mult = 0.05
@@ -390,8 +393,9 @@ trait_psionic = {
 	initial = no
 	randomized = no
 	modification = no
+	alters_species_identity = yes
 
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	
 	modifier = {
 		tile_resource_engineering_research_mult = 0.10
@@ -410,7 +414,7 @@ trait_self_modified = {
 	randomized = no
 	modification = no
 
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	
 	modifier = {
 	}
@@ -423,7 +427,7 @@ trait_delicious = {
 	initial = no
 	randomized = no
 	advanced_trait = yes
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		pop_food_mult = 0.5
 	}
@@ -436,7 +440,7 @@ trait_nerve_stapled = {
 	randomized = no
 	advanced_trait = yes
 	forced_happiness = yes
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		tile_resource_minerals_mult = 0.1
 		tile_resource_food_mult = 0.1
@@ -454,7 +458,7 @@ trait_fertile = {
 	randomized = no
 	advanced_trait = yes
 	opposites = { "trait_slow_breeders" "trait_rapid_breeders" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		pop_growth_speed = 0.3
 		pop_happiness = 0.05
@@ -467,7 +471,7 @@ trait_erudite = {
 	randomized = no
 	advanced_trait = yes
 	opposites = { "trait_nerve_stapled" "trait_intelligent" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		tile_resource_engineering_research_mult = 0.2
 		tile_resource_physics_research_mult = 0.2
@@ -482,7 +486,7 @@ trait_robust = {
 	randomized = no
 	advanced_trait = yes
 	opposites = { "trait_nonadaptive" "trait_adaptive" "trait_extremely_adaptive" }
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		pop_environment_tolerance = 0.30
 		leader_age = 50

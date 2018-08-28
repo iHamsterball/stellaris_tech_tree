@@ -639,24 +639,22 @@ has_policies_for_support_stance = {
 # Is the given fleet the portal for given extradimensional country
 # root: country (ED)
 # this: fleet
-is_extradimensional_portal = {
+is_extradimensional_portal = { # is this portal mine
 	is_ship_size = dimensional_portal_ed
-	owner = {
+	OR = {
+		owner = { is_same_value = root } # owner is me
 		OR = {
-			is_same_value = root
-			OR = {
-				AND = {
-					root = { is_country_type = extradimensional }
-					is_same_value = event_target:portal_holder_1
-				}
-				AND = {
-					root = { is_country_type = extradimensional_2 }
-					is_same_value = event_target:portal_holder_2
-				}
-				AND = {
-					root = { is_country_type = extradimensional_3 }
-					is_same_value = event_target:portal_holder_3
-				}
+			AND = { # portal is unbidden and I am unbidden
+				root = { is_country_type = extradimensional }
+				any_owned_ship = { has_ship_flag = unbidden_portal }
+			}
+			AND = { # portal is aberrant and I am aberrant
+				root = { is_country_type = extradimensional_2 }
+				any_owned_ship = { has_ship_flag = aberrant_portal }
+			}
+			AND = { # portal is vehement and I am vehement
+				root = { is_country_type = extradimensional_3 }
+				any_owned_ship = { has_ship_flag = vehement_portal }
 			}
 		}
 	}

@@ -180,7 +180,7 @@ agenda_national_purity = { # Reduced immigration attraction, influence bonus
             from = {
                 OR = {
                     has_ethic = ethic_xenophile
-                    has_ethic = ethic_fanatic_xenophobe
+                    has_ethic = ethic_fanatic_xenophile
                 }
             }
         }		
@@ -268,7 +268,7 @@ agenda_native_privilege = {
             from = {
                 OR = {
                     has_ethic = ethic_xenophile
-                    has_ethic = ethic_fanatic_xenophobe
+                    has_ethic = ethic_fanatic_xenophile
                 }
             }
         }		

@@ -134,7 +134,7 @@ tr_domination_colonial_viceroys = {
 		inherit_name = no
 		trigger = {
 			has_authority = auth_machine_intelligence
-			NOT = { has_civic = civic_machine_terminator }
+			#NOT = { has_civic = civic_machine_terminator }
 		}
 
 		weight = {

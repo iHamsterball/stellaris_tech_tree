@@ -13,14 +13,9 @@
 # gender: yes|no (default: yes). whether the species have a gender
 # portrait_modding: yes|no (default: no). whether the portrait can be modified with genemodding/robomodding
 
-@robot_trait_points = 0
-@robot_max_traits = 3
-@machine_trait_points = 1
-@machine_max_traits = 4
-@species_trait_points = 2
-@species_max_traits = 5
-
 HUM = {
+	archetype = BIOLOGICAL
+
 	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
 
 	portraits = {
@@ -30,20 +25,34 @@ HUM = {
 		"humanoid_04"
 		"humanoid_05"
 	}
+	custom_portraits = {
+		randomized = { host_has_dlc = "Humanoids Species Pack" }
+		playable = { local_has_dlc = "Humanoids Species Pack" }
+		portraits = {
+			"humanoid_hp_01"
+			"humanoid_hp_02"
+			"humanoid_hp_06"
+			"humanoid_hp_07"
+			"humanoid_hp_08"
+			"humanoid_hp_09"
+			"humanoid_hp_10"
+			"humanoid_hp_11"
+			"humanoid_hp_12"
+			"humanoid_hp_13"
+		}
+	}
 	
 	# These should not be used for randomly generated species
 	non_randomized_portraits = {
 		"human"
 	}
 	
-	graphical_culture = mammalian_01
+	graphical_culture = humanoid_01
 	move_pop_sound_effect = "moving_pop_confirmation"
-
-	species_trait_points = @species_trait_points
-	species_max_traits = @species_max_traits
 } 
 
 PRE_MAM = {
+	archetype = PRESAPIENT
 
 	playable = { always = no }
 	randomized = no
@@ -61,12 +70,10 @@ PRE_MAM = {
 		"mam6"
 		"mam13"	
 	}
-
-	species_trait_points = @species_trait_points
-	species_max_traits = @species_max_traits
 }
 
 PRE_REP = {
+	archetype = PRESAPIENT
 
 	playable = { always = no }
 	randomized = no
@@ -84,12 +91,10 @@ PRE_REP = {
 		"rep9"
 		"rep12"	
 	}
-
-	species_trait_points = @species_trait_points
-	species_max_traits = @species_max_traits
 }
 
 PRE_AVI = {
+	archetype = PRESAPIENT
 	
 	playable = { always = no }
 	randomized = no
@@ -107,12 +112,10 @@ PRE_AVI = {
 		"avi1"
 		"avi12"	
 	}
-
-	species_trait_points = @species_trait_points
-	species_max_traits = @species_max_traits
 }
 
 PRE_ART = {
+	archetype = PRESAPIENT
 	
 	playable = { always = no }
 	randomized = no
@@ -137,12 +140,10 @@ PRE_ART = {
 		"art14"
 		"art15"
 	}
-
-	species_trait_points = @species_trait_points
-	species_max_traits = @species_max_traits
 }
 
 PRE_MOL = {
+	archetype = PRESAPIENT
 	
 	playable = { always = no }
 	randomized = no
@@ -159,12 +160,10 @@ PRE_MOL = {
 		"mol1"
 		"mol3"
 	}
-
-	species_trait_points = @species_trait_points
-	species_max_traits = @species_max_traits
 }
 
 PRE_FUN = {
+	archetype = PRESAPIENT
 	
 	playable = { always = no }
 	randomized = no
@@ -183,9 +182,6 @@ PRE_FUN = {
 		"fun9"
 		"fun13"
 	}
-
-	species_trait_points = @species_trait_points
-	species_max_traits = @species_max_traits
 }
 
 
@@ -204,6 +200,8 @@ AI = {
 }
 
 SWARM = {
+	archetype = OTHER
+
 	playable = { always = no }
 	randomized = no
 
@@ -218,6 +216,8 @@ SWARM = {
 }
 
 EXD = {
+	archetype = OTHER
+
 	playable = { always = no }
 	randomized = no
 
@@ -234,6 +234,8 @@ EXD = {
 }
 
 ROBOT = {
+	archetype = ROBOT
+
 	playable = { has_global_flag = game_started }
 	randomized = no
 	robotic = yes
@@ -269,12 +271,11 @@ ROBOT = {
 	
 	graphical_culture = ai_01
 	move_pop_sound_effect = "robot_pops_move"
-
-	species_trait_points = @robot_trait_points
-	species_max_traits = @robot_max_traits
 }
 
 MACHINE = {
+	archetype = MACHINE
+
 	playable = { host_has_dlc = "Synthetic Dawn Story Pack" }
 	randomized = {
 		host_has_dlc = "Synthetic Dawn Story Pack"
@@ -307,7 +308,4 @@ MACHINE = {
 
 	graphical_culture = mammalian_01
 	move_pop_sound_effect = "robot_pops_move"
-
-	species_trait_points = @machine_trait_points
-	species_max_traits = @machine_max_traits
 }

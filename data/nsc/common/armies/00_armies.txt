@@ -25,7 +25,10 @@ assault_army = {
 			}
 		}
 		owner = {
-			NOT = { has_authority = auth_machine_intelligence }
+			OR = {
+				NOT = { has_authority = auth_machine_intelligence }
+				has_valid_civic = civic_machine_assimilator
+			}
 		}
 	}
 }
@@ -54,7 +57,10 @@ defense_army = {
 			}
 		}
 		owner = {
-			NOT = { has_authority = auth_machine_intelligence }
+			OR = {
+				NOT = { has_authority = auth_machine_intelligence }
+				has_valid_civic = civic_machine_assimilator
+			}
 		}
 	}
 }
@@ -147,6 +153,8 @@ clone_army = {
 	}
 	
 	prerequisites = { "tech_cloning" }
+	
+	show_tech_unlock_if = { NOT = { has_authority = auth_machine_intelligence } }
 	
 	allow = {
 		has_building = "building_clone_vats"

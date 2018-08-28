@@ -53,9 +53,9 @@
  
  #Spaceport Modules
  #tech_corvette_assembly:0 "Проект улучшенного корвета"
- #tech_corvette_assembly_desc:0 "Unused # TEMP"
+ #tech_corvette_assembly_desc:0 "Unused"
  #tech_destroyer_assembly:0 "Проект улучшенного эсминца"
- #tech_destroyer_assembly_desc:0 "Unused # TEMP"
+ #tech_destroyer_assembly_desc:0 "Unused"
  tech_cruiser_yard:0 "Стандартные модели крейсеров"
  tech_cruiser_yard_desc:0 "Введение новых стандартов моделирования и строительства крейсеров значительно повышает эффективность производственного процесса на всех этапах."
  tech_battleship_yard:0 "Стандартные модели линкоров"
@@ -409,7 +409,7 @@
  #tech_power_plant_5:0 "Matter to Energy Conversion"
  #tech_power_plant_5_desc
  tech_stellar_absorption:0 "Звездное поглощение"
- #tech_stellar_absorption_desc:0 "Unused # TEMP"
+ #tech_stellar_absorption_desc:0 "Unused"
  tech_power_hub_1:0 "Глобальное управление энергией"
  tech_power_hub_1_desc:0 "Оборудование, обеспечивающее сбалансированность нагрузки, может значительно повысить стабильность работы локальных энергосистем, а также способно отдавать избыточную энергию назад в централизованные конденсаторы."
  tech_power_hub_2:0 "Планетарная энергосеть"
@@ -614,6 +614,10 @@
  tech_frontier_hospital_desc:0 "С ростом нашей империи растет и наше понимание собственной биологии. Передовые методы лечения на клеточном уровне позволили значительно улучшить здоровье населения."
  tech_frontier_hospital_machine_intelligence:0 "Разумные заводы"
  tech_frontier_hospital_desc_machine_intelligence:0 "Эти заводы обладают самосознанием и постоянно оптимизируют собственную эффективность, требуя минимум внимания от центрального машинного разума."
+ tech_modular_components:0 "$tech_frontier_health_machine_intelligence$"
+ tech_modular_components_desc:0 "$tech_frontier_health_desc_machine_intelligence$"
+ tech_intelligent_factories:0 "$tech_frontier_hospital_machine_intelligence$"
+ tech_intelligent_factories_desc:0 "$tech_frontier_hospital_desc_machine_intelligence$"
  tech_tb_mountain_range:0 "Изменение планетарного ландшафта"
  tech_tb_mountain_range_desc:0 "С появлением различной автоматики, чистого синтеза и технологии сжатия материи убрать целый горный хребет стало так же просто, как срезать верхушку горы."
  tech_tb_volcano:0 "Проектирование глубоких слоев коры"

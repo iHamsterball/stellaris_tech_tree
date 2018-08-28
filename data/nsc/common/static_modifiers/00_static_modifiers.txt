@@ -180,14 +180,14 @@ pop_enslaved_matrix = {
 }
 
 pop_purging = {
-	pop_happiness = -100
-	pop_resource_output = -100
-	pop_food_req_mult = -100
+	pop_happiness = -10
+	pop_resource_output = -10
+	pop_food_req_mult = -10
 	pop_resettlement_cost_mult = -0.5
 }
 
 pop_purging_matrix = {
-	pop_happiness = -100
+	pop_happiness = -10
 	pop_energy_add = 8
 	pop_resettlement_cost_mult = -0.5
 }
@@ -202,17 +202,17 @@ pop_purging_displacement = {
 }
 
 pop_purging_labor_camps = {
-	pop_happiness = -100
-	tile_resource_energy_mult = -100
-	tile_resource_physics_research_mult = -100
-	tile_resource_society_research_mult = -100
-	tile_resource_engineering_research_mult = -100	
-	tile_resource_unity_mult = -100
+	pop_happiness = -10
+	tile_resource_energy_mult = -10
+	tile_resource_physics_research_mult = -10
+	tile_resource_society_research_mult = -10
+	tile_resource_engineering_research_mult = -10	
+	tile_resource_unity_mult = -10
 	pop_resettlement_cost_mult = -0.5
 }
 
 pop_purging_processing = {
-	pop_happiness = -100
+	pop_happiness = -10
 	pop_food_add = 8
 	pop_resettlement_cost_mult = -0.5
 }
@@ -896,13 +896,11 @@ land_appropriation = {
 ##########################################################################
 
 skill_admiral = {
-	ship_fire_rate_mult = 0.05
+	ship_fire_rate_mult = 0.03
 }
 
 skill_general = {
-	army_health = 0.05
 	army_damage_mult = 0.05
-	army_upkeep_mult = -0.05
 }
 
 skill_scientist = {

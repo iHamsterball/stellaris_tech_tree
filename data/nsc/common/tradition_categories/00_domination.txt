@@ -21,7 +21,7 @@ tradition_domination = {
 	tradition_swap = {
 		name = tradition_domination_hive
 		trigger = {
-			has_authority = auth_machine_intelligence
+			has_authority = auth_hive_mind
 			NOT = { has_civic = civic_hive_devouring_swarm }
 		}
 		weight = {

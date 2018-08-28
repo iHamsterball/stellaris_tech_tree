@@ -24,7 +24,7 @@ weapon_component_template = {
 	static_rotation = yes
 	use_ship_kill_target = no
 	
-	prerequisites = { "tech_energy_lance_NSC" }
+	prerequisites = { "tech_block_weaponry" "tech_energy_lance_NSC" }
 	component_set = "ENERGY_LANCE_HQ"
 	projectile_gfx = "graviton_lance"
 	tags = { weapon_type_energy }
@@ -55,7 +55,7 @@ weapon_component_template = {
 	static_rotation = yes
 	use_ship_kill_target = no
 	
-	prerequisites = { "tech_arc_emitter_NSC" }
+	prerequisites = { "tech_block_weaponry" "tech_arc_emitter_NSC" }
 	component_set = "ARC_EMITTER_HQ"
 	projectile_gfx = "pulsated_arc_emitter"
 	tags = { weapon_type_energy }
@@ -86,7 +86,7 @@ weapon_component_template = {
 	static_rotation = yes
 	use_ship_kill_target = no
 	
-	prerequisites = { "tech_mass_accelerator_NSC" }
+	prerequisites = { "tech_block_weaponry" "tech_mass_accelerator_NSC" }
 	component_set = "MASS_ACCELERATOR_HQ"
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic }
@@ -122,7 +122,7 @@ weapon_component_template = {
 	
 	ai_weight = { weight = 100 }
 	
-	prerequisites = { "tech_kinetic_artillery_nsc" }
+	prerequisites = { "tech_block_weaponry" "tech_kinetic_artillery_nsc" }
 	component_set = "KINETIC_ARTILLERY_NSC"
 	projectile_gfx = "dreadnought_kinetic_artillery"
 	tags = { weapon_type_kinetic }
@@ -155,7 +155,7 @@ weapon_component_template = {
 #	icon = "GFX_ship_part_flak_batteries_3"
 #	icon_frame = 1
 #	
-#	prerequisites = { "tech_flak_batteries_3_nsc" }
+#	prerequisites = { "tech_block_weaponry" "tech_flak_batteries_3_nsc" }
 #	component_set = "NSC_FLAK_BATTERY_3"
 #	projectile_gfx = "mass_driver_m"
 #	tags = { weapon_type_point_defense weapon_type_kinetic }
@@ -199,7 +199,7 @@ weapon_component_template = {
 #	
 #	ai_weight = { weight = 0 }
 #	
-#	prerequisites = { "tech_NSC_tomahawk_missile" }
+#	prerequisites = { "tech_block_weaponry" "tech_NSC_tomahawk_missile" }
 #	component_set = "CRUISE_MISSILES"
 #	projectile_gfx = "large_missile"
 #	tags = { weapon_type_explosive }

@@ -7,20 +7,13 @@
 #	randomized = trigger, default is no, to specify if portraits are randomized
 #	playable = trigger, default is yes, to specify if portraits are playable
 #	portraits, list portrait keys
-# species_trait_points: base number of species trait points available for this species class
-# species_max_traits: maximum number of traits that species of this class can have (doesn't count those with cost == 0)
 # possible: ethics/government requirements; see common/governments/readme_requirements.txt
 # gender: yes|no (default: yes). whether the species have a gender
 # portrait_modding: yes|no (default: no). whether the portrait can be modified with genemodding/robomodding
 
-@robot_trait_points = 0
-@robot_max_traits = 3
-@machine_trait_points = 1
-@machine_max_traits = 4
-@species_trait_points = 2
-@species_max_traits = 5
-
 MAM = {
+	archetype = BIOLOGICAL
+
 	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
 
 	portraits = {
@@ -66,12 +59,11 @@ MAM = {
 	
 	graphical_culture = mammalian_01
 	move_pop_sound_effect = "moving_pop_confirmation"
-
-	species_trait_points = @species_trait_points
-	species_max_traits = @species_max_traits
 }
 
 REP = {
+	archetype = BIOLOGICAL
+
 	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
 
 	portraits = {
@@ -109,12 +101,11 @@ REP = {
 
 	graphical_culture = reptilian_01
 	move_pop_sound_effect = "reptilian_pops_move"
-
-	species_trait_points = @species_trait_points
-	species_max_traits = @species_max_traits
 }
 
 AVI = {
+	archetype = BIOLOGICAL
+
 	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
 
 	portraits = {
@@ -168,12 +159,11 @@ AVI = {
 
 	graphical_culture = avian_01
 	move_pop_sound_effect = "avian_pops_move"
-
-	species_trait_points = @species_trait_points
-	species_max_traits = @species_max_traits
 }
 
 ART = {
+	archetype = BIOLOGICAL
+
 	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
 
 	portraits = {
@@ -190,6 +180,7 @@ ART = {
 		"art10"
 		"art11"
 		"art15"
+		"art19"
 	}
 
 	custom_portraits = {#add additional portraits when customizing species
@@ -235,12 +226,11 @@ ART = {
 	
 	graphical_culture = arthropoid_01
 	move_pop_sound_effect = "arthopoid_pops_move"
-
-	species_trait_points = @species_trait_points
-	species_max_traits = @species_max_traits
 }
 
 MOL = {
+	archetype = BIOLOGICAL
+
 	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
 
 	portraits = {
@@ -288,12 +278,11 @@ MOL = {
 
 	graphical_culture = molluscoid_01
 	move_pop_sound_effect = "molluscoid_pops_move"
-
-	species_trait_points = @species_trait_points
-	species_max_traits = @species_max_traits
 }
 
 FUN = {
+	archetype = BIOLOGICAL
+
 	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
 
 	gender = no
@@ -343,12 +332,11 @@ FUN = {
 
 	graphical_culture = fungoid_01
 	move_pop_sound_effect = "fungoid_pops_move"
-
-	species_trait_points = @species_trait_points
-	species_max_traits = @species_max_traits
 }
 
 PLANT = {
+	archetype = BIOLOGICAL
+
 	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
 	playable = { local_has_dlc = "Plantoid"	}
 	randomized = { host_has_dlc = "Plantoid" }
@@ -374,7 +362,4 @@ PLANT = {
 	}
 
 	graphical_culture = plantoid_01
-
-	species_trait_points = @species_trait_points
-	species_max_traits = @species_max_traits
 }

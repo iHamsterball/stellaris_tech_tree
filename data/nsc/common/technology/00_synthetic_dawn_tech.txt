@@ -373,7 +373,7 @@ tech_nanite_assemblers = {
 	area = engineering
 	tier = 3
 	category = { industry }
-	prerequisites = { "tech_binary_motivators" "tech_galactic_administration" "tech_sapient_ai" }
+	prerequisites = { "tech_binary_motivators" "tech_galactic_administration" }
 	is_rare = yes
 	weight = @tier3weight2
 
@@ -566,6 +566,56 @@ tech_singularity_core = {
 				area = physics
 				has_trait = "leader_trait_expertise_statecraft"
 			}
+		}
+	}
+}
+
+#Replacing Frontier Health
+tech_modular_components = {
+	cost = @tier1cost2
+	area = society
+	tier = 1
+	category = { biology }
+	prerequisites = { "tech_colonization_1" }
+	weight = @tier1weight4
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_authority = auth_machine_intelligence }
+		}
+	}
+}
+
+#Replacing Frontier Hospital
+tech_intelligent_factories = {
+	cost = @tier2cost2
+	area = society
+	tier = 2
+	category = { biology }
+	prerequisites = { "tech_modular_components" "tech_colonial_centralization" }
+	weight = @tier2weight2
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_authority = auth_machine_intelligence }
 		}
 	}
 }

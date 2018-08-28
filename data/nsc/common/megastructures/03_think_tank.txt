@@ -49,21 +49,7 @@ think_tank_0 = {
 			}
 			custom_tooltip = {
 				fail_text = "requires_no_existing_think_tank"
-				from = {
-					NOT = {
-						any_owned_megastructure = {
-							OR = {
-								is_megastructure_type = think_tank_0
-								is_megastructure_type = think_tank_1
-								is_megastructure_type = think_tank_2
-								is_megastructure_type = think_tank_3
-								is_megastructure_type = think_tank_4
-								is_megastructure_type = think_tank_restored
-								is_megastructure_type = think_tank_ruined
-							}
-						}
-					}
-				}
+				from = { NOT = { has_country_flag = built_think_tank } }
 			}			
 			custom_tooltip = {
 				fail_text = "requires_survey_not_habitable"
@@ -132,6 +118,7 @@ think_tank_0 = {
 		fromfrom.planet = {
 			set_planet_flag = has_megastructure
 		}
+		from = { set_country_flag = built_think_tank }
 	}
 }
 
@@ -297,25 +284,7 @@ think_tank_restored = {
 	}
 
 	possible = {
-		from = { has_technology = tech_mega_engineering }
-		custom_tooltip = {
-			fail_text = "requires_no_existing_think_tank"
-			from = {
-				NOT = {
-					any_owned_megastructure = {
-						OR = {
-							is_megastructure_type = think_tank_0
-							is_megastructure_type = think_tank_1
-							is_megastructure_type = think_tank_2
-							is_megastructure_type = think_tank_3
-							is_megastructure_type = think_tank_4
-							is_megastructure_type = think_tank_restored
-							is_megastructure_type = think_tank_ruined
-						}
-					}
-				}
-			}
-		}		
+		from = { has_technology = tech_mega_engineering }	
 	}
 
 	on_build_start = {

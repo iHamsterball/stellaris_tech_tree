@@ -6,24 +6,12 @@ opinion_from_personality = {
 	opinion = {
 		modifier = {
 			add = -1000
-			has_ai_personality = metalhead	
-		}	
+			has_ai_personality = metalhead
+		}
 		modifier = {
 			add = 100
 			has_ai_personality = fanatic_befrienders
-		}	
-		modifier = {
-		 	add = -60
-			is_country_type = fallen_empire
-			has_ethic = ethic_fanatic_xenophile
-			FROM = {	
-				OR = {
-					has_valid_civic = civic_fanatic_purifiers
-					has_valid_civic = civic_hive_devouring_swarm
-					has_valid_civic = civic_machine_terminator					
-				}			
-			}
-		}		
+		}
 	}
 }
 
@@ -36,11 +24,11 @@ opinion_devouring_swarm = {
 				from = { has_valid_civic = "civic_hive_devouring_swarm" }
 				NOT = { has_valid_civic = civic_fanatic_purifiers }
 			}			
-		}
+		}		
 	}
 	opinion = {
 		modifier = {
-			add = -1000	
+			add = -1000			
 		}		
 	}
 }

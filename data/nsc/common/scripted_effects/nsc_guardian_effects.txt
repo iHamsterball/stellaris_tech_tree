@@ -1,0 +1,210 @@
+########################################################################
+# These are part of the Guardian Event File overhaul, courtesy of Folk #
+########################################################################
+
+nsc_dragon_create = {
+	create_country = {
+		name = "NAME_Voidwyrm"
+		type = guardian_dragon
+		flag = {
+			icon = {
+				category = "zoological"
+				file = "flag_zoological_5.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "00_solid.dds"
+			}
+			colors = {
+				"red"
+				"red"
+				"null"
+				"null"
+			}
+		}
+	}
+	last_created_country = {
+		guardian_difficulty = yes
+		create_fleet = {
+			name = "NAME_Ether_Drake"
+			settings = { spawn_debris = no is_boss = yes }
+			effect = {
+				set_owner = last_created_country
+				set_location = PREVPREV
+				set_fleet_stance = aggressive
+				set_aggro_range_measure_from = self
+				set_aggro_range = 500
+				nsc_guardian_roam = yes
+			}
+		}
+	}
+	last_created_fleet = {
+		event_target:nsc_first_dragon_star = {
+			# Increment global UUID
+			change_variable = { which = "NSCDragonUUID" value = 1 }
+			# Make a copy we can mangle
+			set_variable = { which = "NSCTmp" value = "NSCDragonUUID" }
+			# Set NSCDragonId on the fleet to NSCDragonUUID
+			while = {
+				limit = { check_variable = { which = "NSCTmp" value > 0 } }
+				PREV = { change_variable = { which = "NSCDragonId" value = 1 } }
+				subtract_variable = { which = "NSCTmp" value = 1 }
+			}
+		}
+		# And mark our system with the same ID
+        # create a copy to mangle
+        set_variable = { which = "NSCTmp" value = "NSCDragonId" }
+        # Set NSCDragonId on the solar system to the same as the fleet
+        while = {
+            limit = { check_variable = { which = "NSCTmp" value > 0 } }
+            # prev is the system
+            PREVPREV = { change_variable = { which = "NSCDragonId" value = 1 } }
+            subtract_variable = { which = "NSCTmp" value = 1 }
+        }
+	}
+}
+
+nsc_guardian_roam = {
+	queue_actions = {
+		repeat = {
+			find_closest_planet = {
+				trigger = {
+					id = guardian.home.1
+					is_star = yes
+				}
+				found_planet = { orbit_planet = this }
+			}
+			repeat = {
+				while = {
+					id = guardian.home.2
+					NOT = { is_fleet_idle = yes }
+				}
+				wait = 60
+			}
+			repeat = {
+				max_iterations = 5
+				find_random_planet = { found_planet = { orbit_planet = this } }
+				repeat = {
+					while = {
+						id = guardian.home.3
+						NOT = { is_fleet_idle = yes }
+					}
+					wait = 7
+				}
+				wait = {
+					duration = 90
+					random = 30
+				}
+			}
+		}
+	}
+}
+
+nsc_fortress_set_event_target = {
+	random_country = {
+		limit = {
+			is_country_type = guardian_fortress
+			has_relation_flag = {
+				who = prev
+				flag = nsc_fortress_owner
+			}
+		}
+		random_owned_ship = {
+			limit = { has_ship_flag = fortress_vault }
+			save_event_target_as = disabled_enigmatic_fortress
+		}
+	}
+}
+
+nsc_fortress_revive = {
+    end_event_chain = "enigmatic_fortress_chain"
+    if = {
+        limit = {
+            exists = event_target:disabled_enigmatic_fortress
+            event_target:disabled_enigmatic_fortress = {
+                exists = owner
+                owner = { is_country_type = guardian_fortress }
+            }
+        }
+        event_target:disabled_enigmatic_fortress = {
+            owner = {
+                every_owned_ship = {
+                    set_disabled = no
+                    repair_ship = yes
+                }
+                remove_relation_flag = {
+                    who = root
+                    flag = nsc_fortress_owner
+                }
+            }
+        }
+    }
+}
+
+nsc_fortress_destroy = {
+	if = {
+		limit = { has_point_of_interest = { poi = curator_poi_fortress } }
+		remove_point_of_interest = curator_poi_fortress
+		end_curator_chain = yes
+	}
+	event_target:disabled_enigmatic_fortress = {
+		solar_system = {
+			random_system_planet = {
+				limit = { is_star = yes }
+				create_ambient_object = {
+					type = "dead_enigmatic_fortress_object"
+					location = solar_system
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = PREV
+						distance = 110
+						angle = 110
+					}
+				}
+			}
+		}
+		owner = {
+			every_owned_fleet = { delete_fleet = this }
+			destroy_country = yes
+		}
+	}
+}
+
+#Difference being the explosion particle ambient object (this is for guardian.2157 "fail").
+nsc_fortress_destroy_explosion = {
+	if = {
+		limit = { has_point_of_interest = { poi = curator_poi_fortress } }
+		remove_point_of_interest = curator_poi_fortress
+		end_curator_chain = yes
+	}
+	event_target:disabled_enigmatic_fortress = {
+		solar_system = {
+			random_system_planet = {
+				limit = { is_star = yes }
+				create_ambient_object = {
+					type = "large_debris_object" # Actually explosion
+					location = solar_system
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = PREV
+						distance = 110
+						angle = 110
+					}
+				}
+			}
+		}
+		create_ambient_object = {
+			type = explosion_particle_object
+			location = this
+			use_3d_location = yes
+			duration = 10
+			scale = 30
+		}
+		owner = {
+			every_owned_fleet = { delete_fleet = this }
+			destroy_country = yes
+		}
+	}
+}

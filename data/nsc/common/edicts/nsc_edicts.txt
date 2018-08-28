@@ -1,9 +1,4 @@
-
-# ==============================
-# TWEEEEEEEEEEAK for dat balance
-
-
-# XXX Obviously set it higher than 2 for release
+@nsc_edict_duration = 1800
 @move_hq_days_required = 30
 @move_hq_mineralcost = 1500
 @move_hq_mineralcost_negative = -1500
@@ -11,11 +6,9 @@
 @move_hq_energycost_negative = -1500
 @move_hq_influencecost = 200
 
-# Edict cooldown is in events/nsc_hq_events.txt at the top
-
+# Edict cooldown for HQ Station is in events/nsc_hq_events.txt at the top
 
 # ==============================
-
 
 planet_edict = {
 	name = nsc_move_hq
@@ -69,3 +62,62 @@ planet_edict = {
 	ai_weight = { weight = 0 }
 }
 
+#Private Mining Consortiums
+planet_edict = {
+	name = nsc_mineral_boost
+	
+	influence_cost = 250 #Pool Cost
+	length = @nsc_edict_duration
+	
+	modifier = { tile_resource_minerals_mult = 0.5 }
+	
+	allow = {}
+	
+	#This is to apply the "cost" of the edict: 2.5 Influence and add to total capacity of the resource.
+	effect = {
+		owner = { hidden_effect = { country_event = { id = nsc_edicts.1 days = 1 } } } #Must be one day afterwards so game has proper edict count.
+		custom_tooltip = edict_nsc_mineral_boost_tooltip
+	}
+	
+	ai_weight = { weight = 0 }
+}
+
+#Progressive Solar Energy Initiative
+planet_edict = {
+	name = nsc_energy_boost
+	
+	influence_cost = 250 #Pool Cost
+	length = @nsc_edict_duration
+	
+	modifier = { tile_resource_energy_mult = 0.5 }
+	
+	allow = {}
+	
+	#This is to apply the "cost" of the edict: 2.5 Influence and add to total capacity of the resource.
+	effect = {
+		owner = { hidden_effect = { country_event = { id = nsc_edicts.2 days = 1 } } } #Must be one day afterwards so game has proper edict count.
+		custom_tooltip = edict_nsc_energy_boost_tooltip
+	}
+	
+	ai_weight = { weight = 0 }
+}
+
+#Farm Subsidization Act
+planet_edict = {
+	name = nsc_food_boost
+	
+	influence_cost = 250 #Pool Cost
+	length = @nsc_edict_duration
+	
+	modifier = { tile_resource_food_mult = 0.5 }
+	
+	allow = {}
+	
+	#This is to apply the "cost" of the edict: 2.5 Influence and add to total capacity of the resource.
+	effect = {
+		owner = { hidden_effect = { country_event = { id = nsc_edicts.3 days = 1 } } } #Must be one day afterwards so game has proper edict count.
+		custom_tooltip = edict_nsc_food_boost_tooltip
+	}
+	
+	ai_weight = { weight = 0 }
+}

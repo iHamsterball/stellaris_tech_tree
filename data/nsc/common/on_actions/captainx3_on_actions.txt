@@ -1,20 +1,21 @@
 on_game_start = {
     events = {
         nscflag.1 #Installs "has_nsc" global & country flag.
+		nscflag.2 #Gives all human players the Drydock technology so AI will not use. [Replaces old NSC Player flag slot.]
 		nscflag.3 #Installs "NSC Control Player" country flag.
     }
 }
 
 on_press_begin = {
 	events = {
-		NSC_guardian_main.1 #Gives host (singleplayer or multiplayer) Playable Guardians flag if has Leviathans.
+		NSC_guardian_main.1 #Gives all players (singleplayer or multiplayer) Playable Guardians flag if host has Leviathans DLC.
 		nscflag.7 #Checks which Component Mods (BOSP, ESC, Crystallis) are active and determines if Player gets Component Feature.
-		NSC_features.2 #Launches advisory notice for all NSC Players explaining NSC Features Menu location.
+		NSC_features.2 #Launches advisory notice for important info about the mod for new players.
 		nscflag.8 #Leads to event that will give NSC Control Player option of NSC Components
 	}
 }
 
-on_yearly_pulse = { events = { ai_ship_classes.1 } } #If AI Challenge is active, gives all regular AI empires any "mainstream" ship class technologies the player has.
+on_yearly_pulse = { events = { ai_ship_classes.1 } } #If AI Challenge is active, gives various technologies based upon what the "chosen" player has.
 
 on_monthly_pulse = {
 	events = {
@@ -22,6 +23,7 @@ on_monthly_pulse = {
 		nscflag.4 #Checks if any "new countries" have arisen in an NSC Stellaris campaign and gives them the "has NSC" flag.
 		nscflag.11 #Checks for newly formed countries and gives them NSC Component block technologies if NSC Control Player activates NSC Components.
 		nscflag.12 #Checks for newly formed countries and gives them NSC block tech for needed reactors if NSC Control Player declines NSC Components.
+		nsc_edicts.4 #Leads to individual counts of NSC planet production edicts to apply proper costs for said edicts.
 	}
 }
 
@@ -32,8 +34,9 @@ on_ship_built = {
 	}
 }
 
+#All these events are for when a Player defeats a Guardian, starting the Playable Guardian process.
 on_fleet_destroyed_perp = {
-	events = { #All these events are for when a Player defeats a Guardian, starting the Playable Guardian process.
+	events = {
 		NSC_guardian_automated_dreadnought.1
 		NSC_guardian_dimensional_horror.1
 		NSC_guardian_ether_drake.1
@@ -60,13 +63,9 @@ on_border_change_station_lost = {
 	}
 }
 
-on_entering_system = { events = { NSC_guardian_pirate.2 } }#Gives description of Hidden Paradise system for the player when entering.
+on_entering_system_fleet = { events = { NSC_guardian_pirate.2 } }#Gives description of Hidden Paradise system for the player when entering.
 
 on_ship_disabled = { events = { NSC_guardian_pirate.3 } }#Disables the Carrack Pirate Galleon and saves the event target.
-
-on_building_miningbase = { events = { miningbase.1 } }#Gives bonuses
-
-on_building_powerstation = { events = { powerstation.1 } } #Gives bonuses
 
 on_fleet_disbanded = { events = { nsc_flagship_check.301 } } #Tells Player Flagship has been destroyed.
 

@@ -1,5 +1,3 @@
-# Do not remove or rename this
-
 # Possible Variables for Buildings:
 # strategic_resource: strategic resource, deprecated, strategic resource used by the building.
 # allow: trigger to check for allowing construction of building.
@@ -7,7 +5,9 @@
 # empire_unique: boolean, can only build one if set to true.
 # cost: resource table, cost of building.
 # is_orbital: boolean, can only be built in orbital station.
-# modifier: modifier, deprecated, applies a modifier to planet.
+# modifier: modifier, deprecated, applies a modifier to planet; use planet_modifier instead.
+# planet_modifier, country_modifier, army_modifier: applies modifier to planet/country/armies
+# triggered_planet_modifier = { key (optional), potential (scope: planet), modifier }: applies conditional modifier to planet
 # base_buildtime: int, number of days for construction.
 # requires_pop, boolean, building will require a pop for production.
 # required_resources, resource table, required resources for production.
@@ -16,6 +16,10 @@
 # is_listed, boolean, toggles if this building is shown in the non-upgrade buildable list.
 # planet_unique, toggles if one can build multiple of this type on a single planet.
 # ai_weight, weight for AI, default is set to one, weight set to 0 means that AI will never build it
+# is_colony: trigger to check if the building is a colony shelter for country (scope: country, from: planet). default: "always = no"
+# active: trigger to check if a building can be active with a given pop worker (scope: pop) if you add a trigger here, you should also add the requirements in the description
+# show_tech_unlock_if: trigger to show this building only conditionally in the technology screen. scope: country. default: { always = yes }
+# planet_modifier_with_pop_trigger = { key (optional), potential (scope: pop), modifier }: applies modifier to pops on planet that satisfy condition in trigger
 
 #
 # BALANCE
@@ -61,7 +65,8 @@
 @science5 = 6
 
 
-# Governor's Mansion
+# Governor's Mansion - Non-Hive Mind/Machine Empire "Palace" - Over count modifier = "Corrupt Government"
+# Produces 1 Unity, 1 Influence, 10% Happiness Planet.
 building_governors_mansion = {
 	base_buildtime = 180
 	is_listed = yes
@@ -74,15 +79,150 @@ building_governors_mansion = {
 
 	required_resources = { energy = 3 }
 	
-	planet_modifier = { pop_happiness = 0.10 }
+	planet_modifier = { pop_happiness = 0.1 }
+	
+	produced_resources = { influence = 1 unity = 1 }
+	
+	#show_tech_unlock_if = { NOR = { has_authority = auth_machine_intelligence has_authority = auth_hive_mind } }
+	
+	potential = { NOR = { owner = { has_authority = auth_machine_intelligence } owner = { has_authority = auth_hive_mind } } }
+	
+	destroy_if = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_machine_intelligence
+				has_authority = auth_hive_mind
+			}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
 
 	planet_unique = yes
 	level = 1
 	
-	produced_resources = {
-		influence = 1.0
-		unity = 1.0
+	prerequisites = { "tech_planetary_government" }
+	
+	#If the coding below combined doesn't work, something is wrong on Paradox's end.
+	ai_allow = { always = no }
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 0
+			from = { sector_controlled = yes }
+		}
 	}
+}
+
+# Queen's Den - Hive Mind "Palace" - Over count modifier = "Mental Aphasia"
+# Produces 1 Unity, 1 Influence, 10% Tile Production.
+building_queen_den = {
+	base_buildtime = 180
+	is_listed = yes
+	
+	cost = {
+		minerals = 1000
+		energy = 1000
+		influence = 50
+	}
+
+	required_resources = { energy = 3 }
+	
+	planet_modifier = { pop_growth_speed = 0.1 }
+	
+	produced_resources = { influence = 1 unity = 1 }
+	
+	#show_tech_unlock_if = { has_authority = auth_hive_mind }
+	
+	potential = { owner = { has_authority = auth_hive_mind } }
+	
+	destroy_if = {
+		exists = owner
+		owner = { NOT = { has_authority = auth_hive_mind } }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+
+	planet_unique = yes
+	level = 1
+	
+	prerequisites = { "tech_planetary_government" }
+	
+	#If the coding below combined doesn't work, something is wrong on Paradox's end.
+	ai_allow = { always = no }
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 0
+			from = { sector_controlled = yes }
+		}
+	}
+}
+
+# Primary Network Hub - Machine Empire "Palace" - Over count modifier = "Network Lag"
+# Produces 1 Unity, 1 Influence, 10% Robot Tile Production.
+building_primary_network_hub = {
+	base_buildtime = 180
+	is_listed = yes
+	
+	cost = {
+		minerals = 1000
+		energy = 1000
+		influence = 50
+	}
+
+	required_resources = { energy = 3 }
+	
+	planet_modifier = { pop_robot_production_output = 0.1 }
+	
+	produced_resources = { influence = 1 unity = 1 }
+	
+	#show_tech_unlock_if = { has_authority = auth_machine_intelligence }
+	
+	potential = { owner = { has_authority = auth_machine_intelligence } }
+	
+	destroy_if = {
+		exists = owner
+		owner = { NOT = { has_authority = auth_machine_intelligence } }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = building_machine_capital_2
+					has_building = building_machine_capital_3
+				}
+			}
+		}
+	}
+
+	planet_unique = yes
+	level = 1
 	
 	prerequisites = { "tech_planetary_government" }
 	

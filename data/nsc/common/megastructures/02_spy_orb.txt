@@ -41,26 +41,8 @@ spy_orb_0 = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_no_existing_spyorb"
-			from = {
-				NOT = {
-					any_owned_megastructure = {
-						OR = {
-							is_megastructure_type = spy_orb_0
-							is_megastructure_type = spy_orb_1
-							is_megastructure_type = spy_orb_2
-							is_megastructure_type = spy_orb_3
-							is_megastructure_type = spy_orb_4
-							is_megastructure_type = spy_orb_restored
-							is_megastructure_type = spy_orb_ruined
-						}
-					}
-				}
-			}
+			from = { NOT = { has_country_flag = built_spyorb } }
 		}
-		#custom_tooltip = {
-		#	fail_text = "requires_no_existing_megastructure"
-		#	NOT = { has_any_megastructure = yes }
-		#}
 	}
 	
 	placement_rules = {
@@ -144,6 +126,7 @@ spy_orb_0 = {
 	on_build_cancel = {}
 	on_build_complete = {
 		set_star_flag = spy_orb_built
+		from = { set_country_flag = built_spyorb }
 	}
 }
 
@@ -274,24 +257,6 @@ spy_orb_restored = {
 	possible = {
 		from = { 
 			has_technology = tech_mega_engineering
-		}
-		custom_tooltip = {
-			fail_text = "requires_no_existing_spyorb"
-			from = {
-				NOT = {
-					any_owned_megastructure = {
-						OR = {
-							is_megastructure_type = spy_orb_0
-							is_megastructure_type = spy_orb_1
-							is_megastructure_type = spy_orb_2
-							is_megastructure_type = spy_orb_3
-							is_megastructure_type = spy_orb_4
-							is_megastructure_type = spy_orb_restored
-							is_megastructure_type = spy_orb_ruined
-						}
-					}
-				}
-			}
 		}
 	}
 

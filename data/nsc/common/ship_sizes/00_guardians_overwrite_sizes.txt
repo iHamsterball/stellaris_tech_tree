@@ -129,6 +129,33 @@ Technosphere = {
 	is_designable = no
 }
 
+# Dimensional Horror
+NSC_guardian_dimensional_horror = {
+	graphical_culture = no
+	is_space_object = yes
+	max_speed = 0.05
+	acceleration = 0.3
+	rotation_speed = 0.5
+	combat_max_speed = 0.05
+	combat_rotation_speed = 0.05
+	collision_radius = 15
+	modifier = {
+		ship_evasion_mult = -1
+		ship_armor_add = 150
+		ship_weapon_range_mult = 0.5
+	}
+	max_hitpoints = 100000
+	size_multiplier = 32
+	fleet_slot_size = 8
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 4
+	is_space_station = no
+	icon_frame = 7
+	
+	class = shipclass_military
+	is_designable = no
+}
+
 nsc_wraith_red = {
 	is_space_object = yes
 	graphical_culture = no

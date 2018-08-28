@@ -416,9 +416,6 @@ leader_trait_ruler_cyborg = {
 	cost = 1
 	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_cyborg.dds"
-	self_modifier = {
-		leader_age = 40
-	}
 	leader_trait = yes
 	leader_class = { ruler }
 	initial = no
@@ -431,6 +428,9 @@ leader_trait_ruler_synthetic = {
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
 	leader_potential_add = {
 		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
+	}
+	modifier = {
+		pop_robot_production_output = 0.05
 	}
 	leader_trait = yes
 	leader_class = { ruler }

@@ -129,16 +129,6 @@ default = {
 				max = 1
 			}
 
-			PowerStation = {
-				min = 0
-				max = 10
-			}
-
-			MiningBase = {
-				min = 0
-				max = 10
-			}
-
 			Superdreadnought = {
 				fraction = {
 					modifier = {
@@ -320,6 +310,10 @@ default = {
 				fraction = {
 					factor = 50
 					modifier = {
+						factor = 0
+						has_authority = auth_machine_intelligence
+					}
+					modifier = {
 						add = 10
 						OR = {
 							has_ethic = ethic_pacifist
@@ -332,6 +326,10 @@ default = {
 			assault_army = {
 				fraction = {
 					factor = 50
+					modifier = {
+						factor = 0
+						has_authority = auth_machine_intelligence
+					}
 					modifier = {
 						add = -20
 						OR = {
@@ -379,6 +377,10 @@ default = {
 					factor = 20
 					modifier = {
 						factor = 0
+						has_authority = auth_machine_intelligence
+					}
+					modifier = {
+						factor = 0
 						OR = {
 							NOT = {
 								AND = {
@@ -405,6 +407,10 @@ default = {
 					factor = 20
 					modifier = {
 						factor = 0
+						has_authority = auth_machine_intelligence
+					}
+					modifier = {
+						factor = 0
 						NOT = {
 							AND = {
 								has_ai_personality_behaviour = robot_exploiter
@@ -418,6 +424,10 @@ default = {
 			clone_army = {
 				fraction = {
 					factor = 50
+					modifier = {
+						factor = 0
+						has_authority = auth_machine_intelligence
+					}
 					modifier = {
 						add = -20
 						OR = {
@@ -466,6 +476,10 @@ default = {
 				fraction = {
 					factor = 50
 					modifier = {
+						factor = 0
+						has_authority = auth_machine_intelligence
+					}
+					modifier = {
 						add = -20
 						OR = {
 							AND = {
@@ -512,6 +526,10 @@ default = {
 				fraction = {
 					factor = 50
 					modifier = {
+						factor = 0
+						has_authority = auth_machine_intelligence
+					}
+					modifier = {
 						add = -20
 						OR = {
 							AND = {
@@ -557,6 +575,10 @@ default = {
 				fraction = {
 					factor = 50
 					modifier = {
+						factor = 0
+						has_authority = auth_machine_intelligence
+					}
+					modifier = {
 						add = -20
 						OR = {
 							AND = {
@@ -600,6 +622,10 @@ default = {
 			elite_guard_army = {
 				fraction = {
 					factor = 50
+					modifier = {
+						factor = 0
+						has_authority = auth_machine_intelligence
+					}
 					modifier = {
 						add = -20
 						OR = {

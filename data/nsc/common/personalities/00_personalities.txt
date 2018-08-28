@@ -1064,8 +1064,6 @@ fanatic_purifiers = {
 	colony_spending = 1.2
 
 	federation_acceptance = -1000
-	nap_acceptance = -1000
-	defensive_pact_acceptance = -1000
 	migration_pact_acceptance = -1000
 
 	advanced_start_chance = 100
@@ -1076,7 +1074,7 @@ fanatic_purifiers = {
 
 	threat_modifier = 0
 	threat_others_modifier = 0
-	friction_modifier = 10
+	friction_modifier = 0
 
 	behaviour = {
 		conqueror = yes
@@ -1192,7 +1190,7 @@ devouring_swarm = {
 
 	threat_modifier = 0
 	threat_others_modifier = 0
-	friction_modifier = 10
+	friction_modifier = 0
 
 	behaviour = {
 		conqueror = yes
@@ -1310,7 +1308,7 @@ metalhead = {
 
 	threat_modifier = 0
 	threat_others_modifier = 0
-	friction_modifier = 10
+	friction_modifier = 0
 
 	behaviour = {
 		conqueror = yes
@@ -1355,7 +1353,7 @@ machine_intelligence = {
 	military_spending = 1.0
 	colony_spending = 1.2
 
-	federation_acceptance = -50
+	federation_acceptance = -30
 	nap_acceptance = 0
 	defensive_pact_acceptance = 0
 
@@ -1411,9 +1409,7 @@ assimilators = {
 	military_spending = 1.2
 	colony_spending = 1.2
 
-	federation_acceptance = -1000
-	nap_acceptance = -1000
-	defensive_pact_acceptance = -1000
+	federation_acceptance = -50
 
 	advanced_start_chance = 100
 
@@ -1465,10 +1461,6 @@ exterminators = {
 	military_spending = 1.2
 	colony_spending = 1.2
 
-	federation_acceptance = -1000
-	nap_acceptance = -1000
-	defensive_pact_acceptance = -1000
-
 	advanced_start_chance = 100
 
 	weapon_preferences = weapon_type_explosive
@@ -1477,7 +1469,7 @@ exterminators = {
 
 	threat_modifier = 0
 	threat_others_modifier = 0
-	friction_modifier = 10
+	friction_modifier = 0
 
 	behaviour = {
 		conqueror = yes

@@ -178,3 +178,66 @@ defined_text = { # Must be scoped to country when called
         localization_key = monsteronship_desc
     }
 }
+
+defined_text = {
+	name = GetPrecursorCiv
+	text = {
+		trigger = {
+			has_country_flag = vultaum_artifact_recoverer
+		}
+		localization_key = vultaum_precursor_civ
+	}
+	text = {
+		trigger = {
+			has_country_flag = yuht_artifact_recoverer
+		}
+		localization_key = yuht_precursor_civ
+	}
+	text = {
+		trigger = {
+			has_country_flag = first_league_artifact_recoverer
+		}
+		localization_key = first_league_precursor_civ
+	}
+	text = {
+		trigger = {
+			has_country_flag = irassian_artifact_recoverer
+		}
+		localization_key = irassian_precursor_civ
+	}
+	text = {
+		trigger = {
+			has_country_flag = cybrex_artifact_recoverer
+		}
+		localization_key = cybrex_precursor_civ
+	}
+}
+
+defined_text = {
+	name = GetDiplomacyTraditionName
+	text = {
+		trigger = {
+			owner = {
+				OR = {
+					has_valid_civic = civic_fanatic_purifiers
+					has_valid_civic = civic_inwards_perfection
+					has_authority = auth_hive_mind
+				}
+			}
+		}
+		localization_key = tradition_adaptability
+	}
+	text = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_valid_civic = civic_fanatic_purifiers
+					has_valid_civic = civic_inwards_perfection
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		localization_key = tradition_diplomacy
+	}
+}

@@ -42,4 +42,81 @@
  #Modifiers
  
  built_world: "Megastructure World"
- built_world_desc: "This world has been constructed to be 100% habitable, making it ideally suited for any species."
+ built_world_desc: "This world has been designed to be 100% habitable, making it ideally suited for any species."
+ 
+ guardian_paradise_dreadnought: "Guardian Paradise"
+ guardian_paradise_dreadnought_desc: "Over the eons, it would appear the Dreadnought systematically purfied the atmosphere with some form of terriforming we have not encountered before. This world should be perfectly suitable for any species."
+ 
+ guardian_paradise_horror: "$guardian_paradise_dreadnought$"
+ guardian_paradise_horror_desc: "To the best of our knowledge, the Horror cleansed this world as a lure for various empires to come into this system. Thankfully the Horror failed, leaving a perfectly suitable world for any species."
+ 
+ guardian_paradise_fortress: "$guardian_paradise_dreadnought$"
+ guardian_paradise_fortress_desc: "In some bizzare twist of science, the Fortress has inexplicably purified this world through some terriforming process with Dark Matter, somehow making this world perfectly suitable for any species."
+ 
+ guardian_paradise_drake: "$guardian_paradise_dreadnought$"
+ guardian_paradise_drake_desc: "In the wake of the Drake's parental protection of the Dragon Hoard, it appears to have thoroughly cleaned all worlds in the system, including this one, making this world perfectly suitable for any species."
+ 
+ guardian_paradise_hive: "$guardian_paradise_dreadnought$"
+ guardian_paradise_hive_desc: "Over the countless millennia, the Seeker Swarms have slowly picked and cleaned away all contaminants on this world, making it perfectly suitable for any species."
+ 
+ guardian_paradise_stellarite: "$guardian_paradise_dreadnought$"
+ guardian_paradise_stellarite_desc: "This world has been purified of all contaminants by the Stellarite's bright holy light. The world is bright and beautiful, and its nature dances to the sound of its idyllic wonderland... or something... we honestly have no idea what happened here. This world just magically works, somehow perfectly suitable for any species."
+ 
+ guardian_paradise_techno: "$guardian_paradise_dreadnought$"
+ guardian_paradise_techno_desc: "The shielding of this world allowed the Technosphere to preform some sort of advanced terriforming to remove all contaminants from the planet. This world should be perfectly suitable for any species."
+ 
+ guardian_paradise_wraith: "$guardian_paradise_dreadnought$"
+ guardian_paradise_wraith_desc: "While the Wraith's radiation was harmful to most organic life, the radiation triggered a complete cleanse of the ecosystem of this world, making it now perfectly suitable for any species."
+ 
+ #Edict Modifiers
+ 
+ edict_nsc_mineral_boost: "Private Mining Consortiums"
+ edict_nsc_mineral_boost_desc: "By contracting out the planet's mining production, we can double the efficiency and standards of our mining operations temporarily for a reasonable cost."
+ edict_nsc_mineral_boost_tooltip: "This edict increases the mineral production of §Y[Root.GetName]§! by 50%, but will cost you 250 Influence (without "discounts") up front and 2.5 Influence to maintain every month.\n\nThis edict is meant §Yto temporarily boost your mineral production during times of emergency, crisis, or war.§! This edict is NOT meant to be your primary mineral economy.\n\n§RWarning!§! Having more than 10 Private Mining Consortiums in your empire will overload the mining business, causing a significant drop in mining production."
+ 
+ edict_nsc_energy_boost: "Solar Energy Initiative"
+ edict_nsc_energy_boost_desc: "By focusing collection and production on a more abundant energy source such as the star, instead of lifeless planets, we can double the efficiency of the production of our energy resources temporarily for a reasonable cost."
+ edict_nsc_energy_boost_tooltip: "This edict increases the energy production of §Y[Root.GetName]§! by 50%, but will cost you 250 Influence (without "discounts") up front and 2.5 Influence to maintain every month.\n\nThis edict is meant §Yto temporarily boost your energy production during times of emergency, crisis, or war.§! This edict is NOT meant to be your primary energy economy.\n\n§RWarning!§! Having more than 10 Solar Energy Initiatives operating in your empire will overload the energy business, causing a significant drop in energy collection."
+ 
+ edict_nsc_food_boost: "Farm Subsidization Act"
+ edict_nsc_food_boost_desc: "By working closely with local farmers and agriculturers, determining the needs and best ways to irrigate the land, we can reogranized and optimize food production to produce not only more food, but improve overall quality."
+ edict_nsc_food_boost_tooltip: "This edict increases the food production of §Y[Root.GetName]§! by 50%, but will cost you 250 Influence (without "discounts") up front and 2.5 Influence to maintain every month.\n\nThis edict is meant §Yto temporarily boost your food production during times of emergency, crisis, or war.§! This edict is NOT meant to be your primary food economy.\n\n§RWarning!§! Having more than 10 Farm Subsidization Acts in your empire will overload the storehouse and transportation capacities of your empire, causing a significant drop in food collection and export."
+ 
+ nsc_mineral_edict_cost_1: "Private Mining Consortium Contract"
+ nsc_mineral_edict_cost_2: "$nsc_mineral_edict_cost_1$"
+ nsc_mineral_edict_cost_3: "$nsc_mineral_edict_cost_1$"
+ nsc_mineral_edict_cost_4: "$nsc_mineral_edict_cost_1$"
+ nsc_mineral_edict_cost_5: "$nsc_mineral_edict_cost_1$"
+ nsc_mineral_edict_cost_6: "$nsc_mineral_edict_cost_1$"
+ nsc_mineral_edict_cost_7: "$nsc_mineral_edict_cost_1$"
+ nsc_mineral_edict_cost_8: "$nsc_mineral_edict_cost_1$"
+ nsc_mineral_edict_cost_9: "$nsc_mineral_edict_cost_1$"
+ nsc_mineral_edict_cost_10: "$nsc_mineral_edict_cost_1$"
+ nsc_mineral_edict_overcost: "§RPrivate Mining Consortium Collapse§!"
+ nsc_mineral_edict_overcost_desc: "The sure number of Private Mining Consortiums working on your planets has overloaded the mining stations in your empire, causing mineral production to drop significantly.\n\nIn order to restore mining operations, make sure no more than 10 planets have Private Mining Consortiums working in your empire."
+ 
+ nsc_energy_edict_cost_1: "Solar Energy Initiative Contract"
+ nsc_energy_edict_cost_2: "$nsc_energy_edict_cost_1$"
+ nsc_energy_edict_cost_3: "$nsc_energy_edict_cost_1$"
+ nsc_energy_edict_cost_4: "$nsc_energy_edict_cost_1$"
+ nsc_energy_edict_cost_5: "$nsc_energy_edict_cost_1$"
+ nsc_energy_edict_cost_6: "$nsc_energy_edict_cost_1$"
+ nsc_energy_edict_cost_7: "$nsc_energy_edict_cost_1$"
+ nsc_energy_edict_cost_8: "$nsc_energy_edict_cost_1$"
+ nsc_energy_edict_cost_9: "$nsc_energy_edict_cost_1$"
+ nsc_energy_edict_cost_10: "$nsc_energy_edict_cost_1$"
+ nsc_energy_edict_overcost: "§RSolar Energy Initiative Collapse§!"
+ nsc_energy_edict_overcost_desc: "The sure number of Solar Energy Initiative working on your planets has overloaded the energy platforms in your empire, causing energy production to drop significantly.\n\nIn order to restore energy collection, make sure no more than 10 planets have Solar Energy Initiatives working in your empire."
+ 
+ nsc_food_edict_cost_1: "Farm Subsidization Act Contract"
+ nsc_food_edict_cost_2: "$nsc_food_edict_cost_1$"
+ nsc_food_edict_cost_3: "$nsc_food_edict_cost_1$"
+ nsc_food_edict_cost_4: "$nsc_food_edict_cost_1$"
+ nsc_food_edict_cost_5: "$nsc_food_edict_cost_1$"
+ nsc_food_edict_cost_6: "$nsc_food_edict_cost_1$"
+ nsc_food_edict_cost_7: "$nsc_food_edict_cost_1$"
+ nsc_food_edict_cost_8: "$nsc_food_edict_cost_1$"
+ nsc_food_edict_cost_9: "$nsc_food_edict_cost_1$"
+ nsc_food_edict_cost_10: "$nsc_food_edict_cost_1$"
+ nsc_food_edict_overcost: "§RFarm Subsidization Act Collapse§!"
+ nsc_food_edict_overcost_desc: "The sure number of Farm Subsidization Act operating on your planets has overloaded the storehouse capacity in your empire, causing food storage and transportation available to drop significantly.\n\nIn order to restore food collection and transportation, make sure no more than 10 planets have Farm Subsidization Acts operating in your empire."

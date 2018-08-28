@@ -137,6 +137,7 @@ building_network_junction = {
 			text = "requires_building_capital_1"
 			planet = {
 				OR = {
+					has_building = "building_hab_capital"
 					has_building = "building_machine_capital_1"
 					has_building = "building_machine_capital_2"
 					has_building = "building_machine_capital_3"
@@ -199,6 +200,7 @@ building_system_conflux = {
 			text = "requires_building_capital_2"
 			planet = {
 				OR = {
+					has_building = "building_hab_capital"
 					has_building = "building_machine_capital_2"
 					has_building = "building_machine_capital_3"
 				}
@@ -299,9 +301,11 @@ building_deployment_post = {
 	
 	produced_resource_trigger = {
 		modifier = {
-			has_non_swapped_tradition = tr_expansion_colonization_fever
-			has_swapped_tradition = tr_expansion_colonization_fever_machine
-			has_swapped_tradition = tr_expansion_colonization_fever_hive
+			OR = {
+				has_non_swapped_tradition = tr_expansion_colonization_fever
+				has_swapped_tradition = tr_expansion_colonization_fever_machine
+				has_swapped_tradition = tr_expansion_colonization_fever_hive
+			}
 			resources = {
 				unity = 1
 			}
@@ -360,9 +364,11 @@ building_machine_capital_1 = {
 	
 	produced_resource_trigger = {
 		modifier = {
-			has_non_swapped_tradition = tr_expansion_colonization_fever
-			has_swapped_tradition = tr_expansion_colonization_fever_machine
-			has_swapped_tradition = tr_expansion_colonization_fever_hive
+			OR = {
+				has_non_swapped_tradition = tr_expansion_colonization_fever
+				has_swapped_tradition = tr_expansion_colonization_fever_machine
+				has_swapped_tradition = tr_expansion_colonization_fever_hive
+			}
 			resources = {
 				unity = 1
 			}
@@ -430,9 +436,11 @@ building_machine_capital_2 = {
 	
 	produced_resource_trigger = {
 		modifier = {
-			has_non_swapped_tradition = tr_expansion_colonization_fever
-			has_swapped_tradition = tr_expansion_colonization_fever_machine
-			has_swapped_tradition = tr_expansion_colonization_fever_hive
+			OR = {
+				has_non_swapped_tradition = tr_expansion_colonization_fever
+				has_swapped_tradition = tr_expansion_colonization_fever_machine
+				has_swapped_tradition = tr_expansion_colonization_fever_hive
+			}
 			resources = {
 				unity = 1
 			}
@@ -509,9 +517,11 @@ building_machine_capital_3 = {
 	
 	produced_resource_trigger = {
 		modifier = {
-			has_non_swapped_tradition = tr_expansion_colonization_fever
-			has_swapped_tradition = tr_expansion_colonization_fever_machine
-			has_swapped_tradition = tr_expansion_colonization_fever_hive
+			OR = {
+				has_non_swapped_tradition = tr_expansion_colonization_fever
+				has_swapped_tradition = tr_expansion_colonization_fever_machine
+				has_swapped_tradition = tr_expansion_colonization_fever_hive
+			}
 			resources = {
 				unity = 1
 			}
@@ -652,7 +662,7 @@ building_spare_parts_depot = {
 	}
 	
 	prerequisites = {
-		"tech_frontier_health"
+		"tech_modular_components"
 	}
 	
 	upgrades = {
@@ -706,6 +716,7 @@ building_unit_assembly_plant = {
 				OR = {
 					has_building = "building_machine_capital_2"
 					has_building = "building_machine_capital_3"
+					has_building = "building_hab_capital"
 				}
 			}
 		}
@@ -725,7 +736,7 @@ building_unit_assembly_plant = {
 	}
 	
 	prerequisites = {
-		"tech_frontier_hospital"
+		"tech_intelligent_factories"
 	}
 	
 	ai_allow = {
@@ -1053,6 +1064,7 @@ building_neuro_electric_amplifier = {
 					has_building = "building_machine_capital_1"
 					has_building = "building_machine_capital_2"
 					has_building = "building_machine_capital_3"
+					has_building = "building_hab_capital"
 				}
 			}
 		}
@@ -1192,6 +1204,7 @@ building_control_center = {
 	
 	produced_resources = {
 		energy = 2
+		unity = 2
 	}
 	
 	planet_modifier = {

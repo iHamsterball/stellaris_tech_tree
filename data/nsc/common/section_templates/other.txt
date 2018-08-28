@@ -51,11 +51,22 @@ ship_section_template = {
 	
 	fits_on_slot = "mid"
 	entity = "frontier_outpost_t2_core_entity"
-	#entity = "terraform_station_entity"
 	icon = "GFX_ship_part_core_mid"
 	
 	prerequisites = { tech_frontier_outpost_1 }
 	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "part1"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "part1"
+	}
 	component_slot = {
 		name = "SMALL_GUN_01"
 		slot_size = small
@@ -77,18 +88,6 @@ ship_section_template = {
 	component_slot = {
 		name = "SMALL_GUN_04"
 		slot_size = small
-		slot_type = weapon
-		locatorname = "part1"
-	}
-	component_slot = {
-		name = "MEDIUM_GUN_01"
-		slot_size = medium
-		slot_type = weapon
-		locatorname = "part1"
-	}	
-	component_slot = {
-		name = "MEDIUM_GUN_02"
-		slot_size = medium
 		slot_type = weapon
 		locatorname = "part1"
 	}
@@ -105,32 +104,19 @@ ship_section_template = {
 	
 	fits_on_slot = "mid"
 	entity = "frontier_outpost_t3_core_entity"
-	#entity = "terraform_station_entity"
 	icon = "GFX_ship_part_core_mid"
 	
 	prerequisites = { tech_frontier_outpost_2 }
 	
 	component_slot = {
-		name = "SMALL_GUN_01"
-		slot_size = point_defence
+		name = "LARGE_GUN_01"
+		slot_size = large
 		slot_type = weapon
 		locatorname = "part1"
 	}	
 	component_slot = {
-		name = "SMALL_GUN_02"
-		slot_size = point_defence
-		slot_type = weapon
-		locatorname = "part1"
-	}
-	component_slot = {
-		name = "SMALL_GUN_03"
-		slot_size = point_defence
-		slot_type = weapon
-		locatorname = "part1"
-	}	
-	component_slot = {
-		name = "SMALL_GUN_04"
-		slot_size = point_defence
+		name = "LARGE_GUN_02"
+		slot_size = large
 		slot_type = weapon
 		locatorname = "part1"
 	}
@@ -159,14 +145,26 @@ ship_section_template = {
 		locatorname = "part1"
 	}
 	component_slot = {
-		name = "LARGE_GUN_01"
-		slot_size = large
+		name = "SMALL_GUN_01"
+		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "part1"
 	}	
 	component_slot = {
-		name = "LARGE_GUN_02"
-		slot_size = large
+		name = "SMALL_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "part1"
+	}
+	component_slot = {
+		name = "PD_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "part1"
+	}	
+	component_slot = {
+		name = "PD_02"
+		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "part1"
 	}
@@ -183,59 +181,10 @@ ship_section_template = {
 	
 	fits_on_slot = "mid"
 	entity = "frontier_outpost_t4_core_entity"
-	#entity = "terraform_station_entity"
 	icon = "GFX_ship_part_core_mid"
 	
 	prerequisites = { tech_frontier_outpost_3 }
 	
-	component_slot = {
-		name = "SMALL_GUN_01"
-		slot_size = point_defence
-		slot_type = weapon
-		locatorname = "part1"
-	}	
-	component_slot = {
-		name = "SMALL_GUN_02"
-		slot_size = point_defence
-		slot_type = weapon
-		locatorname = "part1"
-	}
-	component_slot = {
-		name = "SMALL_GUN_03"
-		slot_size = point_defence
-		slot_type = weapon
-		locatorname = "part1"
-	}	
-	component_slot = {
-		name = "SMALL_GUN_04"
-		slot_size = point_defence
-		slot_type = weapon
-		locatorname = "part1"
-	}
-	component_slot = {
-		name = "MEDIUM_GUN_01"
-		slot_size = medium
-		slot_type = weapon
-		locatorname = "part1"
-	}	
-	component_slot = {
-		name = "MEDIUM_GUN_02"
-		slot_size = medium
-		slot_type = weapon
-		locatorname = "part1"
-	}
-	component_slot = {
-		name = "MEDIUM_GUN_03"
-		slot_size = medium
-		slot_type = weapon
-		locatorname = "part1"
-	}	
-	component_slot = {
-		name = "MEDIUM_GUN_04"
-		slot_size = medium
-		slot_type = weapon
-		locatorname = "part1"
-	}
 	component_slot = {
 		name = "LARGE_GUN_01"
 		slot_size = large
@@ -257,6 +206,54 @@ ship_section_template = {
 	component_slot = {
 		name = "LARGE_GUN_04"
 		slot_size = large
+		slot_type = weapon
+		locatorname = "part1"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "part1"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "part1"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "part1"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "part1"
+	}
+	component_slot = {
+		name = "PD_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "part1"
+	}	
+	component_slot = {
+		name = "PD_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "part1"
+	}
+	component_slot = {
+		name = "PD_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "part1"
+	}	
+	component_slot = {
+		name = "PD_04"
+		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "part1"
 	}
@@ -338,21 +335,21 @@ ship_section_template = {
 	prerequisites = { tech_pd_tracking_1 tech_pd_tracking_2 tech_pd_tracking_3 tech_flak_batteries_1 tech_flak_batteries_2 }
 	
 	component_slot = {
-		name = "SMALL_GUN_01"
+		name = "PD_01"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_01"
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_02"
+		name = "PD_02"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_02"
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_03"
+		name = "PD_03"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_03"
@@ -360,7 +357,7 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_04"
+		name = "PD_04"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_04"
@@ -401,7 +398,7 @@ ship_section_template = {
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_03"
+		name = "PD_01"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_03"
@@ -409,7 +406,7 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_04"
+		name = "PD_02"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_04"
@@ -635,21 +632,21 @@ ship_section_template = {
 	prerequisites = { tech_pd_tracking_1 tech_pd_tracking_2 tech_pd_tracking_3 tech_flak_batteries_1 tech_flak_batteries_2 }
 	
 	component_slot = {
-		name = "SMALL_GUN_01"
+		name = "PD_01"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_01"
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_02"
+		name = "PD_02"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_02"
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_03"
+		name = "PD_03"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_03"
@@ -657,7 +654,7 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_04"
+		name = "PD_04"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_04"
@@ -665,21 +662,21 @@ ship_section_template = {
 	}	
 	
 	component_slot = {
-		name = "SMALL_GUN_05"
+		name = "PD_05"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_01"
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_06"
+		name = "PD_06"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_02"
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_07"
+		name = "PD_07"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_03"
@@ -687,7 +684,7 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_08"
+		name = "PD_08"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_04"
@@ -744,21 +741,21 @@ ship_section_template = {
 	}	
 	
 	component_slot = {
-		name = "SMALL_GUN_05"
+		name = "PD_01"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_01"
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_06"
+		name = "PD_02"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_02"
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_07"
+		name = "PD_03"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_03"
@@ -766,7 +763,7 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_08"
+		name = "PD_04"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_04"
@@ -1122,7 +1119,7 @@ ship_section_template = {
 	prerequisites = { tech_pd_tracking_1 tech_pd_tracking_2 tech_pd_tracking_3 tech_flak_batteries_1 tech_flak_batteries_2 }
 	
 	component_slot = {
-		name = "SMALL_GUN_01"
+		name = "PD_01"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_01"
@@ -1130,7 +1127,7 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_02"
+		name = "PD_02"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_02"
@@ -1138,7 +1135,7 @@ ship_section_template = {
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_03"
+		name = "PD_03"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_03"
@@ -1147,7 +1144,7 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_04"
+		name = "PD_04"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_04"
@@ -1156,7 +1153,7 @@ ship_section_template = {
 	}	
 	
 	component_slot = {
-		name = "SMALL_GUN_05"
+		name = "PD_05"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_01"
@@ -1164,7 +1161,7 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_06"
+		name = "PD_06"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_02"
@@ -1172,7 +1169,7 @@ ship_section_template = {
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_07"
+		name = "PD_07"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_03"
@@ -1181,7 +1178,7 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_08"
+		name = "PD_08"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_04"
@@ -1190,7 +1187,7 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_09"
+		name = "PD_09"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_01"
@@ -1198,7 +1195,7 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_10"
+		name = "PD_10"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_02"
@@ -1206,7 +1203,7 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_11"
+		name = "PD_11"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_01"
@@ -1214,7 +1211,7 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_12"
+		name = "PD_12"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_02"
@@ -1258,7 +1255,7 @@ ship_section_template = {
 
 	component_slot = {
 		name = "SMALL_GUN_03"
-		slot_size = point_defence
+		slot_size = small
 		slot_type = weapon
 		locatorname = "small_gun_03"
 		is_side_slot = no
@@ -1267,7 +1264,7 @@ ship_section_template = {
 	
 	component_slot = {
 		name = "SMALL_GUN_04"
-		slot_size = point_defence
+		slot_size = small
 		slot_type = weapon
 		locatorname = "small_gun_04"
 		is_side_slot = no
@@ -1291,7 +1288,7 @@ ship_section_template = {
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_07"
+		name = "PD_01"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_03"
@@ -1300,7 +1297,7 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_08"
+		name = "PD_02"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_04"
@@ -1309,15 +1306,15 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_09"
-		slot_size = small
+		name = "PD_03"
+		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_01"
 		section_instance = 0
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_10"
+		name = "PD_04"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_02"
@@ -1325,15 +1322,15 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_11"
-		slot_size = small
+		name = "PD_05"
+		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_01"
 		section_instance = 1
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_12"
+		name = "PD_06"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_02"
@@ -1905,7 +1902,7 @@ ship_section_template = {
 		name = "SMALL_GUN_13"
 		slot_size = small
 		slot_type = weapon
-		locatorname = "small_gun_02"
+		locatorname = "small_gun_01"
 		section_instance = 0
 	}
 	
@@ -1914,6 +1911,24 @@ ship_section_template = {
 		slot_size = small
 		slot_type = weapon
 		locatorname = "small_gun_02"
+		section_instance = 0
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_15"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_03"
+		is_side_slot = no
+		section_instance = 1
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_16"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_04"
+		is_side_slot = no
 		section_instance = 1
 	}
 				
@@ -1939,7 +1954,7 @@ ship_section_template = {
 	prerequisites = { tech_pd_tracking_1 tech_pd_tracking_2 tech_pd_tracking_3 tech_flak_batteries_1 tech_flak_batteries_2 }
 	
 	component_slot = {
-		name = "SMALL_GUN_01"
+		name = "PD_01"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_01"
@@ -1947,7 +1962,7 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_02"
+		name = "PD_02"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_02"
@@ -1955,7 +1970,7 @@ ship_section_template = {
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_03"
+		name = "PD_03"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_03"
@@ -1964,7 +1979,7 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_04"
+		name = "PD_04"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_04"
@@ -1973,7 +1988,7 @@ ship_section_template = {
 	}	
 	
 	component_slot = {
-		name = "SMALL_GUN_05"
+		name = "PD_05"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_01"
@@ -1981,7 +1996,7 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_06"
+		name = "PD_06"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_02"
@@ -1989,7 +2004,7 @@ ship_section_template = {
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_07"
+		name = "PD_07"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_03"
@@ -1998,7 +2013,7 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_08"
+		name = "PD_08"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_04"
@@ -2007,7 +2022,7 @@ ship_section_template = {
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_09"
+		name = "PD_09"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_01"
@@ -2015,7 +2030,7 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_10"
+		name = "PD_10"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_02"
@@ -2023,7 +2038,7 @@ ship_section_template = {
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_11"
+		name = "PD_11"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_03"
@@ -2032,7 +2047,7 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_12"
+		name = "PD_12"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_04"
@@ -2041,18 +2056,36 @@ ship_section_template = {
 	}	
 	
 	component_slot = {
-		name = "SMALL_GUN_13"
+		name = "PD_13"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+		section_instance = 0
+	}
+	
+	component_slot = {
+		name = "PD_14"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_02"
 		section_instance = 0
 	}
-	
+
 	component_slot = {
-		name = "SMALL_GUN_14"
+		name = "PD_15"
 		slot_size = point_defence
 		slot_type = weapon
-		locatorname = "small_gun_02"
+		locatorname = "small_gun_03"
+		is_side_slot = no
+		section_instance = 1
+	}
+	
+	component_slot = {
+		name = "PD_16"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_04"
+		is_side_slot = no
 		section_instance = 1
 	}
 				
@@ -2095,7 +2128,7 @@ ship_section_template = {
 
 	component_slot = {
 		name = "SMALL_GUN_03"
-		slot_size = point_defence
+		slot_size = small
 		slot_type = weapon
 		locatorname = "small_gun_03"
 		is_side_slot = no
@@ -2104,7 +2137,7 @@ ship_section_template = {
 	
 	component_slot = {
 		name = "SMALL_GUN_04"
-		slot_size = point_defence
+		slot_size = small
 		slot_type = weapon
 		locatorname = "small_gun_04"
 		is_side_slot = no
@@ -2129,7 +2162,7 @@ ship_section_template = {
 
 	component_slot = {
 		name = "SMALL_GUN_07"
-		slot_size = point_defence
+		slot_size = small
 		slot_type = weapon
 		locatorname = "small_gun_03"
 		is_side_slot = no
@@ -2138,7 +2171,7 @@ ship_section_template = {
 	
 	component_slot = {
 		name = "SMALL_GUN_08"
-		slot_size = point_defence
+		slot_size = small
 		slot_type = weapon
 		locatorname = "small_gun_04"
 		is_side_slot = no
@@ -2146,15 +2179,15 @@ ship_section_template = {
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_09"
-		slot_size = small
+		name = "PD_01"
+		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_01"
 		section_instance = 0
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_10"
+		name = "PD_02"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_02"
@@ -2162,8 +2195,8 @@ ship_section_template = {
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_11"
-		slot_size = small
+		name = "PD_03"
+		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_03"
 		is_side_slot = no
@@ -2171,7 +2204,7 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_12"
+		name = "PD_04"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_04"
@@ -2180,18 +2213,36 @@ ship_section_template = {
 	}	
 	
 	component_slot = {
-		name = "SMALL_GUN_13"
-		slot_size = small
+		name = "PD_05"
+		slot_size = point_defence
 		slot_type = weapon
-		locatorname = "small_gun_02"
+		locatorname = "small_gun_01"
 		section_instance = 0
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_14"
+		name = "PD_06"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_02"
+		section_instance = 0
+	}
+
+	component_slot = {
+		name = "PD_07"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_03"
+		is_side_slot = no
+		section_instance = 1
+	}
+	
+	component_slot = {
+		name = "PD_08"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_04"
+		is_side_slot = no
 		section_instance = 1
 	}
 				
@@ -2454,14 +2505,6 @@ ship_section_template = {
 		locatorname = "medium_gun_01"
 		section_instance = 0
 	}
-
-	component_slot = {
-		name = "TORPEDO_01"
-		slot_size = torpedo
-		slot_type = weapon
-		locatorname = "medium_gun_02"
-		section_instance = 0
-	}
 	
 	component_slot = {
 		name = "MEDIUM_GUN_02"
@@ -2469,6 +2512,46 @@ ship_section_template = {
 		slot_type = weapon
 		locatorname = "medium_gun_01"
 		section_instance = 1
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+		section_instance = 0
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+		section_instance = 1
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+		section_instance = 0
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+		section_instance = 1
+	}
+
+	component_slot = {
+		name = "TORPEDO_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+		section_instance = 0
 	}
 
 	component_slot = {
@@ -2480,26 +2563,11 @@ ship_section_template = {
 	}
 
 	component_slot = {
-		name = "MEDIUM_GUN_03"
-		slot_size = medium
-		slot_type = weapon
-		locatorname = "medium_gun_01"
-		section_instance = 0
-	}
-
-	component_slot = {
 		name = "TORPEDO_03"
 		slot_size = torpedo
 		slot_type = weapon
 		locatorname = "medium_gun_02"
 		section_instance = 0
-	}
-	component_slot = {
-		name = "MEDIUM_GUN_04"
-		slot_size = medium
-		slot_type = weapon
-		locatorname = "medium_gun_01"
-		section_instance = 1
 	}
 
 	component_slot = {
@@ -2509,14 +2577,6 @@ ship_section_template = {
 		locatorname = "medium_gun_02"
 		section_instance = 1
 	}
-
-	component_slot = {
-		name = "MEDIUM_GUN_05"
-		slot_size = medium
-		slot_type = weapon
-		locatorname = "medium_gun_01"
-		section_instance = 0
-	}
 	
 	component_slot = {
 		name = "TORPEDO_05"
@@ -2524,14 +2584,6 @@ ship_section_template = {
 		slot_type = weapon
 		locatorname = "medium_gun_02"
 		section_instance = 0
-	}
-	
-	component_slot = {
-		name = "MEDIUM_GUN_06"
-		slot_size = medium
-		slot_type = weapon
-		locatorname = "medium_gun_01"
-		section_instance = 1
 	}
 	
 	component_slot = {
@@ -2570,6 +2622,7 @@ ship_section_template = {
 		locatorname = "large_gun_01"
 		section_instance = 0
 	}
+	
 	component_slot = {
 		name = "LARGE_GUN_02"
 		slot_size = large
@@ -2733,14 +2786,14 @@ ship_section_template = {
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_03"
+		name = "PD_01"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "part1"
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_04"
+		name = "PD_02"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "part1"
@@ -2792,14 +2845,14 @@ ship_section_template = {
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_03"
+		name = "PD_01"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "part1"
 	}
 	
 	component_slot = {
-		name = "SMALL_GUN_04"
+		name = "PD_02"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "part1"
@@ -2813,110 +2866,6 @@ ship_section_template = {
 	cost = 500
 }
 
-
-ship_section_template = {
-	key = "MININGBASE_SECTION"
-	ship_size = MiningBase
-	
-	fits_on_slot = "mid"
-	entity = "MiningBase_section_entity"
-	icon = "GFX_ship_part_core_mid"
-	
-	component_slot = {
-		name = "MEDIUM_GUN_01"
-		slot_size = medium
-		slot_type = weapon
-		locatorname = "part1"
-	}
-
-	component_slot = {
-		name = "SMALL_GUN_01"
-		slot_size = small
-		slot_type = weapon
-		locatorname = "part1"
-	}
-
-	component_slot = {
-		name = "SMALL_GUN_02"
-		slot_size = small
-		slot_type = weapon
-		locatorname = "part1"
-	}
-
-	component_slot = {
-		name = "SMALL_GUN_03"
-		slot_size = point_defence
-		slot_type = weapon
-		locatorname = "part1"
-	}
-	
-	component_slot = {
-		name = "SMALL_GUN_04"
-		slot_size = point_defence
-		slot_type = weapon
-		locatorname = "part1"
-	}
-	
-	
-	small_utility_slots = 2
-	medium_utility_slots = 2
-	large_utility_slots = 2
-	aux_utility_slots = 1
-
-	cost = 2000
-}
-
-ship_section_template = {
-	key = "POWERSTATION_SECTION"
-	ship_size = PowerStation
-	
-	fits_on_slot = "mid"
-	entity = "PowerStation_section_entity"
-	icon = "GFX_ship_part_core_mid"
-	
-	component_slot = {
-		name = "MEDIUM_GUN_01"
-		slot_size = medium
-		slot_type = weapon
-		locatorname = "part1"
-	}
-
-	component_slot = {
-		name = "SMALL_GUN_01"
-		slot_size = small
-		slot_type = weapon
-		locatorname = "part1"
-	}
-
-	component_slot = {
-		name = "SMALL_GUN_02"
-		slot_size = small
-		slot_type = weapon
-		locatorname = "part1"
-	}
-
-	component_slot = {
-		name = "SMALL_GUN_03"
-		slot_size = point_defence
-		slot_type = weapon
-		locatorname = "part1"
-	}
-	
-	component_slot = {
-		name = "SMALL_GUN_04"
-		slot_size = point_defence
-		slot_type = weapon
-		locatorname = "part1"
-	}
-	
-	
-	small_utility_slots = 2
-	medium_utility_slots = 2
-	large_utility_slots = 2
-	aux_utility_slots = 1
-
-	cost = 2000
-}
 
 ship_section_template = {
 	key = "HEADQUARTERS_SECTION_1"
@@ -2997,14 +2946,14 @@ ship_section_template = {
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_04"
+		name = "PD_01"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_04"
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_05"
+		name = "PD_02"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_05"
@@ -3118,14 +3067,14 @@ ship_section_template = {
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_04"
+		name = "PD_01"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_04"
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_05"
+		name = "PD_02"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_05"
@@ -3239,14 +3188,14 @@ ship_section_template = {
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_04"
+		name = "PD_01"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_04"
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_05"
+		name = "PD_02"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_05"
@@ -3361,14 +3310,14 @@ ship_section_template = {
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_04"
+		name = "PD_01"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_04"
 	}
 
 	component_slot = {
-		name = "SMALL_GUN_05"
+		name = "PD_02"
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "small_gun_05"

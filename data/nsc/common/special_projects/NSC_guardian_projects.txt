@@ -1,3 +1,52 @@
+###############################
+# Technosphere Black Hole NEW #
+###############################
+
+# Investigate Technosphere's Black Hole
+special_project = {
+	key = "NSC_TECHNOSPHERE_BLACKHOLE"
+	cost = 0
+	days_to_research = 1800
+	tech_department = engineering_technology
+	picture = GFX_evt_technosphere
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 5
+	}
+	
+	on_success = {
+		owner = {
+			random_list = {
+				50 = {
+					modifier = {
+						factor = 0.8
+						has_country_flag = technosphere_secrets
+					}
+					country_event = { id = guardian.1061 } #Failure (previous success)
+				}
+				50 = {
+					modifier = {
+						factor = 0.1
+						has_country_flag = technosphere_secrets
+					}
+					country_event = { id = guardian.1062 } #Failure
+				}
+				50 = {
+					modifier = {
+						factor = 0.5
+						NOT = { has_country_flag = technosphere_secrets }
+					}
+					set_country_flag = technosphere_special
+					country_event = { id = guardian.1062 } #This is new "success."
+				}
+			}
+		}
+	}
+}
+
 ##################################
 # Automated Dreadnought Projects #
 ##################################

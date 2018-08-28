@@ -4,7 +4,7 @@
  # Vanilla Overwrites - New Strings
  ####################################
  
- NSC_guardian.510.a.reply: "By all accounts, the Ether Drakes predate all galactic civilization. There were once multitudes, legend telling of massive dragons of color as varied as the stars, but their race has been slowly wasting away for eons, hunted to near extinction by empires filled with trepidation at it's presence or histrionic glory seekers most eager for a highly prized commemoration.\n\nWe believe they are but the last dregs of a universe that ended before ours began, the sole survivors of some "big crunch." Something about the physical laws of the universe does not agree with them, like they evolved in another reality. Between callous mercenaries, frightful empires, and their own evolutionary dissolution, the extermination of the Drakes over eons of slow decimation have led to their practical extinction... yet you still hear whispers of roaming Dragons around the edges of the galaxy.\n\nThe dragon not far from here is the last known of its kind in the galaxy, perhaps the universe."
+ NSC_guardian.510.a.reply: "By all accounts, the Ether Drakes predate all galactic civilization. There were once multitudes, legend telling of massive dragons of color as varied as the stars, but their race has been slowly wasting away for eons, hunted to near extinction by empires filled with trepidation at it's presence or histrionic glory seekers most eager for a highly prized commemoration.\n\nWe believe they are but the last dregs of a universe that ended before ours began, the sole survivors of some "big crunch." Something about the physical laws of the universe does not agree with them, as if they evolved in another reality. Between callous mercenaries, frightful empires, and their own evolutionary dissolution, the extermination of the Drakes over eons of slow decimation have led to their practical extinction... yet you still hear whispers of roaming Dragons around the edges of the galaxy.\n\nThe dragon not far from here is the last known of its kind in the galaxy, perhaps the universe."
  NSC_guardian.510.b.reply: "Its scales respond to percussive rhythms. To be more precise, certain frequencies have a relaxing effect on the sub-dermal musculature controlling the positioning and shock absorption of their scale plates. A reflex that once played a key role in Ether Drake social interactions, it is now a clear and obvious weakness.\n\nAdjusting the firing pattern of your vessels according to a particular rhythm will greatly increase the damage you can inflict on the mighty dragon. It was never meant for our age. If it is the last of it's kind - put it out of its misery."
  
  nsc_guardian.545.d.alt.reply: "Blue Wraiths have a frequency of 650THz. Their light synchronizes with both §YClass A§! and §YClass F Stars§!. Their ability to avoid conventional weaponry is weakened in systems with blue giants."
@@ -20,7 +20,7 @@
  NAME_Wraith_520THz: "Spectral Wraith 520THz"
  NAME_Wraith_650THz: "Spectral Wraith 650THz"
  
- nsc_guardian.2101.desc.gesta: "Having picked apart its defenses, we soon insinuated ourself into the structure.\n\nIts labyrinthine corridors and dense networks both prove equally alien and impenetrable. We will either control the fortress before it pose a threat or obliterate it."
+ nsc_guardian.2101.desc.gesta: "Having picked apart its defenses, we soon insinuated ourselves into the structure.\n\nIts labyrinthine corridors and dense networks both prove equally alien and impenetrable. We will either control the fortress before it poses a threat or obliterate it."
  
  ####################################
  # Vanilla File Addon Localisation 
@@ -162,11 +162,12 @@
  guardian_dreadnought.2.a: "I would like an §RAutomated Dreadnought§!!"
  guardian_dreadnought.2.b: "I would like a different Guardian for now."
  guardian_dreadnought.2.c: "I already have a Guardian, perhaps later."
+ guardian_dreadnought.2.d: "Perhaps after the postponement has ended."
  guardian_dreadnought.3.a: "I want an original white §RAutomated Dreadnought§!!"
  guardian_dreadnought.3.b: "I want the alternative §RAutomated Dreadnought§!!"
  
  guardian_dreadnought.2.name: "Dreadnought Defeated"
- guardian_dreadnought.2.desc: "The galaxy stands in awe and rejoices as the mighty §RAutomated Dreadnought§! has been destroyed by the brave men and women of [This.GetName]. Your research teams are already turning what remains of the Dreadnought upside down and studying the ruins on the habitable worlds in this system, and have already found many interesting discoveries, including what they hope is the means to build an §RAutomated Dreadnought§! of our own if you are interested.\n\n§GBefore selecting anything on either event - 'Dreadnought Defeated' or 'Dreadnought Disabled', read the following:\n\nThe 'Dreadnought Defeated' event message (this one) is from NSC and allows you direct access to two different color schemes for the Dreadnought, with increased HP and other benefits (one a surprise), while the original special project found on the Dreadnought, 'Dreadnought Disabled' event is the vanilla one. It takes a very long time to finish, and the only bonus you get is additional weaponry damage, and you cannot replace this Dreadnought. You can decide for yourself what to do with the original Dreadnought chain.§!"
+ guardian_dreadnought.2.desc: "The galaxy stands in awe and rejoices as the mighty §RAutomated Dreadnought§! has been destroyed by the brave warriors of [This.GetName]. Your research teams are already turning what remains of the Dreadnought upside down and studying the ruins on the habitable worlds in this system, and have already found many interesting discoveries, including what they hope is the means to build an §RAutomated Dreadnought§! of our own if you are interested.\n\n§GBefore selecting anything on either event - 'Dreadnought Defeated' or 'Dreadnought Disabled', read the following:\n\nThe 'Dreadnought Defeated' event message (this one) is from NSC and allows you direct access to two different color schemes for the Dreadnought, with increased HP and other benefits (one a surprise), while the original special project found on the Dreadnought, 'Dreadnought Disabled' event is the vanilla one. It takes a very long time to finish, and the only bonus you get is additional weaponry damage, and you cannot replace this Dreadnought. You can decide for yourself what to do with the original Dreadnought chain.§!"
  
  guardian_dreadnought.3.name: "Dreadnought Initialive"
  guardian_dreadnought.3.desc: "Our researchers have learned much about the §RAutomated Dreadnought§!. With the diligent research our scientists and technicians have put into the Automated Dreadnought and its creator's worlds, we can now build and control our own Dreadnought, and even include the AI functionality without worry of corruption. Our technicians have studied the AI from the ship and the data collected in the [dreadnought_system.GetName] System, and can limit it's control over the ship, so it does control certain functions (with manual overrides) and a large crew compliment will handle the rest, especially life support. It's still automated, just not dependent on it.\n\nAdditionally, we have discovered blueprints for a different variation of the very Dreadnought we defeated, giving us two different options for a new Dreadnought for our fleet.\n\nFinally, given the large crew compliment required, expensive tech, and overall resource costs of this massive §RAutomated Dreadnought§!, your people will only support one active Dreadnought at any given time, but we can create either version of the §RAutomated Dreadnought§! at your command."
@@ -180,15 +181,19 @@
  guardian_dreadnought.6.name: "Dreadnought Destroyed"
  guardian_dreadnought.6.desc: "Our §RAutomated Dreadnought§! has been destroyed. Your engineers are ready to construct another one if you wish to allow the necessary funding."
  
+ guardian_dreadnought.7.name: "Dreadnought Emerges"
+ guardian_dreadnought.7.desc: "An Automated Dreadnought has been defeated, and a new Dreadnought system has been spawned in the galaxy so all remaining players have a chance to defeat the Dreadnought."
+ 
  # Dimensional Horror Events:
  
  guardian_horror.2.a: "I want a §MDimensional Horror§!!"
  guardian_horror.2.b: "I would like another Guardian."
  guardian_horror.2.c: "I already have a Guardian, perhaps later."
+ guardian_horror.2.d: "Perhaps after the postponement has ended."
  guardian_horror.3.a: "I want a §MDimensional Horror§!!"
  
  guardian_horror.2.name: "Horror Defeated"
- guardian_horror.2.desc: "The galaxy stands in awe and rejoices as the mighty §MDimensional Horror§! has been killed by the brave men and women of [This.GetName]. The beast has fallen back into whatever dimensional realm it came from, leaving us with a tremendous opportunity. Our scientists believe they can learn from the sounds the Horror made, data gathered from the system, and the Horror's portal to not only summon a §MDimensional Horror§!, but control one if you dare to try."
+ guardian_horror.2.desc: "The galaxy stands in awe and rejoices as the mighty §MDimensional Horror§! has been killed by the brave warriors of [This.GetName]. The beast has fallen back into whatever dimensional realm it came from, leaving us with a tremendous opportunity. Our scientists believe they can learn from the sounds the Horror made, data gathered from the system, and the Horror's portal to not only summon a §MDimensional Horror§!, but control one if you dare to try."
  
  guardian_horror.3.name: "Horror Summons"
  guardian_horror.3.desc: "Our scientists are ready to summon a §MDimensional Horror§! from the dimensional realm. While supremely confident in their ability to summon one, our scientists believe that our best chance at controlling one is by summoning a baby Horror. While the baby obviously wouldn't be as powerful as the Horror we killed previously, even a baby would be a formidable defense for our empire. Furthermore, due to the nature of the summoning, the risks involved, and the sure power of even a baby Horror, your people are not willing to risk summoning more than one Horror, even a baby, at any given time.\n\nWith this understanding, we are ready to begin the summoning process at your command."
@@ -199,11 +204,15 @@
  guardian_horror.5.name: "Horror Killed"
  guardian_horror.5.desc: "Our §MDimensional Horror§! has died, and its corpse has fallen back through the wormhole into its dimension. Our scientists can summon another §MDimensional Horror§! if you wish to find a replacement."
  
+ guardian_horror.7.name: "Horror Emerges"
+ guardian_horror.7.desc: "A Dimensional Horror has been defeated, and a new Horror system has been spawned in the galaxy so all remaining players have a chance to defeat the Horror."
+ 
  # Enigmatic Fortress Events:
  
  guardian_fortress.2.a: "I want an §EEnigmatic Fortress§!!"
  guardian_fortress.2.b: "I would like a different Guardian."
  guardian_fortress.2.c: "I already have a Guardian, perhaps later."
+ guardian_fortress.2.d: "Perhaps after the postponement has ended."
  guardian_fortress.3.a: "I want an §EEnigmatic Fortress§!!"
  
  guardian_fortress.12.a: "I want the Enigmatic Power Core!"
@@ -224,10 +233,13 @@
  guardian_fortress.4.desc: "Success! We now have a fully powered and operational §EEnigmatic Fortress§!. While the project leaders continue to learn, adapt, and discover during the building, your top minds are still baffled by the technology that has been built, understanding only enough to run the Fortress and keep it under control. Given the limited control we have, we think we may never actually know the full capabilities of this massive vault. However, we do have a formidable defense station, and the Fortress is ready to defend the empire at your command.\n\nYou §Ycan move§! your §EEnigmatic Fortress§! to defend another colonized world in your empire using the appropriate planetary edict found on the planet you wish defended."
  
  guardian_fortress.5.name: "Fortress Destroyed"
- guardian_fortress.5.desc: "Our §EEnigmatic Fortress§! has been completely and utterly destroyed, with no possibility of the restore system fixing the damage. Your advisers are ready to commission another §EEnigmatic Fortress§! if you wish to receive a replacement."
+ guardian_fortress.5.desc: "Our §EEnigmatic Fortress§! has been completely and utterly destroyed, with no possibility of the autorepair system fixing the damage. Your advisers are ready to commission another §EEnigmatic Fortress§! if you wish to receive a replacement."
  
  guardian_fortress.6.name: "Fortress Rewards"
- guardian_fortress.6.desc: "After studying the Enigmatic Fortress over the past week, combining everything we know with what limited access we have to the Fortress' systems, we have discovered a backdoor into the main computer core. This should allow us to retrieve information about one of the Fortress' systems, maybe two of depending on the systems, at least enough to get us half way to reverse engineering it, but our technicians inform us this backdoor will only allow for one download before the Fortress locks us out. There may be a time in the future when the rest of the knowledge can be aquired, but for now, please make your selection carefully.\n\n§REnigmatic Power Core:§! A unique reactor that could give insights for improving our own reactor technology. (Required for NSC Advanced Version if NSC Components active.)\n\n§BEnigmatic Deflector:§! A unique shield design that could give insights for improving our own shielding technology. (Required for NSC Advanced Version if NSC Components active.)\n\n§GEnigmatic Encoder:§! Increases evasion.\n\n§MEnigmatic Decoder:§! Increases accuracy and tracking."
+ guardian_fortress.6.desc: "After studying the Enigmatic Fortress over the past week, combining everything we know with what limited access we have to the Fortress' systems, we have discovered a backdoor into the main computer core. This should allow us to retrieve information about one or maybe two of the Fortress' systems, depending on the choice of systems selected, at least enough to get us half way to reverse engineering it, but our technicians inform us this backdoor will only allow for one download before the Fortress locks us out. There may be a time in the future when the rest of the knowledge can be acquired, but for now, please make your selection carefully.\n\n§REnigmatic Power Core:§! A unique reactor that could give insights for improving our own reactor technology. (Required for NSC Advanced Version if NSC Components active.)\n\n§BEnigmatic Deflector:§! A unique shield design that could give insights for improving our own shielding technology. (Required for NSC Advanced Version if NSC Components active.)\n\n§GEnigmatic Encoder:§! Increases evasion.\n\n§MEnigmatic Decoder:§! Increases accuracy and tracking."
+ 
+ guardian_fortress.7.name: "Fortress Emerges"
+ guardian_fortress.7.desc: "An Enigmatic Fortress has been defeated, and a new Fortress system has been spawned in the galaxy so all remaining players have a chance to defeat the Fortress."
  
  # Ether Drake Events:
  
@@ -248,9 +260,10 @@
  guardian_dragon.2.a: "I want an §SEther Drake§!!"
  guardian_dragon.2.b: "I would like a different Guardian."
  guardian_dragon.2.c: "I already have a Guardian, perhaps later."
+ guardian_dragon.2.d: "Perhaps after the postponement has ended."
  
  guardian_dragon.2.name: "Dragon Slain"
- guardian_dragon.2.desc: "The galaxy stands in awe and rejoices as the mighty §SEther Drake§! has been killed by the brave men and women of [This.GetName]. Our scientists have already begun studying any remains of the Drake and in particular the planet it was guarding. Our researchers have made many intriguing discoveries with hopefully more on the way. With these new revelations, our scientists have already begun to look into a means of growing and hopefully training our own Drake, already dubbing it the Dragonfire Project.\n\nWe can look into producing an §SEther Drake§! for our empire if you like, or perhaps another Guardian is more to your liking?"
+ guardian_dragon.2.desc: "The galaxy stands in awe and rejoices as the mighty §SEther Drake§! has been killed by the brave warriors of [This.GetName]. Our scientists have already begun studying any remains of the Drake and in particular the planet it was guarding. Our researchers have made many intriguing discoveries with hopefully more on the way. With these new revelations, our scientists have already begun to look into a means of growing and hopefully training our own Drake, already dubbing it the Dragonfire Project.\n\nWe can look into producing an §SEther Drake§! for our empire if you like, or perhaps another Guardian is more to your liking?"
  
  guardian_dragon.3.name: "Dragon Training"
  guardian_dragon.3.desc: "Our Dragonfire Project managers are ready to grow and train our very own §SEther Drake§!, named after the project's code name, §SDragonfire Drakes§!. While our teams cannot promise these §SDragonfire Drakes§! will be nearly as resilient or deadly as known Drakes, they assure you this will be a formidable beast to control. Due to the complex nature of growing of the Drake, the trickiness and dangers of training it, the amount of food to feed and sustain it, and the overall expense of the entire process means your people are only willing to support one Drake at any given time.\n\nUnderstanding this, your geneticists have discovered the genome responsible for changing the color of the Drake's scales, and therefore, they have managed to find the DNA sequence for many different color variations, and you can choose which you would prefer!"
@@ -263,6 +276,9 @@
  
  guardian_dragon.6.name: "Dragon Killed"
  guardian_dragon.6.desc: "Our §SDragonfire Drake§! has been killed, and its corpse has dissolved into nothingness. Project Dragonfire is ready to grow and train another Dragonfire Drake if you wish to receive a replacement."
+ 
+ guardian_dragon.7.name: "Dragon Emerges"
+ guardian_dragon.7.desc: "An Ether Drake has been defeated, and a new Drake system has been spawned in the galaxy so all remaining players have a chance to defeat the Drake."
  
  # Ether Baby Events:
  
@@ -292,16 +308,16 @@
  guardian_baby_dragon.4.name: "Baby Dragon Killed"
  guardian_baby_dragon.4.desc: "Our §SDragonfire Baby§! has been killed, and its corpse has dissolved into nothingness. Project Dragonfire is ready to grow and train another Dragonfire Baby if you wish to receive a replacement."
  
- 
  # Stellarite Events:
  
  guardian_stellarite.3.a: "Summon a §YStellarite§!!"
  guardian_stellarite.2.a: "I want a §YStellarite§! immediately!"
  guardian_stellarite.2.b: "I would like a different Guardian."
  guardian_stellarite.2.c: "I already have a Guardian, perhaps later."
+ guardian_stellarite.2.d: "Perhaps after the postponement has ended."
  
  guardian_stellarite.2.name: "Stellarite Control"
- guardian_stellarite.2.desc: "The galaxy stands in awe and rejoices as the mighty §YStellarite§! has been destroyed by the brave men and women of [This.GetName]. Between the remains of the beast itself and what remains of the star, our scientists believe they can form our own §YStellarite§! and even teach it to not devour every star in our empire if you would like to control one."
+ guardian_stellarite.2.desc: "The galaxy stands in awe and rejoices as the mighty §YStellarite§! has been destroyed by the brave warriors of [This.GetName]. Between the remains of the beast itself and what remains of the star, our scientists believe they can form our own §YStellarite§! and even teach it to not devour every star in our empire if you would like to control one."
  
  guardian_stellarite.3.name: "Stellarite Creation"
  guardian_stellarite.3.desc: "Our research teams have learned much about the §YStellarite§!, and believe they can easily adapt a training regiment to train the Stellarite to take what it needs without diminishing a star. Your advisers only caution that you should give your people ample time to prepare the beast for its new role, and more importantly, to only try to control one at any given time, to ensure the people the §YStellarite§! is under your control. Aside from the extra time to be sure it will obey commands, you should have no problems finding, summoning, and training a §YStellarite§! to defend your empire. Please select an FTL Drive type below:\n\n§BGuardian Warp:§! This is the most powerful drive available, with longest distance and least cooldown time, but only Guardians use them so you need the Drive reward tech for your fleets to merge.\n\n§MPsi Jump Drive:§! Best of the regular drives, with a 50% range boost, but a dangerous drive.\n\n§RJump Drive:§! Best of the regular drives, without 50% range boost, but a dangerous drive.\n\n§GWarp Drive:§! Best Warp Drive for those who use this FTL method.\n\n§HHyperdrive:§! Best Hyperdrive for those who use this FTL method.\n\n§YWormhole Drive:§! One and only wormhole drive for those who use this FTL Method. All tech bonuses will apply."
@@ -312,36 +328,44 @@
  guardian_stellarite.5.name: "Stellarite Killed"
  guardian_stellarite.5.desc: "Our §YStellarite§! has been killed, and it's energy matrix has faded into the cold vacuum of space. Your research teams are ready to form and train another if you wish to find a replacement."
  
+ guardian_stellarite.7.name: "Stellarite Emerges"
+ guardian_stellarite.7.desc: "A Stellarite has been defeated, and a new Stellarite system has been spawned in the galaxy so all remaining players have a chance to defeat the Stellarite."
+ 
  # Technosphere Events:
  
  guardian_technosphere.3.a: "I want a §GTechnosphere§!!"
  guardian_technosphere.2.a: "Excellent. Begin construction immediately."
  guardian_technosphere.2.b: "I would prefer a different Guardian."
  guardian_technosphere.2.c: "I already have a Guardian, perhaps later."
+ guardian_technosphere.2.d: "Perhaps after the postponement has ended."
  
  guardian_technosphere.2.name: "Technosphere Mystery"
- guardian_technosphere.21.desc: "The galaxy stands in awe and rejoices as the mighty §GTechnosphere§!, aka §GInfinity Machine§!, has been destroyed by the brave men and women of [This.GetName]. Between past expeditions to study the Sphere and our new understanding from seeing, observing, and scanning the Sphere ourselves, our scientists believe they can recreate the sphere to defend our own empire, if you wish to have it."
- guardian_technosphere.22.desc: "We have successfully assisted the §GTechnosphere§! aka §GInfinity Machine§! in mission to discover the answer to... I guess infinity? Either way, the Sphere has rewarded us with a download of epic scope, giving us clear instructions on how to construct our own Sphere! It will take some time for our scientists and technicians to comprehend and get a handle on this new technology, but we should be able to have one to defend our empire within a couple years, if you choose to proceed of course."
- guardian_technosphere.23.desc: "We have successfully hacked into the §GTechnosphere§! aka §GInfinity Machine§! against all odds! This miraculous hack has given us complete access to the inter systems of the Sphere. Unfortunately, it seems the §GTechnosphere§! had fail safes in case of such a hack, and has self-destructed. However, our technicians have reported they managed to download enough information before its destruction to successfully construct our own Sphere, although it may take some time. We can have one ready to go in a couple of years, if you wish to have one to defend your empire."
+ guardian_technosphere.21.desc: "The galaxy stands in awe and rejoices as the mighty §GTechnosphere§!, aka §GInfinity Machine§!, has been destroyed by the brave warriors of [This.GetName]. Between past expeditions to study the Sphere and our new understanding from seeing, observing, and scanning the Sphere ourselves, our scientists believe they can recreate the sphere to defend our own empire, if you wish to have it."
+ guardian_technosphere.22.desc: "We have successfully assisted the §GTechnosphere§! aka §GInfinity Machine§! in mission to discover the answer to... I guess infinity? Either way, the Sphere has rewarded us with a download of epic scope, giving us clear instructions on how to construct our own Sphere! It will take some time for our scientists and technicians to comprehend and get a handle on this new technology, but we should be able to have one to defend our empire within a couple of years, if you choose to proceed of course."
+ guardian_technosphere.23.desc: "We have successfully hacked into the §GTechnosphere§! aka §GInfinity Machine§! against all odds! This miraculous hack has given us complete access to the inner systems of the Sphere. Unfortunately, it seems the §GTechnosphere§! had fail safes in case of such a hack, and has self-destructed. However, our technicians have reported they managed to download enough information before its destruction to successfully construct our own Sphere, although it may take some time. We can have one ready to go in a couple of years, if you wish to have one to defend your empire."
  
  guardian_technosphere.3.name: "Technosphere Project"
- guardian_technosphere.3.desc: "Our research teams now have a firm understanding of the technology required to construct a §GTechnosphere§!. However, given the vast resources required, time to construct, and still unknowns about the §GTechnosphere§!, your advisers suggest you only support one at any given time. If you wish to construct a §GTechnosphere§!, please select an FTL Drive type from the listing below:\n\n§BGuardian Warp:§! This is the most powerful drive available, with longest distance and least cooldown time, but only Guardians use them so you need the Drive reward tech for your fleets to merge.\n\n§MPsi Jump Drive:§! Best of the regular drives, with a 50% range boost, but a dangerous drive.\n\n§RJump Drive:§! Best of the regular drives, without 50% range boost, but a dangerous drive.\n\n§GWarp Drive:§! Best Warp Drive for those who use this FTL method.\n\n§HHyperdrive:§! Best Hyperdrive for those who use this FTL method.\n\n§YWormhole Drive:§! One and only wormhole drive for those who use this FTL Method. All tech bonuses will apply."
+ guardian_technosphere.3.desc: "Our research teams now have a firm understanding of the technology required to construct a §GTechnosphere§!. However, given the vast resources required, time to construct, and what is still unknown about the §GTechnosphere§!, your advisers suggest you only support one at any given time. If you wish to construct a §GTechnosphere§!, please select an FTL Drive type from the listing below:\n\n§BGuardian Warp:§! This is the most powerful drive available, with longest distance and least cooldown time, but only Guardians use them so you need the Drive reward tech for your fleets to merge.\n\n§MPsi Jump Drive:§! Best of the regular drives, with a 50% range boost, but a dangerous drive.\n\n§RJump Drive:§! Best of the regular drives, without 50% range boost, but a dangerous drive.\n\n§GWarp Drive:§! Best Warp Drive for those who use this FTL method.\n\n§HHyperdrive:§! Best Hyperdrive for those who use this FTL method.\n\n§YWormhole Drive:§! One and only wormhole drive for those who use this FTL Method. All tech bonuses will apply."
  
  guardian_technosphere.4.name: "Technosphere Launch"
  guardian_technosphere.4.desc: "After a lot of research, development, safeguards, and resources, our fully functional §GTechnosphere§! has been launched!\n\nOur research teams tell us that while quite confident about the §GTechnosphere§! being under our full control, because of our lack of understanding of all operations of the sphere, this §GTechnosphere§! is a little less powerful than the original. However, we are assured that it is still very powerful compared to our standard ship classes, and it is more than capable of handling most threats.\n\nThe §GTechnosphere§! is in orbit over §Y[Root.Capital.GetName]§!, ready to defend the empire at your command."
  
  guardian_technosphere.5.name: "Technosphere Destroyed"
- guardian_technosphere.5.desc: "Our §GTechnosphere§! has been destroyed, with a previous unknown self destruct feature making sure there is no remaining trace of the sphere for others to find, take, and study. Our research teams are confident they can make a new §GTechnosphere§! without issue if you wish to build a replacement."
+ guardian_technosphere.5.desc: "Our §GTechnosphere§! has been destroyed, with a previously unknown self destruct feature making sure there is no remaining trace of the sphere for others to find, take, and study. Our research teams are confident they can make a new §GTechnosphere§! without issue if you wish to build a replacement."
  
  guardian_technosphere.6.name: "Technosphere Failed"
  guardian_technosphere.6.desc: "The §GTechnosphere§! flew into the black hole and nothing happened. Unfortunately, this means you failed to help the §GTechnosphere§!, and while it did probably give you some nice rewards as a "thanks for trying," you have not unlocked the §GTechnosphere§! Playable Guardian because this is a failure. The interesting part is the one and only "successful" way of helping of the §GTechnosphere§! is actually the scenario where it §Ydoesn't fly into the Black Hole at all§! if you can believe that.\n\nDon't let this failure discourage you, it's simply a role of the dice, and you unfortunately hit one of the two outcomes not leading to "success" thus the Playable Guardian, however, to help you try again, another §GTechnosphere§! system has been spawned in your galaxy, where you can get the Playable Guardian version three ways; (1) defeat the Sphere in battle, (2) successfully hack the Sphere with the appropriate special project, or (3) try again to successfully help the Sphere. Hopefully you will have better luck next time."
  guardian_technosphere.6.alt.desc: "The §GTechnosphere§! flew into the black hole and it spawned into the now smaller, but much more resource rich "Pantagruel" black hole. Congratulations on getting this unique setup, however, unfortunately, this means you failed to help the §GTechnosphere§!! Yes, really, as nice as your new setup is in this system, the game technically considers this a "spectacularly helpful failure", and therefore, you have not unlocked the §GTechnosphere§! Playable Guardian because this is a failure. The interesting part is the one and only "successful" way of helping of the §GTechnosphere§! is actually the scenario where it §Ydoesn't fly into the Black Hole at all§! if you can believe that.\n\nDon't let this failure discourage you, it's simply a role of the dice, and you unfortunately hit one of the two outcomes not leading to "success" thus the Playable Guardian, however, to help you try again, another §GTechnosphere§! system has been spawned in your galaxy, where you can get the Playable Guardian version three ways; (1) defeat the Sphere in battle, (2) successfully hack the Sphere with the appropriate special project, or (3) try again to successfully help the Sphere. Hopefully you will have better luck next time."
+ 
+ guardian_technosphere.7.name: "Technosphere Emerges"
+ guardian_technosphere.7.desc: "A Technosphere has been defeated, and a new Technosphere system has been spawned in the galaxy so all remaining players have a chance to defeat the Technosphere."
  
  # Wraith Events:
  
  guardian_wraith.2.a: "I want a §BWraiths§!!"
  guardian_wraith.2.b: "I would prefer a different Guardian."
  guardian_wraith.2.c: "I already have a Guardian, perhaps later."
+ guardian_wraith.2.d: "Perhaps after the postponement has ended."
  
  guardian_wraith.3.a: "I want a red Wraith!"
  guardian_wraith.3.b: "I want a orange Wraith!"
@@ -353,7 +377,7 @@
  guardian_wraith.3.h: "I want a dark Wraith!"
  
  guardian_wraith.2.name: "Wraith Lighting"
- guardian_wraith.2.desc: "The galaxy stands in awe and rejoices as the mighty §BWraith§! has been destroyed by the brave men and women of [This.GetName]. With the knowledge of the Curators and our own scans and experience with the §BWraith§!, our scientists believe they can duplicate the spectral frequencies of the §BWraiths§!, perhaps with a wider range than just the one we saw, allowing for us to created different colored §BWraiths§! to defend our empire."
+ guardian_wraith.2.desc: "The galaxy stands in awe and rejoices as the mighty §BWraith§! has been destroyed by the brave warriors of [This.GetName]. With the knowledge of the Curators and our own scans and experience with the §BWraith§!, our scientists believe they can duplicate the spectral frequencies of the §BWraiths§!, perhaps with a wider range than just the one we saw, allowing for us to created different colored §BWraiths§! to defend our empire."
  
  guardian_wraith.3.name: "Wraith Spectrums"
  guardian_wraith.3.desc: "Our researchers have isolated 8 different stable §BWraiths§! spectral frequencies, allowing for us to create 8 different colors, including one not associated with any known star frequency, although none of them seem to have any discernible advantages due to the different in frequency, unlike the ones of legend. Due to the nature of the formation of these creatures, the amount of energy and specialized equipment it takes to create and maintain one, never mind control, your advisers will only allow for one §BWraith§! at any given time. Our research teams are ready to start the process, they just need to know what spectral frequency you wish to have."
@@ -367,14 +391,17 @@
  guardian_wraith.6.name: "Wraith Disintegrated"
  guardian_wraith.6.desc: "Our §BWraith§! has been killed, and its energy matrix has destabilized and disintegrated into nothingness. Our researchers can create another §BWraith§! if you wish to create a replacement."
  
- guardian_wraith.7.desc: "The study of pulsars seems to be an endless source of insights for our scientists, but rarely exhibit any signs of overtly dangerous phenomena. This makes the recent reports on [From.GetName] all the more concerning.\n\nAn initial scan revealed the pulsar, in addition to its regular electromagnetic beam, is emitting a separate beam at a limited wavelength which is only visible in the same system at shorter and shorter intervals. According to initial calculations, the interval between these pulses will reach zero in approximately §Yfive years§!. What occurs then is open to speculation, but the lack of explanations for the pulse has instilled an almost superstitious fear in those who studied it."
- guardian_wraith.7.desc.gesta: "The study of pulsars seems to be an endless source of insights, but they rarely exhibit any signs of overtly dangerous phenomena. This makes the recent observations on [From.GetName] all the more concerning.\n\nAn initial scan revealed the pulsar, in addition to its regular electromagnetic beam, is emitting a separate beam at a limited wavelength which is only visible in the same system at shorter and shorter intervals. According to initial calculations, the interval between these pulses will reach zero in approximately §Yfive years§!. What occurs then is open to speculation, but the lack of explanations for the pulse is troubling."
+ guardian_wraith.7.desc: "The study of pulsars seems to be an endless source of insights for our scientists, but rarely exhibit any signs of overtly dangerous phenomena. This makes the recent reports on [From.GetName] all the more concerning.\n\nAn initial scan revealed the pulsar, in addition to its regular electromagnetic beam, is emitting a separate beam at a limited wavelength which is only visible in the same system at shorter and shorter intervals. According to initial calculations, the interval between these pulses will reach zero in approximately §Yfifteen years§!. What occurs then is open to speculation, but the lack of explanations for the pulse has instilled an almost superstitious fear in those who studied it."
+ guardian_wraith.7.desc.gesta: "The study of pulsars seems to be an endless source of insights, but they rarely exhibit any signs of overtly dangerous phenomena. This makes the recent observations on [From.GetName] all the more concerning.\n\nAn initial scan revealed the pulsar, in addition to its regular electromagnetic beam, is emitting a separate beam at a limited wavelength which is only visible in the same system at shorter and shorter intervals. According to initial calculations, the interval between these pulses will reach zero in approximately §Yfifteen years§!. What occurs then is open to speculation, but the lack of explanations for the pulse is troubling."
+ 
+ guardian_wraith.8.name: "Wraith Emerges"
+ guardian_wraith.8.desc: "A Wraith has been defeated, and a new Wraith system has been spawned in the galaxy so all remaining players have a chance to defeat the Wraith."
  
  # Captain's Galleon Pirate Events:
  
  guardian_pirate.1.a: "That sound interesting. Let's find this system."
  guardian_pirate.2.a: "Proceed with caution."
- guardian_pirate.4.a: "That ship would be an excellent warship. Seize it!"
+ guardian_pirate.4.a: "That ship would make an excellent warship. Seize it!"
  guardian_pirate.4.b: "It's a Pirate ship not worth the trouble. Destroy it."
  guardian_pirate.5.a: "He could prove useful. Watch him and we'll see."
  guardian_pirate.6.a: "Curses! The Hidden Paradise system will have to do."
@@ -386,7 +413,7 @@
  guardian_pirate.1.desc: "The pirates in the [pirate_home_system.GetName] System are nearly defeated. Our communication officers intercepted a transmission from one of the remaining pirate vessels. It would appear someone panicked and sent a communication we, or well anyone, could track. It would appear the [pirate_home_system.GetName] System isn't the Pirate 'stronghold' as previously believed, or at least, it's just the main rally point.\n\nApparently there is a previously unknown system near it the Pirate clans refer to as 'The Hidden Paradise', and is apparently a 'retreat' of sorts for them, although its location is very tightly controlled. Fortunately for us, we can locate this 'Paradise' for ourselves thanks to whatever pirate vessel panicked. Although, the communication logs do state any pirate vessels traveling to the Paradise without permission will 'answer to the Captain and his galleon'... whatever that means."
  
  guardian_pirate.2.name: "Pirate Paradise"
- guardian_pirate.2.desc: "As [Root.GetName] enters the mysterious Hidden Paradise System, we finally have an idea of why the pirates call this place 'Paradise'.\n\nThere is a habitable Gaia Moon in the system, orbiting what appears to be a planet completely annihilated in a nuclear war. It will not be habitable for a many decades, if not longer. While the Gaia world here is a welcomed sight, what makes this system rather... unique is the star. It's abnormally large, and even stranger is its rings, like you would typically find around a gas giant. Just outside the rings of the star, there is an asteroid belt, with many being promising mining candidates. It seems like the star pulled in asteroid belts to become planetary rings even though it's not a black hole.\n\nWhile the system is interesting to observe and study, the [Root.GetName] must first deal with the pirates in this system, and these pirates are not your typical scavengers. There are two Pirate Galleons here like the ones in the previous system, but what has everyone worried is the capital ship they protect.\n\nThere is a massive Galleon here, over twice the mass of a standard Galleon. It's embroidered in black and gold, and if the appearance wasn't scary enough, our initial scans tell us it's covered in weaponry, a count only a Pirate would deem necessary. Whoever commands this Galleon is not to be trifled with."
+ guardian_pirate.2.desc: "As the [Root.GetName] enters the mysterious Hidden Paradise System, we finally have an idea of why the pirates call this place 'Paradise'. This system is unlike any we have ever seen.\n\nThe system looks like it survived a space battle of epic proportions, as if it endured mass destruction of most of its planetary bodies, with a gas giant and some of its moons being all that remain unscathed. The star is enormous, one of the biggest in the known galaxy. Its mass and gravitational pull, combined with whatever catastrophe happened here, has pulled most of the asteroids and debris chunks close to the star, creating not only the kind of rings you would traditionally see around a gas giant, but a large asteroid belt as well. However, what has everyone in the [Root.GetName] stunned is what is in-between these rings.\n\nA Ring World; not just any Ring World, a whole one, without a scratch.\n\nThis Ring World not only scans as completely intact, but it is mere miles from the surface of the star, making it closer to the star than any known Ring World. If this marvelous feat of engineering wasn't enough, not only does this ring have habitable segments, it would appear the local Pirates haven't touched it!\n\nHowever, while this stupendous system is more than worth investigating further, the [Root.GetName] must first deal with the Pirate presence in the system. These Pirates are not your typical scavengers or vagabonds. Orbiting a destroyed planet that had to have been marked for countless target practices, four Pirate Galleons, like the one previously encountered, guard the system, but the alarming discovery is the vessel they protect.\n\nThere is a massive warship here, over twice the mass of a standard Galleon. It's embroidered in black and gold, and if the appearance wasn't scary enough, our initial scans tell us it's covered in weaponry, a count only a Pirate would deem necessary. Whoever commands this Galleon is not to be trifled with."
  
  guardian_pirate.3.name: "Pirate Raid"
  guardian_pirate.3.desc: "Our forces have disabled the Captain's "Carrack Galleon" (as it has been dubbed due to its size), and remarkably the massive vessel hasn't collapsed. This could be an excellent opportunity to send over professional boarding teams and attempt to claim the vessel, perhaps restore it. Of course, if you don't want the vessel or don't think it's worth the effort, we could simply destroy the ship as well.\n\n§GIn order to try and board the Carrack Pirate Galleon, you will require 3 transport ships and a commanding general.§!"
@@ -404,7 +431,7 @@
  guardian_pirate.7a.desc: "Your researchers have successfully finished all relevant research to build our own Carrack Pirate Galleon at your command, however, while we have another Guardian active, our people will not support the building of a ship of this magnitude."
  
  guardian_pirate.7.name: "Pirate Galleon"
- guardian_pirate.7.desc: "Our engineering teams are ready to construct a Carrack Pirate Galleon... overloaded weaponry and all. Due to the cost, complex design, and sure resources it will take to build and maintain this colossal vessel, your people will only support one at any given time. All that is left is to select the FTL Drive type to be used with our new Carrack Pirate Galleon:\n\n§BGuardian Warp:§! This is the most powerful drive available, with longest distance and least cooldown time, but only Guardians use them so you need the Drive reward tech for your fleets to merge.\n\n§MPsi Jump Drive:§! Best of the regular drives, with a 50% range boost, but a dangerous drive.\n\n§RJump Drive:§! Best of the regular drives, without 50% range boost, but a dangerous drive.\n\n§GWarp Drive:§! Best Warp Drive for those who use this FTL method.\n\n§HHyperdrive:§! Best Hyperdrive for those who use this FTL method.\n\n§YWormhole Drive:§! One and only wormhole drive for those who use this FTL Method. All tech bonuses will apply."
+ guardian_pirate.7.desc: "Our engineering teams are ready to construct a Carrack Pirate Galleon... overloaded weaponry and all. Due to the cost, complex design, and the sure amount of resources it will take to build and maintain this colossal vessel, your people will only support one at any given time. All that is left is to select the FTL Drive type to be used with our new Carrack Pirate Galleon:\n\n§BGuardian Warp:§! This is the most powerful drive available, with longest distance and least cooldown time, but only Guardians use them so you need the Drive reward tech for your fleets to merge.\n\n§MPsi Jump Drive:§! Best of the regular drives, with a 50% range boost, but a dangerous drive.\n\n§RJump Drive:§! Best of the regular drives, without 50% range boost, but a dangerous drive.\n\n§GWarp Drive:§! Best Warp Drive for those who use this FTL method.\n\n§HHyperdrive:§! Best Hyperdrive for those who use this FTL method.\n\n§YWormhole Drive:§! One and only wormhole drive for those who use this FTL Method. All tech bonuses will apply."
  
  guardian_pirate.8.name: "Pirate Launch"
  guardian_pirate.8.desc: "Our new Carrack Pirate Galleon has been launched, and is ready to obliterate our enemies at your command."
@@ -758,6 +785,9 @@
  NSC_AUTOMATED_DREADNOUGHT_ALTERNATIVE: "Sentient Dreadnought II"
  nsc_automated_dreadnought_alternative: "Sentient Dreadnought II"
  nsc_automated_dreadnought_alternative_plural: "Sentient Dreadnought IIs"
+ 
+ NSC_guardian_dimensional_horror: "Dimensional Horror"
+ NSC_guardian_dimensional_horror_plural: "Dimensional Horrors"
  
  RED_WRAITH: "Phantom Spectral Wraith 450THz"
  red_wraith: "Phantom Spectral Wraith 450THz"

@@ -647,7 +647,10 @@ liberate_planet = {
 		if = { limit = { fromfromfrom = { has_authority = auth_machine_intelligence } }
 			parameter:planet = { save_event_target_as = new_country_ethos }
 			else = {
-				fromfromfrom = { save_event_target_as = new_country_ethos }
+				fromfromfrom = {
+					save_event_target_as = new_country_ethos
+					save_event_target_as = new_country_authority
+				}
 			}
 		}
 
@@ -687,11 +690,11 @@ liberate_planet = {
 				}
 			}						
 			else = {
-				parameter:planet = {		
+				parameter:planet = {	
 					create_country = {
 						name = random
-						authority = fromfromfrom
-						released_by_country = fromfromfrom
+						authority = event_target:new_country_authority	# generates an error log if the liberator is Machine
+						released_by_country = fromfromfrom 				# but will actually work	
 						released_from_country = parameter:planet.owner
 						species = parameter:planet
 						ethos = event_target:new_country_ethos

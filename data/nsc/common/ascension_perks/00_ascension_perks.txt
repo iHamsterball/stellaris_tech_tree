@@ -38,14 +38,7 @@ ap_engineered_evolution = {
 			COST_MULT = @ap_engineered_evolution_COST_MULT
 		}
 
-		HUM_species_trait_points_add = @ap_engineered_evolution_POINTS
-		MAM_species_trait_points_add = @ap_engineered_evolution_POINTS
-		REP_species_trait_points_add = @ap_engineered_evolution_POINTS
-		AVI_species_trait_points_add = @ap_engineered_evolution_POINTS
-		ART_species_trait_points_add = @ap_engineered_evolution_POINTS
-		MOL_species_trait_points_add = @ap_engineered_evolution_POINTS
-		FUN_species_trait_points_add = @ap_engineered_evolution_POINTS
-		PLANT_species_trait_points_add = @ap_engineered_evolution_POINTS
+		BIOLOGICAL_species_trait_points_add = @ap_engineered_evolution_POINTS
 
 		modify_species_cost_mult = @ap_engineered_evolution_COST_MULT
 	}
@@ -98,14 +91,7 @@ ap_evolutionary_mastery = {
 			COST_MULT = @ap_evolutionary_mastery_COST_MULT
 		}
 
-		HUM_species_trait_points_add = @ap_evolutionary_mastery_POINTS
-		MAM_species_trait_points_add = @ap_evolutionary_mastery_POINTS
-		REP_species_trait_points_add = @ap_evolutionary_mastery_POINTS
-		AVI_species_trait_points_add = @ap_evolutionary_mastery_POINTS
-		ART_species_trait_points_add = @ap_evolutionary_mastery_POINTS
-		MOL_species_trait_points_add = @ap_evolutionary_mastery_POINTS
-		FUN_species_trait_points_add = @ap_evolutionary_mastery_POINTS
-		PLANT_species_trait_points_add = @ap_evolutionary_mastery_POINTS
+		BIOLOGICAL_species_trait_points_add = @ap_evolutionary_mastery_POINTS
 
 		modify_species_cost_mult = @ap_evolutionary_mastery_COST_MULT
 	}
@@ -423,7 +409,6 @@ ap_defender_of_the_galaxy = {
 	}
 	
 	potential = {
-		years_passed > 99
 		NOT = {
 			has_ascension_perk = ap_defender_of_the_galaxy
 		}

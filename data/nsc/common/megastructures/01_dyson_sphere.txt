@@ -26,22 +26,7 @@ dyson_sphere_0 = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_no_existing_dyson_sphere"
-			from = {
-				NOT = {
-					any_owned_megastructure = {
-						OR = {
-							is_megastructure_type = dyson_sphere_0
-							is_megastructure_type = dyson_sphere_1
-							is_megastructure_type = dyson_sphere_2
-							is_megastructure_type = dyson_sphere_3
-							is_megastructure_type = dyson_sphere_4
-							is_megastructure_type = dyson_sphere_5
-							is_megastructure_type = dyson_sphere_restored
-							is_megastructure_type = dyson_sphere_ruined
-						}
-					}
-				}
-			}
+			from = { NOT = { has_country_flag = built_dyson_sphere } }
 		}		
 		custom_tooltip = {
 			fail_text = "requires_surveyed_system"
@@ -125,6 +110,7 @@ dyson_sphere_0 = {
 	on_build_cancel = {}
 	on_build_complete = {
 		set_star_flag = dyson_sphere_built
+		from = { set_country_flag = built_dyson_sphere }
 	}
 }
 
@@ -275,26 +261,7 @@ dyson_sphere_restored = {
 	}
 
 	possible = {
-		from = { has_technology = tech_mega_engineering }
-		custom_tooltip = {
-			fail_text = "requires_no_existing_dyson_sphere"
-			from = {
-				NOT = {
-					any_owned_megastructure = {
-						OR = {
-							is_megastructure_type = dyson_sphere_0
-							is_megastructure_type = dyson_sphere_1
-							is_megastructure_type = dyson_sphere_2
-							is_megastructure_type = dyson_sphere_3
-							is_megastructure_type = dyson_sphere_4
-							is_megastructure_type = dyson_sphere_5
-							is_megastructure_type = dyson_sphere_restored
-							is_megastructure_type = dyson_sphere_ruined
-						}
-					}
-				}
-			}
-		}			
+		from = { has_technology = tech_mega_engineering }		
 	}
 
 	on_build_start = {

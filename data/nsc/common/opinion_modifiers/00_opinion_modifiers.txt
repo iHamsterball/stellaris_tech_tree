@@ -2869,6 +2869,27 @@ triggered_opinion_both_assimilators = {
 	}
 }
 
+triggered_negative_opinion_of_swarm_fe = {
+	trigger = {
+		has_ai_personality = fallen_empire_xenophile			
+		FROM = { has_civic = civic_hive_devouring_swarm }
+	}
+	opinion = {
+		base = -80
+	}
+}
+
+
+triggered_negative_opinion_of_exterminators_fe = {
+	trigger = {
+		has_ai_personality = fallen_empire_xenophile			
+		FROM = { has_civic = civic_machine_terminator }
+	}
+	opinion = {
+		base = -40
+	}
+}
+
 triggered_negative_opinion_of_exterminators = {
 	trigger = {
 		is_country_type = default

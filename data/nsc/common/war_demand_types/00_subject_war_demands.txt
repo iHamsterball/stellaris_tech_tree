@@ -1039,6 +1039,12 @@ make_tributary = {
 			who = fromfromfrom
 			amount = 1 # scales to pops
 		}
+		parameter:country = {
+			set_subject_of = {
+				who = fromfromfrom
+				subject_type = tributary
+			}
+		}
 		fromfromfrom = {
 			set_timed_country_flag = {
 				flag = imperialist_conquest_timed_flag

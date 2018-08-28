@@ -3,9 +3,9 @@ ship_behavior = {
 	preferred_attack_range = 60
 	formation_distance = 120
 	return_to_formation_distance = 50
-	collision_awareness = 0.4
-	collision_radius = 0.7							#collision_radius is a multiplier on the radius specified in the ship size
-	collision_strafe = 2.0							#collision_strafe allows the ship to move in any direction while colliding with another
+	collision_awareness = 1 #0.4
+	collision_radius = 1 #0.7							#collision_radius is a multiplier on the radius specified in the ship size
+	collision_strafe = 2.5 #2							#collision_strafe allows the ship to move in any direction while colliding with another
 	attack_move_pattern = stay_at_range
 	passive_move_pattern = charge
 	

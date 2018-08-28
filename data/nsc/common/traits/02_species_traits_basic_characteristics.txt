@@ -21,7 +21,7 @@ trait_hive_mind = {
 	leader_age_min = 10
 	leader_age_max = 20
 	
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	allowed_archetypes = { BIOLOGICAL }
 	ai_weight = {
 		weight = 0
 	}
@@ -37,7 +37,7 @@ trait_machine_unit = {
 	modification = no
 	immortal_leaders = yes
 	icon = "gfx/interface/icons/traits/trait_machine_unit.dds"
-	allowed_classes = { MACHINE }
+	allowed_archetypes = { MACHINE }
 
 	forced_happiness = yes
 	modifier = {
@@ -55,7 +55,7 @@ trait_mechanical = {
 	modification = no
 	immortal_leaders = yes
 
-	allowed_classes = { ROBOT }
+	allowed_archetypes = { ROBOT }
 	
 	modifier = {
 		pop_environment_tolerance = 2.0
@@ -71,7 +71,7 @@ trait_robotic_1 = {
 	modification = no
 	forced_happiness = yes
 
-	allowed_classes = { ROBOT }
+	allowed_archetypes = { ROBOT }
 	
 	modifier = {
 		tile_resource_engineering_research_mult = -0.8
@@ -93,7 +93,7 @@ trait_robotic_2 = {
 	modification = no
 	forced_happiness = yes
 
-	allowed_classes = { ROBOT }
+	allowed_archetypes = { ROBOT }
 	
 	modifier = {
 		tile_resource_engineering_research_mult = -0.4
@@ -114,7 +114,7 @@ trait_robotic_3 = {
 	randomized = no
 	modification = no
 
-	allowed_classes = { ROBOT }
+	allowed_archetypes = { ROBOT }
 	
 	modifier = {
 		tile_resource_engineering_research_mult = 0.20
@@ -134,7 +134,7 @@ trait_syncretic_proles = {
 	sapient = no
 	modification = no
 	icon = "gfx/interface/icons/traits/trait_primitive.dds"
-	allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT  PRE_MAM PRE_REP PRE_AVI PRE_ART PRE_MOL PRE_FUN }
+	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		pop_happiness = 0.10
 		pop_government_ethic_attraction = 0.5

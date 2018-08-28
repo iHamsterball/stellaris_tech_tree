@@ -606,6 +606,11 @@ tech_sapient_ai = {
 	
 	weight_modifier = {
 		modifier = {
+			factor = 0
+			has_authority = auth_machine_intelligence
+		}
+	
+		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = physics

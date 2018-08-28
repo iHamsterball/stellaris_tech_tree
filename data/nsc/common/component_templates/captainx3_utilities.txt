@@ -104,7 +104,7 @@ utility_component_template = {
 	prerequisites = { "tech_guardian_warp" }
 	
 	ai_weight = { weight = 10 }
-
+	component_set = "ftl_components"
 	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport }
 }
 

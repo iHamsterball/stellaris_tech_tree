@@ -1,0 +1,358 @@
+##################
+### TECH COSTS ###
+##################
+#If you change any of these, use replace in files so the values are the same across all files
+
+@tier1cost1 = 360
+@tier1cost2 = 480
+@tier1cost3 = 600
+@tier1cost4 = 720
+
+@tier2cost1 = 1000
+@tier2cost2 = 1400
+@tier2cost3 = 1800
+@tier2cost4 = 2200
+
+@tier3cost1 = 3000
+@tier3cost2 = 4000
+@tier3cost3 = 5000
+@tier3cost4 = 6000
+
+@tier4cost1 = 7000
+@tier4cost2 = 8000
+@tier4cost3 = 9000
+@tier4cost4 = 10000
+
+@repeatableTechBaseCost = 1500
+@repeatableTechLevelCost = 480
+
+####################
+### TECH WEIGHTS ###
+####################
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+@tier1weight4 = 85
+
+@tier2weight1 = 75
+@tier2weight2 = 70
+@tier2weight3 = 65
+@tier2weight4 = 60
+
+@tier3weight1 = 50
+@tier3weight2 = 45
+@tier3weight3 = 40
+@tier3weight4 = 35
+
+@tier4weight1 = 30
+
+@repeatableTechWeight = 25
+@repatableTechFactor = 0.5
+
+########################
+# OVERALL TECH BALANCE #
+########################
+
+# Physics = 22
+# Society = 17
+# Engineering = 30
+
+######################
+# TECHS IN THIS FILE #
+######################
+
+# TOTAL = 7
+
+# Reinforced Shields - Physics - Unlocks NSC's Level 6 Shields
+# Hyper Shields - Physics - Unlocks NSC's version of Hyper Shields, level 7
+# Baryonic Shields - Physics - Unlocks NSC's Level 8 Shields
+# Multilayered Shields - Physics - Unlocks NSC's Level 9 Shields
+# Multiphasic Shields - Physics - Unlocks NSC's Level 10 Shields
+# Optimized Psionic Shields - Physics - Unlocks NSC's upgraded "special" Psionic Shielding
+# Optimized Enigmatic Shields - Physics - Unlocks NSC's upgraded "special" Enigmatic Shielding
+
+# ##################
+# ##################
+# ##################
+
+tech_shields_6_NSC = {
+	area = physics
+	cost = @tier3cost3
+	tier = 3
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_shields_5" "tech_block_shields" }
+	weight = @tier3weight2
+	
+	modifier = { planet_fortification_strength = 0.2 }
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_shields_6_NSC }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 40 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_shields_7_NSC = {
+	area = physics
+	cost = @tier3cost4
+	tier = 3
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_shields_6_NSC" }
+	weight = @tier3weight2
+	
+	modifier = { planet_fortification_strength = 0.2 }
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_shields_7_NSC }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 40 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_shields_8_NSC = {
+	area = physics
+	cost = @tier4cost1
+	tier = 3
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_shields_7_NSC" }
+	weight = @tier3weight3
+	
+	modifier = { planet_fortification_strength = 0.2 }
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_shields_8_NSC }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 40 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_shields_9_NSC = {
+	area = physics
+	cost = @tier4cost2
+	tier = 3
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_shields_8_NSC" }
+	weight = @tier3weight3
+	
+	modifier = { planet_fortification_strength = 0.2 }
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_shields_9_NSC }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 40 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_shields_10_NSC = {
+	area = physics
+	cost = @tier4cost3
+	tier = 3
+	category = { field_manipulation }
+	is_rare = yes
+	ai_update_type = all
+	prerequisites = { "tech_shields_9_NSC" }
+	weight = @tier3weight4
+	
+	modifier = { planet_fortification_strength = 0.2 }
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_shields_10_NSC }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 40 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_shields_11_psionic_NSC = {
+	area = physics
+	cost = @tier4cost4
+	tier = 3
+	category = { field_manipulation }
+	is_rare = yes
+	ai_update_type = all
+	prerequisites = { "tech_shields_10_NSC" "tech_psionic_shield" }
+	weight = @tier3weight4
+	
+	modifier = { planet_fortification_strength = 0.2 }
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_shields_11_psionic_NSC }
+		}
+		modifier = {
+			factor = 5
+			has_technology = tech_psionic_shield
+		}	
+		modifier = {
+			factor = 2
+			has_technology = tech_shields_10_NSC
+		}	
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 40 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_shields_12_enigmatic_NSC = {
+	area = physics
+	cost = @tier4cost4
+	tier = 3
+	category = { field_manipulation }
+	is_rare = yes
+	ai_update_type = all
+	prerequisites = { "tech_shields_10_NSC" "tech_enigmatic_deflector" }
+	weight = @tier3weight4
+	
+	modifier = { planet_fortification_strength = 0.2 }
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_shields_12_enigmatic_NSC }
+		}
+		modifier = {
+			factor = 5
+			has_technology = tech_enigmatic_deflector
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 40 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}

@@ -14007,12 +14007,6 @@ action_declare_war = {
 				is_country_type = awakened_fallen_empire		
 			}
 		}
-		02_AWAKENED_EMPIRE_DOW_ACCEPT = {
-			trigger = {
-				is_country_type = awakened_fallen_empire
-				FROM = { NOT = { has_authority = auth_machine_intelligence } }	
-			}
-		}
 		AWAKENED_EMPIRE_MECH_DOW_ACCEPT_01 = {
 			trigger = {
 				is_country_type = awakened_fallen_empire

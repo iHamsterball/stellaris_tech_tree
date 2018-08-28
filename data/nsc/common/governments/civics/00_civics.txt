@@ -573,7 +573,8 @@ civic_fanatic_purifiers = {
 	modifier = {
 		ship_fire_rate_mult = 0.33
 		army_damage_mult = 0.33
-		tradition_cost_num_xeno_slaves_mult = -1.00
+		spaceport_ship_build_cost_mult = -0.15
+		navy_size_mult = 0.33
 	}
 }
 
@@ -915,7 +916,8 @@ civic_hive_devouring_swarm = {
 		ship_auto_repair_add = 0.005
 		army_damage_mult = 0.40
 		category_biology_research_speed_mult = 0.20
-		tradition_cost_num_xeno_slaves_mult = -1.00
+		spaceport_ship_build_cost_mult = -0.15
+		navy_size_mult = 0.33
 	}
 }
 
@@ -970,7 +972,9 @@ civic_machine_terminator = {
 	}
 	description = civic_tooltip_machine_terminator_effects
 	modifier = {
-		ship_weapon_damage = 0.20
+		ship_weapon_damage = 0.25
+		spaceport_ship_build_cost_mult = -0.15
+		navy_size_mult = 0.33
 	}
 }
 

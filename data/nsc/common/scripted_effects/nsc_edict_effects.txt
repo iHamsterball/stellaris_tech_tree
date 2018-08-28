@@ -1,0 +1,531 @@
+#################################
+# NSC EDICT COUNT CHECK EFFECTS #
+#################################
+
+count_nsc_mineral_edicts = {
+	set_variable = {
+		which = "nsc_mineral_edicts"
+		value = 0
+	}
+	every_owned_planet = { set_planet_flag = "nsc_mineral_edict_count" }
+	while = {
+		limit = { any_owned_planet = { has_planet_flag = "nsc_mineral_edict_count" } }
+		# XXX check that we also actually control the planet.
+		random_owned_planet = {
+			limit = { has_planet_flag = "nsc_mineral_edict_count" }
+			if = {
+				limit = { has_edict = nsc_mineral_boost }
+				prev = {
+					change_variable = {
+						which = "nsc_mineral_edicts"
+						value = 1 # +1
+					}
+				}
+			}
+			# Make sure we dont loop forever.
+			remove_planet_flag = "nsc_mineral_edict_count"
+			# Now we loop every owned planet with the while coding.
+		}
+	}
+}
+
+count_nsc_energy_edicts = {
+	set_variable = {
+		which = "nsc_energy_edicts"
+		value = 0
+	}
+	every_owned_planet = { set_planet_flag = "nsc_energy_edict_count" }
+	while = {
+		limit = { any_owned_planet = { has_planet_flag = "nsc_energy_edict_count" } }
+		# XXX check that we also actually control the planet.
+		random_owned_planet = {
+			limit = { has_planet_flag = "nsc_energy_edict_count" }
+			if = {
+				limit = { has_edict = nsc_energy_boost }
+				prev = {
+					change_variable = {
+						which = "nsc_energy_edicts"
+						value = 1 # +1
+					}
+				}
+			}
+			# Make sure we dont loop forever.
+			remove_planet_flag = "nsc_energy_edict_count"
+			# Now we loop every owned planet with the while coding.
+		}
+	}
+}
+
+count_nsc_food_edicts = {
+	set_variable = {
+		which = "nsc_food_edicts"
+		value = 0
+	}
+	every_owned_planet = { set_planet_flag = "nsc_food_edict_count" }
+	while = {
+		limit = { any_owned_planet = { has_planet_flag = "nsc_food_edict_count" } }
+		# XXX check that we also actually control the planet.
+		random_owned_planet = {
+			limit = { has_planet_flag = "nsc_food_edict_count" }
+			if = {
+				limit = { has_edict = nsc_food_boost }
+				prev = {
+					change_variable = {
+						which = "nsc_food_edicts"
+						value = 1 # +1
+					}
+				}
+			}
+			# Make sure we dont loop forever.
+			remove_planet_flag = "nsc_food_edict_count"
+			# Now we loop every owned planet with the while coding.
+		}
+	}
+}
+
+nsc_reset_mineral_edict_cost = {
+	remove_modifier = nsc_mineral_edict_cost_1
+	remove_modifier = nsc_mineral_edict_cost_2
+	remove_modifier = nsc_mineral_edict_cost_3
+	remove_modifier = nsc_mineral_edict_cost_4
+	remove_modifier = nsc_mineral_edict_cost_5
+	remove_modifier = nsc_mineral_edict_cost_6
+	remove_modifier = nsc_mineral_edict_cost_7
+	remove_modifier = nsc_mineral_edict_cost_8
+	remove_modifier = nsc_mineral_edict_cost_9
+	remove_modifier = nsc_mineral_edict_cost_10
+	remove_modifier = nsc_mineral_edict_overcost
+	
+	count_nsc_mineral_edicts = yes
+
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_mineral_edicts"
+				value = 1
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_mineral_edict_cost_1"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_mineral_edicts"
+				value = 2
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_mineral_edict_cost_2"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_mineral_edicts"
+				value = 3
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_mineral_edict_cost_3"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_mineral_edicts"
+				value = 4
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_mineral_edict_cost_4"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_mineral_edicts"
+				value = 5
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_mineral_edict_cost_5"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_mineral_edicts"
+				value = 6
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_mineral_edict_cost_6"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_mineral_edicts"
+				value = 7
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_mineral_edict_cost_7"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_mineral_edicts"
+				value = 8
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_mineral_edict_cost_8"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_mineral_edicts"
+				value = 9
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_mineral_edict_cost_9"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_mineral_edicts"
+				value = 10
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_mineral_edict_cost_10"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_mineral_edicts"
+				value > 10
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_mineral_edict_overcost"
+			days = -1
+		}
+	}
+}
+
+nsc_reset_energy_edict_cost = {
+	remove_modifier = nsc_energy_edict_cost_1
+	remove_modifier = nsc_energy_edict_cost_2
+	remove_modifier = nsc_energy_edict_cost_3
+	remove_modifier = nsc_energy_edict_cost_4
+	remove_modifier = nsc_energy_edict_cost_5
+	remove_modifier = nsc_energy_edict_cost_6
+	remove_modifier = nsc_energy_edict_cost_7
+	remove_modifier = nsc_energy_edict_cost_8
+	remove_modifier = nsc_energy_edict_cost_9
+	remove_modifier = nsc_energy_edict_cost_10
+	remove_modifier = nsc_energy_edict_overcost
+	
+	count_nsc_energy_edicts = yes
+
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_energy_edicts"
+				value = 1
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_energy_edict_cost_1"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_energy_edicts"
+				value = 2
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_energy_edict_cost_2"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_energy_edicts"
+				value = 3
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_energy_edict_cost_3"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_energy_edicts"
+				value = 4
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_energy_edict_cost_4"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_energy_edicts"
+				value = 5
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_energy_edict_cost_5"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_energy_edicts"
+				value = 6
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_energy_edict_cost_6"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_energy_edicts"
+				value = 7
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_energy_edict_cost_7"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_energy_edicts"
+				value = 8
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_energy_edict_cost_8"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_energy_edicts"
+				value = 9
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_energy_edict_cost_9"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_energy_edicts"
+				value = 10
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_energy_edict_cost_10"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_energy_edicts"
+				value > 10
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_energy_edict_overcost"
+			days = -1
+		}
+	}
+}
+
+nsc_reset_food_edict_cost = {
+	remove_modifier = nsc_food_edict_cost_1
+	remove_modifier = nsc_food_edict_cost_2
+	remove_modifier = nsc_food_edict_cost_3
+	remove_modifier = nsc_food_edict_cost_4
+	remove_modifier = nsc_food_edict_cost_5
+	remove_modifier = nsc_food_edict_cost_6
+	remove_modifier = nsc_food_edict_cost_7
+	remove_modifier = nsc_food_edict_cost_8
+	remove_modifier = nsc_food_edict_cost_9
+	remove_modifier = nsc_food_edict_cost_10
+	remove_modifier = nsc_food_edict_overcost
+	
+	count_nsc_food_edicts = yes
+
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_food_edicts"
+				value = 1
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_food_edict_cost_1"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_food_edicts"
+				value = 2
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_food_edict_cost_2"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_food_edicts"
+				value = 3
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_food_edict_cost_3"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_food_edicts"
+				value = 4
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_food_edict_cost_4"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_food_edicts"
+				value = 5
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_food_edict_cost_5"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_food_edicts"
+				value = 6
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_food_edict_cost_6"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_food_edicts"
+				value = 7
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_food_edict_cost_7"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_food_edicts"
+				value = 8
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_food_edict_cost_8"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_food_edicts"
+				value = 9
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_food_edict_cost_9"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_food_edicts"
+				value = 10
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_food_edict_cost_10"
+			days = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = "nsc_food_edicts"
+				value > 25
+			}
+		}
+		add_modifier = {
+			modifier = "nsc_food_edict_overcost"
+			days = -1
+		}
+	}
+}

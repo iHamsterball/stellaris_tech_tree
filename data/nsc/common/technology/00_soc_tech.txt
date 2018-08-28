@@ -598,9 +598,15 @@ tech_colonization_2 = {
 			factor = 0
 			OR = {
 				has_government = gov_machine_empire
-				has_government = gov_machine_terminator
 				has_government = gov_machine_research
 				has_government = gov_machine_industrial
+				AND = {
+					has_authority = auth_machine_intelligence
+					NOT = {
+						has_government = gov_machine_servitor
+						has_government = gov_machine_assimilator
+					}
+				}
 			}
 		}
 	}
@@ -794,15 +800,15 @@ tech_frontier_health = {
 	weight_modifier = {
 		factor = 2
 		modifier = {
-			factor = 0
-			has_authority = auth_machine_intelligence
-		}
-		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = society
 				has_trait = "leader_trait_expertise_biology"
 			}
+		}
+		modifier = {
+			factor = 0
+			has_authority = auth_machine_intelligence
 		}
 	}
 }
@@ -819,15 +825,15 @@ tech_frontier_hospital = {
 	weight_modifier = {
 		factor = 2
 		modifier = {
-			factor = 0
-			has_authority = auth_machine_intelligence
-		}
-		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = society
 				has_trait = "leader_trait_expertise_biology"
 			}
+		}
+		modifier = {
+			factor = 0
+			has_authority = auth_machine_intelligence
 		}
 	}
 }
@@ -1769,7 +1775,10 @@ tech_genome_mapping = {
 		factor = 1.5 	# genetech needs to be a bit more common
 		modifier = {
 			factor = 0
-			has_authority = auth_machine_intelligence
+			AND = {
+				has_authority = auth_machine_intelligence
+				NOT = { has_civic = civic_machine_assimilator }
+			}
 		}
 		modifier = {
 			factor = 1.25
@@ -1814,7 +1823,10 @@ tech_vitality_boosters = {
 		factor = 1.5 	# genetech needs to be a bit more common
 		modifier = {
 			factor = 0
-			has_authority = auth_machine_intelligence
+			AND = {
+				has_authority = auth_machine_intelligence
+				NOT = { has_civic = civic_machine_assimilator }
+			}
 		}
 		modifier = {
 			factor = 1.25
@@ -1937,7 +1949,10 @@ tech_cloning = {
 		factor = 1.5 	# genetech needs to be a bit more common
 		modifier = {
 			factor = 0
-			has_authority = auth_machine_intelligence
+			AND = {
+				has_authority = auth_machine_intelligence
+				NOT = { has_civic = civic_machine_assimilator }
+			}
 		}
 		modifier = {
 			factor = 1.25
@@ -2232,14 +2247,7 @@ tech_gene_tailoring = {
 		description_parameters = {
 			POINTS = @tech_gene_tailoring_POINTS
 		}
-		HUM_species_trait_points_add = @tech_gene_tailoring_POINTS
-		MAM_species_trait_points_add = @tech_gene_tailoring_POINTS
-		REP_species_trait_points_add = @tech_gene_tailoring_POINTS
-		AVI_species_trait_points_add = @tech_gene_tailoring_POINTS
-		ART_species_trait_points_add = @tech_gene_tailoring_POINTS
-		MOL_species_trait_points_add = @tech_gene_tailoring_POINTS
-		FUN_species_trait_points_add = @tech_gene_tailoring_POINTS
-		PLANT_species_trait_points_add = @tech_gene_tailoring_POINTS
+		BIOLOGICAL_species_trait_points_add = @tech_gene_tailoring_POINTS
 	}
 	
 	feature_flags = {
@@ -2251,7 +2259,10 @@ tech_gene_tailoring = {
 		factor = 1.5 	# genetech needs to be a bit more common
 		modifier = {
 			factor = 0
-			has_authority = auth_machine_intelligence
+			AND = {
+				has_authority = auth_machine_intelligence
+				NOT = { has_civic = civic_machine_assimilator }
+			}
 		}
 		modifier = {
 			factor = 1.25
@@ -2296,7 +2307,10 @@ tech_glandular_acclimation = {
 		factor = 1.5 	# genetech needs to be a bit more common
 		modifier = {
 			factor = 0
-			has_authority = auth_machine_intelligence
+			AND = {
+				has_authority = auth_machine_intelligence
+				NOT = { has_civic = civic_machine_assimilator }
+			}
 		}
 		modifier = {
 			factor = 1.25
@@ -2364,21 +2378,17 @@ tech_gene_expressions = {
 		description_parameters = {
 			POINTS = @tech_gene_expressions_POINTS
 		}
-		HUM_species_trait_points_add = @tech_gene_expressions_POINTS
-		MAM_species_trait_points_add = @tech_gene_expressions_POINTS
-		REP_species_trait_points_add = @tech_gene_expressions_POINTS
-		AVI_species_trait_points_add = @tech_gene_expressions_POINTS
-		ART_species_trait_points_add = @tech_gene_expressions_POINTS
-		MOL_species_trait_points_add = @tech_gene_expressions_POINTS
-		FUN_species_trait_points_add = @tech_gene_expressions_POINTS
-		PLANT_species_trait_points_add = @tech_gene_expressions_POINTS
+		BIOLOGICAL_species_trait_points_add = @tech_gene_expressions_POINTS
 	}
 	
 	weight_modifier = {
 		factor = 0.5
 		modifier = {
 			factor = 0
-			has_authority = auth_machine_intelligence
+			AND = {
+				has_authority = auth_machine_intelligence
+				NOT = { has_civic = civic_machine_assimilator }
+			}
 		}
 		modifier = {
 			factor = 1.25
@@ -2505,7 +2515,10 @@ tech_capacity_boosters = {
 		factor = 0.5
 		modifier = {
 			factor = 0
-			has_authority = auth_machine_intelligence
+			AND = {
+				has_authority = auth_machine_intelligence
+				NOT = { has_civic = civic_machine_assimilator }
+			}
 		}
 		modifier = {
 			factor = 0.20

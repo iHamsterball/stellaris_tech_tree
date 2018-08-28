@@ -28,3 +28,57 @@ count_nsc_mansions = {
 		}
 	}
 }
+
+count_nsc_dens = {
+	set_variable = {
+		which = "nsc_dens"
+		value = 0
+	}
+	every_owned_planet = { set_planet_flag = "nsc_den_count" }
+	while = {
+		limit = { any_owned_planet = { has_planet_flag = "nsc_den_count" } }
+		# XXX check that we also actually control the planet.
+		random_owned_planet = {
+			limit = { has_planet_flag = "nsc_den_count" }
+			if = {
+				limit = { any_tile = { has_building = building_queen_den } }
+				prev = {
+					change_variable = {
+						which = "nsc_dens"
+						value = 1 # +1
+					}
+				}
+			}
+			# Make sure we dont loop forever.
+			remove_planet_flag = "nsc_den_count"
+			# Now we loop every owned planet with the while coding.
+		}
+	}
+}
+
+count_nsc_hubs = {
+	set_variable = {
+		which = "nsc_hubs"
+		value = 0
+	}
+	every_owned_planet = { set_planet_flag = "nsc_hub_count" }
+	while = {
+		limit = { any_owned_planet = { has_planet_flag = "nsc_hub_count" } }
+		# XXX check that we also actually control the planet.
+		random_owned_planet = {
+			limit = { has_planet_flag = "nsc_hub_count" }
+			if = {
+				limit = { any_tile = { has_building = building_primary_network_hub } }
+				prev = {
+					change_variable = {
+						which = "nsc_hubs"
+						value = 1 # +1
+					}
+				}
+			}
+			# Make sure we dont loop forever.
+			remove_planet_flag = "nsc_hub_count"
+			# Now we loop every owned planet with the while coding.
+		}
+	}
+}

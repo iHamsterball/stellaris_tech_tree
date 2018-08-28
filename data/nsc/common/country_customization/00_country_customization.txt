@@ -27,11 +27,11 @@ machines = {
 	}
 
 	graphical_culture_for_random_empire = {
-		mammalian_01 = {
+		humanoid_01 = {
 			modifier = { add = 1 species_portrait = "default_robot" }
 			modifier = { add = 1 species_portrait = "sd_hum_robot" }
-			modifier = { add = 1 species_portrait = "sd_mam_robot" }
 		}
+		mammalian_01 = { modifier = { add = 1 species_portrait = "sd_mam_robot" } }
 		reptilian_01 = { modifier = { add = 1 species_portrait = "sd_rep_robot" } }
 		avian_01 = { modifier = { add = 1 species_portrait = "sd_avi_robot" } }
 		arthropoid_01 = { modifier = { add = 1 species_portrait = "sd_art_robot" } }

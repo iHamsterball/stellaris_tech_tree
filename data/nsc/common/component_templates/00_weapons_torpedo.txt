@@ -92,7 +92,8 @@ weapon_component_template = {
 weapon_component_template = {
 	key = "ENERGY_TORPEDO_1"
 	size = torpedo
-	entity = "turret_energy_torpedo_entity"
+	#entity = "turret_energy_torpedo_entity"
+	entity = "turret_torpedo_entity"
 	type = instant
 	
 	icon = "GFX_ship_part_energy_torpedo_1"
@@ -121,7 +122,8 @@ weapon_component_template = {
 weapon_component_template = {
 	key = "ENERGY_TORPEDO_2"
 	size = torpedo
-	entity = "turret_energy_torpedo_entity"
+	#entity = "turret_energy_torpedo_entity"
+	entity = "turret_torpedo_entity"
 	type = instant
 	
 	icon = "GFX_ship_part_energy_torpedo_2"

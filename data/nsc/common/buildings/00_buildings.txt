@@ -4475,6 +4475,7 @@ building_hospital = {
 				OR = {
 					has_building = "building_capital_2"
 					has_building = "building_capital_3"
+					has_building = "building_hab_capital"
 				}
 			}
 		}
@@ -4755,10 +4756,11 @@ building_hive_synapse = {
 	
 	produced_resources = {
 		energy = 2
+		unity = 2
 	}
 	
 	planet_modifier = {
-		pop_non_slave_resource_output = 0.05
+		pop_resource_output = 0.05
 	}
 	
 	ai_allow = {
@@ -4784,6 +4786,7 @@ building_hive_synapse = {
 
 building_symbol_purity = {
 	base_buildtime = 240
+	planet_unique = yes
 	
 	cost = {
 		minerals = 150
@@ -4806,7 +4809,7 @@ building_symbol_purity = {
 	}
 	
 	produced_resources = {
-		unity = 3
+		unity = 4
 	}
 	
 	planet_modifier = {

@@ -20,7 +20,7 @@ utility_component_template = {
 	power = -100
 	cost = 150
 
-	modifier = { ship_sensor_range_mult = 0.25 }
+	ship_modifier = { ship_sensor_range_mult = 0.25 }
 	
 	prerequisites = { "tech_advanced_warship_components_1" }
 	component_set = "special_ship_slot"
@@ -52,7 +52,7 @@ utility_component_template = {
 	power = -75
 	cost = 100
 	
-	modifier = { ship_evasion_mult = 0.10 }
+	modifier = { ship_evasion_mult = 0.1 }
 	
 	prerequisites = { "tech_advanced_warship_components_2" }
 	class_restriction = { shipclass_military }
@@ -70,7 +70,7 @@ utility_component_template = {
 	power = -50
 	cost = 100
 	
-	modifier = { ship_accuracy_add = 3 }
+	ship_modifier = { ship_accuracy_add = 3 }
 	
 	prerequisites = { "tech_advanced_warship_components_1" }
 	component_set = "special_ship_slot"
@@ -87,8 +87,8 @@ utility_component_template = {
 	cost = 100
 	
 	modifier = {
-		ship_weapon_damage = 0.10
-		ship_fire_rate_mult = 0.10
+		ship_weapon_damage = 0.1
+		ship_fire_rate_mult = 0.1
 	}
 	
 	prerequisites = { "tech_advanced_warship_components_1" }
@@ -105,7 +105,7 @@ utility_component_template = {
 	power = -100
 	cost = 100
 	
-	modifier = { ship_hitpoints_mult = 0.10 }
+	modifier = { ship_hitpoints_mult = 0.1 }
 	
 	prerequisites = { "tech_advanced_warship_components_2" }
 	component_set = "special_ship_slot"
@@ -121,7 +121,7 @@ utility_component_template = {
 	power = -50
 	cost = 100
 	
-	modifier = { ship_shield_hp_mult = 0.10 }
+	modifier = { ship_shield_hp_mult = 0.1 }
 	
 	prerequisites = { "tech_advanced_warship_components_1" }
 	component_set = "special_ship_slot"
@@ -138,9 +138,9 @@ utility_component_template = {
 	cost = 100
 	
 	modifier = {
-		ship_combat_speed_mult = 0.20
-		ship_speed_mult = 0.20
-		ship_reparation_speed_mult = 0.10
+		ship_combat_speed_mult = 0.2
+		ship_speed_mult = 0.2
+		ship_reparation_speed_mult = 0.1
 	}
 	
 	prerequisites = { "tech_advanced_warship_components_1" }
@@ -159,7 +159,7 @@ utility_component_template = {
 	power = -75
 	cost = 100
 	
-	modifier = { ship_shield_regen_add_perc = 0.05 }
+	modifier = { ship_shield_regen_mult = 0.1 }
 	
 	prerequisites = { "tech_advanced_warship_components_2" }
 	component_set = "special_ship_slot"
@@ -176,10 +176,10 @@ utility_component_template = {
 	power = -75
 	cost = 100
 	
-	modifier = {
-		ship_windup_mult = -0.10
-		ship_winddown_mult = -0.10
-		ship_interstellar_speed_mult = 0.10
+	ship_modifier = {
+		ship_windup_mult = -0.1
+		ship_winddown_mult = -0.1
+		ship_interstellar_speed_mult = 0.1
 	}
 	
 	prerequisites = { "tech_advanced_warship_components_2" }
@@ -198,17 +198,18 @@ utility_component_template = {
 	power = -25
 	cost = 1
 	
+	ship_modifier = { ship_sensor_range_mult = 0.01 }
+	
 	modifier = {
-		ship_fire_rate_mult = 0.01
+		ship_hitpoints_mult = 0.01
+		ship_armor_mult = 0.01
 		ship_weapon_damage = 0.01
+		ship_fire_rate_mult = 0.01
 		ship_shield_hp_mult = 0.01
 		ship_evasion_mult = 0.01
 		ship_combat_speed_mult = 0.01
 		ship_speed_mult = 0.01
-		ship_sensor_range_mult = 0.01
-		ship_hitpoints_mult = 0.01
-		ship_armor_mult = 0.01
-	}
+		}
 	
 	component_set = "KITCHEN_SINK"
 	
@@ -223,7 +224,7 @@ utility_component_template = {
 	power = -75
 	cost = 150
 
-	modifier = {
+	ship_modifier = {
 		ship_ftl_wormhole_range_mult = 0.25
 		ship_ftl_warp_range_mult = 0.25
 		ship_ftl_jumpdrive_range_mult = 0.25

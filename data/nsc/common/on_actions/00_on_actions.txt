@@ -17,7 +17,6 @@ on_yearly_pulse = {
 		crisis.205
 		crisis.208
 		crisis.1254
-		crisis.206
 		crisis.2080
 		crisis.2310
 		action.64 # species assimilation
@@ -25,10 +24,11 @@ on_yearly_pulse = {
 }
 
 # No scope, like on_game_start
-#on_bi_yearly_pulse = {
-#	events = {
-#	}
-#}
+on_bi_yearly_pulse = {
+	events = {
+		crisis.206	
+	}
+}
 
 # No scope, like on_game_start
 on_five_year_pulse = {

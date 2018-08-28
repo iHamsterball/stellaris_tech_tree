@@ -5,7 +5,7 @@
  ####################################
 
  captainx3.1.name: "Flagship Launched"
- captainx3.1.desc: "After working tirelessly for years, your people have finally finished construction of the §YFlagship§!, the pride of your fleet!\n\nHowever, the massive expenditure of resources and time required to build it took a heavy toll on your empire.\n\n§PBecause of the overwhelming costs, your workers will strike if you attempt to build another Flagship. When you finish the second Flagship, the first Flagship will be destroyed, although the rest of the fleet will remain intacted. We highly recommend you don't build a second without removing the original!§!"
+ captainx3.1.desc: "After working tirelessly for years, your people have finally finished construction of the §YFlagship§!, the pride of your fleet!\n\nHowever, the massive expenditure of resources and time required to build it took a heavy toll on your empire.\n\n§PBecause of the overwhelming costs, your workers will strike if you attempt to build another Flagship. When you finish the second Flagship, the first Flagship will be destroyed, although the rest of the fleet will remain intact. We highly recommend you don't build a second without removing the original!§!"
 
  captainx3.2.name: "Flagship Lost"
  captainx3.2.desc: "With the loss of your empire's Flagship, your citizens have offered their full support for construction of a replacement at your discretion."
@@ -46,7 +46,12 @@
  nsc_powerbonus_9: "Power Station Storage:: 45000"
  nsc_powerbonus_10: "Power Station Storage:: 50000"
 
- mansion_limit: "Corruption (Too Many Mansions)"
+ mansion_limit: "Government Corruption"
+ mansion_limit_desc: "The governors of your various worlds have become complacent, lazy, and inefficient. To return your government to working order, make sure you have no more than 50 Mansions in your empire."
+ den_limit: "Mental Aphasia"
+ den_limit_desc: "The number of Hive Queens with independent autonomy in the empire has grown to the point where the hive is now jacked-up and little reaches consensus. To allow your hive to return to harmonious consensus, have no more than 50 Queen's Dens in your empire."
+ hub_limit: "Network Lag"
+ hub_limit_desc: "The number of units with semi-autonomous authority within the network has grown to the point where the network's latency is at unacceptable levels. To get the latency back to acceptable levels, check there are no more than 50 Primary Network Hubs within your empire."
 
  nscflagchoice.1.a: "Bring it on!"
  nscflagchoice.1.b: "No thanks, I'm good."

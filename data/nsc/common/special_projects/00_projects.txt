@@ -3298,7 +3298,16 @@ special_project = {
 special_project = {
 	key = "AI_CRISIS_PROJECT"
 	event_chain = "ai_crisis_chain"
-	cost = 10000
+	cost = {
+		base = 600
+		scaled_modifier = {
+			limit = {
+			}
+			scope = this
+			add = 100
+			calc = pop_count
+		}
+	}
 	tech_department = engineering_technology
 	picture = GFX_evt_sapient_AI
 

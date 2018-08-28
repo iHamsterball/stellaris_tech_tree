@@ -393,7 +393,10 @@
 	}
 
 	NGameplay = {
+		RANDOM_START_DISTANCE = 100		# The minimum distance at which empires will spawn from each other in random start
+	
 		SHROUD_FLAG = "breached_shroud"
+		GUARDIANS_OF_THE_GALAXY_FLAG = "guardians_of_the_galaxy"
 		
 		DECADENCE_START = 20	# After this many years of being awakened, an awakened empire will experience decadence
 		DECADENCE_CHANCE = 0.5	# Chance of decadence increasing each month (multiplied by total size of empire & subjects)
@@ -559,6 +562,8 @@
 		PLANET_FORTIFICATION_DEFENSE_MIN	= 0.5		# At 0% fortification divide damage to defending armies by this
 		PLANET_FORTIFICATION_REPAIR 		= 0.01		# Each day
 		PLANET_FORTIFICATION_REPAIR_BOMBARDMENT 		= 0.25		# Repair is this much less during bombardment (mult)
+		PLANET_FORTIFICATION_REPAIR_DELAY 	= 60	# Days since being bombarded before repairs can be done at full speed
+		PLANET_FORTIFICATION_MAX_COMBAT_REPAIR 	= 20	# Max repair while being bombarded
 		MAX_BOMBARD_FLEET_SIZE				= 200	# Fleet size over this won't be counted for how fast planetary defenses are bombed down
 
 		ELECTION_COST						= 200 	# Base cost of electing a candidate
@@ -938,6 +943,10 @@
 		MILITARY_POWER_DAMAGE_WEIGHT		= 0.5
 		MILITARY_POWER_SCALE				= 0.12
 		MILITARY_POWER_EXPONENT				= 0.75	# math: power = ( ( effective_health * damage_per_day ) ^ exponent ) * scale
+		
+		MILITARY_POWER_HIGH					= 10000
+		MILITARY_POWER_REDUCE				= 0.05
+		MILITARY_POWER_MAX_REDUCE			= 0.85
 		
 		# below values determine how large an effect special values such as shield penetration have on the military power of a weapon
 		MILITARY_POWER_ARMOR_PENETRATION_WEIGHT = 1.0	# larger value = adds more military power
@@ -1502,7 +1511,7 @@
 		FLEET_BALANCE_THREAT = 0.5				# If FleetPower of AI / FleetPower of Enemy is lower than this AI will consider the country a threat
 		ENERGY_MONTHS_FACTOR_WAR = 12			# Energy are supposed to last this many months when used to buy new ships in war
 		ENEMY_FLEET_POWER_MULT = 1.2			# AI will need the the fleet power of the enemy multiplied by this value to become offensive in an offensive war
-		ENEMY_ARMY_POWER_MULT = 1.5				# AI will need the the military power of the enemy multiplied by this value to land armies on planet
+		ENEMY_ARMY_POWER_MULT = 1.0				# AI will need the the military power of the enemy multiplied by this value to land armies on planet
 		ENEMY_NEUTRALS_FLEET_POWER_MULT = 2	# AI will need the the fleet power of the enemy multiplied by this value to attack neutrals and space hostiles
 		ENEMY_FLEET_POWER_HOME_SYSTEM_MULT = 1.0 # AI will need the fleet power of the enemy multiplied by this value to attack hostiles in own systems
 		PRIO_BASE_FRACTION = 0.80				# Prio base fraction for example if prio is assault arsenal fraction will be set to this value

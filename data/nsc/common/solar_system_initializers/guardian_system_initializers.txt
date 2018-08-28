@@ -22,9 +22,9 @@ guardians_artist_init_01 = {
 			is_fe_cluster = yes
 		}
 		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
+           factor = 0
+           has_star_flag = empire_cluster
+       }
 	}
 
 	max_instances = 1
@@ -67,105 +67,63 @@ guardians_artist_init_01 = {
 				traits = random
 				homeworld = this
 			}
-			if = {
-				limit = {
-					NOT = {
-						exists = event_target:artist_enclave_country
+
+			create_country = {
+				name = "NAME_Artisan_Troupe"
+				type = enclave
+				authority = "auth_democratic"
+				civics = { civic = civic_artist_collective }
+				species = last_created
+				flag = {
+					icon = {
+						category = "enclaves"
+						file = "enclaves_flag_artist.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "vertical.dds"
+					}
+					colors = {
+						"dark_purple"
+						"purple"
+						"null"
+						"null"
 					}
 				}
-				create_country = {
-					name = "NAME_Artisan_Troupe"
-					type = enclave
-					authority = "auth_democratic"
-					civics = {
-						civic = civic_artist_collective
-					}
-					species = last_created
-					flag = {
-						icon = {
-							category = "enclaves"
-							file = "enclaves_flag_artist.dds"
-						}
-						background = {
-							category = "backgrounds"
-							file = "vertical.dds"
-						}
-						colors = {
-							"dark_purple"
-							"purple"
-							"null"
-							"null"
-						}
-					}
-					ethos = {
-						ethic = ethic_fanatic_xenophile
-						ethic = ethic_spiritualist
-					}
-					ignore_initial_colony_error = yes
+				ethos = {
+					ethic = ethic_fanatic_xenophile
+					ethic = ethic_spiritualist
 				}
-				last_created_country = {
-					save_global_event_target_as = artist_enclave_country
-					set_country_flag = artist_enclave_country
-					set_graphical_culture = mammalian_01
-					create_fleet = {
-						name = "NAME_Ars_Artem"
-						settings = { spawn_debris = no }
-						effect = {
-							set_owner = prev
-							create_ship = {
-								name = random
-								design = "NAME_Artist_Enclave_Station"
-								graphical_culture = prev
-							}
-							set_location = {
-								target = prevprev
-								distance = 90
-							}
-							save_event_target_as = CustomCapital
-							prev = {
-								set_custom_capital_location = event_target:CustomCapital
-							}
-						}
-					}
-					create_leader = {
-						type = ruler
-						species = prev
-						name = random
-						skill = 2000
-					}
-					set_leader = last_created_leader
-				}
-				else = {
-					event_target:artist_enclave_country = {
-						create_fleet = {
-							name = "NAME_Ars_Artem"
-							settings = { spawn_debris = no }
-							effect = {
-								set_owner = prev
-								create_ship = {
-									name = random
-									design = "NAME_Artist_Enclave_Station"
-									graphical_culture = prev
-									#effect = {
-									#	save_event_target_as = station_location
-									#}
-								}
-								set_location = {
-									target = prevprev
-									distance = 90
-								}
-								set_fleet_flag = artist_enclave_station
-							}
-						}
-						create_leader = {
-							type = ruler
-							species = prev
+				ignore_initial_colony_error = yes
+			}
+			last_created_country = {
+				set_country_flag = artist_enclave_country
+				set_graphical_culture = mammalian_01
+				create_fleet = {
+					name = "NAME_Ars_Artem"
+					settings = { spawn_debris = no }
+					effect = {
+						set_owner = prev
+						create_ship = {
 							name = random
-							skill = 2000
+							design = "NAME_Artist_Enclave_Station"
+							graphical_culture = prev
 						}
-						set_leader = last_created_leader
+						set_location = {
+							target = prevprev
+							distance = 90
+						}
+						save_event_target_as = CustomCapital
+						prev = { set_custom_capital_location = event_target:CustomCapital }
 					}
 				}
+				create_leader = {
+					type = ruler
+					species = prev
+					name = random
+					skill = 2000
+				}
+				set_leader = last_created_leader
 			}
 		}
 	}
@@ -186,9 +144,7 @@ guardians_artist_init_01 = {
 		size = 60
 	}
 	
-	init_effect = {
-		###
-	}
+	init_effect = {}
 }
 
 # Artists II 
@@ -207,9 +163,9 @@ guardians_artist_init_02 = {
 			is_fe_cluster = yes
 		}
 		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
+			factor = 0
+			has_star_flag = empire_cluster
+		}
 	}
 
 	max_instances = 1
@@ -252,105 +208,63 @@ guardians_artist_init_02 = {
 				traits = random
 				homeworld = this
 			}
-			if = {
-				limit = {
-					NOT = {
-						exists = event_target:artist_enclave_country
+
+			create_country = {
+				name = "NAME_Artisan_Troupe"
+				type = enclave
+				authority = "auth_democratic"
+				civics = { civic = civic_artist_collective }
+				species = last_created
+				flag = {
+					icon = {
+						category = "enclaves"
+						file = "enclaves_flag_artist.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "vertical.dds"
+					}
+					colors = {
+						"dark_purple"
+						"purple"
+						"null"
+						"null"
 					}
 				}
-				create_country = {
-					name = "NAME_Artisan_Troupe"
-					type = enclave
-					authority = "auth_democratic"
-					civics = {
-						civic = civic_artist_collective
-					}
-					species = last_created
-					flag = {
-						icon = {
-							category = "enclaves"
-							file = "enclaves_flag_artist.dds"
-						}
-						background = {
-							category = "backgrounds"
-							file = "vertical.dds"
-						}
-						colors = {
-							"dark_purple"
-							"purple"
-							"null"
-							"null"
-						}
-					}
-					ethos = {
-						ethic = ethic_fanatic_xenophile
-						ethic = ethic_spiritualist
-					}
-					ignore_initial_colony_error = yes
+				ethos = {
+					ethic = ethic_fanatic_xenophile
+					ethic = ethic_spiritualist
 				}
-				last_created_country = {
-					save_global_event_target_as = artist_enclave_country
-					set_country_flag = artist_enclave_country
-					set_graphical_culture = mammalian_01
-					create_fleet = {
-						name = "NAME_Ars_Artem"
-						settings = { spawn_debris = no }
-						effect = {
-							set_owner = prev
-							create_ship = {
-								name = random
-								design = "NAME_Artist_Enclave_Station"
-								graphical_culture = prev
-							}
-							set_location = {
-								target = prevprev
-								distance = 90
-							}
-							save_event_target_as = CustomCapital
-							prev = {
-								set_custom_capital_location = event_target:CustomCapital
-							}
-						}
-					}
-					create_leader = {
-						type = ruler
-						species = prev
-						name = random
-						skill = 2000
-					}
-					set_leader = last_created_leader
-				}
-				else = {
-					event_target:artist_enclave_country = {
-						create_fleet = {
-							name = "NAME_Ars_Artem"
-							settings = { spawn_debris = no }
-							effect = {
-								set_owner = prev
-								create_ship = {
-									name = random
-									design = "NAME_Artist_Enclave_Station"
-									graphical_culture = prev
-									#effect = {
-									#	save_event_target_as = station_location
-									#}
-								}
-								set_location = {
-									target = prevprev
-									distance = 90
-								}
-								set_fleet_flag = artist_enclave_station
-							}
-						}
-						create_leader = {
-							type = ruler
-							species = prev
+				ignore_initial_colony_error = yes
+			}
+			last_created_country = {
+				set_country_flag = artist_enclave_country
+				set_graphical_culture = mammalian_01
+				create_fleet = {
+					name = "NAME_Ars_Artem"
+					settings = { spawn_debris = no }
+					effect = {
+						set_owner = prev
+						create_ship = {
 							name = random
-							skill = 2000
+							design = "NAME_Artist_Enclave_Station"
+							graphical_culture = prev
 						}
-						set_leader = last_created_leader
+						set_location = {
+							target = prevprev
+							distance = 90
+						}
+						save_event_target_as = CustomCapital
+						prev = { set_custom_capital_location = event_target:CustomCapital }
 					}
 				}
+				create_leader = {
+					type = ruler
+					species = prev
+					name = random
+					skill = 2000
+				}
+				set_leader = last_created_leader
 			}
 		}
 	}
@@ -371,9 +285,7 @@ guardians_artist_init_02 = {
 		size = 60
 	}
 	
-	init_effect = {
-		###
-	}
+	init_effect = {}
 }
 
 # Artists III
@@ -392,9 +304,9 @@ guardians_artist_init_03 = {
 			is_fe_cluster = yes
 		}
 		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
+			factor = 0
+			has_star_flag = empire_cluster
+		}
 	}
 
 	max_instances = 1
@@ -436,105 +348,63 @@ guardians_artist_init_03 = {
 				traits = random
 				homeworld = this
 			}
-			if = {
-				limit = {
-					NOT = {
-						exists = event_target:artist_enclave_country
+
+			create_country = {
+				name = "NAME_Artisan_Troupe"
+				type = enclave
+				authority = "auth_democratic"
+				civics = { civic = civic_artist_collective }
+				species = last_created
+				flag = {
+					icon = {
+						category = "enclaves"
+						file = "enclaves_flag_artist.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "vertical.dds"
+					}
+					colors = {
+						"dark_purple"
+						"purple"
+						"null"
+						"null"
 					}
 				}
-				create_country = {
-					name = "NAME_Artisan_Troupe"
-					type = enclave
-					authority = "auth_democratic"
-					civics = {
-						civic = civic_artist_collective
-					}
-					species = last_created
-					flag = {
-						icon = {
-							category = "enclaves"
-							file = "enclaves_flag_artist.dds"
-						}
-						background = {
-							category = "backgrounds"
-							file = "vertical.dds"
-						}
-						colors = {
-							"dark_purple"
-							"purple"
-							"null"
-							"null"
-						}
-					}
-					ethos = {
-						ethic = ethic_fanatic_xenophile
-						ethic = ethic_spiritualist
-					}
-					ignore_initial_colony_error = yes
+				ethos = {
+					ethic = ethic_fanatic_xenophile
+					ethic = ethic_spiritualist
 				}
-				last_created_country = {
-					save_global_event_target_as = artist_enclave_country
-					set_country_flag = artist_enclave_country
-					set_graphical_culture = mammalian_01
-					create_fleet = {
-						name = "NAME_Ars_Artem"
-						settings = { spawn_debris = no }
-						effect = {
-							set_owner = prev
-							create_ship = {
-								name = random
-								design = "NAME_Artist_Enclave_Station"
-								graphical_culture = prev
-							}
-							set_location = {
-								target = prevprev
-								distance = 90
-							}
-							save_event_target_as = CustomCapital
-							prev = {
-								set_custom_capital_location = event_target:CustomCapital
-							}
-						}
-					}
-					create_leader = {
-						type = ruler
-						species = prev
-						name = random
-						skill = 2000
-					}
-					set_leader = last_created_leader
-				}
-				else = {
-					event_target:artist_enclave_country = {
-						create_fleet = {
-							name = "NAME_Ars_Artem"
-							settings = { spawn_debris = no }
-							effect = {
-								set_owner = prev
-								create_ship = {
-									name = random
-									design = "NAME_Artist_Enclave_Station"
-									graphical_culture = prev
-									#effect = {
-									#	save_event_target_as = station_location
-									#}
-								}
-								set_location = {
-									target = prevprev
-									distance = 90
-								}
-								set_fleet_flag = artist_enclave_station
-							}
-						}
-						create_leader = {
-							type = ruler
-							species = prev
+				ignore_initial_colony_error = yes
+			}
+			last_created_country = {
+				set_country_flag = artist_enclave_country
+				set_graphical_culture = mammalian_01
+				create_fleet = {
+					name = "NAME_Ars_Artem"
+					settings = { spawn_debris = no }
+					effect = {
+						set_owner = prev
+						create_ship = {
 							name = random
-							skill = 2000
+							design = "NAME_Artist_Enclave_Station"
+							graphical_culture = prev
 						}
-						set_leader = last_created_leader
+						set_location = {
+							target = prevprev
+							distance = 90
+						}
+						save_event_target_as = CustomCapital
+						prev = { set_custom_capital_location = event_target:CustomCapital }
 					}
 				}
+				create_leader = {
+					type = ruler
+					species = prev
+					name = random
+					skill = 2000
+				}
+				set_leader = last_created_leader
 			}
 		}
 	}
@@ -555,9 +425,7 @@ guardians_artist_init_03 = {
 		size = 60
 	}
 	
-	init_effect = {
-		###
-	}
+	init_effect = {}
 }
 
 # Curators I
@@ -576,9 +444,9 @@ guardians_curator_init_01 = {
 			is_fe_cluster = yes
 		}
 		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
+			factor = 0
+			has_star_flag = empire_cluster
+		}
 	}
 
 	max_instances = 1
@@ -604,9 +472,7 @@ guardians_curator_init_01 = {
 				name = "NAME_Curator_Alpha_Enclave"
 				type = enclave
 				authority = "auth_oligarchic"
-				civics = {
-					civic = civic_ancient_preservers
-				}
+				civics = { civic = civic_ancient_preservers }
 				species = last_created
 				flag = {
 					icon = {
@@ -649,9 +515,7 @@ guardians_curator_init_01 = {
 							distance = 100
 						}
 						save_event_target_as = CustomCapital
-						prev = {
-							set_custom_capital_location = event_target:CustomCapital
-						}
+						prev = { set_custom_capital_location = event_target:CustomCapital }
 					}
 				}
 				create_leader = {
@@ -666,7 +530,7 @@ guardians_curator_init_01 = {
 	}
 	
 	change_orbit = 60
-
+	
 	planet = {
 		count = 3
 		orbit_distance = 25
@@ -692,9 +556,9 @@ guardians_curator_init_02 = {
 			is_fe_cluster = yes
 		}
 		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
+			factor = 0
+			has_star_flag = empire_cluster
+		}
 	}
 
 	max_instances = 1
@@ -723,9 +587,7 @@ guardians_curator_init_02 = {
 				name = "NAME_Curator_Sigma_Enclave"
 				type = enclave
 				authority = "auth_oligarchic"
-				civics = {
-					civic = civic_ancient_preservers
-				}
+				civics = { civic = civic_ancient_preservers }
 				species = last_created
 				flag = {
 					icon = {
@@ -767,9 +629,7 @@ guardians_curator_init_02 = {
 							distance = 120
 						}
 						save_event_target_as = CustomCapital
-						prev = {
-							set_custom_capital_location = event_target:CustomCapital
-						}	
+						prev = { set_custom_capital_location = event_target:CustomCapital }	
 					}
 				}
 				create_leader = {
@@ -800,9 +660,9 @@ guardians_curator_init_03 = {
 			is_fe_cluster = yes
 		}
 		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
+			factor = 0
+			has_star_flag = empire_cluster
+		}
 	}
 
 	max_instances = 1
@@ -831,9 +691,7 @@ guardians_curator_init_03 = {
 				name = "NAME_Curator_Lambda_Enclave"
 				type = enclave
 				authority = "auth_oligarchic"
-				civics = {
-					civic = civic_ancient_preservers
-				}
+				civics = { civic = civic_ancient_preservers }
 				species = last_created
 				flag = {
 					icon = {
@@ -875,9 +733,7 @@ guardians_curator_init_03 = {
 							distance = 90
 						}
 						save_event_target_as = CustomCapital
-						prev = {
-							set_custom_capital_location = event_target:CustomCapital
-						}
+						prev = { set_custom_capital_location = event_target:CustomCapital }
 						set_fleet_flag = curator_enclave_station
 					}
 				}
@@ -939,9 +795,9 @@ guardians_trader_init_01 = {
 			is_fe_cluster = yes
 		}
 		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
+			factor = 0
+			has_star_flag = empire_cluster
+		}
 	}
 
 	max_instances = 1
@@ -975,11 +831,7 @@ guardians_trader_init_01 = {
 
 		init_effect = {
 			if = {
-				limit = {
-					NOT = {
-						exists = event_target:GuardiansTradersPlanet
-					}
-				}
+				limit = { NOT = { exists = event_target:GuardiansTradersPlanet } }
 				save_event_target_as = GuardiansTradersPlanet
 				set_planet_flag = guardians_traders_planet
 				create_species = {
@@ -987,18 +839,14 @@ guardians_trader_init_01 = {
 					plural = Xuri
 					class = random_non_machine
 					portrait = random
-					traits = {
-						trait = trait_thrifty
-					}
+					traits = { trait = trait_thrifty }
 					#homeworld = this
 				}
 				create_country = {
 					name = "NAME_XuraCorp"
 					type = enclave
 					authority = "auth_oligarchic"
-					civics = {
-						civic = civic_trading_conglomerate
-					}
+					civics = { civic = civic_trading_conglomerate }
 					species = last_created
 					flag = {
 						icon = {
@@ -1041,9 +889,7 @@ guardians_trader_init_01 = {
 								distance = 90
 							}
 							save_event_target_as = CustomCapital
-							prev = {
-								set_custom_capital_location = event_target:CustomCapital
-							}
+							prev = { set_custom_capital_location = event_target:CustomCapital }
 							set_fleet_flag = trader_enclave_station
 						}
 					}
@@ -1076,9 +922,9 @@ guardians_trader_init_02 = {
 			is_fe_cluster = yes
 		}
 		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
+			factor = 0
+			has_star_flag = empire_cluster
+		}
 	}
 
 	max_instances = 1
@@ -1113,11 +959,7 @@ guardians_trader_init_02 = {
 
 		init_effect = {
 			if = {
-				limit = {
-					NOT = {
-						exists = event_target:GuardiansTradersPlanet
-					}
-				}
+				limit = { NOT = { exists = event_target:GuardiansTradersPlanet } }
 				save_event_target_as = GuardiansTradersPlanet
 				set_planet_flag = guardians_traders_planet
 				create_species = {
@@ -1125,18 +967,14 @@ guardians_trader_init_02 = {
 					plural = Riggans
 					class = random_non_machine
 					portrait = random
-					traits = {
-						trait = trait_thrifty
-					}
+					traits = { trait = trait_thrifty }
 					#homeworld = this
 				}
 				create_country = {
 					name = "NAME_Riggan_Commerce_Exchange"
 					type = enclave
 					authority = "auth_oligarchic"
-					civics = {
-						civic = civic_trading_conglomerate
-					}
+					civics = { civic = civic_trading_conglomerate }
 					species = last_created
 					flag = {
 						icon = {
@@ -1180,9 +1018,7 @@ guardians_trader_init_02 = {
 								distance = 90
 							}
 							save_event_target_as = CustomCapital
-							prev = {
-								set_custom_capital_location = event_target:CustomCapital
-							}
+							prev = { set_custom_capital_location = event_target:CustomCapital }
 							set_fleet_flag = trader_enclave_station
 						}
 					}
@@ -1215,9 +1051,9 @@ guardians_trader_init_03 = {
 			is_fe_cluster = yes
 		}
 		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
+			factor = 0
+			has_star_flag = empire_cluster
+		}
 	}
 
 	max_instances = 1
@@ -1252,11 +1088,7 @@ guardians_trader_init_03 = {
 
 		init_effect = {
 			if = {
-				limit = {
-					NOT = {
-						exists = event_target:GuardiansTradersPlanet
-					}
-				}
+				limit = { NOT = { exists = event_target:GuardiansTradersPlanet } }
 				save_event_target_as = GuardiansTradersPlanet
 				set_planet_flag = guardians_traders_planet
 				create_species = {
@@ -1264,18 +1096,14 @@ guardians_trader_init_03 = {
 					plural = Muutagans
 					class = random_non_machine
 					portrait = random
-					traits = {
-						trait = trait_thrifty
-					}
+					traits = { trait = trait_thrifty }
 					#homeworld = this
 				}
 				create_country = {
 					name = "NAME_Muutagan_Merchant_Guild"
 					type = enclave
 					authority = "auth_oligarchic"
-					civics = {
-						civic = civic_trading_conglomerate
-					}
+					civics = { civic = civic_trading_conglomerate }
 					species = last_created
 					flag = {
 						icon = {
@@ -1293,6 +1121,7 @@ guardians_trader_init_03 = {
 							"null"
 						}
 					}
+					#ethos = random
 					ethos = {
 						ethic = ethic_xenophile
 						ethic = ethic_materialist
@@ -1319,9 +1148,7 @@ guardians_trader_init_03 = {
 								distance = 90
 							}
 							save_event_target_as = CustomCapital
-							prev = {
-								set_custom_capital_location = event_target:CustomCapital
-							}
+							prev = { set_custom_capital_location = event_target:CustomCapital }
 							set_fleet_flag = trader_enclave_station
 						}
 					}
@@ -1341,33 +1168,23 @@ guardians_trader_init_03 = {
 ### END OF: ENCLAVES ###
 
 ### GUARDIANS SYSTEM ###
-# Stellarites
+
+
+#####################
+# Stellarite System #
+#####################
+
+#XXX - Customization Rules:
+#1. Star must be very small. No bigger than 15.
+#2. One planet in system MUST be a Frozen World size 25 for event coding.
+
 guardians_init_stellarites = {
 	class = rl_dwarf_stars
-	usage = misc_system_init
-	usage_odds = {
-		base = 0
-		modifier = {
-			has_leviathans = yes
-			add = 100
-		}
-		modifier = {
-			factor = 0
-			OR = {
-				is_fe_cluster = yes
-				has_star_flag = empire_cluster
-			}
-		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
-	}
-
-	max_instances = 1
-	scaled_spawn_chance = 8	# scales by galaxy size (1000 stars = 10x base)
-	
 	flags = { guardians_stellarite_system guardian hostile_system }
+	
+	#init_effect = {
+	#	set_name = "Stellarite" #ZZZ - Used to easily locate system during testing. NOT meant for any public release.
+	#}
 	
 	asteroids_distance = { min = 30 max = 120 }
 	
@@ -1376,55 +1193,80 @@ guardians_init_stellarites = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = { min = 20 max = 30 }
+		size = 15 #ZZZ - 5 is subtracted at end of system initializer... so shrinkage can be changed easily?
 		has_ring = no
 	}
 	
 	change_orbit = 45
 	
 	planet = {
-		count = { min = 1 max = 2 }
+		count = 1
+		class = pc_barren_cold
 		orbit_distance = 20
-		orbit_angle = { min = 90 max = 270 }
-		size = { min = 10 max = 25 }
+		orbit_angle = random
+		size = 15
+		has_ring = no
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = 1
+			#class = pc_barren_cold
+			orbit_angle = random
+			size = { min = 4 max = 8 }
+		}
+	}
+	
+	change_orbit = 15
+	
+	planet = {
+		count = 1
+		class = pc_barren_cold
+		orbit_distance = 20
+		orbit_angle = random
+		
 		change_orbit = @base_moon_distance
 		
 		moon = {
 			count = { min = 0 max = 1 }
-			orbit_angle = { min = 90 max = 270 }
-			size = { min = 10 max = 14 }
+			class = pc_barren
+			orbit_angle = random
 			orbit_distance = 5
+			size = { min = 5 max = 10 }
 		}
 	}
+	
+	change_orbit = 15
 
 	planet = {
 		class = pc_frozen
-		count = { min = 1 max = 1 }
+		count = 1
 		orbit_distance = 20
-		size = { min = 15 max = 25 }
+		size = 25 #XXX - If this changes from 25, remember to change the size to match whatever "setup" formula is used in guardian.1018 for the Gaia/Tundra world setup. Make sure you don't have more deposit setups than tiles.
 		orbit_angle = { min = 90 max = 270 }
 	}
+	
+	change_orbit = 15
 
 	planet = {
-		count = { min = 1 max = 2 }
+		count = 1
+		class =	pc_gas_giant
 		orbit_distance = 20
-		orbit_angle = { min = 90 max = 270 }
-		size = { min = 10 max = 25 }
+		orbit_angle = random
+		size = 23
+		
 		change_orbit = @base_moon_distance
 		
 		moon = {
-			count = { min = 0 max = 1 }
-			orbit_angle = { min = 90 max = 270 }
-			size = { min = 10 max = 14 }
+			count = 3
+			orbit_angle = random
 			orbit_distance = 5
 		}
 	}
 	
 	init_effect = {
 		random_system_planet = {
-			limit = {
-				is_star = yes
-			}
+			limit = { is_star = yes }
 			change_planet_size = -5
 		}
 	}
@@ -1432,31 +1274,7 @@ guardians_init_stellarites = {
 
 ### Ether Drake
 guardians_init_dragon = {
-	class = sc_k
-	
-	usage = misc_system_init
-	usage_odds = {
-		base = 0
-		modifier = {
-			has_leviathans = yes
-			add = 100
-		}
-		modifier = {
-			factor = 0
-			OR = {
-				is_fe_cluster = yes
-				has_star_flag = empire_cluster
-			}
-		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
-	}
-
-	max_instances = 1
-	scaled_spawn_chance = 8	# scales by galaxy size (1000 stars = 10x base)
-
+	class = sc_m
 	flags = { guardians_dragon_system guardian hostile_system }
 
 	planet = {
@@ -1464,123 +1282,34 @@ guardians_init_dragon = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = { min = 20 max = 30 }
+		size = 60
 		has_ring = no
+		init_effect = {
+			if = {
+				limit = { NOT = { exists = event_target:nsc_first_dragon_star } }
+				save_global_event_target_as = nsc_first_dragon_star
+			}
+		}
 	}
 	
-	change_orbit = 10
+	change_orbit = 25
 
 	# Hoard
 	planet = {
 		count = 1
 		orbit_distance = 20
-		orbit_angle = 20
-		size = 5
+		orbit_angle = random
+		size = 10
 		has_ring = no
 
 		init_effect = {
 			set_name = "NAME_Dragons_Hoard"
 			set_planet_flag = hoard_planet
-			save_global_event_target_as = guardian_dragon_planet
+			save_event_target_as = guardian_dragon_planet
 			prevent_anomaly = yes
 			orbital_deposit_tile = {
 				clear_deposits = yes
 				add_deposit = d_guardian_dragon_hoard
-			}
-
-			create_country = {
-				name = "NAME_Voidwyrm"
-				type = guardian_dragon
-				flag = {
-					icon = {
-						category = "zoological"
-						file = "flag_zoological_5.dds"
-					}
-					background= {
-						category = "backgrounds"
-						file = "00_solid.dds"
-					}
-					colors={
-						"red"
-						"red"
-						"null"
-						"null"
-					}
-				}
-			}
-			last_created_country = {
-				guardian_difficulty = yes
-				save_global_event_target_as = guardian_dragon_country
-				set_country_flag = dragon_country
-			}
-
-			create_fleet = {
-				name = "NAME_Ether_Drake"
-				settings = {
-					spawn_debris = no
-					is_boss = yes
-				}
-				effect = {
-					set_owner = event_target:guardian_dragon_country
-					create_ship = {
-						name = "NAME_Avice"
-						design = "NAME_Grand_Dragon"
-					}
-					set_fleet_flag = dragon_fleet
-					set_location = event_target:guardian_dragon_planet
-					set_fleet_stance = aggressive
-					set_aggro_range_measure_from = self
-					set_aggro_range = 500
-					queue_actions = {
-						repeat = {
-							find_closest_planet = {
-								trigger = {
-									id = dragon.home.1
-									is_star = yes
-								}
-								found_planet = {
-									move_to = this
-									orbit_planet = this
-									wait = {
-										duration = 30
-										random = 20
-									}
-								}
-							}
-							find_closest_planet = {
-								trigger = {
-									id = dragon.home.2
-									is_star = no
-									NOT = {
-										is_same_value = event_target:guardian_dragon_planet
-									}
-								}
-								found_planet = {
-									move_to = this
-									orbit_planet = this
-									wait = {
-										duration = 30
-										random = 20
-									}
-								}
-							}
-							find_closest_planet = {
-								trigger = {
-									id = dragon.home.3
-									is_same_value = event_target:guardian_dragon_planet
-								}
-								found_planet = {
-									move_to = this
-									orbit_planet = this
-									wait = {
-										duration = 30
-										random = 20
-									}
-								}
-							}
-						}
-					}
-				}
 			}
 		}
 	}
@@ -1588,19 +1317,67 @@ guardians_init_dragon = {
 	change_orbit = 15
 	
 	planet = {
-		count = { min = 1 max = 4 }
-		orbit_distance = 20
-		orbit_angle = { min = 90 max = 270 }
+		name = "NAME_Dragonfire_Glory"
+		orbit_distance = { min = 20 max = 30 }
+		class = pc_gaia
+		orbit_angle = random
+		size = 25
+		has_ring = yes
+		modifiers = none
+		init_effect = {
+			prevent_anomaly = yes
+			nsc_rich_random_25_tile_world_setup = yes
+		}
+	}
+	
+	change_orbit = 15
+	
+	planet = {
+		orbit_distance = { min = 20 max = 30 }
+		class = pc_gas_giant
+		entity = "gas_giant_01_entity"
+		orbit_angle = random
+		size = 24
+		has_ring = yes
+		modifiers = none
 		
 		change_orbit = @base_moon_distance
 		
 		moon = {
-			count = { min = 0 max = 1 }
-			orbit_angle = { min = 90 max = 270 }
+			count = { min = 1 max = 3 }
+			orbit_angle = random
 			orbit_distance = 5
 		}
-
-		init_effect = {
+	}
+	
+	planet = {
+		orbit_distance = { min = 20 max = 30 }
+		class = pc_molten
+		orbit_angle = random
+		size = 16
+		has_ring = no
+		modifiers = none
+	}
+	
+	planet = {
+		orbit_distance = { min = 20 max = 30 }
+		class = pc_barren
+		orbit_angle = random
+		size = 13
+		has_ring = no
+		modifiers = none
+	}
+	
+	init_effect = {
+		random_system_planet = {
+			limit = { has_planet_flag = "hoard_planet" }
+			nsc_dragon_create = yes
+			last_created_fleet = {
+				create_ship = {
+					name = "NAME_Dragonfire"
+					design = "NAME_Grand_Red_Dragon"
+				}
+			}
 		}
 	}
 }
@@ -1609,38 +1386,28 @@ guardians_init_dragon = {
 guardians_init_horror = {
 	class = "sc_black_hole"
 	usage = misc_system_init
-	
 	flags = { guardians_horror_system guardian hostile_system }
-	
-	usage_odds = {
-		base = 0
-		modifier = {
-			has_leviathans = yes
-			add = 100
-		}
-		modifier = {
-			factor = 0
-			OR = {
-				is_fe_cluster = yes
-				has_star_flag = empire_cluster
-			}
-		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
-	}
-
-	max_instances = 1
-	scaled_spawn_chance = 8	# scales by galaxy size (1000 stars = 10x base)
 	
 	planet = {
 		count = 1
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = { min = 20 max = 30 }
+		size = 70
 		has_ring = no
+		init_effect = {
+			set_planet_flag = horror_portal
+			save_event_target_as = guardian_horror_blackhole
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				#Total should be 10 of each research + 1 Dark Matter
+				add_deposit = d_enormous3_engineering_deposit #10 Engineering
+				add_deposit = d_enormous3_society_deposit #10 Society
+				add_deposit = d_immense_physics_deposit #4 Physics
+				add_deposit = d_physics_deposit #1 Physics
+				add_deposit = d_dark_matter_deposit #5 Physics + 1 Dark Matter
+			}
+		}
 	}
 }
 
@@ -1649,37 +1416,14 @@ guardians_init_dreadnought = {
 	class = "rl_standard_stars"
 	usage = misc_system_init
 	asteroids_distance = 50
-	
 	flags = { guardians_dreadnought_system guardian hostile_system }
-	
-	usage_odds = {
-		base = 0
-		modifier = {
-			has_leviathans = yes
-			add = 100
-		}
-		modifier = {
-			factor = 0
-			OR = {
-				is_fe_cluster = yes
-				has_star_flag = empire_cluster
-			}
-		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
-	}
-
-	max_instances = 1
-	scaled_spawn_chance = 8	# scales by galaxy size (1000 stars = 10x base)
 	
 	planet = {
 		count = 1
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = { min = 20 max = 30 }
+		size = 50
 		has_ring = no
 		flags = { patrol_1 }
 		
@@ -1707,29 +1451,20 @@ guardians_init_dreadnought = {
 			}
 			last_created_country = {
 				if = {
-					limit = {
-						NOT = {
-							has_modifier = dreadnought_power
-						}
-					}
+					limit = { NOT = { has_modifier = dreadnought_power } }
 					add_modifier = {
 						modifier = dreadnought_power
 						days = -1
 					}
 				}					
 				guardian_difficulty = yes
-				save_global_event_target_as = automated_dreadnought_country
 				set_country_flag = automated_dreadnought_country
 			}
 			create_fleet = {
 				name = "NAME_Automated_Dreadnought"
-				settings = {
-					spawn_debris = no
-					is_boss = yes
-				}
+				settings = { spawn_debris = no is_boss = yes }
 				effect = {
-					set_owner = event_target:automated_dreadnought_country
-					save_global_event_target_as = automated_dreadnought
+					set_owner = last_created_country
 					create_ship = {
 						name = "NAME_JuukTidir"
 						design = "NAME_Relic"
@@ -1737,7 +1472,7 @@ guardians_init_dreadnought = {
 					}
 					set_location = {
 						target = event_target:dreadnought_sun
-						distance = 0
+						distance = 30
 						angle = random
 					}
 					set_fleet_stance = aggressive
@@ -1754,9 +1489,7 @@ guardians_init_dreadnought = {
 								found_planet = {
 									move_to = this
 									orbit_planet = this
-									wait = {
-										duration = 30
-									}
+									wait = { duration = 30 }
 								}
 							}
 							find_closest_planet  = {
@@ -1767,9 +1500,7 @@ guardians_init_dreadnought = {
 								found_planet = {
 									move_to = this
 									orbit_planet = this
-									wait = {
-										duration = 30
-									}
+									wait = { duration = 30 }
 								}
 							}
 							find_closest_planet  = {
@@ -1780,9 +1511,7 @@ guardians_init_dreadnought = {
 								found_planet = {
 									move_to = this
 									orbit_planet = this
-									wait = {
-										duration = 30
-									}
+									wait = { duration = 30 }
 								}
 							}
 							find_closest_planet  = {
@@ -1793,9 +1522,7 @@ guardians_init_dreadnought = {
 								found_planet = {
 									move_to = this
 									orbit_planet = this
-									wait = {
-										duration = 30
-									}
+									wait = { duration = 30 }
 								}
 							}
 							find_closest_planet  = {
@@ -1806,9 +1533,7 @@ guardians_init_dreadnought = {
 								found_planet = {
 									move_to = this
 									orbit_planet = this
-									wait = {
-										duration = 30
-									}
+									wait = { duration = 30 }
 								}
 							}
 							find_closest_planet  = {
@@ -1819,9 +1544,7 @@ guardians_init_dreadnought = {
 								found_planet = {
 									move_to = this
 									orbit_planet = this
-									wait = {
-										duration = 30
-									}
+									wait = { duration = 30 }
 								}
 							}
 							find_closest_planet  = {
@@ -1832,9 +1555,7 @@ guardians_init_dreadnought = {
 								found_planet = {
 									move_to = this
 									orbit_planet = this
-									wait = {
-										duration = 30
-									}
+									wait = { duration = 30 }
 								}
 							}
 							find_closest_planet  = {
@@ -1845,9 +1566,7 @@ guardians_init_dreadnought = {
 								found_planet = {
 									move_to = this
 									orbit_planet = this
-									wait = {
-										duration = 30
-									}
+									wait = { duration = 30 }
 								}
 							}
 						}
@@ -1880,30 +1599,14 @@ guardians_init_dreadnought = {
 	change_orbit = 25
 	
 	planet = {
-		class = "rl_habitable_normal"
+		class = "pc_desert"
 		orbit_distance = 0
 		orbit_angle = 85
-		size = 16
+		size = 25
 		has_ring = no
 		flags = { patrol_3 }
 		
-		init_effect = {
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_city_ruins"
-				set_deposit = d_vast_engineering_deposit					
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_city_ruins"
-				set_deposit = d_vast_society_deposit				
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_city_ruins"
-				set_deposit = d_vast_physics_deposit					
-			}
-		}
+		init_effect = { nsc_rich_random_25_tile_world_setup = yes }
 		
 		change_orbit = @base_moon_distance
 		
@@ -1917,44 +1620,37 @@ guardians_init_dreadnought = {
 	change_orbit = 25
 	
 	planet = {
-		class = "rl_habitable_normal"
+		class = "pc_continental"
 		orbit_distance = 0
 		orbit_angle = 85
-		size = 20
+		size = 25
 		has_ring = yes
 		flags = { patrol_4 }
 		
-		init_effect = {
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_city_ruins"
-				set_deposit = d_vast_engineering_deposit					
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_city_ruins"
-				set_deposit = d_vast_society_deposit				
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_city_ruins"
-				set_deposit = d_vast_physics_deposit					
-			}
-		}
+		init_effect = { nsc_rich_random_25_tile_world_setup = yes }
 	}
 	
 	planet = {
-		class = "pc_barren"
-		orbit_distance = 25
+		class = "pc_arctic"
 		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 25
+		size = 25
+		has_ring = no
 		flags = { patrol_5 }
+		
+		init_effect = { nsc_rich_random_25_tile_world_setup = yes }
 		
 		change_orbit = @base_moon_distance
 		
 		moon = {
-			class = "pc_barren_cold"
+			class = "pc_frozen"
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
+		}
+		moon = {
+			class = "pc_frozen"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 7
 		}
 	}
 	
@@ -1974,6 +1670,8 @@ guardians_init_dreadnought = {
 		size = 35
 		has_ring = no
 		flags = { patrol_7 }
+		
+		change_orbit = @base_moon_distance
 		
 		moon = {
 			size = 6
@@ -1996,7 +1694,7 @@ guardians_init_dreadnought = {
 	}
 	
 	planet = {
-		class = "pc_frozen"
+		class = "pc_barren_cold"
 		orbit_distance = 35
 		orbit_angle = { min = 90 max = 270 }
 		size = 8
@@ -2009,30 +1707,11 @@ guardians_init_hive = {
 	class = "rl_standard_stars"
 	usage = misc_system_init
 	asteroids_distance = 160
-	
 	flags = { guardians_hive_system guardian hostile_system }
 	
-	usage_odds = {
-		base = 0
-		modifier = {
-			has_leviathans = yes
-			add = 100
-		}
-		modifier = {
-			factor = 0
-			OR = {
-				is_fe_cluster = yes
-				has_star_flag = empire_cluster
-			}
-		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
-	}
-
-	max_instances = 1
-	scaled_spawn_chance = 8	# scales by galaxy size (1000 stars = 10x base)
+	#init_effect = {
+	#	set_name = "Hive" #ZZZ - Used to easily indentify system while testing, should NOT be in any released version
+	#}
 	
 	planet = {
 		count = 1
@@ -2043,9 +1722,7 @@ guardians_init_hive = {
 		has_ring = no
 		
 		init_effect = {
-			create_ambient_object = {
-				type = "dormant_hive_base_object"
-			}
+			create_ambient_object = { type = "dormant_hive_base_object" }
 			last_created_ambient_object = {
 				set_location = {
 					target = PREV
@@ -2054,9 +1731,7 @@ guardians_init_hive = {
 				}
 				set_ambient_object_flag = hive_asteroid_1
 			}
-			create_ambient_object = {
-				type = "dormant_hive_base_object"
-			}
+			create_ambient_object = { type = "dormant_hive_base_object" }
 			last_created_ambient_object = {
 				set_location = {
 					target = PREV
@@ -2065,9 +1740,7 @@ guardians_init_hive = {
 				}
 				set_ambient_object_flag = hive_asteroid_2
 			}
-			create_ambient_object = {
-				type = "dormant_hive_base_object"
-			}
+			create_ambient_object = { type = "dormant_hive_base_object" }
 			last_created_ambient_object = {
 				set_location = {
 					target = PREV
@@ -2076,9 +1749,7 @@ guardians_init_hive = {
 				}
 				set_ambient_object_flag = hive_asteroid_3
 			}
-			create_ambient_object = {
-				type = "dormant_hive_base_object"
-			}
+			create_ambient_object = { type = "dormant_hive_base_object" }
 			last_created_ambient_object = {
 				set_location = {
 					target = PREV
@@ -2087,9 +1758,7 @@ guardians_init_hive = {
 				}
 				set_ambient_object_flag = hive_asteroid_4
 			}
-			create_ambient_object = {
-				type = "dormant_hive_base_object"
-			}
+			create_ambient_object = { type = "dormant_hive_base_object" }
 			last_created_ambient_object = {
 				set_location = {
 					target = PREV
@@ -2098,9 +1767,7 @@ guardians_init_hive = {
 				}
 				set_ambient_object_flag = hive_asteroid_5
 			}
-			create_ambient_object = {
-				type = "dormant_hive_base_object"
-			}
+			create_ambient_object = { type = "dormant_hive_base_object" }
 			last_created_ambient_object = {
 				set_location = {
 					target = PREV
@@ -2122,9 +1789,7 @@ guardians_init_hive = {
 		
 		init_effect = {
 			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				add_deposit = d_guardian_hiver_asteroid_1
-			}
+			orbital_deposit_tile = { add_deposit = d_guardian_hiver_asteroid_1 }
 		}
 	}
 	planet = {
@@ -2135,9 +1800,7 @@ guardians_init_hive = {
 		
 		init_effect = {
 			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				add_deposit = d_guardian_hiver_asteroid_2
-			}
+			orbital_deposit_tile = { add_deposit = d_guardian_hiver_asteroid_2 }
 		}
 	}
 	planet = {
@@ -2148,9 +1811,7 @@ guardians_init_hive = {
 		
 		init_effect = {
 			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				add_deposit = d_guardian_hiver_asteroid_1
-			}
+			orbital_deposit_tile = { add_deposit = d_guardian_hiver_asteroid_1 }
 		}
 	}
 	planet = {
@@ -2161,9 +1822,7 @@ guardians_init_hive = {
 		
 		init_effect = {
 			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				add_deposit = d_guardian_hiver_asteroid_2
-			}
+			orbital_deposit_tile = { add_deposit = d_guardian_hiver_asteroid_2 }
 		}
 	}
 	planet = {
@@ -2174,9 +1833,7 @@ guardians_init_hive = {
 		
 		init_effect = {
 			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				add_deposit = d_guardian_hiver_asteroid_1
-			}
+			orbital_deposit_tile = { add_deposit = d_guardian_hiver_asteroid_1 }
 		}
 	}
 	
@@ -2184,39 +1841,33 @@ guardians_init_hive = {
 	
 	planet = {
 		class = "pc_gas_giant"
-		count = { min = 1 max = 3 }
+		count = 1
 		orbit_distance = 35
+		has_ring = yes
 		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = 20
+		
+		moon = {
+			orbit_distance = 7
+			class = pc_gaia
+			orbit_angle = random
+			size = 25
+			has_ring = yes
+			modifiers = none
+			init_effect = {
+				prevent_anomaly = yes
+				set_planet_flag = hive_gaia
+				nsc_rich_random_25_tile_world_setup = yes
+			}
+		}
 	}
 }
 
 #Technosphere
 guardians_init_technosphere = {
 	name = "NAME_Gargantua"
-	class = sc_black_hole
-	usage = misc_system_init
-	usage_odds = {
-		base = 0
-		modifier = {
-			has_leviathans = yes
-			add = 100
-		}
-		modifier = {
-			factor = 0
-			OR = {
-				is_fe_cluster = yes
-				has_star_flag = empire_cluster
-			}
-		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
-	}
-
-	max_instances = 1
-	scaled_spawn_chance = 8	# scales by galaxy size (1000 stars = 10x base)
-	
+	class = sc_black_hole	
 	flags = { guardians_technosphere_system guardian hostile_system }
 	
 	planet = {
@@ -2224,21 +1875,34 @@ guardians_init_technosphere = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = 35
+		size = 60
 		has_ring = no
 
 		init_effect = {
 			set_name = "NAME_Gargantua"
-			#change_planet_size = 20
 			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		count = 1
+		class = pc_gaia
+		orbit_distance = 120
+		orbit_angle = 220
+		size = 25
+		has_ring = yes
+		modifiers = none
+		init_effect = {
+			prevent_anomaly = yes
+			set_planet_flag = sphere_gaia
+			save_global_event_target_as = guardian_sphere_gaia
+			nsc_rich_random_25_tile_world_setup = yes
 		}
 	}
 	
 	init_effect = {
 		random_system_planet = {
-			limit = {
-				is_star = yes
-			}
+			limit = { is_star = yes }
 			orbital_deposit_tile = { clear_deposits = yes }
 			create_country = {
 				name = "NAME_Infinity_Machine"
@@ -2262,25 +1926,18 @@ guardians_init_technosphere = {
 			}
 			last_created_country = {
 				guardian_difficulty = yes
-				save_global_event_target_as = guardian_technosphere_country
+				save_event_target_as = guardian_technosphere_country
 				if = {
-					limit = {
-						NOT = {
-							has_modifier = technosphere_power
-						}
-					}
+					limit = { NOT = { has_modifier = technosphere_power } }
 					add_modifier = {
 						modifier = technosphere_power
 						days = -1
 					}
-				}			
+				}
 				set_graphical_culture = techno
 				create_fleet = {
 					name = "NAME_The_Infinity_Machine"
-					settings = {
-						spawn_debris = no
-						is_boss = yes
-					}
+					settings = { spawn_debris = no is_boss = yes }
 					effect = {
 						set_owner = event_target:guardian_technosphere_country
 						create_ship = {
@@ -2290,7 +1947,7 @@ guardians_init_technosphere = {
 						set_fleet_flag = technosphere_fleet
 						set_location = {
 							target = prevprev
-							distance = 80
+							distance = 120
 							angle = 220
 						}
 						set_fleet_stance = passive
@@ -2307,30 +1964,6 @@ guardians_init_technosphere = {
 ### Enigmatic Fortress
 guardians_init_fortress = {
 	class = sc_a
-	
-	usage = misc_system_init
-	usage_odds = {
-		base = 0
-		modifier = {
-			has_leviathans = yes
-			add = 100
-		}
-		modifier = {
-			factor = 0
-			OR = {
-				is_fe_cluster = yes
-				has_star_flag = empire_cluster
-			}
-		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
-	}
-
-	max_instances = 1
-	scaled_spawn_chance = 8	# scales by galaxy size (1000 stars = 10x base)
-
 	flags = { guardians_fortress_system guardian enigmatic_system hostile_system }
 
 	planet = {
@@ -2338,69 +1971,55 @@ guardians_init_fortress = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = { min = 20 max = 30 }
+		size = { min = 30 max = 50 }
 		has_ring = no
 
 		init_effect = {
-			if = {
-				limit = {
-					NOT = { exists = event_target:fortress_country }
+			create_country = {
+				name = "NAME_Enigmatic_Fortress"
+				type = guardian_fortress
+				flag = {
+					icon = {
+						category = "zoological"
+						file = "flag_zoological_5.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors = {
+						"red"
+						"red"
+						"null"
+						"null"
+					}
 				}
-				create_country = {
-					name = "NAME_Enigmatic_Fortress"
-					type = guardian_fortress
-					flag = {
-						icon = {
-							category = "zoological"
-							file = "flag_zoological_5.dds"
-						}
-						background = {
-							category = "backgrounds"
-							file = "00_solid.dds"
-						}
-						colors = {
-							"red"
-							"red"
-							"null"
-							"null"
-						}
-					}
-					effect = {
-						guardian_difficulty = yes
-						save_global_event_target_as = fortress_country
-						set_country_flag = fortress_country					
-						if = {
-							limit = {
-								NOT = {
-									has_modifier = enigmatic_power
-								}
-							}
-							add_modifier = {
-								modifier = enigmatic_power
-								days = -1
-							}
-						}
-					}
+			}
+			last_created_country = {
+				guardian_difficulty = yes
+				set_country_flag = fortress_country					
+				if = {
+					limit = { NOT = { has_modifier = enigmatic_power } }
+					add_modifier = {
+						modifier = enigmatic_power
+						days = -1
+ 					}
 				}
 				create_fleet = {
 					name = "NAME_Enigmatic_Fortress"
-					settings = {
-						spawn_debris = no
-						is_boss = yes
-					}
+					settings = { spawn_debris = no is_boss = yes }
 					effect = {
-						set_owner = event_target:fortress_country
+						set_owner = last_created_country
 						while = {
 							count = 1 #just to show-case that formation will tile
 							create_ship = {
 								name = ""
 								design = "NAME_Ancient_Vault"
 								graphical_culture = "ancient"
-								
+							
 								effect = {
 									set_ship_flag = fortress_vault
 									set_disable_at_health = 0.05
-									save_global_event_target_as = fortress_vault_core
 								}
 							}
 							create_ship = {
@@ -2505,43 +2124,70 @@ guardians_init_fortress = {
 						}
 						set_formation_scale = 0.5
 						set_location = {
-							target = PREV
+							target = PREVPREV
 							distance = 110
 							angle = 110
 						}
 						set_fleet_flag = fortress_fleet
-						save_global_event_target_as = fortress_fleet
 					}
 				}
 			}
 		}
 	}
 	
-	change_orbit = 25
-
-	planet = {
-		count = { min = 1 max = 2 }
-		orbit_distance = 15
-		class = "rl_habitable_normal"
-		orbit_angle = { min = 270 max = 359 }
-		size = { min = 8 max = 20 }
-	}
+	change_orbit = 60
 	
 	planet = {
-		count = { min = 1 max = 5 }
+		count = 1
+		class = "pc_savannah"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 25
+		has_ring = no
+		
+		init_effect = { nsc_rich_random_25_tile_world_setup = yes }
+	}
+	
+	change_orbit = 25
+	
+	planet = {
+		count = 1
+		class = "pc_ocean"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 25
+		has_ring = no
+		
+		init_effect = { nsc_rich_random_25_tile_world_setup = yes }
+	}
+	
+	change_orbit = 25
+	
+	planet = {
+		count = 1
+		class = "pc_tundra"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 25
+		has_ring = yes
+		
+		init_effect = { nsc_rich_random_25_tile_world_setup = yes }
+	}
+	
+	change_orbit = 25
+	
+	planet = {
+		count = { min = 2 max = 4 }
 		orbit_distance = 20
-		class = "rl_unhabitable_planets"
 		orbit_angle = { min = 90 max = 270 }
 		
 		change_orbit = @base_moon_distance
 		
 		moon = {
 			count = { min = 0 max = 1 }
-			class = "rl_unhabitable_planets"
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 		}
-
 	}
 }
 
@@ -2549,32 +2195,12 @@ guardians_init_fortress = {
 # Wraith
 guardians_init_wraith = {
 	class = "sc_pulsar"
-	
-	usage = misc_system_init
-	usage_odds = {
-		base = 0
-		modifier = {
-			has_leviathans = yes
-			add = 100
-		}
-		modifier = {
-			factor = 0
-			OR = {
-				is_fe_cluster = yes
-				has_star_flag = empire_cluster
-			}
-		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
-	}
-
-	max_instances = 1
-	scaled_spawn_chance = 8	# scales by galaxy size (1000 stars = 10x base)
-
 	flags = { guardians_wraith_system guardian hostile_system }
 
+	#init_effect = {
+	#	set_name = "Wraith" #ZZZ - To easily find system during testing. This should NOT be applied during any released verison of NSC.
+	#}
+	
 	planet = {
 		count = 1
 		class = star
@@ -2584,7 +2210,62 @@ guardians_init_wraith = {
 		flags = { guardians_wraith_pulsar }
 	}
 	
-	change_orbit = 45
+	change_orbit = 65
+	
+	planet = {
+		count = 1
+		class = "pc_tropical"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 25
+		has_ring = yes
+		
+		init_effect = { nsc_rich_random_25_tile_world_setup = yes }
+	}
+	
+	change_orbit = 25
+	
+	planet = {
+		count = 1
+		class = "pc_arid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 25
+		has_ring = no
+		
+		init_effect = { nsc_rich_random_25_tile_world_setup = yes }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = 1
+			class = "pc_molten"
+			orbit_angle = random
+			orbit_distance = 5
+		}
+	}
+	
+	change_orbit = 25
+	
+	planet = {
+		count = 1
+		class = "pc_alpine"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 25
+		has_ring = no
+		
+		init_effect = { nsc_rich_random_25_tile_world_setup = yes }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = 1
+			class = "pc_barren_cold"
+			orbit_angle = random
+			orbit_distance = 5
+		}
+	}
 	
 	planet = {
 		count = { min = 2 max = 10 }

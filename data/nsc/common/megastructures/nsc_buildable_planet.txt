@@ -66,76 +66,7 @@ magrathea_0 = {
 			
 			init_effect = {
 				set_name = "MAGRATHEA_PLANET_NAME"
-				random_list = {
-					10 = { change_pc = "pc_gaia" }
-					10 = { 
-						change_pc = "pc_desert"
-						add_modifier = {
-							modifier = built_world
-							days = -1
-						}
-					}
-					10 = { 
-						change_pc = "pc_tropical"
-						add_modifier = {
-							modifier = built_world
-							days = -1
-						}
-					}
-					10 = { 
-						change_pc = "pc_arid"
-						add_modifier = {
-							modifier = built_world
-							days = -1
-						}
-					}
-					10 = { 
-						change_pc = "pc_continental"
-						add_modifier = {
-							modifier = built_world
-							days = -1
-						}
-					}
-					10 = { 
-						change_pc = "pc_ocean"
-						add_modifier = {
-							modifier = built_world
-							days = -1
-						}
-					}
-					10 = { 
-						change_pc = "pc_tundra"
-						add_modifier = {
-							modifier = built_world
-							days = -1
-						}
-					}
-					10 = { 
-						change_pc = "pc_arctic"
-						add_modifier = {
-							modifier = built_world
-							days = -1
-						}
-					}
-					10 = { 
-						change_pc = "pc_alpine"
-						add_modifier = {
-							modifier = built_world
-							days = -1
-						}
-					}
-					10 = { 
-						change_pc = "pc_savannah"
-						add_modifier = {
-							modifier = built_world
-							days = -1
-						}
-					}
-				}
-				random_list = {
-					50 = { set_ring = yes }
-					50 = { set_ring = no }
-				}
+				nsc_perfect_random_world_setup = yes
 				set_planet_entity = {
 					entity = "gaia_planet_01_entity"
 					graphical_culture = fromfrom
@@ -156,9 +87,7 @@ magrathea_0 = {
 				set_planet_flag = habitat
 			}
 		}
-		fromfrom.planet = {
-			set_planet_flag = has_megastructure
-		}
+		fromfrom.planet = { set_planet_flag = has_megastructure }
 		remove_megastructure = fromfrom
 	}
 	

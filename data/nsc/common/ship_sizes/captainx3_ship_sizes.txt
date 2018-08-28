@@ -379,65 +379,6 @@ SensorStation = {
 	build_block_radius = @build_block_radius_medium
 }
 
-MiningBase = {
-	max_speed = 0.0
-	acceleration = 0.0
-	rotation_speed = 0.0
-	modifier = {
-		ship_evasion_mult = -1
-		ship_armor_add = 50
-		ship_upkeep_mult = -0.50
-	}
-	max_hitpoints = 8000
-	size_multiplier = 8
-	fleet_slot_size = 5
-	section_slots = { "mid" = { locator = "part1" } }
-	is_designable = yes
-	num_target_locators = 0
-	is_space_station = yes
-	can_have_federation_design = yes
-	is_civilian = no
-
-
-	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
-
-	prerequisites = { "tech_miningbase_1" }
-
-	class = shipclass_military_station
-	required_component_set = "station_sensor_components"
-
-	build_block_radius = @build_block_radius_none
-}
-
-PowerStation = {
-	max_speed = 0.0
-	acceleration = 0.0
-	rotation_speed = 0.0
-	modifier = {
-		ship_evasion_mult = -1
-		ship_armor_add = 50
-		ship_upkeep_mult = -0.50
-	}
-	max_hitpoints = 8000
-	size_multiplier = 8
-	fleet_slot_size = 5
-	section_slots = { "mid" = { locator = "part1" } }
-	is_designable = yes
-	num_target_locators = 0
-	is_space_station = yes
-	can_have_federation_design = yes
-	is_civilian = no
-
-	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
-
-	prerequisites = { "tech_powerstation_1" }
-
-	class = shipclass_military_station
-	required_component_set = "station_sensor_components"
-
-	build_block_radius = @build_block_radius_none
-}
-
 Drydock = {
 	max_speed = 0.0
 	acceleration = 0.0
@@ -457,7 +398,7 @@ Drydock = {
 	is_civilian = no
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 
-	prerequisites = { "tech_space_defense_station_1" }
+	prerequisites = { "tech_drydock_1" }
 
 	class = shipclass_military_station
 	required_component_set = "station_sensor_components"

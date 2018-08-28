@@ -8,8 +8,8 @@ nsc_spawn_dreadnought = {
 		limit = { any_system = { has_star_flag = guardians_dreadnought_system } }
 		random_system = {
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "guardians_init_dreadnought"
 			}
 		}
@@ -25,8 +25,8 @@ nsc_spawn_dreadnought = {
 				}
 			}
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "guardians_init_dreadnought"
 			}
 		}
@@ -35,8 +35,8 @@ nsc_spawn_dreadnought = {
 			limit = { NOT = { any_system = { has_star_flag = guardians_dreadnought_system } } }
 			random_system = {
 				spawn_system = {
-					min_distance = 20
-					max_distance = 50
+					min_distance = 10
+					max_distance = 25
 					initializer = "guardians_init_dreadnought"
 				}
 			}
@@ -50,8 +50,8 @@ nsc_spawn_horror = {
 		limit = { any_system = { has_star_flag = guardians_horror_system } }
 		random_system = {
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "guardians_init_horror"
 			}
 		}
@@ -67,8 +67,8 @@ nsc_spawn_horror = {
 				}
 			}
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "guardians_init_horror"
 			}
 		}
@@ -77,8 +77,8 @@ nsc_spawn_horror = {
 			limit = { NOT = { any_system = { has_star_flag = guardians_horror_system } } }
 			random_system = {
 				spawn_system = {
-					min_distance = 20
-					max_distance = 50
+					min_distance = 10
+					max_distance = 25
 					initializer = "guardians_init_horror"
 				}
 			}
@@ -92,8 +92,8 @@ nsc_spawn_fortress = {
 		limit = { any_system = { has_star_flag = guardians_fortress_system } }
 		random_system = {
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "guardians_init_fortress"
 			}
 		}
@@ -109,8 +109,8 @@ nsc_spawn_fortress = {
 				}
 			}
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "guardians_init_fortress"
 			}
 		}
@@ -119,8 +119,8 @@ nsc_spawn_fortress = {
 			limit = { NOT = { any_system = { has_star_flag = guardians_fortress_system } } }
 			random_system = {
 				spawn_system = {
-					min_distance = 20
-					max_distance = 50
+					min_distance = 10
+					max_distance = 25
 					initializer = "guardians_init_fortress"
 				}
 			}
@@ -134,8 +134,8 @@ nsc_spawn_drake = {
 		limit = { any_system = { has_star_flag = guardians_dragon_system } }
 		random_system = {
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "guardians_init_dragon"
 			}
 		}
@@ -151,8 +151,8 @@ nsc_spawn_drake = {
 				}
 			}
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "guardians_init_dragon"
 			}
 		}
@@ -161,8 +161,8 @@ nsc_spawn_drake = {
 			limit = { NOT = { any_system = { has_star_flag = guardians_dragon_system } } }
 			random_system = {
 				spawn_system = {
-					min_distance = 20
-					max_distance = 50
+					min_distance = 10
+					max_distance = 25
 					initializer = "guardians_init_dragon"
 				}
 			}
@@ -176,8 +176,8 @@ nsc_spawn_hive = {
 		limit = { any_system = { has_star_flag = guardians_hive_system } }
 		random_system = {
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "guardians_init_hive"
 			}
 		}
@@ -193,8 +193,8 @@ nsc_spawn_hive = {
 				}
 			}
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "guardians_init_hive"
 			}
 		}
@@ -203,8 +203,8 @@ nsc_spawn_hive = {
 			limit = { NOT = { any_system = { has_star_flag = guardians_hive_system } } }
 			random_system = {
 				spawn_system = {
-					min_distance = 20
-					max_distance = 50
+					min_distance = 10
+					max_distance = 25
 					initializer = "guardians_init_hive"
 				}
 			}
@@ -218,8 +218,8 @@ nsc_spawn_stellarite = {
 		limit = { any_system = { has_star_flag = guardians_stellarite_system } }
 		random_system = {
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "guardians_init_stellarites"
 			}
 		}
@@ -235,8 +235,8 @@ nsc_spawn_stellarite = {
 				}
 			}
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "guardians_init_stellarites"
 			}
 		}
@@ -245,8 +245,8 @@ nsc_spawn_stellarite = {
 			limit = { NOT = { any_system = { has_star_flag = guardians_stellarite_system } } }
 			random_system = {
 				spawn_system = {
-					min_distance = 20
-					max_distance = 50
+					min_distance = 10
+					max_distance = 25
 					initializer = "guardians_init_stellarites"
 				}
 			}
@@ -260,8 +260,8 @@ nsc_spawn_technopshere = {
 		limit = { any_system = { has_star_flag = guardians_technosphere_system } }
 		random_system = {
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "guardians_init_technosphere"
 			}
 		}
@@ -277,8 +277,8 @@ nsc_spawn_technopshere = {
 				}
 			}
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "guardians_init_technosphere"
 			}
 		}
@@ -287,8 +287,8 @@ nsc_spawn_technopshere = {
 			limit = { NOT = { any_system = { has_star_flag = guardians_technosphere_system } } }
 			random_system = {
 				spawn_system = {
-					min_distance = 20
-					max_distance = 50
+					min_distance = 10
+					max_distance = 25
 					initializer = "guardians_init_technosphere"
 				}
 			}
@@ -302,8 +302,8 @@ nsc_spawn_wraith = {
 		limit = { any_system = { has_star_flag = guardians_wraith_system } }
 		random_system = {
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "guardians_init_wraith"
 			}
 		}
@@ -319,8 +319,8 @@ nsc_spawn_wraith = {
 				}
 			}
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "guardians_init_wraith"
 			}
 		}
@@ -329,8 +329,8 @@ nsc_spawn_wraith = {
 			limit = { NOT = { any_system = { has_star_flag = guardians_wraith_system } } }
 			random_system = {
 				spawn_system = {
-					min_distance = 20
-					max_distance = 50
+					min_distance = 10
+					max_distance = 25
 					initializer = "guardians_init_wraith"
 				}
 			}
@@ -344,8 +344,8 @@ nsc_spawn_hidden_paradise = {
 		limit = { any_system = { has_star_flag = guardians_pirate_alt_system } }
 		random_system = {
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "guardians_init_pirate_alt"
 			}
 		}
@@ -361,8 +361,8 @@ nsc_spawn_hidden_paradise = {
 				}
 			}
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "guardians_init_pirate_alt"
 			}
 		}
@@ -371,8 +371,8 @@ nsc_spawn_hidden_paradise = {
 			limit = { NOT = { any_system = { has_star_flag = guardians_pirate_alt_system } } }
 			random_system = {
 				spawn_system = {
-					min_distance = 20
-					max_distance = 50
+					min_distance = 10
+					max_distance = 25
 					initializer = "guardians_init_pirate_alt"
 				}
 			}
@@ -386,8 +386,8 @@ nsc_spawn_elite_crystal = {
 		limit = { any_system = { has_star_flag = elite_system } }
 		random_system = {
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "NSC_crystal_home_system"
 			}
 		}
@@ -403,8 +403,8 @@ nsc_spawn_elite_crystal = {
 				}
 			}
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "NSC_crystal_home_system"
 			}
 		}
@@ -413,8 +413,8 @@ nsc_spawn_elite_crystal = {
 			limit = { NOT = { any_system = { has_star_flag = elite_system } } }
 			random_system = {
 				spawn_system = {
-					min_distance = 20
-					max_distance = 50
+					min_distance = 10
+					max_distance = 25
 					initializer = "NSC_crystal_home_system"
 				}
 			}
@@ -428,8 +428,8 @@ nsc_spawn_elite_cloud = {
 		limit = { any_system = { has_star_flag = void2_system } }
 		random_system = {
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "NSC_cloud_home_system"
 			}
 		}
@@ -445,8 +445,8 @@ nsc_spawn_elite_cloud = {
 				}
 			}
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "NSC_cloud_home_system"
 			}
 		}
@@ -455,8 +455,8 @@ nsc_spawn_elite_cloud = {
 			limit = { NOT = { any_system = { has_star_flag = void2_system } } }
 			random_system = {
 				spawn_system = {
-					min_distance = 20
-					max_distance = 50
+					min_distance = 10
+					max_distance = 25
 					initializer = "NSC_cloud_home_system"
 				}
 			}
@@ -470,8 +470,8 @@ nsc_spawn_elite_drone = {
 		limit = { any_system = { has_star_flag = drone_home_system } }
 		random_system = {
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "NSC_mining_drone_home_system"
 			}
 		}
@@ -487,8 +487,8 @@ nsc_spawn_elite_drone = {
 				}
 			}
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "NSC_mining_drone_home_system"
 			}
 		}
@@ -497,8 +497,8 @@ nsc_spawn_elite_drone = {
 			limit = { NOT = { any_system = { has_star_flag = drone_home_system } } }
 			random_system = {
 				spawn_system = {
-					min_distance = 20
-					max_distance = 50
+					min_distance = 10
+					max_distance = 25
 					initializer = "NSC_mining_drone_home_system"
 				}
 			}
@@ -512,8 +512,8 @@ nsc_spawn_elite_pirate = {
 		limit = { any_system = { has_star_flag = pirate_home_system } }
 		random_system = {
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "NSC_pirate_home_system"
 			}
 		}
@@ -529,8 +529,8 @@ nsc_spawn_elite_pirate = {
 				}
 			}
 			spawn_system = {
-				min_distance = 20
-				max_distance = 50
+				min_distance = 10
+				max_distance = 25
 				initializer = "NSC_pirate_home_system"
 			}
 		}
@@ -539,8 +539,8 @@ nsc_spawn_elite_pirate = {
 			limit = { NOT = { any_system = { has_star_flag = pirate_home_system } } }
 			random_system = {
 				spawn_system = {
-					min_distance = 20
-					max_distance = 50
+					min_distance = 10
+					max_distance = 25
 					initializer = "NSC_pirate_home_system"
 				}
 			}

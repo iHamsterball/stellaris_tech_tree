@@ -1,0 +1,304 @@
+##################
+### TECH COSTS ###
+##################
+#If you change any of these, use replace in files so the values are the same across all files
+
+@tier1cost1 = 360
+@tier1cost2 = 480
+@tier1cost3 = 600
+@tier1cost4 = 720
+
+@tier2cost1 = 1000
+@tier2cost2 = 1400
+@tier2cost3 = 1800
+@tier2cost4 = 2200
+
+@tier3cost1 = 3000
+@tier3cost2 = 4000
+@tier3cost3 = 5000
+@tier3cost4 = 6000
+
+@tier4cost1 = 7000
+@tier4cost2 = 8000
+@tier4cost3 = 9000
+@tier4cost4 = 10000
+
+@repeatableTechBaseCost = 1500
+@repeatableTechLevelCost = 480
+
+####################
+### TECH WEIGHTS ###
+####################
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+@tier1weight4 = 85
+
+@tier2weight1 = 75
+@tier2weight2 = 70
+@tier2weight3 = 65
+@tier2weight4 = 60
+
+@tier3weight1 = 50
+@tier3weight2 = 45
+@tier3weight3 = 40
+@tier3weight4 = 35
+
+@tier4weight1 = 30
+
+@repeatableTechWeight = 25
+@repatableTechFactor = 0.5
+
+########################
+# OVERALL TECH BALANCE #
+########################
+
+# Physics = 22
+# Society = 17
+# Engineering = 30
+
+######################
+# TECHS IN THIS FILE #
+######################
+
+# TOTAL = 6
+
+# Ablative Neutronium Armor - Engineering - Unlocks NSC's Level 6 Armor
+# Reactive Nanocomposite Armor - Engineering - Unlocks NSC's Level 7 Armor
+# Neutronium Nanocomposite Armor - Engineering - Unlocks NSC's Level 8 Armor
+# Anti-Neutronium Nanocomposite Armor - Engineering - Unlocks NSC's Level 9 Armor
+# Gravi-Forged Nanocomposite Armor - Engineering - Unlocks NSC's Level 10 Armor
+# Optimized Adaptive Dragon Armor - Engineering - Unlocks NSC's upgraded "special" Dragon Armor
+
+# ##################
+# ##################
+# ##################
+
+# Ablative Neutronium Armor
+tech_ship_armor_6_NSC = {
+	area = engineering
+	cost = @tier3cost3
+	tier = 3
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_block_armors" "tech_ship_armor_5" }
+	weight = @tier3weight3
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_ship_armor_6_NSC }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 30
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+# Reactive Nanocomposite Armor
+tech_ship_armor_7_NSC = {
+	area = engineering
+	cost = @tier3cost4
+	tier = 3
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_ship_armor_6_NSC" }
+	weight = @tier3weight3
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_ship_armor_7_NSC }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 30
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+# Neutronium Nanocomposite Armor
+tech_ship_armor_8_NSC = {
+	area = engineering
+	cost = @tier4cost1
+	tier = 3
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_ship_armor_7_NSC" }
+	weight = @tier3weight3
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_ship_armor_8_NSC }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 30
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+# Anti-Neutronium Nanocomposite Armor
+tech_ship_armor_9_NSC = {
+	area = engineering
+	cost = @tier4cost2
+	tier = 3
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_ship_armor_8_NSC" }
+	weight = @tier3weight3
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_ship_armor_9_NSC }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 30
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+# Gravi-Forged Nanocomposite Armor
+tech_ship_armor_10_NSC = {
+	area = engineering
+	cost = @tier4cost3
+	tier = 3
+	category = { materials }
+	is_rare = yes
+	ai_update_type = all
+	prerequisites = { "tech_ship_armor_9_NSC" }
+	weight = @tier3weight4
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_ship_armor_10_NSC }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 30
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+# Optimized Adaptive Dragon Armor
+tech_optimized_adaptive_dragon_armor = {
+	area = engineering
+	cost = @tier4cost4
+	tier = 3
+	category = { materials }
+	is_rare = yes
+	ai_update_type = all
+	prerequisites = { "tech_dragon_armor" "tech_ship_armor_10_NSC" }
+	weight = @tier3weight4
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 10
+			any_neighbor_country = {  has_technology = tech_optimized_adaptive_dragon_armor	}
+		}
+		modifier = {
+			factor = 5
+			has_technology = tech_dragon_armor
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 30
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}

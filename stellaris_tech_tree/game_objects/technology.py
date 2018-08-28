@@ -139,7 +139,11 @@ class Technology:
         prerequisites = self.prerequisites
         prerequisites_loc = []
         for prerequisite in prerequisites:
-            prerequisites_loc.append(self._loc_data[prerequisite])
+            try:
+                prerequisites_loc.append(self._loc_data[prerequisite])
+            except (KeyError):
+                # Mods are highly unpredictable
+                prerequisites_loc.append(prerequisite)
 
         return prerequisites_loc
 

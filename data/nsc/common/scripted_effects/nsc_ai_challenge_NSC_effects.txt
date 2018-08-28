@@ -11,70 +11,70 @@
 nsc_ai_tech_give_2 = {
 	event_target:nsc_player_tech_country = {
 		if = { limit = { has_technology = tech_spaceport_2 } 
-			prev = { if = { limit = { NOT = { has_technology = tech_spaceport_2 } } give_technology = { tech = tech_spaceport_2 } } add_minerals = @mineralsPerSpaceport } } 
+			prev = { if = { limit = { NOT = { has_technology = tech_spaceport_2 } } give_technology = { tech = tech_spaceport_2 } } } } 
 	}
 }
 
 nsc_ai_tech_give_3 = {
 	event_target:nsc_player_tech_country = {
 		if = { limit = { has_technology = tech_spaceport_3 } 
-			prev = { if = { limit = { NOT = { has_technology = tech_spaceport_3 } } give_technology = { tech = tech_spaceport_3 } } add_minerals = @mineralsPerSpaceport } } 
+			prev = { if = { limit = { NOT = { has_technology = tech_spaceport_3 } } give_technology = { tech = tech_spaceport_3 } } } } 
 	}
 }
 
 nsc_ai_tech_give_4 = {
 	event_target:nsc_player_tech_country = {
 		if = { limit = { has_technology = tech_spaceport_4 } 
-			prev = { if = { limit = { NOT = { has_technology = tech_spaceport_4 } } give_technology = { tech = tech_spaceport_4 } } add_minerals = @mineralsPerSpaceport } } 
+			prev = { if = { limit = { NOT = { has_technology = tech_spaceport_4 } } give_technology = { tech = tech_spaceport_4 } } } } 
 	}
 }
 
 nsc_ai_tech_give_5 = {
 	event_target:nsc_player_tech_country = {
 		if = { limit = { has_technology = tech_spaceport_5 } 
-			prev = { if = { limit = { NOT = { has_technology = tech_spaceport_5 } } give_technology = { tech = tech_spaceport_5 } } add_minerals = @mineralsPerSpaceport } } 
+			prev = { if = { limit = { NOT = { has_technology = tech_spaceport_5 } } give_technology = { tech = tech_spaceport_5 } } } } 
 	}
 }
 
 nsc_ai_tech_give_6 = {
 	event_target:nsc_player_tech_country = {
 		if = { limit = { has_technology = tech_spaceport_6 } 
-			prev = { if = { limit = { NOT = { has_technology = tech_spaceport_6 } } give_technology = { tech = tech_spaceport_6 } } add_minerals = @mineralsPerSpaceport } } 
+			prev = { if = { limit = { NOT = { has_technology = tech_spaceport_6 } } give_technology = { tech = tech_spaceport_6 } } } } 
 	}
 }
 
 nsc_ai_tech_give_battleship = {
 	event_target:nsc_player_tech_country = {
 		if = { limit = { has_technology = tech_battleship_1 } 
-			prev = { if = { limit = { NOT = { has_technology = tech_battleship_1 } } give_technology = { tech = tech_battleship_1 } } add_minerals = @mineralsPerSpaceport } } 
+			prev = { if = { limit = { NOT = { has_technology = tech_battleship_1 } } give_technology = { tech = tech_battleship_1 } } } } 
 	}
 }
 
 nsc_ai_tech_give_carrier = {
 	event_target:nsc_player_tech_country = {
 		if = { limit = { has_technology = tech_carrier_1 } 
-			prev = { if = { limit = { NOT = { has_technology = tech_carrier_1 } } give_technology = { tech = tech_carrier_1 } } add_minerals = @mineralsPerSpaceport } } 
+			prev = { if = { limit = { NOT = { has_technology = tech_carrier_1 } } give_technology = { tech = tech_carrier_1 } } } } 
 	}
 }
 
 nsc_ai_tech_give_dreadnought = {
 	event_target:nsc_player_tech_country = {
 		if = { limit = { has_technology = tech_dreadnought_1 } 
-			prev = { if = { limit = { NOT = { has_technology = tech_dreadnought_1 } } give_technology = { tech = tech_dreadnought_1 } } add_minerals = @mineralsPerSpaceport } } 
+			prev = { if = { limit = { NOT = { has_technology = tech_dreadnought_1 } } give_technology = { tech = tech_dreadnought_1 } } } } 
 	}
 }
 
 nsc_ai_tech_give_superdreadnought = {
 	event_target:nsc_player_tech_country = {
 		if = { limit = { has_technology = tech_superdreadnought_1 } 
-			prev = { if = { limit = { NOT = { has_technology = tech_superdreadnought_1 } } give_technology = { tech = tech_superdreadnought_1 } } add_minerals = @mineralsPerSpaceport } } 
+			prev = { if = { limit = { NOT = { has_technology = tech_superdreadnought_1 } } give_technology = { tech = tech_superdreadnought_1 } } } } 
 	}
 }
 
 nsc_ai_tech_give_flagship = {
 	event_target:nsc_player_tech_country = {
 		if = { limit = { has_technology = tech_flagship_1 } 
-			prev = { if = { limit = { NOT = { has_technology = tech_flagship_1 } } give_technology = { tech = tech_flagship_1 } } add_minerals = @mineralsPerSpaceport } } 
+			prev = { if = { limit = { NOT = { has_technology = tech_flagship_1 } } give_technology = { tech = tech_flagship_1 } } } } 
 	}
 }
 
@@ -85,28 +85,28 @@ nsc_ai_tech_give_flagship = {
 nsc_ai_tech_give_military_station_2 = {
 	event_target:nsc_player_tech_country = {
 		if = { limit = { has_technology = tech_space_defense_station_2 } 
-			prev = { if = { limit = { NOT = { has_technology = tech_space_defense_station_2 } } give_technology = { tech = tech_space_defense_station_2 } } add_minerals = @mineralsPerSpaceport } } 
+			prev = { if = { limit = { NOT = { has_technology = tech_space_defense_station_2 } } give_technology = { tech = tech_space_defense_station_2 } } } } 
 	}
 }
 
 nsc_ai_tech_give_military_station_3 = {
 	event_target:nsc_player_tech_country = {
 		if = { limit = { has_technology = tech_space_defense_station_3 } 
-			prev = { if = { limit = { NOT = { has_technology = tech_space_defense_station_3 } } give_technology = { tech = tech_space_defense_station_3 } } add_minerals = @mineralsPerSpaceport } } 
+			prev = { if = { limit = { NOT = { has_technology = tech_space_defense_station_3 } } give_technology = { tech = tech_space_defense_station_3 } } } } 
 	}
 }
 
 nsc_ai_tech_give_military_battle_fortress = {
 	event_target:nsc_player_tech_country = {
 		if = { limit = { has_technology = tech_battle_fortress_1 } 
-			prev = { if = { limit = { NOT = { has_technology = tech_battle_fortress_1 } } give_technology = { tech = tech_battle_fortress_1 } } add_minerals = @mineralsPerSpaceport } } 
+			prev = { if = { limit = { NOT = { has_technology = tech_battle_fortress_1 } } give_technology = { tech = tech_battle_fortress_1 } } } } 
 	}
 }
 
 nsc_ai_tech_give_military_headquarters = {
 	event_target:nsc_player_tech_country = {
 		if = { limit = { has_technology = tech_headquarters_1 } 
-			prev = { if = { limit = { NOT = { has_technology = tech_headquarters_1 } } give_technology = { tech = tech_headquarters_1 } } add_minerals = @mineralsPerSpaceport } } 
+			prev = { if = { limit = { NOT = { has_technology = tech_headquarters_1 } } give_technology = { tech = tech_headquarters_1 } } } } 
 	}
 }
 
@@ -117,21 +117,7 @@ nsc_ai_tech_give_military_headquarters = {
 nsc_ai_tech_give_civilian_station_sensor = {
 	event_target:nsc_player_tech_country = {
 		if = { limit = { has_technology = tech_sensorstation_1 } 
-			prev = { if = { limit = { NOT = { has_technology = tech_sensorstation_1 } } give_technology = { tech = tech_sensorstation_1 } } add_minerals = @mineralsPerSpaceport } } 
-	}
-}
-
-nsc_ai_tech_give_civilian_station_mining = {
-	event_target:nsc_player_tech_country = {
-		if = { limit = { has_technology = tech_miningbase_1 } 
-			prev = { if = { limit = { NOT = { has_technology = tech_miningbase_1 } } give_technology = { tech = tech_miningbase_1 } } add_minerals = @mineralsPerSpaceport } } 
-	}
-}
-
-nsc_ai_tech_give_civilian_station_power = {
-	event_target:nsc_player_tech_country = {
-		if = { limit = { has_technology = tech_powerstation_1 } 
-			prev = { if = { limit = { NOT = { has_technology = tech_powerstation_1 } } give_technology = { tech = tech_powerstation_1 } } add_minerals = @mineralsPerSpaceport } } 
+			prev = { if = { limit = { NOT = { has_technology = tech_sensorstation_1 } } give_technology = { tech = tech_sensorstation_1 } } } } 
 	}
 }
 
@@ -245,13 +231,6 @@ nsc_ai_tech_give_act_battleship = {
 	}
 }
 
-nsc_ai_tech_give_act_colonizer = {
-	event_target:nsc_player_tech_country = {
-		if = { limit = { has_technology = tech_advanced_construction_techniques_colony_ship } 
-			prev = { if = { limit = { NOT = { has_technology = tech_advanced_construction_techniques_colony_ship } } give_technology = { tech = tech_advanced_construction_techniques_colony_ship } } } } 
-	}
-}
-
 nsc_ai_tech_give_act_strike_cruiser = {
 	event_target:nsc_player_tech_country = {
 		if = { limit = { has_technology = tech_advanced_construction_techniques_strike_cruiser } 
@@ -319,6 +298,13 @@ nsc_ai_tech_give_act_headquarters = {
 	event_target:nsc_player_tech_country = {
 		if = { limit = { has_technology = tech_advanced_construction_techniques_hq_station } 
 			prev = { if = { limit = { NOT = { has_technology = tech_advanced_construction_techniques_hq_station } } give_technology = { tech = tech_advanced_construction_techniques_hq_station } } } } 
+	}
+}
+
+nsc_ai_tech_give_act_vanilla = {
+	event_target:nsc_player_tech_country = {
+		if = { limit = { has_technology = tech_advanced_construction_techniques_vanilla_ships } 
+			prev = { if = { limit = { NOT = { has_technology = tech_advanced_construction_techniques_vanilla_ships } } give_technology = { tech = tech_advanced_construction_techniques_vanilla_ships } } } } 
 	}
 }
 
@@ -954,7 +940,7 @@ nsc_ai_tech_give_arc_level_1 = {
 
 nsc_ai_tech_give_arc_level_2 = {
 	event_target:nsc_player_tech_country = {
-		if = { limit = { has_technology = tech_arc_emitter2 }
+		if = { limit = { has_technology = tech_arc_emitter_2 }
 			prev = { if = { limit = { NOT = { has_technology = tech_arc_emitter_2 } } give_technology = { tech = tech_arc_emitter_2 } } } }
 	}
 }
