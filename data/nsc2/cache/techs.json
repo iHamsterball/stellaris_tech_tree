@@ -446,6 +446,7 @@
     "is_rare": false,
     "is_not_reverse_engineerable": false,
     "feature_unlocks": [
+      "Unlocks Component: Advanced Reactor Booster",
       "Unlocks Component: Advanced Reactor Booster"
     ]
   },
@@ -592,6 +593,27 @@
     "is_not_reverse_engineerable": false,
     "feature_unlocks": [
       "Unlocks Component: Sentinel Point-Defense"
+    ]
+  },
+  {
+    "key": "tech_nsc_dlc_check",
+    "name": "Apocalypse Now?",
+    "description": "This is an automatic starting tech to check for the Apocalypse DLC.",
+    "area": "physics",
+    "category": "Particles",
+    "tier": 1,
+    "cost": 0,
+    "base_weight": 0,
+    "base_factor": 1.0,
+    "weight_modifiers": [],
+    "prerequisites": [],
+    "prerequisites_loc": [],
+    "is_start_tech": true,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "This is an automatic starting tech to check for the Apocalypse DLC."
     ]
   },
   {
@@ -1602,594 +1624,115 @@
     ]
   },
   {
-    "key": "tech_avatar_phy_01",
-    "name": "Theory : Artificial Black Holes",
-    "description": "\nBy applying stellar manipulation techniques to a small quantity of extremely dense materials, we are able to create an artificial singularity and maintain it through a constant supply of matter. Further research is required to refine the process and explore practical applications.\n\n",
-    "area": "physics",
-    "category": "Field Manipulation",
-    "tier": 3,
-    "cost": 3880,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d71.5)Number of years since game start is greater than 100\n",
-      "(\u00d72)Number of years since game start is greater than 105\n",
-      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Field Manipulation Expert\n"
-    ],
-    "prerequisites": [
-      "tech_sun_crusher",
-      "tech_avatar_soc_01"
-    ],
-    "prerequisites_loc": [
-      "Doomsday Weapon : Sun Crusher",
-      "Theory : Empire-wide Projects"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Energy Storage Capacity: +250",
-      "Avatar Research Chain"
-    ]
-  },
-  {
-    "key": "tech_avatar_phy_02",
-    "name": "Theory : Black Hole Containment Vessel",
-    "description": "\nA semi-organic vessel that should, in theory, be capable of creating and containing an artificial black hole. Created from unidentifiable organic matter found in the ruins of an ancient civilisation, this vessel can contain and supress the space-time effects of a black hole of any size.\n\nThis allows us to continuously feed the black hole matter that it converts into energy, and more importantly, theoretically draw out the stored energy at any time in almost limitless quantities.\n\n",
-    "area": "physics",
-    "category": "Field Manipulation",
-    "tier": 3,
-    "cost": 3880,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d71.5)Number of years since game start is greater than 95\n",
-      "(\u00d72)Number of years since game start is greater than 100\n",
-      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Field Manipulation Expert\n"
-    ],
-    "prerequisites": [
-      "tech_avatar_phy_01"
-    ],
-    "prerequisites_loc": [
-      "Theory : Artificial Black Holes"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Energy Storage Capacity: +250",
-      "Avatar Research Chain"
-    ]
-  },
-  {
-    "key": "tech_avatar_doomsday_01",
-    "name": "Doomsday Weapon : Spear of Longinus",
-    "description": "\nHere lies a toppled god-\nHis fall was not a small one.\nWe did but build his pedestal,\nA narrow and a tall one.\n\nThrough Localised Reality manipulation, we are able to introduce a small, temporary flaw in the Black Hole Containment Vessel. This flaw can be manipulated to channel the flow of energy from the black hole without a medium, in effect allowing us to control the release of incredible amounts of energy - powerful enough to pierce through the core of a planet.\n\n",
+    "key": "tech_graviton_power",
+    "name": "Graviton Reactor",
+    "description": "Adding gravitational and graviton based based particles to reinforce an antimatter reaction greatly increases the energy production of our reactors.",
     "area": "physics",
     "category": "Particles",
     "tier": 3,
-    "cost": 5160,
-    "base_weight": 35,
-    "base_factor": 1.0,
+    "cost": 8000,
+    "base_weight": 50,
+    "base_factor": 1.5,
     "weight_modifiers": [
-      "(\u00d71.5)Number of years since game start is greater than 115\n",
-      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Particles Expert\n"
+      "(\u00d72)Has Citadel Technology\n",
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has Graviton Reactor Technology\n",
+      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Industry Expert\n"
     ],
     "prerequisites": [
-      "tech_avatar"
+      "tech_zero_point_power"
     ],
     "prerequisites_loc": [
-      "The Avatar Project"
+      "Zero Point Power"
     ],
     "is_start_tech": false,
     "is_dangerous": false,
-    "is_rare": true,
+    "is_rare": false,
     "is_not_reverse_engineerable": false,
     "feature_unlocks": [
-      "Monthly Influence: +1",
-      "Unlocks Edict: Authorise Spear of Longinus"
+      "Unlocks Component: Graviton Reactor"
     ]
   },
   {
-    "key": "tech_erebus_phy_01",
-    "name": "Theory : Energy-Matter Reconstruction",
-    "description": "\nWhile much of our technological advancement has been focused on the conversion of matter into energy, our scientists are beginning to realise that the efficient conversion of energy back into certain forms of matter has many interesting applications, most notably in the field of deep space combat operations where logistical support might not always be possible.\n\n",
-    "area": "physics",
-    "category": "Field Manipulation",
-    "tier": 3,
-    "cost": 4520,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d71.5)Number of years since game start is greater than 105\n",
-      "(\u00d72)Number of years since game start is greater than 110\n",
-      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Field Manipulation Expert\n"
-    ],
-    "prerequisites": [
-      "tech_erebus_soc_01"
-    ],
-    "prerequisites_loc": [
-      "Theory : Super-Carriers"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Minerals: +5%",
-      "Erebus Research Chain"
-    ]
-  },
-  {
-    "key": "tech_erebus_phy_02",
-    "name": "Theory : Layered Shielding",
-    "description": "\nThe ability to layer our forcefield projections without interference will allow us to massively amplify the maximum theoretical integrity of shields, though at a small cost in shield recharge rates. Unfortunately, the size and power consumption of the forcefield projectors limits the use of this technology to only the largest vessels.\n\n",
-    "area": "physics",
-    "category": "Field Manipulation",
-    "tier": 3,
-    "cost": 4520,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d71.5)Number of years since game start is greater than 110\n",
-      "(\u00d72)Number of years since game start is greater than 115\n",
-      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Field Manipulation Expert\n"
-    ],
-    "prerequisites": [
-      "tech_erebus_phy_01"
-    ],
-    "prerequisites_loc": [
-      "Theory : Energy-Matter Reconstruction"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Energy Credits: +10%",
-      "Erebus Research Chain"
-    ]
-  },
-  {
-    "key": "tech_leviathan_phy_01",
-    "name": "Theory : Multi-dimensional Structuring",
-    "description": "\nBeing able to structure and manipulate matter at higher dimensions will allow us to manufacture a new range of exotic materials.\n\n",
-    "area": "physics",
-    "category": "Field Manipulation",
-    "tier": 3,
-    "cost": 3880,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d74)Number of years since game start is greater than 90\n",
-      "(\u00d76)Number of years since game start is greater than 100\n",
-      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Field Manipulation Expert\n"
-    ],
-    "prerequisites": [
-      "tech_leviathan_soc_01"
-    ],
-    "prerequisites_loc": [
-      "Theory : Specialised Weapons Platform"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Minerals: +5%",
-      "Energy Storage Capacity: +500",
-      "Leviathan Research Chain"
-    ]
-  },
-  {
-    "key": "tech_leviathan_phy_02",
-    "name": "Theory : Dimensionally Phased Materials",
-    "description": "\nTemporarily shifting matter into higher dimensions infuses them with several unique properties that can be integrated into a new ship design.\n\n",
-    "area": "physics",
-    "category": "Field Manipulation",
-    "tier": 3,
-    "cost": 3880,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d74)Number of years since game start is greater than 95\n",
-      "(\u00d76)Number of years since game start is greater than 100\n",
-      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Field Manipulation Expert\n"
-    ],
-    "prerequisites": [
-      "tech_leviathan_phy_01"
-    ],
-    "prerequisites_loc": [
-      "Theory : Multi-dimensional Structuring"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Leviathan Research Chain"
-    ]
-  },
-  {
-    "key": "tech_phased_shields",
-    "name": "Phased Shields",
-    "description": "By aligning the shield's field projection with the hull, the field strength can be increased with some reduction in hull integrity.",
-    "area": "physics",
-    "category": "Field Manipulation",
-    "tier": 3,
-    "cost": 3880,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d74)Number of years since game start is greater than 95\n",
-      "(\u00d76)Number of years since game start is greater than 100\n",
-      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Field Manipulation Expert\n"
-    ],
-    "prerequisites": [
-      "tech_leviathan_phy_02"
-    ],
-    "prerequisites_loc": [
-      "Theory : Dimensionally Phased Materials"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Unlocks Component: Small Phased Shields",
-      "Unlocks Component: Medium Phased Shields",
-      "Unlocks Component: Large Phased Shields"
-    ]
-  },
-  {
-    "key": "tech_sun_crusher_phy_01",
-    "name": "Theory : Localised Reality Manipulation",
-    "description": "\nSaturating an area of space with high energy exotic particles allows us to tweak a multitude of physical constants. The tricky part is doing so without collapsing the local structure.",
-    "area": "physics",
-    "category": "Field Manipulation",
-    "tier": 3,
-    "cost": 3880,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d74)Number of years since game start is greater than 90\n"
-    ],
-    "prerequisites": [
-      "tech_sun_crusher_soc_01"
-    ],
-    "prerequisites_loc": [
-      "Doctrine : Autonomous Weapons Systems"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Sun Crusher Research Chain"
-    ]
-  },
-  {
-    "key": "tech_sun_crusher_phy_02",
-    "name": "Theory : Internal Stellar Manipulation",
-    "description": "\nAccessing the core of the star allows us to modify its internal reality structures and, in theory, control or modify its stellar processes. However, we will first require a detailed core analysis of various stars.",
-    "area": "physics",
-    "category": "Field Manipulation",
-    "tier": 3,
-    "cost": 3880,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d74)Number of years since game start is greater than 90\n"
-    ],
-    "prerequisites": [
-      "tech_sun_crusher_phy_01"
-    ],
-    "prerequisites_loc": [
-      "Theory : Localised Reality Manipulation"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Sun Crusher Research Chain"
-    ]
-  },
-  {
-    "key": "tech_ragnarok_phy_01",
-    "name": "Organic Matter: Structure Analysis",
-    "description": "\nAdvancements in scanning technology has revealed that the unidentified organic matter used in the construction of the Black Hole Containment Vessel exists in multiple dimensions separate from our those commonly utilised by our current technologies.\n\nThis discovery represents a divergent path of research that could fundamentaly change our understanding of reality and the laws that govern it. Further research is advised.\n\n",
-    "area": "physics",
-    "category": "Materials",
-    "tier": 3,
-    "cost": 5160,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d71.5)Number of years since game start is greater than 120\n",
-      "(\u00d72)Number of years since game start is greater than 125\n",
-      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Materials Expert\n"
-    ],
-    "prerequisites": [
-      "tech_erebus",
-      "tech_avatar_doomsday_01"
-    ],
-    "prerequisites_loc": [
-      "Erebus",
-      "Doomsday Weapon : Spear of Longinus"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Minerals: +5%",
-      "Ragnarok Research Chain"
-    ]
-  },
-  {
-    "key": "tech_ragnarok_phy_02",
-    "name": "Theory : Organic Growth Manipulation",
-    "description": "\nAs we begin to unravel the mysteries of organic matter, we have discovered that it grows by feeding on exotic energy in higher dimensions. Unfortunately, the creation of these particles in sufficiently large quantities is proving extremely difficult.\n\nMore research is required to construct a formal theory for the laws governmening both the growth mechanism and particle creation.\n\n",
-    "area": "physics",
-    "category": "Field Manipulation",
-    "tier": 3,
-    "cost": 4520,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d71.5)Number of years since game start is greater than 120\n",
-      "(\u00d72)Number of years since game start is greater than 125\n",
-      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Field Manipulation Expert\n"
-    ],
-    "prerequisites": [
-      "tech_ragnarok_phy_01"
-    ],
-    "prerequisites_loc": [
-      "Organic Matter: Structure Analysis"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Minerals: +5%",
-      "Ragnarok Research Chain"
-    ]
-  },
-  {
-    "key": "tech_ragnarok_doomsday_01",
-    "name": "Doomsday Weapon : Spear of Cassius",
-    "description": "\nI know the evil of my ancestors because I am those people. The balance is delicate in the extreme. I know that few of you who read my words have ever thought about your ancestors this way.\n\nIt has not occurred to you that your ancestors were survivors and that the survival itself sometimes involved savage decisions, a kind of wanton brutality which civilized humankind works very hard to suppress.\n\nWhat price will you pay for that suppression? Will you accept your won extinction?\n\n-The Stolen Journals\n\nThe Spear of Cassius is an anti-fleet doomsday weapon deployed by the Ragnarok that inflicts massive damage to ships within its destruction radius. It has to be recharged after each use by consuming planets. More details can be found in the associated event chain in the Situation Log once the weapon has been used.",
+    "key": "tech_naquadria_power",
+    "name": "Naquadria Reactor",
+    "description": "Specialized Reactor powered by ancient and rare crystals.",
     "area": "physics",
     "category": "Particles",
     "tier": 3,
-    "cost": 5160,
-    "base_weight": 35,
+    "cost": 8000,
+    "base_weight": 50,
+    "base_factor": 1.5,
+    "weight_modifiers": [
+      "(\u00d73)Has Citadel Technology\n",
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has Naquadria Reactor Technology\n",
+      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Industry Expert\n"
+    ],
+    "prerequisites": [
+      "tech_graviton_power"
+    ],
+    "prerequisites_loc": [
+      "Graviton Reactor"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Unlocks Component: Naquadria Reactor"
+    ]
+  },
+  {
+    "key": "tech_singularity_power",
+    "name": "Singularity Power",
+    "description": "Reactor powered by a quantum singularity.",
+    "area": "physics",
+    "category": "Particles",
+    "tier": 3,
+    "cost": 10000,
+    "base_weight": 50,
+    "base_factor": 1.5,
+    "weight_modifiers": [
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has Singularity Power Technology\n",
+      "(\u00d73)Has Battleships Technology\n",
+      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Industry Expert\n"
+    ],
+    "prerequisites": [
+      "tech_naquadria_power"
+    ],
+    "prerequisites_loc": [
+      "Naquadria Reactor"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Unlocks Component: Singularity Reactor"
+    ]
+  },
+  {
+    "key": "tech_power_station",
+    "name": "System Energy Grid",
+    "description": "An expanding star empire requires ever-greater Energy production to sustain it. Creating specialized, space-based Energy-creation facilities will allow us to centralize our Energy production in key systems to better supply our nation's Energy needs.",
+    "area": "physics",
+    "category": "Voidcraft",
+    "tier": 3,
+    "cost": 4000,
+    "base_weight": 65,
     "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d71.5)Number of years since game start is greater than 125\n",
-      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Particles Expert\n"
-    ],
+    "weight_modifiers": [],
     "prerequisites": [
-      "tech_ragnarok_eng_02",
-      "tech_ragnarok_phy_02",
-      "tech_ragnarok_soc_02"
+      "tech_power_hub_1"
     ],
     "prerequisites_loc": [
-      "Organic Core",
-      "Theory : Organic Growth Manipulation",
-      "Doctrine : Organic Technology Integration"
+      "Global Energy Management"
     ],
     "is_start_tech": false,
     "is_dangerous": false,
     "is_rare": true,
     "is_not_reverse_engineerable": false,
     "feature_unlocks": [
-      "Monthly Influence: +1"
-    ]
-  },
-  {
-    "key": "tech_titan_phy_01_mass_manipulation",
-    "name": "Theory : Mass Manipulation",
-    "description": "\nAn alternative application of shielding technology. The ability to manipulate the mass of an object without affecting its other properties will allow us to build at a scale once thought impossible.\n\n",
-    "area": "physics",
-    "category": "Field Manipulation",
-    "tier": 3,
-    "cost": 3360,
-    "base_weight": 80,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d73)Number of years since game start is greater than 70\n",
-      "(\u00d76)Number of years since game start is greater than 80\n",
-      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Field Manipulation Expert\n"
-    ],
-    "prerequisites": [
-      "tech_shields_5",
-      "tech_titan_soc_01_weapons_platform"
-    ],
-    "prerequisites_loc": [
-      "Hyper Shields",
-      "Theory : Massive Weapons Platforms"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Minerals: +5%",
-      "Energy Storage Capacity: +500",
-      "Titan Research Chain"
-    ]
-  },
-  {
-    "key": "tech_titan_phy_02_inertia_dampeners",
-    "name": "Theory : Inertia Dampeners",
-    "description": "\nThere's a reason why we don't try to move military stations. Well, there used to be anyway.\n\n",
-    "area": "physics",
-    "category": "Field Manipulation",
-    "tier": 3,
-    "cost": 3360,
-    "base_weight": 80,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d73)Number of years since game start is greater than 80\n",
-      "(\u00d76)Number of years since game start is greater than 85\n",
-      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Field Manipulation Expert\n"
-    ],
-    "prerequisites": [
-      "tech_titan_phy_01_mass_manipulation"
-    ],
-    "prerequisites_loc": [
-      "Theory : Mass Manipulation"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Energy Credits: +10%",
-      "Energy Storage Capacity: +500",
-      "Titan Research Chain"
-    ]
-  },
-  {
-    "key": "tech_titan_weapon_module_01",
-    "name": "Theory : Titan Modules",
-    "description": "\nThe size and power generation capabilities of the Titan has opened up avenues for specialised modules.\n\n",
-    "area": "physics",
-    "category": "Field Manipulation",
-    "tier": 3,
-    "cost": 3360,
-    "base_weight": 80,
-    "base_factor": 1.25,
-    "weight_modifiers": [
-      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Field Manipulation Expert\n"
-    ],
-    "prerequisites": [
-      "tech_isb_titan"
-    ],
-    "prerequisites_loc": [
-      "Heavy Titan"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Titan Module Research Chain"
-    ]
-  },
-  {
-    "key": "tech_titan_weapon_module_02",
-    "name": "Titan Module : Projected Defenses",
-    "description": "\n'Hey, if we project the shields directly in front of their weapons instead, wouldn't it damage their ship and still protect us?'\n\n'Shut up, Jerry.'\n\n",
-    "area": "physics",
-    "category": "Field Manipulation",
-    "tier": 3,
-    "cost": 2840,
-    "base_weight": 80,
-    "base_factor": 4.0,
-    "weight_modifiers": [
-      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Field Manipulation Expert\n"
-    ],
-    "prerequisites": [
-      "tech_titan_weapon_module_01"
-    ],
-    "prerequisites_loc": [
-      "Theory : Titan Modules"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Unlocks Component: Projected Defenses"
-    ]
-  },
-  {
-    "key": "tech_titan_weapon_module_03",
-    "name": "Titan Module : Centralised Fleet Operations",
-    "description": "\nCentralised is better right? Let's just get the Titan to handle everything.\n\n",
-    "area": "physics",
-    "category": "Field Manipulation",
-    "tier": 3,
-    "cost": 2840,
-    "base_weight": 80,
-    "base_factor": 4.0,
-    "weight_modifiers": [
-      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Computing Expert\n"
-    ],
-    "prerequisites": [
-      "tech_titan_weapon_module_01"
-    ],
-    "prerequisites_loc": [
-      "Theory : Titan Modules"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Unlocks Component: Centralised Fleet Operations"
-    ]
-  },
-  {
-    "key": "tech_titan_weapon_module_04",
-    "name": "Titan Module : Networked Targeting",
-    "description": "\nTwo heads are better than one. How about a hundred?\n\n",
-    "area": "physics",
-    "category": "Field Manipulation",
-    "tier": 3,
-    "cost": 2840,
-    "base_weight": 80,
-    "base_factor": 4.0,
-    "weight_modifiers": [
-      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Computing Expert\n"
-    ],
-    "prerequisites": [
-      "tech_titan_weapon_module_01"
-    ],
-    "prerequisites_loc": [
-      "Theory : Titan Modules"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Unlocks Component: Networked Targeting Systems"
-    ]
-  },
-  {
-    "key": "tech_titan_weapon_module_05",
-    "name": "Titan Module : AI Warfare",
-    "description": "\nThe AI got tired of running combat simulations and decided to take a more...personal approach.\n\n",
-    "area": "physics",
-    "category": "Computing",
-    "tier": 3,
-    "cost": 2840,
-    "base_weight": 35,
-    "base_factor": 4.0,
-    "weight_modifiers": [
-      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Computing Expert\n"
-    ],
-    "prerequisites": [
-      "tech_titan_weapon_module_01",
-      "tech_combat_computers_3"
-    ],
-    "prerequisites_loc": [
-      "Theory : Titan Modules",
-      "Sapient Combat Simulations"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Unlocks Component: AI Warfare"
+      "Unlocks Starbase Building: System Energy Grid"
     ]
   },
   {
@@ -2850,6 +2393,122 @@
     ]
   },
   {
+    "key": "tech_multidimensional_power",
+    "name": "Multidimensional Reactor",
+    "description": "Creating a matter bridge between different dimensions and alternative realities allows for a steady, if somewhat limited, stream of vacuum energy to power our next generation of reactors.",
+    "area": "physics",
+    "category": "Particles",
+    "tier": 4,
+    "cost": 10000,
+    "base_weight": 50,
+    "base_factor": 1.5,
+    "weight_modifiers": [
+      "(\u00d73)Has Battleships Technology\n",
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has Multidimensional Reactor Technology\n",
+      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Industry Expert\n"
+    ],
+    "prerequisites": [
+      "tech_singularity_power"
+    ],
+    "prerequisites_loc": [
+      "Singularity Power"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Unlocks Component: Multidimensional Reactor"
+    ]
+  },
+  {
+    "key": "tech_nsc_reactor_boosters_1",
+    "name": "Graviton Boosters",
+    "description": "The discovery of Graviton power allows for better reactor boosters to be fitted onto our ships.",
+    "area": "physics",
+    "category": "Particles",
+    "tier": 4,
+    "cost": 8000,
+    "base_weight": 45,
+    "base_factor": 1.5,
+    "weight_modifiers": [
+      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Particles Expert\n"
+    ],
+    "prerequisites": [
+      "tech_reactor_boosters_3",
+      "tech_graviton_power"
+    ],
+    "prerequisites_loc": [
+      "Advanced Reactor Boosters",
+      "Graviton Reactor"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Unlocks Component: Graviton Boosters"
+    ]
+  },
+  {
+    "key": "tech_nsc_reactor_boosters_2",
+    "name": "Naquadria Boosters",
+    "description": "The discovery of Naquadria power allows for better reactor boosters to be fitted onto our ships.",
+    "area": "physics",
+    "category": "Particles",
+    "tier": 4,
+    "cost": 10000,
+    "base_weight": 40,
+    "base_factor": 1.5,
+    "weight_modifiers": [
+      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Particles Expert\n"
+    ],
+    "prerequisites": [
+      "tech_nsc_reactor_boosters_1",
+      "tech_naquadria_power"
+    ],
+    "prerequisites_loc": [
+      "Graviton Boosters",
+      "Naquadria Reactor"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Unlocks Component: Naquadria Boosters"
+    ]
+  },
+  {
+    "key": "tech_nsc_reactor_boosters_3",
+    "name": "Singularity Boosters",
+    "description": "The discovery of Singularity power allows for better reactor boosters to be fitted onto our ships.",
+    "area": "physics",
+    "category": "Particles",
+    "tier": 4,
+    "cost": 12000,
+    "base_weight": 35,
+    "base_factor": 1.5,
+    "weight_modifiers": [
+      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Particles Expert\n"
+    ],
+    "prerequisites": [
+      "tech_singularity_power",
+      "tech_nsc_reactor_boosters_2"
+    ],
+    "prerequisites_loc": [
+      "Singularity Power",
+      "Naquadria Boosters"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Unlocks Component: Singularity Boosters"
+    ]
+  },
+  {
     "key": "tech_pk_shielder",
     "name": "Global Pacification",
     "description": "A shielding field is deployed around a planet, creating a barrier that is permanent and impenetrable (save for some wavelengths of light).",
@@ -3243,6 +2902,90 @@
       "Unlocks Component: Small Matter Disintegrator",
       "Unlocks Component: Medium Matter Disintegrator",
       "Unlocks Component: Large Matter Disintegrator"
+    ]
+  },
+  {
+    "key": "tech_optimized_enigmatic_power",
+    "name": "Optimized Dark Matter Reactor",
+    "description": "Enhanced Dark Matter Reactor",
+    "area": "physics",
+    "category": "Particles",
+    "tier": 5,
+    "cost": 20000,
+    "base_weight": 20,
+    "base_factor": 1.5,
+    "weight_modifiers": [
+      "(\u00d75)Has Dark Matter Power Technology\n",
+      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Industry Expert\n"
+    ],
+    "prerequisites": [
+      "tech_dark_matter_power_core"
+    ],
+    "prerequisites_loc": [
+      "Dark Matter Power"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": true,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Unlocks Component: Optimized Dark Matter Reactor"
+    ]
+  },
+  {
+    "key": "tech_bh_power_2",
+    "name": "Improved Flagship Reactors",
+    "description": "Reactor powered by an artificial black hole.",
+    "area": "physics",
+    "category": "Particles",
+    "tier": 5,
+    "cost": 17500,
+    "base_weight": 25,
+    "base_factor": 1.5,
+    "weight_modifiers": [
+      "(\u00d75)Has Dark Matter Power Technology\n",
+      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Industry Expert\n"
+    ],
+    "prerequisites": [
+      "tech_Flagship_1"
+    ],
+    "prerequisites_loc": [
+      "The Flagship"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": true,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Unlocks Component: Black Hole Reactor"
+    ]
+  },
+  {
+    "key": "tech_bh_power_3",
+    "name": "Advanced Flagship Reactors",
+    "description": "Reactor powered by an artificial black hole.",
+    "area": "physics",
+    "category": "Particles",
+    "tier": 5,
+    "cost": 20000,
+    "base_weight": 20,
+    "base_factor": 1.5,
+    "weight_modifiers": [
+      "(\u00d75)Has Improved Flagship Reactors Technology\n",
+      "(\u00d71.25)  Research Leader (Physics):\n    \u2022 Is  Industry Expert\n"
+    ],
+    "prerequisites": [
+      "tech_bh_power_2"
+    ],
+    "prerequisites_loc": [
+      "Improved Flagship Reactors"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": true,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Unlocks Component: Black Hole Reactor"
     ]
   },
   {
@@ -3967,6 +3710,25 @@
     "feature_unlocks": [
       "Unlocks Building: Spare Parts Depot"
     ]
+  },
+  {
+    "key": "tech_nsc_disabled_sections",
+    "name": "Disabled NSC Ship Sections",
+    "description": "If you are seeing this tech something is wrong or you used the console.",
+    "area": "society",
+    "category": "Materials",
+    "tier": 1,
+    "cost": 0,
+    "base_weight": 0,
+    "base_factor": 1.0,
+    "weight_modifiers": [],
+    "prerequisites": [],
+    "prerequisites_loc": [],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": true,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": []
   },
   {
     "key": "tech_gene_crops",
@@ -5629,481 +5391,6 @@
     ]
   },
   {
-    "key": "tech_avatar_soc_01",
-    "name": "Theory : Empire-wide Projects",
-    "description": "\nProjects that require the output of an entire Interstellar Empire pose an interesting logistical and administrative problem. Completely new industries and societal structures will have to be developed in order to handle the demands of such projects efficiently.\n\n",
-    "area": "society",
-    "category": "Statecraft",
-    "tier": 3,
-    "cost": 5160,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d71.5)Number of years since game start is greater than 100\n",
-      "(\u00d72)Number of years since game start is greater than 105\n",
-      "(\u00d71.25)  Research Leader (Society):\n    \u2022 Is  Statecraft Expert\n"
-    ],
-    "prerequisites": [
-      "tech_sun_crusher_phy_02",
-      "tech_titan_doomsday_weapons_04"
-    ],
-    "prerequisites_loc": [
-      "Theory : Internal Stellar Manipulation",
-      "Framework : Von Neumann Machines"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Happiness: +5%",
-      "Avatar Research Chain"
-    ]
-  },
-  {
-    "key": "tech_avatar_soc_02",
-    "name": "Theory : Mobile Space Fortress",
-    "description": "\nThe creation of planetoid-sized ships will present us with a multitude of crew and logistical problems. Before embarking on such a project, the necessary processes and structures required for the upkeep of a small city's worth of crew both in and out of combat must first be explored and defined.\n\n",
-    "area": "society",
-    "category": "Military Theory",
-    "tier": 3,
-    "cost": 3880,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d71.5)Number of years since game start is greater than 105\n",
-      "(\u00d72)Number of years since game start is greater than 110\n",
-      "(\u00d70.65)Has Fanatic Pacifist Ethic\n",
-      "(\u00d70.8)Has Pacifist Ethic\n",
-      "(\u00d71.25)Has Militarist Ethic\n",
-      "(\u00d71.5)Has Fanatic Militarist Ethic\n",
-      "(\u00d71.25)  Research Leader (Society):\n    \u2022 Is  Military Theory Expert\n"
-    ],
-    "prerequisites": [
-      "tech_avatar_soc_01"
-    ],
-    "prerequisites_loc": [
-      "Theory : Empire-wide Projects"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Starbase Capacity: +2",
-      "Avatar Research Chain"
-    ]
-  },
-  {
-    "key": "tech_erebus_soc_01",
-    "name": "Theory : Super-Carriers",
-    "description": "\nThe creation of super-capital ships designed to destroy capital-size and above vessels has greatly increased the importance of smaller ships as fleet support. However, the high attrition rates of these support craft represent a significant problem during prolonged engagements. A new class of super-capital ships has thus been proposed to address this issue.\n\n",
-    "area": "society",
-    "category": "Military Theory",
-    "tier": 3,
-    "cost": 4520,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d71.5)Number of years since game start is greater than 105\n",
-      "(\u00d72)Number of years since game start is greater than 110\n",
-      "(\u00d71.25)  Research Leader (Society):\n    \u2022 Is  Military Theory Expert\n"
-    ],
-    "prerequisites": [
-      "tech_avatar"
-    ],
-    "prerequisites_loc": [
-      "The Avatar Project"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Starbase Capacity: +2",
-      "Energy Storage Capacity: +250",
-      "Erebus Research Chain"
-    ]
-  },
-  {
-    "key": "tech_erebus_soc_02",
-    "name": "Doctrine : Drone Warfare",
-    "description": "\nFully autonomous squadrons of combat drones create a shift in the structure and roles of traditional ships in a fleet. This doctrine will examine and define the changes necessary to fully integrate them into fleet operations.\n\n",
-    "area": "society",
-    "category": "Military Theory",
-    "tier": 3,
-    "cost": 4520,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d71.5)Number of years since game start is greater than 110\n",
-      "(\u00d72)Number of years since game start is greater than 115\n",
-      "(\u00d71.25)  Research Leader (Society):\n    \u2022 Is  Military Theory Expert\n"
-    ],
-    "prerequisites": [
-      "tech_erebus_soc_01"
-    ],
-    "prerequisites_loc": [
-      "Theory : Super-Carriers"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Ship Upkeep: -5%",
-      "Energy Storage Capacity: +250",
-      "Erebus Research Chain"
-    ]
-  },
-  {
-    "key": "tech_leviathan_soc_01",
-    "name": "Theory : Specialised Weapons Platform",
-    "description": "\nWhile the Titan fulfilled its purpose as a general purpose fleet support platform, it became immediately apparent that a specialised platform was required for the more dangerous fleet operations.\n\n",
-    "area": "society",
-    "category": "Military Theory",
-    "tier": 3,
-    "cost": 3880,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d74)Number of years since game start is greater than 90\n",
-      "(\u00d76)Number of years since game start is greater than 100\n",
-      "(\u00d70.65)Has Fanatic Pacifist Ethic\n",
-      "(\u00d70.8)Has Pacifist Ethic\n",
-      "(\u00d71.25)Has Militarist Ethic\n",
-      "(\u00d71.5)Has Fanatic Militarist Ethic\n",
-      "(\u00d71.25)  Research Leader (Society):\n    \u2022 Is  Military Theory Expert\n"
-    ],
-    "prerequisites": [
-      "tech_titan_weapon_module_02",
-      "tech_titan_weapon_module_03",
-      "tech_titan_weapon_module_04"
-    ],
-    "prerequisites_loc": [
-      "Titan Module : Projected Defenses",
-      "Titan Module : Centralised Fleet Operations",
-      "Titan Module : Networked Targeting"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Starbase Capacity: +1",
-      "Energy Storage Capacity: +250",
-      "Leviathan Research Chain"
-    ]
-  },
-  {
-    "key": "tech_leviathan_soc_02",
-    "name": "Doctrine : Capital Ship Warfare",
-    "description": "\n'War, war never changes.'\n\n'Actually, it does, that's why we have to draft this new doctrine.'\n\n'Shut up, Jerry.'\n\n",
-    "area": "society",
-    "category": "Military Theory",
-    "tier": 3,
-    "cost": 3880,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d74)Number of years since game start is greater than 95\n",
-      "(\u00d76)Number of years since game start is greater than 100\n",
-      "(\u00d70.65)Has Fanatic Pacifist Ethic\n",
-      "(\u00d70.8)Has Pacifist Ethic\n",
-      "(\u00d71.25)Has Militarist Ethic\n",
-      "(\u00d71.5)Has Fanatic Militarist Ethic\n",
-      "(\u00d71.25)  Research Leader (Society):\n    \u2022 Is  Military Theory Expert\n"
-    ],
-    "prerequisites": [
-      "tech_leviathan_soc_01"
-    ],
-    "prerequisites_loc": [
-      "Theory : Specialised Weapons Platform"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Energy Storage Capacity: +250",
-      "Leviathan Research Chain"
-    ]
-  },
-  {
-    "key": "tech_sun_crusher_soc_01",
-    "name": "Doctrine : Autonomous Weapons Systems",
-    "description": "\nBy completely eliminating the need for a crew, we are able to utilise a significantly larger fraction of the ship's hull space for weapons systems and operate in a multitude of deadly environments. This allows us to design highly specific weapons platforms.",
-    "area": "society",
-    "category": "Military Theory",
-    "tier": 3,
-    "cost": 3880,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d74)Number of years since game start is greater than 90\n"
-    ],
-    "prerequisites": [
-      "tech_leviathan",
-      "tech_titan_doomsday_weapons_02",
-      "tech_titan_doomsday_weapons_03"
-    ],
-    "prerequisites_loc": [
-      "Leviathan",
-      "Doomsday Weapon : Neutronium Kinetic Bombardment",
-      "Doomsday Weapon : Evolutionary Virus"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Monthly Influence: +50%",
-      "Sun Crusher Research Chain"
-    ]
-  },
-  {
-    "key": "tech_ragnarok_soc_01",
-    "name": "Theory : Organic Technology Interfacing",
-    "description": "\nAI and computer systems will have to be redesigned to correct recognise and communicate with the new organic technology in order for us to begin to utilise them.\n\n",
-    "area": "society",
-    "category": "Biology",
-    "tier": 3,
-    "cost": 4520,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d71.5)Number of years since game start is greater than 120\n",
-      "(\u00d72)Number of years since game start is greater than 125\n",
-      "(\u00d71.25)  Research Leader (Society):\n    \u2022 Is  Biology Expert\n"
-    ],
-    "prerequisites": [
-      "tech_ragnarok_eng_01"
-    ],
-    "prerequisites_loc": [
-      "Framework : Organic Technology"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Starbase Capacity: +2",
-      "Ragnarok Research Chain"
-    ]
-  },
-  {
-    "key": "tech_ragnarok_soc_02",
-    "name": "Doctrine : Organic Technology Integration",
-    "description": "\n'Is using this new organic technology really such a good idea? We don't even understand how it works.'\n\n'Shut up, Jerry.'\n\n'But - '\n\n'You just volunteered as integration test subject #1.'\n\n",
-    "area": "society",
-    "category": "Biology",
-    "tier": 3,
-    "cost": 4520,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d71.5)Number of years since game start is greater than 120\n",
-      "(\u00d72)Number of years since game start is greater than 125\n",
-      "(\u00d71.25)  Research Leader (Society):\n    \u2022 Is  Biology Expert\n"
-    ],
-    "prerequisites": [
-      "tech_ragnarok_soc_01"
-    ],
-    "prerequisites_loc": [
-      "Theory : Organic Technology Interfacing"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Starbase Capacity: +2",
-      "Ragnarok Research Chain"
-    ]
-  },
-  {
-    "key": "tech_titan_soc_01_weapons_platform",
-    "name": "Theory : Massive Weapons Platforms",
-    "description": "\nThe liberty of our people is solely our responsibility. Tempting as it is to foist this burden upon our well-wishers, we must never forget that the onus of our emancipation rests with us and us alone.\n\n",
-    "area": "society",
-    "category": "Military Theory",
-    "tier": 3,
-    "cost": 3360,
-    "base_weight": 80,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d73)Number of years since game start is greater than 70\n",
-      "(\u00d76)Number of years since game start is greater than 80\n",
-      "(\u00d70.65)Has Fanatic Pacifist Ethic\n",
-      "(\u00d70.8)Has Pacifist Ethic\n",
-      "(\u00d71.25)Has Militarist Ethic\n",
-      "(\u00d71.5)Has Fanatic Militarist Ethic\n",
-      "(\u00d71.25)  Research Leader (Society):\n    \u2022 Is  Military Theory Expert\n"
-    ],
-    "prerequisites": [
-      "tech_doctrine_fleet_size_5"
-    ],
-    "prerequisites_loc": [
-      "Doctrine: Armada Battle Formation"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Starbase Capacity: +1",
-      "Energy Storage Capacity: +250",
-      "Titan Research Chain"
-    ]
-  },
-  {
-    "key": "tech_titan_soc_02_super_capital",
-    "name": "Theory : Super Capital Ships",
-    "description": "\nIf you go looking for trouble, you're sure to find it.\n\n",
-    "area": "society",
-    "category": "Military Theory",
-    "tier": 3,
-    "cost": 3360,
-    "base_weight": 80,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d73)Number of years since game start is greater than 80\n",
-      "(\u00d76)Number of years since game start is greater than 85\n",
-      "(\u00d70.65)Has Fanatic Pacifist Ethic\n",
-      "(\u00d70.8)Has Pacifist Ethic\n",
-      "(\u00d71.25)Has Militarist Ethic\n",
-      "(\u00d71.5)Has Fanatic Militarist Ethic\n",
-      "(\u00d71.25)  Research Leader (Society):\n    \u2022 Is  Military Theory Expert\n"
-    ],
-    "prerequisites": [
-      "tech_titan_soc_01_weapons_platform"
-    ],
-    "prerequisites_loc": [
-      "Theory : Massive Weapons Platforms"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Ship Upkeep: -5%",
-      "Energy Storage Capacity: +250",
-      "Titan Research Chain"
-    ]
-  },
-  {
-    "key": "tech_titan_doomsday_weapons_01",
-    "name": "Theory : Doomsday Weapons",
-    "description": "\nEnemies strengthen you.\n\nAllies weaken.\n\nI tell you this in the hope that it will help you understand why I act as I do in the full knowledge that great forces accumulate in my Empire with but one wish - the wish to destroy me. You who read these words may know full well what actually happened, but I doubt that you understand it.\n\n",
-    "area": "society",
-    "category": "Military Theory",
-    "tier": 3,
-    "cost": 3360,
-    "base_weight": 35,
-    "base_factor": 4.0,
-    "weight_modifiers": [
-      "(\u00d71.25)  Research Leader (Society):\n    \u2022 Is  Military Theory Expert\n"
-    ],
-    "prerequisites": [
-      "tech_titan_weapon_module_01"
-    ],
-    "prerequisites_loc": [
-      "Theory : Titan Modules"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Monthly Influence: +1",
-      "Unlocks Titan doomsday weapons research chain"
-    ]
-  },
-  {
-    "key": "tech_titan_doomsday_weapons_03",
-    "name": "Doomsday Weapon : Evolutionary Virus",
-    "description": "\nBy seeding the planet's atmosphere with special genetically modified viruses, we are able to target only the enemy's population. Unless something goes wrong.\n\nYou may select this weapon through the empire policy screen and authorise its use under empire edicts.\n\n",
-    "area": "society",
-    "category": "Biology",
-    "tier": 3,
-    "cost": 3360,
-    "base_weight": 35,
-    "base_factor": 1.25,
-    "weight_modifiers": [
-      "(\u00d71.25)  Research Leader (Society):\n    \u2022 Is  Biology Expert\n"
-    ],
-    "prerequisites": [
-      "tech_titan_doomsday_weapons_01"
-    ],
-    "prerequisites_loc": [
-      "Theory : Doomsday Weapons"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Monthly Influence: +25%",
-      "Unlocks Titan doomsday weapons research chain"
-    ]
-  },
-  {
-    "key": "tech_titan_doomsday_weapons_06",
-    "name": "Doomsday Weapon : Mind Control Stimulants",
-    "description": "\nBy releasing bio-engineered nano-particles into the atmosphere of the planet, we are able to subtly influence the thoughts of its population, making them more susceptible to external influences and reducing their happiness.\n\nYou may select this weapon through the empire policy screen and authorise its use under empire edicts.\n\n",
-    "area": "society",
-    "category": "Biology",
-    "tier": 3,
-    "cost": 4520,
-    "base_weight": 35,
-    "base_factor": 1.25,
-    "weight_modifiers": [
-      "(\u00d71.25)  Research Leader (Society):\n    \u2022 Is  Biology Expert\n"
-    ],
-    "prerequisites": [
-      "tech_titan_doomsday_weapons_05"
-    ],
-    "prerequisites_loc": [
-      "Doomsday Weapon : Nanite Disassemblers"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Monthly Influence: +25%",
-      "Unlocks Titan doomsday weapons research chain"
-    ]
-  },
-  {
-    "key": "tech_titan_doomsday_weapons_07",
-    "name": "Doomsday Weapon : Primal Mutation",
-    "description": "\nA modified strain of the Evolutionary Virus delivered and controlled via nanites. Through this delivery mechanism, we are able to engineer mutations within the enemy's population, greatly increasing their physical strength and aggressiveness, turning them into ferocious xenomorphs under our control. While most of the infected will not survive the mutation process, those that do turn into a horrific, rampaging force. This is an extremely energy intensive process.\n\nYou may select this weapon through the empire policy screen and authorise its use under empire edicts.\n\n",
-    "area": "society",
-    "category": "Biology",
-    "tier": 3,
-    "cost": 4520,
-    "base_weight": 35,
-    "base_factor": 1.25,
-    "weight_modifiers": [
-      "(\u00d71.25)  Research Leader (Society):\n    \u2022 Is  Biology Expert\n"
-    ],
-    "prerequisites": [
-      "tech_titan_doomsday_weapons_06"
-    ],
-    "prerequisites_loc": [
-      "Doomsday Weapon : Mind Control Stimulants"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Monthly Influence: +25%",
-      "Unlocks Titan doomsday weapons research chain"
-    ]
-  },
-  {
     "key": "tech_neuroregeneration",
     "name": "Neural Tissue Engineering",
     "description": "When tailored to a species' genome, this form of tissue engineering has intensive neuroregenerative properties, significantly increasing the development of neurons, axons, and synapses in its recipient.",
@@ -7597,7 +6884,8 @@
     "is_rare": false,
     "is_not_reverse_engineerable": false,
     "feature_unlocks": [
-      "Unlocks Component: Basic Strike Craft"
+      "Unlocks Component: Basic Fighters",
+      "Unlocks Component: Basic Bombers"
     ]
   },
   {
@@ -8120,28 +7408,6 @@
     ]
   },
   {
-    "key": "tech_isb_base",
-    "name": "Improved Space Battles",
-    "description": "Balance changes for Improved Space Battles",
-    "area": "engineering",
-    "category": "Industry",
-    "tier": 1,
-    "cost": 240,
-    "base_weight": 100,
-    "base_factor": 1.0,
-    "weight_modifiers": [],
-    "prerequisites": [],
-    "prerequisites_loc": [],
-    "is_start_tech": true,
-    "is_dangerous": true,
-    "is_rare": false,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Mineral Storage Capacity: +5000",
-      "Energy Storage Capacity: +5000"
-    ]
-  },
-  {
     "key": "tech_repeatable_lcluster_clue",
     "name": "L-Gate Insight",
     "description": "Intensive study within the fields of nanomachinery and subspace phenomena will eventually yield a new L-Gate Insight into the Disabled L-Gate mystery.",
@@ -8367,7 +7633,8 @@
     "is_rare": false,
     "is_not_reverse_engineerable": false,
     "feature_unlocks": [
-      "Unlocks Component: Improved Strike Craft"
+      "Unlocks Component: Improved Fighters",
+      "Unlocks Component: Improved Bombers"
     ]
   },
   {
@@ -8780,6 +8047,143 @@
     ]
   },
   {
+    "key": "tech_pd_destroyer_1",
+    "name": "PD Destroyer Upgrade",
+    "description": "Advanced construction techniques allow Destroyers to equip a large array of point defense weapons.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 2,
+    "cost": 2000,
+    "base_weight": 85,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has PD Destroyer Upgrade Technology\n",
+      "(\u00d70.1)Number of years since game start is less than 61\n",
+      "(\u00d71)Number of years since game start is greater than 60\n",
+      "(\u00d72)Number of years since game start is greater than 70\n",
+      "(\u00d73)Number of years since game start is greater than 80\n",
+      "(\u00d74)Number of years since game start is greater than 90\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_destroyers",
+      "tech_pd_tracking_1",
+      "tech_flak_batteries_1"
+    ],
+    "prerequisites_loc": [
+      "Destroyers",
+      "Active Countermeasures",
+      "Flak Battery"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Unlocks Section Type: PD Destroyer"
+    ]
+  },
+  {
+    "key": "tech_StrikeCruiser_1",
+    "name": "Strike Cruiser",
+    "description": "New facilities and construction techniques allow us to now build Strike Cruiser-class military vessels.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 2,
+    "cost": 2500,
+    "base_weight": 70,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has Strike Cruiser Technology\n",
+      "(\u00d70.1)Number of years since game start is less than 61\n",
+      "(\u00d71)Number of years since game start is greater than 60\n",
+      "(\u00d72)Number of years since game start is greater than 70\n",
+      "(\u00d73)Number of years since game start is greater than 80\n",
+      "(\u00d74)Number of years since game start is greater than 90\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_cruisers"
+    ],
+    "prerequisites_loc": [
+      "Cruisers"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Fleet Command Limit: +10",
+      "Unlocks Ship Type: Strike Cruiser"
+    ]
+  },
+  {
+    "key": "tech_sensorstation_1",
+    "name": "Sensor Station",
+    "description": "This will allow construction of starbase sensor stations to assist in monitoring our borders.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 2,
+    "cost": 1500,
+    "base_weight": 85,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has Sensor Station Technology\n",
+      "(\u00d70.1)Number of years since game start is less than 26\n",
+      "(\u00d71)Number of years since game start is greater than 25\n",
+      "(\u00d72)Number of years since game start is greater than 30\n",
+      "(\u00d73)Number of years since game start is greater than 35\n",
+      "(\u00d74)Number of years since game start is greater than 40\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_sensors_4"
+    ],
+    "prerequisites_loc": [
+      "Tachyon Sensors"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": true,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Unlocks Starbase Building: Sensor Station"
+    ]
+  },
+  {
+    "key": "tech_specialcomponents_1",
+    "name": "Advanced Warship Components",
+    "description": "Unlocks a new set of ship modules allowing for the enhancement and further specialization of ships with a unique bonus.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 2,
+    "cost": 2500,
+    "base_weight": 70,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has Advanced Warship Components Technology\n",
+      "(\u00d70.1)Number of years since game start is less than 10\n",
+      "(\u00d71)Number of years since game start is greater than 20\n",
+      "(\u00d72)Number of years since game start is greater than 30\n",
+      "(\u00d73)Number of years since game start is greater than 40\n",
+      "(\u00d74)Number of years since game start is greater than 50\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_cruisers"
+    ],
+    "prerequisites_loc": [
+      "Cruisers"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Unlocks Component Set: Advanced Warship Components"
+    ]
+  },
+  {
     "key": "tech_cruisers",
     "name": "Cruisers",
     "description": "Originally devised as an experimental next-generation colony ship hull configuration, the design's ample hardpoints made it ideal for carrying heavy weapons ordnance.",
@@ -8987,7 +8391,8 @@
     "is_rare": false,
     "is_not_reverse_engineerable": false,
     "feature_unlocks": [
-      "Unlocks Component: Advanced Strike Craft"
+      "Unlocks Component: Advanced Fighters",
+      "Unlocks Component: Advanced Bombers"
     ]
   },
   {
@@ -9339,633 +8744,573 @@
     ]
   },
   {
-    "key": "tech_avatar",
-    "name": "The Avatar Project",
-    "description": "\nWhen I set out to lead humankind along my Golden Path, I promised them a lesson their bones would remember. I know a profound pattern which humans deny with their words even while their actions affirm it.\n\nThey say they seek security and quiet, the condition they call peace. Even as they speak, they create the seeds of turmoil and violence. If they find their quiet security, they squirm in it. How boring they find it.\n\n",
+    "key": "tech_Battlecruiser_1",
+    "name": "Battlecruiser",
+    "description": "New facilities and construction techniques allow us to now build Battlecruiser-class military vessels.",
     "area": "engineering",
     "category": "Voidcraft",
     "tier": 3,
-    "cost": 5160,
-    "base_weight": 45,
+    "cost": 4000,
+    "base_weight": 65,
     "base_factor": 1.0,
     "weight_modifiers": [
-      "(\u00d70.1)Number of years since game start is NOT greater than 100\n",
-      "(\u00d72)  Any Neighbor Country:\n    \u2022 Has The Avatar Project Technology\n",
-      "(\u00d72)Number of years since game start is greater than 100\n",
-      "(\u00d73)Number of years since game start is greater than 110\n",
-      "(\u00d74)Number of years since game start is greater than 120\n",
-      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
-    ],
-    "prerequisites": [
-      "tech_avatar_eng_02",
-      "tech_avatar_phy_02",
-      "tech_avatar_soc_02"
-    ],
-    "prerequisites_loc": [
-      "Framework : Artificial Planetoid Construction",
-      "Theory : Black Hole Containment Vessel",
-      "Theory : Mobile Space Fortress"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Mineral Storage Capacity: +2000",
-      "Energy Storage Capacity: +2000",
-      "Unlocks Ship type: Avatar Constructor"
-    ]
-  },
-  {
-    "key": "tech_avatar_eng_01",
-    "name": "Framework : Extra-Orbital Construction",
-    "description": "\nThe spaceport shipyards are very clearly no longer large enough for the construction project we are about to undertake. However, moving construction out of planetary orbit and setting up the construction frame in deep space poses several problems of its own.\n\n",
-    "area": "engineering",
-    "category": "Industry",
-    "tier": 3,
-    "cost": 3880,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d71.5)Number of years since game start is greater than 90\n",
-      "(\u00d72)Number of years since game start is greater than 100\n",
-      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Industry Expert\n"
-    ],
-    "prerequisites": [
-      "tech_avatar_soc_01"
-    ],
-    "prerequisites_loc": [
-      "Theory : Empire-wide Projects"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Energy Storage Capacity: +500",
-      "Avatar Research Chain"
-    ]
-  },
-  {
-    "key": "tech_avatar_eng_02",
-    "name": "Framework : Artificial Planetoid Construction",
-    "description": "\nThe design and assembly of such massive ships requires the complete rework of current construction systems, and creation of several new ones.\n\n",
-    "area": "engineering",
-    "category": "Industry",
-    "tier": 3,
-    "cost": 3880,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d71.5)Number of years since game start is greater than 105\n",
-      "(\u00d72)Number of years since game start is greater than 110\n",
-      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Industry Expert\n"
-    ],
-    "prerequisites": [
-      "tech_avatar_eng_01"
-    ],
-    "prerequisites_loc": [
-      "Framework : Extra-Orbital Construction"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Energy Credits: +5%",
-      "Avatar Research Chain"
-    ]
-  },
-  {
-    "key": "tech_erebus",
-    "name": "Erebus",
-    "description": "\nA massive super-carrier that is basically a mobile shipyard that manufactures and launches fully-autonomous combat drones during engagements. Able to directly convert energy into the raw materials required for drone construction, the Erebus can construct and launch 10 drones every 25 days. The constant supply of reinforcements makes the Erebus an incredibly valuable asset in massive fleet battles. Due to the size and complexity of the drone manufactory, the Erebus relies heavily on extremely powerful shields for defence.\n\nCombat Drones created by the Erebus carry enough power to sustain them for 90 days, after which they will automatically self-destruct.\n\n",
-    "area": "engineering",
-    "category": "Voidcraft",
-    "tier": 3,
-    "cost": 4520,
-    "base_weight": 45,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d70.1)Number of years since game start is NOT greater than 95\n",
-      "(\u00d72)  Any Neighbor Country:\n    \u2022 Has Erebus Technology\n",
-      "(\u00d72)Number of years since game start is greater than 110\n",
-      "(\u00d73)Number of years since game start is greater than 120\n",
-      "(\u00d74)Number of years since game start is greater than 130\n",
-      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
-    ],
-    "prerequisites": [
-      "tech_erebus_eng_02",
-      "tech_erebus_phy_02",
-      "tech_erebus_soc_02"
-    ],
-    "prerequisites_loc": [
-      "Framework : Combat Drones",
-      "Theory : Layered Shielding",
-      "Doctrine : Drone Warfare"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Mineral Storage Capacity: +6000",
-      "Energy Storage Capacity: +1000",
-      "Unlocks Ship type: Erebus"
-    ]
-  },
-  {
-    "key": "tech_erebus_eng_01",
-    "name": "Framework : Mobile Construction Facilities",
-    "description": "\nThe creation of an automated shipyard that can continue operating under enemy fire presents an interesting engineering challenge.\n\n",
-    "area": "engineering",
-    "category": "Industry",
-    "tier": 3,
-    "cost": 4520,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d71.5)Number of years since game start is greater than 105\n",
-      "(\u00d72)Number of years since game start is greater than 110\n",
-      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Industry Expert\n"
-    ],
-    "prerequisites": [
-      "tech_erebus_soc_01"
-    ],
-    "prerequisites_loc": [
-      "Theory : Super-Carriers"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Defense Platform Build Cost: -5%",
-      "Defense Platform Hull Points: +10%",
-      "Energy Storage Capacity: +250",
-      "Erebus Research Chain"
-    ]
-  },
-  {
-    "key": "tech_erebus_eng_02",
-    "name": "Framework : Combat Drones",
-    "description": "\nCombat Drones are autonomous ships with a very limited lifespan that are designed to take out the enemy fleet's support craft, leaving their capital ships vulnerable.\n\n",
-    "area": "engineering",
-    "category": "Industry",
-    "tier": 3,
-    "cost": 4520,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d71.5)Number of years since game start is greater than 110\n",
-      "(\u00d72)Number of years since game start is greater than 115\n",
-      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Industry Expert\n"
-    ],
-    "prerequisites": [
-      "tech_erebus_eng_01"
-    ],
-    "prerequisites_loc": [
-      "Framework : Mobile Construction Facilities"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Construction Time: -5%",
-      "Energy Storage Capacity: +250",
-      "Erebus Research Chain"
-    ]
-  },
-  {
-    "key": "tech_leviathan",
-    "name": "Leviathan",
-    "description": "\nGiven enough time for the generations to evolved, the predator produces particular survival adaptations in its prey which, through the circular operation of feedback, produce changes in the predator which again produce changes in the predator which again change the prey.\n\n",
-    "area": "engineering",
-    "category": "Voidcraft",
-    "tier": 3,
-    "cost": 3880,
-    "base_weight": 45,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d70.1)Number of years since game start is NOT greater than 90\n",
-      "(\u00d72)  Any Neighbor Country:\n    \u2022 Has Leviathan Technology\n",
-      "(\u00d76)Number of years since game start is greater than 100\n",
-      "(\u00d79)Number of years since game start is greater than 110\n",
-      "(\u00d712)Number of years since game start is greater than 120\n",
-      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
-    ],
-    "prerequisites": [
-      "tech_leviathan_eng_02",
-      "tech_leviathan_phy_02",
-      "tech_leviathan_soc_02"
-    ],
-    "prerequisites_loc": [
-      "Framework : Energy Amplification",
-      "Theory : Dimensionally Phased Materials",
-      "Doctrine : Capital Ship Warfare"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Mineral Storage Capacity: +5000",
-      "Energy Storage Capacity: +1500",
-      "Unlocks Ship type: Leviathan"
-    ]
-  },
-  {
-    "key": "tech_leviathan_eng_01",
-    "name": "Framework : Multi-dimensional Construction",
-    "description": "\nUtilising the breakthroughts in multi-dimensional structuring will allow us to create frames and structures for our ships.\n\n",
-    "area": "engineering",
-    "category": "Industry",
-    "tier": 3,
-    "cost": 3880,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d74)Number of years since game start is greater than 90\n",
-      "(\u00d76)Number of years since game start is greater than 100\n",
-      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Industry Expert\n"
-    ],
-    "prerequisites": [
-      "tech_leviathan_phy_01"
-    ],
-    "prerequisites_loc": [
-      "Theory : Multi-dimensional Structuring"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Defense Platform Build Cost: -5%",
-      "Defense Platform Hull Points: +10%",
-      "Energy Storage Capacity: +250",
-      "Leviathan Research Chain"
-    ]
-  },
-  {
-    "key": "tech_leviathan_eng_02",
-    "name": "Framework : Energy Amplification",
-    "description": "\nAdvances in energy storage and manipulation allows us to focus and amplify the energy transmission capabilities of weapons systems.\n\n",
-    "area": "engineering",
-    "category": "Industry",
-    "tier": 3,
-    "cost": 3880,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d74)Number of years since game start is greater than 95\n",
-      "(\u00d76)Number of years since game start is greater than 100\n",
-      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Industry Expert\n"
-    ],
-    "prerequisites": [
-      "tech_leviathan_eng_01"
-    ],
-    "prerequisites_loc": [
-      "Framework : Multi-dimensional Construction"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Energy Credits: +5%",
-      "Energy Storage Capacity: +250",
-      "Leviathan Research Chain"
-    ]
-  },
-  {
-    "key": "tech_sun_crusher",
-    "name": "Doomsday Weapon : Sun Crusher",
-    "description": "\nA fully autonomous ship built around a doomsday weapon, designed to transport the massive system to its target. By utilising dimensional phasing and specially modified phase shields, this weapon can survive inside the core of a main sequence star just long to make a localised alteration of the laws of physics and trigger a nova.\n\nThe Sun Crusher will nova the system's sun, destroying all colonies and ships in the system, and turn all planets uninhabitable.\n\nInstructions for how to activate this weapon can be found in the associated authorisation edict.",
-    "area": "engineering",
-    "category": "Voidcraft",
-    "tier": 3,
-    "cost": 3880,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d74)Number of years since game start is greater than 105\n",
-      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
-    ],
-    "prerequisites": [
-      "tech_sun_crusher_phy_02"
-    ],
-    "prerequisites_loc": [
-      "Theory : Internal Stellar Manipulation"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Monthly Influence: +1",
-      "Unlocks Doomsday Weapon: Sun Crusher"
-    ]
-  },
-  {
-    "key": "tech_ragnarok",
-    "name": "Ragnarok",
-    "description": "\nThe world is for the living. Who are they?\nWe dared the dark to reach the white and warm.\nShe was the wind when the wind was in my way;\nAlive at noon, I perished in her form.\nWho rise from the flesh to spirit know the fall:\nThe word outleaps the world and light is all.\n\n-Theodore Roethke\n\nWARNING: You may only own one Ragnarok at any time. Constructing another Ragnarok will result in its destruction due to core instabilities.\n\n",
-    "area": "engineering",
-    "category": "Voidcraft",
-    "tier": 3,
-    "cost": 5160,
-    "base_weight": 45,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d70.1)Number of years since game start is NOT greater than 120\n",
-      "(\u00d72)  Any Neighbor Country:\n    \u2022 Has Ragnarok Technology\n",
-      "(\u00d72)Number of years since game start is greater than 120\n",
-      "(\u00d73)Number of years since game start is greater than 130\n",
-      "(\u00d74)Number of years since game start is greater than 140\n",
-      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
-    ],
-    "prerequisites": [
-      "tech_ragnarok_doomsday_01"
-    ],
-    "prerequisites_loc": [
-      "Doomsday Weapon : Spear of Cassius"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Mineral Storage Capacity: +4000",
-      "Energy Storage Capacity: +2000",
-      "Unlocks Ship type: Ragnarok"
-    ]
-  },
-  {
-    "key": "tech_ragnarok_eng_01",
-    "name": "Framework : Organic Technology",
-    "description": "\nThe organic matter has been analysed and dated to be older than the age of our galaxy. Therefore, it must have extra-galactic origins. It is definitely artificial, but represents a branch of technology from a completely alien root that is far removed from our own, making understanding and replication difficult at best. Nonetheless, it warrants further research.\n\n",
-    "area": "engineering",
-    "category": "Materials",
-    "tier": 3,
-    "cost": 5160,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d71.5)Number of years since game start is greater than 120\n",
-      "(\u00d72)Number of years since game start is greater than 125\n",
-      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Materials Expert\n"
-    ],
-    "prerequisites": [
-      "tech_ragnarok_phy_01"
-    ],
-    "prerequisites_loc": [
-      "Organic Matter: Structure Analysis"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Energy Credits: +5%",
-      "Ragnarok Research Chain"
-    ]
-  },
-  {
-    "key": "tech_ragnarok_eng_02",
-    "name": "Organic Core",
-    "description": "\nThe organic matter we currently possess appears to be the basis for some sort of core - the central governing mass from which other structures will grow. Our scientists believe this core was originally part of a massive, spacefaring entity and which was destroyed eons ago. That the core matter survived and remained dormant but alive for so long is a testament to the resilience of organic technology.\n\n",
-    "area": "engineering",
-    "category": "Materials",
-    "tier": 3,
-    "cost": 5160,
-    "base_weight": 35,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d71.5)Number of years since game start is greater than 120\n",
-      "(\u00d72)Number of years since game start is greater than 125\n",
-      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Materials Expert\n"
-    ],
-    "prerequisites": [
-      "tech_ragnarok_eng_01"
-    ],
-    "prerequisites_loc": [
-      "Framework : Organic Technology"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Energy Credits: +5%",
-      "Ragnarok Research Chain"
-    ]
-  },
-  {
-    "key": "tech_isb_titan",
-    "name": "Heavy Titan",
-    "description": "\nWhen I am weaker than you, I ask for freedom because that is according to your principles; when I am stronger than you, I take away your freedom because that is according to my principles.\n\n",
-    "area": "engineering",
-    "category": "Voidcraft",
-    "tier": 3,
-    "cost": 3360,
-    "base_weight": 80,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d74)  Any Neighbor Country:\n    \u2022 Has Heavy Titan Technology\n",
-      "(\u00d74)Number of years since game start is greater than 90\n",
-      "(\u00d76)Number of years since game start is greater than 100\n",
-      "(\u00d78)Number of years since game start is greater than 110\n",
-      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
-    ],
-    "prerequisites": [
-      "tech_titan_eng_02_drone_swarm",
-      "tech_titan_phy_02_inertia_dampeners",
-      "tech_titan_soc_02_super_capital"
-    ],
-    "prerequisites_loc": [
-      "Framework : Construction Drone Swarm",
-      "Theory : Inertia Dampeners",
-      "Theory : Super Capital Ships"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Mineral Storage Capacity: +4000",
-      "Energy Storage Capacity: +2000",
-      "Unlocks Ship Type: Titan"
-    ]
-  },
-  {
-    "key": "tech_titan_eng_01_massive_construction",
-    "name": "Framework : Massive Scale Building",
-    "description": "\nThe proposal to create ships of that scale would require a complete redesign of the current construction platforms and logistical support.\n\n",
-    "area": "engineering",
-    "category": "Industry",
-    "tier": 3,
-    "cost": 3360,
-    "base_weight": 80,
-    "base_factor": 1.0,
-    "weight_modifiers": [
-      "(\u00d73)Number of years since game start is greater than 70\n",
-      "(\u00d76)Number of years since game start is greater than 80\n",
-      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Industry Expert\n"
-    ],
-    "prerequisites": [
-      "tech_starbase_4",
-      "tech_titan_soc_01_weapons_platform"
-    ],
-    "prerequisites_loc": [
-      "Star Fortress",
-      "Theory : Massive Weapons Platforms"
-    ],
-    "is_start_tech": false,
-    "is_dangerous": false,
-    "is_rare": true,
-    "is_not_reverse_engineerable": false,
-    "feature_unlocks": [
-      "Defense Platform Build Cost: -5%",
-      "Defense Platform Hull Points: +10%",
-      "Energy Storage Capacity: +250",
-      "Titan Research Chain"
-    ]
-  },
-  {
-    "key": "tech_titan_eng_02_drone_swarm",
-    "name": "Framework : Construction Drone Swarm",
-    "description": "\nSo, instead of having ten drones finish it in a month, why not just use a thousand drones and finish it in a day? I'll pay extra.\n\n",
-    "area": "engineering",
-    "category": "Industry",
-    "tier": 3,
-    "cost": 3360,
-    "base_weight": 80,
-    "base_factor": 1.0,
-    "weight_modifiers": [
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has Battlecruiser Technology\n",
+      "(\u00d70.1)Number of years since game start is less than 61\n",
+      "(\u00d71)Number of years since game start is greater than 60\n",
+      "(\u00d72)Number of years since game start is greater than 70\n",
       "(\u00d73)Number of years since game start is greater than 80\n",
-      "(\u00d76)Number of years since game start is greater than 85\n",
-      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Industry Expert\n"
+      "(\u00d74)Number of years since game start is greater than 90\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
     ],
     "prerequisites": [
-      "tech_titan_eng_01_massive_construction"
+      "tech_cruisers",
+      "tech_StrikeCruiser_1"
     ],
     "prerequisites_loc": [
-      "Framework : Massive Scale Building"
+      "Cruisers",
+      "Strike Cruiser"
     ],
     "is_start_tech": false,
     "is_dangerous": false,
-    "is_rare": true,
+    "is_rare": false,
     "is_not_reverse_engineerable": false,
     "feature_unlocks": [
-      "Construction Time: -5%",
-      "Energy Storage Capacity: +250",
-      "Titan Research Chain"
+      "Fleet Command Limit: +10",
+      "Unlocks Ship Type: Battlecruiser"
     ]
   },
   {
-    "key": "tech_titan_doomsday_weapons_02",
-    "name": "Doomsday Weapon : Neutronium Kinetic Bombardment",
-    "description": "\nBy adding a modified zero-point energy device to a neutronium core, the destructive power of orbital kinetic bombard is multiplied a thousandfold without affecting accuracy.\n\nYou may select this weapon through the empire policy screen and authorise its use under empire edicts.\n\n",
+    "key": "tech_lightcarrier_1",
+    "name": "Light Carrier Upgrade",
+    "description": "As our ship building capabilities continue to increase, we continue to look for new ways to advance our current ship class layouts. This specialized upgrade for the Battlecruiser turns it into a Light Carrier, with the ability to support a small number of fighter bays.",
     "area": "engineering",
-    "category": "Biology",
+    "category": "Voidcraft",
     "tier": 3,
-    "cost": 3360,
-    "base_weight": 35,
-    "base_factor": 1.25,
-    "weight_modifiers": [],
+    "cost": 5000,
+    "base_weight": 65,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has Light Carrier Upgrade Technology\n",
+      "(\u00d70.1)Number of years since game start is less than 61\n",
+      "(\u00d71)Number of years since game start is greater than 60\n",
+      "(\u00d72)Number of years since game start is greater than 70\n",
+      "(\u00d73)Number of years since game start is greater than 80\n",
+      "(\u00d74)Number of years since game start is greater than 90\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
     "prerequisites": [
-      "tech_titan_doomsday_weapons_01"
+      "tech_Battlecruiser_1"
     ],
     "prerequisites_loc": [
-      "Theory : Doomsday Weapons"
+      "Battlecruiser"
     ],
     "is_start_tech": false,
     "is_dangerous": false,
-    "is_rare": true,
+    "is_rare": false,
     "is_not_reverse_engineerable": false,
     "feature_unlocks": [
-      "Monthly Influence: +25%",
-      "Unlocks Titan doomsday weapons research chain"
+      "Unlocks Section Type: Light Carrier"
     ]
   },
   {
-    "key": "tech_titan_doomsday_weapons_04",
-    "name": "Framework : Von Neumann Machines",
-    "description": "\nThe creation of fully autonomous machines that will self-replicate is achievevable by our current technology. However, these machines may prove extremely dangerous without the proper safeguards and failsafes. This framework will enable the safe creation of such machines.\n\n",
+    "key": "tech_Carrier_1",
+    "name": "Carrier",
+    "description": "New facilities and construction techniques allow us to now build Carrier-class military vessels.",
     "area": "engineering",
-    "category": "Industry",
+    "category": "Voidcraft",
     "tier": 3,
-    "cost": 3360,
-    "base_weight": 35,
+    "cost": 8000,
+    "base_weight": 70,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has Carrier Technology\n",
+      "(\u00d70.1)Number of years since game start is less than 61\n",
+      "(\u00d71)Number of years since game start is greater than 60\n",
+      "(\u00d72)Number of years since game start is greater than 70\n",
+      "(\u00d73)Number of years since game start is greater than 80\n",
+      "(\u00d74)Number of years since game start is greater than 90\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_battleships"
+    ],
+    "prerequisites_loc": [
+      "Battleships"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Fleet Command Limit: +10",
+      "Unlocks Ship Type: Carrier"
+    ]
+  },
+  {
+    "key": "tech_heavycarrier_1",
+    "name": "Heavy Carrier Upgrade",
+    "description": "As our ship building capabilities continue to increase, we continue to look for new ways to advance our current ship class layouts. This specialized upgrade for the Carrier turns it into a Heavy Carrier, with the ability to support more fighter bays.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 3,
+    "cost": 5000,
+    "base_weight": 65,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has Heavy Carrier Upgrade Technology\n",
+      "(\u00d70.1)Number of years since game start is less than 61\n",
+      "(\u00d71)Number of years since game start is greater than 60\n",
+      "(\u00d72)Number of years since game start is greater than 70\n",
+      "(\u00d73)Number of years since game start is greater than 80\n",
+      "(\u00d74)Number of years since game start is greater than 90\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_Carrier_1"
+    ],
+    "prerequisites_loc": [
+      "Carrier"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Unlocks Section Type: Heavy Carrier"
+    ]
+  },
+  {
+    "key": "tech_supercarrier_1",
+    "name": "Supercarrier Upgrade",
+    "description": "As our ship building capabilities continue to increase, we continue to look for new ways to advance our current ship class layouts. This specialized upgrade for the Battlecruiser turns it into a Supercarrier, with the ability to support a huge number of fighter bays.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 3,
+    "cost": 5000,
+    "base_weight": 65,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has Supercarrier Upgrade Technology\n",
+      "(\u00d70.1)Number of years since game start is less than 61\n",
+      "(\u00d71)Number of years since game start is greater than 60\n",
+      "(\u00d72)Number of years since game start is greater than 70\n",
+      "(\u00d73)Number of years since game start is greater than 80\n",
+      "(\u00d74)Number of years since game start is greater than 90\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_heavycarrier_1"
+    ],
+    "prerequisites_loc": [
+      "Heavy Carrier Upgrade"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Unlocks Section Type: Supercarrier"
+    ]
+  },
+  {
+    "key": "tech_spitfire_1",
+    "name": "Spitfire Battleship Specialization",
+    "description": "With the increasing risk and expense of smaller military ship classes threatening our Capital Ships, our engineers have a few blueprints that could adapt the Battleship into an anti-Corvette/Destroyer powerhouse, although at a higher production cost.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 3,
+    "cost": 5000,
+    "base_weight": 65,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has Spitfire Battleship Specialization Technology\n",
+      "(\u00d70.1)Number of years since game start is less than 61\n",
+      "(\u00d71)Number of years since game start is greater than 60\n",
+      "(\u00d72)Number of years since game start is greater than 70\n",
+      "(\u00d73)Number of years since game start is greater than 80\n",
+      "(\u00d74)Number of years since game start is greater than 90\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_battleships"
+    ],
+    "prerequisites_loc": [
+      "Battleships"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Spitfire Battleship Upgrade"
+    ]
+  },
+  {
+    "key": "tech_supportship_1",
+    "name": "Fleet Support Ship",
+    "description": "As our fleets grow in size and the distance they travel from home increases, it becomes necessary to support them internally instead of trying to maintain long range supply lines. The Fleet Support Ship is the answer to this problem.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 3,
+    "cost": 10000,
+    "base_weight": 60,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has Fleet Support Ship Technology\n",
+      "(\u00d70.1)Number of years since game start is less than 61\n",
+      "(\u00d71)Number of years since game start is greater than 60\n",
+      "(\u00d72)Number of years since game start is greater than 70\n",
+      "(\u00d73)Number of years since game start is greater than 80\n",
+      "(\u00d74)Number of years since game start is greater than 90\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_battleships"
+    ],
+    "prerequisites_loc": [
+      "Battleships"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Fleet Support Ship"
+    ]
+  },
+  {
+    "key": "tech_drydock_1",
+    "name": "Starbase Drydock",
+    "description": "This specially-designed facility makes use of advanced technology to maintain atmospheric pressures within the Shipyards, allowing workers to more easily build, maintain, upgrade, and repair warships.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 3,
+    "cost": 4000,
+    "base_weight": 65,
     "base_factor": 1.0,
     "weight_modifiers": [],
     "prerequisites": [
-      "tech_titan_doomsday_weapons_02",
-      "tech_titan_doomsday_weapons_03"
+      "tech_starbase_2"
     ],
     "prerequisites_loc": [
-      "Doomsday Weapon : Neutronium Kinetic Bombardment",
-      "Doomsday Weapon : Evolutionary Virus"
+      "Starport"
     ],
     "is_start_tech": false,
     "is_dangerous": false,
     "is_rare": true,
     "is_not_reverse_engineerable": false,
     "feature_unlocks": [
-      "Unlocks Titan doomsday weapons research chain"
+      "Unlocks Starbase Module: Drydock"
     ]
   },
   {
-    "key": "tech_titan_doomsday_weapons_05",
-    "name": "Doomsday Weapon : Nanite Disassemblers",
-    "description": "\nOnce released on the planet, these self-replicating machines will spread and consume all matter (both organic and inorganic) that match its pre-programmed patterns until instructed otherwise by the controlling AI. Excess matter not used in its replication process is deposited for collection as energy and minerals.\n\nYou may select this weapon through the empire policy screen and authorise its use under empire edicts.\n\n",
+    "key": "tech_starbase_6",
+    "name": "Solar Stronghold Starbase",
+    "description": "The final upgrade in the starbase chain, the Solar Stronghold is the ultimate command and defense station.",
     "area": "engineering",
-    "category": "Industry",
+    "category": "Voidcraft",
     "tier": 3,
-    "cost": 3360,
-    "base_weight": 35,
+    "cost": 12000,
+    "base_weight": 90,
     "base_factor": 1.0,
-    "weight_modifiers": [],
+    "weight_modifiers": [
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has Solar Stronghold Starbase Technology\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
     "prerequisites": [
-      "tech_titan_doomsday_weapons_04"
+      "tech_starbase_5"
     ],
     "prerequisites_loc": [
-      "Framework : Von Neumann Machines"
+      "Citadel"
     ],
     "is_start_tech": false,
     "is_dangerous": false,
-    "is_rare": true,
+    "is_rare": false,
     "is_not_reverse_engineerable": false,
     "feature_unlocks": [
-      "Monthly Influence: +25%",
-      "Unlocks Titan doomsday weapons research chain"
+      "Unlocks Starbase Upgrade: Solar Stronghold"
     ]
   },
   {
-    "key": "tech_titan_doomsday_weapons_08",
-    "name": "Doomsday Weapon : Forced Assimilation",
-    "description": "\nThrough direct and prolonged exposure to concentrated quantities of Mind Control Stimulants delivered through nanites, we are able to rewrite the enemy population's memories and identity, making them believe they are citizens of our Empire. This allows us to assimilate them into our society. The process is extremely costly and time-consuming.\n\nYou may select this weapon through the empire policy screen and authorise its use under empire edicts.\n\n",
+    "key": "tech_space_defense_station_2",
+    "name": "Deep Space Stations",
+    "description": "New construction methods will allow for the construction of even larger military stations in the depths of space.",
     "area": "engineering",
-    "category": "Industry",
+    "category": "Voidcraft",
     "tier": 3,
-    "cost": 4520,
-    "base_weight": 35,
+    "cost": 6000,
+    "base_weight": 70,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has Deep Space Stations Technology\n",
+      "(\u00d70.1)Number of years since game start is less than 26\n",
+      "(\u00d71)Number of years since game start is greater than 25\n",
+      "(\u00d72)Number of years since game start is greater than 30\n",
+      "(\u00d73)Number of years since game start is greater than 35\n",
+      "(\u00d74)Number of years since game start is greater than 40\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_starbase_2"
+    ],
+    "prerequisites_loc": [
+      "Starport"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Unlocks Station: Starbase Defense Station"
+    ]
+  },
+  {
+    "key": "tech_strikecruiser_build_speed",
+    "name": "Standardized Strike Cruiser Patterns",
+    "description": "Establishing new standard for the modeling and construction of Strike Cruisers greatly improves the efficiency of the production pipeline.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 3,
+    "cost": 5000,
+    "base_weight": 60,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_StrikeCruiser_1"
+    ],
+    "prerequisites_loc": [
+      "Strike Cruiser"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Strike Cruiser Build Speed: +25%",
+      "Strike Cruiser Build Cost: -5%"
+    ]
+  },
+  {
+    "key": "tech_strikecruiser_hull_1",
+    "name": "Improved Strike Cruiser Hulls",
+    "description": "Advances in building techniques will allow for the construction of sturdier and more durable Strike Cruiser",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 3,
+    "cost": 6000,
+    "base_weight": 50,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_StrikeCruiser_1"
+    ],
+    "prerequisites_loc": [
+      "Strike Cruiser"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Strike Cruiser Hull Points: +500"
+    ]
+  },
+  {
+    "key": "tech_mining_base",
+    "name": "System Mineral Refinery",
+    "description": "As we expand among the stars, we require ever more resources to support our civilization. Creating specialized, space-based mineral refineries could help centralize production and increase efficiency, leading to higher mineral yields.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 3,
+    "cost": 4000,
+    "base_weight": 65,
     "base_factor": 1.0,
     "weight_modifiers": [],
     "prerequisites": [
-      "tech_titan_doomsday_weapons_07"
+      "tech_mineral_processing_1"
     ],
     "prerequisites_loc": [
-      "Doomsday Weapon : Primal Mutation"
+      "Mineral Processing"
     ],
     "is_start_tech": false,
     "is_dangerous": false,
     "is_rare": true,
     "is_not_reverse_engineerable": false,
     "feature_unlocks": [
-      "Monthly Influence: +25%",
-      "Unlocks Titan doomsday weapons research chain"
+      "Unlocks Starbase Building: System Mineral Refinery"
+    ]
+  },
+  {
+    "key": "tech_ship_upkeep_1",
+    "name": "Efficient Fleet Supply Lines",
+    "description": "Advancements in technology allow us to operate much more efficient supply lines to our fleet, thereby significantly reducing our ship upkeep costs.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 3,
+    "cost": 12000,
+    "base_weight": 40,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_Battlecruiser_1"
+    ],
+    "prerequisites_loc": [
+      "Battlecruiser"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Ship Upkeep: -20%"
+    ]
+  },
+  {
+    "key": "tech_starbase_upkeep_1",
+    "name": "Efficient Starbase Maintenance",
+    "description": "Advancements in training allow us to teach our staff much more efficient maintenance methods, thereby significantly reducing our starbase upkeep costs.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 3,
+    "cost": 12000,
+    "base_weight": 40,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_starbase_4"
+    ],
+    "prerequisites_loc": [
+      "Star Fortress"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Starbase Upkeep: -20%"
+    ]
+  },
+  {
+    "key": "tech_defense_platforms_1",
+    "name": "Defense Platform Increase - Level 1",
+    "description": "Improved technolgies allow us to construct more defense platforms for our starbases.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 3,
+    "cost": 10000,
+    "base_weight": 50,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_starbase_4"
+    ],
+    "prerequisites_loc": [
+      "Star Fortress"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Defense Platforms: +4"
+    ]
+  },
+  {
+    "key": "tech_defense_platforms_2",
+    "name": "Defense Platform Increase - Level 2",
+    "description": "Improved technolgies allow us to construct more defense platforms for our starbases.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 3,
+    "cost": 12500,
+    "base_weight": 40,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_defense_platforms_1"
+    ],
+    "prerequisites_loc": [
+      "Defense Platform Increase - Level 1"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Defense Platforms: +8"
+    ]
+  },
+  {
+    "key": "tech_nsc_ai_computer_1",
+    "name": "Artifical Intellgience Combat System",
+    "description": "This extremely advanced computer system can intelligently run all combat systems on a ship without taking over the helm, allowing for complete movement control during combat. Available for Carriers, Fleet Support Ships, and the Flagship.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 3,
+    "cost": 20000,
+    "base_weight": 70,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has Artifical Intellgience Combat System Technology\n",
+      "(\u00d70.1)Number of years since game start is less than 10\n",
+      "(\u00d71)Number of years since game start is greater than 20\n",
+      "(\u00d72)Number of years since game start is greater than 30\n",
+      "(\u00d73)Number of years since game start is greater than 40\n",
+      "(\u00d74)Number of years since game start is greater than 50\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_Carrier_1"
+    ],
+    "prerequisites_loc": [
+      "Carrier"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Unlocks Combat Computer: Artificial Intelligence Combat System"
+    ]
+  },
+  {
+    "key": "tech_tomahawk_cruise_missile_1",
+    "name": "Tomahawk Advanced Cruise Missile",
+    "description": "An extremely expensive anti-capital ship missile with a very long range and high damage. Very useful for defense stations or long range artillery ships.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 3,
+    "cost": 6000,
+    "base_weight": 70,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has Tomahawk Advanced Cruise Missile Technology\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_battleships"
+    ],
+    "prerequisites_loc": [
+      "Battleships"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Unlocks Weapon: Tomahawk Advanced Cruise Missile"
     ]
   },
   {
@@ -10664,6 +10009,295 @@
     ]
   },
   {
+    "key": "tech_Dreadnought_1",
+    "name": "Dreadnought",
+    "description": "New facilities and construction techniques allow us to now build Dreadnought-class military vessels.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 4,
+    "cost": 12000,
+    "base_weight": 35,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has Dreadnought Technology\n",
+      "(\u00d70.1)Number of years since game start is less than 66\n",
+      "(\u00d71)Number of years since game start is greater than 65\n",
+      "(\u00d72)Number of years since game start is greater than 75\n",
+      "(\u00d73)Number of years since game start is greater than 85\n",
+      "(\u00d74)Number of years since game start is greater than 100\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_Carrier_1"
+    ],
+    "prerequisites_loc": [
+      "Carrier"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Fleet Command Limit: +10",
+      "Unlocks Ship Type: Dreadnought"
+    ]
+  },
+  {
+    "key": "tech_space_defense_station_3",
+    "name": "Deep Space Installations",
+    "description": "These massive installations are like cities floating in space. They can support a crew of thousands, and are often equipped with firepower rivaling that of a fleet.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 4,
+    "cost": 12000,
+    "base_weight": 70,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has Deep Space Installations Technology\n",
+      "(\u00d70.1)Number of years since game start is less than 26\n",
+      "(\u00d71)Number of years since game start is greater than 25\n",
+      "(\u00d72)Number of years since game start is greater than 30\n",
+      "(\u00d73)Number of years since game start is greater than 35\n",
+      "(\u00d74)Number of years since game start is greater than 40\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_starbase_3",
+      "tech_space_defense_station_2"
+    ],
+    "prerequisites_loc": [
+      "Starhold",
+      "Deep Space Stations"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Unlocks Station: Starbase Defense Fortress"
+    ]
+  },
+  {
+    "key": "tech_strikecruiser_hull_2",
+    "name": "Advanced Strike Cruiser Hulls",
+    "description": "The latest generation of Strike Cruiser hulls have optimized structural integrity fields and improved bulkheads.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 4,
+    "cost": 8000,
+    "base_weight": 45,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d70.25)  None of the following:\n    \u2022   Research Leader (Engineering):\n        \u2022 Is Curator\n    \u2022   Research Leader (Engineering):\n        \u2022 Is Spark of Genius\n    \u2022   Research Leader (Engineering):\n        \u2022 Is  Voidcraft Expert\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_strikecruiser_hull_1"
+    ],
+    "prerequisites_loc": [
+      "Improved Strike Cruiser Hulls"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": true,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Strike Cruiser Hull Points: +500"
+    ]
+  },
+  {
+    "key": "tech_battlecruiser_build_speed",
+    "name": "Standardized Battlecruiser Patterns",
+    "description": "Establishing new standard for the modeling and construction of Battlecruisers greatly improves the efficiency of the production pipeline.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 4,
+    "cost": 8000,
+    "base_weight": 40,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_Battlecruiser_1"
+    ],
+    "prerequisites_loc": [
+      "Battlecruiser"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Battlecruiser Build Speed: +25%",
+      "Battlecruiser Build Cost: -5%"
+    ]
+  },
+  {
+    "key": "tech_battlecruiser_hull_1",
+    "name": "Improved Battlecruiser Hulls",
+    "description": "Advances in building techniques will allow for the construction of sturdier and more durable Battlecruisers",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 4,
+    "cost": 12000,
+    "base_weight": 35,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_Battlecruiser_1"
+    ],
+    "prerequisites_loc": [
+      "Battlecruiser"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Battlecruiser Hull Points: +600"
+    ]
+  },
+  {
+    "key": "tech_battlecruiser_hull_2",
+    "name": "Advanced Battlecruiser Hulls",
+    "description": "The latest generation of Battlecruiser hulls have optimized structural integrity fields and improved bulkheads.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 4,
+    "cost": 15000,
+    "base_weight": 35,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d70.25)  None of the following:\n    \u2022   Research Leader (Engineering):\n        \u2022 Is Curator\n    \u2022   Research Leader (Engineering):\n        \u2022 Is Spark of Genius\n    \u2022   Research Leader (Engineering):\n        \u2022 Is  Voidcraft Expert\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_battlecruiser_hull_1"
+    ],
+    "prerequisites_loc": [
+      "Improved Battlecruiser Hulls"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": true,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Battlecruiser Hull Points: +600"
+    ]
+  },
+  {
+    "key": "tech_carrier_build_speed",
+    "name": "Standardized Carrier Patterns",
+    "description": "Establishing new standard for the modeling and construction of Carriers greatly improves the efficiency of the production pipeline.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 4,
+    "cost": 10000,
+    "base_weight": 40,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_Carrier_1"
+    ],
+    "prerequisites_loc": [
+      "Carrier"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Carrier Build Speed: +25%",
+      "Carrier Build Cost: -5%"
+    ]
+  },
+  {
+    "key": "tech_carrier_hull_1",
+    "name": "Improved Carrier Hulls",
+    "description": "Advances in building techniques will allow for the construction of sturdier and more durable Carriers",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 4,
+    "cost": 12000,
+    "base_weight": 35,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_Carrier_1"
+    ],
+    "prerequisites_loc": [
+      "Carrier"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Carrier Hull Points: +700"
+    ]
+  },
+  {
+    "key": "tech_defense_platforms_3",
+    "name": "Defense Platform Increase - Level 3",
+    "description": null,
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 4,
+    "cost": 15000,
+    "base_weight": 30,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_defense_platforms_2"
+    ],
+    "prerequisites_loc": [
+      "Defense Platform Increase - Level 2"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Defense Platforms: +12"
+    ]
+  },
+  {
+    "key": "tech_defense_platforms_4",
+    "name": "Defense Platform Increase - Level 4",
+    "description": "Improved technolgies allow us to construct more defense platforms for our starbases.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 4,
+    "cost": 20000,
+    "base_weight": 20,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_defense_platforms_3"
+    ],
+    "prerequisites_loc": [
+      "Defense Platform Increase - Level 3"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": false,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Defense Platforms: +16"
+    ]
+  },
+  {
     "key": "tech_colossus",
     "name": "Colossi",
     "description": "Advances in mega-engineering make blur the lines between reality and the fantastical, enabling the construction of Colossus-class military vessels that carry weapons capable of obliterating - or fundamentally altering - entire worlds, with the push of a button.",
@@ -11269,6 +10903,259 @@
     "is_not_reverse_engineerable": false,
     "feature_unlocks": [
       "Reveals Resource: Living Metal ([[sr_living_metal]])"
+    ]
+  },
+  {
+    "key": "tech_Flagship_1",
+    "name": "The Flagship",
+    "description": "After many decades of combat and engineering experience, we now have the capability to build one massive and unique Flagship to represent our Empire.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 5,
+    "cost": 20000,
+    "base_weight": 20,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d710)  Any Neighbor Country:\n    \u2022 Has The Flagship Technology\n",
+      "(\u00d70.1)Number of years since game start is less than 70\n",
+      "(\u00d71)Number of years since game start is greater than 70\n",
+      "(\u00d72)Number of years since game start is greater than 80\n",
+      "(\u00d73)Number of years since game start is greater than 90\n",
+      "(\u00d74)Number of years since game start is greater than 100\n",
+      "(\u00d71000)Number of years since mid game is greater than 0\n"
+    ],
+    "prerequisites": [],
+    "prerequisites_loc": [],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": true,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Fleet Command Limit: +50",
+      "Unlocks Ship Type: Flagship"
+    ]
+  },
+  {
+    "key": "tech_carrier_hull_2",
+    "name": "Advanced Carrier Hulls",
+    "description": "The latest generation of Carrier hulls have optimized structural integrity fields and improved bulkheads.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 5,
+    "cost": 15000,
+    "base_weight": 30,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d70.25)  None of the following:\n    \u2022   Research Leader (Engineering):\n        \u2022 Is Curator\n    \u2022   Research Leader (Engineering):\n        \u2022 Is Spark of Genius\n    \u2022   Research Leader (Engineering):\n        \u2022 Is  Voidcraft Expert\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_carrier_hull_1"
+    ],
+    "prerequisites_loc": [
+      "Improved Carrier Hulls"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": true,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Carrier Hull Points: +700"
+    ]
+  },
+  {
+    "key": "tech_dreadnought_build_speed",
+    "name": "Standardized Dreadnought Patterns",
+    "description": "Establishing new standard for the modeling and construction of Dreadnoughts greatly improves the efficiency of the production pipeline.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 5,
+    "cost": 15000,
+    "base_weight": 30,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_Dreadnought_1"
+    ],
+    "prerequisites_loc": [
+      "Dreadnought"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": true,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Dreadnought Build Speed: +25%",
+      "Dreadnought Build Cost: -5%"
+    ]
+  },
+  {
+    "key": "tech_dreadnought_hull_1",
+    "name": "Improved Dreadnought Hulls",
+    "description": "Advances in building techniques will allow for the construction of sturdier and more durable Dreadnoughts",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 5,
+    "cost": 15000,
+    "base_weight": 30,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_Dreadnought_1"
+    ],
+    "prerequisites_loc": [
+      "Dreadnought"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": true,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Dreadnought Hull Points: +900"
+    ]
+  },
+  {
+    "key": "tech_dreadnought_hull_2",
+    "name": "Advanced Dreadnought Hulls",
+    "description": "The latest generation of Dreadnought hulls have optimized structural integrity fields and improved bulkheads.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 5,
+    "cost": 17500,
+    "base_weight": 25,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d70.25)  None of the following:\n    \u2022   Research Leader (Engineering):\n        \u2022 Is Curator\n    \u2022   Research Leader (Engineering):\n        \u2022 Is Spark of Genius\n    \u2022   Research Leader (Engineering):\n        \u2022 Is  Voidcraft Expert\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_dreadnought_hull_1"
+    ],
+    "prerequisites_loc": [
+      "Improved Dreadnought Hulls"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": true,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Dreadnought Hull Points: +900"
+    ]
+  },
+  {
+    "key": "tech_flagship_build_speed",
+    "name": "Standardized Flagship Patterns",
+    "description": "Establishing new standard for the modeling and construction of the Flagship greatly improves the efficiency of the production pipeline.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 5,
+    "cost": 20000,
+    "base_weight": 20,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_Flagship_1"
+    ],
+    "prerequisites_loc": [
+      "The Flagship"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": true,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Flagship Build Speed: +25%",
+      "Flagship Build Cost: -5%"
+    ]
+  },
+  {
+    "key": "tech_flagship_hull_1",
+    "name": "Improved Flagship Hulls",
+    "description": "Advances in building techniques will allow for the construction of sturdier and more durable Flagships",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 5,
+    "cost": 20000,
+    "base_weight": 20,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_Flagship_1"
+    ],
+    "prerequisites_loc": [
+      "The Flagship"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": true,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Flagship Hull Points: +2200"
+    ]
+  },
+  {
+    "key": "tech_flagship_hull_2",
+    "name": "Advanced Flagship Hulls",
+    "description": "The latest generation of Flagship hulls have optimized structural integrity fields and improved bulkheads.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 5,
+    "cost": 20000,
+    "base_weight": 20,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d70.25)  None of the following:\n    \u2022   Research Leader (Engineering):\n        \u2022 Is Curator\n    \u2022   Research Leader (Engineering):\n        \u2022 Is Spark of Genius\n    \u2022   Research Leader (Engineering):\n        \u2022 Is  Voidcraft Expert\n",
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_flagship_hull_1"
+    ],
+    "prerequisites_loc": [
+      "Improved Flagship Hulls"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": true,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Flagship Hull Points: +2200"
+    ]
+  },
+  {
+    "key": "tech_stronghold_upgrades",
+    "name": "Improved Starbases",
+    "description": "Establishing new standard for the modeling and construction of all Starbases greatly improves the efficiency of the production pipeline.",
+    "area": "engineering",
+    "category": "Voidcraft",
+    "tier": 5,
+    "cost": 15000,
+    "base_weight": 30,
+    "base_factor": 1.0,
+    "weight_modifiers": [
+      "(\u00d71.25)  Research Leader (Engineering):\n    \u2022 Is  Voidcraft Expert\n"
+    ],
+    "prerequisites": [
+      "tech_starbase_6"
+    ],
+    "prerequisites_loc": [
+      "Solar Stronghold Starbase"
+    ],
+    "is_start_tech": false,
+    "is_dangerous": false,
+    "is_rare": true,
+    "is_not_reverse_engineerable": false,
+    "feature_unlocks": [
+      "Starbase Upgrade Cost: -10%",
+      "Starbase Upgrade Speed: +10%",
+      "Starbase Upkeep: -10%"
     ]
   }
 ]
