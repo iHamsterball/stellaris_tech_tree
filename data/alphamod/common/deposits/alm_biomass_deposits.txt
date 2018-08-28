@@ -1,0 +1,95 @@
+d_biomass_and_water_deposit ={
+	resources = {
+		sr_biomass = 1
+		sr_h2o = 1
+	}
+	is_orbital_slot = no
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			planet = {
+				OR = {
+					is_planet_class = pc_gaia
+					is_planet_class = pc_tropical
+				}
+			}
+		}
+		modifier = {
+			weight = 0.5
+			planet = {
+				OR = {
+					is_planet_class = pc_ocean
+					is_planet_class = pc_continental
+					is_planet_class = pc_savannah
+					is_planet_class = pc_alpine
+				}
+			}
+		}
+	}
+ }
+ 
+ d_biomass_and_food_deposit ={
+	resources = {
+		sr_biomass = 1
+		food = 1
+	}
+	is_orbital_slot = no
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 2
+			planet = {
+				OR = {
+					is_planet_class = pc_gaia
+					is_planet_class = pc_tropical
+				}
+			}
+		}
+		modifier = {
+			weight = 0.5
+			planet = {
+				OR = {
+					is_planet_class = pc_ocean
+					is_planet_class = pc_continental
+					is_planet_class = pc_savannah
+					is_planet_class = pc_alpine
+				}
+			}
+		}
+	}
+ }
+ 
+ d_biomass_and_minerals_deposit ={
+	resources = {
+		sr_biomass = 1
+		minerals = 1
+	}
+	is_orbital_slot = no
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			planet = {
+				OR = {
+					is_planet_class = pc_gaia
+					is_planet_class = pc_tropical
+				}
+			}
+		}
+		modifier = {
+			weight = 0.5
+			planet = {
+				OR = {
+					is_planet_class = pc_ocean
+					is_planet_class = pc_continental
+					is_planet_class = pc_savannah
+					is_planet_class = pc_alpine
+				}
+			}
+		}
+	}
+ }

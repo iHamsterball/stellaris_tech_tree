@@ -1,0 +1,36 @@
+ship_design = {
+	name = "NAME_Fires_of_Ragnarok"
+	ship_size = rag_effect_ship
+
+	required_component = "SHIP_THRUSTER_1"
+}
+
+ship_design = {
+	name = "NAME_Spawn_of_Ragnarok"
+	ship_size = rag_effect_explosion_ship
+
+	required_component = "SHIP_THRUSTER_1"	
+}
+
+
+ship_design = {
+	name = "NAME_Wrath_of_Ragnarok"
+	ship_size = rag_effect_damage_ship
+
+	required_component = "SHIP_THRUSTER_1"
+	required_component = "ISB_RAGNAROK_EXPLOSION_01"
+}
+
+ship_design = {
+	name = "NAME_Wrath_of_Ragnarok_(Mythic)"
+	ship_size = rag_effect_damage_ship
+
+	required_component = "SHIP_THRUSTER_1"
+	required_component = "ISB_RAGNAROK_EXPLOSION_02"
+}
+
+# Consume Planet Bunny Ragnarok
+ship_design = {
+	name = "NAME_consume_planet"
+	ship_size = consume_planet_bunny
+}

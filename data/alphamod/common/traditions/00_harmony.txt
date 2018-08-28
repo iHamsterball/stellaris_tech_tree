@@ -1,0 +1,109 @@
+@cost = 56
+
+tr_harmony_adopt = {
+	cost = { unity = @cost }
+	modifier = {
+		pop_happiness = 0.10
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_egalitarian
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_egalitarian
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_authoritarian
+		}	
+		modifier = {
+			factor = 2
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_spiritualist
+		}		
+	}
+}
+
+tr_harmony_finish = {
+	modifier = {
+		pop_consumer_goods_mult = -0.15
+		ascension_perks_add = 1
+	}
+}
+
+tr_harmony_the_greater_good = {
+	cost = { unity = @cost }
+	
+	modifier = {
+		planet_unrest_add = -20
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_harmony_kinship = {
+	cost = { unity = @cost }
+	
+	modifier = {
+		mod_distance_to_capital_static_modifier_efficiency_mult = -0.5
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_harmony_utopian_dream = {
+	cost = { unity = @cost }	
+	possible = {
+		has_tradition = tr_harmony_the_greater_good
+	}
+	
+	#allows player to build Paradise Dome
+	
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_harmony_bulwark_of_harmony = {
+	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_harmony_kinship
+		has_tradition = tr_harmony_mind_and_body
+	}
+	
+	modifier = {
+		spaceport_defensive_war_ship_build_speed_mult = 0.33
+		ship_home_territory_fire_rate_mult = 0.15
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_harmony_mind_and_body = {
+	cost = { unity = @cost }
+	
+	modifier = {
+		leader_age = 20
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}

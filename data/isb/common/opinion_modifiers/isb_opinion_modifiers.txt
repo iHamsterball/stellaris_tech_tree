@@ -1,0 +1,449 @@
+# Opinion for choosing to outlaw doomsday weapons. Updated yearly
+opinion_doomsday_outlawed = {
+	opinion = {
+		base = 0
+		modifier = {
+			add = 4
+			NOT = { has_ethic = "ethic_militarist" }
+			NOT = { has_ethic = "ethic_fanatic_militarist" }
+			NOT = { is_country_type = fallen_empire }
+		}		
+		modifier = {
+			add = 4
+			has_ethic = "ethic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = 4
+			has_ethic = "ethic_fanatic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = 4
+			has_ai_personality = fallen_empire_xenophile
+		}
+	}
+	
+	max = 50
+	
+	accumulative = yes	
+
+	decay = {
+		base = 2
+	}
+}
+
+# Opinion for choosing to allow doomsday weapons
+opinion_doomsday_allowed = {
+	opinion = {
+		base = 0
+		modifier = {
+			add = -20
+			NOT = { has_ethic = "ethic_militarist" }
+			NOT = { has_ethic = "ethic_fanatic_militarist" }
+			NOT = { is_country_type = fallen_empire }
+		}		
+		modifier = {
+			add = -20
+			has_ethic = "ethic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_fanatic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -20
+			has_ai_personality = fallen_empire_xenophile
+		}
+	}
+	
+	min = -50
+	
+	accumulative = yes	
+
+	decay = {
+		base = 10
+	}
+}
+
+# Using low level doomsday weapons
+opinion_doomsday_low = {
+	opinion = {
+		base = 0
+		modifier = {
+			add = -5
+			NOT = { has_ethic = "ethic_militarist" }
+			NOT = { has_ethic = "ethic_fanatic_militarist" }
+			NOT = { is_country_type = fallen_empire }
+		}		
+		modifier = {
+			add = -5
+			has_ethic = "ethic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -10
+			has_ethic = "ethic_fanatic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -5
+			has_ai_personality = fallen_empire_xenophile
+		}			
+	}
+	
+	min = -75
+	
+	accumulative = yes
+
+	decay = {
+		base = 3
+	}
+}
+
+# Using medium level doomsday weapons
+opinion_doomsday_med = {
+	opinion = {
+		base = 0
+		modifier = {
+			add = -5
+			NOT = { has_ethic = "ethic_militarist" }
+			NOT = { has_ethic = "ethic_fanatic_militarist" }
+			NOT = { is_country_type = fallen_empire }
+		}		
+		modifier = {
+			add = -5
+			has_ethic = "ethic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -10
+			has_ethic = "ethic_fanatic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -5
+			has_ai_personality = fallen_empire_xenophile
+		}			
+	}
+	
+	min = -125
+	
+	accumulative = yes
+
+	decay = {
+		base = 2
+	}
+}
+
+# Destroyed a planet with colony
+opinion_doomsday_destroy_planet = {
+	opinion = {
+		base = -5
+		modifier = {
+			add = -15
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -15
+			NOT = { has_ethic = "ethic_militarist" }
+			NOT = { has_ethic = "ethic_fanatic_militarist" }
+			NOT = { is_country_type = fallen_empire }
+		}		
+		modifier = {
+			add = -10
+			has_ethic = "ethic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -15
+			has_ethic = "ethic_fanatic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -5
+			has_ai_personality = fallen_empire_xenophile
+		}			
+	}
+	
+	min = -150
+	
+	accumulative = yes
+
+	decay = {
+		base = 3
+	}
+}
+
+# Destroyed a planet with colony - owner of planet
+opinion_doomsday_destroy_planet_owner = {
+	opinion = {
+		base = -100
+		modifier = {
+			add = -10
+			NOT = { has_ethic = "ethic_militarist" }
+			NOT = { has_ethic = "ethic_fanatic_militarist" }
+			NOT = { is_country_type = fallen_empire }
+		}		
+		modifier = {
+			add = -10
+			has_ethic = "ethic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_fanatic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -5
+			has_ai_personality = fallen_empire_xenophile
+		}			
+	}
+	
+	min = -300
+	
+	accumulative = yes
+
+	decay = {
+		base = 2
+	}
+}
+
+# Destroyed an inbabited star system
+opinion_doomsday_destroy_star = {
+	opinion = {
+		base = -100
+		modifier = {
+			add = -25
+			NOT = { has_ethic = "ethic_militarist" }
+			NOT = { has_ethic = "ethic_fanatic_militarist" }
+			NOT = { is_country_type = fallen_empire }
+		}		
+		modifier = {
+			add = -25
+			has_ethic = "ethic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -50
+			has_ethic = "ethic_fanatic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -25
+			has_ai_personality = fallen_empire_xenophile
+		}			
+	}
+	
+	min = -1000
+	
+	accumulative = yes
+
+	decay = {
+		base = 2
+	}
+}
+
+# Destroyed an empty star system
+opinion_doomsday_destroy_star_empty = {
+	opinion = {
+		base = -30
+		modifier = {
+			add = -5
+			NOT = { has_ethic = "ethic_militarist" }
+			NOT = { has_ethic = "ethic_fanatic_militarist" }
+			NOT = { is_country_type = fallen_empire }
+		}		
+		modifier = {
+			add = -5
+			has_ethic = "ethic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -5
+			has_ethic = "ethic_fanatic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -5
+			has_ai_personality = fallen_empire_xenophile
+		}			
+	}
+	
+	min = -200
+	
+	accumulative = yes
+
+	decay = {
+		base = 5
+	}
+}
+
+# Destroyed a star - owner of star
+opinion_doomsday_destroy_star_owner = {
+	opinion = {
+		base = -200
+		modifier = {
+			add = -50
+			NOT = { has_ethic = "ethic_militarist" }
+			NOT = { has_ethic = "ethic_fanatic_militarist" }
+			NOT = { is_country_type = fallen_empire }
+		}		
+		modifier = {
+			add = -50
+			has_ethic = "ethic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -100
+			has_ethic = "ethic_fanatic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -50
+			has_ai_personality = fallen_empire_xenophile
+		}
+	}
+	
+	min = -1000
+	
+	accumulative = yes
+
+	decay = {
+		base = 1
+	}
+}
+
+# Has nova weapon - 3
+opinion_doomsday_has_nova_small = {
+	opinion = {
+		base = -20
+		modifier = {
+			add = -10
+			NOT = { has_ethic = "ethic_militarist" }
+			NOT = { has_ethic = "ethic_fanatic_militarist" }
+			NOT = { is_country_type = fallen_empire }
+		}		
+		modifier = {
+			add = -10
+			has_ethic = "ethic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_fanatic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -10
+			has_ai_personality = fallen_empire_xenophile
+		}
+	}
+	
+	accumulative = no
+}
+
+# Has nova weapon - More than 3
+opinion_doomsday_has_nova_large = {
+	opinion = {
+		base = -50
+		modifier = {
+			add = -20
+			NOT = { has_ethic = "ethic_militarist" }
+			NOT = { has_ethic = "ethic_fanatic_militarist" }
+			NOT = { is_country_type = fallen_empire }
+		}		
+		modifier = {
+			add = -20
+			has_ethic = "ethic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -40
+			has_ethic = "ethic_fanatic_pacifist"
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -20
+			has_ai_personality = fallen_empire_xenophile
+		}
+	}
+	
+	accumulative = no
+}
+
+# Galactic crisis shared threat opinion
+opinion_crisis_threat = {
+
+	opinion = {
+		base = 7
+		modifier = {			
+			add = -2
+			is_country_type = fallen_empire
+		}
+		modifier = {
+			add = 2
+			has_ai_personality = fallen_empire_xenophile
+		}
+	}
+	
+	max = 150
+	
+	accumulative = yes	
+
+	decay = {
+		base = 2
+	}
+}
+
+# Has an Avatar, modify based on fleet power - Code is with the Sun Crusher checks
+opinion_has_avatar = {
+	opinion = {
+		base = 0
+		modifier = {
+			add = -100
+			THIS = { fleet_power > 450000 }
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = -100
+			THIS = { fleet_power > 325000 }
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = 50
+			THIS = { fleet_power < 250001 }
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = 50
+			THIS = { fleet_power < 175001 }
+			NOT = { is_country_type = fallen_empire }
+		}
+		modifier = {
+			add = 50
+			THIS = { fleet_power < 100001 }
+			NOT = { is_country_type = fallen_empire }
+		}
+	}
+	
+	accumulative = no
+}
+
+# Destroyed own colony with doomsday weapon
+opinion_doomsday_monster = {
+	opinion = {
+		base = -300		
+	}
+	
+	min = -3000
+	
+	accumulative = yes
+
+	decay = {
+		base = 1
+	}
+}

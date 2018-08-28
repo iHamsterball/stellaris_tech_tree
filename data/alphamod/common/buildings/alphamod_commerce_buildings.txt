@@ -1,0 +1,168 @@
+building_hypermall = {
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+		minerals = 200
+		energy = 50
+	}
+
+	required_resources = {
+		sr_tradegoods = 1
+		sr_replicator_gems = 1
+		sr_luxuries = 1
+	}
+	
+	produced_resources = {
+		sr_wealth = 1
+		food = 1
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_tradition = tr_diplomacy_alien_tourism
+			resources = {
+				influence = 0.25
+			}
+		}
+	}
+	
+	planet_modifier = {
+		pop_consumer_goods_mult = -0.25
+		tile_resource_energy_mult = 0.05
+		pop_happiness = 0.05
+	}
+	
+	potential = {
+		planet = {
+			AND = {
+				has_tradegoods = yes
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+					has_building = "building_mining_guild"
+					has_building = "building_central_databank"
+					has_building = "building_farming_guild"
+					has_building = "building_commerce_coord"
+				}
+				owner = { empire_has_replicator_gems_1 = yes }
+				owner = { empire_has_luxuries_1 = yes }
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_merchant_companies"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			from = {
+				OR = {
+					has_building = "building_mineral_processing_plant_2"
+					has_building = "building_mineral_transformer"
+				}
+			}
+		}
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+}
+
+building_powerbank = {
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+		minerals = 150
+		energy = 250
+		influence = 25
+	}
+	
+	required_resources = {
+		minerals = 10
+		sr_micro_cores = 1
+	}
+	
+	produced_resources = {
+		energy = 5
+		sr_wealth = 2
+	}
+		
+	planet_modifier = {
+		tile_resource_energy_mult = 0.1
+	}
+
+	country_modifier = {
+		max_energy = 250
+	}
+	
+	potential = {
+		planet = {
+			AND = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+					has_building = "building_commerce_coord"
+				}
+				not = { has_building = "building_powerbank_ex" }
+				owner = { empire_has_micro_cores_1 = yes }
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_power_banking"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			from = {
+				OR = {
+					has_building = "building_power_hub_2"
+					has_building = "building_alpha_fuel_converter_3"
+				}
+				OR = {
+					has_building = "building_mineral_processing_plant_2"
+					has_building = "building_mineral_transformer"
+				}
+			}
+		}
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+}
+
+building_powerbank_ex = {
+	is_listed = no
+	
+	required_resources = {
+		minerals = 10
+		sr_micro_cores = 1
+	}
+	
+	produced_resources = {
+		energy = 5
+		sr_wealth = 1
+	}
+		
+	planet_modifier = {
+		tile_resource_energy_mult = 0.1
+	}
+
+	country_modifier = {
+		max_energy = 250
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+
+	ai_replace = no
+}

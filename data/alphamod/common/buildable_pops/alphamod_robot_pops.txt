@@ -1,0 +1,173 @@
+buildable_robot_pop_energy = {	
+	prerequisites = {
+		"tech_droid_workers"
+	}
+
+	cost = {
+		minerals = 50
+		energy = 200
+	}
+	
+	allow = {
+		OR = {
+			has_policy_flag = ai_servitude
+			has_policy_flag = ai_full_rights
+		}
+	}
+	
+	potential = {
+		NOT = {
+			has_technology = "tech_synthetic_workers"
+			has_country_flag = synthetic_age
+		}
+	}
+	
+	tile_potential = {
+		always = yes
+	}
+
+	tile_allow = {
+		always = yes
+	}
+
+	species = {
+		name = "ROBOT_POP_SPECIES_ENERGY"
+		class = "ROBOT"
+		name_list = "AI"
+		portrait = "integrated_droid"
+		traits = {
+			trait = "trait_mechanical"
+			trait = "trait_robotic_energy"
+		}
+		
+		new_pop_resource_requirement = {
+			type = robot_food 
+			value = 25.0			
+		}
+		pops_auto_growth = 1.0
+		pops_auto_upgrade_to = "buildable_robot_pop_energy_2"
+		
+		pops_can_be_colonizers = no
+		pops_can_migrate = no
+		pops_can_reproduce = no
+		pops_can_join_factions = no
+		pop_maintenance = 0.25
+		can_generate_leaders = no
+		pops_can_be_slaves = no
+		can_be_modified = no
+		pops_have_happiness = no
+		consumer_goods = no
+		pop_ethics = no
+	}
+}
+
+buildable_robot_pop_energy_2 = {
+	prerequisites = {
+		"tech_sentient_ai"
+	}
+	cost = {
+		minerals = 100
+		energy = 250
+	}
+	
+	allow = {
+		OR = {
+			has_policy_flag = ai_servitude
+			has_policy_flag = ai_full_rights
+		}
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	species = {
+		name = "ROBOT_POP_SPECIES_ENERGY_2"
+		class = "ROBOT"
+		name_list = "AI"
+		portrait = "integrated_droid_2"
+		traits = {
+			trait = "trait_mechanical"
+			trait = "trait_robotic_energy_2"
+		}
+		
+		new_pop_resource_requirement = {
+			type = robot_food
+			value = 10.0
+			#value = 2.0
+		}
+		pops_auto_growth = 1.0
+		
+		pops_can_be_colonizers = yes
+		pops_can_migrate = yes
+		pops_can_reproduce = no
+		pops_can_join_factions = yes
+		pop_maintenance = 0.25
+		can_generate_leaders = yes
+		pops_can_be_slaves = yes
+		can_be_modified = no
+		pops_have_happiness = yes
+		consumer_goods = no
+		pop_ethics = random
+	}
+}
+
+buildable_robot_pop_farmer = {
+	prerequisites = {
+		"tech_alpha_farmdroids"
+	}
+
+	cost = {
+		minerals = 50
+		energy = 150
+	}
+	
+	allow = {
+		OR = {
+			has_policy_flag = ai_servitude
+			has_policy_flag = ai_full_rights
+		}
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	tile_potential = {
+		always = yes
+	}
+
+	tile_allow = {
+		always = yes
+	}
+
+	species = {
+		name = "ROBOT_POP_SPECIES_FARMER"
+		class = "ROBOT"
+		name_list = "AI"
+		portrait = "farming_droid"
+		traits = {
+			trait = "trait_mechanical"
+			trait = "trait_robotic_farmer"
+		}
+		
+		new_pop_resource_requirement = {
+			type = robot_food
+			value = 15.0			
+		}
+		pops_auto_growth = 1.0
+		#pops_auto_upgrade_to = buildable_robot_pop_3
+		
+		pops_can_be_colonizers = yes
+		pops_can_migrate = no
+		pops_can_reproduce = no
+		pops_can_join_factions = no
+		pop_maintenance = 1.0
+		can_generate_leaders = no
+		pops_can_be_slaves = no
+		can_be_modified = no
+		pops_have_happiness = no
+		consumer_goods = no
+		pop_ethics = no
+	}
+}

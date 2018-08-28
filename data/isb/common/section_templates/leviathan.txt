@@ -1,0 +1,131 @@
+#BOW
+
+ship_section_template = {
+	key = "LEVIATHAN_BOW"
+	ship_size = leviathan
+	fits_on_slot = bow
+	entity = "leviathan_bow_entity"
+	icon = "GFX_ship_part_core_bow"
+	
+	# Small guns
+	#weapon_preferences = { weapon_role_anti_shield }
+	ai_weight = {
+		modifier = {
+			factor = 8.0
+			OR = {
+				has_ai_personality = spiritual_seekers
+				has_ai_personality = hive_mind
+			}
+		}
+	}
+	
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+	
+	#component_slot = {
+	#	name = "LARGE_GUN_02"
+	#	slot_size = large
+	#	slot_type = weapon
+	#	locatorname = "large_gun_02"
+	#}
+	
+	large_utility_slots = 3
+	aux_utility_slots = 1
+	
+	cost = 8000
+}
+
+#MID
+
+ship_section_template = {
+	key = "LEVIATHAN_MID"
+	ship_size = leviathan
+	fits_on_slot = mid
+	entity = "leviathan_mid_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	# Missiles & Strike Craft
+	#weapon_preferences = { weapon_role_long_range }
+	ai_weight = {
+		modifier = {
+			factor = 8.0
+			OR = {
+				has_ai_personality = peaceful_traders
+				has_ai_personality = slaving_despots
+				has_ai_personality = migrating_flock
+			}
+		}
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+	
+	component_slot = {
+		name = "LARGE_GUN_02"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_02"
+	}	
+			
+	large_utility_slots = 3
+	aux_utility_slots = 1
+	
+	cost = 8000
+}
+
+#STERN
+
+ship_section_template = {
+	key = "LEVIATHAN_STERN"
+	ship_size = leviathan
+	fits_on_slot = stern
+	entity = "leviathan_stern_entity"
+	icon = "GFX_ship_part_core_stern"	
+	
+	#weapon_preferences = { weapon_role_long_range }
+	ai_weight = {
+		factor = 1
+		modifier = {
+			factor = 100.0
+			has_ai_personality = migrating_flock
+		}		
+	}
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+	
+	component_slot = {
+		name = "LARGE_GUN_02"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_02"
+	}	
+	
+	large_utility_slots = 3
+	aux_utility_slots = 1
+	
+	cost = 8000
+}
+
+# Explosion
+ship_section_template = {
+	key = "exploding_bunny_section"
+	ship_size = exploding_bunny
+	fits_on_slot = mid
+	entity = "exploding_bunny_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	small_utility_slots = 1
+}

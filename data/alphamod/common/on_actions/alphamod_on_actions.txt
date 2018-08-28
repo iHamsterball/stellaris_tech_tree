@@ -1,0 +1,72 @@
+on_press_begin = {
+	events = {
+		alphamod_traitsetup.1
+		alphamod_traitsetup.2
+		alphamod_traitsetup.3
+	}
+}
+
+on_survey = {
+	events = {
+		alphamod_surveys.1
+	}
+}
+
+on_planet_surveyed = {
+	events = {
+		alphamod_surveys.2
+	}
+}
+
+on_game_start = {
+	events = {
+		alphamod_traitsetup.2
+	}
+}
+
+on_monthly_pulse = {
+	events = {
+		shantytown.6
+		extended_land_survey.3
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+		shantytown.7
+		almbuildings.6
+		manage_trade.5500
+	}
+}
+
+on_building_complete = {
+	events = {
+		almexploited.1
+		almexploited.2
+		almbuildings.1
+	}
+}
+
+on_building_replaced = {
+	events = {
+		almexploited.1
+		almexploited.2
+		almbuildings.1
+		almbuildings.30
+		almbuildings.40
+	}
+}
+
+on_building_upgraded = {
+	events = {
+		almbuildings.2
+	}	
+}
+
+on_building_demolished = {
+	events = {
+		almbuildings.3
+		almbuildings.30
+		almbuildings.40
+	}
+}

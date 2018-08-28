@@ -1,0 +1,126 @@
+#ai_weight - checks that required resources are available by AI will be made in code for performance reasons
+
+#modifiers that can be added from modules
+#"modifier", category: MODIFIER_CATEGORY_SPACEPORT. things that affect the builder part of the spaceport. like construction costs and speeds
+#"orbit_modifier", category: MODIFIER_CATEGORY_FLEET | MODIFIER_CATEGORY_SHIP. applied on all orbiting fleets and ships
+#"planet_modifier", category: MODIFIER_CATEGORY_PLANET | MODIFIER_CATEGORY_POP | MODIFIER_CATEGORY_TILE. affects the planet
+#"station_modifier", category: MODIFIER_CATEGORY_FLEET | MODIFIER_CATEGORY_SHIP. affects the ship part of the spaceport. like health and armor
+#"ship_modifier", category: MODIFIER_CATEGORY_SHIP. affects all ships that are built by this space port
+
+isb_defense_platform_01 = {
+	icon = "GFX_spaceport_synchronized_defenses"
+	section = "SPACEPORT_SENTINEL_01_SECTION"
+	#section = "CORE_SPACEPORT_SECTION"
+	construction_days = 360
+	
+	potential = {
+		exists = owner
+		owner = { has_technology = tech_defense_platform_hull_1 }
+	}
+
+	cost = {
+		minerals = 8000
+	}
+
+	upkeep_resources = {
+		energy = 5
+	}
+
+	component_set = "PLASMA_3"
+
+	station_modifier = {
+		#ship_fire_rate_mult = 0.25
+		ship_weapon_damage = 0.25
+		#SHIP_HITPOINTS_MULT = 1.0
+		SHIP_HULL_ADD = 1000
+		SHIP_WEAPON_RANGE_MULT = 0.05
+		#SHIP_SHIELD_HP_ADD = 2500
+		#SHIP_SHIELD_REGEN_ADD = 25
+	}
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = no
+	ai_weight = {
+		weight = 100		
+	}
+}
+
+isb_defense_platform_02 = {
+	icon = "GFX_spaceport_synchronized_defenses"
+	section = "SPACEPORT_SENTINEL_02_SECTION"
+	#section = "CORE_SPACEPORT_SECTION"
+	construction_days = 720
+	
+	potential = {
+		exists = owner
+		owner = { has_technology = tech_isb_titan }
+	}
+
+	cost = {
+		minerals = 20000
+	}
+
+	upkeep_resources = {
+		energy = 5
+	}
+
+	component_set = "MASS_DRIVER_5"
+
+	station_modifier = {
+		#ship_fire_rate_mult = 0.25
+		ship_weapon_damage = 0.5
+		SHIP_HULL_MULT = 0.25
+		SHIP_HULL_ADD = 2000
+		SHIP_WEAPON_RANGE_MULT = 0.1
+		
+		ship_hull_regen_add_perc = 0.01
+		#SHIP_SHIELD_HP_ADD = 10000
+		#SHIP_SHIELD_REGEN_ADD = 100
+	}
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = no
+	ai_weight = {
+		weight = 100
+	}
+}
+
+isb_defense_platform_03 = {
+	icon = "GFX_spaceport_synchronized_defenses"
+	section = "SPACEPORT_SENTINEL_03_SECTION"
+	#section = "CORE_SPACEPORT_SECTION"
+	construction_days = 1440	
+	
+	potential = {
+		exists = owner
+		owner = { has_technology = tech_leviathan }
+	}
+
+	cost = {
+		minerals = 30000
+	}
+
+	upkeep_resources = {
+		energy = 5
+	}
+
+	component_set = "FALLEN_EMPIRE_SPACEPORT_LANCE"
+
+	station_modifier = {
+		#ship_fire_rate_mult = 0.25
+		ship_weapon_damage = 0.75
+		SHIP_HULL_MULT = 0.5
+		SHIP_HULL_ADD = 5000
+		SHIP_WEAPON_RANGE_MULT = 0.15
+		
+		ship_hull_regen_add_perc = 0.03
+		#SHIP_SHIELD_HP_ADD = 30000
+		#SHIP_SHIELD_REGEN_ADD = 175
+	}
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = no
+	ai_weight = {
+		weight = 100
+	}
+}

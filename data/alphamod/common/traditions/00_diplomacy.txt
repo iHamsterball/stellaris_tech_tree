@@ -1,0 +1,104 @@
+@cost = 56
+
+tr_diplomacy_adopt = {
+	cost = { unity = @cost }
+	modifier = {		
+		diplomacy_influence_cost = -0.5
+		country_trust_growth = 0.33
+	}
+	
+	ai_weight = {
+		factor = 10	
+		modifier = {
+			factor = 0.01
+			OR = {
+				has_ethic = ethic_hive_mind
+				has_valid_civic = civic_fanatic_purifiers
+			}
+		}
+		modifier = {
+			factor = 5
+			has_federation = yes
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_xenophile
+		}		
+	}
+}
+
+tr_diplomacy_finish = {
+	modifier = {
+		ascension_perks_add = 1
+		country_trust_cap_add = 50
+	}
+}
+
+tr_diplomacy_the_federation = {
+	cost = { unity = @cost }
+	
+	#unlocks federation mechanic
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_diplomacy_federal_unity = {
+	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_diplomacy_the_federation
+	}
+
+	modifier = {
+		country_federation_member_resource_unity_mult = 0.05
+	}
+	
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_diplomacy_dynamic_ecomorphism = {
+	cost = { unity = @cost }
+	
+	modifier = {
+		pop_environment_tolerance = 0.10
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_diplomacy_entente_coordination = {
+	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_diplomacy_the_federation
+	}
+
+	modifier = {
+		federation_naval_cap_contribution_mult = 1.00
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_diplomacy_alien_tourism = {
+	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_diplomacy_dynamic_ecomorphism
+	}
+	
+	#unlocks alien visitor center
+	
+	ai_weight = {
+		factor = 5000
+	}
+}

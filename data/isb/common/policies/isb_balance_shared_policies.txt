@@ -1,0 +1,306 @@
+isb_guardian_diff_policy = {
+
+	potential = {
+		always = yes
+	}
+
+	option = {
+		name = "guardian_diff_off"
+
+		potential = {
+		}
+
+		policy_flags = {
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				if = {
+					limit = { is_ai = no }
+
+					# clears guardian mods
+					country_event = { id = isb.8 }
+
+					set_global_flag = flag_guardian_off
+				}
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = "guardian_diff_easy"
+
+		potential = { }
+
+		policy_flags = {
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				if = {
+					limit = { is_ai = no }
+
+					# clears guardian mods
+					country_event = { id = isb.8 }
+
+					set_global_flag = flag_guardian_easy
+
+					every_country = {
+						limit = {
+							is_guardian_country = yes
+						}
+
+						country_event = { id = isb.5 }
+					}
+				}
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+	}
+
+	option = {
+		name = "guardian_diff_normal"
+
+		potential = {
+		}
+
+		policy_flags = {
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				if = {
+					limit = { is_ai = no }
+
+					# clears guardian mods
+					country_event = { id = isb.8 }
+
+					set_global_flag = flag_guardian_normal
+
+					every_country = {
+						limit = {
+							is_guardian_country = yes
+						}
+
+						country_event = { id = isb.5 }
+					}
+				}
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 1
+			}
+		}
+	}
+}
+
+isb_awakened_diff_policy = {
+
+	potential = {
+		always = yes
+	}
+
+	option = {
+		name = "awakened_diff_easy"
+
+		potential = {
+		}
+
+		policy_flags = {
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				if = {
+					limit = { is_ai = no }
+
+					# clears awakened flags
+					country_event = { id = isb.9 }
+
+					set_global_flag = flag_awakened_easy
+					
+					# Sets correct buffs
+					country_event = { id = isb.16 }
+
+				}
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = "awakened_diff_normal"
+
+		potential = { }
+
+		policy_flags = {
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				if = {
+					limit = { is_ai = no }
+
+					# clears awakened mods
+					country_event = { id = isb.9 }
+				}
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 1
+				always = yes
+			}
+		}
+	}
+
+	option = {
+		name = "awakened_diff_hard"
+
+		potential = {
+		}
+
+		policy_flags = {
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				if = {
+					limit = { is_ai = no }
+
+					# clears awakened mods
+					country_event = { id = isb.9 }
+
+					set_global_flag = flag_awakened_hard
+
+					# Sets correct buffs
+					country_event = { id = isb.16 }
+				}
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+}
+
+isb_fallen_diff_policy = {
+
+	potential = {
+		always = yes
+	}
+
+	option = {
+		name = "fallen_diff_easy"
+
+		potential = {
+		}
+
+		policy_flags = {
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				if = {
+					limit = { is_ai = no }
+
+					# clears fallen mods
+					country_event = { id = isb.10 }
+
+					set_global_flag = flag_fallen_easy
+
+					# Sets correct buffs
+					country_event = { id = isb.19 }
+				}
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = "fallen_diff_normal"
+
+		potential = { }
+
+		policy_flags = {
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				if = {
+					limit = { is_ai = no }
+
+					# clears fallen mods
+					country_event = { id = isb.10 }
+				}
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 1
+				always = yes
+			}
+		}
+	}
+
+	option = {
+		name = "fallen_diff_hard"
+
+		potential = {
+		}
+
+		policy_flags = {
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				if = {
+					limit = { is_ai = no }
+
+					# clears fallen mods
+					country_event = { id = isb.10 }
+
+					set_global_flag = flag_fallen_hard
+
+					# Sets correct buffs
+					country_event = { id = isb.19 }
+				}
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+}

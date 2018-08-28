@@ -365,6 +365,18 @@ def _localize_not_is_same_species(value):
     # Version 1.0 only
     return ugettext('Is NOT same species with ROOT species')
 
+def _localize_has_building(value):
+    # Alpha Mod
+    return ugettext('Has building {}').format(localization_map[value])
+
+def _localize_empire_has_not_sr_dark_matter(value):
+    # Alpha Mod
+    return ugettext('Does NOT have any dark matter in empire') if value == 'yes' else ugettext('Has any dark matter in empire')
+
+def _localize_has_not_tradition(value):
+    # Alpha Mod
+    return ugettext('Does NOT have {} tradition').format(localization_map[value])
+
 def _localize_is_playable_country(value):
     # New Ship Classes Mod
     return ugettext('Is playable country') if value == 'yes' else ugettext('Is NOT playable country')

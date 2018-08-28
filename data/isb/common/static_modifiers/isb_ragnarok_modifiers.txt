@@ -1,0 +1,17 @@
+# All global modifiers are here.  They are applied from certain game-features.
+#
+# Effects are fully scriptable here.
+
+# The names can NOT be removed or changed since the code references them
+
+mod_ragnarok_depleted = {
+	ship_weapon_damage = -6.0
+	ship_fire_rate_mult = -1.0
+}
+
+mod_ragnarok_activated = {
+	ship_weapon_damage = 6.0
+	ship_fire_rate_mult = 1.0
+	ship_upkeep_mult = 0.75
+	ship_hull_mult = 3
+}

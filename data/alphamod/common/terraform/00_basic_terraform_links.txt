@@ -1,0 +1,986 @@
+#########
+## Wet ##
+#########
+
+terraform_link = {
+	from = "pc_continental"
+	to = "pc_tropical"
+	
+	energy = 2000
+	duration = 1800
+	
+	condition = {
+		has_technology = "tech_terrestrial_sculpting"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_continental_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+					any_owned_pop = {
+						is_sentient = yes
+						has_trait = trait_pc_tropical_preference
+						has_citizenship_rights = yes
+						has_culture_shock = no
+					}
+				}
+				AND = {	# for ai, colonized
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						NOT = {
+							any_owned_pop = {
+								is_sentient = yes
+								is_being_purged = no
+								has_trait = trait_pc_continental_preference
+							}
+						}
+						any_owned_pop = {
+							is_sentient = yes
+							is_being_purged = no
+							has_trait = trait_pc_tropical_preference
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+terraform_link = {
+	from = "pc_continental"
+	to = "pc_ocean"
+	
+	energy = 2000
+	duration = 1800
+	
+	condition = {
+		has_technology = "tech_terrestrial_sculpting"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_continental_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+					any_owned_pop = {
+						is_sentient = yes
+						has_trait = trait_pc_ocean_preference
+						has_citizenship_rights = yes
+						has_culture_shock = no
+					}
+				}
+				AND = {	# for ai, colonized
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						NOT = {
+							any_owned_pop = {
+								is_sentient = yes
+								is_being_purged = no
+								has_trait = trait_pc_continental_preference
+							}
+						}
+						any_owned_pop = {
+							is_sentient = yes
+							is_being_purged = no
+							has_trait = trait_pc_ocean_preference
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_ocean"
+	to = "pc_continental"
+	
+	energy = 2000
+	duration = 1800
+	
+	condition = {
+		has_technology = "tech_terrestrial_sculpting"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_ocean_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+					any_owned_pop = {
+						is_sentient = yes
+						has_trait = trait_pc_continental_preference
+						has_citizenship_rights = yes
+						has_culture_shock = no
+					}
+				}
+				AND = {	# for ai, colonized
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						NOT = {
+							any_owned_pop = {
+								is_sentient = yes
+								is_being_purged = no
+								has_trait = trait_pc_ocean_preference
+							}
+						}
+						any_owned_pop = {
+							is_sentient = yes
+							is_being_purged = no
+							has_trait = trait_pc_continental_preference
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_ocean"
+	to = "pc_tropical"
+	
+	energy = 2000
+	duration = 1800
+	
+	condition = {
+		has_technology = "tech_terrestrial_sculpting"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_ocean_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+					any_owned_pop = {
+						is_sentient = yes
+						has_trait = trait_pc_tropical_preference
+						has_citizenship_rights = yes
+						has_culture_shock = no
+					}
+				}
+				AND = {	# for ai, colonized
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						NOT = {
+							any_owned_pop = {
+								is_sentient = yes
+								is_being_purged = no
+								has_trait = trait_pc_ocean_preference
+							}
+						}
+						any_owned_pop = {
+							is_sentient = yes
+							is_being_purged = no
+							has_trait = trait_pc_tropical_preference
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_tropical"
+	to = "pc_continental"
+	
+	energy = 2000
+	duration = 1800
+	
+	condition = {
+		has_technology = "tech_terrestrial_sculpting"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_tropical_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+					any_owned_pop = {
+						is_sentient = yes
+						has_trait = trait_pc_continental_preference
+						has_citizenship_rights = yes
+						has_culture_shock = no
+					}
+				}
+				AND = {	# for ai, colonized
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						NOT = {
+							any_owned_pop = {
+								is_sentient = yes
+								is_being_purged = no
+								has_trait = trait_pc_tropical_preference
+							}
+						}
+						any_owned_pop = {
+							is_sentient = yes
+							is_being_purged = no
+							has_trait = trait_pc_continental_preference
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_tropical"
+	to = "pc_ocean"
+	
+	energy = 2000
+	duration = 1800
+	
+	condition = {
+		has_technology = "tech_terrestrial_sculpting"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_tropical_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+					any_owned_pop = {
+						is_sentient = yes
+						has_trait = trait_pc_ocean_preference
+						has_citizenship_rights = yes
+						has_culture_shock = no
+					}
+				}
+				AND = {	# for ai, colonized
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						NOT = {
+							any_owned_pop = {
+								is_sentient = yes
+								is_being_purged = no
+								has_trait = trait_pc_tropical_preference
+							}
+						}
+						any_owned_pop = {
+							is_sentient = yes
+							is_being_purged = no
+							has_trait = trait_pc_ocean_preference
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+############
+## Frozen ##
+############
+
+terraform_link = {
+	from = "pc_alpine"
+	to = "pc_arctic"
+	
+	energy = 2000
+	duration = 1800
+	
+	condition = {
+		has_technology = "tech_terrestrial_sculpting"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_alpine_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+					any_owned_pop = {
+						is_sentient = yes
+						has_trait = trait_pc_arctic_preference
+						has_citizenship_rights = yes
+						has_culture_shock = no
+					}
+				}
+				AND = {	# for ai, colonized
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						NOT = {
+							any_owned_pop = {
+								is_sentient = yes
+								is_being_purged = no
+								has_trait = trait_pc_alpine_preference
+							}
+						}
+						any_owned_pop = {
+							is_sentient = yes
+							is_being_purged = no
+							has_trait = trait_pc_arctic_preference
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+terraform_link = {
+	from = "pc_alpine"
+	to = "pc_tundra"
+	
+	energy = 2000
+	duration = 1800
+	
+	condition = {
+		has_technology = "tech_terrestrial_sculpting"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_alpine_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+					any_owned_pop = {
+						is_sentient = yes
+						has_trait = trait_pc_tundra_preference
+						has_citizenship_rights = yes
+						has_culture_shock = no
+					}
+				}
+				AND = {	# for ai, colonized
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						NOT = {
+							any_owned_pop = {
+								is_sentient = yes
+								is_being_purged = no
+								has_trait = trait_pc_alpine_preference
+							}
+						}
+						any_owned_pop = {
+							is_sentient = yes
+							is_being_purged = no
+							has_trait = trait_pc_tundra_preference
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_tundra"
+	to = "pc_alpine"
+	
+	energy = 2000
+	duration = 1800
+	
+	condition = {
+		has_technology = "tech_terrestrial_sculpting"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_tundra_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+					any_owned_pop = {
+						is_sentient = yes
+						has_trait = trait_pc_alpine_preference
+						has_citizenship_rights = yes
+						has_culture_shock = no
+					}
+				}
+				AND = {	# for ai, colonized
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						NOT = {
+							any_owned_pop = {
+								is_sentient = yes
+								is_being_purged = no
+								has_trait = trait_pc_tundra_preference
+							}
+						}
+						any_owned_pop = {
+							is_sentient = yes
+							is_being_purged = no
+							has_trait = trait_pc_alpine_preference
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_tundra"
+	to = "pc_arctic"
+	
+	energy = 2000
+	duration = 1800
+	
+	condition = {
+		has_technology = "tech_terrestrial_sculpting"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_tundra_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+					any_owned_pop = {
+						is_sentient = yes
+						has_trait = trait_pc_arctic_preference
+						has_citizenship_rights = yes
+						has_culture_shock = no
+					}
+				}
+				AND = {	# for ai, colonized
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						NOT = {
+							any_owned_pop = {
+								is_sentient = yes
+								is_being_purged = no
+								has_trait = trait_pc_tundra_preference
+							}
+						}
+						any_owned_pop = {
+							is_sentient = yes
+							is_being_purged = no
+							has_trait = trait_pc_arctic_preference
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_arctic"
+	to = "pc_alpine"
+	
+	energy = 2000
+	duration = 1800
+	
+	condition = {
+		has_technology = "tech_terrestrial_sculpting"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_arctic_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+					any_owned_pop = {
+						is_sentient = yes
+						has_trait = trait_pc_alpine_preference
+						has_citizenship_rights = yes
+						has_culture_shock = no
+					}
+				}
+				AND = {	# for ai, colonized
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						NOT = {
+							any_owned_pop = {
+								is_sentient = yes
+								is_being_purged = no
+								has_trait = trait_pc_arctic_preference
+							}
+						}
+						any_owned_pop = {
+							is_sentient = yes
+							is_being_purged = no
+							has_trait = trait_pc_alpine_preference
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_arctic"
+	to = "pc_tundra"
+	
+	energy = 2000
+	duration = 1800
+	
+	condition = {
+		has_technology = "tech_terrestrial_sculpting"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_arctic_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+					any_owned_pop = {
+						is_sentient = yes
+						has_trait = trait_pc_tundra_preference
+						has_citizenship_rights = yes
+						has_culture_shock = no
+					}
+				}
+				AND = {	# for ai, colonized
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						NOT = {
+							any_owned_pop = {
+								is_sentient = yes
+								is_being_purged = no
+								has_trait = trait_pc_arctic_preference
+							}
+						}
+						any_owned_pop = {
+							is_sentient = yes
+							is_being_purged = no
+							has_trait = trait_pc_tundra_preference
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#########
+## Dry ##
+#########
+
+terraform_link = {
+	from = "pc_desert"
+	to = "pc_arid"
+	
+	energy = 2000
+	duration = 1800
+	
+	condition = {
+		has_technology = "tech_terrestrial_sculpting"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_desert_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+					any_owned_pop = {
+						is_sentient = yes
+						has_trait = trait_pc_arid_preference
+						has_citizenship_rights = yes
+						has_culture_shock = no
+					}
+				}
+				AND = {	# for ai, colonized
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						NOT = {
+							any_owned_pop = {
+								is_sentient = yes
+								is_being_purged = no
+								has_trait = trait_pc_desert_preference
+							}
+						}
+						any_owned_pop = {
+							is_sentient = yes
+							is_being_purged = no
+							has_trait = trait_pc_arid_preference
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+terraform_link = {
+	from = "pc_desert"
+	to = "pc_savannah"
+	
+	energy = 2000
+	duration = 1800
+	
+	condition = {
+		has_technology = "tech_terrestrial_sculpting"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_desert_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+					any_owned_pop = {
+						is_sentient = yes
+						has_trait = trait_pc_savannah_preference
+						has_citizenship_rights = yes
+						has_culture_shock = no
+					}
+				}
+				AND = {	# for ai, colonized
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						NOT = {
+							any_owned_pop = {
+								is_sentient = yes
+								is_being_purged = no
+								has_trait = trait_pc_desert_preference
+							}
+						}
+						any_owned_pop = {
+							is_sentient = yes
+							is_being_purged = no
+							has_trait = trait_pc_savannah_preference
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_savannah"
+	to = "pc_desert"
+	
+	energy = 2000
+	duration = 1800
+	
+	condition = {
+		has_technology = "tech_terrestrial_sculpting"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_savannah_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+					any_owned_pop = {
+						is_sentient = yes
+						has_trait = trait_pc_desert_preference
+						has_citizenship_rights = yes
+						has_culture_shock = no
+					}
+				}
+				AND = {	# for ai, colonized
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						NOT = {
+							any_owned_pop = {
+								is_sentient = yes
+								is_being_purged = no
+								has_trait = trait_pc_savannah_preference
+							}
+						}
+						any_owned_pop = {
+							is_sentient = yes
+							is_being_purged = no
+							has_trait = trait_pc_desert_preference
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_savannah"
+	to = "pc_arid"
+	
+	energy = 2000
+	duration = 1800
+	
+	condition = {
+		has_technology = "tech_terrestrial_sculpting"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_savannah_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+					any_owned_pop = {
+						is_sentient = yes
+						has_trait = trait_pc_arid_preference
+						has_citizenship_rights = yes
+						has_culture_shock = no
+					}
+				}
+				AND = {	# for ai, colonized
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						NOT = {
+							any_owned_pop = {
+								is_sentient = yes
+								is_being_purged = no
+								has_trait = trait_pc_savannah_preference
+							}
+						}
+						any_owned_pop = {
+							is_sentient = yes
+							is_being_purged = no
+							has_trait = trait_pc_arid_preference
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_arid"
+	to = "pc_desert"
+	
+	energy = 2000
+	duration = 1800
+	
+	condition = {
+		has_technology = "tech_terrestrial_sculpting"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_arid_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+					any_owned_pop = {
+						is_sentient = yes
+						has_trait = trait_pc_desert_preference
+						has_citizenship_rights = yes
+						has_culture_shock = no
+					}
+				}
+				AND = {	# for ai, colonized
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						NOT = {
+							any_owned_pop = {
+								is_sentient = yes
+								is_being_purged = no
+								has_trait = trait_pc_arid_preference
+							}
+						}
+						any_owned_pop = {
+							is_sentient = yes
+							is_being_purged = no
+							has_trait = trait_pc_desert_preference
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_arid"
+	to = "pc_savannah"
+	
+	energy = 2000
+	duration = 1800
+	
+	condition = {
+		has_technology = "tech_terrestrial_sculpting"
+		hidden_trigger = {
+			OR = {
+				is_ai = no	# player needs no extra hand-holding
+				AND = {	# for ai, un-colonized
+					from = {
+						has_owner = no
+					}
+					NOT = {
+						any_owned_pop = {
+							is_sentient = yes
+							has_trait = trait_pc_arid_preference
+							has_citizenship_rights = yes
+							has_culture_shock = no
+						}
+					}
+					any_owned_pop = {
+						is_sentient = yes
+						has_trait = trait_pc_savannah_preference
+						has_citizenship_rights = yes
+						has_culture_shock = no
+					}
+				}
+				AND = {	# for ai, colonized
+					from = {
+						has_owner = yes
+						owner = { is_same_value = prevprev }
+						NOT = {
+							any_owned_pop = {
+								is_sentient = yes
+								is_being_purged = no
+								has_trait = trait_pc_arid_preference
+							}
+						}
+						any_owned_pop = {
+							is_sentient = yes
+							is_being_purged = no
+							has_trait = trait_pc_savannah_preference
+						}
+					}
+				}
+			}
+		}
+	}
+}

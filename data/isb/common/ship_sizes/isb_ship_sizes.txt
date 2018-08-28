@@ -1,0 +1,686 @@
+#reloadable with 'reload stats'
+# This file is where you start when you want to configure something new, then go to sections
+
+@titan_max_speed = 90
+@titan_combat_rotation = 0.15
+@titan_collision_radius = 13
+@titan_formation_priority = 29
+
+@leviathan_max_speed = 120
+@leviathan_combat_rotation = 0.2
+@leviathan_collision_radius = 9
+@leviathan_formation_priority = 21
+
+@sun_crusher_max_speed = 20
+@sun_crusher_combat_rotation = 0.01
+
+@erebus_max_speed = 80
+@erebus_combat_rotation = 0.1
+@erebus_collision_radius = 15
+@erebus_formation_priority = 51
+
+@erebus_drone_max_speed = 170
+@erebus_drone_combat_rotation = 0.08
+@erebus_drone_collision_radius = 2
+
+@ragnarok_max_speed = 80
+
+@avatar_max_speed = 75
+
+############
+# STANDARD #
+############
+
+
+isb_titan = {
+	formation_priority = @titan_formation_priority
+
+	max_speed = @titan_max_speed
+	acceleration = 0.2
+	rotation_speed = @titan_combat_rotation
+	
+	collision_radius = @titan_collision_radius
+	modifier = {
+		ship_evasion_mult = -0.99
+		ship_armor_add = 320				
+		
+		ship_armor_regen_add_static = 10
+		ship_hull_regen_add_perc = 0.25
+		ship_shield_regen_add_perc = 1
+		
+		ship_shield_mult = 1.5
+		ship_hull_mult = 1.5
+		ship_armor_mult = 2
+
+		ship_shield_add = 1000
+		ship_shield_regen_add_static = 150
+	}	
+	max_hitpoints = 5000
+	size_multiplier = 24
+	fleet_slot_size = 5
+	section_slots = { "bow" = { locator = "part1" } "mid" = { locator = "part2" } "stern" = { locator = "part3" } }
+	num_target_locators = 4
+	is_space_station = no
+	icon_frame = 6
+	base_buildtime = 1800
+	
+	can_have_federation_design = yes
+	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
+
+	default_behavior = artillery
+	
+	prerequisites = { "tech_isb_titan" }	
+	
+	class = shipclass_military	
+	required_component_set = "ftl_components"
+	required_component_set = "titan_core_components"	
+	required_component_set = "ship_sensor_components"
+	required_component_set = "titan_weapon_components"
+	required_component_set = "powerstation_components"
+	
+	#Apoc Stuff
+	combat_disengage_chance = 0.50
+	has_mineral_upkeep = yes
+	construction_type = starbase_shipyard
+	
+	possible_starbase = {
+		has_starbase_size >= starbase_citadel		
+	}
+	
+	empire_limit = {
+		base = 1
+		max = 15
+		naval_cap_div = 100
+	}
+}
+
+# Fallen Empire Titan Ship
+titan_ship_fallen_empire = {
+	graphical_culture = { "fallen_empire_01" "fallen_empire_02" "fallen_empire_03" "fallen_empire_04" "fallen_machine_empire_01"}
+	max_speed = @titan_max_speed
+	acceleration = 0.2
+	rotation_speed = @titan_combat_rotation
+	
+	collision_radius = @titan_collision_radius
+	modifier = {
+		ship_evasion_mult = -0.99
+		ship_armor_add = 360		
+		
+		ship_shield_mult = 2.00
+		ship_hull_mult = 2.00		
+		ship_armor_mult = 2.5
+		
+		ship_armor_regen_add_static = 15
+		ship_hull_regen_add_perc = 0.5
+		ship_shield_regen_add_perc = 1
+		
+		ship_shield_add = 1500
+		ship_shield_regen_add_static = 150
+	}
+	max_hitpoints = 7500
+	size_multiplier = 24
+	fleet_slot_size = 10
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 2
+	is_space_station = no
+	icon_frame = 6
+	
+	cost = 10000
+	base_buildtime = 2400	
+
+	class = shipclass_military
+	is_designable = no
+	
+	default_behavior = artillery
+	
+	#Apoc Stuff
+	combat_disengage_chance = 0.50
+	has_mineral_upkeep = yes
+	construction_type = starbase_shipyard
+	
+	possible_starbase = {
+		has_starbase_size >= starbase_citadel		
+	}
+	
+	empire_limit = {
+		base = 1
+		max = 5
+		naval_cap_div = 150
+	}
+}
+
+leviathan = {
+	formation_priority = @leviathan_formation_priority
+
+	max_speed = @leviathan_max_speed
+	acceleration = 0.275
+	rotation_speed = @leviathan_combat_rotation
+	
+	collision_radius = @leviathan_collision_radius
+	modifier = {		
+		#ship_armor_mult = -0.6
+		ship_shield_add = 2500	
+		ship_shield_regen_add_static = 25
+		
+		ship_armor_add = 240		
+		
+		ship_shield_mult = 1.5
+		ship_hull_mult = 1.0	
+		ship_armor_mult = 1.5
+		
+		ship_armor_regen_add_static = 10
+		ship_hull_regen_add_perc = 0.2
+		ship_shield_regen_add_perc = 0.5
+	}
+	max_hitpoints = 6000
+	size_multiplier = 36
+	fleet_slot_size = 6
+	section_slots = { "bow" = { locator = "part1" } "mid" = { locator = "part2" } "stern" = { locator = "part3" } }
+	num_target_locators = 2
+	is_space_station = no
+	icon_frame = 6
+	base_buildtime = 2400
+	
+	can_have_federation_design = yes
+	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
+
+	prerequisites = { "tech_leviathan" }
+
+	default_behavior = line
+	
+	class = shipclass_military
+	required_component_set = "ftl_components"
+	required_component_set = "leviathan_core_components"	
+	required_component_set = "ship_sensor_components"
+	required_component_set = "powerstation_components"
+	
+	#Apoc Stuff
+	combat_disengage_chance = 0.50
+	has_mineral_upkeep = yes
+	construction_type = starbase_shipyard
+	
+	possible_starbase = {
+		has_starbase_size >= starbase_citadel		
+	}
+	
+	empire_limit = {
+		base = 1
+		max = 10
+		naval_cap_div = 150
+	}
+}
+
+sun_crusher = {
+	max_speed = @sun_crusher_max_speed
+	acceleration = 0.02
+	rotation_speed = 0.035
+	
+	modifier = {
+		ship_armor_add = 20000
+		ship_upkeep_mult = -0.3
+	}
+	max_hitpoints = 6000
+	size_multiplier = 4
+	fleet_slot_size = 6
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = no
+	icon_frame = 7
+	base_buildtime = 1800
+	
+	can_have_federation_design = no
+	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
+	is_civilian = yes
+	is_designable = yes
+
+	prerequisites = { "tech_sun_crusher" }
+
+	class = shipclass_sun_crusher
+
+	required_component_set = "sun_crusher_components"
+	
+	# Apoc Stuff
+	construction_type = starbase_shipyard
+}
+
+exploding_bunny = {	
+	max_speed = 6
+	rotation_speed = 0.15
+	
+	acceleration = 0.35
+	modifier = {
+		ship_armor_add = 5
+	}
+	max_hitpoints = 400
+	size_multiplier = 1
+	fleet_slot_size = 1
+	section_slots = { "mid" = { locator = "root" } }
+	num_target_locators = 0
+	icon_frame = 10
+	class = shipclass_military
+	is_designable = no
+	graphical_culture = no
+}
+
+exploding_bunny_avatar = {	
+	max_speed = 6
+	rotation_speed = 0.15
+	
+	acceleration = 0.35
+	modifier = {
+		ship_armor_add = 5
+	}
+	max_hitpoints = 400
+	size_multiplier = 1
+	fleet_slot_size = 1
+	section_slots = { "mid" = { locator = "root" } }
+	num_target_locators = 0
+	icon_frame = 10
+	class = shipclass_military
+	is_designable = no
+	graphical_culture = no
+}
+
+avatar = {	
+	max_speed = @avatar_max_speed
+	acceleration = 0.1
+	rotation_speed = 0.1
+	
+	collision_radius = @titan_collision_radius
+	modifier = {
+		ship_evasion_mult = -0.99
+		ship_armor_add = 6000
+		
+		ship_armor_regen_add_static = 100
+		ship_hull_regen_add_perc = 1
+		ship_shield_regen_add_perc = 1
+		
+		ship_shield_mult = 2.25
+		ship_hull_mult = 6
+		ship_armor_mult = 10		
+
+		ship_shield_add = 30000
+		ship_shield_regen_add_static = 200
+		
+		#ship_upkeep_mult = -0.3
+	}
+	max_hitpoints = 18000
+	size_multiplier = 108
+	fleet_slot_size = 8
+	section_slots = { "mid" = { locator = "root" } }
+	num_target_locators = 3
+	icon_frame = 7
+	class = shipclass_avatar
+	is_designable = yes
+	
+	base_buildtime = 4800
+
+	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
+	is_civilian = no
+
+	graphical_culture = no
+	is_space_object = yes
+
+	required_component_set = "avatar_components"
+	prerequisites = { "tech_avatar" }
+	
+	default_behavior = artillery
+	
+	#Apoc Stuff
+	combat_disengage_chance = 0.0
+	has_mineral_upkeep = yes
+	construction_type = starbase_shipyard
+	
+	possible_starbase = {
+		has_starbase_size >= starbase_citadel		
+	}
+	
+	empire_limit = {
+		base = 1
+		max = 1
+		naval_cap_div = 500
+	}
+}
+
+avatar_frame = {
+	max_speed = 0.0
+	acceleration = 0.0
+	rotation_speed = 0.0
+
+	modifier = {
+		ship_armor_add = 10
+		ship_hull_regen_add_perc = 0.05
+	}
+	max_hitpoints = 10000
+	size_multiplier = 1
+	fleet_slot_size = 1
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	icon_frame = 7
+	class = shipclass_avatar_frame
+	is_designable = no
+	is_space_station = no
+
+	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	is_civilian = yes
+
+	graphical_culture = no
+	
+	# Apoc Stuff
+	combat_disengage_chance = 0.0
+	has_mineral_upkeep = yes
+}
+
+avatar_constructor = {
+	max_speed = 100
+	acceleration = 0.3
+	rotation_speed = 0.2
+	
+	modifier = {
+		ship_armor_add = 25
+	}
+	max_hitpoints = 5000
+	size_multiplier = 1
+	fleet_slot_size = 3
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	icon_frame = 7
+	class = shipclass_avatar_constructor
+	base_buildtime = 2400
+	
+	is_designable = no
+
+	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	is_civilian = yes
+
+	prerequisites = { "tech_avatar" }
+
+	required_component_set = "ftl_components"	
+	required_component_set = "avatar_components"
+
+	graphical_culture = no
+	
+	# Apoc Stuff	
+	construction_type = starbase_shipyard
+	empire_limit = {
+		base = 1
+		max = 1
+		naval_cap_div = 100
+	}
+}
+
+
+erebus = {
+	formation_priority = @erebus_formation_priority
+
+	max_speed = @erebus_max_speed
+	acceleration = 0.15
+	rotation_speed = 0.125
+	
+	collision_radius = @erebus_collision_radius
+	modifier = {
+		ship_evasion_mult = -0.99
+		ship_armor_add = 1000			
+
+		ship_upkeep_mult = 0.25
+		ship_armor_regen_add_static = 25
+		ship_hull_regen_add_perc = 1
+		ship_shield_regen_add_perc = 1.5
+		
+		ship_shield_mult = 2.5
+		ship_hull_mult = 2
+		ship_armor_mult = 3		
+
+		ship_shield_add = 6000
+		ship_shield_regen_add_static = 250
+	}
+	max_hitpoints = 6000
+	size_multiplier = 80
+	fleet_slot_size = 7
+	section_slots = { "mid" = { locator = "part2" } }
+	num_target_locators = 4
+	icon_frame = 5
+	class = shipclass_military
+	is_designable = yes
+	base_buildtime = 2800
+
+	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
+	is_civilian = no
+
+	prerequisites = { "tech_erebus" }	
+
+	default_behavior = artillery
+	
+	graphical_culture = no
+
+	required_component_set = "ftl_components"
+	required_component_set = "erebus_components"	
+	required_component_set = "ship_sensor_components"
+	
+	# Apoc Stuff
+	combat_disengage_chance = 0.50
+	has_mineral_upkeep = yes
+	construction_type = starbase_shipyard
+	
+	possible_starbase = {
+		has_starbase_size >= starbase_citadel		
+	}
+	
+	empire_limit = {
+		base = 1
+		max = 8
+		naval_cap_div = 200
+	}
+}
+
+
+erebus_drone = {
+	max_speed = @erebus_max_speed
+	acceleration = 0.75
+	rotation_speed = 0.25
+	
+	collision_radius = @erebus_drone_collision_radius
+	modifier = {
+		ship_evasion_add = 15
+		ship_armor_add = 6
+
+		ship_shield_add = 3000
+		ship_shield_regen_add_static = 60
+		ship_hull_regen_add_perc = 1
+	}
+	max_hitpoints = 2000
+	size_multiplier = 0
+	fleet_slot_size = 4
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 3
+	icon_frame = 2
+	class = shipclass_military
+	is_designable = no
+
+	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	is_civilian = no
+
+	graphical_culture = no
+	
+	default_behavior = swarm
+	
+	#Apoc Stuff
+	combat_disengage_chance = 0.0	
+}
+
+ragnarok = {
+	max_speed = @ragnarok_max_speed
+	acceleration = 0.175
+	rotation_speed = 0.125	
+	
+	collision_radius = @titan_collision_radius
+	modifier = {		
+		ship_armor_add = 2000		
+		SHIP_EVASION_MULT = -0.99
+		
+		ship_armor_add = 1000
+		
+		ship_armor_regen_add_static = 150
+		ship_hull_regen_add_perc = 2
+		ship_shield_regen_add_perc = 1
+		
+		ship_shield_mult = 2
+		ship_hull_mult = 6
+		ship_armor_mult = 20
+
+		ship_shield_add = 12000
+		ship_shield_regen_add_static = 200
+	}
+	max_hitpoints = 18000
+	size_multiplier = 128
+	fleet_slot_size = 8
+	section_slots = { "mid" = { locator = "part2" } }
+	num_target_locators = 2
+	is_space_station = no
+	icon_frame = 7
+	base_buildtime = 2880
+	
+	#can_have_federation_design = no
+	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
+	is_designable = yes
+
+	graphical_culture = no
+	#entity = ragnarok_ship_entity
+	is_space_object = yes
+
+	prerequisites = { tech_ragnarok }
+
+	default_behavior = artillery
+	
+	class = shipclass_military
+	
+	required_component_set = "ragnarok_components"
+	
+	#Apoc Stuff
+	combat_disengage_chance = 0.0
+	has_mineral_upkeep = yes
+	construction_type = starbase_shipyard
+	
+	possible_starbase = {
+		has_starbase_size >= starbase_citadel		
+	}
+	
+	empire_limit = {
+		base = 1
+		max = 1
+		naval_cap_div = 500
+	}	
+}
+
+consume_planet_bunny = {	
+	max_speed = 6
+	rotation_speed = 0.15
+	
+	acceleration = 0.35
+	collision_radius = 0.1
+	modifier = {
+		ship_armor_add = 5
+	}
+	max_hitpoints = 400
+	size_multiplier = 1
+	fleet_slot_size = 1
+	section_slots = {  }
+	num_target_locators = 0
+	icon_frame = 10
+	class = shipclass_military
+	is_designable = no
+	graphical_culture = no
+	entity = consume_planet_bunny_entity
+}
+
+rag_effect_ship = {
+	max_speed = 0.0
+	acceleration = 0.01
+	rotation_speed = 0.5
+	
+	collision_radius = 0.1
+	modifier = {
+		ship_armor_add = 20
+	}
+	max_hitpoints = 2500
+	size_multiplier = 4
+	fleet_slot_size = 2
+	section_slots = {  }
+	num_target_locators = 2
+	is_space_station = no
+	icon_frame = 2
+	base_buildtime = 240
+	
+	#can_have_federation_design = no
+	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	is_designable = no
+
+	graphical_culture = no
+	entity = rag_effect_ship_entity
+	is_space_object = yes
+
+	prerequisites = { }
+
+	class = shipclass_military
+}
+
+rag_effect_explosion_ship = {
+	max_speed = 0.0
+	acceleration = 0.0
+	rotation_speed = 0.5
+	
+	collision_radius = 0.1
+	modifier = {
+		ship_armor_add = 200000
+	}
+	max_hitpoints = 250000
+	size_multiplier = 4
+	fleet_slot_size = 50
+	section_slots = {  }
+	num_target_locators = 2
+	is_space_station = no
+	icon_frame = 2
+	base_buildtime = 240
+	
+	#can_have_federation_design = no
+	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	is_designable = no
+
+	graphical_culture = no
+	entity = rag_effect_ship_explosion_entity
+
+	prerequisites = { }
+
+	class = shipclass_military
+}
+
+rag_effect_damage_ship = {
+	max_speed = 0.0
+	acceleration = 0.0
+	rotation_speed = 0.5
+	
+	collision_radius = 0.1
+	modifier = {
+		ship_armor_add = 200000
+		SHIP_SHIELD_ADD = 250000
+	}
+	max_hitpoints = 250000
+	size_multiplier = 4
+	fleet_slot_size = 50
+	section_slots = {  }
+	num_target_locators = 2
+	is_space_station = no
+	icon_frame = 2
+	base_buildtime = 240
+	
+	#can_have_federation_design = no
+	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	is_designable = no
+
+	graphical_culture = no
+	entity = molluscoid_01_corvette_entity
+
+	prerequisites = { }
+
+	class = shipclass_military
+}

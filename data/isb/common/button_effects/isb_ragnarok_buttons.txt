@@ -1,0 +1,325 @@
+#This feature did not get fully implemented for 1.2 so scoping is still very primitive
+# scopes that the triggers and the effect will get will have the player's country set in both THIS and FROM
+# In the future this will be expanded on so that the value in THIS is context sensetive
+
+# Hack until buttons work properly
+rag_eb_create_marker = {
+	potential = {
+		exists = THIS
+		has_country_flag = flag_rag_button
+		NOT = { has_country_flag = flag_rag_mode }
+		NOT = { has_country_flag = flag_blink_mode }
+	}
+	allow = {
+		NOT = { has_country_flag = flag_rag_firing }
+	}
+
+	effect = {
+		custom_tooltip = "isb_rag_create_marker_tip"
+
+		every_ambient_object = {
+			limit = { has_ambient_object_flag = isb_rag_marker }
+			destroy_ambient_object = THIS
+		}
+
+		random_owned_ship = {
+			limit = {
+				is_ship_size = ragnarok
+				is_in_combat = yes
+				FLEET = { has_fleet_flag = flag_can_rag }
+				has_ship_flag = flag_rag_doomsday_charged
+			}
+
+			PREV = { set_country_flag = flag_rag_mode }
+			ship_event = { id = isb_ragnarok.101 }
+		}
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = flag_rag_mode
+				}
+				# Ensure the fire locator is properly spawned
+				set_timed_country_flag = { flag = flag_rag_mode_delay days = 1 }
+				# Timeout for fire mode
+				set_timed_country_flag = { flag = flag_rag_mode_new days = 30 }
+				country_event = { id = isb_ragnarok.2 days = 30 }
+
+				set_variable = {
+					which = "rag_marker_x"
+					value = 0
+				}
+				set_variable = {
+					which = "rag_marker_y"
+					value = 0
+				}
+
+				else = {
+					# no ragnarok found / selected error
+					country_event = { id = isb_ragnarok.197 }
+				}
+			}
+		}
+	}
+}
+
+rag_eb_fire_cancel = {
+	potential = {
+		exists = THIS
+		has_country_flag = flag_rag_mode
+	}
+	allow = {
+		NOT = { has_country_flag = flag_rag_mode_delay }
+	}
+
+	effect = {
+		custom_tooltip = "isb_rag_cancel_tip"
+		remove_country_flag = flag_rag_mode
+		remove_country_flag = flag_rag_mode_new
+
+		every_ambient_object = {
+			limit = { has_ambient_object_flag = isb_rag_marker }
+			destroy_ambient_object = THIS
+		}
+	}
+}
+
+rag_eb_marker_right = {
+	potential = {
+		exists = THIS
+		has_country_flag = flag_rag_mode
+	}
+	allow = {
+		NOT = { has_country_flag = flag_rag_mode_delay }
+	}
+
+	effect = {
+		custom_tooltip = "isb_rag_marker_move_tip"
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						which = "rag_marker_x"
+						value < 9
+					}
+				}
+
+				change_variable = {
+					which = "rag_marker_x"
+					value = 1
+				}
+
+				every_ambient_object = {
+					limit = { has_ambient_object_flag = isb_rag_marker }
+					set_location = {
+						target = THIS
+						distance = 10
+						angle = 0
+					}
+				}
+			}
+		}
+	}
+}
+
+rag_eb_marker_left = {
+	potential = {
+		exists = THIS
+		has_country_flag = flag_rag_mode
+	}
+	allow = {
+		NOT = { has_country_flag = flag_rag_mode_delay }
+	}
+
+	effect = {
+		custom_tooltip = "isb_rag_marker_move_tip"
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						which = "rag_marker_x"
+						value > -9
+					}
+				}
+				change_variable = {
+					which = "rag_marker_x"
+					value = -1
+				}
+
+				every_ambient_object = {
+					limit = { has_ambient_object_flag = isb_rag_marker }
+					set_location = {
+						target = THIS
+						distance = 10
+						angle = 180
+					}
+				}
+			}
+		}
+	}
+}
+
+rag_eb_marker_forw = {
+	potential = {
+		exists = THIS
+		has_country_flag = flag_rag_mode
+	}
+	allow = {
+		NOT = { has_country_flag = flag_rag_mode_delay }
+	}
+
+	effect = {
+		custom_tooltip = "isb_rag_marker_move_tip"
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						which = "rag_marker_y"
+						value < 9
+					}
+				}
+
+				change_variable = {
+					which = "rag_marker_y"
+					value = 1
+				}
+
+				every_ambient_object = {
+					limit = { has_ambient_object_flag = isb_rag_marker }
+					set_location = {
+						target = THIS
+						distance = 10
+						angle = 90
+					}
+				}
+			}
+		}
+	}
+}
+
+rag_eb_marker_back = {
+	potential = {
+		exists = THIS
+		has_country_flag = flag_rag_mode
+	}
+	allow = {
+		NOT = { has_country_flag = flag_rag_mode_delay }
+	}
+
+	effect = {
+		custom_tooltip = "isb_rag_marker_move_tip"
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						which = "rag_marker_y"
+						value > -9
+					}
+				}
+
+				change_variable = {
+					which = "rag_marker_y"
+					value = -1
+				}
+
+				every_ambient_object = {
+					limit = { has_ambient_object_flag = isb_rag_marker }
+					set_location = {
+						target = THIS
+						distance = 10
+						angle = 270
+					}
+				}
+			}
+		}
+	}
+}
+
+rag_eb_fire = {
+	potential = {
+		exists = THIS
+		has_country_flag = flag_rag_mode
+	}
+	allow = {
+		NOT = { has_country_flag = flag_rag_mode_delay }
+		NOT = { has_country_flag = flag_rag_firing }
+	}
+
+	effect = {
+		custom_tooltip = "isb_rag_fire_tip"
+		remove_country_flag = flag_rag_mode
+		remove_country_flag = flag_rag_mode_new
+
+		random_ambient_object = {
+			limit = { has_ambient_object_flag = isb_rag_marker }
+
+			# Ambient object scope bugs out sometimes if you spam pause/unpause on creation
+			save_global_event_target_as = rag_fire_loc
+		}
+
+		random_owned_fleet = {
+			limit = {
+				is_in_combat = yes
+				has_fleet_flag = flag_can_rag				
+				SOLAR_SYSTEM = {
+					any_ship_in_system = {
+						is_ship_size = ragnarok
+						FLEET = { is_same_value = PREVPREVPREV }
+						has_ship_flag = flag_rag_doomsday_charged
+					}
+				}
+			}
+
+			create_ambient_object = {
+				type = "isb_rag_fire_marker_bunny_object"
+			}
+			last_created_ambient_object = {
+				set_ambient_object_flag = "isb_rag_fire"
+				set_location = {
+					target = event_target:rag_fire_loc
+					distance = 0.1
+					angle = random
+				}
+			}
+
+			OWNER = {
+				every_owned_ship = {
+					limit = {
+						is_ship_size = ragnarok
+						FLEET = { is_same_value = PREVPREVPREV }
+					}
+
+					set_disabled = yes
+
+					# un-disable
+					ship_event = { id = isb_ragnarok.13 days = 70 }
+					set_timed_ship_flag = { flag = flag_rag_firing days = 70 }
+				}
+			}
+			
+			hidden_effect = {
+				fleet_event = { id = isb_ragnarok.7 days = 1 }
+				#set_timed_fleet_flag = { flag = flag_rag_cooldown days = 60 }
+				PREV = { set_timed_country_flag = { flag = flag_rag_firing days = 70 } }
+				set_event_locked = yes
+			}
+
+			# fire failed
+			#else = {
+			#	country_event = { id = isb_ragnarok.198 }
+			#}
+		}
+
+		if = {
+			limit = {
+				exists = event_target:rag_fire_loc
+			}
+			clear_global_event_target = rag_fire_loc
+		}
+
+		every_ambient_object = {
+			limit = { has_ambient_object_flag = isb_rag_marker }
+			destroy_ambient_object = THIS
+		}
+	}
+}

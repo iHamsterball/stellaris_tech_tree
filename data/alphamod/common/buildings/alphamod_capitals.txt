@@ -1,0 +1,532 @@
+# building_capital_mega = {
+	# base_buildtime = 720
+	# is_listed = no
+	
+	# cost = {
+		# minerals = 800
+		# energy = 500
+	# }
+	
+	# potential = {
+		# planet = {
+			# owner = {
+				# or = {
+					# has_technology = tech_alpha_commerce_capitals
+					# has_technology = tech_alpha_mining_capitals
+					# has_technology = tech_alpha_research_capitals
+					# has_technology = tech_alpha_farming_capitals
+				# }
+			# }
+		# }
+	# }
+	
+	# allow = {
+		# planet = {
+			# owner = {
+				# or = {
+					# has_technology = tech_alpha_commerce_capitals
+					# has_technology = tech_alpha_mining_capitals
+					# has_technology = tech_alpha_research_capitals
+					# has_technology = tech_alpha_farming_capitals
+				# }
+			# }
+		# }
+	# }
+	
+	# planet_unique = yes
+	# capital = yes
+	# level = 3
+	
+	# produced_resources = {
+		# energy = 6
+		# unity = 3
+	# }
+	
+	# produced_resource_trigger = {
+		# modifier = {
+			# has_tradition = tr_expansion_colonization_fever
+			# resources = {
+				# unity = 1
+			# }
+		# }
+	# }
+	
+	# adjacency_bonus = {
+		# tile_building_resource_minerals_add = 2
+		# tile_building_resource_food_add = 2
+		# tile_building_resource_energy_add = 2
+	# }
+	
+	# planet_modifier = {
+		# pop_government_ethic_attraction = 0.15
+		# tile_resource_unity_mult = 0.25
+		# pop_growth_speed = 0.25
+	# }
+	
+	# prerequisites = {
+		# #"tech_colonial_centralization"
+	# }
+	
+	# ai_replace = no
+# }
+
+building_exo_ops = {
+	base_buildtime = 360	
+	is_listed = no
+	
+	planet_unique = yes	
+	capital = yes
+	level = 1
+	
+	cost = {
+		minerals = 75
+		energy = 50
+	}
+	
+	required_resources = {
+		sr_ice = 1
+		sr_actinides = 1
+	}
+	
+	produced_resources = {
+		unity = 1
+		sr_atmos_regulators = 1
+		energy = 3
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_tradition = tr_expansion_colonization_fever
+			resources = {
+				unity = 1
+			}
+		}
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_minerals_add = 1
+		tile_building_resource_food_add = 1
+		tile_building_resource_energy_add = 1
+	}
+	
+	planet_modifier = {
+		pop_environment_tolerance = 0.15
+		pop_government_ethic_attraction = 0.1
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				is_planet_class = pc_asteroid
+				is_planet_class = pc_barren
+				is_planet_class = pc_nuked
+				is_planet_class = pc_molten_habitable
+				is_planet_class = pc_toxic_habitable
+				is_planet_class = pc_frozen_habitable
+			}
+		}
+	}
+	
+	prerequisites = {
+		"tech_alpha_exo_ops"
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1000
+			from = {
+				OR = {
+					is_planet_class = pc_asteroid
+					is_planet_class = pc_barren
+				}
+			}
+		}
+	}
+}
+
+building_commerce_coord = {
+	base_buildtime = 720
+	planet_unique = yes
+	
+	capital = yes
+	level = 2
+	
+	is_listed = no
+
+	cost = {
+		minerals = 100
+		energy = 500
+		influence = 25
+	}
+	
+	required_resources = {
+		sr_micro_cores = 1
+		sr_tradegoods = 2
+		sr_replicator_gems = 1
+	}
+	
+	produced_resources = {
+		energy = 8
+		sr_wealth = 1
+		unity = 2
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_tradition = tr_expansion_colonization_fever
+			resources = {
+				unity = 1
+			}
+		}
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_minerals_add = 1
+		tile_building_resource_food_add = 1
+		tile_building_resource_energy_add = 3
+	}
+	
+	planet_modifier = {
+		tile_resource_energy_mult = 0.2
+		pop_government_ethic_attraction = 0.15
+	}
+	
+	country_modifier = {
+		max_energy = 1000
+	}
+	
+	potential = {
+		planet = {
+			NOR = {
+				has_building = "building_mining_guild"
+				has_building = "building_central_databank"
+				has_building = "building_farming_guild"
+			}
+			owner = {
+				AND = {
+					empire_has_micro_cores_1 = yes
+					empire_has_tradegoods_1 = yes
+					empire_has_replicator_gems_1 = yes
+				}
+			}
+		}	
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_16_pops"
+			planet = { has_17_pops = yes }
+		}
+	}
+
+	prerequisites = {
+		"tech_alpha_commerce_capitals"
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 100
+			from = {
+				OR = {
+					has_building = "building_power_hub_2"
+					has_building = "building_alpha_fuel_converter_3"
+				}
+				OR = {
+					has_building = "building_tradestation"
+					has_building = "building_trade_company"
+					has_building = "building_tradestation_ex"
+					has_building = "building_trade_company_ex"
+				}
+				OR = {
+					has_building = "building_mineral_processing_plant_2"
+					has_building = "building_mineral_transformer"
+				}
+			}
+		}
+	}
+}
+
+building_mining_guild = {
+	base_buildtime = 720
+	planet_unique = yes
+	capital = yes
+	level = 2
+	is_listed = no
+	
+	cost = {
+		minerals = 200
+		energy = 400
+		influence = 25
+	}
+	
+	required_resources = {
+		sr_micro_cores = 1
+		sr_replicator_gems = 1
+	}
+	
+	produced_resources = {
+		minerals = 8
+		unity = 2
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_tradition = tr_expansion_colonization_fever
+			resources = {
+				unity = 1
+			}
+		}
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_minerals_add = 3
+		tile_building_resource_food_add = 1
+		tile_building_resource_energy_add = 1
+	}
+	
+	planet_modifier = {
+		tile_resource_minerals_mult = 0.2
+		pop_government_ethic_attraction = 0.15
+	}
+	
+	country_modifier = {
+		max_minerals = 500
+	}
+	
+	potential = {
+		planet = {
+			NOR = {
+				has_building = "building_commerce_coord"
+				has_building = "building_central_databank"
+				has_building = "building_farming_guild"
+			}
+			owner = {
+				AND = {
+					empire_has_micro_cores_1 = yes
+					empire_has_replicator_gems_1 = yes
+				}
+			}
+		}	
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_16_minerals"
+			planet = {
+				has_building = "building_mineral_processing_plant_2"
+				has_building = "building_mineral_transformer"
+			}
+		}		
+	}
+	
+	prerequisites = {
+		"tech_alpha_mining_capitals"
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 75
+			from = {
+				not = { is_still_medium_colony = yes }
+				OR = {
+					has_building = "building_power_hub_2"
+					has_building = "building_alpha_fuel_converter_3"
+				}
+				OR = {
+					has_building = "building_mineral_processing_plant_2"
+					has_building = "building_mineral_transformer"
+				}
+			}
+		}
+	}
+}
+
+building_central_databank = {
+	base_buildtime = 720
+	planet_unique = yes
+	capital = yes
+	level = 2
+	is_listed = no
+
+	cost = {
+		minerals = 200
+		energy = 400
+		influence = 25
+	}
+	
+	required_resources = {
+		#energy = 10
+		sr_micro_cores = 1
+	}
+	
+	produced_resources = {
+		unity = 2
+		engineering_research = 5
+		physics_research = 5
+		society_research = 5
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_tradition = tr_expansion_colonization_fever
+			resources = {
+				unity = 1
+			}
+		}
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_food_add = 1
+		tile_building_resource_engineering_research_add = 2
+		tile_building_resource_physics_research_add = 2
+		tile_building_resource_society_research_add = 2
+	}
+	
+	planet_modifier = {
+		tile_resource_society_research_mult = 0.2
+		tile_resource_engineering_research_mult = 0.2
+		tile_resource_physics_research_mult = 0.2
+		pop_government_ethic_attraction = 0.15
+	}
+	
+	country_modifier = {
+		all_technology_research_speed = 0.02
+	}
+	
+	potential = {
+		planet = {
+			NOR = {
+				has_building = "building_mining_guild"
+				has_building = "building_commerce_coord"
+				has_building = "building_farming_guild"
+			}
+			owner = { empire_has_micro_cores_1 = yes }
+		}	
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_research_out"
+			planet = { has_building = "building_gravitic_comms_array" }
+		}		
+	}
+	
+	prerequisites = {
+		"tech_alpha_research_capitals"
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 50
+			from = {
+				not = { is_still_medium_colony = yes }
+				OR = {
+					has_building = "building_power_hub_2"
+					has_building = "building_alpha_fuel_converter_3"
+				}
+			}
+		}
+	}
+}
+
+building_farming_guild = {
+	base_buildtime = 720
+	planet_unique = yes
+	capital = yes
+	level = 2
+	is_listed = no
+
+	cost = {
+		minerals = 300
+		energy = 200
+		influence = 25
+	}
+	
+	required_resources = {
+		#energy = 5
+		##sr_biomass_pods = 5
+		sr_biomass = 5
+		sr_h2o = 3
+	}
+	
+	produced_resources = {
+		food = 6
+		#sr_h2o = 1
+		unity = 2
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_tradition = tr_expansion_colonization_fever
+			resources = {
+				unity = 1
+			}
+		}
+	}
+	
+	planet_modifier = {
+		tile_resource_food_mult = 0.2
+		pop_government_ethic_attraction = 0.15
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_food_add = 3
+	}
+	
+	country_modifier = {
+		tile_resource_food_mult = 0.05
+	}
+	
+	potential = {
+		planet = {
+			NOR = {
+				has_building = "building_mining_guild"
+				has_building = "building_commerce_coord"
+				has_building = "building_central_databank"
+			}
+			#owner = { empire_has_biomass_pods_5 = yes }
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requirement_18_pops"
+			planet = { has_19_pops = yes }
+		}		
+	}
+	
+	prerequisites = {
+		"tech_alpha_farming_capitals"
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 25
+			from = {
+				has_building = "building_biomass_sourcer"
+				has_building = "building_biomass_processor"
+				#NOT = { has_building = "building_biomass_reformer" }
+			}
+		}
+	}
+}

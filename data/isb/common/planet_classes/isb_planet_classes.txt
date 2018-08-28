@@ -1,0 +1,185 @@
+# Star glow from sun is set under atmosphere in   00_planet_classes
+# Star surface is set in worldgfx file for each star
+# Effects are set in particle effect for each star
+
+### EXAMPLE:
+#pc_tropical = {
+#	entity = "gaia_planet"
+#	entity_scale = 8.0
+#
+#	picture = pc_tropical	# Use tropical portrait art instead of gaia
+#	
+#	atmosphere_color 		= hsv { 0.58	0.3 0.7 }
+#	atmosphere_intensity 	= 1.0
+#	atmosphere_width 		= 0.5
+#	
+#	city_color_lut = "gfx/portraits/misc/colorcorrection_neutral.tga"
+#
+#	min_distance_from_sun = 60
+#	max_distance_from_sun = 80
+#	spawn_odds = 10
+#	
+#	extra_orbit_size = 0
+#	extra_planet_count = 0
+#	
+#	chance_of_ring = 0.2
+#
+#	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+#	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+#	
+#	colonizable = yes
+#	colonization_tech = { "tech_tropical_colonization@1" }
+#}
+###
+
+
+# Planet Variables
+
+@planet_standard_scale = 11
+@habitable_planet_max_size = 25
+@habitable_planet_min_size = 12
+@habitable_moon_max_size = 12
+@habitable_moon_min_size = 8
+@habitable_min_distance = 60
+@habitable_max_distance = 120
+@habitable_spawn_odds = 2
+
+# ###########
+# Habitable Planets
+# ###########
+
+pc_destroyed = {
+	entity = "destroyed_planet"
+	entity_scale = 13
+	icon_frame = 9
+	
+	atmosphere_color 		= hsv { 0.05 0.6 0.75 }		#DONE
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+
+	min_distance_from_sun = 40
+	max_distance_from_sun = 200
+	spawn_odds = 0
+	
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	
+	chance_of_ring = 1.0
+	
+	planet_size = { min = 12 max = 30 }
+	moon_size = { min = 0 max = 0 }
+	
+	colonizable = no
+}
+
+pc_nova = {
+	entity = "nova_planet"
+	entity_scale = 11.5
+	icon_frame = 12
+	
+	atmosphere_color 		= hsv { 0.05 0.6 0.75 }		#DONE
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+
+	min_distance_from_sun = 40
+	max_distance_from_sun = 200
+	spawn_odds = 0
+	
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	
+	chance_of_ring = 1.0
+	
+	planet_size = { min = 12 max = 30 }
+	moon_size = { min = 0 max = 0 }
+	
+	colonizable = no
+}
+
+pc_nova_gas = {
+	entity = "nova_planet_gas"
+	entity_scale = 16
+	icon_frame = 12
+	
+	atmosphere_color 		= hsv { 0.05 0.6 0.75 }		#DONE
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+
+	min_distance_from_sun = 40
+	max_distance_from_sun = 200
+	spawn_odds = 0
+	
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	
+	chance_of_ring = 1.0
+	
+	planet_size = { min = 12 max = 30 }
+	moon_size = { min = 0 max = 0 }
+	
+	colonizable = no
+}
+
+
+pc_ringworld_habitable_nova = {
+	ringworld = yes
+	entity = "ringworld_habitable_nova_entity"
+	picture = pc_ringworld_broken
+	icon_frame = 1
+	entity_scale = 1.0
+	enable_tilt = no
+	fixed_entity_scale = yes
+	atmosphere_color 		= hsv { 0.05 0.6 0.75 }		#DONE
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	chance_of_ring = 0.0
+	planet_size = 10
+	moon_size = 1
+	colonizable = no
+	orbit_lines = no
+}
+
+pc_ringworld_tech_nova = {
+	ringworld = yes
+	entity = "ringworld_tech_nova_entity"
+	picture = pc_ringworld_broken
+	icon_frame = 1
+	entity_scale = 1.0
+	enable_tilt = no
+	fixed_entity_scale = yes
+	atmosphere_color 		= hsv { 0.05 0.6 0.75 }		#DONE
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	chance_of_ring = 0.0
+	planet_size = 10
+	moon_size = 1
+	colonizable = no
+	orbit_lines = no
+}
+
+pc_ringworld_seam_nova = {
+	ringworld = yes
+	entity = "ringworld_seam_nova_entity"
+	picture = pc_ringworld_broken
+	icon_frame = 1
+	entity_scale = 1.0
+	enable_tilt = no
+	fixed_entity_scale = yes
+	atmosphere_color 		= hsv { 0.05 0.6 0.75 }		#DONE
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	chance_of_ring = 0.0
+	planet_size = 10
+	moon_size = 1
+	colonizable = no
+	orbit_lines = no
+}

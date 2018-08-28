@@ -1,0 +1,110 @@
+planet_edict = {
+	name = "extended_land_survey"
+	influence_cost = 50
+	length = 360
+	
+	modifier = {
+		tile_resource_engineering_research_mult = -0.5
+		tile_resource_minerals_mult = -0.25
+		tile_resource_energy_mult = -0.25
+	}
+
+	potential = {
+		NOT = {
+			is_planet_class = pc_habitat
+		}
+		NOT = {
+			is_planet_class = pc_asteroid
+		}
+		OR = {
+			AND = {
+				is_planet_class = pc_barren
+				planet_size < 12
+				has_building = "building_planet_surveyors_corp"
+			}
+			AND = {
+				is_moon = yes
+				planet_size < 12
+				has_building = "building_planet_surveyors_corp"
+			}
+			AND = {
+				NOT = { is_moon = yes }
+				NOT = { is_planet_class = pc_barren }
+				planet_size < 16
+				has_building = "building_planet_surveyors_corp"
+			}
+		}
+	}
+	
+	effect = {
+		custom_tooltip = edict_extended_land_survey.tooltip
+		planet_event = { id = extended_land_survey.1 }
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+planet_edict = {
+	name = "hollow_out_asteroid"
+	influence_cost = 100
+	length = 0
+	
+	prerequisites = { 
+		"tech_alpha_asteroid_expansion"
+	}
+	
+	modifier = {
+	}
+
+	potential = {
+		is_planet_class = pc_asteroid
+		planet_size < 20
+		not = { has_modifier = underground_caverns }
+		not = { has_modifier = geothermal_activity }
+	}
+	
+	effect = {
+		custom_tooltip = edict_hollow_out_asteroid.tooltip
+		owner = { add_minerals = 250 }
+		planet_event = { id = extended_land_survey.9 }
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+planet_edict = {
+	name = "connectup_asteroids"
+	influence_cost = 50
+	length = 0
+	
+	prerequisites = { 
+		"tech_alpha_asteroid_expansion"
+	}
+	
+	modifier = {
+	}
+
+	potential = {
+		AND = {
+			is_planet_class = pc_asteroid
+			planet_size < 21
+			system_has_uncolonised_asteroid = yes
+			owner = { minerals > 500 }
+		}
+	}
+	
+	effect = {
+		custom_tooltip = edict_connectup_asteroids.tooltip
+		owner = { add_minerals = -500 }
+		change_planet_size = 5
+		planet_event = { id = extended_land_survey.8 }
+	}
+	
+	ai_weight = {
+		weight = 2
+	}
+}

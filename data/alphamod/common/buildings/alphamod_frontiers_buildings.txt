@@ -1,0 +1,849 @@
+@weightnormal = 1
+@weightuseful = 2.5
+@weightimportant = 6
+@weightcritical = 10
+
+@lots = 10
+@lotsandlots = 20
+
+@infcosthigh = 50
+@infcostmed = 25
+@infcostlow = 10
+
+@engcostcheap = 40
+@engcostlow = 80
+@engcostmed = 175
+@engcosthigh = 250
+
+@mincostcheap = 25
+@mincostlow = 50
+@mincostmed = 125
+@mincosthigh = 250
+
+@srlow = 1
+@srmed = 2
+@srhigh = 4
+
+@buildquick = 90
+@buildnormal = 150
+@buildlong = 240
+@buildhuge = 360
+
+@b0effect = 1
+@b1effect = 1.5
+@b2effect = 2
+@b3effect = 3
+@b4effect = 4
+@b5effect = 5
+
+@b1upkeep = 1
+@b2upkeep = 1.5
+@b3upkeep = 2
+@b4upkeep = 3
+@b5upkeep = 5
+
+building_tradestation = {
+	base_buildtime = @buildnormal
+	planet_unique = yes
+	
+	cost = {
+		minerals = 150
+		energy = 150
+		influence = 10
+	}
+
+	produced_resources = {
+		minerals = 1
+		food = 1
+		sr_tradegoods = 1
+		energy = 1
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.03
+	}
+	
+	prerequisites = {
+		"tech_trade_ports"
+	}
+	
+	potential = {
+		planet = {
+			not = { has_building = "building_tradestation_ex" }
+			not = { has_building = "building_trade_company" }
+			not = { has_building = "building_trade_company_ex" }
+		}
+	}
+	
+	upgrades = {
+		building_trade_company
+	}
+	
+	ai_weight = {
+		weight = @weightcritical
+		modifier = {
+			factor = 0.5
+			from = { planet_size < 10 }			
+		}
+		modifier = {
+			factor = 1.5
+			from = { planet_size > 12 }			
+		}
+		modifier = {
+			factor = 2.0
+			from = { planet_size > 15 }			
+		}
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+}
+
+building_tradestation_ex = {
+	is_listed = no
+
+	produced_resources = {
+		minerals = 1
+		food = 1
+		sr_tradegoods = 1
+		energy = 1
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.03
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	ai_replace = no
+}
+
+# building_tradestation_plus = {
+	# is_listed = no
+
+	# produced_resources = {
+		# minerals = 1
+		# food = 1
+		# sr_tradegoods = 2
+		# energy = 1
+	# }
+	
+	# planet_modifier = {
+		# pop_happiness = 0.03
+	# }
+	
+	# ai_weight = {
+		# weight = 0
+	# }
+	
+	# ai_replace = no
+# }
+
+building_trade_company = {
+	base_buildtime = @buildlong
+	planet_unique = yes
+	is_listed = no
+	
+	cost = {
+		minerals = 250
+		energy = 200
+		influence = 25
+	}
+	
+	produced_resources = {
+		sr_tradegoods = 2
+		sr_luxuries = 1
+		minerals = 1
+		energy = 1.5
+		food = 1
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_tradition = tr_diplomacy_alien_tourism
+			resources = {
+				energy = 1
+			}
+		}
+	}
+
+	adjacency_bonus = {
+		tile_building_resource_food_add = 1
+		tile_building_resource_minerals_add = 1
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.05
+	}
+
+	potential = {
+		planet = {
+			not = { has_building = "building_tradestation_ex" }
+			not = { has_building = "building_trade_company_ex" }
+		}
+	}
+	
+	prerequisites = {
+		"tech_merchant_companies"
+	}
+	
+	ai_weight = {
+		weight = @weightimportant
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+}
+
+building_trade_company_ex = {
+	is_listed = no
+	
+	produced_resources = {
+		sr_tradegoods = 2
+		sr_luxuries = 1
+		minerals = 1
+		energy = 1.5
+		food = 1
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_tradition = tr_diplomacy_alien_tourism
+			resources = {
+				energy = 1
+			}
+		}
+	}
+
+	adjacency_bonus = {
+		tile_building_resource_food_add = 1
+		tile_building_resource_minerals_add = 1
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.05
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	ai_replace = no
+}
+
+# building_trade_company_plus = {
+	# is_listed = no
+	
+	# produced_resources = {
+		# sr_tradegoods = 3
+		# sr_luxuries = 1
+		# minerals = 1
+		# energy = 1.5
+		# food = 1
+	# }
+	
+	# produced_resource_trigger = {
+		# modifier = {
+			# has_tradition = tr_diplomacy_alien_tourism
+			# resources = {
+				# energy = 1
+			# }
+		# }
+	# }
+
+	# adjacency_bonus = {
+		# tile_building_resource_food_add = 1
+		# tile_building_resource_minerals_add = 1
+	# }
+	
+	# planet_modifier = {
+		# pop_happiness = 0.05
+	# }
+	
+	# ai_weight = {
+		# weight = 0
+	# }
+	
+	# ai_replace = no
+# }
+
+building_frontier_brewery = {
+	base_buildtime = @buildnormal
+	planet_unique = yes
+	
+	cost = {
+		minerals = 50
+		energy = 100
+		influence = 10
+	}
+	
+	required_resources = {
+		sr_h2o = 1
+	}
+	
+	produced_resources = {
+		sr_synthehol = 2
+		energy = 1
+	}
+	
+	planet_modifier = {
+		#pop_happiness = 0.05
+		#pop_government_ethic_attraction = -0.03
+	}
+	
+	potential = {
+		planet = {
+			NOT = { has_modifier = "capital" }
+			NOT = { has_building = "building_frontier_brewery_ex" }
+		}	
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requires_source_of_water"
+				planet = { has_water_source = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_no_water_deposit"
+				tile = { not = { has_water_deposit = yes } }
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_space_recreation"
+	}
+	
+	ai_weight = {
+		weight = @weightnormal
+		modifier = {
+			factor = 0.5
+			from = { planet_size < 14 }			
+		}
+		modifier = {
+			factor = 2
+			from = { happiness_planet < 0.50 }
+		}
+		modifier = {
+			factor = 0
+			from = { happiness_planet > 0.80 }
+		}	
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+}
+
+building_frontier_brewery_ex = {
+	is_listed = no
+	
+	required_resources = {
+		sr_h2o = 1
+	}
+	
+	produced_resources = {
+		sr_synthehol = 1
+		energy = 1
+	}
+	
+	planet_modifier = {
+		#pop_happiness = 0.05
+		#pop_government_ethic_attraction = -0.03
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	ai_replace = no
+}
+
+building_cantina = {
+	base_buildtime = @buildquick
+	
+	cost = {
+		minerals = @mincostcheap
+		energy = @engcostcheap
+	}
+	
+	required_resources = {
+		sr_synthehol = 1
+		sr_h2o = 1
+	}
+	
+	produced_resources = {
+		food = 1
+		energy = 1
+		unity = 2
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_tradition = tr_diplomacy_alien_tourism
+			resources = {
+				energy = 1
+				unity = 1
+			}
+		}
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.025
+	}
+	
+	potential = {
+		planet = { NOT = { has_modifier = "capital" } }	
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requires_synthehol"
+				planet = { has_synthehol = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_source_of_water"
+				planet = { has_water_source = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_no_water_deposit"
+				tile = { not = { has_water_deposit = yes } }
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_space_recreation"
+	}
+	
+	ai_weight = {
+		weight = @weightuseful
+		modifier = {
+			factor = 2
+			from = { happiness_planet < 0.50 }
+		}
+		modifier = {
+			factor = 0
+			from = { happiness_planet > 0.80 }
+		}	
+		modifier = {
+			factor = 0
+			from = { not = { has_building = "building_frontier_brewery" } }			
+		}
+		modifier = {
+			factor = 0
+			from = { has_building = "building_cantina" }		
+		}
+	}
+	
+	ai_replace = no
+}
+
+building_frontier_provisioner = {
+	base_buildtime = @buildnormal
+	planet_unique = yes
+	
+	cost = {
+		minerals = @mincostcheap
+		energy = @engcostlow
+		influence = 10
+	}
+	
+	required_resources = {
+		sr_h2o = 1
+		energy = 1
+	}
+	
+	produced_resources = {
+		sr_nutrient_rations = 2
+		food = 1
+	}
+	
+	planet_modifier = {
+		tile_resource_food_mult = 0.05
+	}
+	
+	potential = {
+		planet = {
+			NOT = { has_modifier = "capital" }
+			NOT = { has_building = "building_frontier_provisioner_ex" }
+			NOT = { has_building = "building_distribution_center" }
+			not = { has_planet_flag = pf_frontiertown_1 }
+			not = { has_planet_flag = pf_frontiertown_2 }
+		}
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requires_source_of_water"
+				planet = { has_water_source = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_no_water_deposit"
+				tile = { not = { has_water_deposit = yes } }
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_frontier_trade_alpha"
+	}
+	
+	ai_weight = {
+		weight = @weightimportant
+		modifier = {
+			factor = 0.5
+			from = { planet_size < 12 }		
+		}
+		modifier = {
+			factor = 1.5
+			from = { is_still_small_colony = yes }
+		}
+		modifier = {
+			factor = 1.5
+			from = { has_10_pops = yes }
+		}
+	}
+	
+	upgrades = {
+		building_distribution_center
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+}
+
+building_distribution_center = {
+	base_buildtime = @buildnormal
+	planet_unique = yes
+	is_listed = no
+	
+	cost = {
+		minerals = @mincostmed
+		energy = @engcostmed
+		#influence = 10
+	}
+	
+	required_resources = {
+		#sr_h2o = @srmed
+		energy = 1
+	}
+	
+	produced_resources = {
+		#sr_nutrient_rations = @srmed
+		food = @b2effect
+		unity = 3
+	}
+	
+	planet_modifier = {
+		tile_resource_food_mult = 0.1
+		tile_resource_unity_mult = 0.1
+		pop_consumer_goods_mult = -0.1
+	}
+	
+	potential = {
+		planet = {
+			NOT = { has_modifier = "capital" }
+			has_planet_flag = pf_popcenters_2
+			#has_planet_flag = pf_frontiertown_2
+		}
+	}
+
+	prerequisites = {
+	}
+	
+	ai_weight = {
+		weight = @weightimportant
+		modifier = {
+			factor = 0.5
+			from = { planet_size < 12 }		
+		}
+		modifier = {
+			factor = 1.5
+			from = { has_10_pops = yes }
+		}
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+}
+
+building_frontier_provisioner_ex = {
+	is_listed = no
+	
+	required_resources = {
+		sr_h2o = 1
+		energy = 1
+	}
+	
+	produced_resources = {
+		sr_nutrient_rations = 1
+		food = 1
+	}
+	
+	planet_modifier = {
+		tile_resource_food_mult = 0.05
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	ai_replace = no
+}
+
+building_frontier_town = {
+	base_buildtime = @buildlong
+	
+	cost = {
+		minerals = 75
+		energy = 25
+	}
+	
+	required_resources = {
+		energy = 1
+		sr_nutrient_rations = 1
+		sr_h2o = 2
+	}
+	
+	upgrades = {
+		building_frontier_city
+	}
+	
+	potential = {
+		planet = {
+			NOT = { has_modifier = "capital" }
+			not = { has_planet_flag = pf_frontiertown_2 }
+			OR = {
+				has_building = building_frontier_provisioner
+				has_building = building_frontier_provisioner_ex
+			}
+		}
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requires_nutrient_rations"
+				planet = { has_nutrient_rations = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_source_of_water"
+				planet = { has_water_source = yes }
+			}
+			custom_tooltip_fail = {
+				text = "requires_no_water_deposit"
+				tile = { not = { has_water_deposit = yes } }
+			}
+		}
+	}
+	
+	produced_resources = {
+		minerals = 1
+		food = 1
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+			resources = {
+				sr_wealth = 1
+			}
+		}
+		modifier = {
+			AND = {
+				NOR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
+			}
+			resources = {
+				sr_marks_caste = 1
+			}
+		}
+		modifier = {
+			AND = {
+				NOR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			resources = {
+				sr_brands_fealty = 1
+			}
+		}
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_minerals_add = 1
+		tile_building_resource_food_add = 0.5
+	}
+
+	planet_modifier = {	
+		planet_migration_all_pull = 0.05
+		pop_growth_speed = 0.1
+	}
+
+	prerequisites = {
+		"tech_frontier_trade_alpha"
+	}
+	
+	ai_weight = {
+		weight = @weightuseful
+		modifier = {
+			factor = 0.5
+			from = { planet_size < 10 }			
+		}
+		modifier = {
+			factor = 1.5
+			from = { planet_size > 14 }			
+		}
+		modifier = {
+			factor = 1.5
+			from = { not = { is_still_small_colony = yes } }
+		}
+		modifier = {
+			factor = 0.5
+			from = { has_building = "building_frontier_town" }
+		}
+		modifier = {
+			factor = 0
+			from = { not = { has_building = "building_frontier_provisioner" } }
+		}
+	}
+	
+	on_queued = {
+		planet = { increase_frontiertowns = yes }
+	}
+	
+	on_unqueued = {
+		planet = { decrease_frontiertowns = yes }
+	}
+	
+	ai_replace = no
+}
+
+building_frontier_city = {
+	base_buildtime = @buildhuge
+	is_listed = no
+	
+	cost = {
+		minerals = 200
+		energy = 100
+	}
+	
+	upgrades = {
+		building_hive
+		building_sprawl
+		building_great_citadel
+		building_great_order
+		building_great_sanctuary
+		building_arcology
+		building_retreat
+		building_culture		
+	}
+	
+	required_resources = {
+		energy = 1
+		sr_nutrient_rations = 1
+		sr_h2o = 2
+	}
+
+	produced_resources = {
+		minerals = 1.5
+		food = 1
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+			resources = {
+				sr_wealth = 1
+			}
+		}
+		modifier = {
+			AND = {
+				NOR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
+			}
+			resources = {
+				sr_marks_caste = 1
+			}
+		}
+		modifier = {
+			AND = {
+				NOR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			resources = {
+				sr_brands_fealty = 1
+			}
+		}
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_minerals_add = 1.5
+		tile_building_resource_food_add = 1
+	}
+
+	planet_modifier = {	
+		planet_migration_all_pull = 0.1
+		pop_growth_speed = 0.2
+	}
+
+	prerequisites = {
+		"tech_frontier_growth_alpha"
+	}
+	
+	ai_weight = {
+		weight = @weightimportant
+		modifier = {
+			factor = 1.5
+			from = { not = { is_still_medium_colony = yes } }
+		}
+	}
+	
+	ai_replace = no
+}

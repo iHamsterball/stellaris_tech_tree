@@ -1,0 +1,209 @@
+planet_edict = {
+	name = "designate_mining_planet"
+	influence_cost = 50
+	modifier = {
+		tile_resource_energy_mult = -0.1
+		tile_resource_society_research_mult = -0.25
+		tile_resource_physics_research_mult = -0.25
+		tile_resource_engineering_research_mult = -0.1
+		tile_resource_minerals_mult = 0.25
+	}
+	
+	prerequisites = { 
+		"tech_alpha_mining_worlds"
+	}
+	
+	potential = {
+		NOR = {
+			has_edict = designate_energy_planet
+			has_edict = designate_research_planet
+			has_edict = designate_farming_planet
+			has_edict = designate_fleet_planet
+			has_edict = designate_military_planet
+		}
+	}
+	
+	length = 36000
+	
+	ai_weight = {
+		weight = 0
+	}		
+}
+
+planet_edict = {
+	name = "designate_energy_planet"
+	influence_cost = 25
+	modifier = {
+		tile_resource_energy_mult = 0.25
+		tile_resource_society_research_mult = -0.25
+		tile_resource_physics_research_mult = -0.1
+		tile_resource_engineering_research_mult = -0.1
+		tile_resource_minerals_mult = -0.25
+	}
+	
+	prerequisites = { 
+		"tech_alpha_commercial_colonies"
+	}
+	
+	potential = {
+		not = { has_modifier = gulag_world }
+		NOR = {
+			has_edict = designate_mining_planet
+			has_edict = designate_research_planet
+			has_edict = designate_farming_planet
+			has_edict = designate_fleet_planet
+			has_edict = designate_military_planet
+		}
+	}
+	
+	length = 36000
+		
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+planet_edict = {
+	name = "designate_research_planet"
+	influence_cost = 50
+	modifier = {
+		tile_resource_energy_mult = -0.1
+		tile_resource_society_research_mult = 0.2
+		tile_resource_physics_research_mult = 0.2
+		tile_resource_engineering_research_mult = 0.2
+		tile_resource_minerals_mult = -0.25
+	}
+	
+	prerequisites = { 
+		"tech_alien_life_studies"
+	}
+	
+	potential = {
+		not = { has_modifier = gulag_world }
+		NOR = {
+			has_edict = designate_energy_planet
+			has_edict = designate_mining_planet
+			has_edict = designate_farming_planet
+			has_edict = designate_fleet_planet
+			has_edict = designate_military_planet
+		}
+	}
+	
+	length = 36000
+	
+	ai_weight = {
+		weight = 0
+	}		
+}
+
+planet_edict = {
+	name = "designate_fleet_planet"
+	influence_cost = 100
+	modifier = {
+		tile_resource_energy_mult = -0.25
+		tile_resource_society_research_mult = -0.25
+		tile_resource_minerals_mult = -0.1
+		spaceport_module_cost_mult = -0.25
+		shipsize_corvette_construction_speed_mult = 0.25
+		shipsize_destroyer_construction_speed_mult = 0.2
+		shipsize_cruiser_construction_speed_mult = 0.15
+		shipsize_battleship_construction_speed_mult = 0.1
+	}
+	
+	prerequisites = { 
+		"tech_interstellar_fleet_traditions"
+	}
+	
+	potential = {
+		not = { has_modifier = gulag_world }
+		NOR = {
+			has_edict = designate_energy_planet
+			has_edict = designate_research_planet
+			has_edict = designate_farming_planet
+			has_edict = designate_mining_planet
+			has_edict = designate_military_planet
+		}
+	}
+	
+	length = 1800
+	
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+planet_edict = {
+	name = "designate_military_planet"
+	influence_cost = 100
+	modifier = {
+		tile_resource_energy_mult = -0.2
+		tile_resource_society_research_mult = -0.25
+		tile_resource_physics_research_mult = -0.25
+		tile_resource_engineering_research_mult = -0.25
+		tile_resource_minerals_mult = 0.1
+		tile_resource_food_mult = 0.1
+		pop_government_ethic_attraction = 0.25
+		pop_happiness = -0.1
+		planet_fortification_strength = 1.0
+		planet_army_build_speed_mult = 0.5
+	}
+	
+	potential = {
+		not = { has_modifier = gulag_world }
+		NOR = {
+			has_edict = designate_energy_planet
+			has_edict = designate_research_planet
+			has_edict = designate_farming_planet
+			has_edict = designate_fleet_planet
+			has_edict = designate_mining_planet
+		}
+		owner = {
+			NOR = {
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_pacifist
+			}
+		}
+	}
+	
+	prerequisites = { 
+		"tech_combat_training"
+	}
+	
+	length = 1800
+	
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+planet_edict = {
+	name = "designate_farming_planet"
+	influence_cost = 100
+	modifier = {
+		tile_resource_society_research_mult = -0.2
+		tile_resource_physics_research_mult = -0.25
+		tile_resource_engineering_research_mult = -0.25
+		tile_resource_minerals_mult = -0.5
+		tile_resource_food_mult = 0.5
+	}
+	
+	prerequisites = { 
+		"tech_biomass_processing"
+	}
+	
+	potential = {
+		NOR = {
+			has_edict = designate_energy_planet
+			has_edict = designate_research_planet
+			has_edict = designate_mining_planet
+			has_edict = designate_fleet_planet
+			has_edict = designate_military_planet
+		}
+	}
+	
+	length = 18000
+	
+	ai_weight = {
+		weight = 0
+	}	
+}

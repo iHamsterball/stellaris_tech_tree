@@ -1,0 +1,542 @@
+##########################################################################
+# Empire edicts
+##########################################################################
+
+country_edict = { 
+	name = "enable_sector_weighting_controls"
+	
+	influence_cost = 0
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+country_edict = { 
+	name = "shantys_disallow_all"
+	
+	influence_cost = 0
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+country_edict = {
+	name = "for_the_cause"
+	
+	modifier = {
+		pop_government_ethic_attraction = 0.25
+		pop_ethic_militarist_attraction_mult = 0.1
+		pop_ethic_pacifist_attraction_mult = -0.1
+		tile_resource_energy_mult = -0.1
+		tile_resource_minerals_mult = 0.25
+		planet_fortification_strength = 0.5
+		planet_migration_xeno_pull = -0.9
+		#pop_xenophobia = 0.25
+		planet_army_build_speed_mult = 0.25
+		planet_army_build_cost_mult = -0.1
+		navy_size_mult = 0.25
+		all_technology_research_speed = -0.5	
+		ship_reparation_speed_mult = 0.25
+		#ship_reparation_cost_mult = -0.5
+		ship_upkeep_mult = -0.25
+		spaceport_ship_build_speed_mult = 0.5
+		spaceport_ship_build_cost_mult = -0.25
+	}
+	
+	influence_cost = 3
+	
+	allow = {
+		OR = {
+			has_ethic = "ethic_militarist"
+			has_ethic = "ethic_fanatic_militarist"
+			has_ethic = "ethic_fanatic_xenophobe"
+		}
+		is_at_war = yes
+	}
+	
+	prerequisites = {
+		"tech_alpha_military_service"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			is_at_war = yes
+			OR = {
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+		modifier = {
+			weight = 0
+			not = { is_at_war = yes }
+		}
+	}
+}
+
+country_edict = {
+	name = "hostile_env_training"
+	
+	modifier = {
+		pop_environment_tolerance = 0.05
+	}
+	
+	influence_cost = 1
+		
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			has_trait = "trait_nonadaptive"
+		}
+		modifier = {
+			weight = 1
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}		
+	}
+	
+	prerequisites = {
+		"tech_alpha_exo_barracks"
+	}
+}
+
+country_edict = {
+	name = "alpha_sell_influence"
+	
+	modifier = {
+		pop_government_ethic_attraction = -0.1
+		tile_resource_energy_mult = 0.25
+		tile_resource_influence_mult = -0.25
+	}
+	
+	influence_cost = 2
+	
+	allow = {		
+		NOT = {
+			has_country_edict = alpha_buy_influence
+		}
+		NOT = {
+			has_country_edict = energy_wealth			
+		}
+		NOT = {
+			has_country_edict = mineral_wealth			
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			OR = {
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}		
+	}
+	
+	prerequisites = {
+		"tech_power_banking"
+	}
+}
+
+country_edict = {
+	name = "alpha_buy_influence"
+	
+	modifier = {
+		pop_government_ethic_attraction = -0.05
+		pop_happiness = -0.05
+		tile_resource_energy_mult = -0.15
+		tile_resource_influence_mult = 0.25
+		country_resource_influence_add = 1
+	}
+	
+	influence_cost = 0
+	
+	allow = {		
+		NOT = {
+			has_country_edict = alpha_sell_influence
+		}
+		NOT = {
+			has_country_edict = energy_wealth			
+		}
+		NOT = {
+			has_country_edict = mineral_wealth			
+		}
+	}
+	
+	ai_weight = {
+		weight = 0	
+	}
+	
+	prerequisites = {
+		"tech_power_banking"
+	}
+}
+
+country_edict = {
+	name = "alpha_promise_eden"
+
+	modifier = {
+		#pop_government_ethic_attraction = -0.1
+		pop_happiness = 0.1
+		planet_fortification_strength = -0.5
+		planet_migration_xeno_pull = 0.1
+		#pop_xenophobia = -0.1
+		pop_ethic_militarist_attraction_mult = -0.2
+		pop_ethic_pacifist_attraction_mult = 0.2
+		pop_ethic_xenophobe_attraction_mult = -0.2
+		pop_ethic_xenophile_attraction_mult = 0.2
+		planet_border_mult = 0.25
+		planet_army_build_speed_mult = -0.5
+		#pop_war_happiness = -0.25
+	}
+	
+	influence_cost = 3
+	
+	allow = {		
+		has_policy_flag = no_wars
+		has_policy_flag = slavery_not_allowed
+		has_policy_flag = purge_not_allowed
+		has_policy_flag = resettlement_not_allowed
+		has_policy_flag = first_contact_attack_not_allowed
+		has_policy_flag = refugees_allowed
+		
+		NOT = {
+			has_country_edict = mandatory_service
+		}	
+		NOT = {
+			has_policy_flag = allow_orbital_bombardment_limited
+		}
+		NOT = {
+			has_policy_flag = allow_orbital_bombardment_full
+		}	
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			OR = {
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}		
+	}
+	
+	prerequisites = {
+		"tech_alpha_promise_eden"
+	}
+}
+
+country_edict = {
+	name = "think_tanks"
+
+	modifier = {
+		tile_resource_energy_mult = -0.05
+		num_tech_alternatives_add = 1
+		all_technology_research_speed = 0.05
+	}
+	
+	influence_cost = 1
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			OR = {
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}		
+	}
+	
+	prerequisites = {
+		"tech_administrative_ai"
+	}
+}
+
+country_edict = {
+	name = "mineral_wealth"
+
+	modifier = {
+		tile_resource_energy_mult = 0.15
+		tile_resource_minerals_mult = -0.3
+	}
+	
+	influence_cost = 0
+	
+	allow = {
+		NOT = {
+			has_country_edict = energy_wealth
+		}
+		NOT = {
+			has_country_edict = alpha_sell_influence
+		}
+		NOT = {
+			has_country_edict = alpha_buy_influence
+		}
+	}
+	
+	prerequisites = {
+		"tech_alpha_natfuel_sourcing_2"
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+country_edict = {
+	name = "energy_wealth"
+
+	modifier = {
+		tile_resource_energy_mult = -0.3
+		tile_resource_minerals_mult = 0.1
+	}
+	
+	influence_cost = 0
+	
+	allow = {
+		NOT = {
+			has_country_edict = mineral_wealth
+		}
+		NOT = {
+			has_country_edict = alpha_sell_influence
+		}
+		NOT = {
+			has_country_edict = alpha_buy_influence
+		}
+	}
+	
+	potential = {
+		has_technology = "tech_alpha_materialism"
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+country_edict = {
+	name = "secret_police_force"
+
+	modifier = {
+		pop_happiness = -0.05
+		planet_fortification_strength = 0.1
+		pop_ethic_xenophobe_attraction_mult = 0.1
+		pop_ethic_authoritarian_attraction_mult = 0.25
+		pop_ethic_egalitarian_attraction_mult = -0.15
+		country_trust_growth = -0.05
+		planet_unrest_add = -10
+	}
+	
+	influence_cost = 2
+	
+	potential = {
+		has_technology = "tech_alpha_fanatic_xenophobia_2"
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+country_edict = {
+	name = "regulate_spice_use"
+
+	modifier = {
+		#pop_happiness = -0.1
+		pop_government_ethic_attraction = -0.15
+		species_leader_exp_gain = 0.2
+		all_technology_research_speed = 0.1
+		ship_anomaly_generation_chance_mult = 0.20
+		navy_size_mult = 0.1
+		planet_sensor_range_mult = 0.5
+		planet_unrest_add = 20
+	}
+	
+	influence_cost = 1
+	
+	allow = {
+		NOT = {
+			has_country_edict = deregulate_spice_use
+		}
+		empire_has_spice = yes
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			OR = {
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}		
+	}	
+	
+	prerequisites = {
+		"tech_alpha_spice_harvesting"
+	}
+}
+
+country_edict = {
+	name = "deregulate_spice_use"
+
+	modifier = {
+		pop_happiness = 0.05
+		tile_resource_physics_research_mult = 0.15
+		#pop_government_ethic_attraction = -0.1
+		tile_resource_energy_mult = 0.1
+		planet_unrest_add = 10
+		#pop_growth_speed = -0.1
+	}
+	
+	influence_cost = 2
+	
+	allow = {
+		NOT = {
+			has_country_edict = regulate_spice_use
+		}
+		empire_has_spice = yes
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			OR = {
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}		
+	}		
+	
+	prerequisites = {
+		"tech_alpha_spice_harvesting"
+	}
+}
+
+country_edict = {
+	name = "mandatory_education"
+	modifier = {
+		#pop_ethic_authoritarian_attraction_mult = -0.05
+		#pop_ethic_spiritualist_attraction_mult = -0.05
+		pop_ethic_materialist_attraction_mult = 0.1
+		tile_resource_physics_research_mult = 0.1
+		tile_resource_engineering_research_mult = 0.1
+		tile_resource_society_research_mult = 0.1
+		tile_resource_energy_mult = -0.1
+		species_leader_exp_gain = 0.1
+	}
+	
+	influence_cost = 1
+	
+	potential = {
+		#has_policy_flag = state_education_postadult
+		OR = {
+			has_ethic = ethic_egalitarian
+			has_ethic = ethic_fanatic_egalitarian
+			has_ethic = ethic_materialist
+			has_ethic = ethic_fanatic_materialist
+			has_ethic = ethic_xenophobe
+			has_ethic = ethic_fanatic_xenophobe
+		}	
+	}
+		
+	allow = {
+		has_policy_flag = state_education_postadult
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}		
+	}
+	
+	prerequisites = {
+		"tech_alpha_academies"
+	}
+}
+
+country_edict = {
+	name = "mandatory_service"
+	modifier = {
+		#tile_resource_society_research_mult = -0.1
+		tile_resource_energy_mult = -0.1
+		species_leader_exp_gain = 0.1
+		planet_army_build_speed_mult = 0.5
+		planet_fortification_strength = 0.25
+		pop_ethic_pacifist_attraction_mult = -0.2
+		pop_ethic_militarist_attraction_mult = 0.2
+		pop_growth_speed = -0.1
+	}
+	
+	influence_cost = 1
+	
+	potential = {
+		OR = {
+			has_ethic = ethic_militarist
+			has_ethic = ethic_fanatic_militarist
+			has_ethic = ethic_fanatic_xenophobe
+		}	
+	}
+		
+	allow = {
+		NOT = { has_country_edict = alpha_promise_eden }
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_fanatic_militarist
+		}		
+	}
+	
+	prerequisites = {
+		"tech_alpha_military_service"
+	}
+}
+
+country_edict = {
+	name = "followup_surveys"
+	
+	prerequisites = { "tech_alpha_survey_corps" }
+	
+	modifier = {
+		country_engineering_tech_research_speed = -0.10
+		science_ship_survey_speed = -0.1
+	}
+	
+	influence_cost = 0.5
+	
+	ai_weight = {
+		weight = 1
+	}
+}

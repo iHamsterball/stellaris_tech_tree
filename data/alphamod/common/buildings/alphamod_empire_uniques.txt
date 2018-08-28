@@ -1,0 +1,527 @@
+@lots = 10
+@lotsandlots = 20
+
+@infcosthigh = 50
+@infcostmed = 25
+@infcostlow = 10
+
+@weightnormal = 1
+@weightuseful = 2
+@weightimportant = 5
+@weightcritical = 10
+
+@engcostcheap = 75
+@engcostlow = 125
+@engcostmed = 250
+@engcosthigh = 400
+
+@mincostcheap = 25
+@mincostlow = 75
+@mincostmed = 200
+@mincosthigh = 350
+
+@srlow = 1
+@srmed = 2
+@srhigh = 4
+
+@buildquick = 90
+@buildnormal = 180
+@buildlong = 360
+@buildhuge = 720
+
+building_terraformer_producer = {
+	base_buildtime = 360
+	empire_unique = yes
+	
+	cost = {
+		minerals = 200
+		energy = 300
+		influence = 25
+	}
+
+	produced_resources = {
+		sr_terraform_liquids = 1
+		sr_terraform_gases = 1
+		sr_atmos_regulators = 5
+	}
+	
+	required_resources = {
+		sr_actinides = 2
+		sr_ice = 3
+		sr_natural_fuels = 3
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requires_no_actinides_deposit"
+				tile = { not = { has_actinides_deposit = yes } }
+			}
+			custom_tooltip_fail = {
+				text = "requires_no_ice_deposit"
+				tile = { not = { has_ice_deposit = yes } }
+			}
+			custom_tooltip_fail = {
+				text = "requires_no_natural_fuels_deposit"
+				tile = { not = { has_natural_fuels_deposit = yes } }
+			}
+		}
+	}
+	
+	prerequisites = {
+		"tech_terrestrial_sculpting"
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+}
+
+building_capital_tradehub = {
+	is_listed = no
+	
+	produced_resources = {
+		energy = 2
+		sr_wealth = 1
+		sr_ice = 1
+		sr_actinides = 1
+		sr_natural_fuels = 1
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+}
+
+building_comms_hub = {
+	base_buildtime = @buildlong
+	empire_unique = yes
+
+	cost = {
+		influence = @infcosthigh
+		minerals = @mincostmed
+		energy = @engcosthigh
+	}	
+		
+	required_resources = {
+		energy = @lots
+		sr_gigarelays = @srhigh
+	}
+	
+	produced_resources = {
+		unity = 5
+		physics_research = @lots
+	}
+	
+	country_modifier = {
+		navy_size_mult = 0.1
+		country_core_sector_system_cap = 2
+		country_resource_unity_mult = 0.05
+	}
+	
+	potential = {
+		planet = {
+			AND = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+					has_building = "building_mining_guild"
+					has_building = "building_central_databank"
+					has_building = "building_farming_guild"
+					has_building = "building_commerce_coord"
+				}
+				owner = { empire_has_gigarelays_4 = yes }
+			}
+		}
+	}
+	
+	prerequisites = {
+		"tech_alpha_centralised_comms"
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = @weightimportant
+		modifier = {
+			factor = 20
+			from = { owner = {
+			OR = { 
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			}}
+		}
+		modifier = {
+			factor = 10
+			from = { owner = {
+			OR = {
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_militarist
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			}}
+		}
+		modifier = {
+			factor = 2
+			from = { owner = {
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+			}}
+		}
+		modifier = {
+			factor = 0.5
+			from = { owner = {
+			OR = { 
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			}}
+		}
+		modifier = {
+			factor = 0
+			from = { is_still_small_colony = yes }
+		}
+		modifier = {
+			factor = 0
+			from = { sector_controlled = yes }
+		}
+	}
+}
+
+building_colonial_command = {
+	base_buildtime = @buildlong
+	empire_unique = yes
+
+	cost = {
+		influence = @infcosthigh
+		minerals = @mincostlow
+		energy = @engcostmed
+	}
+	
+	produced_resources = {
+		unity = 5
+		influence = 0.5
+	}
+	
+	country_modifier = {
+		shipsize_colonizer_construction_speed_mult = 0.25
+		country_core_sector_system_cap = 2
+		country_resource_unity_mult = 0.05
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				has_building = "building_capital_2"
+				has_building = "building_capital_3"
+				has_building = "building_mining_guild"
+				has_building = "building_central_databank"
+				has_building = "building_farming_guild"
+				has_building = "building_commerce_coord"
+			}
+		}
+	}
+	
+	prerequisites = {
+		"tech_alpha_colony_control"
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = @weightcritical		
+		modifier = {
+			factor = 0.1
+			from = { owner = {
+			has_ethic = ethic_fanatic_xenophobe
+			}}
+		}
+		modifier = {
+			factor = 0.5
+			from = { owner = {
+			has_ethic = ethic_xenophobe
+			}}
+		}
+		modifier = {
+			factor = 0
+			from = { is_still_medium_colony = yes }
+		}
+		modifier = {
+			factor = 0
+			from = { sector_controlled = yes }
+		}
+	}
+}
+
+building_intelligence_directorate = {
+	base_buildtime = @buildlong
+	empire_unique = yes
+
+	cost = {
+		influence = @infcosthigh
+		minerals = @mincostlow
+		energy = @engcostmed
+	}
+	
+	produced_resources = {
+		influence = 0.5
+		sr_intelligence = @srhigh
+	}
+	
+	country_modifier = {
+		planet_sensor_range_mult = 0.15
+		country_trust_growth = -0.05
+		country_resource_influence_mult = 0.1
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				has_building = "building_capital_2"
+				has_building = "building_capital_3"
+				has_building = "building_mining_guild"
+				has_building = "building_central_databank"
+				has_building = "building_farming_guild"
+				has_building = "building_commerce_coord"
+			}
+		}
+	}
+	
+	upgrades = {
+		building_intelligence_directorate_2 	
+	}
+		
+	prerequisites = {
+		"tech_homeworld_security"
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = @weightimportant
+		modifier = {
+			factor = 1.5
+			from = { owner = {
+			OR = { 
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+			}
+			}}
+		}
+		modifier = {
+			factor = 2.5
+			from = { owner = {
+			has_ethic = ethic_fanatic_xenophobe
+			}}
+		}
+		modifier = {
+			factor = 0
+			from = { is_still_small_colony = yes }
+		}
+		modifier = {
+			factor = 0
+			from = { sector_controlled = yes }
+		}
+	}
+}
+
+building_intelligence_directorate_2 = {
+	base_buildtime = @buildhuge
+	empire_unique = yes
+	is_listed = no
+
+	cost = {
+		influence = @infcosthigh
+		minerals = @mincostmed
+		energy = @engcosthigh
+	}
+	
+	produced_resources = {
+		influence = 1
+		unity = 5
+		sr_intelligence = @lots
+	}
+	
+	planet_modifier = {
+		planet_migration_xeno_pull = -0.1
+		pop_government_ethic_attraction = 0.1
+	}
+	
+	country_modifier = {
+		planet_sensor_range_mult = 0.3
+		country_border_mult = 0.1
+		country_trust_growth = -0.1
+	}
+		
+	prerequisites = {
+		"tech_alpha_fanatic_xenophobia_2"
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+
+	ai_weight = {
+		weight = @weightcritical
+	}	
+}
+
+building_xeno_diplomacy_corp = {
+	base_buildtime = @buildlong
+	empire_unique = yes
+	
+	cost = {
+		minerals = @mincostlow
+		energy = @engcostcheap
+		influence = @infcosthigh
+	}
+	
+	produced_resources = {
+		society_research = 3
+		influence = 0.5
+		sr_ambassadors = 1
+	}
+
+	country_modifier = {
+		diplomacy_influence_cost = -0.05
+		country_trust_growth = 0.1
+		#pop_xenophobia = -0.05
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				has_building = "building_capital_1"
+				has_building = "building_capital_2"
+				has_building = "building_capital_3"
+				has_building = "building_mining_guild"
+				has_building = "building_central_databank"
+				has_building = "building_farming_guild"
+				has_building = "building_commerce_coord"
+			}
+		}
+	}
+	
+	prerequisites = {
+		"tech_alpha_diplomatic_corps"
+	}
+	
+	upgrades = {
+		building_peace_corps
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = @weightimportant
+		modifier = {
+			factor = 2.0
+			from = { owner = {
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_xenophile
+			}
+			}}
+		}
+		modifier = {
+			factor = 3.0
+			from = { owner = {
+			OR = {
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_xenophile
+			}
+			}}
+		}
+		modifier = {
+			factor = 0
+			from = { is_still_small_colony = yes }
+		}
+		modifier = {
+			factor = 0
+			from = { sector_controlled = yes }
+		}
+	}
+}
+
+building_assaultmechbay = {
+	base_buildtime = @buildhuge
+	empire_unique = yes
+	
+	cost = {
+		minerals = @mincosthigh
+		energy = @engcosthigh
+		influence = @infcosthigh
+	}
+	
+	required_resources = {
+		minerals = 4
+		sr_natural_fuels = 3
+		sr_actinides = 2
+	}
+	
+	potential = {
+		planet = {
+			owner = { 
+				AND = {
+					empire_has_natural_fuels_3 = yes
+					empire_has_actinides_2 = yes
+				}
+			}
+		}
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requirement_no_natural_fuels_deposit"
+				tile = { not = { has_natural_fuels_deposit = yes } }
+			}
+			custom_tooltip_fail = {
+				text = "requirement_no_actinides_deposit"
+				tile = { not = { has_actinides_deposit = yes } }
+			}
+		}
+	}
+	
+	produced_resources = {
+		engineering_research = 8
+	}
+
+	planet_modifier = {	
+		planet_fortification_strength = 0.75
+	}
+	
+	prerequisites = {
+		"tech_alpha_assaultmechs"
+	}
+	
+	ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = @weightimportant
+		modifier = {
+			factor = 5.0
+			from = { owner = {
+			has_ethic = ethic_fanatic_militarist
+			}}
+		}
+		modifier = {
+			factor = 2.0
+			from = { owner = {
+			has_ethic = ethic_militarist
+			}}
+		}
+		modifier = {
+			factor = 0
+			from = { sector_controlled = yes }
+		}
+	}
+}

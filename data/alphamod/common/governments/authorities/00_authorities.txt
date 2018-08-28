@@ -1,0 +1,111 @@
+#auth_example = {
+#	potential = {}									# requirements list, see ../readme_requirements.txt
+#	possible = {}									# requirements list, see ../readme_requirements.txt
+#
+#	has_heir = yes / no								# default: no; you can either have a hereditary system (has_heir = yes), or an election system (has_heir = no)
+#	election_type = oligarchic / democratic	/ none	# default: none; oligarchic generate candidates only from leaders in the country
+#	election_term_years = 40						# default: 0
+#	election_term_variance = 10						# default: 0; actual election term = election_term_years +/- election_term_variance
+#	re_election_allowed = yes / no					# default: no
+#	can_have_emergency_elections = yes / no			# default: no
+#	emergency_election_cost = 42.5					# default: 0; influence cost for starting an emergency election
+#	max_election_candidates = 5						# default: -1; -1 == no limit
+#
+#	has_agendas = yes / no							# default: no
+#	uses_mandates = yes / no						# default: no
+#}
+
+
+auth_democratic = {
+	election_term_years = 10
+	re_election_allowed = yes
+	election_type = democratic
+
+	uses_mandates = yes
+
+	possible = {
+		ethics = {
+			NOR = {
+				value = ethic_hive_mind
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+			}
+		}
+	}
+}
+
+auth_oligarchic = {	
+	election_term_years = 40
+	election_term_variance = 10 # +/- 10 years
+	election_type = oligarchic
+	can_have_emergency_elections = yes
+	emergency_election_cost = 250	
+	max_election_candidates = 4
+
+	has_agendas = yes
+	
+	possible = {
+		ethics = {
+			NOR = {
+				value = ethic_hive_mind
+				value = ethic_fanatic_egalitarian
+				value = ethic_fanatic_authoritarian
+			}
+		}
+	}
+}
+
+auth_dictatorial = {
+	election_type = oligarchic	
+	max_election_candidates = 4
+
+	has_agendas = yes
+	
+	possible = {
+		ethics = {
+			NOR = {
+				value = ethic_hive_mind
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}
+		}
+	}	
+}
+
+auth_imperial = {
+	has_heir = yes
+
+	has_agendas = yes
+	
+	possible = {
+		ethics = {
+			NOR = {
+				value = ethic_hive_mind
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}
+		}
+	}
+}
+
+auth_hive_mind = {
+	has_heir = no
+	election_type = none
+	has_factions = no
+	
+	playable = { host_has_dlc = "Utopia" }
+	possible = {
+		ethics = {
+			value = ethic_hive_mind
+		}
+	}
+}
+
+auth_machine_consciousness = {
+	has_heir = no
+	election_type = none
+
+	icon = "gfx/interface/icons/governments/authorities/auth_hive_mind.dds"
+	
+	potential = { country_type = { value = ai_empire } }
+}

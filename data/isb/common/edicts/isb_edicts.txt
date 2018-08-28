@@ -1,0 +1,66 @@
+##########################################################################
+# Empire edicts
+##########################################################################
+
+country_edict = {
+	name = "doomsday_authorisation"
+	length = 360
+	cost = { influence = 50 }
+	
+	modifier = {
+	}
+	
+	prerequisites = {
+		"tech_titan_doomsday_weapons_01"
+	}
+		
+	allow = {
+		NOT = { has_policy_flag = doomsday_outlawed }
+	}
+	
+	ai_weight = {
+		weight = 0				
+	}	
+}
+
+# Special edict for nova
+country_edict = {
+	name = "doomsday_nova_authorisation"
+	length = 90
+	cost = { influence = 75 }
+	modifier = {
+	}
+	
+	prerequisites = {
+		"tech_sun_crusher"
+	}
+		
+	allow = {
+		NOT = { has_policy_flag = doomsday_outlawed }
+	}
+	
+	ai_weight = {
+		weight = 0				
+	}	
+}
+
+# Special edict for spear of longinus
+country_edict = {
+	name = "doomsday_longinus_authorisation"
+	length = 90
+	cost = { influence = 25 }
+	modifier = {
+	}
+	
+	prerequisites = {
+		"tech_avatar_doomsday_01"
+	}
+		
+	allow = {
+		NOT = { has_policy_flag = doomsday_outlawed }
+	}
+	
+	ai_weight = {
+		weight = 0				
+	}	
+}

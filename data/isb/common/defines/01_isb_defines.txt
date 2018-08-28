@@ -1,0 +1,80 @@
+ï»¿NCombat = {
+	# When ships are attacking they will try to stay at max range and orbit their target.
+	# If the ship is closer than max range this value determines how fast it will "back off" in order to get to max range.
+	# 0.0 means that the ship will not back off, and orbit with whatever radius it already has
+	# 1.0 means that the ship will prioritize orbit velocity the same as "back-off"-velocity. i.e a 45º angle
+	#COMBAT_BACK_OFF_RATE = 0.6
+}
+
+NShip = {
+	# In case people aren't using ISB graphics, reduces clipping on Titans
+	FLEET_BASE_FORMATION_SCALE			= 4.25
+	FLEET_BASE_FORMATION_DIV				= 12
+}
+
+NGraphics = {
+	SHIP_RANDOM_HEIGHT_OFFSET = 20.0
+	
+	SYSTEM_LINE_ALPHA_FADE_STEP			= { 1 7 }			# Fade alpha betweeen zoom step X and Y
+	SYSTEM_LINE_ALPHA_FADE_VALUE		= { 0.06 0.0125 }		# Fade alpha value between X and Y
+}
+
+NAI = {
+	#ARSENAL_FLEET_SIZE = 350
+	#SHARED_THREAT_MULT = 0.5 # How much does having a shared threat boost opinion?
+	SHARED_THREAT_MAX = 250
+	#THREAT_SHARED_THREAT_REDUCTION = 0			# Each point of threat will also eliminate this much shared threat
+	THREAT_SIZE_FACTOR = 0.75					# How much does the relative power of the aggressive empire affect threat?
+	THREAT_SIZE_FACTOR_MAX = 1.5
+
+	#MAX_MINERALS_STORED_NAVY = 4000				# Minerals AI will store for navy when it needs more
+	#MINERAL_NAVY_BUDGET_FRACTION = 0.3 	# AI will spend this fraction of their stored minerals on ships
+	#MAX_MINERALS_STORED_SPACEPORT = 2500		# Minerals AI will store for spaceport when it needs more
+	#MINERAL_SPACEPORT_BUDGET_FRACTION = 0.2 # AI will spend this fraction of their stored minerals on spaceport modules
+	#ABORT_MISSION_LIMIT = 0.3
+	#ENEMY_FLEET_POWER_MULT = 1.1
+	#ENEMY_NEUTRALS_FLEET_POWER_MULT = 1.3
+
+	#CRISIS_FLEET_SIZE_LIMIT_LOWER = 150
+	#CRISIS_NAVY_SIZE_LIMIT = 200
+}
+
+NEconomy = {
+	# FLEET_UPGRADE_MINERAL_COST_MULT		= 1.0		# mineral cost of ship upgrade is abs( price difference between old and new designs * FLEET_UPGRADE_MINERAL_COST_MULT )
+	FLEET_UPGRADE_TIME_COST_MULT		= 0.35		# Upgrade fleet cost
+	MINING_STATION_MAINTENANCE 			= 0.5		# Monthly mining station maintenance
+	MILITARY_STATION_MAINTENANCE_MUL	= -0.75		# Monthly military station maintenance reduction
+	START_ENERGY 						= 250.0		# The amount of money each country starts with
+	START_MINERALS						= 600.0	# The amount of minerals each country starts with
+}
+
+NGameplay = {
+	CORE_SECTOR_SYSTEM_CAP					= 4	# Too many planets in core sector will apply modifier inefficient_planet_management.
+	LEADER_POOL_LEAD_TIME	= 5				# Years leaders will remain in the leader pool until replaced
+	LEADER_BASE_CAP			= 15
+	DOCKED_FLEET_MAINTENANCE_REDUCTION		= 0.50	# Docked fleets will have a lowered maintenance reduction of this amount
+	#FTL_RANGE_WARP 			= 45				# Base warp range
+	#FTL_RANGE_WORMHOLE 		= 55				# Wormhole range
+	#FTL_RANGE_JUMPDRIVE		= 70				# Jumpdrive range
+	#HYPERLANE_WINDUP 		= 100				# In micro updates ( 10/day )
+	#NAVY_SIZE_MAX			= 1500				# Max value of Naval Capacity
+	#NAVY_SIZE_POP_MULT		= 0.4				# Mult value of Naval Capaicty for each Pop
+	#NAVY_SIZE_SPACEPORT_LEVEL					= { 8, 12, 16, 24, 32, 40 } # Naval Capacity per spaceport level
+
+	#NAVY_SIZE_SPACEPORT_MULT	= 4000					# Mult value of Naval Capacity for each spaceport level ( NAVY_SIZE_BASE + Level * NAVY_SIZE_MULT )
+	SECTOR_REVOKE_SYSTEM_COST				= 5	# Influence cost for revoking a planet from a sector
+	POLICY_YEARS						= 3	# Allow quicker switch of doomsday weapon
+	
+	SCALED_DIFFICULTY_MAX_GALAXY_SIZE = 1500
+	SCALED_DIFFICULTY_HABITABLE_PLANETS_MULT = 0.35	# How much does amount of habitable planets impact crisis scaling
+}
+
+NSpecies = {
+	MAX_TRAIT_POINTS 					= 3
+	MAX_TRAITS 							= 6		# Max racial traits (1 is always used for homeworld type trait)
+}
+
+
+NInterface = {
+	MAX_NUM_SAVE_GAMES						= 50
+}

@@ -1,0 +1,167 @@
+ d_minerals_and_ice_deposit = {
+	resources = {
+		sr_ice = 1
+		minerals = 1
+	}
+	station = shipclass_mining_station
+	orbital_weight = {
+		weight = 80
+	}
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 1.0
+			planet = {
+				is_planet_class = pc_gas_giant
+				has_ring = yes
+			}
+		}
+		modifier = {
+			weight = 4.0
+			planet = {
+				is_planet_class = pc_frozen
+			}
+		}
+		modifier = {
+			weight = 2.5
+			planet = {
+				OR = {
+					is_planet_class = pc_asteroid_2
+					is_planet_class = pc_asteroid
+					is_planet_class = pc_barren_cold
+				}
+			}
+		}
+		modifier = {
+			weight = 1.25
+			planet = {
+				OR = {
+					is_planet_class = pc_arctic
+					is_planet_class = pc_alpine
+					is_planet_class = pc_tundra
+					is_planet_class = pc_barren
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			planet = {
+				has_ring = yes
+				is_moon = no
+			}
+		}
+	}
+ }
+
+ d_minerals_and_ice_deposit_2 = {
+	resources = {
+		sr_ice = 2
+		minerals = 1
+	}
+	station = shipclass_mining_station
+	orbital_weight = {
+		weight = 50
+	}
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 1.0
+			planet = {
+				is_planet_class = pc_frozen
+			}
+		}
+		modifier = {
+			factor = 1.5
+			planet = {
+				has_ring = yes
+				is_moon = no
+			}
+		}
+	}
+}
+
+ d_minerals_and_ice_deposit_3 = {
+	resources = {
+		sr_ice = 2
+		minerals = 2
+	}
+	station = shipclass_mining_station
+	orbital_weight = {
+		weight = 25
+	}
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 0.5
+			planet = {
+				is_planet_class = pc_gas_giant
+				has_ring = yes
+				is_moon = no
+			}
+		}
+	}
+}
+  
+  d_minerals_and_ice_deposit_4 = {
+	resources = {
+		sr_ice = 1
+		minerals = 1
+	}
+	is_orbital_slot = no
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 0.5
+			planet = {
+				OR = {
+					is_planet_class = pc_asteroid_2
+					is_planet_class = pc_asteroid
+				}
+			}
+		}
+		modifier = {
+			weight = 10
+			planet = {
+				is_planet_class = pc_arctic
+			}
+		}
+		modifier = {
+			weight = 5
+			planet = {
+				OR = {
+					is_planet_class = pc_alpine
+					is_planet_class = pc_tundra
+					is_planet_class = pc_barren
+				}
+			}
+		}
+	}
+ }
+ 
+ d_minerals_and_ice_deposit_5 = {
+	resources = {
+		sr_ice = 2
+		minerals = 1
+	}
+	is_orbital_slot = no
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			planet = {
+				is_planet_class = pc_arctic
+			}
+		}
+		modifier = {
+			weight = 2
+			planet = {
+				OR = {
+					is_planet_class = pc_alpine
+					is_planet_class = pc_tundra
+				}
+			}
+		}
+	}
+ }

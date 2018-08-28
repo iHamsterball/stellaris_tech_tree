@@ -1,0 +1,452 @@
+country_edict = {
+	name = "autostocking_on"
+	
+	influence_cost = 0
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+planet_edict = {
+	name = "stockpiling_exemption_on"
+	
+	influence_cost = 0
+	length = 0
+
+	potential = {
+		has_planet_flag = trading_on
+		not = { sector_controlled = yes }
+		not = { has_modifier = stocking_ice }
+		not = { has_modifier = stocking_actinides }
+		not = { has_modifier = stocking_fuels }
+		not = { has_planet_flag = stockpiling_exemption_on }
+		not = { has_building = building_capital_tradehub }
+	}
+	
+	effect = {
+		hidden_effect = {
+			set_planet_flag = stockpiling_exemption_on
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+planet_edict = {
+	name = "stockpiling_exemption_off"
+	
+	influence_cost = 0
+	length = 0
+
+	potential = {
+		has_planet_flag = stockpiling_exemption_on
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_planet_flag = stockpiling_exemption_on
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+planet_edict = {
+	name = "no_stockpiling_actinides"
+
+	influence_cost = 0
+	length = 0
+
+	potential = {
+		has_planet_flag = trading_on
+		has_modifier = stocking_actinides
+		owner = {
+			capital_scope = {
+				any_tile = {
+					has_building = building_capital_tradehub
+					has_resource = {
+						type = sr_actinides
+						amount > 1
+					}					
+				}
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_modifier = stocking_actinides
+			owner = {
+				capital_scope = {
+					random_tile = {
+						limit = { has_building = building_capital_tradehub }
+						add_resource = {
+							resource = sr_actinides
+							amount = -1
+						}					
+					}
+				}
+			}
+		}
+	}
+		
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			sector_controlled = yes
+		}
+	}
+}
+
+planet_edict = {
+	name = "no_stockpiling_fuels"
+
+	influence_cost = 0
+	length = 0
+
+	potential = {
+		has_planet_flag = trading_on
+		has_modifier = stocking_fuels
+		owner = {
+			capital_scope = {
+				any_tile = {
+					has_building = building_capital_tradehub
+					has_resource = {
+						type = sr_natural_fuels
+						amount > 1
+					}					
+				}
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_modifier = stocking_fuels
+			owner = {
+				capital_scope = {
+					random_tile = {
+						limit = { has_building = building_capital_tradehub }
+						add_resource = {
+							resource = sr_natural_fuels
+							amount = -1
+						}					
+					}
+				}
+			}
+		}
+	}
+		
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			sector_controlled = yes
+		}
+	}
+}
+
+planet_edict = {
+	name = "no_stockpiling_ice"
+
+	influence_cost = 0
+	length = 0
+
+	potential = {
+		has_planet_flag = trading_on
+		has_modifier = stocking_ice
+		owner = {
+			capital_scope = {
+				any_tile = {
+					has_building = building_capital_tradehub
+					has_resource = {
+						type = sr_ice
+						amount > 1
+					}					
+				}
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_modifier = stocking_ice
+			owner = {
+				capital_scope = {
+					random_tile = {
+						limit = { has_building = building_capital_tradehub }
+						add_resource = {
+							resource = sr_ice
+							amount = -1
+						}					
+					}
+				}
+			}
+		}
+	}
+		
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			sector_controlled = yes
+		}
+	}
+}
+
+planet_edict = {
+	name = "homeworld_stockpile_on"
+	
+	influence_cost = 0
+	length = 0
+	
+	potential = {
+		has_building = "building_capital_tradehub"
+		#not = { has_planet_flag = "stockpile_on" }
+	}
+	
+	effect = {
+		hidden_effect = {
+			#set_planet_flag = "stockpile_on"
+			owner = {
+				every_owned_planet = {
+					limit = {
+						not = { sector_controlled = yes }
+						not = { has_modifier = stocking_ice }
+						not = { has_building = "building_capital_tradehub" }
+						not = { has_planet_flag = stockpiling_exemption_on }
+						any_tile = {
+							has_resource = {
+								type = sr_ice
+								amount > 0
+							}
+						}
+					}
+					add_modifier = {
+						modifier = stocking_ice
+						days = -1
+					}
+					prevprev = {
+						random_tile = {
+							limit = {
+								has_building = "building_capital_tradehub"
+							}
+							add_resource = {
+								resource = sr_ice
+								amount = 1
+							}
+						}
+					}
+				}
+				every_owned_planet = {
+					limit = {
+						not = { sector_controlled = yes }
+						not = { has_modifier = stocking_actinides }
+						not = { has_building = "building_capital_tradehub" }
+						not = { has_planet_flag = stockpiling_exemption_on }
+						any_tile = {
+							has_resource = {
+								type = sr_actinides
+								amount > 0
+							}
+						}
+					}
+					add_modifier = {
+						modifier = stocking_actinides
+						days = -1
+					}
+					prevprev = {
+						random_tile = {
+							limit = {
+								has_building = "building_capital_tradehub"
+							}
+							add_resource = {
+								resource = sr_actinides
+								amount = 1
+							}
+						}
+					}
+				}
+				every_owned_planet = {
+					limit = {
+						not = { sector_controlled = yes }
+						not = { has_modifier = stocking_fuels }
+						not = { has_building = "building_capital_tradehub" }
+						not = { has_planet_flag = stockpiling_exemption_on }
+						any_tile = {
+							has_resource = {
+								type = sr_natural_fuels
+								amount > 0
+							}
+						}
+					}
+					add_modifier = {
+						modifier = stocking_fuels
+						days = -1
+					}
+					prevprev = {
+						random_tile = {
+							limit = {
+								has_building = "building_capital_tradehub"
+							}
+							add_resource = {
+								resource = sr_natural_fuels
+								amount = 1
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	 
+	ai_weight = {
+		weight = 0
+	}
+}
+
+planet_edict = {
+	name = "toggle_trading_on"
+	
+	influence_cost = 0
+	length = 0
+	 
+	potential = {
+		NOT = { has_planet_flag = trading_on }
+		# OR = {
+			# has_building = "building_tradestation"
+			# has_building = "building_trade_company"
+			# has_building = "building_tradestation_ex"
+			# has_building = "building_trade_company_ex"
+		# }
+		# has_spaceport = yes
+	}
+	
+	effect = {
+		set_planet_flag = "trading_on"
+	}
+	 
+	ai_weight = {
+		weight = 1
+	}
+}
+
+planet_edict = {
+	name = "toggle_trading_off"
+	
+	influence_cost = 0
+	length = 0
+	 
+	potential = {
+		has_planet_flag = trading_on
+	}
+	
+	effect = {
+		remove_planet_flag = trading_on
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+# planet_edict = {
+	# name = "alpha_import_food"
+	
+	# influence_cost = 0
+	# length = 0
+
+	 # potential = {
+		# has_planet_flag = trading_on
+		# NOT = { has_modifier = importing_food }
+		# OR = {
+			# has_building = "building_tradestation"
+			# has_building = "building_trade_company"
+			# has_building = "building_tradestation_ex"
+			# has_building = "building_trade_company_ex"
+		# }
+		# has_spaceport = yes
+	# }
+	
+	# effect = {
+		# planet_event = { id = manage_trade.300 }
+	# }
+	 
+	# ai_weight = {
+		# weight = 0
+		# modifier = {
+			# weight = 1
+			# num_pops < 6
+		# }
+	# }
+# }
+
+# planet_edict = {
+	# name = "alpha_import_food_stop"
+	
+	# influence_cost = 0
+	# length = 0
+
+	# potential = {
+		# has_planet_flag = trading_on
+		# has_modifier = importing_food
+	# }
+	
+	# effect = {
+		# planet_event = { id = manage_trade.350 }
+	# }
+	 
+	# ai_weight = {
+		# weight = 0
+		# modifier = {
+			# weight = 1
+			# num_pops > 5
+		# }
+	# }
+# }
+
+planet_edict = {
+	name = "alpha_manage_other_exports"
+	
+	influence_cost = 0
+	length = 0
+
+	potential = {
+		not = { is_capital = yes }
+		has_planet_flag = trading_on
+	}
+	
+	effect = {
+		planet_event = { id = manage_trade.1000 }
+	}
+	 
+	ai_weight = {
+		weight = 0
+	}
+}
+
+planet_edict = {
+	name = "alpha_manage_other_imports"
+	
+	influence_cost = 0
+	length = 0
+
+	potential = {
+		not = { is_capital = yes }
+		has_planet_flag = trading_on
+	}
+	
+	effect = {
+		planet_event = { id = manage_trade.2000 }
+	}
+	 
+	ai_weight = {
+		weight = 0
+	}
+}

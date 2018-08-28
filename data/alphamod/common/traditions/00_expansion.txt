@@ -1,0 +1,91 @@
+@cost = 56
+
+tr_expansion_adopt = {
+	cost = { unity = @cost }
+	
+	modifier = {
+		colony_start_num_pops_add = 1
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 5
+			years_passed < 10
+		}
+	}
+}
+
+tr_expansion_finish = {
+	modifier = {
+		country_core_sector_system_cap = 2
+		ascension_perks_add = 1
+	}
+}
+
+tr_expansion_colonization_fever = {
+	cost = { unity = @cost }
+	
+	#implementation done in buildings.txt
+		
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_expansion_a_new_life = {
+	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_expansion_colonization_fever
+	}
+	modifier = {
+		pop_growth_speed = 0.10
+		planet_colony_development_speed_mult = 0.50
+	}
+	
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_expansion_courier_network = {
+	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_expansion_colonization_fever
+	}
+	
+	modifier = {
+		tradition_cost_num_colonies_mult = -0.33
+	}
+	
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_expansion_reach_for_the_stars = {
+	cost = { unity = @cost }
+	
+	modifier = {
+		country_expansion_distance_mult = -0.50
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_expansion_galactic_ambition = {
+	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_expansion_reach_for_the_stars
+	}
+	
+	modifier = {
+		shipsize_outpost_station_upkeep_mult = -0.50
+	}
+	
+	ai_weight = {
+		factor = 5000
+	}
+}

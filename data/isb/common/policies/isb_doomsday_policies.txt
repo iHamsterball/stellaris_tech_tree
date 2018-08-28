@@ -1,0 +1,164 @@
+isb_doomsday_policy = {
+
+	potential = {
+		has_technology = tech_titan_doomsday_weapons_01
+	}
+
+	option = {
+		name = "doomsday_outlawed"
+
+		potential = { }
+
+		valid = {
+		}
+
+		policy_flags = {
+			doomsday_outlawed
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 1
+			}
+		}
+	}
+
+	option = {
+		name = "doomsday_kinetic"
+
+		potential = {
+			has_technology = tech_titan_doomsday_weapons_02
+		}
+
+		policy_flags = {
+			doomsday_kinetic
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = "doomsday_virus"
+
+		potential = {
+			has_technology = tech_titan_doomsday_weapons_03
+		}
+
+		policy_flags = {
+			doomsday_virus
+		}
+
+		modifier = {}
+
+		AI_weight = {
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = "doomsday_nanite"
+
+		potential = {
+			has_technology = tech_titan_doomsday_weapons_05
+		}
+
+		policy_flags = {
+			doomsday_nanite
+		}
+
+		modifier = {}
+
+		AI_weight = {
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+	
+	# v1.4 Erebus update
+	option = {
+		name = "doomsday_nanite_nonorganic"
+
+		potential = {
+			has_technology = tech_titan_doomsday_weapons_05
+		}
+
+		policy_flags = {
+			doomsday_nanite_nonorganic
+		}
+
+		modifier = {}
+
+		AI_weight = {
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = "doomsday_mood_alteration"
+		
+		potential = {
+			has_technology = tech_titan_doomsday_weapons_06
+		}
+		
+		policy_flags = {
+			doomsday_mood_alteration
+		}
+		
+		modifier = {}
+				
+		AI_weight = {
+			modifier = {
+				factor = 0
+			}					
+		}		
+	}
+	
+	option = {
+		name = "doomsday_nanite_gene"
+		
+		potential = {
+			has_technology = tech_titan_doomsday_weapons_07
+		}
+		
+		policy_flags = {
+			doomsday_nanite_gene
+		}
+		
+		modifier = {}
+				
+		AI_weight = {
+			modifier = {
+				factor = 0
+			}					
+		}		
+	}
+	
+	option = {
+		name = "doomsday_abduction"
+		
+		potential = {
+			has_technology = tech_titan_doomsday_weapons_08
+		}
+		
+		policy_flags = {
+			doomsday_abduction
+		}
+		
+		modifier = {}
+				
+		AI_weight = {
+			modifier = {
+				factor = 0
+			}					
+		}		
+	}
+}

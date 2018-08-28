@@ -1,0 +1,56 @@
+ship_section_template = {
+	key = "AVATAR_SECTION"
+	ship_size = avatar
+	fits_on_slot = mid
+	entity = "avatar_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+	
+	component_slot = {
+		name = "LARGE_GUN_02"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "large_gun_02"
+	}
+	
+	cost = 10000
+}
+
+# Explosion
+ship_section_template = {
+	key = "exploding_bunny_avatar_section"
+	ship_size = exploding_bunny_avatar
+	fits_on_slot = mid
+	entity = "exploding_bunny_avatar_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	small_utility_slots = 1
+}
+
+ship_section_template = {
+	key = "AVATAR_CONSTRUCTOR_SECTION"
+	ship_size = avatar_constructor
+	fits_on_slot = mid	
+	entity = "avatar_constructor_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	cost = 1
+	
+	small_utility_slots = 3
+}
+
+ship_section_template = {
+	key = "AVATAR_FRAME_SECTION"
+	ship_size = avatar_frame
+	fits_on_slot = mid	
+	entity = "avatar_frame_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	cost = 22500
+}

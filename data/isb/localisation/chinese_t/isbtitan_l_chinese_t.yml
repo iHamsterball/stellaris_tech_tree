@@ -1,0 +1,461 @@
+l_chinese_t:
+
+ isb_titan:0 "重型泰坦"
+ isb_titan_plural:0 "重型泰坦"
+ ISB_TITAN_BOW:0 "星辰"
+ ISB_TITAN_MID:0 "信仰"
+ ISB_TITAN_STERN:0 "曙光"
+
+ leviathan:0 "利維坦"
+ leviathan_plural:0 "利維坦"
+ LEVIATHAN_BOW:0 "地獄雙齒"
+ LEVIATHAN_MID:0 "豐裕之角"
+ LEVIATHAN_STERN:0 "庇護"
+
+ titan_ship_fallen_empire:0 "泰坦"
+ titan_ship_fallen_empire_plural:0 "泰坦"
+
+ ai_ship_upkeep:0 "AI 泰坦/利維坦修正"
+ tech_isb_base:0 "太空戰鬥改進"
+ tech_isb_base_desc:0 "平衡改善太空戰鬥"
+
+ SWARM_STRIKE_CRAFT_PREONLY:0 "蟲群突擊艦"
+ CORE_SWARM_AGGRESSIVE:0 "攻擊型蜂群"
+ CORE_SWARM_DEFEND:0 "防禦型蜂群"
+ leader_trait_hive_regeneration:0 "蜂群類型: 代謝"
+ leader_trait_hive_regeneration_desc:0 "蟲族的完全意識控制提高了他們的康復速度。"
+ leader_trait_hive_hp:0 "蜂群類型: 韌性"
+ leader_trait_hive_hp_desc:0 "蟲族的完全意識控制提高了其韌性。"
+ leader_trait_hive_speed:0 "集體意識"
+ leader_trait_hive_speed_desc:0 "蟲族的完全意識控制有效地提高了戰鬥能力。"
+
+ CORE_ED_AGGRO:0 "攻擊型核心"
+ CORE_ED_DEFEND:0 "防禦型核心"
+
+ CORE_SENTINEL:0 "哨戒核心"
+
+ opinion_crisis_threat:0 "諸神黃昏"
+
+#Titan techs and pre-reqs
+
+ TECH_UNLOCK_TITAN_CONSTRUCTION_TITLE:0 "§H解鎖艦船類型:§!泰坦"
+ TECH_UNLOCK_TITAN_CONSTRUCTION_DESC:0 "§H泰坦§!\n經過幾十年的研究,我們獲得了突破性的進展.泰坦是壹種超級主力艦,他代表了壹種戰術上的轉變。"
+
+ TECH_UNLOCK_TITAN_WEAPON_MODULES_TITLE:0 "§E解鎖泰坦模組研究鏈§!"
+ TECH_UNLOCK_TITAN_WEAPON_MODULES_DESC:0 "泰坦模組是泰坦專用的部件"
+
+ TECH_UNLOCK_TITAN_CHAIN_TITLE:0 "§E泰坦研究鏈§!"
+ TECH_UNLOCK_TITAN_CHAIN_DESC:0 "研究接下來的壹系列科技來解鎖泰坦"
+
+#titan weapon modules tech and pre-reqs
+ TECH_UNLOCK_TITAN_MODULE_CHAIN_TITLE:0 "§E泰坦模組研究鏈§!"
+ TECH_UNLOCK_TITAN_MODULE_CHAIN_DESC:0 "研究接下來的壹系列科技解鎖不同的泰坦模組"
+
+ titan_weapon_components:0 "泰坦模組"
+ titan_weapon_components_DESC:0 "好吧,我們這就去造妳想要的那個大家夥,給他加點什麽?"
+
+ TITAN_NO_WEAPON:0 "無組件"
+
+ TITAN_PROJECTED_DEFENSES:0 "防禦預測"
+ TITAN_PROJECTED_DEFENSES_DESC:0 "先進的護盾操縱技術允許泰坦將超級護盾安置在正確的地方,防護範圍內所有船只。"
+ aura_projected_defenses:0 "$aura_category_defensive$ - $aura_type_support$"
+
+ TITAN_INERTIA_DAMPENERS:0 "慣性緩沖器"
+ TITAN_INERTIA_DAMPENERS_DESC:0 "通過部署額外的慣性緩沖場,泰坦讓我們艦隊的亞光速速度大大增加。"
+
+ TITAN_CENTRALISED_COMMAND:0 "預備躍遷"
+ TITAN_CENTRALISED_COMMAND_DESC:0 "運用泰坦的強大能力加速躍遷計算和充能。"
+ aura_centralised_command:0 "$aura_category_defensive$ - $aura_type_support$"
+
+ TITAN_NETWORKED_TARGET:0 "索敵網絡"
+ TITAN_NETWORKED_TARGET_DESC:0 "通過分析艦隊的傳感器數據,泰坦能夠增加範圍的所有艦船的有效武器範圍。"
+ aura_networked_target:0 "$aura_category_defensive$ - $aura_type_support$"
+
+ TITAN_VIRUS:0 "AI入侵"
+ TITAN_VIRUS_DESC:0 "泰坦的AI攻擊敵人船只的計算機系統,降低對方的準確度和速度。"
+ aura_titan_virus:0 "$aura_category_offensive$ - $aura_type_debuff$"
+
+ TITAN_CORE_01:0 "復仇核心"
+ TITAN_CORE_02:0 "壁壘核心"
+ TITAN_CORE_03:0 "哨戒核心"
+
+ TITAN_CORE_FALLEN:0 "聖殿核心"
+
+ LEVIATHAN_CORE_01:0 "阿瑞斯"
+ LEVIATHAN_CORE_02:0 "阿耳特彌斯"
+
+#Doomsday weapons
+ TECH_UNLOCK_TITAN_DOOMSDAY_TITLE:0 "§E解鎖泰坦末日武器研究鏈§!"
+ TECH_UNLOCK_TITAN_DOOMSDAY_DESC:0 "末日武器是被設計用來摧毀整個殖民地的。\n\n妳需要在帝國政策界面授權使用末日武器。"
+
+#Titan Doomsday Device
+ edict_doomsday_authorisation:0 "末日武器授權"
+ edict_doomsday_authorisation_desc:0 "\n使用末日武器需要授權,同時需要很強的輿論掌控能力。\n\n授權使用的末日武器,妳將可以從帝國政策菜單選擇壹種末日武器。\n\n"
+
+ policy_isb_doomsday_policy:0 "末日武器"
+ policy_isb_doomsday_policy_desc:0 "我們真的應該使用它嗎？我認為這是可怕的,但我還是想問這個問題。"
+
+ doomsday_outlawed:0 "取締"
+ doomsday_outlawed_name:0 "禁止使用末日武器"
+ doomsday_outlawed_desc:1 "我註視著深淵,但我不會動搖。\n\n§E妳的泰坦不會使用末日武器§!"
+
+ doomsday_kinetic:0 "核平"
+ doomsday_kinetic_name:0 "允許泰坦使用核彈洗地"
+ doomsday_kinetic_desc:1 "§E每個月,若是行星防禦力低於50%,將會有壹些地塊被轟成廢土,持續到星球上所有人口死亡。\n\n每月有幾率直接熔巖化§!"
+
+ doomsday_virus:0 "碎星"
+ doomsday_virus_name:0 "允許泰坦使用星核爆裂"
+ doomsday_virus_desc:1 "§E若行星防禦力低於25%,將會派遣地獄傘兵嘗試引爆星核。\n\n每月有較大概率把行星毀滅§!"
+
+ opinion_doomsday_low:0 "使用末日武器"
+
+# Doomsday Weapon - Sun Crusher
+ TECH_UNLOCK_SUN_CRUSHER_CHAIN_TITLE:0 "§E撼日者研究鏈§!"
+ TECH_UNLOCK_SUN_CRUSHER_CHAIN_DESC:0 "研究接下來的壹系列技術解鎖撼日者"
+
+ TECH_UNLOCK_SUN_CRUSHER_CONSTRUCTION_TITLE:0 "§H解鎖末日武器:§! 撼日者"
+ TECH_UNLOCK_SUN_CRUSHER_CONSTRUCTION_DESC:0 "§H撼日者§!\n$tech_sun_crusher_desc$"
+
+ sun_crusher:0 "撼日者"
+ sun_crusher_plural:0 "撼日者"
+
+ SUN_CRUSHER_SECTION:0 "救贖"
+ SUN_CRUSHER_CORE:0 "星雲核心"
+
+ exploding_bunny:0 "爆裂女郎"
+ exploding_bunny_plural:0 "爆裂女郎"
+
+ pc_destroyed:0 "破碎星球"
+ pc_destroyed_desc:0 "這個死亡星球的地殼已經被不可思議的力量撕開了,熔火之心暴露在太空中"
+
+ pc_nova:0 "琉化星球"
+ pc_nova_desc:0 "這顆行星被太陽新星摧毀,大部分的大氣已經被壹掃而光,其表面變成了玻璃。"
+
+ pc_nova_gas:0 "燃燒巨行星"
+ pc_nova_gas_desc:0 "氣態巨行星被太陽新星點燃,大氣層將會持續燃燒直到消失。"
+
+ pc_ringworld_habitable_nova:0 "毀壞的環世界"
+ pc_ringworld_habitable_nova_desc:0 "壹個環繞恒星的巨大環狀天梯\n\n但是這個偉大建築已經不可修復的毀壞了"
+ pc_ringworld_tech_nova:0 "毀壞的環世界"
+ pc_ringworld_tech_nova_desc:0 "壹個環繞恒星的巨大環狀天梯\n\n但是這個偉大建築已經不可修復的毀壞了"
+ pc_ringworld_seam_nova:0 "毀壞的環世界"
+ pc_ringworld_seam_nova_desc:0 "壹個環繞恒星的巨大環狀天梯\n\n但是這個偉大建築已經不可修復的毀壞了"
+
+ edict_doomsday_nova_authorisation:0 "授權使用撼日者"
+ edict_doomsday_nova_authorisation_desc:0 "\n末日武器的使用需要授權!\n\n首先妳需要激活法令,然後讓撼日者進入恒星軌道,到達預定位置後解散撼日者即可。\n\n妳只能在非本國國土才可使用該末日武器。\n\n§H警告: 使用撼日者是各國明令禁止的行為,不到萬不得已不建議使用這壹終極手段。§!\n\n"
+
+#Sun Crusher opinion modifiers
+ opinion_doomsday_outlawed:0 "禁止末日武器"
+ opinion_doomsday_allowed:0 "允許末日武器"
+ opinion_doomsday_low:0 "只使用對行星末日武器"
+ opinion_doomsday_destroy_planet:0 "摧毀行星"
+ opinion_doomsday_destroy_planet_owner:0 "摧毀我的行星"
+ opinion_doomsday_destroy_star:0 "摧毀星系"
+ opinion_doomsday_destroy_star_empty:0 "撼日者測試管制"
+ opinion_doomsday_destroy_star_owner:0 "摧毀我的星系"
+ opinion_doomsday_has_nova_small:0 "擁有撼日者"
+ opinion_doomsday_has_nova_large:0 "擁有大量撼日者後備"
+
+ error_nova_01.name:0 "激活失敗"
+ error_nova_01.desc:0 "警告:武器激活失敗。\n\n這個武器不能作用於黑洞,中子星以及超新星.他對行星也是無效的.請找壹顆主序星。"
+ error_nova_01.a:0 "知道了"
+
+ error_nova_02.name:0 "激活失敗"
+ error_nova_02.desc:0 "警告:武器激活失敗。\n\n這個武器只允許在無主和敵對星域使用\n\n妳真是喪心病狂。"
+ error_nova_02.a:0 "知道了"
+
+ error_nova_03.name:0 "激活失敗"
+ error_nova_03.desc:0 "警告:武器激活失敗。\n\n只有艦船在恒星軌道上時該武器才能啟動.右擊移動到恒星軌道並重試壹次。"
+ error_nova_03.a:0 "知道了"
+
+ error_nova_04.name:0 "激活失敗"
+ error_nova_04.desc:0 "警告:武器激活失敗。\n\n妳不能同時摧毀兩顆恒星.請等待前壹顆恒星變成超新星之後再摧毀下壹顆。"
+ error_nova_04.a:0 "知道了"
+
+ titan_doomsday.105.title:0 "確認"
+ titan_doomsday.105.desc:0 "妳確認解除撼日者的控制?\n\n如果妳想要確認該操作,請先在帝國法令中給予授權。"
+ titan_doomsday.105.a:0 "解除控制"
+ titan_doomsday.105.b:0 "取消命令"
+
+ nova_success.name:0 " "
+ nova_success.desc:0 "隨著所有系統自檢完成,最終授權代碼已發送給了機載AI。\n末日武器開始加載,準備進入恒星核心。\n接著它消失了,默默燃燒的恒星似乎沒有任何變化。\n\n數小時後恒星的顏色改變了,內部的異常融合過程使得恒星表面出現了塌陷,亞空間波動破壞了所有艦船的引擎系統. 這個星系以及星系裏的壹切將會毀滅。\n\n這顆恒星已經開始變成超新星! "
+ nova_success.a:0 "..."
+
+#Leviathan Tech
+
+ TECH_UNLOCK_LEVIATHAN_CONSTRUCTION_TITLE:0 "§H解鎖艦船類型:§! 利維坦"
+ TECH_UNLOCK_LEVIATHAN_CONSTRUCTION_DESC:0 "§H利維坦§!\n利維坦是壹種純粹的進攻型主力艦殺手,利用位相科技的船體具有難以置信的速度和機動性。"
+
+ TECH_UNLOCK_LEVIATHAN_CHAIN_TITLE:0 "§E利維坦研究鏈§!"
+ TECH_UNLOCK_LEVIATHAN_CHAIN_DESC:0 "研究接下來的壹系列科技來解鎖利維坦"
+
+ SHIELD_ISB_01:0 "位相護盾"
+ SHIELD_ISB_01_DESC:0 "$tech_phased_shields_desc$"
+ SMALL_SHIELD_ISB_01:0 "小型位相護盾"
+ MEDIUM_SHIELD_ISB_01:0 "中型位相護盾"
+ LARGE_SHIELD_ISB_01:0 "大型位相護盾"
+
+ CRYSTAL_ARMOR_ISB_01:0 "位相裝甲"
+ CRYSTAL_ARMOR_ISB_01_DESC:0 "物質操作允許我們增加船體的結構穩定性。"
+ SMALL_CRYSTAL_ARMOR_ISB_01:0 "小型位相裝甲"
+ MEDIUM_CRYSTAL_ARMOR_ISB_01:0 "中型位相裝甲"
+ LARGE_CRYSTAL_ARMOR_ISB_01:0 "大型位相裝甲"
+
+# v1.3 - Avatar and Doomsday Weapons
+
+ avatar:0 "化身"
+ avatar_plural:0 "化身"
+
+ exploding_bunny_avatar:0 "化身爆炸"
+ exploding_bunny_avatar_plural:0 "化身爆炸"
+
+ avatar_frame:0 "化身建造構架"
+ avatar_frame_plural:0 "化身建造構架"
+
+ avatar_constructor:0 "化身施工船"
+ avatar_constructor_plural:0 "化身施工船"
+
+ AVATAR_CONSTRUCTOR_SECTION:0 "平臺建造者"
+ AVATAR_FRAME_SECTION:0 " 化身平臺"
+
+ mod_avatar_raider:0 "掠奪者來襲"
+ mod_avatar_frame_active:0 "化身建設進展"
+
+ TECH_UNLOCK_AVATAR_CHAIN_TITLE:0 "§E化身研究鏈§!"
+ TECH_UNLOCK_AVATAR_CHAIN_DESC:0 "研究解鎖所有有關化身工程的技術。"
+
+ TECH_UNLOCK_AVATAR_CONSTRUCTION_TITLE:0 "§H解鎖船只類型:§! 化身的建設"
+ TECH_UNLOCK_AVATAR_CONSTRUCTION_DESC:0 "化身工程是帝國最大的建設項目，也是帝國中最具有破壞性的大型武器平臺。利用人造黑洞來獲得能量，並且還可將獲得能量重新聚集再釋放出去，其威力可瞬間摧毀整個星球。強大的化身使得弱國害怕並臣服於我們。同時它也是強大的帝國的象征。§!\n\n§E允許妳建設化身平臺。\n\n警告: 那些害怕我們的人是不會允許我們完成這個強大的末日武器的建造的，他們會發動強大的艦隊趕在我們完工前摧毀它。§!\n\n§H移動平臺到安全地帶，並保衛它直到完工為止。"
+
+ edict_doomsday_longinus_authorisation:0 "授權朗基努斯之槍"
+ edict_doomsday_longinus_authorisation_desc:0 "\n需要末日武器授權許可。\n\n通過法令授權以便獲得攻擊權限，妳可以摧毀任何行星，當然也包括自己的。\n\n"
+
+ doomsday_nanite:0 "反匯編納米機"
+ doomsday_nanite_name:0 "只有反匯編納米機可以使用"
+ doomsday_nanite_desc:1 "\n§E每個月被投放的星球都會有壹個人口被消滅和壹個建築被摧毀，直到下達停止命令或者所有建築和人口都被清理得壹幹二凈為止。\n\n每個建築被摧毀會產生350礦物和50能源。每個人口被消滅會產生350能源和50礦物。\n\n這個武器需要妳法令授權方可激活。\n\n警告: 反匯編納米機會被認作為是壹個十分殘酷的末日武器。§!\n"
+
+# Avatar construction projects
+ PROJ_AVATAR_CONSTRUCT_01:0 "化身平臺的建設(待命)"
+ PROJ_AVATAR_CONSTRUCT_01_DESC:0 "研究這個工程會激活並開始自動建造。\n\n建造化身需要花費10年時間，期間每月要消耗700能源和礦物。\n\n§H警告: 其他帝國不會讓我們輕易完成這個末日武器的，必須保衛它直到建造完成為止。§!"
+
+ PROJ_AVATAR_CONSTRUCT_02:0 "化身平臺的建設(激活)"
+ PROJ_AVATAR_CONSTRUCT_02_DESC:0 "建設正在進行中。這個特殊工程無需研究，只需保護並直到時間走完為止。"
+
+ PROJ_AVATAR_ERROR_02:0 "化身失效"
+ PROJ_AVATAR_ERROR_02_DESC:0 "警告: 化身不能放置在其他艦隊中，請確保化身是獨立艦隊並重新激活它。"
+
+# Avatar construction events
+ avatar_constructor_01.name:0 "確認"
+ avatar_constructor_01.desc:0 "請確認妳的操作。\n\n§H警告: 化身平臺準備開始建造部署，壹旦進入建設部署之後將無法移動且會極其容易受到攻擊。§!"
+ avatar_constructor_01.a:0 "確認建設部署"
+ avatar_constructor_01.b:0 "取消建設部署"
+ avatar_constructor_01.c:0 "取消"
+
+ avatar_construction_start.name:0 "化身平臺激活"
+ avatar_construction_start.desc:0 "化身進入建造部署階段。查看特殊工程(情報日誌)會顯示距離完工還剩有多久。\n\n註意我們的平臺建設的行為已經被人發現。雖然某些帝國已向我們提出抗議，但是還沒有人敢公開反對我們。\n\n而且最近邊境傳來被不明艦隊入侵的消息，看來我們的敵人選擇讓他們艦隊進行秘密行動。\n\n來自人工智能預測:我們在未來的12個月內可能會受到不明艦隊的來襲。"
+ avatar_construction_start.a:0 "進入高度戒備狀態。"
+
+ avatar_construction_complete.name:0 "建設完成"
+ avatar_construction_complete.desc:0 "武器系統上線, 化身待命中。"
+ avatar_construction_complete.a:0 "棒棒噠。"
+
+ avatar_raid_01.name:0 "發現敵人艦隊"
+ avatar_raid_01.desc:0 "發現壹支無名艦隊正向化身的建設地駛去。\n\n該艦隊似乎很大程度上是由輕巡洋艦和驅逐艦組成。我們無法確定是這支無名艦隊是來自哪個帝國。有可能是掠奪者，但是這可能性很低。\n\n這是壹支用來測試我們的防線的偵查艦隊。"
+ avatar_raid_01.a:0 "戰鬥準備信號已發布。"
+
+ avatar_raid_02.name:0 "發現敵人艦隊"
+ avatar_raid_02.desc:0 "發現壹支無名艦隊正向化身的建設地駛去。\n\n該艦隊組成主要是輕巡洋艦和驅逐艦、巡洋艦或者其他更大的船只。"
+ avatar_raid_02.a:0 "還來送死?"
+
+ avatar_raid_03.name:0 "發現敵人艦隊"
+ avatar_raid_03.desc:0 "發現壹支無名艦隊正向化身的建設地駛去。\n\n艦隊組成範圍越來越廣。他們依舊冒充掠奪者身份，但是這個組成規模是掠奪者根本不可能達到的。\n\n這是我們的敵人的主力艦隊。"
+ avatar_raid_03.a:0 "他們將會被打敗。"
+
+ avatar_raid_04.name:0 "發現敵人艦隊"
+ avatar_raid_04.desc:0 "我們的敵人已經放棄了掠奪者的身份開始正面向我們大舉進攻。\n\n發現壹支龐大的聯盟艦隊正向化身的建設地駛來。這是他們最後的放手壹搏。"
+ avatar_raid_04.a:0 "這是壹個陷阱!"
+
+ avatar_raid_break.name:0 "艦隊活動跡象"
+ avatar_raid_break.desc:0 "我們檢測到最近被大量不明身份的船只進入我們邊境。然而這些不明身份的船只試圖避開我們的傳感器檢測。\n\n看來我們的敵人正在組織進攻力量。雖然他們不會那麽快發起進攻，但他們發起時候肯定比現在擁有更龐大的力量。"
+ avatar_raid_break.a:0 "我們準備就緒。"
+
+ avatar_error_01.name:0 "無法啟動化身工程"
+ avatar_error_01.desc:0 "我們的帝國無法支撐起超過多個化身平臺。"
+ avatar_error_01.a:0 "了解"
+
+ avatar_error_02.name:0 "化身失效"
+ avatar_error_02.desc:0 "警告: 化身不能放置在其他艦隊中，請確保化身是唯壹的艦隊並重新激活它。"
+ avatar_error_02.a:0 "了解"
+
+ avatar_error_03.name:0 "錯誤"
+ avatar_error_03.desc:0 "§H警告: 朗基努斯之槍已得到授權。§!\n\n妳目前正試圖摧毀當前目標是禁止摧毀的目標。請註意妳可以摧毀任何行星，但不包括自己的。\n\n該武器可以摧毀其他末日武器也無法摧毀的小行星或行星。\n\n請選擇另壹個目標或者下達停止命令來忽略這個警告。"
+ avatar_error_03.a:0 "了解"
+
+#Avatar Components
+
+ AVATAR_ENERGY_GUN_01:0 "A.T.立場"
+ AVATAR_CORE:0 "S²核心"
+
+# Avatar Opinions
+ opinion_has_avatar:0 "恐懼會使他們保持壹致"
+ opinion_doomsday_med:0 "殘酷的末日武器使用者"
+
+#Crisis normal mode balance
+ mod_normal_ed:0 "亞空間平衡 - 正常"
+ mod_normal_swarm:0 "蟲族入侵平衡 - 正常"
+
+# v1.4 Erebus
+ erebus:0 "厄瑞玻斯"
+ erebus_plural:0 "厄瑞玻斯"
+ erebus_drone:0 "無人機"
+ erebus_drone_plural:0 "無人機群"
+
+ EREBUS_SECTION:0 "煉獄"
+
+ EREBUS_DRONE_GUN_01:0 "脈沖炮"
+ EREBUS_DRONE_CORE:0 "無人機核心"
+ EREBUS_CORE:0 "黑暗核心"
+
+ TECH_UNLOCK_EREBUS_CHAIN_TITLE:0 "§E厄瑞玻斯研究鏈§!"
+ TECH_UNLOCK_EREBUS_CHAIN_DESC:0 "研究接下來的壹系列科技來解鎖厄瑞玻斯"
+
+ TECH_UNLOCK_EREBUS_CONSTRUCTION_TITLE:0 "§H解鎖戰艦類型:§! 厄瑞玻斯"
+ TECH_UNLOCK_EREBUS_CONSTRUCTION_DESC:0 "§H厄瑞玻斯§!\n壹艘巨大的航母，能夠在作戰期間完成針對性的制造並發射無人機作戰小隊。\n\n厄瑞玻斯每隔25天會發射壹支無人機作戰小隊(每支小隊為10艘)，但這支小隊會在90天後自我銷毀。"
+
+# Doomsday weapons
+ doomsday_nanite_nonorganic:0 "納米分解機"
+ doomsday_nanite_nonorganic_name:0 "只有納米分解機可使用"
+ doomsday_nanite_nonorganic_desc:1 "\n§E每個月，任何當星球被轟炸不到10%的血量或者泰坦，化身處在該星球軌道上空的時候，該星球將會摧毀3個建築. 這會壹直持續轟炸停止或者沒有建築為止。\n\n警告: 納米分解機被認為是壹個殘酷的末日武器。§!\n"
+
+ doomsday_mood_alteration:0 "精神控制"
+ doomsday_mood_alteration_name:0 "只有精神控制可使用"
+ doomsday_mood_alteration_desc:1 "\n§E每個月，任何當星球被轟炸不到10%的血量或者泰坦，化身處在該星球軌道上空的時候，該星球會獲得-10%幸福度和+20%道德分歧，該修改會持續兩年。\n\n警告: 精神控制被認為是壹個殘酷的末日武器。§!\n"
+
+ doomsday_weapon_06:0 "精神控制"
+ doomsday_weapon_06_desc:0 "$tech_titan_doomsday_weapons_06_desc$"
+
+ doomsday_nanite_gene:0 "喪屍病毒"
+ doomsday_nanite_gene_name:0 "只有喪屍病毒可使用"
+ doomsday_nanite_gene_desc:1 "\n§E每個月，任何當星球被轟炸不到10%的血量或者泰坦，化身處在該星球軌道上空的時候，該星球每當死亡壹個人口會轉換成由妳控制兩個軍隊,並且軍隊會自動攻擊該星球. 該末日武器每次使用花費是700能源。\n\n警告: 喪屍病毒被認為是壹個殘酷的末日武器。§!\n"
+
+ doomsday_abduction:0 "洗腦同化"
+ doomsday_abduction_name:0 "只有洗腦同化可使用"
+ doomsday_abduction_desc:1 "\n§E每兩個月，任何當星球被轟炸不到10%的血量或者泰坦，化身處在該星球軌道上空的時候，該星球會有壹個人口被放置到由妳控制的合適星球下。被安置的人口會產生精神改變以便適應妳的帝國。這個末日武器每月使用花費是250能源和500礦物。\n\n妳必須對該星球進行為期兩個月同化轟炸，並且這個過程可能會因為妳沒有適合星球空位用於安置人口而中止。\n\n警告: 洗腦同化被認為是壹個殘酷的末日武器。§!\n"
+
+# 1.5 Ragnarok
+ TECH_UNLOCK_RAGNAROK_CONSTRUCTION_TITLE:0 "§H解鎖戰艦類型:§! 諸神黃昏"
+ TECH_UNLOCK_RAGNAROK_CONSTRUCTION_DESC:0 "§H諸神黃昏§!\n壹艘在銀河系核心附近發現的有機物組成的超級大的飛船.雖然我們不能完全理解這艘船以及其技術，但是我們可以通過壹些手段去控制它.它可以部署朗基努斯之槍和卡西烏斯之槍。§!\n\n§E諸神黃昏目前處在幼兒期。它需要通過吞噬星球獲得能量才能成長至成熟期，而且卡西烏斯之槍充能也必須通過吞噬星球才能進行。更多細節可以查閱事件日誌(情報日誌)了解。§!\n\n§R警告: 妳在任何時候只能有壹個諸神黃昏，再次建造會導致核心失控。§!"
+
+ TECH_UNLOCK_RAGNAROK_CHAIN_TITLE:0 "§E諸神黃昏研究鏈§!"
+ TECH_UNLOCK_RAGNAROK_CHAIN_DESC:0 "研究接下來的壹系列科技來解鎖諸神黃昏"
+
+ ragnarok:0 "諸神黃昏"
+ ragnarok_plural:0 "諸神黃昏"
+ consume_planet_bunny:0 "星球吞噬者"
+ consume_planet_bunny_plural:0 "星球吞噬者"
+ rag_effect_ship:0 "諸神黃昏開火"
+ rag_effect_ship_plural:0 "諸神黃昏開火"
+ rag_effect_explosion_ship:0 "諸神黃昏爆炸"
+ rag_effect_explosion_ship_plural: "諸神黃昏爆炸"
+ rag_effect_damage_ship:0 "諸神黃昏生成"
+ rag_effect_damage_ship_plural:0 "諸神黃昏生成"
+ RAGNAROK_SECTION:0 "世界蛇"
+
+ ISB_RAGNAROK_EXPLOSION_01:0 "爆炸聲"
+ ISB_RAGNAROK_EXPLOSION_02:0 "爆炸聲"
+
+ ragnarok_consumed:0 "行星消耗"
+ ragnarok_power_chain_title:0 "諸神黃昏 - 成長"
+ ragnarok_power_chain_desc:0 "§H諸神黃昏現處於虛弱狀態直到它吞噬40顆星球為止。\n\n通知: 諸神黃昏無法加入任何艦隊。請確保它是獨立艦隊。§!\n\n§R警告: 妳在任何時候只能有壹個諸神黃昏，再次建造會導致核心失控。§!"
+ ragnarok_doomsday_charge_chain_title:0 "卡西烏斯之槍 - 耗盡"
+ ragnarok_doomsday_charge_chain_desc:0 "卡西烏斯之槍能源已耗盡，需要重新充能。\n\n武器充能需要吞噬4顆星球。"
+
+ ragnarok_construct_01.name:0 "諸神黃昏 - 餵養"
+ ragnarok_construct_01.desc:0 "諸神黃昏發育完成。\n\n但然而其核心仍然處於幼兒期，必須持續餵養至成熟為止。科學家認為諸神黃昏需要靠吞噬星球來獲得能量方可成長。不過這個過程會導致星球永久失去居住可能性。\n\n根據科學家計算，我們需要40顆星球才能將諸神黃昏餵養至成熟階段。\n\n§H諸神黃昏現處於虛弱狀態直到它吞噬40顆星球為止. 妳可以通過查看'諸神黃昏 - 成長'的事件日誌(情報日誌)了解更多情況。\n\n通知: 諸神黃昏無法加入任何艦隊。請確保它是獨立艦隊。§!\n\n§R警告: 妳在任何時候只能有壹個諸神黃昏，再次建造會導致核心失控。§!"
+ ragnarok_construct_01.a:0 "40顆星球? 這就是威力的代價。"
+
+ ragnarok_construct_02.name:0 "諸神黃昏 - 成熟"
+ ragnarok_construct_02.desc:0 "諸神黃昏已經成熟.它的力量已經極大加強並且可部署末日武器 - 卡西烏斯之槍。\n\n§H當卡西烏斯之槍處於充能完畢狀態時候，諸神黃昏進入戰鬥會出現壹個叫'卡西烏斯之槍'選項。\n\n點擊按鈕或者按F激活武器後會出現壹個預期效果區域的信標，移動信標到指定位置，然後再次點擊按鈕或者按F發射。\n\n卡西烏斯之槍使用前需要花費31天時間充能和在使用後還額外需要39天時間進行冷卻以便再次充能。\n\n卡西烏斯之槍每次充能後只可使用壹次. 每次充能必須吞噬4顆星球. 妳可以通過'卡西烏斯之槍 - 耗盡'的事件日誌(情報日誌)了解更多情況。§!"
+ ragnarok_construct_02.a:0 "極好的。"
+
+ ragnarok_recharge_02.name:0 "卡西烏斯之槍 - 待命"
+ ragnarok_recharge_02.desc:0 "卡西烏斯之槍充能完畢進入待命狀態。"
+ ragnarok_recharge_02.a:0 "極好的。"
+
+ ragnarok_error_01.name:0 "諸神黃昏 - 失控"
+ ragnarok_error_01.desc:0 "諸神黃昏失去控制並發瘋似的不斷生長。由於情況緊急，不得已啟動了安全協議銷毀了它。\n\n§R警告: 妳在任何時候只能有壹個諸神黃昏，再次建造會導致核心失控。§!"
+ ragnarok_error_01.a:0 "..."
+
+ ragnarok_error_02.name:0 "無法開火 - 卡西烏斯之槍"
+ ragnarok_error_02.desc:0 "卡西烏斯之槍能源已耗盡，需要重新充能。\n\n武器充能需要吞噬4顆星球。"
+ ragnarok_error_02.a:0 "..."
+
+ isb_rag_create_marker_tip:0 "§H卡西烏斯之槍§!\n\n§E點擊按鈕並使用WASD或者鼠標移動指定位置，然後再次點擊按鈕或者按F以便確認並開火。§!"
+ isb_rag_fire_tip:0 "§H卡西烏斯之槍開火§!"
+ isb_rag_cancel_tip:0 "§R取消§!"
+ isb_rag_marker_move_tip:0 "§H移動攻擊位置§!"
+ isb_rag_marker_bunny_object:0 "§H卡西烏斯之槍§!"
+
+ flag_rag_mode_delay:0 "§Y妳必須暫時取消暫停遊戲以便激活按鈕，之後妳可以再次暫停§!"
+
+ RAGNAROK_CORE:0 "覺醒的S²核心"
+ ragnarok_components:0 "$RAGNAROK_CORE$"
+
+# Heinlein Compatibility Patch (v1.5.1)
+ STATION_SENSOR_BOOST_ISB_SMALL:0 "亞空間陣列"
+ STATION_SENSOR_BOOST_ISB_SMALL_DESC:0 "提高軍事空間站的傳感器範圍"
+ STATION_SENSOR_BOOST_ISB_MEDIUM:0 "先進的亞空間陣列"
+ STATION_SENSOR_BOOST_ISB_MEDIUM_DESC:0 "提高軍事空間站的傳感器範圍"
+ STATION_SENSOR_BOOST_ISB_LARGE:0 "更強的亞空間陣列"
+ STATION_SENSOR_BOOST_ISB_LARGE_DESC:0 "提高軍事空間站的傳感器範圍"
+
+ STATION_SENSOR_BOOST_PART_ISB_SMALL:0 "亞空間陣列"
+ STATION_SENSOR_BOOST_PART_ISB_MEDIUM:0 "先進的亞空間陣列"
+ STATION_SENSOR_BOOST_PART_ISB_LARGE:0 "更強的亞空間陣列"
+
+# Heinlein Patch 2 (v1.5.2)
+ sm_isb_defense_platform_01:0 "定點防禦系統 : E類型"
+ sm_isb_defense_platform_02:0 "定點防禦系統 : D類型"
+ sm_isb_defense_platform_03:0 "定點防禦系統 : C類型"
+
+# Updated crisis difficulty settings
+ policy_isb_crisis_diff_policy:0 "ISB - 危機難度"
+ policy_isb_crisis_diff_policy_desc:0 "\n允許妳修改危機的難度"
+ crisis_diff_normal:0 "正常難度 §Y(默認)§!"
+ crisis_diff_normal_desc:0 "\n這是壹個默認難度，為老玩家提供有趣的挑戰。\n\n"
+ crisis_diff_very_easy:0 "菜鳥難度"
+ crisis_diff_very_easy_desc:0 "\n是時候該教訓那群菜鳥了！\n\n"
+ crisis_diff_easy:0 "簡單難度"
+ crisis_diff_easy_desc:0 "\n簡單，輕松，適合在較小的星系或新人使用。\n\n"
+ crisis_diff_hard:0 "困難難度"
+ crisis_diff_hard_desc:0 "\n迎接最強的挑戰吧。\n\n"
+ crisis_diff_insane:0 "深淵難度"
+ crisis_diff_insane_desc:0 "\n§R凝視著深淵，\n我久久站在那裏，疑惑，\n擔心，懷疑，\n做著從來沒人做過的夢\n敢於向夢想前行...§!\n\n"
+
+# Guardian, AE and FE difficulty settings
+ policy_isb_guardian_diff_policy:0 "ISB - 守護者難度"
+ policy_isb_guardian_diff_policy_desc:0 "\n允許妳修改守護者的難度，以及他們會隨著時間流逝越來越強。"
+ guardian_diff_off:0 "關"
+ guardian_diff_off_desc:0 "\n守護者不會被加強"
+ guardian_diff_easy:0 "簡單"
+ guardian_diff_easy_desc:0 "\n守護者會隨著時間流逝逐漸變強，但每次加強幅度很小。\n\n"
+ guardian_diff_normal:0 "普通§Y(默認)§!"
+ guardian_diff_normal_desc:0 "\nThe 默認難度設置。守護者會隨著時間流逝越來越強。\n\n"
+
+ policy_isb_awakened_diff_policy:0 "ISB - 覺醒帝國難度"
+ policy_isb_awakened_diff_policy_desc:0 "\n允許妳調整覺醒帝國的難度。不影響失落帝國。"
+ awakened_diff_easy:0 "簡單"
+ awakened_diff_easy_desc:0 "\n覺醒帝國較弱。適合較小的星系。"
+ awakened_diff_normal:0 "普通§Y(默認)§!"
+ awakened_diff_normal_desc:0 "\n默認難度設置。"
+ awakened_diff_hard:0 "困難"
+ awakened_diff_hard_desc:0 "\n覺醒帝國會更強，期待妳的挑戰。"
+
+ policy_isb_fallen_diff_policy:0 "ISB - 失落帝國難度"
+ policy_isb_fallen_diff_policy_desc:0 "\n允許妳調整失落帝國的難度。不影響覺醒帝國。"
+ fallen_diff_easy:0 "簡單"
+ fallen_diff_easy_desc:0 "\n失落帝國較弱。適合較小的星系。"
+ fallen_diff_normal:0 "普通§Y(默認)§!"
+ fallen_diff_normal_desc:0 "\n默認難度設置。"
+ fallen_diff_hard:0 "困難"
+ fallen_diff_hard_desc:0 "\n失落帝國會更強，期待妳的挑戰。"

@@ -1,0 +1,48 @@
+# File contains counters to track during war demands to predict outcomes and make demands exclusive.
+
+num_owned_planets = {
+	scope = country
+	initial = {
+		base = 0
+		scaled_modifier = {
+			add = 1
+			scope = root
+			calc = planets_in_country
+		}
+	}
+}
+
+ceded_or_liberated = {
+	scope = planet
+	initial = {
+		base = 0
+	}	
+}
+
+liberated_or_vassalized = {
+	scope = country
+	initial = {
+		base = 0
+	}
+}
+
+liberated = {
+	scope = country
+	initial = {
+		base = 0
+	}
+}
+
+subjugated = {
+	scope = country
+	initial = {
+		base = 0
+	}
+}
+
+num_country_wargoals = {
+	scope = country
+	initial = {
+		base = 0
+	}
+}

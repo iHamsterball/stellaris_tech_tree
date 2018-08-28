@@ -1,0 +1,207 @@
+# All global modifiers are here.  They are applied from certain game-features.
+#
+# Effects are fully scriptable here.
+
+# The names can NOT be removed or changed since the code references them
+
+#ai_ship_upkeep = {
+#	ship_upkeep_mult = -0.10
+#	max_minerals = 16000
+#	shipsize_titan_build_cost_mult = -0.5
+#	shipsize_leviathan_build_cost_mult = -0.5
+#}
+
+test_mode = {
+	tile_resource_minerals_mult = 2000.0
+	tile_resource_energy_mult = 2000.0
+	tile_resource_physics_research_mult = 5000.0
+	tile_resource_society_research_mult = 5000.0
+	tile_resource_engineering_research_mult = 5000.0
+	country_naval_cap_mult  = 100.0
+}
+
+
+fallen_ship_upkeep = {
+	ship_upkeep_mult = -0.3
+	country_naval_cap_mult = 2.0
+}
+
+mod_avatar_raider = {	
+	#ship_interstellar_speed_mult = 0.2
+	ship_winddown_mult = -0.75
+	#ship_weapon_damage = 2
+	ship_hull_mult = 1.0
+	ship_armor_mult = 1.0
+}
+
+#avatar_frame_inactive = {
+#	ship_upkeep_mult = -0.50
+#}
+
+mod_avatar_frame_active = {
+	ship_upkeep_mult = 5.5
+}
+
+mod_normal_ed = {
+	ship_weapon_damage = -0.1
+	ship_hull_mult = -0.1
+	ship_shield_mult = -0.1
+	ship_armor_mult = -0.1
+}
+
+mod_normal_swarm = {
+	ship_weapon_damage = -0.2
+	ship_fire_rate_mult = -0.25
+	ship_hull_mult = -0.25
+	ship_armor_mult = -0.25
+}
+
+doomsday_weapon_06 = {
+	pop_happiness = -0.10
+	#pop_ethic_shift = 0.20
+	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
+	icon_frame = 3
+}
+
+mod_guardian_buff_50 = {
+	ship_hull_mult = 1.5
+	ship_shield_mult = 1.5
+
+	ship_weapon_damage = 1.5
+	ship_fire_rate_mult = 0.5
+
+	ship_hull_regen_add_perc = 0.05
+}
+
+mod_guardian_buff_100 = {
+	ship_hull_mult = 1.5
+	ship_shield_mult = 1.5
+	ship_fire_rate_mult = 0.25
+
+	ship_weapon_damage = 2.0
+}
+
+mod_guardian_buff_150 = {
+	ship_hull_mult = 3.0
+	ship_shield_mult = 3.0
+
+	ship_weapon_damage = 2.0
+}
+
+mod_guardian_buff_200 = {
+	ship_hull_mult = 4.0
+	ship_shield_mult = 4.0
+
+	ship_weapon_damage = 3.0
+	ship_fire_rate_mult = 0.5
+}
+
+mod_guardian_buff_50_easy = {
+	ship_hull_mult = 0.75
+	ship_shield_mult = 0.75
+
+	ship_weapon_damage = 0.75
+	ship_fire_rate_mult = 0.25
+
+	ship_hull_regen_add_perc = 1
+}
+
+mod_guardian_buff_100_easy = {
+	ship_hull_mult = 0.75
+	ship_shield_mult = 0.75
+	ship_fire_rate_mult = 0.125
+
+	ship_weapon_damage = 1.0
+}
+
+mod_guardian_buff_150_easy = {
+	ship_hull_mult = 1.5
+	ship_shield_mult = 1.5
+
+	ship_weapon_damage = 1.0
+}
+
+mod_guardian_buff_200_easy = {
+	ship_hull_mult = 2.0
+	ship_shield_mult = 2.0
+
+	ship_weapon_damage = 1.5
+	ship_fire_rate_mult = 0.25
+}
+
+ai_ship_upkeep = {
+	ship_upkeep_mult = -0.20
+	max_minerals = 35000
+	max_energy = 10000
+	country_resource_influence_add = 1.0
+
+	shipsize_titan_build_cost_mult = -0.5
+	shipsize_leviathan_build_cost_mult = -0.5
+	shipsize_erebus_build_cost_mult = -0.6
+	#starbase_module_build_cost_mult = -0.9
+	shipsize_avatar_build_cost_mult = -0.9
+}
+
+mod_awakened_easy = {	
+	ship_weapon_damage = -0.5
+	ship_fire_rate_mult = -0.3
+
+	ship_armor_mult = -0.3
+	SHIP_EVASION_MULT = -0.3
+
+	ship_hull_mult = -0.5
+	ship_shield_mult = -0.5
+
+	SHIP_ACCURACY_ADD = -30
+	SHIP_WEAPON_RANGE_MULT = -0.2
+}
+
+mod_awakened_hard = {
+	ship_weapon_damage = 0.5
+	ship_fire_rate_mult = 0.35
+
+	ship_armor_mult = 0.25
+
+	ship_hull_mult = 0.25
+	ship_shield_mult = 0.25
+
+	SHIP_ACCURACY_ADD = 15
+	ship_tracking_add = 15
+
+	ship_hull_regen_add_perc = 0.1
+	ship_speed_mult = 0.15
+	
+	SHIP_WEAPON_RANGE_MULT = 0.2
+}
+
+mod_fallen_easy = {
+	ship_weapon_damage = -0.5
+	ship_fire_rate_mult = -0.3
+
+	ship_armor_mult = -0.3
+	SHIP_EVASION_MULT = -0.3
+
+	ship_hull_mult = -0.5
+	ship_shield_mult = -0.5
+
+	SHIP_ACCURACY_ADD = -30
+	SHIP_WEAPON_RANGE_MULT = -0.2
+}
+
+mod_fallen_hard = {
+	ship_weapon_damage = 0.5
+	ship_fire_rate_mult = 0.35
+
+	ship_armor_mult = 0.25
+
+	ship_hull_mult = 0.25
+	ship_shield_mult = 0.25
+
+	SHIP_ACCURACY_ADD = 15
+	ship_tracking_add = 15
+
+	ship_hull_regen_add_perc = 0.1
+	ship_speed_mult = 0.15
+	
+	SHIP_WEAPON_RANGE_MULT = 0.2
+}
