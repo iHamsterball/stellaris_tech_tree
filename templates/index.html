@@ -173,9 +173,7 @@
             };
         }
 
-        let techList;
-        let reflow = false;
-        let offset_x, offset_y, scroll_x, scroll_y;
+        let techList, reflow;
         window.addEventListener("DOMContentLoaded", function() {
             setBanner('banner-info', "{% trans 'Loading...'%}");
             let version;
@@ -274,22 +272,10 @@
                             for (index in resultList[category]) {
                                 let node = document.createElement('div');
                                 node.classList.add('menuitem', 'search-item');
-                                if (reflow == false) {
-                                    node.setAttribute('offset-x', offset_x);
-                                    node.setAttribute('offset-y', offset_y);
-                                    node.setAttribute('scroll-x', scroll_x);
-                                    node.setAttribute('scroll-y', scroll_y);
-                                } else {
-                                    offset_x = resultList[category][index].offsetParent.offsetLeft;
-                                    offset_y = resultList[category][index].offsetParent.offsetTop;
-                                    scroll_x = resultList[category][index].offsetParent.scrollWidth;
-                                    scroll_y = resultList[category][index].offsetParent.scrollHeight;
-                                    node.setAttribute('offset-x', offset_x);
-                                    node.setAttribute('offset-y', offset_y);
-                                    node.setAttribute('scroll-x', scroll_x);
-                                    node.setAttribute('scroll-y', scroll_y);
-                                    reflow = false;
-                                }
+                                node.setAttribute('offset-x', resultList[category][index].offsetParent.offsetLeft);
+                                node.setAttribute('offset-y', resultList[category][index].offsetParent.offsetTop);
+                                node.setAttribute('scroll-x', resultList[category][index].offsetParent.scrollWidth);
+                                node.setAttribute('scroll-y', resultList[category][index].offsetParent.scrollHeight);
                                 //node.setAttribute('onclick', 'locateTech(this);');
                                 let text = document.createElement('span');
                                 text.innerText = resultList[category][index].childNodes[0].data;
@@ -341,7 +327,6 @@
             document.getElementById('panel').classList.remove('search-active');
             document.getElementById('panel').classList.remove('responsive-search-open');
             document.getElementById('search-popout').classList.add('hidden');
-            reflow = true;
         }
         function showHamburger() {
             document.getElementById('nav').classList.add('nav-responsive-open');
