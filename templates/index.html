@@ -173,7 +173,7 @@
             };
         }
 
-        let techList, reflow;
+        let techList;
         window.addEventListener("DOMContentLoaded", function() {
             setBanner('banner-info', "{% trans 'Loading...'%}");
             let version;
@@ -191,7 +191,7 @@
             let language = "{% get_current_language as CUR_LANGUAGE %}{% get_language_info for CUR_LANGUAGE as cur %}{{ cur.code }}";
             console.log(language);
             document.getElementById(language).classList.add('nav-active');
-            waitLoadDrag('tech-tree', 100, generateTechList);
+            waitLoadDrag('tech-tree', 100);
         });
         let search_results = document.getElementById("search-results");
         if (search_results.addEventListener) {
@@ -231,11 +231,13 @@
             document.getElementById(value).children[0].classList.add('nav-active');
             loadTech(value);
             probeSave(value);
-            waitLoadDrag('tech-tree', 100, generateTechList);
+            waitLoadDrag('tech-tree', 100);
         }
         function generateTechList() {
             // Reduce duplicate calculation of techList
-            techList = Array.prototype.slice.call(document.querySelectorAll('p.node-name'));
+            let clone = document.getElementById('tech-tree').cloneNode(true);
+            synchronizeCssStyles(document.getElementById('tech-tree'), clone, true);
+            techList = Array.prototype.slice.call(clone.querySelectorAll('p.node-name'));
         }
         function searchTech(self) {
             let display = document.getElementById('search-results');
@@ -245,11 +247,11 @@
                     if (typeof cur != undefined) {//To prevent Paradox or Localization Teams from providing null strings
                         if (cur.childNodes.length > 0) {
                             if (cur.childNodes[0].data.toLowerCase().indexOf(self.value.toLowerCase()) != -1) {
-                                if (cur.offsetParent.classList.contains('physics')) {
+                                if (cur.parentNode.classList.contains('physics')) {
                                     result[0].push(cur);
-                                } else if (cur.offsetParent.classList.contains('society')) {
+                                } else if (cur.parentNode.classList.contains('society')) {
                                     result[1].push(cur);
-                                } else if (cur.offsetParent.classList.contains('engineering')) {
+                                } else if (cur.parentNode.classList.contains('engineering')) {
                                     result[2].push(cur);
                                 }
                             }
@@ -272,10 +274,12 @@
                             for (index in resultList[category]) {
                                 let node = document.createElement('div');
                                 node.classList.add('menuitem', 'search-item');
-                                node.setAttribute('offset-x', resultList[category][index].offsetParent.offsetLeft);
-                                node.setAttribute('offset-y', resultList[category][index].offsetParent.offsetTop);
-                                node.setAttribute('scroll-x', resultList[category][index].offsetParent.scrollWidth);
-                                node.setAttribute('scroll-y', resultList[category][index].offsetParent.scrollHeight);
+                                // It is no longer offset-x or scroll-x any more, but tolerance is acceptable, speed first
+                                let value = resultList[category][index].parentNode.getAttribute('savedstyle').split(',');
+                                node.setAttribute('offset-x', value[0]);
+                                node.setAttribute('offset-y', value[1]);
+                                node.setAttribute('scroll-x', value[2]);
+                                node.setAttribute('scroll-y', value[3]);
                                 //node.setAttribute('onclick', 'locateTech(this);');
                                 let text = document.createElement('span');
                                 text.innerText = resultList[category][index].childNodes[0].data;
@@ -322,6 +326,7 @@
                     searchTech(self);
                     break;
             }
+            generateTechList();
         }
         function searchInactive() {
             document.getElementById('panel').classList.remove('search-active');
@@ -356,14 +361,40 @@
             let offsetY = self.getAttribute('offset-y');
             let scrollX = self.getAttribute('scroll-x');
             let scrollY = self.getAttribute('scroll-y');
-            let top = (window.innerHeight -58)/2 - offsetY - scrollY/2 + 58;
-            top = (top < 0 ? top : 58) + "px";
+            let top = (window.innerHeight -48)/2 - offsetY - scrollY*3/2 + 48;
+            top = (top < 0 ? top : 48) + "px";
             let left = window.innerWidth/2 - offsetX - scrollX/2;
             left = (left < 0 ? left : 0) + "px";
             //tech_tree.style.top = top + 'px';
             //tech_tree.style.left = left + 'px';
             tech_tree.style.transform = "translate(" + left + "," + top + ")";
             return false;
+        }
+        function getNeededCSSList(node) {
+            let list = document.defaultView.getComputedStyle(node, "");
+            return [list['left'].slice(0, -2),
+                    list['top'].slice(0, -2),
+                    list['width'].slice(0, -2),
+                    list['height'].slice(0, -2)];
+        }
+        function synchronizeCssStyles(src, destination, recursively) {
+            // if recursively = true, then we assume the src dom structure and destination dom structure are identical (ie: cloneNode was used)
+
+            // window.getComputedStyle vs document.defaultView.getComputedStyle
+            // @TBD: also check for compatibility on IE/Edge
+            destination.setAttribute('savedstyle', getNeededCSSList(src));
+
+            if (recursively) {
+                var vSrcElements = src.childNodes;
+                var vDstElements = destination.childNodes;
+
+                for (var i = vSrcElements.length; i--;) {
+                    var vSrcElement = vSrcElements[i];
+                    var vDstElement = vDstElements[i];
+                    //          console.log(i + " >> " + vSrcElement + " :: " + vDstElement);
+                    vDstElement.setAttribute('savedstyle', getNeededCSSList(vSrcElement));
+                }
+            }
         }
     </script>
     {% include "analytics.html" %}

@@ -1,10 +1,9 @@
-function waitLoadDrag(elementId, time, callback) {
+function waitLoadDrag(elementId, time) {
   if (document.querySelector('div[img-url]') != null) {
     drag(elementId);
-    callback();
   } else {
     setTimeout(function () {
-      waitLoadDrag(elementId, time, callback);
+      waitLoadDrag(elementId, time);
     }, time);
   }
 }
