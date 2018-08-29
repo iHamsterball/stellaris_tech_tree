@@ -132,7 +132,7 @@
                                 <ul class="nav-list">
                                     {% for version, name in version_list.items %}
                                         <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
-                                            value="niven" id="{{ version }}">
+                                            value="{{ version }}" id="{{ version }}">
                                             <span class="nav-responsive-tab nav-title">
                                                 <span>{{ name }}</span>
                                             </span>
