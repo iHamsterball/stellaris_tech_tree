@@ -166,7 +166,10 @@ def get_file_paths(file_paths, directory):
     if not path.isdir(directory):
         return []
 
-    for filename in listdir(directory):
+    # Prevent unexpected result from os.listdir() while on specified filesystems
+    # Will go wrong if MODs set its filename before official files in alphabetical order
+    # But official files start with 00_ so the chance is slight
+    for filename in sorted(listdir(directory)):
         file_path = path.join(directory, filename)
         if not path.isfile(file_path) \
            or 'README' in file_path \
