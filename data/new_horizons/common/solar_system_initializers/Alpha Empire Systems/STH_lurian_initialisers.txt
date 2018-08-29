@@ -1,0 +1,97 @@
+@distance = 30
+@base_moon_distance = 10
+
+# lurian Homeworld
+lurian_homeworld = {
+	name = "Lur"
+	class = sc_g
+	flags = { lurian_homeworld }
+	# init_effect = { log = "lurian homeworld" }
+	usage = custom_empire
+	max_instances = 1
+	planet = { name = "Lur" class = star size = 41 orbit_distance = 0 orbit_angle = 1 has_ring = no }
+	planet = {
+		name = "Luria"
+		class = "pc_arid"
+		size = { min = 18 max = 20 }
+		starting_planet = yes
+		orbit_distance = 65
+		orbit_angle = 185
+		tile_blockers = none
+		modifiers = none
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes			
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = lurian_principality } } }
+				create_species = { 
+					name = "lurian"
+					class = LUR
+					portrait = lurian
+					homeworld = THIS
+					traits = {
+						trait="trait_charismatic"
+						trait="trait_communal"
+						trait="trait_two_stomach"
+						trait="trait_wasteful"
+						trait="trait_sedentary"
+						ideal_planet_class = "pc_arid"
+					}
+				}
+				last_created_species = { save_global_event_target_as = lurianSpecies }
+				create_country = {
+					name = "NAME_lurian_principality"
+					type = default
+					ignore_initial_colony_error = yes
+					civics = { civic = "civic_gift_of_gab" civic = "civic_feudal_realm" }
+					authority = auth_imperial
+					name_list = "Lurian"
+					ethos = { ethic = "ethic_xenophobe" ethic = "ethic_authoritarian" ethic = "ethic_pacifist" }
+					species = event_target:lurianSpecies
+					flag = {
+						icon = { category = "trek" file = "lurian.dds" }
+						background = { category = "backgrounds" file = "half_circle_lower.dds" }
+						colors = { "customcolor1850" "red" "null" "null" }
+					}
+					ship_prefix = "HMLS"
+					effect = {
+						set_graphical_culture = generic_01
+						set_country_flag = lurian_principality
+						set_country_flag = custom_start_screen
+						set_country_flag = generic_ent
+						set_country_flag = alpha_beta_empire
+						set_country_flag = init_spawned
+						set_country_flag = botf_minor
+						save_global_event_target_as = lurian_principality
+					}
+				}
+				create_colony = { owner = event_target:lurian_principality species = event_target:lurianSpecies ethos = owner }
+			}
+			set_capital = yes
+			random_country = {
+				limit = { has_country_flag = lurian_principality }
+				save_global_event_target_as = lurian_principality
+				species = { save_global_event_target_as = lurianSpecies }
+				add_appropriate_start_techs = yes
+				set_country_type = minorRace
+			}
+			set_owner = event_target:lurian_principality
+			generate_minor_empire_start_buildings = yes
+			generate_minor_empire_start_pops = yes
+			generate_major_empire_start_fleets = yes
+			set_name = "Luria"
+		}		
+	}
+	change_orbit = { min = 20 max = 30 }
+	planet = {
+		orbit_distance = { min = 20 max = 30 }
+		orbit_angle = { min = 90 max = 270 }
+		moon = { count = { min = 0 max = 1 } orbit_angle = { min = 90 max = 270 } orbit_distance = 8 }
+	}
+	change_orbit = { min = 20 max = 30 }
+	planet = {
+		orbit_distance = { min = 20 max = 30 }
+		orbit_angle = { min = 90 max = 270 }
+		moon = { count = { min = 0 max = 2 } orbit_angle = { min = 90 max = 270 } orbit_distance = 8 }
+	}
+}

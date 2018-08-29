@@ -1,0 +1,140 @@
+﻿	NCamera = {	
+		SYSTEM_SPACE_SCALE_MULT 							= 30		# Needed to ensure clicking arrows to other systems works
+		ZOOM_STEPS_SYSTEM_PERCENTAGES 						= { 0.009 0.03 0.08 0.2 0.3 0.5 2.5 } # System zoom steps in percent relative to the system size
+		SYSTEM_SLIDE_RADIUS_FACTOR 							= 0.5 #4.0
+		SYSTEM_SLIDE_SPEED 									= 100.0
+	}
+	NGraphics = {
+		PLANET_MAP_ICON_OFFSET								= 0.0		# based on planet size
+		MEGASTRUCTURE_MAP_ICON_OFFSET						= 0.06		# based on mega structure size
+
+		MISSILE_HEIGHT_OFFSET								= -5.0		# how high up missiles will fly
+		MISSILE_ROTATION_RATE								= 10.0		# how fast missiles will adjust their rotation. High values can cause visible snaps each micro update
+		MISSILE_RANDOM_OFFSET_MIN_RADIUS 					= 2.5		# random spread of missiles
+		MISSILE_RANDOM_OFFSET_MAX_RADIUS 					= 5.0
+		BALLISTIC_PROJECTILE_MISSED_LIFETIME 				= 3.0		# missed ballistic projectiles will live for (at least) this long before being removed
+		MISSED_BEAM_LENGTH 									= 1000.0	# how long missed beams will be
+		DEFAULT_PLANET_PLANE 								= -150.0
+		MOON_SCALE 											= 0.45
+		ASTEROID_PLANE 										= -90.0
+		SHIP_RANDOM_HEIGHT_OFFSET 							= 30.0
+		RANDOM_HEIGHT_MIN									= -20.0
+		RANDOM_HEIGHT_MAX									= 20.0
+		NAVIGATION_ARROW_ENTITY								= "federation_corvette_entity"
+		NAVIGATION_ARROW_TEXT_SCALE							= 0.0
+		ORBIT_HSV											= { 0.4 0.5 2.9 }
+		SYSTEM_INNER_BORDER_HSV								= { 0.0 0.0 1.0 }
+		SYSTEM_OUTER_BORDER_HSV								= { 0.1 0.8 0.9 }
+		SYSTEM_LINE_ALPHA_FADE_STEP							= { 1 2 }			# Fade alpha betweeen zoom step X and Y
+		SYSTEM_LINE_ALPHA_FADE_VALUE						= { 0.1 0.01 }		# Fade alpha value between X and Y
+	}
+	NInterface = {	
+		BROWSER_BASE_URL									= "http://www.stellariswiki.com/StarTrek_NewHorizons" #STH
+		INGAME_HELP_URL										= "http://www.stellariswiki.com/StarTrek_NewHorizons"
+	}
+	NGameplay = {
+		START_YEAR 											= 2150
+		PLANET_ORBIT_DISTANCE 								= 3.0 		#10.0 - how far from the planet ships will orbit
+		PLANET_STATION_ORBIT_DISTANCE 						= 3.0 		#6.0 - how far from the planet orbital stations will be
+		SHIP_SUBLIGHT_SPEED_MULT							= 12		# General speed multiplier for ship movement within solar systems #sth
+		MISSILE_SUBLIGHT_SPEED_MULT 						= 10		# General speed multiplier for ship movement within solar systems
+		LEADER_SCIENTIST_ASSIST_RESEARCH_MULT				= 0.125		# Assist Research modifier-mult per skill level (this value times skill level equals modifier)
+		DEBRIS_DAYS											= 1			# How many days the debris is visible for
+		MAX_FRICTION 										= 100		# Max friction (total)
+		CUSTOM_EMPIRE_SPAWN_CHANCE 							= 1000		
+		DOCKED_FLEET_MAINTENANCE_REDUCTION					= 0.40		# Docked fleets will have a lowered maintenance	
+		SUBJECT_INTEGRATION_BASE_PROGRESS 					= 10 		# Cost per month for subject integration
+		SUBJECT_INTEGRATION_COST_PER_POP 					= 4 		# Integration cost per pop 
+		SUBJECT_INTEGRATION_COST_PER_PLANET					= 45 		# Integration cost per planet	
+		CORE_SECTOR_SYSTEM_CAP								= 4
+		NAVAL_CAPACITY_MAX									= 2000		# Max value of Naval Capacity
+		NAVAL_CAPACITY_BASE 								= 25		# Base value of Naval Capacity
+		COMMAND_LIMIT_MAX									= 600		# Max value of Command Limit
+		COMMAND_LIMIT_BASE 									= 50		# Base value of Command Limit
+		STATION_SELF_REPAIR_TIMER_DAYS						= 0			# Number of days after taking damage before a station will start self-repairing. NOTE - In practice, it actually controls ALL REGEN OF ALL SHIPS IN GAME. 
+		WAR_EXHAUSTION_SHIP_KILLED_MULT		  				= 1.0		# Multiplier of war exhaustion gained from ships
+		WAR_EXHAUSTION_ARMY_KILLED_MULT		  				= 0.15		# Multiplier of war exhaustion gained from land battles (armies)
+		#WAR_EXHAUSTION_PLANET_DESTRUCTION_DIV 				= 2.0		# War exhaustion from planets destroyed
+		#WAR_EXHAUSTION_SYSTEM_OCCUPATION_MULT 				= 1.0		# War exhaustion from occupied systems
+		#WAR_EXHAUSTION_PASSIVE_GAIN_YEARLY	  				= 0.06		# The amount of yearly war exhaustion gained during war while under WAR_EXHAUSTION_PASSIVE_GAIN_CUTOFF
+		#WAR_EXHAUSTION_PASSIVE_GAIN_CUTOFF	  				= 1.0		# At this amount of war exhaustion (excluding occupation) you stop getting war exhaustion passively over time
+		#WAR_EXHAUSTION_FROM_UNITS_CUTOFF	  				= 1.0		# At this amount of war exhaustion (excluding occupation) you stop gaining war exhaustion from lost units
+		#WAR_EXHAUSTION_HIGH_ALERT			  				= 0.75		# Show alert if war exhaustion >= this
+        STARBASE_CAPACITY_BASE								= 3         # Base value of Starbase Capacity
+        STARBASE_CAPACITY_SYSTEM_MULT						= 0.075	    # Mult value of Starbase Capacity for each owned system    
+        STARBASE_CAPACITY_POP_MULT							= 0.005     # Mult value of Starbase Capacity for each Pop
+		JUMP_DRIVE_COOLDOWN 								= 80		# Days between uses of Jump Drive
+	}
+	NShip = {
+		DESIGNER_WEAPON_STACKING_DIV						= 0.15		# The higher this is the more the ship designer will try to vary which weapon types are used on its sections
+		ENERGY_MAINTENANCE_MUL								= 0.001		# Ship Maintenance Multiplier Percentage of the cost of the ship
+		MINERAL_MAINTENANCE_MUL								= 0.002		# Ship Maintenance Multiplier Percentage of the cost of the ship
+		COST_SECTION_MUL									= 0.0
+		COST_SECTION_BASE									= 0.0
+		COST_SECTION_ADD_SMALL_WEAPON_SLOT					= 0.0
+		COST_SECTION_ADD_MEDIUM_WEAPON_SLOT					= 0.0
+		COST_SECTION_ADD_LARGE_WEAPON_SLOT					= 0.0
+		COST_SECTION_ADD_TORPEDO_WEAPON_SLOT 				= 0.0
+		COST_SECTION_ADD_EXTRA_LARGE_WEAPON_SLOT			= 0.0
+		COST_SECTION_ADD_AUX_WEAPON_SLOT					= 0.0
+		COST_SECTION_ADD_SMALL_UTIL_SLOT					= 0.0
+		COST_SECTION_ADD_MEDIUM_UTIL_SLOT					= 0.0
+		COST_SECTION_ADD_LARGE_UTIL_SLOT					= 0.0
+		COST_SECTION_ADD_AUX_UTIL_SLOT						= 0.0
+		HYPERLANE_WINDUP 									= 30		# In micro updates ( 10/day )
+		HYPERLANE_WINDDOWN									= 0			# In micro updates
+		HYPERLANE_WINDUP_OUTSIDE_BORDER						= 2.0		# How much more windup time is there for systems which are 100% away from friendly territory
+		HYPERDRIVE_INTERSTELLAR_TRAVEL_SPEED 				= 0.06 		# In micro updates ( 10/day )
+		FLEET_MOVE_MAX_DIST_SHIPS							= 50.0		# Max distance that ships are allowed to travel before last ship
+		FLEET_BASE_FORMATION_SCALE							= 4.25
+		FLEET_BASE_FORMATION_DIV							= 10
+		EXCESS_POWER_BONUS_THRESHOLD_MAX	                = 2	    	# 0.5 means 0-50% excess power linearly scales ship_excess_power modifier between 0-1.
+		EXCESS_POWER_BONUS_THRESHOLD_MIN	                = 0.1   	# min value for excess power to be used.
+		OUT_OF_COMBAT_SHIELD_REGEN_MULT						= 5			# Shields recharge this much faster outside combat
+		SHIELD_RECHARGE_TICKS								= 20		# Combat ticks before a shield that is fully depleted will start to recharge
+		JUMP_DRIVE_WINDUP									= 1			# Jump drive windup in days
+		JUMP_DRIVE_RANGE									= 60
+	}
+	NEconomy = {
+		FLEET_UPGRADE_TIME_COST_MULT						= 0.75		# Upgrade fleet cost
+		FLEET_UPGRADE_MINERAL_COST_MULT						= 0.75		# mineral cost of ship upgrade is abs
+	}
+	NPop = {
+	 	MIN_CROWDING_TO_MIGRATE 							= 0.85		# Unless planet is this % full, pops won't migrate
+	}
+	NAI = {	
+		THREAT_SIZE_FACTOR_MAX 								= 2.2 
+		SHARED_THREAT_MULT 									= 0.65		# How much does having a shared threat boost opinion?
+		THREAT_DECAY 										= -0.25		# Each month		THREAT_SIZE_FACTOR_MAX = 2.4
+		THREAT_POSITIVE_OPINION_FACTOR 						= 0.003		# How much does opinion of the victim affect threat?
+		THREAT_NEGATIVE_OPINION_FACTOR 						= 0.004
+		THREAT_OPINION_MAX 									= 1.35
+		FEDERATION_ACCEPTANCE_SHARED_THREAT 				= 0.17		# scales with actual threat
+		FEDERATION_ACCEPTANCE_DISTANCE_MULT 				= -0.5		# per 1 border distance
+		DEFENSIVE_PACT_ACCEPTANCE_DISTANCE_MULT 			= -0.5 		# per 1 border distance	
+		NON_AGGRESSION_PACT_ACCEPTANCE_DISTANCE_MULT		= -0.5		# per 1 border distance	
+		MIGRATION_PACT_ACCEPTANCE_DISTANCE_MULT 			= -0.25 	# per 1 border distance
+		VASSALIZATION_ACCEPTANCE_NUM_POPS 					= -0.35		# per pop
+		VASSALIZATION_ACCEPTANCE_POWER_DIFFERENCE_MULT 		= 10		# for each 1x over min
+		VASSALIZATION_ACCEPTANCE_DISTANCE_MULT 				= -0.75		# per 1 border distance
+
+		SAVINGS_BUDGET_FRACTION								= 0.05 		# AI will spend this fraction of their income on savings (normally not needed as fleets in dock will result in energy surplus)
+		ARMY_BUDGET_FRACTION								= 0.05   			# AI will spend this fraction of their income on armies
+		NAVY_BUDGET_FRACTION								= 0.15 			# AI will spend this fraction of their income on ships
+		STATION_BUDGET_FRACTION								= 0.15 		# AI will spend this fraction of their income on stations
+		BUILDING_BUDGET_FRACTION							= 0.10 		# AI will spend this fraction of their income on buildings
+		ROBOT_BUDGET_FRACTION								= 0.45			# AI will spend this fraction of their income on robots (transfered to stations & buildings if they don't use robots)
+		STARBASE_BUDGET_FRACTION							= 0.10
+		
+		MINERAL_NAVY_BUDGET_FRACTION						= 0.15 			# AI will spend this fraction of their stored minerals on ships
+		MINERAL_STATION_BUDGET_FRACTION						= 0.15			# AI will spend this fraction of their stored minerals on stations
+		MINERAL_BUILDING_BUDGET_FRACTION					= 0.10			# AI will spend this fraction of their stored minerals on buildings
+		MINERAL_STARBASE_BUDGET_FRACTION					= 0.15			# AI will spend this fraction of their stored minerals on starbases
+		MINERAL_COLONY_BUDGET_FRACTION						= 0.10			# AI will spend this fraction of their stored minerals on colony ships
+		MINERAL_ARMY_BUDGET_FRACTION						= 0.05				# AI will spend this fraction on armies
+		MINERAL_TILE_BLOCKER_BUDGET_FRACTION				= 0.05		# AI will spend this fraction on tile blockers
+		MINERAL_ROBOT_BUDGET_FRACTION						= 0.30			# AI will spend this fraction of their stored minerals on robots (transfered to buildings if they don't use robots)
+		MINERAL_EDICTS_BUDGET_FRACTION						= 0.0			# AI will spend this fraction of their stored minerals on edicts
+		MINERAL_MEGASTRUCTURE_BUDGET_FRACTION				= 0.10	# AI will spend this fraction of their stored minerals on megastructures (taken from stations & buildings)		
+
+	}		

@@ -1,0 +1,34 @@
+# Rogue Jem'Hadar Station
+ship_design = {
+	name = "NAME_Ancient_Xindi_Ship_1"
+	ship_size = corvette
+	section = {
+		template = "corvette_stern_1"
+		slot = "stern"
+	}
+	section = {
+		template = "corvette_mid_17"
+		slot = "mid"
+	}	
+	required_component="REQUIRED_WARP_1_C"
+	required_component="REQUIRED_COMPUTER_1_C"
+	required_component="REQUIRED_THRUSTER_1_C"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_ARMOR_1_C"
+	required_component="REQUIRED_HULL_A_2_C"
+}
+
+ship_design = {
+	name = "NAME_Ancient_Xindi_Ship_2"
+	ship_size = constructor
+	section = {
+		template = "DEFAULT_CONSTRUCTION_SECTION"
+		slot = "mid"
+	}
+	required_component="REQUIRED_WARP_1_C"
+	required_component="REQUIRED_COMPUTER_1_C"
+	required_component="REQUIRED_THRUSTER_1_C"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_ARMOR_1_C"
+	required_component="REQUIRED_HULL_A_2_C"
+}

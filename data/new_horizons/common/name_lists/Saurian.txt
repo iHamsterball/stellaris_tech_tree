@@ -1,0 +1,78 @@
+﻿### Saurian by Walshicus
+Saurian = {
+	randomized = no
+
+	ship_names = {
+		generic = {
+			Monitor "Red Monitor" "Blue Monitor" "Green Monitor" "Yellow Monitor" "Spiny Monitor" "Finned Monitor" "Horned Monitor" "Long-Tailed Monitor" Iguana "Red Iguana" "Blue Iguana" "Green Iguana" "Yellow Iguana" "Spiny Iguana" "Finned Iguana" "Horned Iguana" "Long-Tailed Iguana" Chameleon "Red Chameleon" "Blue Chameleon" "Green Chameleon" "Yellow Chameleon" "Spiny Chameleon" "Finned Chameleon" "Horned Chameleon" "Long-Tailed Chameleon" Gecko "Red Gecko" "Blue Gecko" "Green Gecko" "Yellow Gecko" "Spiny Gecko" "Finned Gecko" "Horned Gecko" "Long-Tailed Gecko" Alligator "Red Alligator" "Blue Alligator" "Green Alligator" "Yellow Alligator" "Spiny Alligator" "Finned Alligator" "Horned Alligator" "Long-Tailed Alligator" Anole "Red Anole" "Blue Anole" "Green Anole" "Yellow Anole" "Spiny Anole" "Finned Anole" "Horned Anole" "Long-Tailed Anole" Dragon "Red Dragon" "Blue Dragon" "Green Dragon" "Yellow Dragon" "Spiny Dragon" "Finned Dragon" "Horned Dragon" "Long-Tailed Dragon" Tegu "Red Tegu" "Blue Tegu" "Green Tegu" "Yellow Tegu" "Spiny Tegu" "Finned Tegu" "Horned Tegu" "Long-Tailed Tegu" Agama "Red Agama" "Blue Agama" "Green Agama" "Yellow Agama" "Spiny Agama" "Finned Agama" "Horned Agama" "Long-Tailed Agama" Ameiva "Red Ameiva" "Blue Ameiva" "Green Ameiva" "Yellow Ameiva" "Spiny Ameiva" "Finned Ameiva" "Horned Ameiva" "Long-Tailed Ameiva" Basilisk "Red Basilisk" "Blue Basilisk" "Green Basilisk" "Yellow Basilisk" "Spiny Basilisk" "Finned Basilisk" "Horned Basilisk" "Long-Tailed Basilisk" Calotes "Red Calotes" "Blue Calotes" "Green Calotes" "Yellow Calotes" "Spiny Calotes" "Finned Calotes" "Horned Calotes" "Long-Tailed Calotes" Skink "Red Skink" "Blue Skink" "Green Skink" "Yellow Skink" "Spiny Skink" "Finned Skink" "Horned Skink" "Long-Tailed Skink" Ctenotus "Red Ctenotus" "Blue Ctenotus" "Green Ctenotus" "Yellow Ctenotus" "Spiny Ctenotus" "Finned Ctenotus" "Horned Ctenotus" "Long-Tailed Ctenotus" Delma "Red Delma" "Blue Delma" "Green Delma" "Yellow Delma" "Spiny Delma" "Finned Delma" "Horned Delma" "Long-Tailed Delma" Dtella "Red Dtella" "Blue Dtella" "Green Dtella" "Yellow Dtella" "Spiny Dtella" "Finned Dtella" "Horned Dtella" "Long-Tailed Dtella" Della "Red Della" "Blue Della" "Green Della" "Yellow Della" "Spiny Della" "Finned Della" "Horned Della" "Long-Tailed Della" Chuckwalla "Red Chuckwalla" "Blue Chuckwalla" "Green Chuckwalla" "Yellow Chuckwalla" "Spiny Chuckwalla" "Finned Chuckwalla" "Horned Chuckwalla" "Long-Tailed Chuckwalla" Perentie "Red Perentie" "Blue Perentie" "Green Perentie" "Yellow Perentie" "Spiny Perentie" "Finned Perentie" "Horned Perentie" "Long-Tailed Perentie"
+		}
+	}
+
+	fleet_names = {
+		sequential_name = "%O% Fleet"
+	}
+	
+	army_names = {
+		defense_army = {
+			sequential_name = "%O% Guard"
+		}
+		assault_army = {
+			sequential_name = "%O% Defence Force"
+		}
+		slave_army = {
+			sequential_name = "%O% Indentured Defence Force"
+		}
+		clone_army = { 
+			sequential_name = "%O% Clone Defence Force"
+		}
+		robotic_army = {
+			sequential_name = "%O% Mechanised Defence Force"
+		}
+		android_army = {
+			sequential_name = "%O% Synthetic Defence Force"
+		}
+		psionic_army = { 
+			sequential_name = "%O% Psi Defence Force"
+		}
+		xenomorph_army = {
+			sequential_name = "%O% Bio-Warfare Defence Force"
+		}
+		gene_warrior_army = {
+			sequential_name = "%O% Bio-Engineered Defence Force"
+		}
+	}
+
+	planet_names = {
+		generic = {
+			names = { 
+			}
+		}
+	}
+
+
+	### CHARACTERS 
+
+	character_names = {
+		names1 = {
+			weight = 40
+			first_names_male = {
+				Dunotgi Getki Gikmato Gokechv Kegutt Kejaki Teegen Plegit Okegeti Nataget Kreggti Kordek Koass Kigago Ketago Anek Aennik Okret Razki Stemo Yeniz Kalapo Kolez Makza Yeniz
+			}
+			first_names_female = { 
+				Glitettin Gotuu Hinni Jeggo Kamugtai Riassa Raeme Nuco Noziech Losheg Linnuola Losni Linnla Linni Jegni Nuiassa Gogtai Rassa Cooquoa
+			}
+			second_names = {
+				Okeg Rotinom Nogard Anaugi Noelemac Rotagila Setolac Allet Alled Etnerep Amaga Elona Uget Sutonec Aviema Alawkuc
+			}
+			regnal_first_names_male = {
+				Dunotgi Getki Gikmato Gokechv Kegutt Kejaki Teegen Plegit Okegeti Nataget Kreggti Kordek Koass Kigago Ketago Anek Aennik Okret Razki Stemo Yeniz Kalapo Kolez Makza Yeniz
+			}
+			regnal_first_names_female = {
+				Glitettin Gotuu Hinni Jeggo Kamugtai Riassa Raeme Nuco Noziech Losheg Linnuola Losni Linnla Linni Jegni Nuiassa Gogtai Rassa Cooquoa
+			}
+			regnal_second_names = {
+				Okeg Rotinom Nogard Anaugi Noelemac Rotagila Setolac Allet Alled Etnerep Amaga Elona Uget Sutonec Aviema Alawkuc
+			}
+		}
+	}
+}

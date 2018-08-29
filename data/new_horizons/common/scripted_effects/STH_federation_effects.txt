@@ -1,0 +1,574 @@
+federation_accession_progress_from_root = {
+	if = {
+		limit = { ROOT = { has_swapped_tradition = "tr_federation_4"  } }
+		switch = {
+			trigger = num_owned_planets
+			1 = { change_variable = { which = "accession_progress" value = 21 } }
+			2 = { change_variable = { which = "accession_progress" value = 18 } }
+			3 = { change_variable = { which = "accession_progress" value = 15 } }
+			4 = { change_variable = { which = "accession_progress" value = 13 } }
+			5 = { change_variable = { which = "accession_progress" value = 11 } }
+			6 = { change_variable = { which = "accession_progress" value = 10 } }
+			7 = { change_variable = { which = "accession_progress" value = 9 } }
+			8 = { change_variable = { which = "accession_progress" value = 8 } }
+			9 = { change_variable = { which = "accession_progress" value = 7 } }
+			10 = { change_variable = { which = "accession_progress" value = 6 } }
+			10 > { change_variable = { which = "accession_progress" value = 5 } }
+		}
+	}
+	else = {
+		switch = {
+			trigger = num_owned_planets
+			1 = { change_variable = { which = "accession_progress" value = 18 } }
+			2 = { change_variable = { which = "accession_progress" value = 13 } }
+			3 = { change_variable = { which = "accession_progress" value = 12 } }
+			4 = { change_variable = { which = "accession_progress" value = 11 } }
+			5 = { change_variable = { which = "accession_progress" value = 10 } }
+			6 = { change_variable = { which = "accession_progress" value = 9 } }
+			7 = { change_variable = { which = "accession_progress" value = 8 } }
+			8 = { change_variable = { which = "accession_progress" value = 7 } }
+			9 = { change_variable = { which = "accession_progress" value = 6 } }
+			10 = { change_variable = { which = "accession_progress" value = 5 } }
+			10 > { change_variable = { which = "accession_progress" value = 4 } }
+		}		
+	}
+}
+
+# set_appropriate_federation_flag = {
+	# if = {
+		# limit = { years_passed <  }
+		# change_country_flag = { icon = { category="trek" file="Federation4.dds" } background = { category = "backgrounds" file = "00_solid.dds" } colors = { "blue" "black" "null" "null" } }
+	# }
+# }
+
+
+federation_accession = {	
+	remove_country_flag = federationAccessionState
+	if = {	
+		limit = { is_country_type = minorRace }
+		remove_modifier = em_minor_race_borders
+	}
+	set_variable = { which = "accession_progress" value = 0 }
+	every_owned_planet = {
+		limit = { is_capital = no root = { is_ai = no } owner = { is_ai = yes } }
+		set_owner = root
+	}
+	every_system_within_border = {
+		limit = { NOT = { is_same_value = prev.capital_scope.solar_system } exists = starbase }
+		starbase = { set_owner = root }		
+	}
+	every_owned_fleet = {
+		limit = { root = { is_ai = yes } }
+		set_owner = root
+		set_controller = root
+	}
+	if = {
+		limit = { 
+			OR = { 
+				has_country_flag = united_federation_of_planets_member 
+				root = { has_country_flag = united_federation_of_planets }
+			}
+		}
+		set_subject_of = { who = root subject_type = member_world }
+		set_country_type = ufp_member_world
+		change_country_flag = {
+			icon = { category = "trek" file = "Federation4.dds" }
+			background = { category = "backgrounds" file = "00_solid.dds" }
+			colors = { "blue" "customcolor579" "null" "null" }
+		}
+		root = { country_event = { id = theFederation.1010 days = 2 scopes = { from = prev } } }
+	}
+	else_if = {
+		limit = { 
+			OR = { 
+				has_country_flag = interstellar_union_member 
+				root = { has_country_flag = interstellar_union }
+			}
+		}
+		set_subject_of = { who = root subject_type = member_world_isu }
+		set_country_type = ufp_member_world
+		change_country_flag = {
+			icon = { category="trek" file="InterstellarUnion.dds" }
+			background = { category = "backgrounds" file = "circle_wide.dds" }
+			colors = { "customcolor875" "customcolor1535" "null" "null" }
+		}
+	}
+	change_government = { authority = auth_federation_sector }
+	set_name = "[This.Capital.GetName] Sector"
+	every_owned_planet = { 
+		limit = { 
+			root = { is_ai = yes }
+			owner = { is_ai = yes }
+		}
+		set_owner = root
+	}
+}
+
+
+federation_accession_human = {	
+	remove_country_flag = federationAccessionState
+	set_variable = { which = "accession_progress" value = 0 }
+	if = {
+		limit = { root = { has_country_flag = united_federation_of_planets } }
+		set_subject_of = { who = root subject_type = member_world_human }
+		change_country_flag = {
+			icon = { category = "trek" file = "Federation4.dds" }
+			background = { category = "backgrounds" file = "00_solid.dds" }
+			colors = { "blue" "customcolor579" "null" "null" }
+		}
+	}
+	else_if = {
+		limit = { root = { has_country_flag = interstellar_union } }
+		set_subject_of = { who = root subject_type = member_world_human_isu }
+		change_country_flag = {
+			icon = { category="trek" file="InterstellarUnion.dds" }
+			background = { category = "backgrounds" file = "circle_wide.dds" }
+			colors = { "customcolor875" "customcolor1535" "null" "null" }
+		}
+	}
+	change_government = { authority = auth_federation_sector }
+	set_name = "[This.Capital.GetName] Sector"
+}
+
+add_small_federation_progress = {
+	if = { limit = { has_swapped_tradition = tr_federation_4 }
+		if = { limit = { num_owned_planets = 1 } change_variable = { which = "accession_progress" value = 30 } }
+		if = { limit = { num_owned_planets = 2 } change_variable = { which = "accession_progress" value = 20 } }
+		if = { limit = { num_owned_planets = 3 } change_variable = { which = "accession_progress" value = 10 } }
+		if = { limit = { num_owned_planets > 4 num_owned_planets < 10 } change_variable = { which = "accession_progress" value = 6 } }
+		if = { limit = { num_owned_planets > 9 } change_variable = { which = "accession_progress" value = 2 } }
+		random_list = {
+			10 = { change_variable = { which = "accession_progress" value = 4 } }
+			10 = {}
+			#10 = { change_variable = { which = "accession_progress" value = -1 } }
+		}
+	}
+	else = {	
+		if = { limit = { num_owned_planets = 1 } change_variable = { which = "accession_progress" value = 15 } }
+		if = { limit = { num_owned_planets = 2 } change_variable = { which = "accession_progress" value = 10 } }
+		if = { limit = { num_owned_planets = 3 } change_variable = { which = "accession_progress" value = 5 } }
+		if = { limit = { num_owned_planets > 4 num_owned_planets < 10 } change_variable = { which = "accession_progress" value = 3 } }
+		if = { limit = { num_owned_planets > 9 } change_variable = { which = "accession_progress" value = 1 } }
+		random_list = {
+			10 = { change_variable = { which = "accession_progress" value = 2 } }
+			10 = {}
+			#10 = { change_variable = { which = "accession_progress" value = -1 } }
+		}
+	}
+}
+
+add_medium_federation_progress = {
+	if = { limit = { has_swapped_tradition = tr_federation_4 }
+		if = { limit = { num_owned_planets = 1 } change_variable = { which = "accession_progress" value = 40 } }
+		if = { limit = { num_owned_planets = 2 } change_variable = { which = "accession_progress" value = 30 } }
+		if = { limit = { num_owned_planets = 3 } change_variable = { which = "accession_progress" value = 20 } }
+		if = { limit = { num_owned_planets > 4 num_owned_planets < 10 } change_variable = { which = "accession_progress" value = 10 } }
+		if = { limit = { num_owned_planets > 9 } change_variable = { which = "accession_progress" value = 6 } }
+		random_list = {
+			10 = { change_variable = { which = "accession_progress" value = 6 } }
+			10 = {}
+			#10 = { change_variable = { which = "accession_progress" value = -1 } }
+		}
+	}
+	else = {
+		if = { limit = { num_owned_planets = 1 } change_variable = { which = "accession_progress" value = 20 } }
+		if = { limit = { num_owned_planets = 2 } change_variable = { which = "accession_progress" value = 15 } }
+		if = { limit = { num_owned_planets = 3 } change_variable = { which = "accession_progress" value = 10 } }
+		if = { limit = { num_owned_planets > 4 num_owned_planets < 10 } change_variable = { which = "accession_progress" value = 5 } }
+		if = { limit = { num_owned_planets > 9 } change_variable = { which = "accession_progress" value = 3 } }
+		random_list = {
+			10 = { change_variable = { which = "accession_progress" value = 3 } }
+			10 = {}
+			#10 = { change_variable = { which = "accession_progress" value = -1 } }
+		}
+	}	
+}
+
+add_large_federation_progress = {
+	if = { limit = { has_swapped_tradition = tr_federation_4 }
+		if = { limit = { num_owned_planets = 1 } change_variable = { which = "accession_progress" value = 50 } }
+		if = { limit = { num_owned_planets = 2 } change_variable = { which = "accession_progress" value = 40 } }
+		if = { limit = { num_owned_planets = 3 } change_variable = { which = "accession_progress" value = 30 } }
+		if = { limit = { num_owned_planets > 4 num_owned_planets < 10 } change_variable = { which = "accession_progress" value = 16 } }
+		if = { limit = { num_owned_planets > 9 } change_variable = { which = "accession_progress" value = 10 } }
+		random_list = {
+			10 = { change_variable = { which = "accession_progress" value = 10 } }
+			10 = {}
+			#10 = { change_variable = { which = "accession_progress" value = -1 } }
+		}
+	}
+	else = {
+		if = { limit = { num_owned_planets = 1 } change_variable = { which = "accession_progress" value = 25 } }
+		if = { limit = { num_owned_planets = 2 } change_variable = { which = "accession_progress" value = 20 } }
+		if = { limit = { num_owned_planets = 3 } change_variable = { which = "accession_progress" value = 15 } }
+		if = { limit = { num_owned_planets > 4 num_owned_planets < 10 } change_variable = { which = "accession_progress" value = 8 } }
+		if = { limit = { num_owned_planets > 9 } change_variable = { which = "accession_progress" value = 5 } }
+		random_list = {
+			10 = { change_variable = { which = "accession_progress" value = 5 } }
+			10 = {}
+			#10 = { change_variable = { which = "accession_progress" value = -1 } }
+		}
+	}		
+}
+
+remove_empire_construction_modifiers = {	
+	remove_modifier = em_construction_fed
+	remove_modifier = em_construction_kdf
+	remove_modifier = em_construction_dom
+	remove_modifier = em_construction_car
+	remove_modifier = em_construction_rom
+	remove_modifier = em_construction_fer
+	remove_modifier = em_construction_vul
+	remove_modifier = em_construction_and
+	remove_modifier = em_construction_tel
+	remove_modifier = em_construction_bre
+	remove_modifier = em_construction_hus
+	remove_modifier = em_construction_kaz
+	remove_modifier = em_construction_sul
+	remove_modifier = em_construction_vid
+	remove_modifier = em_construction_ori
+	remove_modifier = em_construction_tho
+	remove_modifier = em_construction_xin
+	remove_modifier = em_construction_brg
+	remove_modifier = em_construction_she
+	remove_modifier = em_construction_vot
+	remove_modifier = em_construction_kob
+}
+
+add_appropriate_fed_ship_techs = {
+	if = { 
+		limit = { 
+			has_technology = tech_patrol_frigate 
+			NOR = { 
+				has_technology = tech_emette_frigate
+				has_technology = tech_engineering_03501
+				has_technology = tech_engineering_03502
+				has_technology = tech_engineering_03503
+				has_technology = tech_engineering_03504
+				has_technology = tech_engineering_03505
+				has_technology = tech_engineering_03506
+				has_technology = tech_engineering_03507
+				has_technology = tech_engineering_03508
+				has_technology = tech_engineering_03509
+				has_technology = tech_engineering_03510
+				has_technology = tech_engineering_03511
+				has_technology = tech_engineering_03512
+				has_technology = tech_engineering_03513
+				has_technology = tech_engineering_03514
+				has_technology = tech_engineering_03515
+				has_technology = tech_engineering_03516
+				has_technology = tech_engineering_03517
+				has_technology = tech_engineering_destroyer_541 
+				has_technology = tech_engineering_cruiser_542 
+				has_technology = tech_engineering_battlecruiser_543
+				has_technology = tech_engineering_battleship_544
+				has_technology = tech_engineering_heavy_545
+				has_technology = tech_engineering_assault_546
+			} 
+		}
+		give_technology = { tech = tech_emette_frigate }
+		give_technology = { tech = tech_starfleet_design }
+		give_technology = { tech = tech_ai_update_dummy_tech message = no }
+		set_timed_country_flag = { flag = temp_generic_corvette days = 1800 }
+	}
+	if = { 
+		limit = { 
+			has_technology = tech_patrol_frigate
+			has_technology = tech_engineering_destroyer_541 
+			NOR = { 
+				has_technology = tech_emette_frigate
+				has_technology = tech_engineering_03501
+				has_technology = tech_engineering_03502
+				has_technology = tech_engineering_03503
+				has_technology = tech_engineering_03504
+				has_technology = tech_engineering_03505
+				has_technology = tech_engineering_03506
+				has_technology = tech_engineering_03507
+				has_technology = tech_engineering_03508
+				has_technology = tech_engineering_03509
+				has_technology = tech_engineering_03510
+				has_technology = tech_engineering_03511
+				has_technology = tech_engineering_03512
+				has_technology = tech_engineering_03513
+				has_technology = tech_engineering_03514
+				has_technology = tech_engineering_03515
+				has_technology = tech_engineering_03516
+				has_technology = tech_engineering_03517
+				has_technology = tech_engineering_cruiser_542 
+				has_technology = tech_engineering_battlecruiser_543
+				has_technology = tech_engineering_battleship_544
+				has_technology = tech_engineering_heavy_545
+				has_technology = tech_engineering_assault_546
+			} 
+		}
+		give_technology = { tech = tech_emette_frigate }
+		give_technology = { tech = tech_starfleet_design }
+		give_technology = { tech = tech_engineering_03501 }
+		give_technology = { tech = tech_engineering_03502 }
+		give_technology = { tech = tech_ai_update_dummy_tech message = no }
+		set_timed_country_flag = { flag = temp_generic_corvette days = 1800 }
+		set_timed_country_flag = { flag = temp_generic_destroyer days = 1800 }
+	}
+	if = { 
+		limit = { 
+			has_technology = tech_patrol_frigate
+			has_technology = tech_engineering_destroyer_541 
+			has_technology = tech_engineering_cruiser_542 
+			NOR = { 
+				has_technology = tech_emette_frigate
+				has_technology = tech_engineering_03501
+				has_technology = tech_engineering_03502
+				has_technology = tech_engineering_03503
+				has_technology = tech_engineering_03504
+				has_technology = tech_engineering_03505
+				has_technology = tech_engineering_03506
+				has_technology = tech_engineering_03507
+				has_technology = tech_engineering_03508
+				has_technology = tech_engineering_03509
+				has_technology = tech_engineering_03510
+				has_technology = tech_engineering_03511
+				has_technology = tech_engineering_03512
+				has_technology = tech_engineering_03513
+				has_technology = tech_engineering_03514
+				has_technology = tech_engineering_03515
+				has_technology = tech_engineering_03516
+				has_technology = tech_engineering_03517
+				has_technology = tech_engineering_battlecruiser_543
+				has_technology = tech_engineering_battleship_544
+				has_technology = tech_engineering_heavy_545
+				has_technology = tech_engineering_assault_546
+			} 
+		}
+		give_technology = { tech = tech_emette_frigate }
+		give_technology = { tech = tech_starfleet_design }
+		give_technology = { tech = tech_engineering_03501 }
+		give_technology = { tech = tech_engineering_03502 }
+		give_technology = { tech = tech_engineering_03503 }
+		give_technology = { tech = tech_engineering_03504 }
+		give_technology = { tech = tech_engineering_03505 }
+		give_technology = { tech = tech_engineering_03506 }
+		give_technology = { tech = tech_engineering_03507 }
+		give_technology = { tech = tech_engineering_03508 }
+		give_technology = { tech = tech_engineering_03509 }
+		give_technology = { tech = tech_ai_update_dummy_tech message = no }
+		set_timed_country_flag = { flag = temp_generic_corvette days = 1800 }
+		set_timed_country_flag = { flag = temp_generic_destroyer days = 1800 }
+		set_timed_country_flag = { flag = temp_generic_cruiser days = 1800 }
+	}
+	if = { 
+		limit = { 
+			has_technology = tech_patrol_frigate
+			has_technology = tech_engineering_destroyer_541 
+			has_technology = tech_engineering_cruiser_542 
+			has_technology = tech_engineering_battlecruiser_543
+			NOR = { 
+				has_technology = tech_emette_frigate
+				has_technology = tech_engineering_03501
+				has_technology = tech_engineering_03502
+				has_technology = tech_engineering_03503
+				has_technology = tech_engineering_03504
+				has_technology = tech_engineering_03505
+				has_technology = tech_engineering_03506
+				has_technology = tech_engineering_03507
+				has_technology = tech_engineering_03508
+				has_technology = tech_engineering_03509
+				has_technology = tech_engineering_03510
+				has_technology = tech_engineering_03511
+				has_technology = tech_engineering_03512
+				has_technology = tech_engineering_03513
+				has_technology = tech_engineering_03514
+				has_technology = tech_engineering_03515
+				has_technology = tech_engineering_03516
+				has_technology = tech_engineering_03517
+				has_technology = tech_engineering_battleship_544
+				has_technology = tech_engineering_heavy_545
+				has_technology = tech_engineering_assault_546				
+			} 
+		}
+		give_technology = { tech = tech_emette_frigate }
+		give_technology = { tech = tech_starfleet_design }
+		give_technology = { tech = tech_engineering_03501 }
+		give_technology = { tech = tech_engineering_03502 }
+		give_technology = { tech = tech_engineering_03503 }
+		give_technology = { tech = tech_engineering_03504 }
+		give_technology = { tech = tech_engineering_03505 }
+		give_technology = { tech = tech_engineering_03506 }
+		give_technology = { tech = tech_engineering_03507 }
+		give_technology = { tech = tech_engineering_03508 }
+		give_technology = { tech = tech_engineering_03509 }
+		give_technology = { tech = tech_engineering_03510 }
+		give_technology = { tech = tech_engineering_03511 }
+		give_technology = { tech = tech_engineering_03512 }
+		give_technology = { tech = tech_ai_update_dummy_tech message = no }
+		set_timed_country_flag = { flag = temp_generic_corvette days = 1800 }
+		set_timed_country_flag = { flag = temp_generic_destroyer days = 1800 }
+		set_timed_country_flag = { flag = temp_generic_cruiser days = 1800 }
+		set_timed_country_flag = { flag = temp_generic_battlecruiser days = 1800 }
+	}
+	if = { 
+		limit = { 
+			has_technology = tech_patrol_frigate
+			has_technology = tech_engineering_destroyer_541 
+			has_technology = tech_engineering_cruiser_542 
+			has_technology = tech_engineering_battlecruiser_543
+			has_technology = tech_engineering_battleship_544
+			NOR = { 
+				has_technology = tech_emette_frigate
+				has_technology = tech_engineering_03501
+				has_technology = tech_engineering_03502
+				has_technology = tech_engineering_03503
+				has_technology = tech_engineering_03504
+				has_technology = tech_engineering_03505
+				has_technology = tech_engineering_03506
+				has_technology = tech_engineering_03507
+				has_technology = tech_engineering_03508
+				has_technology = tech_engineering_03509
+				has_technology = tech_engineering_03510
+				has_technology = tech_engineering_03511
+				has_technology = tech_engineering_03512
+				has_technology = tech_engineering_03513
+				has_technology = tech_engineering_03514
+				has_technology = tech_engineering_03515
+				has_technology = tech_engineering_03516
+				has_technology = tech_engineering_03517
+				has_technology = tech_engineering_heavy_545
+				has_technology = tech_engineering_assault_546
+			} 
+		}
+		give_technology = { tech = tech_emette_frigate }
+		give_technology = { tech = tech_starfleet_design }
+		give_technology = { tech = tech_engineering_03501 }
+		give_technology = { tech = tech_engineering_03502 }
+		give_technology = { tech = tech_engineering_03503 }
+		give_technology = { tech = tech_engineering_03504 }
+		give_technology = { tech = tech_engineering_03505 }
+		give_technology = { tech = tech_engineering_03506 }
+		give_technology = { tech = tech_engineering_03507 }
+		give_technology = { tech = tech_engineering_03508 }
+		give_technology = { tech = tech_engineering_03509 }
+		give_technology = { tech = tech_engineering_03510 }
+		give_technology = { tech = tech_engineering_03511 }
+		give_technology = { tech = tech_engineering_03512 }
+		give_technology = { tech = tech_engineering_03513 }
+		give_technology = { tech = tech_ai_update_dummy_tech message = no }
+		set_timed_country_flag = { flag = temp_generic_corvette days = 1800 }
+		set_timed_country_flag = { flag = temp_generic_destroyer days = 1800 }
+		set_timed_country_flag = { flag = temp_generic_cruiser days = 1800 }
+		set_timed_country_flag = { flag = temp_generic_battlecruiser days = 1800 }
+		set_timed_country_flag = { flag = temp_generic_battleship days = 1800 }
+	}
+	if = { 
+		limit = { 
+			has_technology = tech_patrol_frigate
+			has_technology = tech_engineering_destroyer_541 
+			has_technology = tech_engineering_cruiser_542 
+			has_technology = tech_engineering_battlecruiser_543
+			has_technology = tech_engineering_battleship_544
+			has_technology = tech_engineering_heavy_545
+			NOR = { 
+				has_technology = tech_emette_frigate
+				has_technology = tech_engineering_03501
+				has_technology = tech_engineering_03502
+				has_technology = tech_engineering_03503
+				has_technology = tech_engineering_03504
+				has_technology = tech_engineering_03505
+				has_technology = tech_engineering_03506
+				has_technology = tech_engineering_03507
+				has_technology = tech_engineering_03508
+				has_technology = tech_engineering_03509
+				has_technology = tech_engineering_03510
+				has_technology = tech_engineering_03511
+				has_technology = tech_engineering_03512
+				has_technology = tech_engineering_03513
+				has_technology = tech_engineering_03514
+				has_technology = tech_engineering_03515
+				has_technology = tech_engineering_03516
+				has_technology = tech_engineering_03517
+				has_technology = tech_engineering_assault_546
+			} 
+		}
+		give_technology = { tech = tech_emette_frigate }
+		give_technology = { tech = tech_starfleet_design }
+		give_technology = { tech = tech_engineering_03501 }
+		give_technology = { tech = tech_engineering_03502 }
+		give_technology = { tech = tech_engineering_03503 }
+		give_technology = { tech = tech_engineering_03504 }
+		give_technology = { tech = tech_engineering_03505 }
+		give_technology = { tech = tech_engineering_03506 }
+		give_technology = { tech = tech_engineering_03507 }
+		give_technology = { tech = tech_engineering_03508 }
+		give_technology = { tech = tech_engineering_03509 }
+		give_technology = { tech = tech_engineering_03510 }
+		give_technology = { tech = tech_engineering_03511 }
+		give_technology = { tech = tech_engineering_03512 }
+		give_technology = { tech = tech_engineering_03513 }
+		give_technology = { tech = tech_engineering_03514 }
+		give_technology = { tech = tech_engineering_03515 }
+		give_technology = { tech = tech_engineering_03516 }
+		give_technology = { tech = tech_ai_update_dummy_tech message = no }
+		set_timed_country_flag = { flag = temp_generic_corvette days = 1800 }
+		set_timed_country_flag = { flag = temp_generic_destroyer days = 1800 }
+		set_timed_country_flag = { flag = temp_generic_cruiser days = 1800 }
+		set_timed_country_flag = { flag = temp_generic_battlecruiser days = 1800 }
+		set_timed_country_flag = { flag = temp_generic_battleship days = 1800 }
+		set_timed_country_flag = { flag = temp_generic_heavy_escort days = 1800 }
+	}
+	if = { 
+		limit = { 
+			has_technology = tech_patrol_frigate
+			has_technology = tech_engineering_destroyer_541 
+			has_technology = tech_engineering_cruiser_542 
+			has_technology = tech_engineering_battlecruiser_543
+			has_technology = tech_engineering_battleship_544
+			has_technology = tech_engineering_heavy_545
+			has_technology = tech_engineering_assault_546
+			NOR = { 
+				has_technology = tech_emette_frigate
+				has_technology = tech_engineering_03501
+				has_technology = tech_engineering_03502
+				has_technology = tech_engineering_03503
+				has_technology = tech_engineering_03504
+				has_technology = tech_engineering_03505
+				has_technology = tech_engineering_03506
+				has_technology = tech_engineering_03507
+				has_technology = tech_engineering_03508
+				has_technology = tech_engineering_03509
+				has_technology = tech_engineering_03510
+				has_technology = tech_engineering_03511
+				has_technology = tech_engineering_03512
+				has_technology = tech_engineering_03513
+				has_technology = tech_engineering_03514
+				has_technology = tech_engineering_03515
+				has_technology = tech_engineering_03516
+				has_technology = tech_engineering_03517
+			} 
+		}
+		give_technology = { tech = tech_emette_frigate }
+		give_technology = { tech = tech_starfleet_design }
+		give_technology = { tech = tech_engineering_03501 }
+		give_technology = { tech = tech_engineering_03502 }
+		give_technology = { tech = tech_engineering_03503 }
+		give_technology = { tech = tech_engineering_03504 }
+		give_technology = { tech = tech_engineering_03505 }
+		give_technology = { tech = tech_engineering_03506 }
+		give_technology = { tech = tech_engineering_03507 }
+		give_technology = { tech = tech_engineering_03508 }
+		give_technology = { tech = tech_engineering_03509 }
+		give_technology = { tech = tech_engineering_03510 }
+		give_technology = { tech = tech_engineering_03511 }
+		give_technology = { tech = tech_engineering_03512 }
+		give_technology = { tech = tech_engineering_03513 }
+		give_technology = { tech = tech_engineering_03514 }
+		give_technology = { tech = tech_engineering_03515 }
+		give_technology = { tech = tech_engineering_03516 }
+		give_technology = { tech = tech_engineering_03517 }
+		give_technology = { tech = tech_ai_update_dummy_tech message = no }
+		set_timed_country_flag = { flag = temp_generic_corvette days = 1800 }
+		set_timed_country_flag = { flag = temp_generic_destroyer days = 1800 }
+		set_timed_country_flag = { flag = temp_generic_cruiser days = 1800 }
+		set_timed_country_flag = { flag = temp_generic_battlecruiser days = 1800 }
+		set_timed_country_flag = { flag = temp_generic_battleship days = 1800 }
+		set_timed_country_flag = { flag = temp_generic_heavy_escort days = 1800 }
+		set_timed_country_flag = { flag = temp_generic_assault_cruiser days = 1800 }
+	}	
+}

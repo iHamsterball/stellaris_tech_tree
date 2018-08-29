@@ -1,0 +1,20 @@
+country_edict = {
+	name = "drone_bounty"
+	modifier = {
+	}
+	
+	cost = { influence = @Edict1Cost }
+
+	length = 36000
+
+	potential = {
+		has_country_flag = drone_bounty_edict_available
+	}
+
+	allow = {
+	}
+
+	ai_weight = {
+		weight = 0
+	}	
+}

@@ -1,0 +1,28 @@
+defined_text = {
+	name = GetSpecialCountryAdjective
+	text = { 
+		trigger = { 
+			OR = {
+				has_country_flag = united_federation_of_planets
+				AND = {
+					exists = overlord
+					overlord = { has_country_flag = united_federation_of_planets }
+				}
+			}
+		} 
+		localization_key = "united_federation_of_planets_adjective"
+	}
+	text = { 
+		trigger = { 
+			OR = {
+				has_country_flag = interstellar_union
+				AND = {
+					exists = overlord
+					overlord = { has_country_flag = interstellar_union }
+				}
+			}
+		} 
+		localization_key = "interstellar_union_adjective" 
+	}
+	text = { localization_key = " " }
+}

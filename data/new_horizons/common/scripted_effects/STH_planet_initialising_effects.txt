@@ -1,0 +1,1136 @@
+add_appropriate_start_techs = {
+
+### Give Sections Tech
+
+	if = {
+		limit = { use_weapon_beam = yes }
+		give_technology = { tech = "tech_engineering_starship-class_717" message = no }
+	}
+	if = {
+		limit = { use_weapon_cannon = yes }
+		give_technology = { tech = "tech_engineering_bird-of-prey_716" message = no }
+	}
+	
+### Give colony ship tech
+
+	if = {
+		limit = { starts_with_colony_tech = yes }
+		give_technology = { tech = "tech_colonization_1" message = no }
+		give_technology = { tech = "tech_society_space_396" message = no }
+		give_technology = { tech = "tech_society_02235" message = no }
+	}
+	
+
+### Give warp-engine tech
+
+    if = {
+		limit = { uses_singularity_cores = yes }
+		give_technology = { tech = "tech_physics_artificial_70" message = no }
+	}
+	
+	if = {
+		limit = { uses_ring_engine = yes }
+		give_technology = { tech = "tech_physics_coleopteric_67" message = no }
+	}
+	
+	if = {
+		limit = { uses_transwarp_engine = yes }
+		give_technology = { tech = "tech_transwarp_borg" message = no }
+	}
+	
+	if = {
+		limit = { uses_warp_cores = yes }
+		give_technology = { tech = "tech_warp_engine" message = no }
+	}
+	
+### Non-Borg unique technology dump
+
+	if = {
+		limit = { is_borg_empire = no }
+		give_technology = { tech = "tech_basic_science_lab_1" message = no }
+	}
+
+### Non-Borg unique technology dump
+
+	if = {
+		limit = { has_country_flag = undine_vanguard }
+		give_technology = { tech = "tech_undine_bio_ship" message = no }
+	}
+
+### Borg unique technology dump
+
+	if = {
+		limit = { is_borg_empire = yes }
+		give_technology = { tech = "tech_interlink_alcove" message = no }
+		give_technology = { tech = "tech_cortical_processing" message = no }
+		give_technology = { tech = "tech_borg_defense" message = no }
+		give_technology = { tech = "tech_borg_hull" message = no }
+		give_technology = { tech = "tech_borg_thruster" message = no }
+		give_technology = { tech = "tech_borg_queen_chamber" message = no }
+		give_technology = { tech = "tech_society_biology_1716" message = no }
+		give_technology = { tech = "tech_engineering_02891" message = no }
+	}
+	
+	
+### Give Weapon Techs
+
+	if = {
+		limit = { uses_polaron_weapons = yes }
+		give_technology = { tech = "tech_polaron_beam_1" message = no }
+		give_technology = { tech = "tech_polaron_torp_start" message = no }
+		# create_ship_design = { design = "Polaron Frigate" }
+		create_start_fleet = yes
+	}
+	if = {
+		limit = { uses_quantum_resonance_weapons = yes }
+		give_technology = { tech = "tech_physics_particles_747" message = no }
+		give_technology = { tech = "tech_engineering_rocketry_1681" message = no }
+		# create_ship_design = { design = "Resonance Frigate" }
+		create_start_fleet = yes
+	}
+	if = {
+		limit = { uses_thermic_weapons = yes }
+		give_technology = { tech = "tech_physics_particles_755" message = no }
+		give_technology = { tech = "tech_early_photonic" message = no }
+		# create_ship_design = { design = "Thermionic Frigate" }
+		create_start_fleet = yes
+	}
+	if = {
+		limit = { uses_chroniton_weapons = yes }
+		give_technology = { tech = "tech_physics_particles_763" message = no }
+		give_technology = { tech = "tech_engineering_rocketry_1673" message = no }
+		# create_ship_design = { design = "Krenim Frigate" }
+		create_start_fleet = yes
+	}
+	if = {
+		limit = { uses_tetryon_weapons = yes }
+		give_technology = { tech = "tech_tetryon_cannon_1" message = no }
+		give_technology = { tech = "tech_early_photonic" message = no }
+		create_start_fleet = yes
+	}
+	if = {
+		limit = { uses_antiproton_weapons = yes }
+		give_technology = { tech = "tech_antiproton_cannon_1" message = no }
+		give_technology = { tech = "tech_early_photonic" message = no }
+		# create_ship_design = { design = "Antiproton Frigate" }
+		create_start_fleet = yes
+	}
+	if = {
+		limit = { uses_antiproton_weapons_borg = yes }
+		give_technology = { tech = "tech_cutting_beam_1" message = no }
+		give_technology = { tech = "tech_engineering_rocketry_746" message = no }
+		create_ship_design = { design = "Borg Probe" }
+		create_start_fleet = yes
+	}
+	if = {
+		limit = { uses_plasma_weapons = yes }
+		give_technology = { tech = "tech_plasma_cannon_1" message = no }
+		give_technology = { tech = "tech_fusion_torpedo" message = no }
+		# create_ship_design = { design = "Plasma Frigate" }
+		create_start_fleet = yes
+	}
+	if = {
+		limit = { uses_disruptor_weapons = yes }
+		give_technology = { tech = "tech_disruptor_cannon_1" message = no }
+		give_technology = { tech = "tech_early_photonic" message = no }
+		# create_ship_design = { design = "Disruptor Frigate" }
+		create_start_fleet = yes
+	}
+	if = {
+		limit = { uses_disruptor_weapons_klingon = yes }
+		give_technology = { tech = "tech_disruptor_klingon_cannon_1" message = no }
+		give_technology = { tech = "tech_early_photonic" message = no }
+		# create_ship_design = { design = "Klingon Frigate" }
+		create_start_fleet = yes
+	}
+	if = {
+		limit = { uses_plasma_disruptor_weapons = yes }
+		give_technology = { tech = "tech_plasma_disruptor_beam_1" message = no }
+		give_technology = { tech = "tech_fusion_torpedo" message = no }
+		# create_ship_design = { design = "Romulan Frigate" }
+		create_start_fleet = yes
+	}
+	if = {
+		limit = { uses_phaser_weapons = yes }
+		give_technology = { tech = "tech_phaser_1" message = no }
+		give_technology = { tech = "tech_early_photonic" message = no }
+		# create_ship_design = { design = "Phaser Frigate" }
+		create_start_fleet = yes
+	}
+	if = {
+		limit = { uses_phaser_weapons_fed = yes } ### Set up for United Earth
+		give_technology = { tech = "tech_phaser_cannon_1" message = no }
+		give_technology = { tech = "tech_nuclear_torpedo" message = no }
+		give_technology = { tech = "tech_emette_frigate" message = no }
+		give_technology = { tech = "tech_starfleet_design" message = no }
+		create_start_fleet = yes
+	}
+	if = {
+		limit = { uses_phaser_weapons_cardassian = yes }
+		give_technology = { tech = "tech_cardassian_phaser_1" message = no }
+		give_technology = { tech = "tech_early_photonic" message = no }
+		# create_ship_design = { design = "Cardassian Frigate" }
+		create_start_fleet = yes
+	}
+	if = {
+		limit = { uses_phaser_weapons_andorian = yes }
+		give_technology = { tech = "tech_andorian_phaser_1" message = no }
+		give_technology = { tech = "tech_early_photonic" message = no }
+		# create_ship_design = { design = "Andorian Frigate" }
+		create_start_fleet = yes
+	}
+	if = {
+		limit = { uses_phaser_weapons_particle = yes }
+		give_technology = { tech = "tech_particle_phaser_1" message = no }
+		give_technology = { tech = "tech_early_photonic" message = no }
+		if = {
+			limit = { uses_ring_engine = yes }
+			# create_ship_design = { design = "Vulcan Frigate" }
+			create_start_fleet = yes
+		}
+		if = {
+			limit = { uses_ring_engine = no }
+			# create_ship_design = { design = "Tamarian Frigate" }
+			create_start_fleet = yes
+		}
+	}
+}
+
+
+create_start_fleet = {
+	# create_fleet = {
+		# effect = {
+			# set_owner = prev
+			# set_location = prevprev
+			# while = {
+				# count = 3
+				# create_ship = { name = random random_existing_design = corvette graphical_culture = prev prefix = yes }
+			# }
+		# }
+	# }
+}
+
+
+
+###
+### Pop generation scripted effect
+###
+
+generate_fallen_empire_start_pops = {
+	if = {
+		limit = { owner = { has_country_flag = init_spawned } }
+		every_tile = {
+			limit = { has_building = yes has_blocker = no has_grown_pop = no has_growing_pop = no }
+			create_pop = { species = owner_main_species }
+		}
+	}
+}
+
+generate_major_empire_start_pops = {
+	if = {
+		limit = { owner = { has_country_flag = init_spawned } }
+		every_tile = {
+			limit = { has_building = yes has_blocker = no has_grown_pop = no has_growing_pop = no }
+			create_pop = { species = owner_main_species }
+		}
+		random_tile = { limit = { has_blocker = no has_grown_pop = no has_growing_pop = no } create_pop = { species = owner_main_species } }
+	}
+}
+
+generate_minor_empire_start_pops = {
+	if = {
+		limit = { owner = { has_country_flag = init_spawned } }
+		every_tile = {
+			limit = { has_building = yes has_blocker = no has_grown_pop = no has_growing_pop = no }
+			create_pop = { species = owner_main_species }
+		}
+		random_tile = { limit = { has_blocker = no has_grown_pop = no has_growing_pop = no } create_pop = { species = owner_main_species } }
+	}
+}
+
+generate_satellite_start_pops = {
+	every_tile = {
+		limit = { AND = { has_building = yes has_blocker = no has_grown_pop = no has_growing_pop = no } }
+		create_pop = { species = owner_main_species }
+	}
+}
+			
+# Unique variant for Remus
+generate_minor_empire_start_pops_remus = {
+	every_tile = {
+		limit = { AND = { has_building = yes has_blocker = no has_grown_pop = no has_growing_pop = no } }
+		create_pop = { species = event_target:remanSpecies }
+	}
+	random_tile = { limit = { has_blocker = no has_grown_pop = no has_growing_pop = no } create_pop = { species = event_target:romulanSpecies } }
+	random_tile = { limit = { has_blocker = no has_grown_pop = no has_growing_pop = no } create_pop = { species = event_target:romulanSpecies } }
+}
+
+generate_borg_empire_start_pops = {
+	if = {
+		limit = { owner = { has_country_flag = init_spawned } }
+		every_tile = {
+			limit = { AND = { has_building = yes has_blocker = no has_grown_pop = no has_growing_pop = no } }
+			create_pop = { species = owner_main_species }
+		}
+	}
+}
+
+###
+### Building / Tile-blocker scripted effects
+###
+
+# For Major empires
+generate_major_empire_start_buildings = {
+	#clear existing buildings
+	every_tile = {
+		limit = { has_building = yes }
+		remove_building = yes
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+		set_building = "building_capital_1"
+		set_deposit = d_energy_deposit				
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "building_hydroponics_farm_1"
+			set_deposit = d_rich_farmland_deposit						
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "building_hydroponics_farm_1"
+			set_deposit = d_rich_farmland_deposit						
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "building_power_plant_1"
+			set_deposit = d_rich_energy_deposit					
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "building_mining_network_1"
+			set_deposit = d_rich_mineral_deposit
+		}				
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		set_building = "building_mining_network_1"
+		set_deposit = d_mineral_deposit					
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		set_building = "building_power_plant_1"
+		set_deposit = d_rich_energy_deposit			
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		set_deposit = d_engineering_deposit
+		set_building = "building_engineering_facility_0"
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		set_deposit = d_society_deposit
+		set_building = "building_bio_lab_0"
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		set_deposit = d_physics_deposit
+		set_building = "building_physics_lab_0"
+	}
+	while = {
+		count = 3
+		random_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_blocker = "tb_failing_infrastructure"
+			set_deposit = d_engineering_deposit
+		}
+	}
+	while = {
+		count = 3
+		random_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_blocker = "tb_decrepit_dwellings"
+			set_deposit = d_rich_energy_deposit
+		}
+	}
+}
+
+# For minor empires
+generate_minor_empire_start_buildings = {
+	every_tile = {
+		limit = { has_building = yes }
+		remove_building = yes
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+		set_building = "building_capital_1"
+		set_deposit = d_energy_deposit				
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "building_hydroponics_farm_1"
+			set_deposit = d_rich_farmland_deposit						
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "building_hydroponics_farm_1"
+			set_deposit = d_rich_farmland_deposit						
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "building_power_plant_1"
+			set_deposit = d_rich_energy_deposit					
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "building_mining_network_1"
+			set_deposit = d_rich_mineral_deposit
+		}				
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		set_building = "building_mining_network_1"
+		set_deposit = d_mineral_deposit					
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		set_building = "building_power_plant_1"
+		set_deposit = d_rich_energy_deposit			
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		random_list = {
+			33 = { 
+				set_deposit = d_engineering_deposit
+				set_building = "building_engineering_facility_0"
+			}
+			33 = { 
+				set_deposit = d_society_deposit
+				set_building = "building_bio_lab_0"
+			}
+			33 = { 
+				set_deposit = d_physics_deposit
+				set_building = "building_physics_lab_0"
+			}					
+		}					
+	}
+	while = {
+		count = 3
+		random_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_blocker = "tb_failing_infrastructure"
+			set_deposit = d_engineering_deposit
+		}
+	}
+	while = {
+		count = 2
+		random_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_blocker = "tb_decrepit_dwellings"
+			set_deposit = d_rich_energy_deposit
+		}
+	}
+}
+
+# For satellite colonies, appropiate blocker
+generate_suitable_blocker = {
+	random_list = {
+		5 = {
+			modifier = { factor = 20 Planet = { OR = { is_planet_class = pc_continental is_planet_class = pc_arctic is_planet_class = pc_alpine } } }
+			set_blocker = "tb_mountain_range"
+		}
+		5 = {
+			modifier = { factor = 20 planet = { is_planet_class = pc_y_class } }
+			set_blocker = "tb_active_volcano"
+		}
+		5 = {
+			modifier = { factor = 20 planet = { OR = { is_planet_class = pc_continental is_planet_class = pc_savannah } } }
+			modifier = { factor = 0 planet = { OR = { is_planet_class = pc_y_class } } }
+			set_blocker = "tb_dangerous_wildlife"
+		}
+		5 = {
+			modifier = { factor = 20 planet = { is_planet_class = pc_tropical } }
+			modifier = { factor = 0 planet = { OR = { is_planet_class = pc_y_class } } }
+			set_blocker = "tb_dense_jungle"
+		}
+		5 = {
+			modifier = { factor = 20 planet = { OR = { is_planet_class = pc_arid is_planet_class = pc_desert } } }
+			modifier = { factor = 0 planet = { OR = { is_planet_class = pc_y_class } } }
+			set_blocker = "tb_quicksand_basin"
+		}
+		5 = {
+			modifier = { factor = 20 planet = { OR = { is_planet_class = pc_tropical is_planet_class = pc_m1_class } } }
+			modifier = { factor = 0 planet = { OR = { is_planet_class = pc_y_class } } }
+			set_blocker = "tb_noxious_swamp"
+		}
+		5 = {
+			modifier = { factor = 20 planet = { is_planet_class = pc_arctic } }
+			modifier = { factor = 0 planet = { OR = { is_planet_class = pc_y_class is_planet_class = pc_arid is_planet_class = pc_desert } } }
+			set_blocker = "tb_massive_glacier"
+		}
+		5 = {
+			modifier = { factor = 20 planet = { OR = { is_planet_class = pc_m1_class is_planet_class = pc_ocean } } }
+			modifier = { factor = 0 planet = { OR = { is_planet_class = pc_y_class } } }
+			set_blocker = "tb_toxic_kelp"
+		}
+		5 = {
+			modifier = { factor = 20 planet = { OR = { is_planet_class = pc_savannah is_planet_class = pc_desert } } }
+			modifier = { factor = 0 planet = { OR = { is_planet_class = pc_y_class } } }
+			set_blocker = "tb_deep_sinkhole"
+		}
+	}
+}
+
+# For satellite colonies - only for major empires that have satellites
+generate_satellite_start_buildings = {
+	every_tile = {
+		limit = { has_building = yes }
+		remove_building = yes
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+		set_building = "building_colony_shelter"
+		set_deposit = d_energy_deposit
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "building_basic_farm"
+			set_deposit = d_rich_farmland_deposit						
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "building_basic_power_plant"
+			set_deposit = d_rich_energy_deposit					
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "building_basic_mine"
+			set_deposit = d_rich_mineral_deposit
+		}				
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		set_deposit = d_mineral_deposit					
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		set_deposit = d_rich_energy_deposit			
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		random_list = {
+			33 = { 
+				set_deposit = d_engineering_deposit
+			}
+			33 = { 
+				set_deposit = d_society_deposit
+			}
+			33 = { 
+				set_deposit = d_physics_deposit
+			}					
+		}					
+	}
+	while = { count = 4 random_tile = { limit = { has_blocker = no has_building = no } generate_suitable_blocker = yes } }
+	random_tile = { limit = { has_blocker = yes } add_deposit = d_engineering_deposit }
+	random_tile = { limit = { has_blocker = yes } add_deposit = d_society_deposit }
+	random_tile = { limit = { has_blocker = yes } add_deposit = d_physics_deposit }
+	random_tile = { limit = { has_blocker = yes } add_deposit = d_energy_deposit }
+}
+
+# Unique Kelpian minor
+generate_minor_empire_start_buildings_kelp = {
+	generate_minor_empire_start_buildings = yes
+	every_tile = {
+		limit = { has_blocker = yes }
+		set_blocker = "tb_dangerous_wildlife"
+	}
+}
+
+# Unique Voth tileblockers
+generate_cityship_blockers_voth = {
+	every_tile = {
+		limit = { has_blocker = yes }
+		set_blocker = "tb_dangerous_disrepair"
+	}
+}
+
+# Unique Hurq starting planet tile set
+generate_haven_blockers_hurq = {
+	every_tile = {
+		limit = { has_blocker = yes }
+		set_blocker = "tb_crater"
+	}
+	random_tile = { 
+		limit = { has_blocker = no has_building = no }
+		set_deposit = "d_sr_relics_24_deposit"
+		set_building = "building_museum_1"
+	}
+}
+
+# Unique Mars satellite variant
+generate_satellite_start_buildings_mars = {
+	random_tile = {
+		limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+		set_building = "building_colony_shelter"
+		set_deposit = d_energy_deposit
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "building_basic_farm"
+			set_deposit = d_rich_farmland_deposit						
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "building_basic_power_plant"
+			set_deposit = d_rich_energy_deposit					
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "building_basic_mine"
+			set_deposit = d_rich_mineral_deposit
+		}				
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		set_blocker = "tb_mountain_range"
+		add_deposit = d_engineering_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		set_blocker = "tb_deep_sinkhole"
+		add_deposit = d_energy_deposit					
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		set_blocker = "tb_mars_canyon"
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		clear_deposits = yes
+		add_deposit = d_sr_mars_22_deposit
+	}
+}
+
+# Unique variant for Pralor/Cravik
+generate_major_empire_start_buildings_machine = {
+	random_tile = {
+		limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+		set_building = "building_machine_capital_1"
+		set_deposit = d_energy_deposit				
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "building_mining_network_1"
+			set_deposit = d_mineral_deposit						
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "building_power_plant_1"
+			set_deposit = d_energy_deposit						
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "building_power_plant_1"
+			set_deposit = d_rich_energy_deposit					
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "building_mining_network_1"
+			set_deposit = d_rich_mineral_deposit
+		}				
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		set_building = "building_mining_network_1"
+		set_deposit = d_mineral_deposit					
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		set_building = "building_power_plant_1"
+		set_deposit = d_rich_energy_deposit			
+	}	
+	while = {
+		count = 3
+		random_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_blocker = "tb_former_battlefield"
+			set_deposit = d_engineering_deposit
+		}
+	}
+	while = {
+		count = 3
+		random_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_blocker = "tb_exterminators_ruins"
+			set_deposit = d_society_deposit
+		}
+	}
+}
+
+# Unique variant for Hirogen
+generate_major_empire_start_buildings_hunters_lodge = {
+	every_tile = {
+		limit = { has_building = yes }
+		remove_building = yes
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+		set_building = "helix_ops_1"
+		add_deposit = d_rich_energy_deposit
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "space_building_hydroponics_farm_1"
+			add_deposit = d_rich_farmland_deposit						
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "space_building_mining_network_1"
+			add_deposit = d_vast_mineral_deposit						
+		}
+		while = {
+			count = 2
+			random_neighboring_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "space_building_power_plant_1"
+				add_deposit = d_rich_energy_deposit						
+			}
+		}		
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no has_grown_pop = no has_growing_pop = no }
+		set_building = "space_building_hydroponics_farm_1"
+		add_deposit = d_vast_farmland_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no has_grown_pop = no has_growing_pop = no }
+		set_building = "space_building_mining_network_1"
+		add_deposit = d_rich_mineral_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		add_deposit = d_rich_engineering_deposit				
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		add_deposit = d_rich_society_deposit				
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		add_deposit = d_rich_physics_deposit				
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		add_deposit = d_rich_mineral_deposit
+	}
+	while = {
+		count = 3
+		random_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_blocker = "tb_hunters_lodge_expansion"
+		}
+	}
+	while = {
+		count = 3
+		random_tile = {
+			limit = { has_blocker = no has_building = no }
+			add_deposit = d_rich_energy_deposit
+		}
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		add_deposit = d_rich_mineral_deposit
+		set_blocker = "tb_hunters_lodge_expansion"
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		add_deposit = d_rich_farmland_deposit
+		set_blocker = "tb_hunters_lodge_expansion"
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		add_deposit = d_vast_mineral_deposit
+		set_blocker = "tb_hunters_lodge_expansion"
+	}				
+}
+
+# Unique variant for Suliban
+generate_major_empire_start_buildings_helix = {
+	every_tile = {
+		limit = { has_building = yes }
+		remove_building = yes
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+		set_building = "helix_ops_1"
+		add_deposit = d_rich_energy_deposit				
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "space_building_hydroponics_farm_1"
+			add_deposit = d_rich_farmland_deposit						
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "space_building_power_plant_1"
+			add_deposit = d_rich_energy_deposit						
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "space_building_power_plant_1"
+			add_deposit = d_vast_energy_deposit						
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "space_building_mining_network_1"
+			add_deposit = d_rich_mineral_deposit						
+		}
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no has_grown_pop = no has_growing_pop = no }
+		set_building = "space_building_hydroponics_farm_1"
+		add_deposit = d_rich_farmland_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no has_grown_pop = no has_growing_pop = no }
+		set_building = "space_building_mining_network_1"
+		add_deposit = d_rich_mineral_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		add_deposit = d_rich_engineering_deposit				
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		add_deposit = d_rich_society_deposit				
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		add_deposit = d_rich_physics_deposit				
+	}
+	while = {
+		count = 2
+		random_tile = {
+			limit = { has_blocker = no has_building = no }
+			add_deposit = d_vast_mineral_deposit
+		}
+	}	
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		add_deposit = d_rich_mineral_deposit
+		set_blocker = "tb_helix_expansion"
+	}
+	while = {
+		count = 3
+		random_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_blocker = "tb_helix_expansion"
+		}
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		add_deposit = d_rich_farmland_deposit
+		set_blocker = "tb_helix_expansion"
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no }
+		add_deposit = d_vast_energy_deposit
+		set_blocker = "tb_helix_expansion"
+	}
+}
+
+# Unique variant for Borg
+generate_major_empire_start_buildings_unicomplex = {
+	every_tile = {
+		limit = { has_building = yes }
+		remove_building = yes
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no has_grown_pop = no num_adjacent_tiles > 3 }
+		set_building = "node_hub_1"
+		add_deposit = d_rich_energy_deposit
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no has_grown_pop = no }
+			set_building = "space_building_mining_network_1"
+			add_deposit = d_rich_mineral_deposit
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no has_grown_pop = no }
+			set_building = "space_building_hydroponics_farm_1"
+			add_deposit = d_rich_farmland_deposit
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no has_grown_pop = no }
+			set_building = "space_building_power_plant_1"
+			add_deposit = d_rich_energy_deposit
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_building = no has_grown_pop = no }
+			set_building = "space_building_power_plant_1"
+			add_deposit = d_vast_energy_deposit
+		}
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no has_grown_pop = no }
+		set_building = "space_building_physics_lab_1"
+		add_deposit = d_rich_physics_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no has_grown_pop = no }
+		set_building = "space_building_mining_network_1"
+		add_deposit = d_vast_mineral_deposit
+	}
+	while = {
+		count = 5
+		random_tile = {
+			limit = { has_blocker = no has_building = no has_grown_pop = no }
+			set_building = "space_building_mining_network_1"
+			add_deposit = d_rich_mineral_deposit
+		}
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no has_grown_pop = no }
+		set_building = "space_building_mining_network_1"
+		add_deposit = d_vast_mineral_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_building = no has_grown_pop = no }
+		set_building = "space_building_power_plant_1"
+		add_deposit = d_rich_energy_deposit
+	}
+	while = {
+		count = 4
+		random_tile = {
+			limit = { has_blocker = no has_building = no has_grown_pop = no }
+			set_building = "space_building_power_plant_1"
+			add_deposit = d_vast_energy_deposit
+		}
+	}
+	while = {
+		count = 2
+		random_tile = {
+			limit = { has_blocker = no has_building = no has_grown_pop = no }
+			set_building = "space_building_power_plant_1"
+			add_deposit = d_rich_energy_deposit
+		}
+	}
+	while = {
+		count = 2
+		random_tile = {
+			limit = { has_blocker = no has_building = no has_grown_pop = no }
+			set_building = "space_building_hydroponics_farm_1"
+			add_deposit = d_vast_farmland_deposit
+		}
+	}
+	while = {
+		count = 3
+		random_tile = {
+			limit = { has_blocker = no has_building = no has_grown_pop = no }
+			set_building = "space_building_hydroponics_farm_1"
+			add_deposit = d_rich_farmland_deposit
+		}
+	}
+}
+
+# Unique variant for Fallen empires
+generate_fallen_empire_start_buildings = {
+	every_tile = {
+		remove_building = yes
+		remove_blocker = yes
+	}
+	random_tile = {
+		limit = { has_grown_pop = yes num_adjacent_tiles > 3 }
+		set_building = "building_capital_3"
+		set_deposit = d_vast_energy_deposit				
+		random_neighboring_tile = { set_building = "building_agri_processing_complex" set_deposit = d_vast_farmland_deposit }
+		random_neighboring_tile = { set_building = "building_agri_processing_complex" set_deposit = d_vast_farmland_deposit }
+		random_neighboring_tile = { set_building = "building_dark_matter_power_plant" set_deposit = d_vast_energy_deposit }
+		random_neighboring_tile = { set_building = "building_ancient_factory" set_deposit = d_vast_mineral_deposit }				
+	}
+	random_tile = {
+		limit = { has_building = no }
+		set_building = "space_building_military_camp_3"
+		set_deposit = d_vast_energy_deposit		
+	}
+	random_tile = {
+		limit = { has_building = no }
+		set_building = "space_building_military_camp_4"
+		set_deposit = d_vast_energy_deposit		
+	}		
+	while = {
+		limit = { any_tile = { has_building = no } }
+		random_tile = { 
+			limit = { has_building = no } 
+			clear_deposits = yes
+			add_random_fe_building = yes
+		}
+	}
+	while = {
+		limit = { any_tile = { has_grown_pop = no } }
+		create_pop = { species = owner_main_species }
+	}
+}
+
+###
+### Other Initilization scripted effects
+###
+
+add_random_fe_building = {
+	random_list = {
+		10 = { set_building = "building_agri_processing_complex" set_deposit = d_vast_farmland_deposit }
+		10 = { set_building = "building_dark_matter_power_plant" set_deposit = d_vast_energy_deposit }
+		10 = { set_building = "building_ancient_factory" set_deposit = d_vast_mineral_deposit }
+		10 = { set_building = "building_ancient_archives" }
+	}
+}
+
+add_appropriate_start_design = {
+	#owner scope
+	if = {
+		limit = { always = yes }
+		create_ship_design = { design = "Early generic cannon Patrol Frigate" }
+	}
+	
+	
+	add_ship_design = last_created_design
+}
+
+generate_major_empire_start_fleets = {
+	if = {
+		limit = { owner = { has_country_flag = init_spawned } }
+		create_correct_spaceport_planetscope = yes
+		owner = {
+			create_fleet = {
+				effect = {
+					set_owner = prev
+					set_location = prevprev
+					create_ship = { name = random random_existing_design = constructor graphical_culture = prev prefix = yes }
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = prev
+					set_location = prevprev
+					create_ship = { name = random random_existing_design = science graphical_culture = prev prefix = yes }
+					owner = { create_leader = { name = random type = scientist skill = random traits = { trait = random_trait trait = random_trait } } }
+					assign_leader = last_created_leader
+				}
+			}
+		}
+	}
+}
+
+generate_fallen_empire_start_fleets = {
+	create_correct_spaceport_planetscope = yes
+	owner = {
+		create_fleet = {
+			effect = {
+				set_owner = prev
+				set_location = prev.capital_scope.star
+				create_ship = { name = random random_existing_design = constructor graphical_culture = prev prefix = yes }
+				set_location = {
+					target = prev.capital_scope.star
+					distance = 35
+					angle = random 
+				}
+			}
+		}
+		create_fleet = {
+			effect = {
+				set_owner = prev
+				set_location = prev.capital_scope.star
+				create_ship = { name = random random_existing_design = science graphical_culture = prev prefix = yes }
+				set_location = {
+					target = prev.capital_scope.star
+					distance = 85
+					angle = random 
+				}
+				owner = { create_leader = { name = random type = scientist skill = random traits = { trait = random_trait trait = random_trait } } }
+				assign_leader = last_created_leader
+			}
+		}
+		create_ship_design = { design = "Fallen Sword" }
+		create_fleet = {
+			effect = {
+				set_owner = prev
+				set_location = prev.capital_scope.star
+				while = {
+					count = 15
+					create_ship = { name = random design = "Fallen Sword" upgradable = no }
+					set_location = {
+						target = prev.capital_scope.star
+						distance = 15
+						angle = random 
+					}
+				}
+			}
+		}
+		create_ship_design = { design = "Fallen Mercy" }
+		create_fleet = {
+			effect = {
+				set_owner = prev
+				set_location = prev.capital_scope.star
+				while = {
+					count = 10
+					create_ship = { name = random design = "Fallen Mercy" upgradable = no }
+					set_location = {
+						target = prev.capital_scope.star
+						distance = 95
+						angle = random 
+					}
+				}
+			}
+		}
+		create_ship_design = { design = "Fallen Justice" }
+		create_fleet = {
+			effect = {
+				set_owner = prev
+				set_location = prev.capital_scope.star
+				while = {
+					count = 5
+					create_ship = { name = random design = "Fallen Justice" upgradable = no }
+					set_location = {
+						target = prev.capital_scope.star
+						distance = 60
+						angle = random 
+					}
+				}
+			}
+		}
+	}	
+}
+
+### Fallen empire unique technology dump
+fallen_empire_techs = {
+	give_technology = { tech = tech_physics_administrative_3 message = no }
+	give_technology = { tech = tech_engineering_rocketry_1672 message = no }
+	give_technology = { tech = tech_fallen_empires message = no }
+}
+
+
+
+generate_space_age_start_buildings = {
+	while = {
+		count = 2
+		random_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "building_primitive_factory"
+			add_deposit = d_mineral_deposit
+		}
+	}
+	while = {
+		count = 2
+		random_tile = {
+			limit = { has_blocker = no has_building = no }
+			set_building = "building_primitive_farm"
+			add_deposit = d_farmland_deposit
+		}
+	}
+	random_tile = {
+		limit = { has_building = "building_colony_shelter" }
+		remove_building = yes
+	}
+}
+
+generate_space_age_start_pops = {
+	if = {
+		limit = { owner = { has_country_flag = init_spawned } }
+		every_tile = {
+			limit = { has_building = yes has_blocker = no has_grown_pop = no has_growing_pop = no }
+			create_pop = { species = owner_main_species }
+		}
+	}
+}

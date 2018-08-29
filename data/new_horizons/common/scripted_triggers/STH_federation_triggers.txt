@@ -1,0 +1,296 @@
+###TODO move elsewhere
+has_crisis_in_progress = {
+    OR = {
+        has_country_flag = xindi_crisis
+        has_country_flag = syrrannite_crisis
+        has_country_flag = demons_crisis
+    }
+}
+
+#Federation and ISU valid
+valid_federation_candidate = {
+	is_ai = yes
+	OR = {
+		AND = {
+			is_in_federation_with = Root
+			NOR = { is_subject_type = member_world is_subject_type = member_world_human }
+			is_normal_country = yes
+		}
+		AND = {
+			is_subject = yes
+			# exists = overlord
+			# overlord = { is_same_value = Root }
+			ROOT = { any_subject = { is_same_value = prevprev } }
+			NOR = { is_subject_type = member_world is_subject_type = member_world_human }
+			is_normal_country = yes
+		}
+	}
+}
+
+valid_federation_formation = {
+	OR = {
+        years_passed > 15
+        has_global_flag = fedTest
+    }
+    is_at_war = no
+	OR = {
+		is_ai = no
+		NOT = {		
+			any_country = {
+				is_ai = no
+				OR = {
+					vulcan_empires = yes
+					has_country_flag = "andorian_empire"
+					has_country_flag = "tellarian_technocracy"
+					OR = {
+						has_country_flag = united_earth
+						AND = {
+							has_country_flag = united_human_remnant
+							OR = { has_ethic = "ethic_xenophile" has_ethic = "ethic_fanatic_xenophile" }
+						}
+					}
+				}
+			}
+		}
+	}
+	count_country = {
+		count > 1
+		limit = {
+			is_in_federation_with = root
+			NOT = { is_same_value = root }
+			OR = {
+				vulcan_empires = yes
+				has_country_flag = "andorian_empire"
+				has_country_flag = "tellarian_technocracy"
+				OR = {
+					has_country_flag = united_earth
+					AND = {
+						has_country_flag = united_human_remnant
+						OR = { has_ethic = "ethic_xenophile" has_ethic = "ethic_fanatic_xenophile" }
+					}
+				}
+			}
+		}
+	
+	}
+	NOR = { 
+        any_country = { has_country_flag = united_federation_of_planets } 
+        any_country = { has_country_flag = interstellar_union } 
+	    has_global_flag = federation_in_progress 
+        has_global_flag = isu_in_progress 
+    }
+    NOT = { alliance = { any_member = { has_crisis_in_progress = yes } } }
+    has_crisis_in_progress = no
+}
+
+valid_isu_formation = {
+	OR = {
+        years_passed > 15
+        has_global_flag = fedTest
+    }
+    has_country_flag = "andorian_empire"
+    is_at_war = no
+	OR = {
+		is_ai = no
+		NOT = { alliance = { any_member = { is_ai = no } } }
+	}
+	count_country = {
+		count > 1
+		limit = {
+			is_in_federation_with = root
+			NOT = { is_same_value = root }
+			OR = {
+				has_country_flag = "united_human_remnant"
+				has_country_flag = "united_earth"
+				has_country_flag = "tellarian_technocracy"
+                has_country_flag = "denobulan_unity"
+                has_country_flag = "rigellian_consortium"
+			}
+		}
+	}
+	NOR = { 
+        any_country = { has_country_flag = united_federation_of_planets } 
+        any_country = { has_country_flag = interstellar_union } 
+	    has_global_flag = federation_in_progress 
+        has_global_flag = isu_in_progress 
+    }
+    NOT = { alliance = { any_member = { has_crisis_in_progress = yes } } }
+    NOT = { alliance = { any_member = { vulcan_empires = yes } } }
+    has_crisis_in_progress = no
+}
+
+
+
+##############################################
+### Building triggers for unique embassies ###
+##############################################
+
+human_fed_members = {
+    any_subject = { 
+        AND = { 
+            is_country_type = ufp_member_world
+            has_country_flag = united_earth
+            is_ai = yes
+        }
+    }
+}
+
+klingon_fed_members = {
+    any_subject = { 
+        AND = { 
+            is_country_type = ufp_member_world
+            has_country_flag = klingon_empire
+            is_ai = yes
+        }
+    }
+}
+
+bajoran_fed_members = {
+    any_subject = { 
+        AND = { 
+            is_country_type = ufp_member_world
+            has_country_flag = bajoran_republic 
+            is_ai = yes
+        }
+    }
+}
+
+ferengi_fed_members = {
+    any_subject = { 
+        AND = { 
+            is_country_type = ufp_member_world
+            has_country_flag = ferengi_alliance
+            is_ai = yes
+        }
+    }
+}
+
+bolian_fed_members = {
+    any_subject = { 
+        AND = { 
+            is_country_type = ufp_member_world
+            has_country_flag = bolian_league 
+            is_ai = yes
+        }
+    }
+}
+
+andorian_fed_members = {
+    any_subject = { 
+        AND = { 
+            is_country_type = ufp_member_world
+            has_country_flag = andorian_empire
+            is_ai = yes
+        }
+    }
+}
+
+betazed_fed_members = {
+    any_subject = { 
+        AND = { 
+            is_country_type = ufp_member_world
+            has_country_flag = betazoid_houses
+            is_ai = yes
+        }
+    }
+}
+
+trill_fed_members = {
+    any_subject = { 
+        AND = { 
+            is_country_type = ufp_member_world
+            has_country_flag = trill_republic
+            is_ai = yes
+        }
+    }
+}
+
+vulcan_fed_members = {
+    any_subject = { 
+        AND = { 
+            is_country_type = ufp_member_world
+            vulcan_empires = yes
+            is_ai = yes
+        }
+    }
+}
+
+acamarian_fed_members = {
+    any_subject = { 
+        AND = { 
+            is_country_type = ufp_member_world
+            has_country_flag = acamarian_sovereignty
+            is_ai = yes
+        }
+    }
+}
+
+antedian_fed_members = {
+    any_subject = { 
+        AND = { 
+            is_country_type = ufp_member_world
+            has_country_flag = antedian_shoals
+            is_ai = yes
+        }
+    }
+}
+
+rigellian_fed_members = {
+    any_subject = { 
+        AND = { 
+            is_country_type = ufp_member_world
+            has_country_flag = rigellian_consortium
+            is_ai = yes
+        }
+    }
+}
+
+denobulan_fed_members = {
+    any_subject = { 
+        AND = { 
+            is_country_type = ufp_member_world
+            has_country_flag = denobulan_unity
+            is_ai = yes
+        }
+    }
+}
+
+caitian_fed_members = {
+    any_subject = { 
+        AND = { 
+            is_country_type = ufp_member_world
+            has_country_flag = caitian_union
+            is_ai = yes
+        }
+    }
+}
+
+saurian_fed_members = {
+    any_subject = { 
+        AND = { 
+            is_country_type = ufp_member_world
+            has_country_flag = saurian_league
+            is_ai = yes
+        }
+    }
+}
+
+yridian_fed_members = {
+    any_subject = { 
+        AND = { 
+            is_country_type = ufp_member_world
+            has_country_flag = yridian_league
+            is_ai = yes
+        }
+    }
+}
+
+valerian_fed_members = {
+    any_subject = { 
+        AND = { 
+            is_country_type = ufp_member_world
+            has_country_flag = valerian_freeholds
+            is_ai = yes
+        }
+    }
+}

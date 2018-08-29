@@ -1,0 +1,144 @@
+#Saurian Homeworld
+saurian_homeworld = {			
+	name = "Psi Serpentis"
+	class = "sc_trinary_gmm"
+	flags = { saurian_homeworld }
+	usage = custom_empire
+	max_instances = 1
+	planet = { name = "Psi Serpentis A" class = pc_g_star orbit_distance = 0 orbit_angle = 1 size = 25 has_ring = no }		
+	change_orbit = 20
+	planet = {
+		name = "Psi Serpentis A I"
+		class = rl_inner_unhabitable_planets
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		size = 15
+		moon = { name = "Psi Serpentis A Ia" class = rl_inner_moons orbit_angle = { min = 90 max = 270 } orbit_distance = 7 size = 3 }
+	}
+	planet = {
+		name = "Psi Serpentis A II"
+		class = rl_inner_unhabitable_planets
+		orbit_distance = 20
+		size = 10
+		orbit_angle = { min = 90 max = 270 }
+	}
+	planet = {
+		name = "Psi Serpentis A III"
+		class = rl_inner_unhabitable_planets
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		size = 10
+		moon = { name = "Psi Serpentis A IIIa" class = rl_inner_moons orbit_angle = { min = 90 max = 270 } orbit_distance = 5 size = 5 }
+		moon = { name = "Psi Serpentis A IIIb" class = rl_inner_moons orbit_angle = { min = 90 max = 270 } orbit_distance = 5 size = 4 }
+	}
+	planet = {		
+		name = "Sauria"
+		class = "pc_savannah"	
+		orbit_distance = 30	
+		size = 25
+		starting_planet = yes
+		has_ring = no
+		tile_blockers = none
+		moon = { class = rl_inner_moons count = 1 orbit_angle = { min = 90 max = 270 } orbit_distance = 10 }
+		init_effect = {
+			prevent_anomaly = yes			
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = saurian_league } } }
+				create_species = {
+					name = "Saurian"
+					name_list = "Saurian"
+					class = SAU
+					portrait = saurian
+					homeworld = THIS
+					traits = {
+						trait="trait_reptilian"
+						trait="trait_four_hearts"
+						trait="trait_sedentary"
+						ideal_planet_class = "pc_savannah" 
+					} 
+				}
+				last_created_species = { save_global_event_target_as = saurianSpecies }
+				create_country = {
+					name = "NAME_saurian_league"
+					type = default
+					ignore_initial_colony_error = yes
+					civics = { civic = "civic_connoisseur" civic = "civic_beacon_of_liberty" }
+					authority = auth_democratic
+					name_list = "Saurian"
+					ethos = { ethic="ethic_xenophile" ethic="ethic_pacifist" ethic="ethic_egalitarian" }
+					species = event_target:saurianSpecies
+					flag = {
+						icon = { category = "trek" file = "saurian.dds" }
+						background = { category = "backgrounds" file = "circle_tall.dds" }
+						colors = { "customcolor1314" "customcolor1705" "null" "null" }
+					}
+					ship_prefix="SLV"
+					effect = {
+						set_graphical_culture = generic_02
+						set_country_flag = saurian_league
+						set_country_flag = custom_start_screen
+						set_country_flag = generic_ent
+						set_country_flag = alpha_beta_empire
+						set_country_flag = init_spawned
+						save_global_event_target_as = saurian_league
+					}
+				}
+				create_colony = { owner = event_target:saurian_league species = event_target:saurianSpecies ethos = owner }
+			}
+			set_capital = yes
+			random_country = {
+				limit = { has_country_flag = saurian_league }
+				save_global_event_target_as = saurian_league
+				add_appropriate_start_techs = yes
+				give_technology = { tech = "tech_society_02314" message = no }
+				species = { save_global_event_target_as = saurianSpecies }
+			}
+			set_owner = event_target:saurian_league
+			generate_major_empire_start_buildings = yes
+			generate_minor_empire_start_pops = yes
+			generate_major_empire_start_fleets = yes
+			set_name = "Lyaksti'kton"
+		}
+	}
+	planet = {
+		name = "Psi Serpentis A V"
+		orbit_distance = 50
+		orbit_angle = { min = 90 max = 270 }
+		size = 8
+		moon = { name = "Psi Serpentis A Va" count = 1 orbit_angle = { min = 90 max = 270 } orbit_distance = 5 size = 2 }
+	}
+	planet = {
+		name = ""
+		class = pc_invisible_star
+		orbit_distance = 200
+		orbit_angle = { min = 90 max = 270 }	
+		size = 1
+		has_ring = no
+		init_effect = { clear_deposits = yes }
+		planet = {									
+			name = "Psi Serpentis Ba"
+			count = 1
+			class = pc_m_star								
+			orbit_distance = 25								
+			orbit_angle = { min = 90 max = 270 }								
+			size = 11								
+			has_ring = no
+			satellite_naming_policy = upper_case_roman_numerals
+			moon = { name = "Psi Serpentis Ba I" class = pc_planet_remnant size = 4 orbit_angle = { min = 90 max = 270 } orbit_distance = 8 }
+			moon = { name = "Psi Serpentis Ba II" class = pc_planet_remnant size = 2 orbit_angle = { min = 90 max = 270 } orbit_distance = 3 }
+			moon = { name = "Psi Serpentis Ba III" class = pc_planet_remnant size = 3 orbit_angle = { min = 90 max = 270 } orbit_distance = 3 }
+		}									
+		planet = {									
+			name = "Psi Serpentis Bb"								
+			count = 1								
+			class = pc_m_star								
+			orbit_distance = 0								
+			orbit_angle = { min = 90 max = 270 }								
+			size = 11								
+			has_ring = no
+			satellite_naming_policy = upper_case_roman_numerals
+			moon = { name = "Psi Serpentis Bb I" class = pc_planet_remnant size = 2 orbit_angle = { min = 90 max = 270 } orbit_distance = 9 }
+			moon = { name = "Psi Serpentis Bb II" class = pc_planet_remnant size = 2 orbit_angle = { min = 90 max = 270 } orbit_distance = 2 }
+		}			
+	}
+}

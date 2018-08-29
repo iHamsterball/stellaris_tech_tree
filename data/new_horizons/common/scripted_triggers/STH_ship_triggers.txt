@@ -1,0 +1,89 @@
+###OLD
+# has_unique_corvette = {
+	# OR = {
+		# is_borg_empire = yes
+		# has_technology = tech_emette_frigate
+	# }
+# }
+
+###NEW
+
+borg_graphical_culture = {
+	OR = { 
+		graphical_culture = borg_01
+		graphical_culture = borg_red_01
+		graphical_culture = borg_blue_01
+		graphical_culture = borg_purple_01
+		graphical_culture = borg_orange_01
+		graphical_culture = borg_yellow_01 
+	}
+}
+
+starfleet_graphical_culture = {
+	OR = { 
+		graphical_culture = federation
+		# graphical_culture = federation_mu
+	}
+}
+
+
+has_unique_corvette = {
+	OR = {
+		borg_graphical_culture = yes
+		starfleet_graphical_culture = yes
+	}
+}
+
+has_unique_destroyer = {
+	OR = {
+		borg_graphical_culture = yes
+		starfleet_graphical_culture = yes
+	}
+}
+
+has_unique_cruiser = {
+	OR = {
+		borg_graphical_culture = yes
+		starfleet_graphical_culture = yes
+	}
+}
+
+has_unique_battlecruiser = {
+	OR = {
+		borg_graphical_culture = yes
+		starfleet_graphical_culture = yes
+	}
+}
+
+has_unique_battleship = {
+	OR = {
+		borg_graphical_culture = yes
+		starfleet_graphical_culture = yes
+	}
+}
+
+has_unique_heavy_escort = {
+	OR = {
+		borg_graphical_culture = yes
+		starfleet_graphical_culture = yes
+	}
+}
+
+has_unique_assault_cruiser = {
+	OR = {
+		borg_graphical_culture = yes
+		starfleet_graphical_culture = yes
+	}
+}
+
+has_super_battleship = {
+	OR = {
+		graphical_culture = dominion_01
+	}
+}
+
+has_man_o_war = {
+	OR = {
+		graphical_culture = voth_01
+	}
+}

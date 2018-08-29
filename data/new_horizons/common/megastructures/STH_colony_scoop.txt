@@ -1,0 +1,121 @@
+# see README.txt for example
+
+STH_colony_scoop_0 = {
+	entity = "planet_scoop_entity"
+	construction_entity = "planet_scoop_entity"
+	place_entity_on_planet_plane = yes
+	construction_blocks_others = no
+	entity_offset = { x = 0 y = 0 }
+	build_time = 360
+	build_cost = {
+		energy = 750
+		influence = 50
+	}
+
+	potential = {
+		OR = {
+			is_former_drone_country = yes
+			is_assimilator = yes
+		}
+		is_ai = no #TEMPORARY UNTIL Fix
+		has_swapped_tradition = tr_productivity_adopt
+	}
+
+	possible = {
+		custom_tooltip_fail = {
+			text = "requires_no_scoop_in_progress"
+			OR = {
+				from = { NOT = { has_country_flag = scooping_in_progress } }
+				has_star_flag = scooping_in_progress
+			}
+		}
+		custom_tooltip_fail = {
+			text = "requires_constructor_in_system"
+			any_ship_in_system = { 
+				exists = owner
+				owner = { is_same_value = from }
+				is_ship_class = shipclass_constructor
+			}
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip_fail = {
+				text = "requires_colony"
+				has_owner = yes
+				is_colony = yes
+			}
+			custom_tooltip_fail = {
+				text = "requires_no_truce"
+				has_owner = yes
+				is_colony = yes
+				from = { NOT = { has_truce = root.owner } }
+			}
+			custom_tooltip_fail = {
+				text = "requires_nonassimilated_or_underpopped"
+				OR = {
+					AND = {
+						num_pops < 2
+						is_assimilated_planet = yes
+					}
+					AND = {
+						NOR = { 
+							is_planet_class = pc_unimatrix
+							is_assimilated_planet = yes 
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 1
+	}
+	
+	on_build_start = {
+		if = {
+			limit = { exists = space_owner }
+			space_owner = {
+				if = {
+					limit = { NOT = { is_same_value = FROM } }
+					set_timed_country_flag = { flag = "colonyScooped:@FROM" days = 360 }
+					country_event = { id = STH_borg.1051 days = 1 random = 7 scopes = { from = root fromfrom = from } }
+					
+				}
+			}
+		}
+		from = { set_timed_country_flag = { flag = scooping_in_progress days = 360 } }
+		set_timed_star_flag = { flag = scooping_in_progress days = 360 }
+	}
+	on_build_cancel = { 
+		from = { remove_country_flag = scooping_in_progress } 
+		remove_star_flag = scooping_in_progress
+	}
+	
+	on_build_complete = {
+		fromfrom.planet = {		
+			if = {
+				limit = { has_owner = yes }
+				owner = {
+					if = {
+						limit = { NOT = { is_same_value = FROM } }
+						set_timed_country_flag = { flag = "colonyScooped:@FROM" days = 360 }
+						country_event = { id = STH_borg.1052 days = 0 scopes = { from = fromfrom.planet fromfrom = from } }
+					}
+				}
+			}
+		}
+		
+		from = {
+			country_event = {
+				id = STH_borg.1050
+				scopes = { from = fromfrom.planet }
+			}
+		}
+		from = { remove_country_flag = scooping_in_progress }
+		remove_star_flag = scooping_in_progress
+		remove_megastructure = fromfrom
+	}
+}

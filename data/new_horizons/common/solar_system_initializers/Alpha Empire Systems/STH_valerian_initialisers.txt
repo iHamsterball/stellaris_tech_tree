@@ -1,0 +1,94 @@
+@distance = 30
+@base_moon_distance = 10
+
+# valerian Homeworld
+valerian_homeworld = {
+	name = "Valeria"
+	class = sc_g
+	flags = { valerian_homeworld }
+	# init_effect = { log = "valerian homeworld" }
+	usage = custom_empire
+	max_instances = 1
+	planet = { name = "Valeria" class = star size = 41 orbit_distance = 0 orbit_angle = 1 has_ring = no }
+	planet = {
+		name = "Valeria Prime"
+		class = "pc_ocean"
+		size = { min = 18 max = 20 }
+		starting_planet = yes
+		orbit_distance = 65
+		orbit_angle = 185
+		tile_blockers = none
+		modifiers = none
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes			
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = valerian_freeholds } } }
+				create_species = { 
+					name = "Valerian"
+					name_list = "Valerian"
+					class = VLR
+					portrait = valerian
+					homeworld = THIS
+					traits = {
+						trait="trait_thrifty"
+						ideal_planet_class = "pc_ocean"
+					}
+				}
+				last_created_species = { save_global_event_target_as = valerianSpecies }
+				create_country = {
+					name = "NAME_valerian_freeholds"
+					type = default
+					ignore_initial_colony_error = yes
+					civics = { civic = "civic_warrior_culture" civic = "civic_mining_guilds" }
+					authority = auth_democratic
+					name_list = "Valerian"
+					ethos = { ethic = "ethic_egalitarian" ethic = "ethic_militarist" ethic = "ethic_materialist" }
+					species = event_target:valerianSpecies
+					flag = {
+						icon = { category = "trek" file = "valerian.dds" }
+						background = { category = "backgrounds" file = "horizontal_stripe.dds" }
+						colors = { "customcolor121" "indigo" "null" "null" }
+					}
+					ship_prefix = "VCS"
+					effect = {
+						set_graphical_culture = generic_01
+						set_country_flag = valerian_freeholds
+						set_country_flag = custom_start_screen
+						set_country_flag = generic_ent
+						set_country_flag = alpha_beta_empire
+						set_country_flag = init_spawned
+						set_country_flag = botf_minor
+						save_global_event_target_as = valerian_freeholds
+					}
+				}
+				create_colony = { owner = event_target:valerian_freeholds species = event_target:valerianSpecies ethos = owner }
+			}
+			set_capital = yes
+			random_country = {
+				limit = { has_country_flag = valerian_freeholds }
+				save_global_event_target_as = valerian_freeholds
+				species = { save_global_event_target_as = valerianSpecies }
+				add_appropriate_start_techs = yes
+				set_country_type = minorRace
+			}
+			set_owner = event_target:valerian_freeholds
+			generate_minor_empire_start_buildings = yes
+			generate_minor_empire_start_pops = yes
+			generate_major_empire_start_fleets = yes
+			set_name = "Valeria Prime"
+		}		
+	}
+	change_orbit = { min = 20 max = 30 }
+	planet = {
+		orbit_distance = { min = 20 max = 30 }
+		orbit_angle = { min = 90 max = 270 }
+		moon = { count = { min = 0 max = 1 } orbit_angle = { min = 90 max = 270 } orbit_distance = 8 }
+	}
+	change_orbit = { min = 20 max = 30 }
+	planet = {
+		orbit_distance = { min = 20 max = 30 }
+		orbit_angle = { min = 90 max = 270 }
+		moon = { count = { min = 0 max = 2 } orbit_angle = { min = 90 max = 270 } orbit_distance = 8 }
+	}
+}

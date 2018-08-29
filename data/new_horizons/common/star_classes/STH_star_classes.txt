@@ -1,0 +1,589 @@
+
+# White Dwarf
+sc_d = {
+	class = d_star
+	planet = { key = pc_d_star }
+	spawn_odds = 5
+	num_planets = { min = 1 max = 5 }
+	
+	icon_scale = 0.8
+	
+	pc_continental = { spawn_odds = 0.0 }
+	pc_desert = { spawn_odds = 0.0 }
+	pc_tropical = { spawn_odds = 0.0 }
+	pc_arid = { spawn_odds = 0.0 }
+	pc_ocean = { spawn_odds = 0.0 }
+	pc_tundra = { spawn_odds = 0.0 }
+	pc_arctic = { spawn_odds = 0.1 }
+	pc_alpine = { spawn_odds = 0.0 }
+	pc_savannah = { spawn_odds = 0.0 }
+}
+
+# Collapsar in Real Space, serves as Spatial Anomaly for STNH.
+sc_collapsar = {
+	class = collapsar
+	planet = { key = pc_collapsar }
+	spawn_odds = 0
+	num_planets = { min = 1 max = 4 }
+
+	icon_scale = 2.8
+	
+	pc_desert = { spawn_odds = 0 }
+	pc_tropical = { spawn_odds = 0 }	
+	pc_arid = {	spawn_odds = 0 }
+	pc_continental = { spawn_odds = 0 }
+	pc_ocean = { spawn_odds = 0 }
+	pc_tundra = { spawn_odds = 0 }
+	pc_arctic = { spawn_odds = 0 }
+	pc_gaia = { spawn_odds = 0 }
+	pc_alpine = { spawn_odds = 0 }
+	pc_savannah = { spawn_odds = 0 }
+	
+	is_environmental_hazard = yes
+	modifier = {
+		ship_speed_reduction = 0.5
+		ship_shield_reduction = 0.5
+	}
+}
+
+# Protostar in Real space. Will serve as Argolis Cluster in STNH
+
+sc_protostar = {
+	class = protostar
+	planet = { key = pc_protostar }
+	spawn_odds = 0
+	num_planets = { min = 1 max = 4 }
+
+	icon_scale = 1.9
+	
+	pc_desert = { spawn_odds = 0 }
+	pc_tropical = { spawn_odds = 0 }	
+	pc_arid = {	spawn_odds = 0 }
+	pc_continental = { spawn_odds = 0 }
+	pc_ocean = { spawn_odds = 0 }
+	pc_tundra = { spawn_odds = 0 }
+	pc_arctic = { spawn_odds = 0 }
+	pc_gaia = { spawn_odds = 0 }
+	pc_alpine = { spawn_odds = 0 }
+	pc_savannah = { spawn_odds = 0 }
+	
+	is_environmental_hazard = yes
+	modifier = {
+		ship_speed_reduction = 0.5
+		ship_shield_reduction = 0.5
+	}
+ 
+}
+
+# Planetary Nebula (Purple). Will serve as the Briar Patch in STNH
+
+sc_p_purple = {
+	class = p_purple_star
+	planet = {
+		key = pc_invisible_star
+		class = p_purple_star
+	}
+	spawn_odds = 0
+	num_planets = { min = 1 max = 4 }
+	
+	icon_scale = 3.2
+	
+	pc_continental = { spawn_odds = 0.0 }
+	pc_desert = { spawn_odds = 0.0 }
+	pc_tropical = { spawn_odds = 0.0 }
+	pc_arid = { spawn_odds = 0.0 }
+	pc_ocean = { spawn_odds = 0.0 }
+	pc_tundra = { spawn_odds = 0.0 }
+	pc_arctic = { spawn_odds = 0.1 }
+	pc_alpine = { spawn_odds = 0.0 }
+	pc_savannah = { spawn_odds = 0.0 }
+	
+	is_environmental_hazard = yes
+	modifier = {
+		ship_speed_reduction = 0.66
+ 		ship_shield_reduction = 0.66
+	}
+}
+
+# Planetary Nebula (Green). Will serve as Bassen Rift in STNH
+
+sc_p_green = {
+	class = p_green_star
+	planet = {
+		key = pc_invisible_star
+		class = p_green_star
+	}
+	spawn_odds = 0
+	num_planets = { min = 1 max = 4 }
+	
+	icon_scale = 3.2
+	
+	pc_continental = { spawn_odds = 0.0 }
+	pc_desert = { spawn_odds = 0.0 }
+	pc_tropical = { spawn_odds = 0.0 }
+	pc_arid = { spawn_odds = 0.0 }
+	pc_ocean = { spawn_odds = 0.0 }
+	pc_tundra = { spawn_odds = 0.0 }
+	pc_arctic = { spawn_odds = 0.1 }
+	pc_alpine = { spawn_odds = 0.0 }
+	pc_savannah = { spawn_odds = 0.0 }
+	
+	is_environmental_hazard = yes
+	modifier = {
+ 		ship_speed_reduction = 0.25
+	}
+}
+
+# Planetary Nebula (Red). Will serve as 'the badlands' in STNH
+
+sc_p_red = {
+	class = p_red_star
+	planet = {
+		key = pc_invisible_star
+		class = p_red_star
+	}
+	spawn_odds = 0
+	num_planets = { min = 1 max = 4 }
+	
+	icon_scale = 3.2
+	
+	pc_continental = { spawn_odds = 0.0 }
+	pc_desert = { spawn_odds = 0.0 }
+	pc_tropical = { spawn_odds = 0.0 }
+	pc_arid = { spawn_odds = 0.0 }
+	pc_ocean = { spawn_odds = 0.0 }
+	pc_tundra = { spawn_odds = 0.0 }
+	pc_arctic = { spawn_odds = 0.1 }
+	pc_alpine = { spawn_odds = 0.0 }
+	pc_savannah = { spawn_odds = 0.0 }
+	is_environmental_hazard = yes
+	modifier = {
+ 		ship_speed_reduction = 0.5
+ 		ship_shield_reduction = 0.5
+	}
+	
+}
+
+	
+sc_trinary_gkm = { # Trinary System
+	class = g_star
+	icon = a_trinary_star_g_k_m
+	planet = {
+		key = pc_g_star
+		class = g_star
+	}
+	planet = {
+		key = pc_k_star
+		class = k_star
+	}
+	planet = {
+		key = pc_m_star
+		class = m_star
+	}
+	spawn_odds = 1
+}
+
+sc_capella = { # Quaternary System
+	class = g_star
+	icon = a_quaternary_star_g_g_m_m
+	planet = {
+		key = pc_g_star
+		class = g_star
+	}
+	planet = {
+		key = pc_g_star
+		class = g_star
+	}
+	planet = {
+		key = pc_m_star
+		class = m_star
+	}
+	planet = {
+		key = pc_m_star
+		class = m_star
+	}	spawn_odds = 0
+}
+
+sc_rura_penthe_b = { # Binary System
+	class = b_star
+	icon = a_binary_star_b_k
+	planet = {
+		key = pc_b_star
+		class = b_star
+	}
+	planet = {
+		key = pc_k_star
+		class = k_star
+	}
+	spawn_odds = 0
+}
+
+sc_khitomer_b = { # Binary System
+	class = f_star
+	icon = a_binary_star_f_k
+	planet = {
+		key = pc_f_star
+		class = f_star
+	}
+	planet = {
+		key = pc_k_star
+		class = k_star
+	}
+	spawn_odds = 0
+}
+
+# EZ Aquarii is M/M/M according to wikipedia
+#sc_ez_aquarii_b = { # Trinary System
+#	class = m_star
+#	icon = a_trinary_star_m_k_b
+#	planet = {
+#		key = pc_m_star
+#		class = m_star
+#	}
+#	planet = {
+#		key = pc_k_star
+#		class = k_star
+#	}
+#	planet = {
+#		key = pc_b_star
+#		class = b_star
+#	}	
+#	spawn_odds = 0
+#}
+
+sc_becrux_b = { # Binary System
+	class = f_star
+	icon = a_binary_star_f_k
+	planet = {
+		key = pc_f_star
+		class = f_star
+	}
+	planet = {
+		key = pc_k_star
+		class = k_star
+	}
+	spawn_odds = 0
+}
+
+sc_xarantine_b = { # Binary System
+	class = a_star
+	icon = a_binary_star_a_k
+	planet = {
+		key = pc_a_star
+		class = a_star
+	}
+	planet = {
+		key = pc_k_star
+		class = k_star
+	}
+	spawn_odds = 0
+}
+
+sc_calder_b = { # Binary System
+	class = f_star
+	icon = a_binary_star_f_g
+	planet = {
+		key = pc_f_star
+		class = f_star
+	}
+	planet = {
+		key = pc_g_star
+		class = g_star
+	}
+	spawn_odds = 0
+}
+
+sc_fellebia_b = { # Trinary System
+	class = g_star
+	icon = a_trinary_star_g_k_m
+	planet = {
+		key = pc_g_star
+		class = g_star
+	}
+	planet = {
+		key = pc_k_star
+		class = k_star
+	}
+	planet = {
+		key = pc_m_star
+		class = m_star
+	}	
+	spawn_odds = 0
+}
+
+sc_pyrithia_b = { # Trinary System
+	class = f_star
+	icon = a_trinary_star_f_g_m
+	planet = {
+		key = pc_f_star
+		class = f_star
+	}
+	planet = {
+		key = pc_g_star
+		class = g_star
+	}
+	planet = {
+		key = pc_m_star
+		class = m_star
+	}	
+	spawn_odds = 0
+}
+
+sc_neethia_b = { # Binary System
+	class = f_star
+	icon = a_binary_star_f_k
+	planet = {
+		key = pc_f_star
+		class = f_star
+	}
+	planet = {
+		key = pc_k_star
+		class = k_star
+	}
+	spawn_odds = 0
+}
+
+sc_idran_b = { # Trinary System
+	class = f_star
+	icon = a_trinary_star_f_g_m
+	planet = {
+		key = pc_f_star
+		class = f_star
+	}
+	planet = {
+		key = pc_g_star
+		class = g_star
+	}
+	planet = {
+		key = pc_m_star
+		class = m_star
+	}	
+	spawn_odds = 0
+}
+
+sc_f_random_binary = { # Binary System
+	class = f_star
+	icon = a_binary_star_f_m
+	planet = {
+		key = pc_f_star
+		class = f_star
+	}
+	planet = {
+		key = pc_m_star
+		class = m_star
+	}	
+	spawn_odds = 0
+}
+
+sc_m_random_binary = { # Binary System
+	class = m_star
+	icon = a_binary_star_m_k
+	planet = {
+		key = pc_m_star
+		class = m_star
+	}
+	planet = {
+		key = pc_k_star
+		class = k_star
+	}	
+	spawn_odds = 0
+}
+
+sc_g_random_binary = { # Binary System
+	class = g_star
+	icon = a_binary_star_g_k
+	planet = {
+		key = pc_g_star
+		class = g_star
+	}
+	planet = {
+		key = pc_k_star
+		class = k_star
+	}	
+	spawn_odds = 0
+}
+
+
+
+sc_binary_pulsar_b = { # Binary System
+	class = pulsar
+	icon = a_binary_pulsar_pulsar
+	planet = {
+		key = pc_pulsar
+	class = pulsar
+	}
+	planet = {
+		key = pc_pulsar
+	class = pulsar
+	}	
+	spawn_odds = 0
+}
+
+sc_sigma_orionis_b = { # Quintenary System
+	class = g_star
+	icon = a_quintenary_star_g_g_k_k_m
+	planet = {
+		key = pc_g_star
+		class = g_star
+	}
+	planet = {
+		key = pc_k_star
+		class = k_star
+	}
+	planet = {
+		key = pc_m_star
+		class = m_star
+	}
+	planet = {
+		key = pc_k_star
+		class = k_star
+	}
+	planet = {
+		key = pc_g_star
+		class = g_star
+	}
+	spawn_odds = 0
+}
+
+sc_binary_kk = { # Binary System
+	class = k_star
+	icon = a_binary_star_k_k
+	planet = {
+		key = pc_k_star
+		class = k_star
+	}
+	planet = {
+		key = pc_k_star
+		class = k_star
+	}
+	spawn_odds = 0
+}
+
+sc_binary_ad = { # Binary System
+	class = a_star
+	icon = a_binary_star_a_d
+	planet = {
+		key = pc_a_star
+		class = a_star
+	}
+	planet = {
+		key = pc_d_star
+		class = d_star
+	}
+	spawn_odds = 0
+}
+
+sc_binary_mm = { # Binary System
+	class = m_star
+	icon = a_binary_star_m_m
+	planet = {
+		key = pc_m_star
+		class = m_star
+	}
+	planet = {
+		key = pc_m_star
+		class = m_star
+	}
+	spawn_odds = 0
+}
+
+sc_trinary_kdm = { # Trinary System
+	class = k_star
+	icon = a_binary_star_k_d_m
+	planet = {
+		key = pc_k_star
+		class = k_star
+	}
+	planet = {
+		key = pc_d_star
+		class = d_star
+	}
+	planet = {
+		key = pc_m_star
+		class = m_star
+	}
+	spawn_odds = 0
+}
+
+sc_trinary_ktt = { # Trinary System
+	class = k_star
+	icon = a_trinary_star_k_t_t
+	planet = {
+		key = pc_k_star
+		class = k_star
+	}
+	planet = {
+		key = pc_t_star
+		class = t_star
+	}
+	planet = {
+		key = pc_t_star
+		class = t_star
+	}
+	spawn_odds = 0
+}
+
+sc_trinary_gmm = { # Trinary System
+	class = g_star
+	icon = a_trinary_star_g_m_m
+	planet = {
+		key = pc_g_star
+		class = g_star
+	}
+	planet = {
+		key = pc_m_star
+		class = m_star
+	}
+	planet = {
+		key = pc_m_star
+		class = m_star
+	}
+	spawn_odds = 0
+}
+
+sc_trinary_mmm = { # Trinary System
+	class = m_star
+	icon = a_trinary_star_m_m_m
+	planet = {
+		key = pc_m_star
+		class = m_star
+	}
+	planet = {
+		key = pc_m_star
+		class = m_star
+	}
+	planet = {
+		key = pc_m_star
+		class = m_star
+	}
+	spawn_odds = 0
+}
+
+#sc_terra_nova_b = { # Binary System
+sc_binary_gg = { # Binary System
+	class = g_star
+	icon = a_binary_star_g_g
+	planet = {
+		key = pc_g_star
+		class = g_star
+	}
+	planet = {
+		key = pc_g_star
+		class = g_star
+	}
+	spawn_odds = 0
+}
+
+sc_binary_gk = { # Binary System
+	class = g_star
+	icon = a_binary_star_g_k
+	planet = {
+		key = pc_g_star
+		class = g_star
+	}
+	planet = {
+		key = pc_k_star
+		class = k_star
+	}	
+	spawn_odds = 0
+}

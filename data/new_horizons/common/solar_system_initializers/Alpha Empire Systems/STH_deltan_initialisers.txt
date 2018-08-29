@@ -1,0 +1,110 @@
+#Deltan Homeworld
+deltan_homeworld = {			
+	name = "Delta Triciatu"		
+	class = "sc_f"
+	flags = { deltan_homeworld }
+	usage = custom_empire
+	max_instances = 1
+	planet = { name = "Lta" class = star orbit_distance = 0 orbit_angle = 1 size = 25 has_ring = no }		
+	change_orbit = { min = 30 max = 40 }	
+	planet = {
+		count = 1
+		class = rl_inner_unhabitable_planets
+		orbit_distance = 20
+		orbit_angle = { min = 45 max = 315 }
+	}
+	planet = {
+		count = 1
+		class = rl_inner_unhabitable_planets
+		orbit_distance = 35
+		orbit_angle = { min = 45 max = 315 }
+		moon = { count = 2 orbit_angle = { min = 90 max = 270 } orbit_distance = 10 }
+	}	
+	planet = {
+		count = 1
+		class = pc_barren
+		orbit_distance = 20
+		orbit_angle = { min = 45 max = 315 }
+	}	
+	planet = {		
+		name = "Dhei"	
+		class = "pc_tropical"	
+		orbit_distance = 40	
+		size = 20
+		starting_planet = yes
+		has_ring = no
+		tile_blockers = none
+		moon = { count = 5 class = pc_barren orbit_angle = { min = 10 max = 350 } orbit_distance = 5 size = 4 }
+		moon = { name = "Seyann" count = 1 class = pc_arid orbit_angle = { min = 10 max = 350 } orbit_distance = 5 size = 6 }
+		moon = { name = "Cinera" count = 1 class = pc_barren orbit_angle = { min = 10 max = 350 } orbit_distance = 5 size = 3 }
+		init_effect = {
+			prevent_anomaly = yes			
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = deltan_union } } }
+				create_species = {
+					name = "Deltan"
+					name_list = "MAM1"
+					class = DEL
+					portrait = deltan
+					homeworld = THIS
+					traits = {
+						ttrait="trait_charismatic"
+						trait="trait_telepathy"
+						trait="trait_communal"
+						ideal_planet_class = "pc_tropical" 
+					} 
+				}
+				last_created_species = { save_global_event_target_as = deltanSpecies }
+				create_country = {
+					name = "NAME_deltan_union"
+					type = default
+					ignore_initial_colony_error = yes
+					civics = { civic = "civic_free_haven" civic = "civic_environmentalist" }
+					authority = auth_democratic
+					name_list = "MAM1"
+					ethos = { ethic="ethic_egalitarian" ethic="ethic_xenophile" ethic="ethic_pacifist" }
+					species = event_target:deltanSpecies
+					flag = {
+						icon = { category = "trek" file = "deltan.dds" }
+						background = { category = "backgrounds" file = "hexagon.dds" }
+						colors = { "customcolor600" "customcolor60" "null" "null" }
+					}
+					ship_prefix="DV"
+					effect = {
+						set_graphical_culture = generic_02
+						set_country_flag = deltan_union
+						set_country_flag = custom_start_screen
+						set_country_flag = generic_ent
+						set_country_flag = alpha_beta_empire
+						set_country_flag = init_spawned
+						set_country_flag = botf_minor
+						save_global_event_target_as = deltan_union
+					}
+				}
+				create_colony = { owner = event_target:deltan_union species = event_target:deltanSpecies ethos = owner }
+			}
+			set_capital = yes
+			random_country = {
+				limit = { has_country_flag = deltan_union }
+				save_global_event_target_as = deltan_union
+				add_appropriate_start_techs = yes
+				give_technology = { tech = "tech_society_02314" message = no }
+				species = { save_global_event_target_as = deltanSpecies }
+				# set_country_type = minorRace
+			}
+			set_owner = event_target:deltan_union
+			generate_major_empire_start_buildings = yes
+			generate_minor_empire_start_pops = yes
+			generate_major_empire_start_fleets = yes
+			set_name = "Dhei"
+		}
+	}
+	change_orbit = 80
+	planet = {
+		count = 2
+		class = rl_gas_giants
+		orbit_distance = 30
+		orbit_angle = { min = 90 max = 270 }
+		moon = { count = 4 orbit_angle = { min = 90 max = 270 } orbit_distance = 5 size = 5 }
+	}
+}

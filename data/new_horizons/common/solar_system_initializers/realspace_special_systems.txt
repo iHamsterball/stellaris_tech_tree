@@ -1,0 +1,258 @@
+@base_moon_distance = 6
+
+@standard_min = 26
+@standard_max = 30
+@standard_sat_min = 22
+@standard_sat_max = 27
+
+# Protostar - Argolis Cluster
+argolis_cluster_b = {
+	name = "Argolis Cluster"
+	class = sc_protostar
+	asteroid_belt = { type = rocky_asteroid_belt radius = 65 }
+	
+	flags = { protostar }
+	
+	planet = {
+		class = star
+		orbit_distance = 0
+		size = { min = @standard_min max = @standard_max }
+		
+		init_effect = {
+			create_protostar_space = yes
+		}
+	}
+	
+	change_orbit = 65
+	
+	planet = {
+		count = 3
+		class = random_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		name = "Tagra"
+		class = pc_g_star
+		orbit_distance = 31
+		orbit_angle = 90
+		size = 10
+		has_ring = no
+		entity = "k_star_class_star_entity"
+		moon = {	
+			class = random_non_colonizable
+			name = "Tagra I"
+			orbit_distance = 12
+			size = { min = 8 max = 10 }
+		}
+		moon = {	
+			class = random_non_colonizable
+			name = "Tagra II"
+			orbit_distance = { min = 8 max = 10 }
+			size = { min = 8 max = 10 }
+		}
+		moon = {	
+			class = random_non_colonizable
+			name = "Tagra III"
+			orbit_distance = { min = 8 max = 10 }
+			size = { min = 8 max = 10 }
+		}
+		moon = {
+			class = "pc_alpine"
+			name = "Tagra IV"
+			orbit_distance = { min = 8 max = 10 }
+			orbit_angle = -30	
+			size = 8
+			has_ring = no
+		}
+	}
+}
+
+# Protostar - The Great Plume of Agosoria
+agosoria_plume_b = {
+	name = "Agosoria"
+	class = sc_protostar
+	asteroid_belt = { type = rocky_asteroid_belt radius = 70 }
+	
+	flags = { protostar great_plume }
+	
+	planet = {
+		class = star
+		orbit_distance = 0
+		name = "The Great Plume"
+		size = { min = @standard_min max = @standard_max }
+		
+		init_effect = {
+			create_protostar_space = yes
+		}
+	}
+	
+	change_orbit = 70
+	
+	planet = {
+		count = 5
+		class = random_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+}
+
+# Planetary Nebula Purple - Briar Patch
+briar_patch_b = {
+	name = "Briar Patch"
+	class = "sc_p_purple"
+		
+	flags = { p_purple }
+	
+	planet = {
+		class = "pc_nebula_purple"
+		orbit_distance = 1
+		size = 1
+		
+		init_effect = {
+			create_p_purple_space = yes
+			prevent_anomaly = yes
+		}
+	}
+	
+	change_orbit = 60
+	
+	planet = {
+		name = "SNC 461206"
+		class = pc_m_star
+		orbit_distance = { min = 15 max = 20 }
+		orbit_angle = { min = 290 max = 340 }
+		size = 5
+		has_ring = no
+	}
+	
+	change_orbit = 20
+	
+	planet = {
+		name = "UFC 8177"
+		class = pc_g_star
+		orbit_distance = { min = 15 max = 20 }
+		orbit_angle = { min = 20 max = 80 }
+		size = 7
+		has_ring = no
+	}
+	
+	change_orbit = 20
+	
+	planet = {
+		orbit_distance = { min = 15 max = 20 }
+		orbit_angle = { min = 100 max = 270 }
+		size = { min = 15 max = 25 }
+		class = "pc_alpine"
+		name = "Baku"
+		has_ring = yes
+		moon = {
+			name = "Baku Orbital Rings"
+			class = "pc_invisible_star"
+			size = 1
+			orbit_distance = 4
+			orbit_angle = { min = 45 max = 270 }
+			has_ring = no
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_sr_metaphasic_15_deposit
+				}
+			}
+		}
+	}
+}
+
+# Planetary Nebula Green - Bassen Rift
+bassen_rift_b = {
+	name = "Bassen Rift"
+	class = "sc_p_green"
+	
+	flags = { p_green }
+	
+	planet = {
+		class = "pc_nebula_green"
+		orbit_distance = 1
+		size = 1
+		
+		init_effect = {
+			create_p_green_space = yes	
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		count = 5
+		class = random_asteroid
+		orbit_distance = { min = 10 max = 150 }	
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+}
+
+# Planetary Nebula Red - The Badlands
+badlands_b = {
+	
+	class = "sc_p_red"
+	
+	
+	flags = { p_red }
+	
+	planet = {
+		class = "pc_nebula_red"
+		name = "The Badlands"
+		orbit_distance = 1
+		size = 1
+		
+		init_effect = {
+			create_p_red_space = yes
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		count = 6
+		class = random_asteroid
+		orbit_distance = { min = 5 max = 40 }	
+		orbit_angle = { min = 10 max = 350 }
+	}
+		
+	planet = {
+		class = "pc_ocean"
+		name = "Athos"
+		orbit_distance = { min = 20 max = 60 }
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 10 max = 15 }
+	}
+	
+	planet = {
+		class = "pc_desert"
+		name = "Dozaria"
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 10 max = 15 }
+		
+		orbit_distance = { min = 20 max = 60 }
+		init_effect = {
+			random_tile = {
+				limit = { 
+					has_blocker = no 
+					has_building = no 
+				}
+			add_deposit = d_sr_dilithium_10_deposit
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_tropical"
+		name = "Sindorin"
+		orbit_angle = { min = 2 max = 270 }
+		size = { min = 10 max = 15 }
+		
+		orbit_distance = { min = 20 max = 60 }
+		
+	}
+}

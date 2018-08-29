@@ -1,0 +1,895 @@
+### Planet Modifiers, with permission from RealSpace by Annatar
+
+pm_mountainous_world = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_planet_class = "pc_desert"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_tropical"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_arid"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_continental"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_tundra"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_arctic"
+		}
+		modifier = {
+			add = 30
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 30
+			is_planet_class = "pc_tundra"
+		}
+		modifier = {
+			add = 30
+			is_planet_class = "pc_frozen"
+		}
+		modifier = {
+			add = 50
+			is_planet_class = "pc_class_q_variable"
+		}
+		modifier = {
+			add = 50
+			is_planet_class = "pc_f_class"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_m1_class"
+		}		
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}				
+		modifier = {
+			add = 2
+			is_planet_class = "pc_gaia"
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_planet_modifier = "pm_mountainous_world"
+				has_planet_modifier = "pm_young_world"
+				has_planet_modifier = "pm_swamp_planet"
+				has_planet_modifier = "pm_karstic_planet"
+				has_planet_modifier = "pm_ancient_cities"
+				has_planet_modifier = "pm_boundless_plains"
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			num_modifiers > 1
+		}
+	}
+	
+	modifier = "mountainous_world"
+}
+
+pm_young_world = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_planet_class = "pc_desert"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_tropical"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_arid"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_continental"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_ocean"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_tundra"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_arctic"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}				
+		modifier = {
+			add = 10
+			is_planet_class = "pc_gaia"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_frozen"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_class_q_variable"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_f_class"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_m1_class"
+		}	
+		modifier = {
+			factor = 0
+			OR = {
+				has_planet_modifier = "pm_young_world"
+				has_planet_modifier = "pm_mountainous_world"
+				has_planet_modifier = "pm_glowing_ocean"
+				has_planet_modifier = "pm_karstic_planet"
+				has_planet_modifier = "pm_ancient_cities"
+				has_planet_modifier = "pm_boundless_plains"
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			num_modifiers > 1
+		}
+	}
+	modifier = "young_world"
+}
+
+pm_swamp_planet = {
+	spawn_chance = {
+		modifier = {
+			add = 40
+			is_planet_class = "pc_tropical"
+		}				
+		modifier = {
+			add = 20
+			is_planet_class = "pc_tundra"
+		}
+		modifier = {
+			add = 50
+			is_planet_class = "pc_m1_class"
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_planet_modifier = "pm_swamp_planet"
+				has_planet_modifier = "pm_mountainous_world"
+				has_planet_modifier = "pm_young_world"
+				has_planet_modifier = "pm_ancient_cities"
+				has_planet_modifier = "pm_boundless_plains"
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			num_modifiers > 1
+		}
+	}
+	
+	modifier = "swamp_planet"
+}
+
+
+pm_glowing_ocean = {
+	spawn_chance = {
+		modifier = {
+			add = 30
+			is_planet_class = "pc_ocean"
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_planet_modifier = "pm_glowing_ocean"
+				has_planet_modifier = "pm_young_world"
+				has_planet_modifier = "pm_ancient_cities"
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			num_modifiers > 1
+		}
+	}
+	
+	modifier = "glowing_ocean"
+}
+
+pm_karstic_planet = {
+	spawn_chance = {
+		modifier = {
+			add = 20
+			is_planet_class = "pc_desert"
+		}
+		modifier = {
+			add = 30
+			is_planet_class = "pc_arid"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_planet_modifier = "pm_karstic_planet"
+				has_planet_modifier = "pm_mountainous_world"
+				has_planet_modifier = "pm_young_world"
+				has_planet_modifier = "pm_ancient_cities"
+				has_planet_modifier = "pm_boundless_plains"
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			num_modifiers > 1
+		}
+	}
+	
+	modifier = "karstic_planet"
+}
+
+pm_ancient_cities = {
+	spawn_chance = {
+		modifier = {
+			add = 5
+			is_planet_class = "pc_desert"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_tropical"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_arid"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_continental"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_arctic"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_savannah"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_gaia"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_m1_class"
+		}	
+		modifier = {
+			factor = 0
+			OR = {
+				has_planet_modifier = "pm_ancient_cities"
+				has_planet_modifier = "pm_mountainous_world"
+				has_planet_modifier = "pm_swamp_planet"
+				has_planet_modifier = "pm_glowing_ocean"
+				has_planet_modifier = "pm_karstic_planet"
+				has_planet_modifier = "pm_boundless_plains"
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			num_modifiers > 1
+		}
+	}
+	
+	modifier = "ancient_cities"
+}
+
+pm_boundless_plains = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_planet_class = "pc_continental"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_gaia"
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_planet_modifier = "pm_boundless_plains"
+				has_planet_modifier = "pm_mountainous_world"
+				has_planet_modifier = "pm_young_world"
+				has_planet_modifier = "pm_swamp_planet"
+				has_planet_modifier = "pm_karstic_planet"
+				has_planet_modifier = "pm_ancient_cities"
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			num_modifiers > 1
+		}
+	}
+	
+	modifier = "boundless_plains"
+}
+
+pm_frequent_earthquakes = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_planet_class = "pc_desert"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_tropical"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_arid"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_continental"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_ocean"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_tundra"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_arctic"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}		
+		modifier = {
+			add = 30
+			is_planet_class = "pc_g_class"
+		}	
+		modifier = {
+			add = 30
+			is_planet_class = "pc_class_q_variable"
+		}	
+		modifier = {
+			add = 20
+			is_planet_class = "pc_r_class"
+		}			
+		modifier = {
+			add = 20
+			is_planet_class = "pc_y_class"
+		}	
+		modifier = {
+			add = 30
+			is_planet_class = "pc_x_class"
+		}	
+		modifier = {
+			add = 10
+			is_planet_class = "pc_f_class"
+		}	
+		modifier = {
+			factor = 4
+			has_planet_modifier = "pm_high_gravity"
+		}
+		modifier = {
+			factor = 2
+			has_planet_modifier = "pm_young_world"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_unstable_tectonics"
+		}	
+		modifier = {
+			factor = 0
+			OR = {
+				has_planet_modifier = "pm_frequent_earthquakes"
+				has_planet_modifier = "pm_unstable_tectonics"
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	
+	modifier = "frequent_earthquakes"
+}
+
+pm_meteorite_showers = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_planet_class = "pc_desert"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_tropical"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_arid"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_continental"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_ocean"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_tundra"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_arctic"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_m1_class"
+		}
+		modifier = {
+			add = 30
+			is_planet_class = "pc_g_class"
+		}	
+		modifier = {
+			add = 20
+			is_planet_class = "pc_class_q_variable"
+		}	
+		modifier = {
+			add = 20
+			is_planet_class = "pc_r_class"
+		}			
+		modifier = {
+			add = 20
+			is_planet_class = "pc_y_class"
+		}	
+		modifier = {
+			add = 20
+			is_planet_class = "pc_x_class"
+		}	
+		modifier = {
+			add = 20
+			is_planet_class = "pc_f_class"
+		}	
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_meteorite_showers"
+		}
+		
+		modifier = {
+			factor = 0
+			num_modifiers > 1
+		}
+	}
+	modifier = "meteorite_showers"
+}
+
+pm_incessant_thunderstorm = {
+	spawn_chance = {
+		modifier = {
+			add = 20
+			is_planet_class = "pc_tropical"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_continental"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_ocean"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_m1_class"
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_planet_modifier = "pm_incessant_thunderstorm"
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	
+	modifier = "incessant_thunderstorm"
+}
+
+pm_terrible_hurricanes = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_planet_class = "pc_tropical"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_continental"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_tundra"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_m1_class"
+		}
+		modifier = {
+			factor = 0
+				has_planet_modifier = "pm_terrible_hurricanes"
+		}
+		
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	
+	modifier = "terrible_hurricanes"
+}
+
+pm_heavy_sandstorms = {
+	spawn_chance = {
+		modifier = {
+			add = 20
+			is_planet_class = "pc_desert"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_arid"
+		}
+		modifier = {
+			factor = 0
+				has_planet_modifier = "pm_heavy_sandstorms"
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "heavy_sandstorms"
+}
+
+pm_heavy_blizzards = {
+	spawn_chance = {
+		modifier = {
+			add = 20
+			is_planet_class = "pc_arctic"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_tundra"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_frozen"
+		}
+		modifier = {
+			factor = 0
+				has_planet_modifier = "pm_heavy_blizzards"
+		}
+		
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	
+	modifier = "heavy_blizzards"
+}
+
+pm_giant_waves = {
+	spawn_chance = {
+		modifier = {
+			add = 20
+			is_planet_class = "pc_ocean"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_continental"
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_moon = yes
+				is_moon = yes
+			}
+		}
+		modifier = {
+			factor = 0.5
+			AND = {
+				has_moon = no
+				is_moon = no
+			}
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_giant_waves"
+		}
+		
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "giant_waves"
+}
+
+pm_prolonged_drought = {
+	spawn_chance = {
+		modifier = {
+			add = 20
+			is_planet_class = "pc_arid"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_desert"
+		}
+		modifier = {
+			factor = 2
+			has_planet_modifier = "pm_young_world"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_prolonged_drought"
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "prolonged_drought"
+}
+
+pm_monstrous_avalanches = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_planet_class = "pc_arctic"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_frozen"
+		}
+		modifier = {
+			factor = 4
+			has_planet_modifier = "pm_mountainous_world"
+		}
+		modifier = {
+			factor = 2
+				has_planet_modifier = "pm_frequent_earthquakes"
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "monstrous_avalanches"
+}
+
+
+pm_long_night = {
+	spawn_chance = {
+		modifier = {
+			add = 5
+			is_planet_class = "pc_desert"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_arid"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_ocean"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_tundra"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_arctic"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_frozen"
+		}
+		modifier = {
+			factor = 2
+			has_moon = yes
+		}
+		modifier = {
+			factor = 4
+			is_moon = yes
+		}
+		modifier = {
+			factor = 0.5
+			AND = {
+				has_moon = no
+				is_moon = no
+			}
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_long_night"
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 1
+		}
+	}
+	modifier = "long_night"
+}
+
+pm_atmospheric_lights = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_planet_class = "pc_desert"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_tropical"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_arid"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_continental"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_ocean"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_tundra"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_arctic"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}				
+		modifier = {
+			add = 10
+			is_planet_class = "pc_gaia"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_m1_class"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_frozen"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_f_class"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_k_class"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_g_class"
+		}
+		modifier = {
+			factor = 5
+			has_planet_modifier = "pm_strong_magnetic_field"
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_planet_modifier = "pm_atmospheric_lights"
+				has_planet_modifier = "pm_weak_magnetic_field"
+			}
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "atmospheric_lights"
+}
+
+pm_beautiful_sky = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_planet_class = "pc_frozen"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_arctic"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_gaia"
+		}
+	}
+	modifier = "beautiful_sky"
+}
+
+

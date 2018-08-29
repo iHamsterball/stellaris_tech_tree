@@ -1,0 +1,154 @@
+############################
+# STH CATEGORIES 
+############################
+# potential = planet scope
+# on_success = ship scope
+# on_fail = ship scope
+# on_critical_fail = ship scope
+# level = level of discovery that is checked against scientist level
+# risk = risk of researching the discovery (defaults to NDefines::NGameplay:anomaly_RISK_DEFAULT)
+
+# For on_success, on_fail, on_critical_fail
+# FROM = planet scope
+# ROOT = ship scope
+# Ex. on_fail, ship_event would have the planet in From.From
+
+# Orbital Signal Source (Planet)
+STH_orbital_signal_source_1_category = {
+	desc = STH_orbital_signal_source_1_category_desc
+	picture = sth_GFX_evt_alienProbe
+	level = 2
+	spawn_chance = {
+		modifier = {
+			add = 1
+			is_asteroid = no
+			is_star = no
+			is_artificial_planet = no
+			from = { owner = { NOT = { has_country_flag = STH_orbital_signal_source_flag } } }			
+			from = { owner = { has_normal_anomalies = yes } }
+		}
+	}
+	on_spawn = { from = { owner = { set_timed_country_flag = { flag = STH_orbital_signal_source_flag years = 10 } } } }
+	on_success = { 
+		20 = STH_minor_anomaly.1
+		2 = STH_minor_anomaly.3
+		1 =	STH_minor_anomaly.4
+	}
+}
+
+STH_ancientCapsule_category = {
+	desc = STH_ancientCapsule_category_desc
+	picture = sth_GFX_evt_ancientCapsule1
+	level = 1
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_asteroid = no
+			is_star = no
+			is_artificial_planet = no
+			from = { owner = { NOT = { has_country_flag = STH_ancientCapsule_flag } } }
+			from = { owner = { has_normal_anomalies = yes } }
+		}
+	}
+	on_spawn = { from = { owner = { set_timed_country_flag = { flag = STH_ancientCapsule_flag years = 100 } } } }
+	on_success = { 
+		20 = STH_ancient_capsule.1
+		2 = STH_ancient_capsule.90
+		1 = STH_ancient_capsule.91
+	}
+}
+
+STH_aMatterOfTime_category = {
+	desc = STH_aMatterOfTime_category_desc
+	picture = sth_GFX_evt_aMatterOfTime1
+	level = 1
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_artificial_planet = no
+			from = { owner = { NOT = { has_country_flag = STH_aMatterOfTime_flag } } }
+			from = { owner = { has_normal_anomalies = yes } }
+		}
+	}
+	on_spawn = { from = { owner = { set_timed_country_flag = { flag = STH_aMatterOfTime_flag years = 100 } } } }
+	on_success = { 
+		20 = STH_a_matter_of_time.1
+		2 = STH_a_matter_of_time.90
+		1 = STH_a_matter_of_time.90
+	}
+}
+
+rogue_moon_category = { #FIX THIS LATER
+	desc = rogue_moon_category_desc
+	picture = sth_GFX_evt_praxis1
+	level = 1
+	spawn_chance = {		
+		modifier = {
+			add = 3
+			is_moon = yes
+		}
+	}
+	on_success = {
+		0 = {
+			modifier = {
+				add = 1
+				owner = { is_assimilator = yes }
+			}
+			anomaly_event = STH_borg_anomaly.1
+		}
+		0 = {
+			modifier = {
+				add = 1
+				owner = { is_assimilator = yes }
+			}
+			anomaly_event = STH_borg_anomaly.2
+		}
+	}
+}
+
+
+tropical_borg_category = { #FIX THIS LATER
+	desc = tropical_borg_category_desc
+	picture = sth_GFX_evt_theSwordOfKahless4
+	level = 1
+	spawn_chance = {		
+		modifier = {
+			add = 3
+			is_planet_class = pc_tropical
+		}
+	}
+	on_success = {
+		0 = {
+			modifier = {
+				add = 1
+				owner = { is_assimilator = yes }
+			}
+			anomaly_event = STH_borg_anomaly.3
+		}
+	}
+}
+
+STH_changelingObelisk_category = {
+	desc = STH_changelingObelisk_category_desc
+	picture = sth_GFX_evt_changelingObelisk #replace
+	level = 2
+	spawn_chance = {
+		modifier = {
+			add = 10
+			habitable_planet = yes
+			exists = event_target:foundersHomeworld
+			distance = {
+				source = event_target:foundersHomeworld
+				type = euclidean
+				min_distance >= 50 #5
+				max_distance <= 500 #50
+			}
+			from = { owner = { NOT = { has_country_flag = STH_changelingObelisk_flag } } }
+			from = { owner = { has_normal_anomalies = yes } }
+		}
+	}
+	on_spawn = { from = { owner = { set_timed_country_flag = { flag = STH_changelingObelisk_flag years = 25 } } } }
+	on_success = { 
+		20 = STH_minor_anomaly.100
+	}
+}

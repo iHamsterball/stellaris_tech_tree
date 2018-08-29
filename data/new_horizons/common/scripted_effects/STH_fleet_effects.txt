@@ -1,0 +1,149 @@
+#Call in ship scope
+set_ship_registry = {
+	owner = { change_variable = { which = "builtShips" value = 1 } }
+	if = {
+		limit = { owner = { starfleet_empire = yes } }
+		set_name = "NCC_SHIP_NAME"
+	}
+	else = {
+		owner = {
+			switch = {
+				trigger = has_country_flag
+				tellarian_technocracy = { prev = { set_name = "TNR_SHIP_NAME" } }
+				andorian_empire = { prev = { set_name = "AT_SHIP_NAME" } }
+				vulcan_high_command = { prev = { set_name = "VS_SHIP_NAME" } }
+				confederacy_of_surak = { prev = { set_name = "VS_SHIP_NAME" } }
+			}
+		}
+	}
+}
+set_ship_registry_experimental = {
+	if = {
+		limit = { owner = { starfleet_empire = yes } }
+		owner = { change_variable = { which = "builtExperimentalShips" value = 1 } }
+		set_name = "NX_SHIP_NAME"
+	}
+	else = {
+		owner = {
+			owner = { change_variable = { which = "builtShips" value = 1 } }
+			switch = {
+				trigger = has_country_flag
+				tellarian_technocracy = { prev = { set_name = "TNR_SHIP_NAME" } }
+				andorian_empire = { prev = { set_name = "AT_SHIP_NAME" } }
+				vulcan_high_command = { prev = { set_name = "VS_SHIP_NAME" } }
+				confederacy_of_surak = { prev = { set_name = "VS_SHIP_NAME" } }
+			}
+		}
+	}
+}
+
+light_damage_fleet_ships = {
+	random_owned_ship = {
+		limit = { has_hp_percentage > 0.5 NOT = { has_ship_flag = changelingDamage } }
+		reduce_hp_percent = 25
+		set_ship_flag = changelingDamage
+	}
+	random_owned_ship = {
+		limit = { has_hp_percentage > 0.5 NOT = { has_ship_flag = changelingDamage } }
+		reduce_hp_percent = 25
+		set_ship_flag = changelingDamage
+	}
+	random_owned_ship = {
+		limit = { has_hp_percentage > 0.5 NOT = { has_ship_flag = changelingDamage } }
+		reduce_hp_percent = 25
+		set_ship_flag = changelingDamage
+	}
+	while = {
+		count = 3
+		random_owned_ship = {
+			limit = { has_ship_flag = changelingDamage }
+			remove_ship_flag = changelingDamage
+		}
+	}
+}
+
+
+add_cloak_bonus = {
+	if = {
+		limit = { has_component = required_tactical_cloak_1 NOT = { has_modifier = sh_recent_cloak } }
+		add_modifier = { modifier = sh_cloak_1 days = 45 }
+		add_modifier = { modifier = sh_recent_cloak days = 180 }
+	}
+	if = {
+		limit = { has_component = required_tactical_cloak_2 NOT = { has_modifier = sh_recent_cloak } }
+		add_modifier = { modifier = sh_cloak_2 days = 45 } 
+		add_modifier = { modifier = sh_recent_cloak days = 180 }
+	}
+	if = {
+		limit = { has_component = required_tactical_cloak_3 NOT = { has_modifier = sh_recent_cloak } }
+		add_modifier = { modifier = sh_cloak_3 days = 45 } 
+		add_modifier = { modifier = sh_recent_cloak days = 180 }
+	}
+	if = {
+		limit = { has_component = required_tactical_cloak_4 NOT = { has_modifier = sh_recent_cloak } }
+		add_modifier = { modifier = sh_cloak_4 days = 45 } 
+		add_modifier = { modifier = sh_recent_cloak days = 180 }
+	}
+	if = {
+		limit = { has_component = required_tactical_cloak_5 NOT = { has_modifier = sh_recent_cloak } }
+		add_modifier = { modifier = sh_cloak_5 days = 45 } 
+		add_modifier = { modifier = sh_recent_cloak days = 180 }
+	}
+	if = {
+		limit = { has_component = required_tactical_fed_cloak NOT = { has_modifier = sh_recent_cloak } }
+		add_modifier = { modifier = sh_cloak_fed days = 45 } 
+		add_modifier = { modifier = sh_recent_cloak days = 180 }
+	}
+}
+
+
+
+create_augment_fleet = {
+	create_fleet = {
+		name = "NAME_Augments_Fleet"
+		effect = {
+			create_augment_ships_0 = yes
+			create_augment_ships_0 = yes
+			if = {
+				limit = { years_passed > 5 }
+				create_augment_ships_0 = yes
+			}
+			if = {
+				limit = { years_passed > 10 }
+				create_augment_ships_0 = yes
+			}
+			if = {
+				limit = { years_passed > 15 }
+				create_augment_ships_0 = yes
+			}
+			if = {
+				limit = { years_passed > 20 }
+				create_augment_ships_1 = yes
+			}
+			if = {
+				limit = { years_passed > 25 }
+				create_augment_ships_0 = yes
+			}
+			if = {
+				limit = { years_passed > 30 }
+				create_augment_ships_1 = yes
+			}
+		}
+	}
+}
+
+	
+create_augment_ships_0 = {	
+	create_ship_design = { design = "NAME_Augments_Bird_of_Prey" }
+	while = {
+		count = 1
+		create_ship = { name = random design = last_created_design graphical_culture = "klingon_01" }
+	}
+}
+create_augment_ships_1 = {	
+	create_ship_design = { design = "NAME_Augments_Bird_of_Prey" }
+	while = {
+		count = 3
+		create_ship = { name = random design = last_created_design graphical_culture = "klingon_01" }
+	}
+}

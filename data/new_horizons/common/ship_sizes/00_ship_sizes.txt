@@ -1,0 +1,31 @@
+#reloadable with 'reload stats'
+# This file is where you start when you want to configure something new, then go to sections
+
+@corvette_collision_radius = 2.0
+@corvette_formation_priority = 4
+
+@destroyer_collision_radius = 2.5
+@destroyer_formation_priority = 2
+
+@cruiser_collision_radius = 3.5
+@cruiser_formation_priority = 3
+
+@battleship_collision_radius = 6
+@battleship_formation_priority = 5
+
+@titan_collision_radius = 12
+@titan_formation_priority = 1
+
+@build_block_radius_none = 0
+@build_block_radius_civilian = 20
+@build_block_radius_military = 200
+
+@speed_slow = 80
+@speed_default = 100
+@speed_fast = 120
+@speed_very_fast = 170
+
+##############
+# KEEP EMPTY #
+##############
+

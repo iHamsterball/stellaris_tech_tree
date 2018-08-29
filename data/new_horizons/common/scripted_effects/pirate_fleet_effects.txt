@@ -1,0 +1,956 @@
+#	Example:
+#
+#	example_effect = {
+#		add_energy = -100
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###############
+# New Pirates #
+###############
+
+create_normal_pirate_country = {
+	event_target:pirate_system = {
+		random_system_planet = {
+			save_event_target_as = pirate_home
+			create_country = {
+				name = "NAME_Pirates"
+				type = pirate
+				species = event_target:owner_species
+				name_list = "PRT1"
+				flag = {
+					background = {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors ={
+						"black"
+						"black"
+						"null"
+						"null"
+					}
+				}
+				effect = {
+					save_event_target_as = pirate_band
+				}
+			}
+			event_target:pirate_band = {
+				set_name = random
+				randomize_flag_symbol = "pirate"
+				root = { 
+					set_country_flag = spawner_of@event_target:pirate_band
+					change_variable = { 
+						which = "pirates_active" 
+						value = 1 
+					}
+				}
+				every_country = {
+					establish_communications_no_message = prev
+				}
+			}
+		}
+	}
+}
+
+create_rogue_drones_country = {
+	event_target:pirate_system = {
+		random_system_planet = {
+			save_event_target_as = pirate_home
+			create_country = {
+				name = "NAME_Rogue_Drones"
+				type = pirate
+				species = event_target:owner_species
+				name_list = "Borg"
+				civics = { civic = "civic_assimilators" civic = "civic_functional_architecture" }
+				authority = auth_cybernetic_consciousness
+				ethos = { ethic = "ethic_cybernetic_consciousness" ethic = "ethic_fanatic_militarist" }
+				flag = {
+					icon = { category = "trek" file = "borg-rogue.dds" }
+					background = { category = "backgrounds" file = "00_solid.dds" }
+					colors = { "red" "red" "null" "null" }
+				}
+				effect = {
+					save_event_target_as = pirate_band
+					set_country_flag = rogue_drones
+				}
+			}
+			event_target:pirate_band = {
+				set_name = random
+				randomize_flag_symbol = "pirate"
+				root = { 
+					set_country_flag = spawner_of@event_target:pirate_band
+					change_variable = { 
+						which = "pirates_active" 
+						value = 1 
+					}
+				}
+				every_country = {
+					establish_communications_no_message = prev
+				}
+			}
+		}
+	}
+}
+
+create_rogue_jem_hadar_country = {
+	event_target:pirate_system = {
+		random_system_planet = {
+			save_event_target_as = pirate_home
+			create_country = {
+				name = "NAME_Rogue_JemHadar"
+				type = pirate
+				species = event_target:jemHadarSpecies
+				name_list = "JemHadar"
+				flag = {
+					icon = { category = "trek" file = "jemHadar.dds" }
+					background = { category = "backgrounds" file = "horizontal.dds" }
+					colors = { "customcolor1736" "customcolor1842" "null" "null" }
+				}
+				effect = {
+					save_event_target_as = pirate_band
+					set_country_flag = rogue_jem_hadar
+				}
+			}
+			event_target:pirate_band = {
+				# set_name = random
+				# randomize_flag_symbol = "pirate"
+				root = { 
+					set_country_flag = spawner_of@event_target:pirate_band
+					change_variable = { 
+						which = "pirates_active" 
+						value = 1 
+					}
+				}
+				every_country = {
+					establish_communications_no_message = prev
+				}
+			}
+		}
+	}
+}
+
+create_drone_pirate_country_2 = {
+	event_target:pirate_system = {
+		random_system_planet = {
+			save_event_target_as = pirate_home
+			create_country = {
+				name = "NAME_Pirates"
+				type = pirate
+				species = event_target:pirate_species
+				name_list = "PRT1"
+				flag = {
+					background = {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors ={
+						"black"
+						"black"
+						"null"
+						"null"
+					}
+				}
+				effect = {
+					save_event_target_as = pirate_band
+					set_country_flag = drone_pirate
+				}
+			}
+			event_target:pirate_band = {
+				set_name = random
+				randomize_flag_symbol = "pirate"
+				root = { 
+					set_country_flag = spawner_of@event_target:pirate_band
+					change_variable = { 
+						which = "pirates_active" 
+						value = 1 
+					}
+				}
+				every_country = {
+					establish_communications_no_message = prev
+				}
+			}
+		}
+	}
+}
+
+create_machine_pirate_country = {
+	event_target:pirate_system = {
+		random_system_planet = {
+			save_event_target_as = pirate_home
+			create_country = {
+				name = "NAME_Pirates"
+				type = pirate
+				species = event_target:owner_species
+				name_list = "PRT1"
+				flag = {
+					background = {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors ={
+						"black"
+						"black"
+						"null"
+						"null"
+					}
+				}
+				effect = {
+					save_event_target_as = pirate_band
+					set_country_flag = machine_pirate
+				}
+			}
+			event_target:pirate_band = {
+				set_name = random
+				randomize_flag_symbol = "pirate"
+				root = { 
+					set_country_flag = spawner_of@event_target:pirate_band
+					change_variable = { 
+						which = "pirates_active" 
+						value = 1 
+					}
+				}
+				every_country = {
+					establish_communications_no_message = prev
+				}
+			}
+		}
+	}
+}
+
+create_machine_pirate_country_2 = {
+	event_target:pirate_system = {
+		random_system_planet = {
+			save_event_target_as = pirate_home
+			create_country = {
+				name = "NAME_Pirates"
+				type = pirate
+				species = event_target:pirate_species
+				name_list = "PRT1"
+				flag = {
+					background = {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors ={
+						"black"
+						"black"
+						"null"
+						"null"
+					}
+				}
+				effect = {
+					save_event_target_as = pirate_band
+					set_country_flag = machine_pirate
+				}
+			}
+			event_target:pirate_band = {
+				set_name = random
+				randomize_flag_symbol = "pirate"
+				root = { 
+					set_country_flag = spawner_of@event_target:pirate_band
+					change_variable = { 
+						which = "pirates_active" 
+						value = 1 
+					}
+				}
+				every_country = {
+					establish_communications_no_message = prev
+				}
+			}
+		}
+	}
+}
+
+create_pirate_base_1 = {
+	create_fleet = {
+		name = "NAME_Pirate_Station"
+		effect = {
+			set_owner = event_target:pirate_band
+			create_ship = {
+				name = random
+				design = "NAME_Pirate_Nest"
+				graphical_culture = "pirate_01"
+			}
+			last_created_ship = { set_ship_flag = pirate_station }
+			set_location = event_target:pirate_home
+		}
+	}
+}
+
+create_rogue_drones_base_1 = {
+	create_fleet = {
+		name = "NAME_Rogue_Drone_Station"
+		effect = {
+			set_owner = event_target:pirate_band
+			create_ship = {
+				name = random
+				design = "NAME_Rogue_Drone_Station"
+				graphical_culture = "borg_red_01"
+			}
+			last_created_ship = { set_ship_flag = pirate_station }
+			set_location = event_target:pirate_home
+		}
+	}
+}
+
+create_rogue_jem_hadar_base_1 = {
+	create_fleet = {
+		name = "NAME_Rogue_Jem_Hadar_Station"
+		effect = {
+			set_owner = event_target:pirate_band
+			create_ship = {
+				name = random
+				design = "NAME_Rogue_Jem_Hadar_Station"
+				graphical_culture = "dominion_01"
+			}
+			last_created_ship = { set_ship_flag = pirate_station }
+			set_location = event_target:pirate_home
+		}
+	}
+}
+
+
+
+create_pirate_fleet = {
+	event_target:pirate_band = {
+		if = {
+			limit = { has_country_flag = rogue_jem_hadar }
+			create_leader = {
+				type = admiral
+				species = event_target:jemHadarSpecies
+				name = random
+				skill = 1
+				traits = {
+					trait = random_trait
+				}
+			}
+		}
+		if = {
+			limit = { has_country_flag = rogue_drones }
+			create_leader = {
+				type = admiral
+				species = owner_main_species
+				name = random
+				skill = 1
+				traits = {
+					trait = leader_trait_assimilated
+					trait = random_trait
+				}
+			}
+		}
+		if = {
+			limit = { has_custom_pirate_ships = no }
+			create_leader = {
+				type = admiral
+				species = owner_main_species
+				name = random
+				skill = 1
+				traits = {
+					trait = random_trait
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_Pirate_Fleet"
+			effect = {
+				set_owner = event_target:pirate_band
+				if = {
+					limit = { owner = { is_borg_empire = yes } }
+					set_name = "NAME_Rogue_Drone_Fleet"
+				}
+				if = {
+					limit = { owner = { has_country_flag = the_dominion } }
+					set_name = "NAME_Rogue_Jem_Hadar_Fleet"
+				}
+				# Tier 1
+				if = {
+					limit = { years_passed < 10 }
+					random_list = {
+						100 = { create_pirate_ships_0 = yes }
+						0 = { create_pirate_ships_1 = yes }
+					}
+				}
+				if = {
+					limit = {
+						years_passed > 9
+						years_passed < 15
+					}
+					random_list = {
+						70 = { create_pirate_ships_0 = yes }
+						30 = { create_pirate_ships_1 = yes }
+					}
+				}
+				if = {
+					limit = {
+						years_passed > 14
+						years_passed < 30
+					}
+					random_list = {
+						70 = { create_pirate_ships_1 = yes }
+						30 = { create_pirate_ships_2 = yes }
+					}
+				}
+				if = {
+					limit = {
+						years_passed > 29
+						years_passed < 45
+					}
+					random_list = {
+						70 = { create_pirate_ships_2 = yes }
+						30 = { create_pirate_ships_3 = yes }
+					}
+				}
+				if = {
+					limit = {
+						years_passed > 44
+						years_passed < 60
+					}
+					random_list = {
+						70 = { create_pirate_ships_3 = yes }
+						30 = { create_pirate_ships_4 = yes }
+					}
+				}
+				if = {
+					limit = {
+						years_passed > 59
+						years_passed < 70 
+					}
+					random_list = {
+						70 = { create_pirate_ships_4 = yes }
+						30 = { create_pirate_ships_5 = yes }
+					}
+				}
+				if = {
+					limit = {
+						years_passed > 69
+						years_passed < 80 
+					}
+					random_list = {
+						70 = { create_pirate_ships_5 = yes }
+						30 = { create_pirate_ships_6 = yes }
+					}
+				}
+				if = {
+					limit = {
+						years_passed > 79
+						years_passed < 90 
+					}
+					random_list = {
+						70 = { create_pirate_ships_6 = yes }
+						30 = { create_pirate_ships_7 = yes }
+					}
+				}
+				if = {
+					limit = {
+						years_passed > 89
+						years_passed < 105
+					}
+					random_list = {
+						70 = { create_pirate_ships_7 = yes }
+						30 = { create_pirate_ships_8 = yes }
+					}
+				}
+				if = {
+					limit = {
+						years_passed > 104
+						years_passed < 120
+					}
+					random_list = {
+						95 = { create_pirate_ships_8 = yes }
+						5 = { create_pirate_ships_9 = yes }
+					}
+				}
+				if = {
+					limit = {
+						years_passed > 119
+						years_passed < 150
+					}
+					random_list = {
+						80 = { create_pirate_ships_8 = yes }
+						20 = { create_pirate_ships_9 = yes }
+					}
+				}
+				if = {
+					limit = {
+						years_passed > 150
+					}
+					random_list = {
+						50 = { create_pirate_ships_8 = yes }
+						50 = { create_pirate_ships_9 = yes }
+					}
+				}
+
+
+				assign_leader = last_created_leader
+				set_location = event_target:pirate_home
+				set_fleet_stance = aggressive
+				set_aggro_range_measure_from = self
+				set_aggro_range = 150
+				
+				# don't do things if targets don't exist!
+				if = {
+					limit = {
+						exists = event_target:pirate_target
+						exists = event_target:pirate_home
+					}
+					queue_actions = {
+						repeat = {
+							find_closest_system = {
+								trigger = {
+									id = "pirate.50.trigger.1"
+									exists = event_target:pirate_target
+									NOT = { 
+										has_star_flag = hostile_system 
+										is_same_value = event_target:capital_system
+									}
+									any_planet = {
+										OR = {
+											has_mining_station = yes
+											has_research_station = yes
+										}
+										exists = controller
+										controller = { is_same_value = event_target:pirate_target }
+									}
+									#distance = {
+									#	source = PREV
+									#	max_distance = 100
+									#	min_distance = 20
+									#}
+								}
+								found_system = {
+									move_to = THIS
+								}	
+							}
+							find_closest_planet = {
+								trigger = {
+									id = "pirate.50.trigger.2"
+									OR = {
+										has_mining_station = yes
+										has_research_station = yes
+									}
+								}
+								found_planet = {
+									orbit_planet = THIS
+									wait = {
+										duration = 20
+									}
+								}
+							}
+							find_random_system = {
+								trigger = {
+									id = "pirate.50.trigger.3"
+									exists = event_target:pirate_home
+									any_planet = {
+										is_same_value = event_target:pirate_home
+									}
+								}
+								found_system = {
+									move_to = THIS
+								}	
+							}
+							find_closest_planet = {
+								trigger = {
+									id = "pirate.50.trigger.4"
+									is_same_value = event_target:pirate_home
+								}
+								found_planet = {
+									orbit_planet = THIS
+									wait = {
+										duration = 200
+										random = 150
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+#create_rogue_drones_fleet
+#create_rogue_jem_hadar_fleet
+#
+#
+
+
+# ~135 fleet power
+create_pirate_ships_0 = {
+	if = {
+		limit = { owner = { has_country_flag = rogue_drones } }
+		create_ship_design = { design = "NAME_Rogue_Drone_Ship" }
+		while = {
+			count = 3
+			create_ship = { name = random design = last_created_design graphical_culture = "borg_red_01" }
+		}
+	}
+	if = {
+		limit = { owner = { has_country_flag = rogue_jem_hadar } }
+		create_ship_design = { design = "NAME_Rogue_Jem_Hadar_Ship" }
+		while = {
+			count = 3
+			create_ship = { name = random design = last_created_design graphical_culture = "dominion_01" }
+		}
+	}
+	if = {
+		limit = { owner = { has_custom_pirate_ships = no } }
+		create_ship_design = { design = "NAME_Reaver" }
+		while = {
+			count = 3
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+	}
+}
+
+# ~260 fleet power
+create_pirate_ships_1 = {
+	if = {
+		limit = { owner = { has_country_flag = rogue_drones } }
+		create_ship_design = { design = "NAME_Rogue_Drone_Ship" }
+		while = {
+			count = 5
+			create_ship = { name = random design = last_created_design graphical_culture = "borg_red_01" }
+		}
+	}
+	if = {
+		limit = { owner = { has_country_flag = rogue_jem_hadar } }
+		create_ship_design = { design = "NAME_Rogue_Jem_Hadar_Ship" }
+		while = {
+			count = 5
+			create_ship = { name = random design = last_created_design graphical_culture = "dominion_01" }
+		}
+	}
+	if = {
+		limit = { owner = { has_custom_pirate_ships = no } }
+		create_ship_design = { design = "NAME_Reaver" }
+		while = {
+			count = 5
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+	}
+}
+
+# ~450 fleet power
+create_pirate_ships_2 = {
+	if = {
+		limit = { owner = { has_country_flag = rogue_drones } }
+		create_ship_design = { design = "NAME_Rogue_Drone_Ship" }
+		while = {
+			count = 8
+			create_ship = { name = random design = last_created_design graphical_culture = "borg_red_01" }
+		}
+	}
+	if = {
+		limit = { owner = { has_country_flag = rogue_jem_hadar } }
+		create_ship_design = { design = "NAME_Rogue_Jem_Hadar_Ship" }
+		while = {
+			count = 8
+			create_ship = { name = random design = last_created_design graphical_culture = "dominion_01" }
+		}
+	}
+	if = {
+		limit = { owner = { has_custom_pirate_ships = no } }
+		create_ship_design = { design = "NAME_Reaver" }
+		while = {
+			count = 3
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+		create_ship_design = { design = "NAME_Brigand" }
+		while = {
+			count = 4
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+	}
+}
+
+# ~600 fleet power
+create_pirate_ships_3 = {
+	if = {
+		limit = { owner = { has_country_flag = rogue_drones } }
+		create_ship_design = { design = "NAME_Rogue_Drone_Ship" }
+		while = {
+			count = 12
+			create_ship = { name = random design = last_created_design graphical_culture = "borg_red_01" }
+		}
+	}
+	if = {
+		limit = { owner = { has_country_flag = rogue_jem_hadar } }
+		create_ship_design = { design = "NAME_Rogue_Jem_Hadar_Ship" }
+		while = {
+			count = 12
+			create_ship = { name = random design = last_created_design graphical_culture = "dominion_01" }
+		}
+	}
+	if = {
+		limit = { owner = { has_custom_pirate_ships = no } }
+		create_ship_design = { design = "NAME_Skull" }
+		while = {
+			count = 4
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+		create_ship_design = { design = "NAME_Brigand" }
+		while = {
+			count = 4
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+	}
+}
+
+# ~900 fleet power
+create_pirate_ships_4 = {
+	if = {
+		limit = { owner = { has_country_flag = rogue_drones } }
+		create_ship_design = { design = "NAME_Rogue_Drone_Ship" }
+		while = {
+			count = 16
+			create_ship = { name = random design = last_created_design graphical_culture = "borg_red_01" }
+		}
+	}
+	if = {
+		limit = { owner = { has_country_flag = rogue_jem_hadar } }
+		create_ship_design = { design = "NAME_Rogue_Jem_Hadar_Ship" }
+		while = {
+			count = 16
+			create_ship = { name = random design = last_created_design graphical_culture = "dominion_01" }
+		}
+	}
+	if = {
+		limit = { owner = { has_custom_pirate_ships = no } }
+		create_ship_design = { design = "NAME_Skull" }
+		while = {
+			count = 7
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+		create_ship_design = { design = "NAME_Marauder" }
+		while = {
+			count = 4
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+	}
+}
+
+# ~1200 fleet power
+create_pirate_ships_5 = {
+	if = {
+		limit = { owner = { has_country_flag = rogue_drones } }
+		create_ship_design = { design = "NAME_Rogue_Drone_Ship" }
+		while = {
+			count = 20
+			create_ship = { name = random design = last_created_design graphical_culture = "borg_red_01" }
+		}
+	}
+	if = {
+		limit = { owner = { has_country_flag = rogue_jem_hadar } }
+		create_ship_design = { design = "NAME_Rogue_Jem_Hadar_Ship" }
+		while = {
+			count = 20
+			create_ship = { name = random design = last_created_design graphical_culture = "dominion_01" }
+		}
+	}
+	if = {
+		limit = { owner = { has_custom_pirate_ships = no } }
+		create_ship_design = { design = "NAME_Skull" }
+		while = {
+			count = 5
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+		create_ship_design = { design = "NAME_Brigand" }
+		while = {
+			count = 5
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+		create_ship_design = { design = "NAME_Marauder" }
+		while = {
+			count = 2
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+		create_ship_design = { design = "NAME_Corsair" }
+		while = {
+			count = 2
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+	}
+}
+
+# ~1500 fleet power
+create_pirate_ships_6 = {
+	if = {
+		limit = { owner = { has_country_flag = rogue_drones } }
+		create_ship_design = { design = "NAME_Rogue_Drone_Ship" }
+		while = {
+			count = 24
+			create_ship = { name = random design = last_created_design graphical_culture = "borg_red_01" }
+		}
+	}
+	if = {
+		limit = { owner = { has_country_flag = rogue_jem_hadar } }
+		create_ship_design = { design = "NAME_Rogue_Jem_Hadar_Ship" }
+		while = {
+			count = 24
+			create_ship = { name = random design = last_created_design graphical_culture = "dominion_01" }
+		}
+	}
+	if = {
+		limit = { owner = { has_custom_pirate_ships = no } }
+		create_ship_design = { design = "NAME_Skull" }
+		while = {
+			count = 5
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+		create_ship_design = { design = "NAME_Brigand" }
+		while = {
+			count = 5
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+		create_ship_design = { design = "NAME_Marauder" }
+		while = {
+			count = 2
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+		create_ship_design = { design = "NAME_Corsair" }
+		while = {
+			count = 3
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+		create_ship_design = { design = "NAME_Black_Earl" }
+		while = {
+			count = 1
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+	}
+}
+
+# ~1750 fleet power
+create_pirate_ships_7 = {
+	if = {
+		limit = { owner = { has_country_flag = rogue_drones } }
+		create_ship_design = { design = "NAME_Rogue_Drone_Ship" }
+		while = {
+			count = 27
+			create_ship = { name = random design = last_created_design graphical_culture = "borg_red_01" }
+		}
+	}
+	if = {
+		limit = { owner = { has_country_flag = rogue_jem_hadar } }
+		create_ship_design = { design = "NAME_Rogue_Jem_Hadar_Ship" }
+		while = {
+			count = 27
+			create_ship = { name = random design = last_created_design graphical_culture = "dominion_01" }
+		}
+	}
+	if = {
+		limit = { owner = { has_custom_pirate_ships = no } }
+		create_ship_design = { design = "NAME_Skull" }
+		while = {
+			count = 5
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+		create_ship_design = { design = "NAME_Brigand" }
+		while = {
+			count = 5
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+		create_ship_design = { design = "NAME_Marauder" }
+		while = {
+			count = 2
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+		create_ship_design = { design = "NAME_Corsair" }
+		while = {
+			count = 3
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+		create_ship_design = { design = "NAME_Black_Earl" }
+		while = {
+			count = 2
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+	}
+}
+
+# ~1960 fleet power
+create_pirate_ships_8 = {
+	if = {
+		limit = { owner = { has_country_flag = rogue_drones } }
+		create_ship_design = { design = "NAME_Rogue_Drone_Ship" }
+		while = {
+			count = 30
+			create_ship = { name = random design = last_created_design graphical_culture = "borg_red_01" }
+		}
+	}
+	if = {
+		limit = { owner = { has_country_flag = rogue_jem_hadar } }
+		create_ship_design = { design = "NAME_Rogue_Jem_Hadar_Ship" }
+		while = {
+			count = 30
+			create_ship = { name = random design = last_created_design graphical_culture = "dominion_01" }
+		}
+	}
+	if = {
+		limit = { owner = { has_custom_pirate_ships = no } }
+		create_ship_design = { design = "NAME_Skull" }
+		while = {
+			count = 5
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+		create_ship_design = { design = "NAME_Brigand" }
+		while = {
+			count = 5
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+		create_ship_design = { design = "NAME_Marauder" }
+		while = {
+			count = 2
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+		create_ship_design = { design = "NAME_Corsair" }
+		while = {
+			count = 3
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+		create_ship_design = { design = "NAME_Black_Earl" }
+		while = {
+			count = 3
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+	}
+}
+
+# ~5100 fleet power
+create_pirate_ships_9 = {
+	if = {
+		limit = { owner = { has_country_flag = rogue_drones } }
+		create_ship_design = { design = "NAME_Rogue_Drone_Ship" }
+		while = {
+			count = 70
+			create_ship = { name = random design = last_created_design graphical_culture = "borg_red_01" }
+		}
+	}
+	if = {
+		limit = { owner = { has_country_flag = rogue_jem_hadar } }
+		create_ship_design = { design = "NAME_Rogue_Jem_Hadar_Ship" }
+		while = {
+			count = 70
+			create_ship = { name = random design = last_created_design graphical_culture = "dominion_01" }
+		}
+	}
+	if = {
+		limit = { owner = { has_custom_pirate_ships = no } }
+		create_ship_design = { design = "NAME_Pirate_Galleon" }
+		while = {
+			count = 1
+			create_ship = { name = random design = last_created_design graphical_culture = "pirate_01" }
+		}
+	}
+}

@@ -1,0 +1,35 @@
+neutral_zone = {
+	show_in_contacts_list = yes
+	needs_survey = yes
+	piracy_risk = no
+	pop_growth = yes
+	share_communications = no	
+	# enforces_borders = yes
+	ai = {
+		enabled = yes
+		construction = yes
+		modules = {
+			# military_minister_module
+			# foreign_minister_module
+			interior_minister_module
+		}
+	}
+	faction = {
+		hostile = no
+		needs_border_access = yes
+		generate_borders = yes
+		needs_colony = no
+	}
+	custom_diplomacy = yes
+	custom_opinion = yes
+	modules = {
+		basic_technology_module = {}
+		standard_event_module = {}
+		standard_economy_module = {}
+		standard_leader_module = {}
+		exclusive_diplomacy_module = {
+			contact_rule = script_only
+		}
+		standard_species_rights_module = {}
+	}
+}

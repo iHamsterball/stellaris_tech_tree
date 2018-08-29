@@ -1,0 +1,397 @@
+﻿l_russian:
+ ####################################
+ # Traditions
+ ####################################
+ UNITY:0 "Единство"
+ UNITY_DESC:0 "Единство - это ресурс, который нужен, чтобы разблокировать $TRADITIONS$. Он производится каждый месяц на основе текущего уровня единства империи и наличия определенных сооружений."
+ TRADITIONS:0 "Традиции"
+ TRADITIONS_DESC:0 "Традиции - это бонусы, сгруппированные в деревья традиций. Традиция может быть разблокирована в любой момент, если вашей империей накоплено достаточное количество единства. Различные факторы, такие как большое количество колоний или идеологическое разделение населения, повышают затраты единства на принятие традиций."
+ TRADITIONS_PROGRESS:0 "$KEY$: прогресс"
+ TRADITIONS_PROGRESS_TITLE:0 "Прогресс"
+ TRADITIONS_PROGRESS_DESC:0 "Чтобы иметь возможность принять новую традицию, нам требуется дополнительное £unity  в количестве $MISSING|Y$ ед. Текущая скорость производства позволит накопить его к $DATE|Y$."
+ UNLOCK_TRADITION_DESC:0 "£unity у нас в достаточном количестве для принятия новой традиции"
+ TRADITIONS_TIME_TO_NEXT:0 "Осталось месяцев"
+ TRADITIONS_TIME_TO_NEXT_DESC:0 "$MONTHS$ осталось."
+ TRADITIONS_UNLOCKED:0 "Мы открыли $COUNT|Y$ из $MAX|Y$ традиций на этом древе."
+ TRADITION_ADOPT_BUTTON:0 "Принять"
+ TRADITIONS_ADOPT:0 "Эффект от принятия"
+ TRADITIONS_FINISH:0 "Эффект от завершения"
+ TRADITIONS_FINISH_AP:0 " Кроме того, мы разблокируем §Yодну§! ячейку бонусов за стремление."
+ TRADITION_COST:0 "Стоимость традиций"
+ TRADITIONS_UNAFFORDABLE:0 "§RПрежде чем мы сможем открыть эту традицию, нам требуются еще §Y$RESOURCES$§!.§!"
+ MUST_ADOPT_TRADITION_CATEGORY:0 "$TRIGGER_FAIL$Приняты традиции группы $CATEGORY|Y$"
+ MUST_ACTIVATE_ALL_TRADITIONS:0 "$TRIGGER_FAIL$Приняты все традиции в этой группе"
+ TRADITION_ADOPT_CONFIRM:0 "Принять традицию"
+ TRADITION_ADOPTED_COUNT:0 "$COUNT$/$MAX$"
+ TRADITION_CLICK_DESC:0 "§GЩелкните, чтобы принять эту традицию.§!"
+ TRADITION_GROUP_CLICK_DESC:0 "§GЩелкните, чтобы принять эту группу традиций.§!"
+ TRADITION_COST_NEXT:0 "Следующая традиция"
+ TRADITION_COST_MULT_NUM_TR:0 "Традиции ($COUNT|Y$): $VALUE|Y$"
+ TRADITION_COST_MULT_NUM_COLONIES:0 "Колонии ($COUNT|Y$): $VALUE|%$"
+ TRADITION_COST_MULT_NUM_SYSTEMS:0 "Системы ($COUNT|Y$): $VALUE|%$"
+ TRADITION_COST_MULT_NUM_POPS:0 "Базовая стоимость поселений ($COUNT|Y$): $VALUE|Y$"
+ TRADITION_COST_MULT_NUM_POPS_EFFECT:0 "Дополнительная стоимость поселений: $VALUE|Y$"
+ TRADITION_COST_MULT_NUM_POP_TYPES_EFFECT:0 "$NUM|Y$ $TYPE$: $VALUE|Y$"
+ TRADITION_COST_MULT_NUM_GROUPS:0 "Категории принятых традиций ($COUNT|Y$): $VALUE$"
+ pop_xenos:0 "Инопланетные поселения"
+ pop_xeno_slaves:0 "Поселения инопланетных рабов"
+ pop_slaves:0 "Поселения рабов"
+ pop_founders:0 "Поселения основателей"
+ pop_robots:0 "Поселения роботов"
+ 
+ ################################################################
+ # EXPANSION
+ ################################################################
+ 
+ tradition_expansion_hive:0 "Расширение"
+ #tradition_expansion_desc:0 "We must spread our civilization to new systems and planets if we are to survive. As other empires emerge on the galactic scene, competition will be fierce. The faster we can establish new colonies, the better."
+ tradition_expansion_hive_desc:0 "У улья есть только два возможных состояния: рост и смерть."
+ tr_expansion_adopt_hive:0 "$tr_expansion_adopt_machine$"
+ tr_expansion_adopt_hive_desc:0 "$tradition_expansion_hive_desc$\n\n$tr_expansion_adopt_hive_effect$\n\n$tr_expansion_finish_hive_effect$"
+ tr_expansion_adopt_hive_effect:1 "§E$TRADITIONS_ADOPT$:§!\n§Y$MOD_PLANET_COLONY_DEVELOPMENT_SPEED_MULT$§! повышена на §G50%§!."
+ tr_expansion_colonization_fever_hive:0 "Единый разум"
+ tr_expansion_colonization_fever_hive_desc:0 "$tr_expansion_colonization_fever_desc$"
+ tr_expansion_colonization_fever_hive_delayed:0 "Сверхразум - это целый хор мыслей, заглушить которые не может даже холодная пустота космоса."
+ tr_expansion_a_new_life_hive:0 "Безудержное размножение"
+ tr_expansion_a_new_life_hive_desc:0 "$tr_expansion_a_new_life_desc$"
+ tr_expansion_a_new_life_hive_delayed:0 "После занятия нового гнезда мощный инстинктивный импульс заставляет коконы воспроизводить потомство с бешеной скоростью. Обычно они умирают от перенапряжения, но рождение множества свежих трутней ускоряет покорение новых миров."
+ #tr_expansion_standardized_colony_ships:0 "Standardized Colony Ships"
+ #tr_expansion_standardized_colony_ships_desc:0 "Immediately give you a free §Y$colonizer$§!. In addition, §Y$shipsize_colonizer_construction_speed_mult$§! is increased by §G+100%§!."
+ #tr_expansion_standardized_colony_ships_delayed:0 "Simplified designs and less expensive materials allow us to mass-produce colony ships on a hitherto unseen scale. Our colonists may not enjoy as many creature comforts during transport to their new homes, but these ships will still get them where they're going."
+ tr_expansion_courier_network_hive:0 "Подавление отклонений"
+ tr_expansion_courier_network_hive_desc:0 "$tr_expansion_courier_network_desc$"
+ tr_expansion_courier_network_hive_delayed:0 "Иногда наше единство нарушает какой-нибудь непокорный трутень. По мере нашей экспансии среди звезд эта угроза стала более серьезной. Уничтожение и переработка этих единиц дает им шанс принести пользу улью своей смертью, чего они не могли бы сделать, пока были живы."
+ tr_expansion_reach_for_the_stars_hive:0 "Амебные синапсы"
+ tr_expansion_reach_for_the_stars_hive_desc:0 "$tr_expansion_reach_for_the_stars_desc$"
+ tr_expansion_reach_for_the_stars_hive_delayed:0 "Заключение синапсов в миниатюрную оболочку гипердвигателя, способную вынести космический полет, и использование их для передачи директив из улья, позволило нам покорить звезды."
+ tr_expansion_galactic_ambition_hive:0 "Затмевая звезды"
+ tr_expansion_galactic_ambition_hive_desc:0 "$tr_expansion_galactic_ambition_desc$"
+ tr_expansion_galactic_ambition_hive_delayed:0 "Первобытный ужас сопровождал наши первые неуверенные шаги во тьму, прочь от родного и материнского улья, который нас воспитал. Лишь путем покорения и искоренения этого страха мы сможем развиваться. Миллионы трутней умрут, чтобы улей мог жить дальше."
+ tr_expansion_finish_hive_effect:0 "$tr_expansion_finish_machine_effect$"
+ 
+ ################################################################
+ # DOMINATION
+ ################################################################
+ 
+ tradition_domination_hive:0 "$tradition_domination$"
+ tradition_domination_hive_desc:0 "Все, что не является Нами, должно Нам служить, будучи либо слугами, либо пищей."
+ tr_domination_colonial_viceroys_hive:0 "Соглашение воль"
+ tr_domination_colonial_viceroys_hive_desc:0 "$tr_domination_colonial_viceroys_desc$"
+ tr_domination_colonial_viceroys_hive_delayed:0 "По мере увеличения количества наших ульев нам нужно больше автономных трутней для обеспечения гармонии."
+ tr_domination_fleet_levies_hive:0 "Симбионты контроля мыслей"
+ tr_domination_fleet_levies_hive_desc:0 "$tr_domination_fleet_levies_desc$"
+ tr_domination_fleet_levies_hive_delayed:0 "Похоже, обещание поглотить обслуживающие ульи, чтобы они стали частью нашего единства, не слишком их утешило. Вместо этого они предлагают поддержать наши звездные рои в обмен на сохранение их индивидуальности, отличающейся хрупкостью и одиночеством. Это нас озадачивает."
+ tr_domination_protection_racket_hive:0 "Биодань"
+ tr_domination_protection_racket_hive_desc:0 "$tr_domination_protection_racket_desc$"
+ tr_domination_protection_racket_hive_delayed:0 "Регулярные поставки покорной и усвояемой биомассы из ульев наших подданных часто приносят нам больше энергии, чем мы бы получили в результате полномасштабного планетарного вторжения."
+ tr_domination_star_lords_hive:0 "Усыпляющие феромоны"
+ tr_domination_star_lords_hive_desc:0 "$tr_domination_star_lords_desc$"
+ tr_domination_star_lords_hive_delayed:0 "Эксперименты в течение многих поколений показали, что некоторые сочетания газообразных выбросов и феромонов значительно снижают у других воинственность и желание сопротивляться. Некоторые умирают, но гибнут в блаженстве, пусть хотя бы на мгновение познав прекрасную чистоту нашего разума."
+ tr_domination_vassal_acculturation_hive:0 "Утечка мозгов"
+ tr_domination_vassal_acculturation_hive_desc:0 "$tr_domination_vassal_acculturation_desc$"
+ tr_domination_vassal_acculturation_hive_delayed:0 "Налог на трупы трутней, которым мы обложили наших подданных, вначале был непопулярным, но со временем несогласие исчезло, как это всегда бывает с существами, обладающими короткой памятью. Тела мы используем в качестве пищи, а в мозгах есть остаточные воспоминания, которые также можно собрать."
+ 
+ ################################################################
+ # PURITY
+ ################################################################
+ 
+ tr_purity_never_surrender:0 "Никогда не сдаваться"
+ tr_purity_never_surrender_desc:0 "§Y$shipclass_starbase_hull_mult$§! увеличено на §G10%§! и §Y$MOD_ARMY_DEFENSE_HEALTH_MULT$§! увеличено на §G50%§!."
+ tr_purity_never_surrender_delayed:0 "Мы никогда не склонимся перед низшими существами. Пускай они разобьются о нашу непробиваемую защиту! Спустя тысячу лет они останутся лишь сноской в истории нашего возвышения."
+ tr_purity_symbol_purity:0 "Символ чистоты"
+ tr_purity_symbol_purity_desc:1 "§HОткрывает сооружение:§! $building_symbol_purity$\n§EТакое сооружение производит единство и увеличивает привлекательность руководящих принципов.§!"
+ tr_purity_symbol_purity_delayed:0 "$tech_purity_campaigns_desc$"
+ tr_purity_natural_order:0 "Естественный порядок"
+ tr_purity_natural_order_desc:0 "Поедание инопланетных поселений дает £unity  единство. Не относится к роботам."
+ tr_purity_natural_order_delayed:0 "У всех созданий есть свое место во вселенной. Низшие расы должны довольствоваться подчинением тем, кто лучше их."
+ tr_purity_age_machines:0 "Эра машин"
+ tr_purity_age_machines_desc:0 "Производство ресурсов поселениями увеличено на §G5%§!"
+ tr_purity_age_machines_delayed:0 "Эпоха хаоса, когда империи органиков диктовали развитие галактической истории, завершена. Наконец настал век машин."
+ tr_purity_the_chosen:0 "Избранные"
+ tr_purity_the_chosen_desc:0 "£pop  §Y$pop_citizen_happiness$§! увеличено на §G5%§!, а §Y$MOD_COUNTRY_STARBASE_INFLUENCE_COST_MULT$§! снижен на §G5%§!"
+ tr_purity_the_chosen_delayed:0 "Были ли мы избраны высшей силой или в результате генетической случайности, исключительность нашей расы не вызывает сомнений. Нам предначертаны великие свершения."
+ tr_purity_waste_processing:0 "Переработка отходов"
+ tr_purity_waste_processing_desc:0 "§Y$MOD_POP_PROCESSING_OUTPUT$§! увеличена на §G50%§!."
+ tr_purity_waste_processing_delayed:0 "Оптимизированные методы обработки повышают продуктивность при сборе населения. Ничто не должно пропасть."
+ tr_purity_appropriation:0 "Присвоение"
+ tr_purity_appropriation_desc:0 "§Y$MOD_POP_RESETTLEMENT_COST_MULT$§! снижена на §G50%§!."
+ tr_purity_appropriation_delayed:0 "Необрабатываемая земля бесполезна для нашей империи. Рабочих нужно эффективно перемещать на те планеты, где они нужнее всего."
+ 
+ ################################################################
+ # HARMONY
+ ################################################################
+ 
+ tr_harmony_mind_and_body_hive:0 "Клонируемые органы"
+ tr_harmony_mind_and_body_hive_delayed:0 "Емкости для клонирования массово производят такие часто поглощаемые органы, как сердце и легкие, увеличивая полезную продолжительность жизни у наиболее важных трутней."
+ 
+ ################################################################
+ # SYNCHRONICITY
+ ################################################################
+ 
+ tr_synchronicity_hive_adopt:0 "Традиции синхронности"
+ tr_synchronicity_hive_adopt_desc:0 "$tradition_synchronicity_desc$\n\n$tr_synchronicity_hive_adopt_effect$\n\n$tr_synchronicity_finish_effect$"
+ tr_synchronicity_hive_adopt_effect:0 "$tr_harmony_adopt_effect$"
+ tr_synchronicity_hive_mind_synapse:0 "Синапс коллективного разума"
+ tr_synchronicity_hive_mind_synapse_desc:1 "§HОткрывает сооружение:§! $building_hive_synapse$\n§EЭто сооружение производит энергию и единство, а также увеличивает производительность поселений.§!"
+ tr_synchronicity_hive_mind_synapse_delayed:0 "$building_hive_synapse_desc$"
+ tr_synchronicity_machine_center:0 "Центры переработки"
+ tr_synchronicity_machine_center_desc:1 "§HОткрывает сооружение:§! $building_control_center$\n§EЭто поселение производит энергию и единство, а также увеличивает производительность роботов.§!"
+ tr_synchronicity_machine_center_delayed:0 "$building_control_center_desc$"
+ 
+ ################################################################
+ # PURITY
+ ################################################################
+ #
+ # tradition_purity:0 "Purity"
+ # #tradition_purity_desc:0 "A star nation built on the rotten foundation of xeno inclusion will inevitably collapse. We must guard against the sinister threat of alien influence at all turns."
+ # tradition_purity_desc:0 "A star nation built on the rotten foundation of xeno inclusion will inevitably collapse."
+ # tr_purity_adopt:0 "Purity Traditions"
+ # tr_purity_adopt_desc:0 "$tradition_purity_desc$\n\n$tr_purity_adopt_effect$\n\n$tr_purity_finish_effect$"
+ # tr_purity_adopt_effect:0 "§E$TRADITIONS_ADOPT$:§!\nAdopting Purity will reduce £pops  Pops' (of your Founder Species) effect on §Y$TRADITION_COST$§! by §G-15%§!."
+ # tr_purity_indoctrination:0 "Indoctrination"
+ # tr_purity_indoctrination_desc:0 "§Y$MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$§! increased by §G+20%§!."
+ # tr_purity_indoctrination_delayed:0 "Our population must be educated on the many unfathomable evils we face as we claim our place in the cosmos, lest their fragile minds begin to wander in dangerous directions..."
+ # tr_purity_suffer_not_alien:0 "Suffer Not the Alien"
+ # tr_purity_suffer_not_alien_desc:0 "Purging alien Pops provides £unity  Unity. Does not apply to robots."
+ # tr_purity_suffer_not_alien_delayed:0 "We cannot rest while the myriad xenos continue to pollute our galaxy with their wretched presence. Their mere existence is a threat to our way of life."
+ # tr_purity_the_chosen:0 "The Chosen"
+ # tr_purity_the_chosen_desc:0 "£building  §Y$building_monument_purity$§! provides additional §G+5%§! £happiness  Happiness."
+ # tr_purity_the_chosen_delayed:0 "Whether chosen by a higher power or simple genetic chance, our exceptional species is without compare. We are clearly destined for great things."
+ # tr_purity_natural_order:0 "Natural Order"
+ # tr_purity_natural_order_desc:0 "Alien slaves have no effect on §Y$TRADITION_COST$§!."
+ # tr_purity_natural_order_delayed:0 "All beings have their assigned station in the universe. Those who belong to a lesser species should take comfort in their servitude to their betters."
+ # tr_purity_never_surrender:0 "Never Surrender"
+ # tr_purity_never_surrender_desc
+ # tr_purity_never_surrender_delayed:0 "We will never bow to those who are inferior. Let them hurl themselves against our mighty battle fleets! A thousand years from now, they will just another footnote in the history of our ascension."
+ # tr_purity_finish:0 "Purity Traditions Finished"
+ # tr_purity_finish_effect:0 "§E$TRADITIONS_FINISH$:§!\nAdopting all $tr_purity_adopt$ increases our §Y$MOD_SHIP_FIRE_RATE_MULT$§! by §G+10%§! while fighting other empires."
+ 
+ ################################################################
+ # SUPREMACY
+ ################################################################
+ 
+ tradition_supremacy_hive:0 "$tradition_supremacy$"
+ tradition_supremacy_hive_desc:0 "Правило одно: ешь или будь съеденным."
+ tr_supremacy_adopt_hive:0 "$tr_supremacy_adopt$"
+ tr_supremacy_adopt_hive_desc:0 "$tradition_supremacy_hive_desc$\n\n$tr_supremacy_adopt_hive_effect$\n\n$tr_supremacy_finish_hive_effect$"
+ tr_supremacy_adopt_hive_effect:0 "$tr_supremacy_adopt_effect$"
+ tr_supremacy_above_the_fray:0 "Превыше суеты"
+ tr_supremacy_above_the_fray_desc:0 "£unity  §YЕдинство§!: производство увеличено на §G10%§!."
+ tr_supremacy_above_the_fray_delayed:0 "Мы не опускаемся до мелочного соперничества и политических склок. Пусть низшие империи говорят, что пожелают, а наша цель останется неизменной."
+ tr_supremacy_armed_deterrence:0 "Вооруженное устрашение"
+ tr_supremacy_armed_deterrence_desc:0 "§Y$shipsize_military_station_small_build_cost_mult$§! снижена на §G25%§!, а §Y$shipsize_military_station_small_hull_mult$§! увеличено на §G20%§!."
+ tr_supremacy_armed_deterrence_delayed:0 "Желающие мира должны готовиться к войне. Наши границы станут стеной, о которую разобьются флотилии возможных захватчиков."
+ tr_supremacy_natural_preeminence:0 "Естественное превосходство"
+ tr_supremacy_natural_preeminence_desc:0 "§Y$MOD_PLANET_UNREST_ADD$§! снижены на §G20%§! на всех наших планетах."
+ tr_supremacy_natural_preeminence_delayed:0 "Это неоспоримый факт, что с точки зрения естественного развития мы просто лучше других рас. Мы должны добиться, чтобы эта истина стала известна всем, и представители нашей расы радовались своему превосходству, а другие принимали судьбу, которую мы по праву для них выбираем."
+ tr_supremacy_great_game_hive:0 "Глаз охотника"
+ tr_supremacy_great_game_hive_desc:0 "$tr_supremacy_great_game_desc$"
+ tr_supremacy_great_game_hive_delayed:0 "В конечном счете все, что находится за пределами нашего улья, является потенциальным источником питательных веществ. Нам приятно знать, кого именно мы будем поглощать в первую очередь."
+ tr_supremacy_right_of_conquest_hive:0 "Подчинитесь или будьте съедены"
+ tr_supremacy_right_of_conquest_hive_desc:0 "$tr_supremacy_right_of_conquest_desc$"
+ tr_supremacy_right_of_conquest_hive_delayed:0 "У других странный разум. Они сильнее реагируют на то, что одного трутня публично растворяют в емкостях для пищеварения, чем на тысячи убитых в результате орбитальной бомбардировки. Такой тип избирательного запугивания эффективен при подавлении их сопротивления."
+ tr_supremacy_master_shipwrights_hive:0 "Органическая архитектура"
+ tr_supremacy_master_shipwrights_hive_desc:0 "$tr_supremacy_master_shipwrights_desc$"
+ tr_supremacy_master_shipwrights_hive_delayed:0 "Мы собираем каркасы наших кораблей подобно скелету живого существа, а затем прикрепляем любые необходимые компоненты, как если бы они были органами, плотью и кожей."
+ tr_supremacy_war_games_hive:0 "Трехмерное ориентирование"
+ tr_supremacy_war_games_hive_desc:0 "$tr_supremacy_war_games_desc$"
+ tr_supremacy_war_games_hive_delayed:0 "Водные существа превосходно ориентируются в пространстве из-за трехмерной природы их естественных мест обитания. Наши рои начали двигаться как косяки рыб, как только мы добавили информацию из их коры мозга в наш боевой разум."
+ tr_supremacy_overwhelming_force_hive:0 "Охотничьи экзоскелеты"
+ tr_supremacy_overwhelming_force_hive_desc:0 "$tr_supremacy_overwhelming_force_desc$"
+ tr_supremacy_overwhelming_force_hive_delayed:0 "Массово производимые боевые трутни с защитой от вражеского огня, избыточными органами и подавленным инстинктом самосохранения. Миллионы таких."
+ tr_supremacy_finish_hive:0 "$tr_supremacy_finish$"
+ tr_supremacy_finish_hive_effect:0 "$tr_supremacy_finish_effect$"
+ 
+ ################################################################
+ # DIPLOMACY
+ ################################################################
+ 
+ tr_adaptability_dietary_enrichment:0 "Пищевые добавки"
+ tr_adaptability_dietary_enrichment_desc:0 "£food  §Y$tile_resource_food_mult$§!: производство увеличено на §G20%§!."
+ tr_adaptability_dietary_enrichment_delayed:0 "Питательную ценность веществ, собираемых нами для наших поселений, можно повысить с помощью различных добавок, что позволит нам накормить больше ртов меньшим количеством пищи."
+ tr_adaptability_survival_fittest:0 "Выживание сильнейших"
+ tr_adaptability_survival_fittest_desc:0 "§Y$species_trait_points_add$§! увеличены на §Y1§!, а время модификации расы снижено на §G15%§!."
+ tr_adaptability_survival_fittest_delayed:0 "Вступив в контакт с другими расами, мы научились использовать их сильные стороны."
+ tr_adaptability_dynamic_ecomorphism:0 "$tr_diplomacy_dynamic_ecomorphism$"
+ tr_adaptability_dynamic_ecomorphism_desc:0 "$tr_diplomacy_dynamic_ecomorphism_desc$"
+ tr_adaptability_dynamic_ecomorphism_delayed:0 "Исследовав чужие приемы, мы научились новым способам приспособления к чуждой окружающей среде."
+ tr_adaptability_environmental_diversification:0 "Экологическая дифференциация"
+ tr_adaptability_environmental_diversification_desc:0 "£unity  Производство единства увеличено на §G5%§! на каждый класс колонизированных планет, вплоть до максимума в §G30%§!."
+ tr_adaptability_environmental_diversification_delayed:0 "С помощью адаптации к различным экологическим условиям мы научились быстрее эволюционировать."
+ tr_adaptability_adaptive_ecology:0 "Адаптивная экология"
+ tr_adaptability_adaptive_ecology_desc:0 "§Y$MOD_COUNTRY_TERRAFORMING_COST_MULT$§! снижена на §G15%§!."
+ tr_adaptability_adaptive_ecology_delayed:0 "Первоочередной задачей экологии является понимание последствий."
+ 
+ tr_synchronicity_cyber_comms:0 "Киберсвязь"
+ tr_synchronicity_cyber_comms_desc:0 "§HОткрывает сооружение:§! $building_neuro_electric_amplifier$"
+ tr_synchronicity_cyber_comms_delayed:0 "$building_neuro_electric_amplifier_desc$"
+ tr_synchronicity_organic_paradise:0 "Органическая утопия"
+ tr_synchronicity_organic_paradise_desc:0 "Все £building  §Hзаповедники органической жизни§! улучшены до £building  §Hорганического рая§!. Кроме того, £happiness  §Y$MOD_POP_HAPPINESS$§! всех биотрофеев повышено на §G10%§!."
+ tr_synchronicity_organic_paradise_delayed:0 "Продолжительное наблюдение за разумными органиками, о которых мы заботимся, дало нам новое понимание их физических и психологических потребностей."
+ 
+ ################################################################
+ # DISCOVERY
+ ################################################################
+ 
+ tradition_discovery_hive:0 "$tradition_discovery$"
+ #tradition_discovery_desc:0 "For the first time in the history of our civilization, we live in an age where our reach extends beyond the confines of our homeworld. Our insatiable curiosity about the universe is what got us this far, and there is still so much left to discover."
+ tradition_discovery_hive_desc:0 "В далеком прошлом трутни-исследователи покинули наш безопасный улей, чтобы найти места для новых гнезд. Они и теперь путешествуют среди звезд, ведомые тем же унаследованным желанием."
+ tr_discovery_adopt_hive:0 "$tr_discovery_adopt$"
+ tr_discovery_adopt_hive_desc:0 "$tradition_discovery_hive_desc$\n\n$tr_discovery_adopt_hive_effect$\n\n$tr_discovery_finish_hive_effect$"
+ tr_discovery_adopt_hive_effect:0 "$tr_discovery_adopt_effect$"
+ tr_discovery_to_boldly_go_hive:0 "Чувствительные щупальца"
+ tr_discovery_to_boldly_go_hive_desc:0 "$tr_discovery_to_boldly_go_desc$"
+ tr_discovery_to_boldly_go_hive_delayed:0 "Как можно о чем-то судить только по цифрам на экране? Наши трутни-исследователи дышат атмосферой каждого нового мира, чувствуют жар каждой новой звезды на своей коже. Мы познаем вселенную на собственном опыте, а вы лишь читаете об этом."
+ tr_discovery_science_division_hive:0 "Связь разумов"
+ tr_discovery_science_division_hive_desc:0 "$tr_discovery_science_division_desc$"
+ tr_discovery_science_division_hive_delayed:0 "Хотя обычно другие при этом сходят с ума, но кратковременное погружение их выдающихся разумов в наше сознание иногда дает нам полезные идеи для дальнейших исследований."
+ tr_discovery_polytechnic_education_hive:0 "Гиперадаптивная эволюция"
+ tr_discovery_polytechnic_education_hive_desc:0 "$tr_discovery_polytechnic_education_desc$"
+ tr_discovery_polytechnic_education_hive_delayed:0 "Снижение физических данных наших мыслящих трутней почти до самого минимума, необходимого для поддержания жизни в их чересчур больших мозгах, оказалось очень эффективным. Их кормят и обслуживают другие трутни низшего порядка, и они могут сконцентрироваться исключительно на улучшении проводимых ими исследований."
+ tr_discovery_faith_in_science_hive:0 "Синаптическая передача"
+ tr_discovery_faith_in_science_hive_desc:0 "$tr_discovery_faith_in_science_desc$"
+ tr_discovery_faith_in_science_hive_delayed:0 "Благодаря стратегическому применению синаптических передатчиков мы можем транслировать волю улья на всю планету с орбиты."
+ tr_discovery_finish_hive:0 "$tr_discovery_finish$"
+ tr_discovery_finish_hive_effect:0 "$tr_discovery_finish_effect$"
+ 
+ ################################################################
+ # PROSPERITY
+ ################################################################
+ 
+ 
+ tradition_prosperity_hive_mind:0 "$tradition_prosperity$"
+ tradition_prosperity_hive_mind_desc:0 "Если мы желаем утвердиться среди звезд, необходимо построить сильный, процветающий улей."
+ tr_prosperity_adopt_hive:0 "$tr_prosperity_adopt$"
+ #tr_prosperity_hive_mind_adopt_desc:0 "$tr_prosperity_adopt_desc$"
+ tr_prosperity_adopt_hive_desc:0 "$tradition_prosperity_hive_mind_desc$\n\n$tr_prosperity_adopt_hive_effect$\n\n$tr_prosperity_finish_hive_effect$"
+ tr_prosperity_adopt_hive_effect:0 "$tr_prosperity_adopt_effect$"
+ tr_prosperity_hive_mind_finish:0 "$tr_prosperity_finish$"
+ tr_prosperity_hive_mind_finish_effect:0 "$tr_prosperity_finish_effect$"
+ tr_prosperity_hive_warrior_forms:0 "Боевые формы"
+ tr_prosperity_hive_warrior_forms_desc:0 "§Y$MOD_ARMY_UPKEEP_MULT$§! снижено на §G20%§!."
+ tr_prosperity_hive_warrior_forms_delayed:0 "Специализированные боевые формы трутней позволят более эффективно использовать наземные силы против врагов улья."
+ tr_prosperity_efficiency_algorithms:0 "Алгоритмы эффективности"
+ tr_prosperity_efficiency_algorithms_desc:0 "§Y£pops Обслуживание поселений§! снижено на §G10%§!."
+ tr_prosperity_efficiency_algorithms_delayed:0 "Нет большего преступления, чем неэффективная машина."
+ tr_prosperity_hive_neural_signal_boosters:0 "Усилители нейронных сигналов"
+ tr_prosperity_hive_neural_signal_boosters_delayed:0 "Энергосеть, которая питает наши города, также может использоваться для усиления нейронных сигналов, передаваемых трутням. Это позволит внести изменения и улучшения в работу всего улья."
+ tr_prosperity_finish_hive:0 "$tr_prosperity_finish$"
+ tr_prosperity_finish_hive_effect:0 "§E$TRADITIONS_FINISH$:§!\nЕсли все $tr_prosperity_adopt_hive$ приняты, затраты минералов на §Y$CONSUMER_GOODS$§!, потребляемые нашими £pops  поселениями, снижены на §G20%§!."
+ 
+ ####################################
+ # Ascension Perks
+ ####################################
+ 
+ requires_tradition_the_federation:0 "$TRIGGER_FAIL$§RТребуется традиция дипломатии §YФедерация§!.§!"
+ requires_tradition_universal_compatibility:0 "§RТребуется традиция многогранности §YУниверсальная совместимость§!.§!"
+ 
+ requires_ascension_perks_1:0 "$TRIGGER_FAIL$Требуется сначала выбрать один другой бонус за стремление."
+ requires_ascension_perks_2:0 "$TRIGGER_FAIL$Требуется сначала выбрать два других бонуса за стремление."
+ requires_ascension_perks_3:0 "$TRIGGER_FAIL$Требуется сначала выбрать три других бонуса за стремление."
+ 
+ requires_ap_engineered_evolution:0 "$TRIGGER_FAIL$Требуется бонус за стремление §Y$ap_engineered_evolution$§!."
+ requires_not_ap_engineered_evolution:0 "$TRIGGER_FAIL$Наличие бонуса за стремление §Y$ap_engineered_evolution$§! необязательно."
+ 
+ requires_ap_the_flesh_is_weak:0 "$TRIGGER_FAIL$Требуется бонус за стремление §Y$ap_the_flesh_is_weak$§!."
+ requires_not_ap_the_flesh_is_weak:0 "$TRIGGER_FAIL$Наличие бонуса за стремление §Y$ap_the_flesh_is_weak$§! необязательно."
+ requires_finished_cybernetics_project:0 "$TRIGGER_FAIL$Должен быть завершен особый проект §YПлоть слаба§!."
+ 
+ requires_ap_mind_over_matter:0 "$TRIGGER_FAIL$Требуется бонус за стремление §Y$ap_mind_over_matter$§!."
+ requires_not_ap_mind_over_matter:0 "$TRIGGER_FAIL$Наличие бонуса за стремление §Y$ap_mind_over_matter$§! необязательно."
+ allow_edict_land_clearance:0 "§HОткрывает планетарный указ:§! перераздел земли"
+ describe_edict_land_clearance:0 "§EЭтот планетарный указ навсегда увеличивает размер планеты на §G1§!-§G3§! квадрата, причем больше квадратов получают планеты поменьше. Такое можно проделать с каждой планетой только один раз, и этот указ недоступен для планет максимального размера (25 квадратов).§!"
+ land_clearance_increase_size_1:0 "Этот планетарный указ навсегда увеличивает размер планеты на §G1§! квадрат. Такое можно проделать с каждой планетой только один раз."
+ land_clearance_increase_size_2:0 "Этот планетарный указ навсегда увеличивает размер планеты на §G2§! квадрата. Такое можно проделать с каждой планетой только один раз."
+ land_clearance_increase_size_3:0 "Этот планетарный указ навсегда увеличивает размер планеты на §G3§! квадрата. Такое можно проделать с каждой планетой только один раз."
+ land_clearance_not_max_size:0 "§RДля увеличения этой планеты больше нельзя использовать перераздел земли.§!"
+ 
+ requires_ap_voidborn_OR_ap_galactic_wonders:0 "$TRIGGER_FAIL$Требуется бонус за стремление §Y$ap_voidborn$§! ИЛИ §Y$ap_galactic_wonders$§!."
+ 
+ requires_technology_zero_point_power:0 "$TRIGGER_FAIL$Требуется технология £physics  §Y$tech_zero_point_power$§!."
+ requires_technology_tech_climate_restoration:0 "$TRIGGER_FAIL$Требуется технология £society  §Y$tech_climate_restoration$§!."
+ requires_technology_robomodding:0 "$TRIGGER_FAIL$Требуется технология £engineering  §Y$tech_robomodding$§!."
+ requires_technology_gene_expressions:0 "$TRIGGER_FAIL$Требуется технология £society  §Y$tech_gene_expressions$§!."
+ requires_technology_gene_seed_purification:0 "$TRIGGER_FAIL$Требуется технология £society  §Y$tech_gene_seed_purification$§!."
+ requires_technology_gene_tailoring:0 "$TRIGGER_FAIL$Требуется технология £society  §Y$tech_gene_tailoring$§!."
+ requires_technology_starbase_4:0 "$TRIGGER_FAIL$Требуется технология £engineering  §Y$tech_starbase_4$§!."
+ requires_technology_starbase_5:0 "$TRIGGER_FAIL$Требуется технология £engineering  §Y$tech_starbase_5$§!."
+ requires_technology_battleships:0 "$TRIGGER_FAIL$Требуется технология £engineering  §Y$tech_battleships$§!."
+ requires_technology_glandular_acclimation:0 "$TRIGGER_FAIL$Требуется технология £society  §Y$tech_glandular_acclimation$§!."
+ requires_mega_engineering:0 "$TRIGGER_FAIL$Требуется технология £engineering  §Y$tech_mega_engineering$§!."
+ hive_mind_biological_ascension_only1:0 "$TRIGGER_FAIL$Коллективный разум не способен следовать по пути псионического возвышения."
+ hive_mind_biological_ascension_only2:0 "$TRIGGER_FAIL$Коллективный разум не способен следовать по пути синтетического возвышения."
+ requires_zero_point_power:0 "$TRIGGER_FAIL$Требуется технология £physics  §Y$tech_zero_point_power$§!."
+ requires_ap_voidborn:0 "$TRIGGER_FAIL$Требуется бонус за стремление §Y$ap_voidborn$§!."
+ requires_technology_droid_workers:0 "$TRIGGER_FAIL$Требуется технология £engineering  §Y$tech_droid_workers$§!."
+ requires_technology_synthetic_workers:0 "$TRIGGER_FAIL$Требуется технология £engineering  §Y$tech_synthetic_workers$§!."
+ requires_technology_synthetic_leaders:0 "$TRIGGER_FAIL$Требуется технология £engineering  §Y$tech_synthetic_leaders$§!."
+ requires_technology_psionic_theory:0 "$TRIGGER_FAIL$Требуется технология £society  §Y$tech_psionic_theory$§!."
+ requires_technology_terrestrial_sculpting:0 "$TRIGGER_FAIL$Требуется технология £society  §Y$tech_terrestrial_sculpting$§!."
+ gestalt_consciousness_biological_ascension_only1:0 "$TRIGGER_FAIL$Коллективный разум не может следовать по пути псионического возвышения."
+ gestalt_consciousness_biological_ascension_only2:0 "$TRIGGER_FAIL$Коллективный разум не может следовать по пути синтетического возвышения."
+ synthetic_empire_synthetic_ascension:0 "$TRIGGER_FAIL$Империи синтетиков не способны следовать по пути синтетического возвышения."
+ synthetic_empire_biological_ascension:0 "$TRIGGER_FAIL$Империи синтетиков не способны следовать по пути биологического возвышения."
+ synthetic_empire_psionic_ascension:0 "$TRIGGER_FAIL$Империи синтетиков не способны следовать по пути псионического возвышения."
+ 
+ allow_gaia:0 "Позволяет нам превращать планеты в §Yидеальные миры§!."
+ no_rev_engineering:0 "Наши технологии и инженерные достижения слишком сложны для других, чтобы они могли осуществить инженерный анализ."
+ allow_raiding:0 "Открывает такую тактику, как §Y$bombardment_raiding$§! бомбардировка что в свою очередь позволяет нам похищать жителей поселений на осажденных планетах и переселять их в наши миры."
+ 
+ 
+ ap_engineered_evolution:0 "Спроектированная эволюция"
+ ap_engineered_evolution_modifier_desc:0 "$species_trait_points_add$: $POINTS|0=+$\n$MOD_COUNTRY_MODIFY_SPECIES_COST_MULT$: $COST_MULT|%0=-$"
+ ap_evolutionary_mastery:0 "Эволюционное мастерство"
+ ap_evolutionary_mastery_modifier_desc:0 "$species_trait_points_add$: $POINTS|0=+$\n$MOD_COUNTRY_MODIFY_SPECIES_COST_MULT$: $COST_MULT|%0=-$"
+ ap_the_flesh_is_weak:0 "Плоть слаба"
+ ap_synthetic_evolution:0 "Синтетическая эволюция"
+ ap_world_shaper:0 "Меняющий миры"
+ ap_mind_over_matter:0 "Разум превыше материи"
+ ap_transcendence:0 "Трансцендентность"
+ 
+ ap_imperial_prerogative:0 "Имперская прерогатива"
+ ap_one_vision:0 "Единство взглядов"
+ ap_consecrated_worlds:0 "Сакральные миры"
+ ap_executive_vigor:0 "Исполнительское рвение"
+ ap_executive_vigor_desc:0 "При исполнении указов, принятых нашим правительством, не может быть никаких полумер или компромиссов. Все или ничего."
+ 
+ ap_galactic_force_projection:0 "Проекция галактических сил"
+ ap_galactic_contender:0 "Галактические чудеса"
+ ap_technological_ascendancy:0 "Технологический подъем"
+ ap_mastery_of_nature:0 "Господство над природой"
+ ap_the_circle_of_life:0 "Цикл жизни"
+ ap_interstellar_dominion:0 "Межзвездная власть"
+ ap_eternal_vigilance:0 "Вечное бдение"
+ ap_eternal_vigilance_desc:0 "Проявлять слабость значит напрашиваться на атаку. Цена вторжения в наше пространство должна быть настолько высокой, чтобы как можно меньше врагов были готовы ее заплатить."
+ ap_grasp_the_void:0 "Освоение пустоты"
+ ap_grasp_the_void_desc:0 "Обширные просторы галактики таят безграничные богатства для тех империй, которые знают, как воспользоваться этим пространством."
+ 
+ ap_engineered_evolution_desc:0 "Что касается нашего генетического предназначения, то природная эволюция - это слишком долгий процесс, а значит, полагаться на природу неэффективно. Почему бы не ускорить будущее нашей расы?"
+ ap_evolutionary_mastery_desc:0 "Естественную эволюцию всегда ковал один-единственный, грубый инструмент - неудача. Теперь же мы способны направлять успех."
+ 
+ ap_the_flesh_is_weak_desc:0 "Пределы и ограничения, налагаемые на нас нашими слабыми органическими телами, просто неприемлемы. Чтобы достичь полного потенциала, мы должны начать использовать кибернетические имплантаты."
+ ap_synthetic_evolution_desc:0 "Пришло время отринуть эти несовершенные органические сосуды, в которых томится наш разум. Переместив наши нейронные схемы в синтетические тела, мы достигнем более высокой ступени бытия."
+ 
+ ap_mind_over_matter_desc:0 "Мы используем лишь небольшую часть потенциала нашего мозга. Скрытые псионические способности нашей расы только сейчас начинают проявляться у определенных индивидуумов."
+ ap_transcendence_desc:0 "Мы стоим на пороге пробуждения истинной псионической мощи нашей расы. Наш разум к этому готов, и мы слышали шепот, идущий из экстрасенсорной области, которая нам пока недоступна..."
+ 
+ ap_synthetic_age:0 "Синтетическая эра"
+ ap_synthetic_age_desc:0 "Век органиков пришел и ушел, будущее галактики принадлежит машинам. Это рассвет эры синтетиков."
+ ap_machine_worlds:0 "Миры Машин"
+ ap_machine_worlds_desc:0 "Мы сделаем из наших миров зеркальное отражение нас самих, заменив хрупкость биологии на неизменное совершенство металла."
+ ap_shared_destiny:0 "Общая судьба"
+ ap_shared_destiny_desc:0 "По мере достижения все больших высот нам нельзя забывать о тех, кто верно служил нам. Славное будущее нашей империи всегда имело смысл, только если оно разделено с другими."
+ ap_world_shaper_desc:0 "Процесс тщательного формирования и изменения экосистемы целой планеты в нечто иное не так уж сильно отличается от работы скульптора, лепящего статую из глины."
+ ap_imperial_prerogative_desc:0 "По мере того как наша цивилизация продолжает расти, должно расширяться и ее пульсирующее сердце. Под наше прямое управление перейдет еще больше систем."
+ ap_one_vision_desc:0 "Настоящего единства можно достичь лишь тогда, когда у государства и его граждан одни и те же конечные цели. Ведь дом, в котором нет согласия, долго не выстоит."
+ ap_consecrated_worlds_desc:0 "Галактика - это место для множества святынь, и некоторые из них более очевидны, чем другие. Будучи смертными, мы по-прежнему стараемся постичь истинную природу вселенной."
+ ap_galactic_force_projection_desc:0 "Флотилия - это инструмент, посредством которого выражается воля нашей империи. Жить нам или умереть - все зависит от ее мощи."
+ ap_technological_ascendancy_desc:0 "Теперь в нашем распоряжении есть технологии, которые всего несколько поколений назад были бы неотличимы от магии. Началась новая эра технологического прогресса."
+ ap_mastery_of_nature_desc:0 "Хотя мы уже давно подчинили себе природу нашего родного мира, инопланетные биомы, с которыми мы с тех пор столкнулись, бросают нам новый вызов. И с ними мы тоже справимся."
+ ap_the_circle_of_life_desc:0 "Массивное кольцеобразное мегасооружение с искусственными средами обитания, построенное по окружности на орбите звезды. Теоретически это вполне выполнимо..."
+ ap_interstellar_dominion_desc:0 "Звезды манят нас, и мы следуем их зову. Ничто не остановит нас на этом пути."
+ 
+ ap_colossus:0 "Проект «Колосс»"
+ ap_colossus_desc:0 "В проекте «Колосс» воплотились безумные мечты о том, как вселять ужас и сдерживать противников. Самый грандиозный корабль из тех, что можно вообразить, и оружие, способное уничтожать целые миры."
+ ap_transcendent_learning:0 "Трансцендентное обучение"
+ ap_transcendent_learning_desc:0 "Наше общество должно сменить подход к обучению, и благодаря новым методам наши самые умные и светлые головы ждут небывалые достижения."
+

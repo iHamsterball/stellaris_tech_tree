@@ -1,0 +1,18 @@
+
+#Scope type varies depending on what is selected
+# This = selected object or player country
+# From = player country
+
+main1_button_effect = {
+	potential = {
+		always = no
+	}
+	allow = {
+		always = no
+	}
+	
+	effect = {
+		# hidden_effect = { from = { country_event = { id = sth_diplo_response.99 } } }
+		# custom_tooltip = "Foreign Affairs"
+	}
+}

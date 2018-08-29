@@ -1,0 +1,95 @@
+@distance = 30
+@base_moon_distance = 10
+
+# Lissepian Homeworld
+lissepian_homeworld = {
+	name = "Lis"
+	class = sc_g
+	flags = { lissepian_homeworld }
+	# init_effect = { log = "lissepian homeworld" }
+	usage = custom_empire
+	max_instances = 1
+	planet = { name = "Lis" class = star size = 41 orbit_distance = 0 orbit_angle = 1 has_ring = no }
+	planet = {
+		name = "Lissepia"
+		class = "pc_savannah"
+		size = { min = 18 max = 20 }
+		starting_planet = yes
+		orbit_distance = 65
+		orbit_angle = 185
+		tile_blockers = none
+		modifiers = none
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes			
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = lissepian_parliaments } } }
+				create_species = { 
+					name = "Lissepian"
+					class = LIS
+					portrait = lissepian
+					homeworld = THIS
+					traits = {
+						trait="trait_industrious"
+						trait="trait_natural_engineers"
+						trait="trait_slow_breeders"
+						ideal_planet_class = "pc_savannah"
+					}
+				}
+				last_created_species = { save_global_event_target_as = lissepianSpecies }
+				create_country = {
+					name = "NAME_lissepian_parliaments"
+					type = default
+					ignore_initial_colony_error = yes
+					civics = { civic = "civic_parliamentary_system" civic = "civic_bandits_smugglers" }
+					authority = auth_democratic
+					name_list = "Lissepian"
+					ethos = { ethic = "ethic_xenophile" ethic = "ethic_egalitarian" ethic = "ethic_materialist" }
+					species = event_target:lissepianSpecies
+					flag = {
+						icon = { category = "trek" file = "lissepian.dds" }
+						background = { category = "backgrounds" file = "hex_angles.dds" }
+						colors = { "customcolor1611" "customcolor1825" "null" "null" }
+					}
+					ship_prefix = "LPS"
+					effect = {
+						set_graphical_culture = generic_01
+						set_country_flag = lissepian_parliaments
+						set_country_flag = custom_start_screen
+						set_country_flag = generic_ent
+						set_country_flag = alpha_beta_empire
+						set_country_flag = init_spawned
+						set_country_flag = botf_minor
+						save_global_event_target_as = lissepian_parliaments
+					}
+				}
+				create_colony = { owner = event_target:lissepian_parliaments species = event_target:lissepianSpecies ethos = owner }
+			}
+			set_capital = yes
+			random_country = {
+				limit = { has_country_flag = lissepian_parliaments }
+				save_global_event_target_as = lissepian_parliaments
+				species = { save_global_event_target_as = lissepianSpecies }
+				add_appropriate_start_techs = yes
+				set_country_type = minorRace
+			}
+			set_owner = event_target:lissepian_parliaments
+			generate_minor_empire_start_buildings = yes
+			generate_minor_empire_start_pops = yes
+			generate_major_empire_start_fleets = yes
+			set_name = "Lissepia"
+		}		
+	}
+	change_orbit = { min = 20 max = 30 }
+	planet = {
+		orbit_distance = { min = 20 max = 30 }
+		orbit_angle = { min = 90 max = 270 }
+		moon = { count = { min = 0 max = 1 } orbit_angle = { min = 90 max = 270 } orbit_distance = 8 }
+	}
+	change_orbit = { min = 20 max = 30 }
+	planet = {
+		orbit_distance = { min = 20 max = 30 }
+		orbit_angle = { min = 90 max = 270 }
+		moon = { count = { min = 0 max = 2 } orbit_angle = { min = 90 max = 270 } orbit_distance = 8 }
+	}
+}

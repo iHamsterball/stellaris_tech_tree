@@ -386,6 +386,126 @@ def _localize_mid_game_years_passed(value):
     operator, value = _operator_and_value(value)
     return ugettext('Number of years since mid game is {} {}').format(operator, value)
 
+def _localize_is_nomadic_empire(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Is Nomadic Empire') if value == 'yes' else ugettext('Is NOT Nomadic Empire')
+
+def _localize_tos_era_or_higher(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('TOS era or higher') if value == 'yes' else ugettext('NOT TOS era or higher')
+
+def _localize_tmp_era_or_higher(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('TMP era or higher') if value == 'yes' else ugettext('NOT TMP era or higher')
+
+def _localize_has_non_standard_ships(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Has non-standard ships') if value == 'yes' else ugettext('Does NOT have standard ships')
+
+def _localize_is_borg_empire(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Is borg empire') if value == 'yes' else ugettext('Is NOT borg empire')
+
+def _localize_has_unique_fighter_variant(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Has unique fighter variant') if value == 'yes' else ugettext('Does NOT have fighter variant')
+
+def _localize_is_temporal_masters(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Is temporal masters') if value == 'yes' else ugettext('Is NOT teporal masters')
+
+def _localize_uses_polaron_torp(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Uses polaron torp') if value == 'yes' else ugettext('Does NOT use polaron torp')
+
+def _localize_uses_quantum_torp(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Uses quantum torp') if value == 'yes' else ugettext('Does NOT use quantum torp')
+
+def _localize_uses_photonic_torpedo(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Uses photonic torpedo') if value == 'yes' else ugettext('Does NOT use photonic torpedo')
+
+def _localize_uses_plasma_torpedo(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Uses plasma torpedo') if value == 'yes' else ugettext('Does NOT use plasma torpedo')
+
+def _localize_uses_warp_cores(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Uses warp cores') if value == 'yes' else ugettext('Does NOT use warp cores')
+
+def _localize_uses_cloaks(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Uses cloaks') if value == 'yes' else ugettext('Does NOT use cloaks')
+
+def _localize_uses_phaser_weapons_any(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Uses any kind of phaser weapons') if value == 'yes' else ugettext('Does NOT use any kind of phaser weapons')
+
+def _localize_uses_disruptor_weapons_any(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Uses any kind of disruptor weapons') if value == 'yes' else ugettext('Does NOT use any kind of disruptor weapons')
+
+def _localize_uses_antiproton_weapons_any(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Uses any kind of antiproton weapons') if value == 'yes' else ugettext('Does NOT use any kind of antiproton weapons')
+
+def _localize_uses_tetryon_weapons_any(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Uses any kind of tetryon weapons') if value == 'yes' else ugettext('Does NOT use any kind of tetryon weapons')
+
+def _localize_has_no_factions(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Does NOT have any factions') if value == 'yes' else ugettext('Has any factions')
+
+def _localize_is_machine_cybernetic_empire(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Is machine cybernetic empire') if value == 'yes' else ugettext('Is NOT machine cybernetic empire')
+
+def _localize_has_espionage_agency(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Has espionage agency') if value == 'yes' else ugettext('Does NOT have espionage agency')
+
+def _localize_can_not_use_cloning(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Can NOT use cloning') if value == 'yes' else ugettext('Can use cloning')
+
+def _localize_is_non_humanoid(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Is non-humanoid') if value == 'yes' else ugettext('Is humanoid')
+
+def _localize_is_master_geneticist(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Is master geneticist') if value == 'yes' else ugettext('Is NOT master geneticist')
+
+def _localize_empire_can_not_study_gagarin(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Empire can NOT study gagarin') if value == 'yes' else ugettext('Empire can study gagarin')
+
+def _localize_empire_can_study_psionic_techs(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Empire can NOT study psionic techs') if value == 'yes' else ugettext('Empire can study psionic techs')
+
+def _localize_is_terran_empire(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Is terran empire') if value == 'yes' else ugettext('Is NOT terran empire')
+
+def _localize_terran_empire_met_kelpien(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Has terran empire met kelpien') if value == 'yes' else ugettext('Has NOT terran empire met kelpien')
+
+def _localize_empire_met_borg(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Empire has met borg') if value == 'yes' else ugettext('Empire has NOT met borg')
+
+def _localize_is_united_earth(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Is united earth') if value == 'yes' else ugettext('Is NOT united earth')
+
+def _localize_is_non_standard_colonization(value):
+    # Star Trek: New Horizons Mod
+    return ugettext('Is non-standard colonization') if value == 'yes' else ugettext('Is standard colonization')
+
 def _localize_has_not_government(value):
     return ugettext('Does NOT have {}').format(localization_map[value])
 

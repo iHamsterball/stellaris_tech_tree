@@ -1,0 +1,654 @@
+
+
+# gas cloud object
+ambient_object = {
+	name = "sth_denorios_belt"
+	entity = "sth_dust_entity"
+	selectable = no
+	show_name = no
+}
+
+# XCV 247
+ambient_object = {
+	name = "sth_xcv247"
+	description = "sth_xcv247_desc"
+	entity = "xcv330_entity"
+	selectable = yes
+	show_name = yes
+}
+
+ambient_object = {
+	name = "borg_unimatrix_structure_01_object"
+	entity = "unimatrix_ambience_entity"
+	selectable = no
+	show_name = no
+}
+#blue
+ambient_object = {
+	name = "borg_unimatrix_structure_blue_01_object"
+	entity = "unimatrix_ambience_blue_entity"
+	selectable = no
+	show_name = no
+}
+
+#red
+ambient_object = {
+	name = "borg_unimatrix_structure_red_01_object"
+	entity = "unimatrix_ambience_red_entity"
+	selectable = no
+	show_name = no
+}
+
+#yellow
+ambient_object = {
+	name = "borg_unimatrix_structure_yellow_01_object"
+	entity = "unimatrix_ambience_yellow_entity"
+	selectable = no
+	show_name = no
+}
+
+
+#orange
+ambient_object = {
+	name = "borg_unimatrix_structure_orange_01_object"
+	entity = "unimatrix_ambience_orange_entity"
+	selectable = no
+	show_name = no
+}
+
+#purple
+ambient_object = {
+	name = "borg_unimatrix_structure_purple_01_object"
+	entity = "unimatrix_ambience_purple_entity"
+	selectable = no
+	show_name = no
+}
+
+#firstfed_cube
+ambient_object = {
+	name = "firstfed_cube"
+	entity = "fesarian_01_fallen_ambiente_cube_entity"
+	selectable = no
+	show_name = no
+}
+
+#### Real space Ambient objects
+
+# Azure Dust Cloud
+ambient_object = {
+	name = "azure_dust_cloud_object_small"
+	entity = "azure_dust_cloud_entity_small"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "azure_dust_cloud_object_medium"
+	entity = "azure_dust_cloud_entity_medium"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "azure_dust_cloud_object_large"
+	entity = "azure_dust_cloud_entity_large"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "azure_cloud_object_small"
+	entity = "azure_cloud_entity_small"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "azure_cloud_object_medium"
+	entity = "azure_cloud_entity_medium"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "azure_cloud_object_large"
+	entity = "azure_cloud_entity_large"
+	selectable = no
+	show_name = no
+}
+
+# Red Dust Cloud
+ambient_object = {
+	name = "red_dust_cloud_object_large"
+	entity = "red_dust_cloud_entity_large"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "red_dust_cloud_object_medium"
+	entity = "red_dust_cloud_entity_medium"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "red_dust_cloud_object_small"
+	entity = "red_dust_cloud_entity_small"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "red_cloud_object_large"
+	entity = "red_cloud_entity_large"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "red_cloud_object_medium"
+	entity = "red_cloud_entity_medium"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "red_cloud_object_small"
+	entity = "red_cloud_entity_small"
+	selectable = no
+	show_name = no
+}
+
+# Green Dust Cloud
+ambient_object = {
+	name = "green_dust_cloud_object_small"
+	entity = "green_dust_cloud_entity_small"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "green_dust_cloud_object_medium"
+	entity = "green_dust_cloud_entity_medium"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "green_dust_cloud_object_large"
+	entity = "green_dust_cloud_entity_large"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "green_cloud_object_small"
+	entity = "green_cloud_entity_small"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "green_cloud_object_medium"
+	entity = "green_cloud_entity_medium"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "green_cloud_object_large"
+	entity = "green_cloud_entity_large"
+	selectable = no
+	show_name = no
+}
+
+# Purple Dust Cloud
+ambient_object = {
+	name = "purple_dust_cloud_object_small"
+	entity = "purple_dust_cloud_entity_small"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "purple_dust_cloud_object_medium"
+	entity = "purple_dust_cloud_entity_medium"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "purple_dust_cloud_object_large"
+	entity = "purple_dust_cloud_entity_large"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "purple_cloud_object_small"
+	entity = "purple_cloud_entity_small"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "purple_cloud_object_medium"
+	entity = "purple_cloud_entity_medium"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "purple_cloud_object_large"
+	entity = "purple_cloud_entity_large"
+	selectable = no
+	show_name = no
+}
+
+# Orange Dust Cloud
+ambient_object = {
+	name = "orange_dust_cloud_object_small"
+	entity = "orange_dust_cloud_entity_small"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "orange_dust_cloud_object_medium"
+	entity = "orange_dust_cloud_entity_medium"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "orange_dust_cloud_object_large"
+	entity = "orange_dust_cloud_entity_large"
+	selectable = no
+	show_name = no
+}
+
+# Blue Dust Cloud
+ambient_object = {
+	name = "blue_dust_cloud_object_small"
+	entity = "blue_dust_cloud_entity_small"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "blue_dust_cloud_object_medium"
+	entity = "blue_dust_cloud_entity_medium"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "blue_dust_cloud_object_large"
+	entity = "blue_dust_cloud_entity_large"
+	selectable = no
+	show_name = no
+}
+
+# Black Dust Cloud
+ambient_object = {
+	name = "black_dust_cloud_object_small"
+	entity = "black_dust_cloud_entity_small"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "black_dust_cloud_object_medium"
+	entity = "black_dust_cloud_entity_medium"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "black_dust_cloud_object_large"
+	entity = "black_dust_cloud_entity_large"
+	selectable = no
+	show_name = no
+}
+
+# Dark dust Cloud
+ambient_object = {
+	name = "dark_dust_cloud_object_small"
+	entity = "dark_dust_cloud_entity_small"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "dark_dust_cloud_object_medium"
+	entity = "dark_dust_cloud_entity_medium"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "dark_dust_cloud_object_large"
+	entity = "dark_dust_cloud_entity_large"
+	selectable = no
+	show_name = no
+}
+
+# Protoplanetary Disk
+
+ambient_object = {
+	name = "protoplanetary_disk_object_06"
+	entity = "protoplanetary_disk_06_entity"
+	selectable = no
+	show_name = no
+}
+
+# White Dust Cloud
+ambient_object = {
+	name = "white_dust_cloud_object_small"
+	entity = "white_dust_cloud_entity_small"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "white_dust_cloud_object_medium"
+	entity = "white_dust_cloud_entity_medium"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "white_dust_cloud_object_large"
+	entity = "white_dust_cloud_entity_large"
+	selectable = no
+	show_name = no
+}
+
+# Collapsar Dust Cloud
+ambient_object = {
+	name = "collapsar_dust_cloud_object_medium"
+	entity = "collapsar_dust_cloud_entity_medium"
+	selectable = no
+	show_name = no
+}
+
+# Dust Nebula
+
+ambient_object = {
+	name = "dust_nebula_purple_01_object_large"
+	entity = "dust_nebula_purple_01_entity_large"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_purple_01_object_medium"
+	entity = "dust_nebula_purple_01_entity_medium"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_purple_01_object_small"
+	entity = "dust_nebula_purple_01_entity_small"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_purple_02_object_large"
+	entity = "dust_nebula_purple_02_entity_large"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_purple_02_object_medium"
+	entity = "dust_nebula_purple_02_entity_medium"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_purple_02_object_small"
+	entity = "dust_nebula_purple_02_entity_small"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_purple_03_object_medium"
+	entity = "dust_nebula_purple_03_entity_medium"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_purple_04_object_small"
+	entity = "dust_nebula_purple_04_entity_small"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_purple_05_object_medium"
+	entity = "dust_nebula_purple_05_entity_medium"
+	selectable = no
+	show_name = no
+}
+
+
+ambient_object = {
+	name = "dust_nebula_green_01_object_large"
+	entity = "dust_nebula_green_01_entity_large"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_green_01_object_medium"
+	entity = "dust_nebula_green_01_entity_medium"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_green_01_object_small"
+	entity = "dust_nebula_green_01_entity_small"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_green_02_object_large"
+	entity = "dust_nebula_green_02_entity_large"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_green_02_object_medium"
+	entity = "dust_nebula_green_02_entity_medium"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_green_02_object_small"
+	entity = "dust_nebula_green_02_entity_small"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_green_03_object_medium"
+	entity = "dust_nebula_green_03_entity_medium"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_green_04_object_small"
+	entity = "dust_nebula_green_04_entity_small"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_green_05_object_medium"
+	entity = "dust_nebula_green_05_entity_medium"
+	selectable = no
+	show_name = no
+}
+
+
+ambient_object = {
+	name = "dust_nebula_red_01_object_large"
+	entity = "dust_nebula_red_01_entity_large"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_red_01_object_medium"
+	entity = "dust_nebula_red_01_entity_medium"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_red_01_object_small"
+	entity = "dust_nebula_red_01_entity_small"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_red_02_object_large"
+	entity = "dust_nebula_red_02_entity_large"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_red_02_object_medium"
+	entity = "dust_nebula_red_02_entity_medium"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_red_02_object_small"
+	entity = "dust_nebula_red_02_entity_small"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_red_03_object_medium"
+	entity = "dust_nebula_red_03_entity_medium"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_red_04_object_small"
+	entity = "dust_nebula_red_04_entity_small"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_red_05_object_medium"
+	entity = "dust_nebula_red_05_entity_medium"
+	selectable = no
+	show_name = no
+}
+
+
+ambient_object = {
+	name = "dust_nebula_blue_01_object_medium"
+	entity = "dust_nebula_blue_01_entity_medium"
+	selectable = no
+	show_name = no
+}
+
+
+ambient_object = {
+	name = "dust_nebula_orange_01_object_large"
+	entity = "dust_nebula_orange_01_entity_large"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_orange_02_object_medium"
+	entity = "dust_nebula_orange_02_entity_medium"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_orange_03_object_small"
+	entity = "dust_nebula_orange_03_entity_small"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_collapsar_01_object_large"
+	entity = "dust_nebula_collapsar_01_entity_large"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_collapsar_01_object_medium"
+	entity = "dust_nebula_collapsar_01_entity_medium"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "dust_nebula_collapsar_02_object_small"
+	entity = "dust_nebula_collapsar_02_entity_small"
+	selectable = no
+	show_name = no
+}
+
+# Dark Globule
+
+ambient_object = {
+	name = "collapsar_globule_object_medium"
+	entity = "collapsar_globule_entity_medium"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "collapsar_globule_object_small"
+	entity = "collapsar_globule_entity_small"
+	selectable = no
+	show_name = no
+}
+
+# Purple Globule
+
+ambient_object = {
+	name = "purple_globule_object_medium"
+	entity = "purple_globule_entity_medium"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "purple_globule_object_small"
+	entity = "purple_globule_entity_small"
+	selectable = no
+	show_name = no
+}
+
+# Yellow Globule
+
+ambient_object = {
+	name = "yellow_globule_object_medium"
+	entity = "yellow_globule_entity_medium"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "yellow_globule_object_small"
+	entity = "yellow_globule_entity_small"
+	selectable = no
+	show_name = no
+}
+
+# Green Globule
+
+ambient_object = {
+	name = "green_globule_object_medium"
+	entity = "green_globule_entity_medium"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "green_globule_object_small"
+	entity = "green_globule_entity_small"
+	selectable = no
+	show_name = no
+}
+
+

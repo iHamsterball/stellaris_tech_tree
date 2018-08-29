@@ -1,0 +1,93 @@
+# Talar
+talarian_homeworld = {			
+	name = "Talar"		
+	class = sc_f	
+	usage = custom_empire
+	flags = { talarian_republic }
+	init_effect = { log = "talarian homeworld" }	
+	planet = {		
+		name = "Talar"	
+		class = star	
+		orbit_distance = 0	
+		orbit_angle = 1	
+		size = 30
+		has_ring = no	
+	}		
+	planet = {		
+		count = { min = 2 max = 6}
+		orbit_distance = {min = 25 max = 50}	
+		class = random_non_colonizable	
+		size = { min = 10 max = 20 }	
+	}		
+		planet = {		
+		name = "Talar Prime"
+		orbit_distance = { min = 30 max = 50 }	
+		class = "pc_arctic"
+		size = { min = 22 max = 24 }
+		starting_planet = yes
+		tile_blockers = none
+		modifiers = none
+		init_effect = {
+			prevent_anomaly = yes
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = talarian_republic } } }
+				create_species = {
+						class = "TLR"
+						portrait = talarian
+						homeworld = THIS
+						traits = { 
+							trait="trait_industrious"
+							trait="trait_communal"
+							trait="trait_resilient"
+							trait="trait_stubborn"
+							trait="trait_rigid"
+							ideal_planet_class = "pc_arctic" 
+						}
+					}
+					last_created_species = { save_global_event_target_as = talarianSpecies }
+					create_country = {
+						name = "NAME_talarian_republic"
+						type = "default"
+						ignore_initial_colony_error = yes
+						civics = { civic = civic_talarian_1 civic = civic_citizen_service }
+						authority = auth_oligarchic
+						ethos = { ethic = "ethic_xenophobe" ethic = "ethic_militarist" ethic = "ethic_egalitarian" }
+						species = event_target:talarianSpecies
+						flag = {
+							icon = { category = "trek" file = "talarian.dds" }
+							background = { category = "backgrounds" file = "stripe.dds" }
+							colors = { "customcolor937" "customcolor1678" "null" "null" }
+						}
+						ship_prefix = "TRS"
+						effect = {
+							set_graphical_culture = generic_02
+							set_country_flag = talarian_republic
+							set_country_flag = custom_start_screen
+							set_country_flag = generic_ent
+							set_country_flag = alpha_beta_empire
+							set_country_flag = init_spawned
+							set_country_flag = botf_minor
+							save_global_event_target_as = talarian_republic
+					}
+				}
+			create_colony = { owner = event_target:talarian_republic species = event_target:talarianSpecies ethos = owner }
+			}
+			set_capital = yes
+			random_country = {
+				limit = { has_country_flag = talarian_republic }
+				save_global_event_target_as = talarian_republic
+				add_appropriate_start_techs = yes
+				give_technology = {	tech = "tech_society_02334" message = no }
+				species = { save_global_event_target_as = talarianSpecies }
+				set_country_type = minorRace
+			}
+			set_owner = event_target:talarian_republic
+			generate_minor_empire_start_buildings = yes
+			generate_minor_empire_start_pops = yes
+			generate_major_empire_start_fleets = yes
+			set_name = "Talar"
+		}
+		change_orbit = @base_moon_distance
+		moon = { name = "Telun" class = random_non_colonizable orbit_angle = { min = 90 max = 270 } orbit_distance = 5 }
+	}
+}	

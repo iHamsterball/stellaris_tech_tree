@@ -1,0 +1,195 @@
+# Available requirements:
+#
+#	SKILLS
+#	skill = 2
+#
+#	LEADER
+#	leader = scientist
+#	leader = admiral
+#	leader = general
+#	leader = ruler
+#	leader = governor
+#	
+#	MILITARY SHIPS
+#	shipclass_military = 1
+#	
+#	CIVILIAN SHIPS
+#	shipclass_constructor = 2
+#	shipclass_science_ship = 1
+#	shipclass_colonizer = 2
+#	
+#	ARMIES
+#	shipclass_transport = 1
+#	assault_armies = 2
+#	defense_armies = 1
+#	
+#	STATIONS
+#	research_station = yes
+#	mining_station = yes
+#	observation_station = yes
+#
+#	SCOPES
+#	abort_trigger
+#	this = country (project owner)
+#	from = event scope (planet or ship, MIGHT NOT EXIST)
+#	fromfrom = project creation scope (usually equals location)
+#	
+#	on_success
+#	this = event scope (ship or planet)
+#	from = project creation scope (usually equals location)
+#	
+#	on_fail
+#	this = country (project owner)
+#	from = project creation scope (usually equals location)
+
+special_project = {
+	key = "THE_ORB_OF_PROPHECY_PROJECT_1"
+	event_chain = orb_of_prophecy_chain
+	cost = 0
+	days_to_research = 180
+	timelimit = -1
+	tech_department = society_technology
+	picture = sth_GFX_evt_bajoranWormhole_1
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+	on_success = {
+		owner = {
+			country_event = { id = STH_bajoran_story.3 scopes = { from = from fromfrom = root } }
+		}
+	}
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "THE_ORB_OF_PROPHECY_PROJECT_2"
+	event_chain = orb_of_prophecy_chain
+	cost = 0
+	days_to_research = 180
+	timelimit = -1
+	tech_department = society_technology
+	picture = sth_GFX_evt_theSwordOfKahless6
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill > 1
+	}
+	on_success = {
+		print_scope_effect = yes
+		owner = {
+			country_event = { id = STH_bajoran_story.5 scopes = { from = root.from fromfrom = root } }
+		}
+	}
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "THE_ORB_OF_PROPHECY_PROJECT_3"
+	event_chain = orb_of_prophecy_chain
+	cost = 0
+	days_to_research = 180
+	timelimit = -1
+	tech_department = society_technology
+	picture = sth_GFX_evt_theSwordOfKahless3
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill > 2
+	}
+	on_success = {
+		owner = {
+			country_event = { id = STH_bajoran_story.7 scopes = { from = root.from fromfrom = root } }
+		}
+	}
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "THE_ORB_OF_PROPHECY_PROJECT_4"
+	event_chain = orb_of_prophecy_chain
+	cost = 0
+	days_to_research = 180
+	timelimit = -1
+	tech_department = society_technology
+	picture = sth_GFX_evt_theOrbOfProphecy2
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill > 3
+	}
+	on_success = {
+		owner = {
+			country_event = { id = STH_bajoran_story.9 scopes = { from = root.from fromfrom = root } }
+		}
+	}
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "THE_ORB_OF_PROPHECY_PROJECT_5"
+	event_chain = orb_of_prophecy_chain
+	cost = 0
+	days_to_research = 180
+	timelimit = -1
+	tech_department = society_technology
+	picture = sth_GFX_evt_MirrorUniverse1
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill > 4
+	}
+	on_success = {
+		
+		ship_event = { id = STH_bajoran_story.11 scopes = { from = root.from } }
+	}
+	on_fail = {
+	}
+}
+
+
+
+#Denorios Exploration
+special_project = {
+	key = "DENORIOS_BELT_1"
+	days_to_research = 90
+	timelimit = -1
+	tech_department = physics_technology
+	picture = sth_GFX_evt_bajoranWormhole_2
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+	on_success = {
+		if = {
+			limit = { owner = { is_ai = yes } }
+			owner = {
+				random_list = {
+					0 = { country_event = { id = STH_bajoran_story.1005 scopes = { from = from } } }
+					100 = { country_event = { id = STH_bajoran_story.1010 scopes = { from = from } } }
+				}
+			}
+		}
+		else = {
+			owner = {
+				random_list = {
+					25 = { country_event = { id = STH_bajoran_story.1005 scopes = { from = from } } }
+					75 = { country_event = { id = STH_bajoran_story.1010 scopes = { from = from } } }
+				}
+			}
+		}		
+	}
+	on_fail = { }
+	abort_trigger = {
+	}
+}

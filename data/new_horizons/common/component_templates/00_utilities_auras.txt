@@ -1,0 +1,83 @@
+# ##################################################
+#
+# Radial Effect / Aura components
+#
+# ##################################################
+
+### Variables
+
+@shipAuraRange = 80
+@stationSmallAuraRange = 70
+@stationMediumAuraRange = 90
+@stationLargeAuraRange = 110
+
+
+### Empty Aura-slot
+utility_component_template = {
+	key = "SHIP_AURA_EMPTY"
+	size = small
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	hidden = yes
+	power = 0
+	cost = 0
+	
+	component_set = "ship_aura_components"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+### Empty Aura-slot
+utility_component_template = {
+	key = "STATION_SMALL_AURA_EMPTY"
+	size = small
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	hidden = yes
+	power = 0
+	cost = 0
+	
+	component_set = "station_small_aura_components"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+### Empty Aura-slot
+utility_component_template = {
+	key = "STATION_MEDIUM_AURA_EMPTY"
+	size = small
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	hidden = yes
+	power = 0
+	cost = 0
+	
+	component_set = "station_medium_aura_components"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+### Empty Aura-slot
+utility_component_template = {
+	key = "STATION_LARGE_AURA_EMPTY"
+	size = small
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	hidden = yes
+	power = 0
+	cost = 0
+	
+	component_set = "station_large_aura_components"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+### Keep empty

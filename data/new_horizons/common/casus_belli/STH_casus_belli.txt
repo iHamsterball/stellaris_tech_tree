@@ -1,0 +1,131 @@
+cb_civil_war_rebel = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+cb_civil_war_loyalist = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+cb_total_conquest = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+cb_borg_assimilation = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		is_assimilator = yes
+	}
+	is_valid = {
+		is_neighbor_of = from
+	}
+}
+
+cb_borg_assimilation_defence = {
+	show_in_diplomacy = yes
+	show_notification = no
+	potential = {
+		is_assimilator = no
+	}
+	is_valid = {
+		from = { is_assimilator = yes }
+		OR = {
+			is_neighbor_of = from
+			has_country_flag = "colonyScooped:@FROM"
+		}
+	}
+}
+
+cb_undine_purge = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		is_infester = yes
+	}
+	is_valid = {
+		is_neighbor_of = from
+	}
+}
+
+cb_undine_purge_defence = {
+	show_in_diplomacy = yes
+	show_notification = no
+	potential = {
+		is_infester = no
+	}
+	is_valid = {
+		from = { is_infester = yes }
+		OR = {
+			is_neighbor_of = from
+			# has_country_flag = "colonyScooped:@FROM"
+		}
+	}
+}
+
+
+cb_universe_defence = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+
+cb_demilitarisation = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		is_normal_country = yes
+		is_assimilator = no
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+	is_valid = {	
+		has_policy_flag = liberation_wars
+		is_neighbor_of = FROM
+		from = { is_normal_country = yes }
+		from = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+		has_total_war_cb = no	
+	}
+}
+
+cb_trade_embargo = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		is_normal_country = yes
+		is_assimilator = no
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+	is_valid = {	
+		has_policy_flag = liberation_wars
+		is_neighbor_of = FROM
+		from = { is_normal_country = yes }
+		from = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+		has_total_war_cb = no	
+	}
+}

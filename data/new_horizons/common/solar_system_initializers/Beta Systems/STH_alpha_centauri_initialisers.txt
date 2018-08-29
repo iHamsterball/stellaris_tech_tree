@@ -1,0 +1,216 @@
+### Part 1a: Specific System Initializers with pre-warp species - Early Space Age
+
+# Alpha Centauri
+# Flavor, not a homeworld.
+# There are multiple habitable planets in this system, due to the three stars.
+# Alpha Centauri A has 13 planetoids, Alpha Centauri B had four planetoids before becoming a Red Giant due to a time destortion; Novel The Yesterday Saga by A.C. Crispin.
+# Proxima Centauri has three planetoids and a major maintenance facility, DS9 Past Tense, Part I
+# In TOS Alpha Centauri VII is a culture that was transported from 3rd BCE Greece
+alpha_centauri_b = {
+	name = "Alpha Centauri"	
+	class = sc_trinary_gkm
+	planet = {
+		name = ""
+		class = pc_invisible_star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 1
+		has_ring = no
+		init_effect = { clear_deposits = yes }
+		# satellite_naming_policy = upper_case_latin_letters
+		planet = {
+			name = "Alpha Centauri A"
+			class = pc_g_star
+			orbit_distance = 200
+			orbit_angle = 120
+			size = 30
+			has_ring = no
+			satellite_naming_policy = upper_case_roman_numerals
+			planet = {
+				name = "Alpha Centauri A I"
+				class = "pc_b_class"
+				orbit_distance = 40
+				orbit_angle = 330
+				size = 8
+				has_ring = no
+			}
+			planet = {
+				class = "pc_gas_giant"
+				name = "Alpha Centauri A II"
+				orbit_distance = 40
+				orbit_angle = 125
+				size = 25
+				has_ring = yes
+				change_orbit = @base_moon_distance
+				satellite_naming_policy = lower_case_latin_letters
+				moon = { name = "Alpha Centauri A IIa" class = random_non_colonizable size = 2 orbit_distance = 5 orbit_angle = { min = 30 max = 270 } }
+				moon = { name = "Alpha Centauri A IIb" class = random_non_colonizable size = 2 orbit_distance = 5 orbit_angle = { min = 30 max = 270 } }
+				moon = { name = "Alpha Centauri A IIc" class = random_non_colonizable size = 3 orbit_distance = 5 orbit_angle = { min = 30 max = 270 } }
+				moon = { name = "Alpha Centauri A IId" class = random_non_colonizable size = 2 orbit_distance = 5 orbit_angle = { min = 30 max = 270 } }
+			}
+			planet = {
+				name = "Alpha Centauri A III"
+				class = "pc_k_class"
+				orbit_distance = 40
+				orbit_angle = 220						
+				size = 16
+				has_ring = no
+				satellite_naming_policy = lower_case_latin_letters
+				change_orbit = @base_moon_distance
+				moon = { name = "Alpha Centauri A IIIa" class = "pc_barren_cold" size = 5 orbit_distance = 3 orbit_angle = { min = 30 max = 270 } }
+			}
+			planet = {
+				name = "Alpha Centauri A IV"
+				class = "pc_arctic"
+				orbit_distance = 22						
+				orbit_angle = 150
+				size = 14
+				has_ring = no
+				satellite_naming_policy = lower_case_latin_letters
+				change_orbit = @base_moon_distance
+				moon = { name = "Alpha Centauri A IVa" class = random_non_colonizable size = 4 orbit_distance = 3 orbit_angle = { min = 30 max = 270 } }
+				moon = { name = "Alpha Centauri A IVb" class = random_non_colonizable size = 3 orbit_distance = 2 orbit_angle = { min = 50 max = 240 } }
+			}
+			planet = {
+				name = "Alpha Centauri A V"
+				class = "pc_barren_cold"
+				orbit_distance = 30
+				orbit_angle = { min = 30 max = 270 }
+				size = 6
+				has_ring = no
+			}
+		}
+		planet = {
+			name = "Alpha Centauri B"
+			class = pc_k_star
+			orbit_distance = 20
+			orbit_angle = 270
+			size = 25
+			has_ring = no
+			satellite_naming_policy = upper_case_roman_numerals
+			planet = {
+				name = "Alpha Centauri B I"
+				class = "pc_b_class"
+				orbit_distance = 30	
+				orbit_angle = 100
+				size = 7
+				has_ring = no
+			}
+			planet = {
+				name = "Alpha Centauri B II"
+				class = "pc_alpine"
+				orbit_distance = 50
+				orbit_angle = 220					
+				size = 14
+				has_ring = no
+				tile_blockers = none
+				init_effect = {
+					prevent_anomaly = yes
+					random_list = {
+						25 = {
+							create_species = { class = "CENTAUR" homeworld = THIS traits = { trait = "trait_quick_learners" trait = "trait_nomadic" } }
+							last_created_species = { save_global_event_target_as = centauranSpecies }
+							create_country = {
+								name = "Al Rijil"
+								civics = { civic = civic_increasing_urbanization civic = civic_atmospheric_pollution }
+								authority = auth_oligarchic
+								species = event_target:centauranSpecies
+								ethos = { ethic = "ethic_xenophile" ethic = "ethic_egalitarian" }
+								flag = {
+									icon = { category = "human" file = "flag_human_9.dds" }
+									background = { category = "backgrounds" file = "circle.dds" }
+									colors = { "dark_blue" "green" "null" "null" }
+								}
+								type = primitive
+								effect = {
+									set_graphical_culture = industrial_01
+									set_country_flag = early_space_age
+									set_country_flag = init_spawned
+									set_primitive_age = early_space_age
+									save_global_event_target_as = al_rijil
+								}
+							}
+							create_colony = { owner = event_target:al_rijil species = event_target:centauranSpecies ethos = owner }
+							create_fleet = { 
+								name = "Space Station" 
+								effect = {
+									set_owner = event_target:al_rijil
+									create_ship = { name = "Space Station" design = "NAME_Space_Station" }
+									set_location = PREV
+								}
+							}
+							generate_space_age_start_buildings = yes
+							generate_space_age_start_pops = yes
+							while = {
+								count = 3
+								random_tile = {
+									limit = { has_blocker = no has_building = no }
+									set_blocker = "tb_mountain_range"
+									add_deposit = d_engineering_deposit	
+								}
+							}
+							while = {
+								count = 3
+								random_tile = {
+									limit = { has_blocker = no has_building = no }
+									set_blocker = "tb_dense_jungle"
+									add_deposit = d_society_deposit			
+								}
+							}
+							set_name = "Al Rijil"
+						}
+						75 = {}
+					}
+				}
+				satellite_naming_policy = lower_case_latin_letters
+				change_orbit = @base_moon_distance
+				moon = { name = "Alpha Centauri B IIa" class = random_non_colonizable size = 4 orbit_distance = 4 orbit_angle = { min = 30 max = 270 } }
+				moon = { name = "Alpha Centauri B IIa" class = random_non_colonizable size = 4 orbit_distance = 4 orbit_angle = { min = 30 max = 270 } }
+			}
+			planet = {
+				name = "Alpha Centauri B III"
+				class = "pc_barren_cold"
+				orbit_distance = 40
+				orbit_angle = { min = 30 max = 270 }
+				size = 4
+				has_ring = no
+			}
+		}
+		planet = {
+			name = "Proxima Centauri"
+			class = pc_m_star
+			orbit_distance = 200
+			orbit_angle = 220
+			size = 10
+			has_ring = no
+			satellite_naming_policy = upper_case_roman_numerals
+			planet = {
+				name = "Proxima Centauri I"
+				class = "pc_barren_cold"
+				orbit_distance = 20
+				orbit_angle = { min = 30 max = 270 }
+				size = 4
+				has_ring = no
+			}
+			planet = {
+				name = "Proxima Centauri II"
+				class = "pc_barren_cold"
+				orbit_distance = 20
+				orbit_angle = { min = 30 max = 270 }
+				size = 4
+				has_ring = no
+			}
+		}
+	}
+}
+
+
+random_list = {
+	name = "rl_alpha_centauri"
+	alpha_centauri_b = 5
+}
+random_list = {
+	name = "rl_alpha_centauri_med"
+	alpha_centauri_b = 5
+}
+

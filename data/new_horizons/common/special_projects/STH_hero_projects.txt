@@ -1,0 +1,397 @@
+# Available requirements:
+#
+#	SKILLS
+#	skill = 2
+#
+#	LEADER
+#	leader = scientist
+#	leader = admiral
+#	leader = general
+#	leader = ruler
+#	leader = governor
+#	
+#	MILITARY SHIPS
+#	shipclass_military = 1
+#	
+#	CIVILIAN SHIPS
+#	shipclass_constructor = 2
+#	shipclass_science_ship = 1
+#	shipclass_colonizer = 2
+#	
+#	ARMIES
+#	shipclass_transport = 1
+#	assault_armies = 2
+#	defense_armies = 1
+#	
+#	STATIONS
+#	research_station = yes
+#	mining_station = yes
+#	observation_station = yes
+#
+#	SCOPES
+#	abort_trigger
+#	this = country (project owner)
+#	from = event scope (planet or ship, MIGHT NOT EXIST)
+#	fromfrom = project creation scope (usually equals location)
+#	
+#	on_success
+#	this = event scope (ship or planet)
+#	from = project creation scope (usually equals location)
+#	
+#	on_fail
+#	this = country (project owner)
+#	from = project creation scope (usually equals location)
+
+#Use Admiral
+
+special_project = {
+	key = "HERO_DIPLOMATIC_MISSION_1_PROJECT"
+	days_to_research = 10
+	timelimit = 1800
+	tech_department = society_technology
+	picture = sth_GFX_evt_heroDiplomacy1
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	event_scope = ship_event	
+	requirements = {
+		shipclass_military = 1
+		leader = admiral
+		has_trait = leader_trait_hero
+	}
+	on_success = {
+		fleet = { 
+			random_list = {
+				10 = { #Terrible
+					modifier = { factor = 2 leader = { has_level < 2 } }
+					fleet_event = { id = STH_hero_mission.2 } 
+				} 
+				15 = { #Bad
+					modifier = { factor = 2 leader = { has_level < 3 } }
+					fleet_event = { id = STH_hero_mission.5 } 
+				} 
+				20 = { #Average
+					modifier = { factor = 2 leader = { has_level > 2 } }
+					fleet_event = { id = STH_hero_mission.8 } 
+				} 
+				15 = { #Good
+					modifier = { factor = 2 leader = { has_level > 3 } }
+					fleet_event = { id = STH_hero_mission.10 } 
+				} 
+				10 = { #Great
+					modifier = { factor = 2 leader = { has_level > 4 } }
+					fleet_event = { id = STH_hero_mission.12 } 
+				} 
+			}
+		}
+	}
+	on_fail = {
+		country_event = { id = STH_hero_mission.18 }
+	}
+}
+
+special_project = {
+	key = "INVESTIGATE_GLENN_PROJECT_1"
+	cost = 0
+	days_to_research = 30
+	tech_department = engineering_technology
+	picture = sth_GFX_evt_ussGlenn
+	event_scope = ship_event
+	requirements = { shipclass_military = 1 leader = admiral }
+	on_success = { 
+		ship_event = { id = STH_federation_story.803 scopes = { from = event_target:spore_drive_ship_tardigrade } }
+	}
+}
+
+
+
+special_project = {
+	key = "NX_WEAPONS_PROJECT_1"
+	cost = 0
+	days_to_research = 360
+	tech_department = physics_technology
+	picture = sth_GFX_evt_nx01
+	event_scope = ship_event
+	requirements = { shipclass_military = 1 leader = admiral }
+	abort_trigger = { NOT = { any_owned_ship = { has_ship_flag = nx-01 } } }
+	on_success = { 
+		owner = {
+			if = {
+				limit = { NOT = { has_tech_option = tech_physics_phase_156 } }
+				add_research_option = tech_physics_phase_156
+			}
+			add_tech_progress = { tech = tech_physics_phase_156 progress = 0.33 }
+			if = {
+				limit = { NOT = { has_tech_option = tech_engineering_inertial_629 } }
+				add_research_option = tech_engineering_inertial_629
+			}
+			add_tech_progress = { tech = tech_engineering_inertial_629 progress = 0.33 }
+			if = {
+				limit = { NOT = { has_tech_option = tech_physics_gravimetric_65 } }
+				add_research_option = tech_physics_gravimetric_65
+			}
+			add_tech_progress = { tech = tech_physics_gravimetric_65 progress = 0.33 }
+			if = {
+				limit = { NOT = { has_tech_option = tech_engineering_improved_604 } }
+				add_research_option = tech_engineering_improved_604
+			}
+			add_tech_progress = { tech = tech_engineering_improved_604 progress = 0.33 }
+			if = {
+				limit = { NOT = { has_tech_option = tech_physics_optical_2 } }
+				add_research_option = tech_physics_optical_2
+			}
+			add_tech_progress = { tech = tech_physics_optical_2 progress = 0.33 }
+			if = {
+				limit = { NOT = { has_tech_option = tech_advanced_warheads } }
+				add_research_option = tech_advanced_warheads
+			}
+			add_tech_progress = { tech = tech_advanced_warheads progress = 0.33 }
+			
+		}
+	}
+}
+
+special_project = {
+	key = "NX_WEAPONS_PROJECT_2"
+	cost = 0
+	days_to_research = 360
+	tech_department = physics_technology
+	picture = sth_GFX_evt_nx01
+	event_scope = ship_event
+	requirements = { shipclass_military = 1 leader = admiral }
+	abort_trigger = { NOT = { any_owned_ship = { has_ship_flag = nx-01 } } }
+	on_success = { 
+		owner = {
+			if = {
+				limit = { NOT = { has_tech_option = tech_engineering_03501 } }
+				add_research_option = tech_engineering_03501
+			}
+			add_tech_progress = { tech = tech_engineering_03501 progress = 0.33 }
+			if = {
+				limit = { NOT = { has_tech_option = tech_engineering_03502 } }
+				add_research_option = tech_engineering_03502
+			}
+			add_tech_progress = { tech = tech_engineering_03502 progress = 0.33 }
+			if = {
+				limit = { NOT = { has_tech_option = tech_society_02248 } }
+				add_research_option = tech_society_02248
+			}
+			add_tech_progress = { tech = tech_society_02248 progress = 0.33 }
+			if = {
+				limit = { NOT = { has_tech_option = tech_physics_gravity_82 } }
+				add_research_option = tech_physics_gravity_82
+			}
+			add_tech_progress = { tech = tech_physics_gravity_82 progress = 0.33 }
+			if = {
+				limit = { NOT = { has_tech_option = tech_physics_gravity_121 } }
+				add_research_option = tech_physics_gravity_121
+			}
+			add_tech_progress = { tech = tech_physics_gravity_121 progress = 0.33 }
+		}
+	}
+}
+
+special_project = {
+	key = "ENTERPRISE_ENT_BUILD_PROJECT_1"
+	cost = 0
+	days_to_research = 360
+	tech_department = engineering_technology
+	picture = sth_GFX_evt_nx01
+	event_scope = planet_event
+	requirements = { }
+	abort_trigger = { 
+		OR = {
+			has_country_flag = builtNX
+			has_country_flag = xindi_crisis_started 
+		}
+	}
+	on_success = { 
+		owner = {
+            add_tech_progress = { tech = tech_engineering_03501 progress = 0.05 }
+			create_fleet = { 
+				name = "Enterprise"
+				effect = {
+					set_owner = root.owner
+					set_fleet_stance = aggressive
+					create_ship = { 
+						name = "Enterprise" 
+						design = "NX-01" 
+						graphical_culture = "hero_ships_01" 
+						prefix = yes
+						effect = {
+							set_ship_flag = hero_ship
+							set_ship_flag = nx-01
+							add_modifier = { modifier = "herobuff_ent" }
+							save_event_target_as = nx_01
+							if = {
+								limit = { root.owner = { check_variable = { which = heroEnterpriseNXRegistry value > 0 } } }
+								root.owner = {
+									change_variable = { which = heroEnterpriseNXCount value = 1 }
+									set_variable = { which = shipLetterTemp value = heroEnterpriseNXCount }
+								}
+								set_name = "[This.GetName] NCC-[Owner.heroEnterpriseNXRegistry][Owner.GetShipLetter]"
+							}
+							else = {
+								# set_ship_registry_experimental = yes
+								owner = { 
+									change_variable = { which = "builtExperimentalShips" value = 1 } 
+									set_variable = { which = shipLetterTemp value = heroEnterpriseNXCount }
+								}
+								set_name = "[This.GetName] NX-[Owner.Get00ShipRegistry][Owner.builtExperimentalShips][Owner.GetShipLetter]"
+								root.owner = { set_variable = { which = heroEnterpriseNXRegistry value = builtExperimentalShips } }
+							}
+							fleet = { set_name = "[This.GetName][Owner.GetShipLetter]" }
+							root.owner = { 
+								set_variable = { which = shipLetterTemp value = 0 } 
+								set_country_flag = builtNX
+							}
+						}
+					}
+					set_location = { target = ROOT.starbase distance = 40 angle = random }
+				}
+            }
+        }
+	}
+}
+
+special_project = {
+	key = "ENTERPRISE_REBUILD_PROJECT_1"
+	cost = 0
+	days_to_research = 360
+	tech_department = engineering_technology
+	picture = sth_GFX_evt_nx01
+	event_scope = planet_event
+	requirements = { }
+	abort_trigger = { 
+		OR = {
+			has_special_project = ENTERPRISE_REBUILD_PROJECT_2
+			has_special_project = ENTERPRISE_TOS_BUILD_PROJECT_1
+		}
+	}
+	on_success = { 
+		owner = {
+            create_fleet = { 
+				name = "Enterprise"
+				effect = {
+					set_owner = root.owner
+					set_fleet_stance = aggressive
+					create_ship = { 
+						name = "Enterprise" 
+						design = "NX-01" 
+						graphical_culture = "hero_ships_01" 
+						prefix = yes
+						effect = {
+							set_ship_flag = hero_ship
+							set_ship_flag = nx-01
+							add_modifier = { modifier = "herobuff_ent" }
+							save_event_target_as = nx_01
+							root.owner = { 
+								# country_event = { id = STH_hero_ship.1 days = 30 scopes = { from = event_target:nx_01 } }
+								change_variable = { which = heroEnterpriseNXCount value = 1 }
+								set_variable = { which = shipLetterTemp value = heroEnterpriseNXCount }
+								set_variable = { which = shipRegistryTemp value = heroEnterpriseNXRegistry }
+							}
+							set_name = "[This.GetName] NX-[Owner.Get00ShipRegistry][Owner.heroEnterpriseNXRegistry][Owner.GetShipLetter]"
+							fleet = { set_name = "[This.GetName][Owner.GetShipLetter]" }
+							root.owner = { 
+								set_variable = { which = shipLetterTemp value = 0 } 
+								set_variable = { which = shipRegistryTemp value = 0 }
+								set_country_flag = builtNX
+							}
+						}
+					}
+					set_location = { target = ROOT.starbase distance = 40 angle = random }
+				}
+            }
+        }
+	}
+}
+
+special_project = {
+	key = "ENTERPRISE_REBUILD_PROJECT_2"
+	cost = 0
+	days_to_research = 360
+	tech_department = engineering_technology
+	picture = sth_GFX_evt_starfleetTOSEra
+	event_scope = planet_event
+	requirements = { }
+	abort_trigger = { }
+	on_success = { 
+		owner = {
+            create_fleet = { 
+				name = "Enterprise"
+				effect = {
+					set_owner = root.owner
+					set_fleet_stance = aggressive
+					create_ship = { 
+						name = "Enterprise" 
+						design = "NAME_constitutionTOS" 
+						graphical_culture = "hero_ships_01" 
+						prefix = yes
+						effect = {
+							set_ship_flag = hero_ship
+							set_ship_flag = enterpriseTOS
+							add_modifier = { modifier = "herobuff_tos" }
+							save_event_target_as = enterpriseTOS
+							root.owner = {
+								change_variable = { which = heroEnterpriseCount value = 1 }
+								set_variable = { which = shipLetterTemp value = heroEnterpriseCount }
+							}
+							set_name = "[This.GetName] NCC-[Owner.heroEnterpriseRegistry][Owner.GetShipLetter]"
+							fleet = { set_name = "[This.GetName][Owner.GetShipLetter]" }
+							root.owner = { set_variable = { which = shipLetterTemp value = 0 } }
+						}
+					}
+					set_location = { target = ROOT.starbase distance = 40 angle = random }
+				}
+            }
+        }
+	}
+}
+
+special_project = {
+	key = "ENTERPRISE_TOS_BUILD_PROJECT_1"
+	cost = 0
+	days_to_research = 360
+	tech_department = engineering_technology
+	picture = sth_GFX_evt_starfleetTOSEra
+	event_scope = planet_event
+	requirements = { }
+	abort_trigger = { }
+	on_success = { 
+		owner = {
+            create_fleet = { 
+				name = "Enterprise"
+				effect = {
+					set_owner = root.owner
+					set_fleet_stance = aggressive
+					create_ship = { 
+						name = "Enterprise" 
+						design = "NAME_constitutionTOS" 
+						graphical_culture = "hero_ships_01" 
+						prefix = yes
+						effect = {
+							set_ship_flag = hero_ship
+							set_ship_flag = enterpriseTOS
+							add_modifier = { modifier = "herobuff_tos" }
+							save_event_target_as = enterpriseTOS
+							if = {
+								limit = { root.owner = { check_variable = { which = heroEnterpriseRegistry value > 0 } } }
+								root.owner = {
+									change_variable = { which = heroEnterpriseCount value = 1 }
+									set_variable = { which = shipLetterTemp value = heroEnterpriseCount }
+								}
+								set_name = "[This.GetName] NCC-[Owner.heroEnterpriseRegistry][Owner.GetShipLetter]"
+							}
+							else = {
+								set_ship_registry = yes
+								root.owner = { set_variable = { which = heroEnterpriseRegistry value = builtShips } }
+							}
+							fleet = { set_name = "[This.GetName][Owner.GetShipLetter]" }
+							root.owner = { set_variable = { which = shipLetterTemp value = 0 } }
+						}
+					}
+					set_location = { target = ROOT.starbase distance = 40 angle = random }
+				}
+            }
+        }
+	}
+}

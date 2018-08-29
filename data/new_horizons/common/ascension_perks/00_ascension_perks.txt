@@ -1,0 +1,596 @@
+### start of real perks
+
+ap_world_shaper = {
+
+	modifier = {
+		terraforming_cost_mult = -0.33
+	}
+	
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_world_shaper
+		}
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 0.1
+			has_authority = auth_machine_intelligence
+			NOT = { has_ascension_perk = ap_machine_worlds }
+		}
+	}
+}
+
+ap_enigmatic_engineering = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_enigmatic_engineering
+		}
+	}
+	
+	modifier = {		
+		ship_sensor_range_add = 1
+		shipsize_station_listening_build_cost_mult = -0.5
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_materialist
+		}
+	}
+}
+
+ap_galactic_force_projection = {
+	modifier = {
+		country_naval_cap_add = 150
+	}
+	
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_galactic_force_projection
+		}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_1"
+			num_ascension_perks > 0
+		}
+	}
+	
+	ai_weight = {
+		factor = 15
+		modifier = {
+			factor = 1.5
+			num_owned_planets < 10
+		}
+		modifier = {
+			factor = 1.5
+			num_owned_planets < 20
+		}	
+		modifier = {
+			factor = 5
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 10
+			has_ethic = ethic_fanatic_militarist
+		}	
+		modifier = {
+			factor = 10
+			is_borg_empire = yes
+		}			
+	}
+}
+
+### Re-localize to Fleet Maneuvers
+ap_voidborn = {
+	modifier = {
+		country_command_limit_add = 50
+	}
+	
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_voidborn
+		}
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 1.5
+			num_owned_planets < 10
+		}
+		modifier = {
+			factor = 1.5
+			num_owned_planets < 20
+		}	
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_militarist
+		}		
+	}
+}
+
+### Re-localize as 'Diplomatic Corps' and re-write the opinion modifier desc as well as triggered_opinion_ap_defender_of_the_galaxy. Note Opinion modifier now gives +30, not +20
+ap_defender_of_the_galaxy = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_defender_of_the_galaxy
+		}
+	}
+	modifier = {
+		description = ap_defender_of_the_galaxy_modifier_desc 
+	}
+
+	on_enabled = {
+		custom_tooltip = "ap_defender_of_the_galaxy_effect_opinion"
+		# see triggered_opinion_ap_defender_of_the_galaxy
+	}
+		
+	ai_weight = {
+		factor = 20
+	}
+}
+
+### Re-Localize as 'Free Enterprise', will establish a traffic control module on every outpost. Will have an on enabled event.
+ap_nihilistic_acquisition = {
+	
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_nihilistic_acquisition
+		}
+	}
+	
+	on_enabled = {
+		custom_tooltip = "ap_nihilistic_acquisition_traffic_control"
+		every_owned_starbase = {
+			limit = { 
+				has_starbase_size = starbase_outpost
+				NOT = { has_starbase_building = facility_traffic_control }
+			}
+			set_starbase_building = {
+				slot = 0
+				building = facility_traffic_control
+			}
+		}
+	}	
+	ai_weight = {
+		factor = 5
+	}
+}
+
+ap_interstellar_dominion = {
+	modifier = {
+		country_starbase_influence_cost_mult = -0.20
+		country_claim_influence_cost_mult = -0.20
+	}
+	
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_interstellar_dominion
+		}
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_xenophobe
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_xenophobe
+		}
+	}
+}
+
+ap_eternal_vigilance = {
+	modifier = {
+		shipclass_starbase_hull_mult = 0.33
+		shipclass_military_station_hull_mult = 0.33
+		
+	}
+	
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_eternal_vigilance
+		}
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_civic = civic_inwards_perfection
+		}
+		modifier = {
+			factor = 1.5
+			is_xenophobe = yes
+		}
+	}
+}
+
+ap_grasp_the_void = {
+	modifier = {
+		country_starbase_capacity_add = 5
+	}
+	
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_grasp_the_void
+		}
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_civic = civic_inwards_perfection
+		}
+		modifier = {
+			factor = 1.5
+			is_xenophobe = yes
+		}		
+	}
+}
+
+### Re-localize to Space Fortress
+ap_master_builders = {
+	modifier = {
+		starbase_defense_platform_capacity_add = 1
+	}
+	
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_master_builders
+		}
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_civic = civic_inwards_perfection
+		}
+		modifier = {
+			factor = 1.5
+			is_xenophobe = yes
+		}
+	}
+}
+
+### Re-localize to Starbase expansion
+ap_galactic_wonders = {
+	modifier = {
+		starbase_building_capacity_add = 1
+	}
+	
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_galactic_wonders
+		}
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_civic = civic_inwards_perfection
+		}
+		modifier = {
+			factor = 1.5
+			is_xenophobe = yes
+		}
+	}
+}
+
+ap_galactic_contender = {
+	modifier = {
+		damage_vs_country_type_fallen_empire_mult = 0.5
+		damage_vs_country_type_awakened_fallen_empire_mult = 0.5
+	}
+	
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_galactic_contender
+		}
+		any_relation = {
+			has_communications = root
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}		
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 0
+			NOR = {
+				any_neighbor_country = { 
+					is_country_type = awakened_fallen_empire
+				}
+				any_country = {
+					is_country_type = fallen_empire
+				}				
+			}
+		}
+		modifier = {
+			factor = 2
+			any_country = {
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+}
+
+ap_technological_ascendancy = {
+	modifier = {
+		all_technology_research_speed = 0.1
+	}
+	
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_materialist
+		}
+	}
+}
+
+ap_mind_over_matter = {
+	modifier = {
+		tile_resource_unity_mult = 0.15
+	}
+	
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_mind_over_matter
+		}
+	}
+	
+	ai_weight = {
+		factor = 5
+	}
+}
+
+ap_one_vision = {
+	modifier = {
+		pop_government_ethic_attraction = 1
+	}
+	
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_one_vision
+		}
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_spiritualist
+		}		
+	}
+}
+
+ap_imperial_prerogative = {
+	modifier = {
+		country_core_sector_system_cap = 5
+	}
+	
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_imperial_prerogative
+		}
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+	
+	on_enabled = {
+		run_ai_strategic_data = yes
+	}
+}
+
+ap_executive_vigor = {
+	modifier = {
+		edict_length_mult = 0.5
+	}
+	
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_executive_vigor
+		}
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+ap_shared_destiny = {
+	modifier = {
+		subject_integration_influence_cost_mult = -0.75
+	}
+	
+	potential = {
+		NOR = {
+			has_valid_civic = civic_fanatic_purifiers
+			has_valid_civic = civic_hive_devouring_swarm
+			has_valid_civic = civic_inwards_perfection
+			has_valid_civic = civic_machine_terminator
+		}
+		NOT = {
+			has_ascension_perk = ap_shared_destiny
+		}
+	}
+	
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 0
+			NOT = {
+				any_subject = {
+					is_subject_type = vassal
+				}
+			}
+		}
+	}
+}
+
+ap_transcendent_learning = {
+	modifier = {
+		leader_skill_levels = 2
+		country_leader_cap = 2
+	}
+	
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_transcendent_learning
+		}
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+############################
+### Disabled dummy perks ###
+############################
+
+ap_colossus = {
+	
+	potential = { always = no }
+	
+	ai_weight = {
+		factor = 5
+	}
+}
+
+ap_consecrated_worlds = {
+	
+	potential = { always = no }
+	
+	ai_weight = {
+		factor = 5
+	}
+}
+
+ap_mastery_of_nature = {
+	
+	potential = { always = no }
+	
+	ai_weight = {
+		factor = 5
+	}
+}
+
+ap_the_circle_of_life = {
+	
+	potential = { always = no }
+	
+	ai_weight = {
+		factor = 5
+	}
+}
+
+ap_engineered_evolution = {
+	
+	potential = { always = no }
+	
+	ai_weight = {
+		factor = 5
+	}
+}
+
+ap_evolutionary_mastery = {
+
+	potential = { always = no }
+	
+	ai_weight = {
+		factor = 5
+	}
+}
+
+ap_the_flesh_is_weak = {
+
+	potential = { always = no }
+	
+	ai_weight = {
+		factor = 5
+	}
+}
+
+ap_synthetic_evolution = {
+
+	potential = { always = no }
+	
+	ai_weight = {
+		factor = 5
+	}
+}
+
+ap_transcendence = {
+
+	potential = { always = no }
+	
+	ai_weight = {
+		factor = 5
+	}
+}
+
+ap_synthetic_age = {
+
+	potential = { always = no }
+	
+	ai_weight = {
+		factor = 5
+	}
+}
+
+ap_machine_worlds = {
+
+	potential = { always = no }
+	
+	ai_weight = {
+		factor = 5
+	}
+}

@@ -1,0 +1,95 @@
+#Tzenkethi Homeworld
+yridian_homeworld = {			
+	name = "Yridia"		
+	class = "sc_g"
+	flags = { yridian_homeworld }
+	# init_effect = { log = "yridian homeworld" }
+	usage = custom_empire
+	max_instances = 1
+	planet = { name = "Yridia" class = star orbit_distance = 0 orbit_angle = 1 size = 25 has_ring = no }		
+	change_orbit = { min = 30 max = 40 }	
+	planet = {
+		count = { min = 1 max = 4 }
+		orbit_distance = { min = 20 max = 30 }
+		orbit_angle = { min = 90 max = 270 }
+		moon = { count = { min = 0 max = 1 } orbit_angle = { min = 90 max = 270 } orbit_distance = 10 }
+	}	
+	planet = {		
+		name = "Yridia Prime"	
+		class = "pc_continental"	
+		orbit_distance = 30	
+		size = { min = 18 max = 20 }
+		starting_planet = yes
+		has_ring = no
+		tile_blockers = none
+		init_effect = {
+			prevent_anomaly = yes			
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = yridian_league } } }
+				create_species = {
+					name = "Yridian"
+					class = YRI
+					portrait = yridian
+					homeworld = THIS
+					traits = {
+						trait="trait_intelligent"
+						trait="trait_talented"
+						trait="trait_natural_sociologists"
+						trait="trait_repugnant"
+						trait="trait_wasteful"
+						ideal_planet_class = "pc_alpine" 
+					} 
+				}
+				last_created_species = { save_global_event_target_as = yridianSpecies }
+				create_country = {
+					name = "NAME_yridian_league"
+					type = default
+					ignore_initial_colony_error = yes
+					civics = { civic = "civic_shadow_council" civic = "civic_bandits_yrid" }
+					authority = auth_democratic
+					name_list = "Yridian"
+					ethos = { ethic="ethic_materialist" ethic="ethic_pacifist" ethic="ethic_egalitarian" }
+					species = event_target:yridianSpecies
+					flag = {
+						icon = { category = "trek" file = "yridian.dds" }
+						background = { category = "backgrounds" file = "hexagon.dds" }
+						colors = { "blue" "customcolor1703" "null" "null" }
+					}
+					ship_prefix="CSS"
+					effect = {
+						set_graphical_culture = generic_02
+						set_country_flag = yridian_league
+						set_country_flag = custom_start_screen
+						set_country_flag = generic_ent
+						set_country_flag = alpha_beta_empire
+						set_country_flag = init_spawned
+						set_country_flag = botf_minor
+						save_global_event_target_as = yridian_league
+					}
+				}
+				create_colony = { owner = event_target:yridian_league species = event_target:yridianSpecies ethos = owner }
+			}
+			set_capital = yes
+			random_country = {
+				limit = { has_country_flag = yridian_league }
+				save_global_event_target_as = yridian_league
+				add_appropriate_start_techs = yes
+				give_technology = { tech = "tech_society_02314" message = no }
+				species = { save_global_event_target_as = yridianSpecies }
+				# set_country_type = minorRace
+			}
+			set_owner = event_target:yridian_league
+			generate_major_empire_start_buildings = yes
+			generate_minor_empire_start_pops = yes
+			generate_major_empire_start_fleets = yes
+			set_name = "Yridia Prime"
+		}
+	}
+	change_orbit = { min = 70 max = 90 }
+	planet = {
+		count = { min = 1 max = 4 }
+		orbit_distance = { min = 20 max = 30 }
+		orbit_angle = { min = 90 max = 270 }
+		moon = { count = { min = 0 max = 1 } orbit_angle = { min = 90 max = 270 } orbit_distance = 5 }
+	}
+}

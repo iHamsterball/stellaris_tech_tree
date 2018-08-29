@@ -1,0 +1,14 @@
+apply_era_buff = {
+	if = {
+		limit = { owner = { OR = { has_country_flag = klingon_tos has_country_flag = romulan_tos has_country_flag = generic_tos has_country_flag = borg_tos } } }
+		add_modifier = { modifier = "erabuff_tos" days = -1 }
+	}
+	if = {
+		limit = { owner = { OR = { has_country_flag = klingon_tmp has_country_flag = romulan_tmp has_country_flag = generic_tmp has_country_flag = borg_tmp } } }
+		add_modifier = { modifier = "erabuff_tmp" days = -1 }
+	}
+	if = {
+		limit = { owner = { OR = { has_country_flag = klingon_tng has_country_flag = romulan_tng has_country_flag = generic_tng has_country_flag = borg_tng } } }
+		add_modifier = { modifier = "erabuff_tng" days = -1 }
+	}
+}

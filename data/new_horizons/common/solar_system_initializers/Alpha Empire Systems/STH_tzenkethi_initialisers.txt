@@ -1,0 +1,94 @@
+#Tzenkethi Homeworld
+tzenkethi_homeworld = {			
+	name = "Tzenketh"		
+	class = "sc_g"
+	flags = { tzenkethi_homeworld }
+	# init_effect = { log = "tzenkethi homeworld" }
+	usage = custom_empire
+	max_instances = 1
+	planet = { name = "Tzenketh" class = star orbit_distance = 0 orbit_angle = 1 size = 25 has_ring = no }		
+	change_orbit = { min = 30 max = 40 }	
+	planet = {
+		count = { min = 1 max = 4 }
+		orbit_distance = { min = 20 max = 30 }
+		orbit_angle = { min = 90 max = 270 }
+		moon = { count = { min = 0 max = 1 } orbit_angle = { min = 90 max = 270 } orbit_distance = 10 }
+	}	
+	planet = {		
+		name = "Ab-Tzenketh"	
+		class = "pc_tropical"	
+		orbit_distance = 30	
+		size = { min = 18 max = 20 }
+		starting_planet = yes
+		has_ring = no
+		tile_blockers = none
+		init_effect = {
+			prevent_anomaly = yes			
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = tzenkethi_coalition } } }
+				create_species = {
+					name = "Tzenkethi"
+					class = TZE
+					portrait = tzenkethi
+					homeworld = THIS
+					traits = {
+						trait="trait_reptilian"
+						trait="trait_natural_physicists"
+						trait="trait_strong"
+						ideal_planet_class = "pc_tropical" 
+					} 
+				}
+				last_created_species = { save_global_event_target_as = tzenkethiSpecies }
+				create_country = {
+					name = "NAME_tzenkethi_coalition"
+					type = default
+					ignore_initial_colony_error = yes
+					civics = { civic = "civic_citizen_service" civic = "civic_corvee_system" }
+					authority = auth_oligarchic
+					name_list = "Tzenkethi"
+					ethos = { ethic = "ethic_xenophobe" ethic = "ethic_materialist" ethic = "ethic_militarist" }
+					species = event_target:tzenkethiSpecies
+					flag = {
+						icon = { category = "trek" file = "tzenkethi.dds" }
+						background = { category = "backgrounds" file = "inverse_v.dds" }
+						colors = { "customcolor1058" "customcolor1525" "null" "null" }
+					}
+					ship_prefix="CSS"
+					effect = {
+						set_graphical_culture = generic_02
+						set_country_flag = tzenkethi_coalition
+						set_country_flag = custom_start_screen
+						set_country_flag = generic_ent
+						set_country_flag = alpha_beta_empire
+						set_country_flag = init_spawned
+						set_country_flag = botf_minor
+						save_global_event_target_as = tzenkethi_coalition
+					}
+				}
+				create_colony = { owner = event_target:tzenkethi_coalition species = event_target:tzenkethiSpecies ethos = owner }
+			}
+			set_capital = yes
+			random_country = {
+				limit = { has_country_flag = tzenkethi_coalition }
+				save_global_event_target_as = tzenkethi_coalition
+				add_appropriate_start_techs = yes
+				give_technology = { tech = "tech_society_02314" message = no }
+				species = { save_global_event_target_as = tzenkethiSpecies }
+				# set_country_type = minorRace
+			}
+			set_owner = event_target:tzenkethi_coalition
+			generate_major_empire_start_buildings = yes
+			generate_major_empire_start_pops = yes
+			generate_major_empire_start_fleets = yes
+			set_name = "Ab-Tzenketh"
+		}
+	}
+	change_orbit = { min = 70 max = 90 }
+	planet = {
+		count = { min = 1 max = 4 }
+		orbit_distance = { min = 20 max = 30 }
+		orbit_angle = { min = 90 max = 270 }
+		moon = { count = { min = 0 max = 1 } orbit_angle = { min = 90 max = 270 } orbit_distance = 5 }
+	}
+	planet = { class = star orbit_distance = 100 orbit_angle = 1 size = 20 has_ring = no }	
+}

@@ -1,0 +1,33 @@
+   
+### Placeholder
+   tech_ai_update_dummy_tech = {
+   
+   cost = 500
+   area = engineering
+   ai_update_type = all
+   category = { materials }
+   tier = 1
+   ### No special notes
+
+   weight = 0
+   weight_modifier = {
+      modifier = {
+         factor = 1.25
+         research_leader = {
+            area = engineering
+            has_trait = "leader_trait_expertise_materials"
+         }
+      }
+   }
+   ai_weight = {
+      factor = 1   ### critical to AI
+      modifier = {
+         factor = 1.25
+         research_leader = {
+            area = engineering
+            has_trait = "leader_trait_expertise_materials"
+         }
+      }
+      }
+   }
+   

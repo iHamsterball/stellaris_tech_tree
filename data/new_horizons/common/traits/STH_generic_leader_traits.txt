@@ -1,0 +1,259 @@
+#################
+### LEADER TRAITS
+#################
+
+leader_trait_no_replace = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_shapeshifter.dds"
+	modifier = { }
+	leader_trait = yes
+	leader_class = { admiral scientist general governor ruler }
+	modification = no
+	leader_potential_add = { species = { has_trait = trait_shapeshifter } }
+	initial = no
+	randomized = no
+}
+
+leader_trait_shapeshifter = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_shapeshifter.dds"
+	modifier = { 
+		
+	}
+	leader_trait = yes
+	leader_class = { admiral scientist general governor ruler }
+	leader_potential_add = { species = { has_trait = trait_shapeshifter } }
+	modification = no
+}
+
+leader_trait_immortal = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_immortal.dds"
+	modification = no
+	immortal_leaders = yes
+	modifier = { }
+	leader_trait = yes
+	leader_class = { admiral scientist general governor ruler }
+	initial = no
+	randomized = no
+	ai_categories = { survey physics society engineering }
+}
+
+leader_trait_assimilated = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_assimilated.dds"
+	modification = no
+	modifier = { }
+	leader_trait = yes
+	leader_class = { admiral scientist general governor ruler }
+	initial = no
+	randomized = no
+}
+leader_trait_partially_assimilated = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_assimilated.dds"
+	modification = no
+	modifier = { }
+	leader_trait = yes
+	leader_class = { admiral scientist general governor ruler }
+	initial = no
+	randomized = no
+}
+
+leader_trait_the_phage = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_the_phage.dds"
+	modification = no
+	leader_trait = yes
+	leader_class = { admiral scientist general governor ruler }
+	initial = no
+	randomized = no
+	self_modifier = {
+		leader_age = -5
+	}
+}
+
+# All APUs 
+leader_trait_chromodynamic_power_module = { 
+  leader_trait = yes 
+  leader_class = { ruler admiral scientist general governor } 
+  cost = 0 
+  modification = no 
+  initial = no 
+  randomized = no 
+  icon = "gfx/interface/icons/traits/trait_chromodynamic_power_module.dds" 
+  immortal_leaders = yes   
+}
+ 
+ 
+# All Synaptic 
+leader_trait_synaptic_processors = { 
+  leader_trait = yes 
+  leader_class = { ruler admiral scientist general governor } 
+  cost = 0 
+  modification = no 
+  initial = no 
+  randomized = no 
+  icon = "gfx/interface/icons/traits/trait_synaptic_processors.dds" 
+} 
+
+
+#Maimed
+leader_trait_maimed = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_maimed.dds"
+	modification = no
+	self_modifier = {
+		leader_age = -10
+		species_leader_exp_gain = -0.05
+	}
+	leader_trait = yes
+	initial = no
+	randomized = no
+}
+
+leader_trait_reverred = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_reverred.dds"
+	modification = no
+	leader_trait = yes
+	initial = no
+	randomized = no
+}
+
+leader_trait_revilled = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_revilled.dds"
+	modification = no
+	leader_trait = yes
+	initial = no
+	randomized = no
+}
+
+
+leader_trait_orb_custodian = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_orb_custodian.dds"
+	modification = no
+	leader_trait = yes
+	initial = no
+	randomized = no
+}
+
+leader_trait_kolinahr_acolyte = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_kolinahr_acolyte.dds"
+	modification = no
+	leader_trait = yes
+	initial = no
+	randomized = no
+	modifier = {
+		leader_skill_levels = 1
+	}
+}
+
+leader_trait_kolinahr_master = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_kolinahr_master.dds"
+	modification = no
+	leader_trait = yes
+	leader_class = { ruler admiral scientist general governor } 
+	initial = no
+	randomized = no
+	modifier = {
+		leader_skill_levels = 2
+	}
+}
+
+leader_trait_bendii_syndrome = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_disease.dds"
+	modification = no
+	leader_trait = yes
+	leader_class = { ruler admiral scientist general governor } 
+	initial = no
+	randomized = no
+	modifier = {
+		leader_skill_levels = -4
+		leader_age = -50
+	}
+}
+
+leader_trait_yarim_fel_syndrome = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_disease.dds"
+	modification = no
+	leader_trait = yes
+	leader_class = { ruler admiral scientist general governor } 
+	initial = no
+	randomized = no
+	modifier = {
+		leader_skill_levels = -2
+		leader_age = -40
+	}
+}
+
+leader_trait_irumodic_syndrome = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_disease.dds"
+	modification = no
+	leader_trait = yes
+	leader_class = { ruler admiral scientist general governor } 
+	initial = no
+	randomized = no
+	modifier = {
+		leader_skill_levels = -3
+		leader_age = -20
+	}
+}
+
+leader_trait_surak_katra = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_kolinahr_master.dds"
+	modification = no
+	leader_trait = yes
+	leader_class = { ruler admiral scientist general governor } 
+	initial = no
+	randomized = no
+	modifier = {
+		leader_skill_levels = 3
+	}
+}
+
+leader_trait_tempImmortal = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_kolinahr_master.dds"
+	modification = no
+	leader_trait = yes
+	immortal_leaders = yes
+	leader_class = { ruler admiral scientist general governor } 
+	initial = no
+	randomized = no
+	modifier = { }
+}
+
+leader_trait_second_life = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_second_life.dds"
+	modification = no
+	leader_trait = yes
+	leader_class = { ruler admiral scientist general governor } 
+	initial = no
+	randomized = no
+	modifier = {
+		leader_skill_levels = 2
+	}
+}
+
+leader_trait_brain_damage = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_disease.dds"
+	modification = no
+	leader_trait = yes
+	leader_class = { ruler admiral scientist general governor } 
+	initial = no
+	randomized = no
+	modifier = {
+		leader_skill_levels = -1
+	}
+}

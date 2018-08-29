@@ -1,0 +1,389 @@
+wg_civil_war_rebel = {
+	casus_belli = cb_civil_war_rebel
+	hide_if_no_cb = yes
+	total_war = yes
+	surrender_acceptance = -45
+	cede_claims = occupied_only
+	set_defender_wargoal = wg_civil_war_loyalist
+	
+	potential = {
+		always = yes # event only
+	}
+	possible = {
+		always = yes
+	}
+	on_status_quo = { }
+	on_accept = {
+		custom_tooltip = wg_civil_war_rebel_accept
+		hidden_effect = {
+			leader = { save_event_target_as = winningLeader }
+			from = { 
+				add_modifier = { modifier = em_lost_rebellion days = 1800 }
+				if = {
+					limit = { exists = event_target:winningLeader }
+					clone_leader = {
+						target = event_target:winningLeader
+						effect = { save_event_target_as = winningLeader }
+					}
+					assign_leader = event_target:winningLeader
+				}
+			}
+			every_owned_planet = { conquer = from }
+			every_owned_starbase = { set_owner = from }
+			from = { civil_war_loss_effect = yes }
+		}
+	}
+	ai_weight = { weight = 100 }
+}
+
+wg_civil_war_loyalist = {
+	casus_belli = cb_civil_war_loyalist
+	hide_if_no_cb = yes
+	total_war = yes
+	surrender_acceptance = -45
+	cede_claims = occupied_only
+	set_defender_wargoal = wg_civil_war_rebel
+	
+	potential = {
+		always = yes # event only
+	}
+	possible = {
+		always = yes
+	}
+	on_status_quo = { }
+	on_accept = {
+		custom_tooltip = wg_civil_war_loyalist_accept
+		hidden_effect = {
+			from = {
+				every_owned_planet = { conquer = root }
+				every_owned_starbase = { set_owner = root }
+				destroy_country = yes
+			}
+		}
+	}
+	ai_weight = { weight = 100 }
+}
+
+wg_total_conquest = {
+	casus_belli = cb_total_conquest
+	hide_if_no_cb = yes
+	# total_war = yes
+	surrender_acceptance = -45
+	cede_claims = occupied_only
+	set_defender_wargoal = wg_total_conquest
+	
+	war_exhaustion = 0.5 # Default 1.0
+	
+	potential = {
+		always = yes # event only
+	}
+	possible = {
+		always = yes
+	}
+	on_status_quo = { 
+		hidden_effect = {
+			if = {
+				limit = { 
+					exists = event_target:terran_empire 
+					is_same_value = event_target:terran_empire 
+					exists = event_target:coalition_of_hope 
+					from = { is_same_value = event_target:coalition_of_hope } 
+				}
+				event_target:terran_empire = { country_event = { id = STH_MirrorUniverse_event.50 days = 14 random = 3 } }
+			}
+		}
+	}
+	on_accept = {
+		custom_tooltip = wg_total_conquest_accept
+		hidden_effect = {
+			from = {
+				every_owned_planet = { conquer = root }
+				every_owned_starbase = { set_owner = root }
+				destroy_country = yes
+			}
+		}
+	}
+	ai_weight = { weight = 100 }
+}
+
+wg_borg_assimilation = {
+	casus_belli = cb_borg_assimilation
+	hide_if_no_cb = no
+	total_war = yes
+	surrender_acceptance = -250
+	cede_claims = yes
+	war_exhaustion = 1
+	set_defender_wargoal = wg_borg_assimilation_defence
+	potential = {
+		is_assimilator = yes
+	}
+	possible = {
+		always = yes
+	}
+	on_status_quo = { 
+		
+	}
+	on_wargoal_set = {
+		from = {
+		    every_system_within_border = { 
+				limit = {  
+		        	OR = {
+						root = { is_ai = no }
+						is_neighbor_of = root 
+					}
+					NOT = { root = { has_claim = prev } } 
+				}
+				add_claims = { who = root }
+			}
+		}
+		every_system_within_border = { 
+			limit = {  
+				OR = {
+					root = { is_ai = no }
+					is_neighbor_of = from
+				}
+				NOT = { from = { has_claim = prev } } 
+			}
+			add_claims = { who = from }
+		}
+	}
+	on_accept = {
+		custom_tooltip = wg_assimilation_accept
+		hidden_effect = { }
+		# add_minerals = 10
+		# from = { add_energy = 10 }
+	}
+	ai_weight = { weight = 100 }
+}
+
+wg_borg_assimilation_defence = {
+	casus_belli = cb_borg_assimilation_defence
+	hide_if_no_cb = no
+	total_war = yes
+	cede_claims = yes
+	surrender_acceptance = -250
+	war_exhaustion = 1
+	set_defender_wargoal = wg_borg_assimilation
+	potential = {
+		is_assimilator = no
+		from = { is_assimilator = yes }
+	}
+	possible = {
+		always = yes
+	}
+	on_status_quo = { }
+	on_wargoal_set = {
+		from = {
+		    every_system_within_border = { 
+				limit = {  
+		        	OR = {
+						root = { is_ai = no }
+						is_neighbor_of = root 
+					}
+					NOT = { root = { has_claim = prev } } 
+				}
+				add_claims = { who = root }
+			}
+		}
+		every_system_within_border = { 
+			limit = {  
+				OR = {
+					root = { is_ai = no }
+					is_neighbor_of = from
+				}
+				NOT = { from = { has_claim = prev } } 
+			}
+			add_claims = { who = from }
+		}
+	}
+	on_accept = {
+		custom_tooltip = wg_assimilation_defence_accept
+		hidden_effect = { }
+	}
+	ai_weight = { weight = 100 }
+}
+
+wg_undine_purge = {
+	casus_belli = cb_undine_purge
+	hide_if_no_cb = no
+	total_war = yes
+	surrender_acceptance = -250
+	cede_claims = yes
+	war_exhaustion = 1
+	set_defender_wargoal = wg_undine_purge_defence
+	potential = {
+		is_infester = yes
+	}
+	possible = {
+		always = yes
+	}
+	on_status_quo = { 
+		
+	}
+	on_wargoal_set = {
+		from = {
+		    every_system_within_border = { 
+				limit = {  
+		        	OR = {
+						root = { is_ai = no }
+						is_neighbor_of = root 
+					}
+					NOT = { root = { has_claim = prev } } 
+				}
+				add_claims = { who = root }
+			}
+		}
+		every_system_within_border = { 
+			limit = {  
+				OR = {
+					root = { is_ai = no }
+					is_neighbor_of = from
+				}
+				NOT = { from = { has_claim = prev } } 
+			}
+			add_claims = { who = from }
+		}
+	}
+	on_accept = {
+		custom_tooltip = wg_purge_accept
+		hidden_effect = { }
+		# add_minerals = 10
+		# from = { add_energy = 10 }
+	}
+	ai_weight = { weight = 100 }
+}
+
+wg_undine_purge_defence = {
+	casus_belli = cb_undine_purge_defence
+	hide_if_no_cb = no
+	total_war = yes
+	cede_claims = yes
+	surrender_acceptance = -250
+	war_exhaustion = 1
+	set_defender_wargoal = wg_undine_purge
+	potential = {
+		is_infester = no
+		from = { is_infester = yes }
+	}
+	possible = {
+		always = yes
+	}
+	on_status_quo = { }
+	on_wargoal_set = {
+		from = {
+		    every_system_within_border = { 
+				limit = {  
+		        	OR = {
+						root = { is_ai = no }
+						is_neighbor_of = root 
+					}
+					NOT = { root = { has_claim = prev } } 
+				}
+				add_claims = { who = root }
+			}
+		}
+		every_system_within_border = { 
+			limit = {  
+				OR = {
+					root = { is_ai = no }
+					is_neighbor_of = from
+				}
+				NOT = { from = { has_claim = prev } } 
+			}
+			add_claims = { who = from }
+		}
+	}
+	on_accept = {
+		custom_tooltip = wg_undine_purge_accept
+		hidden_effect = { }
+	}
+	ai_weight = { weight = 100 }
+}
+
+wg_universe_defence = {
+	casus_belli = cb_universe_defence
+	hide_if_no_cb = yes
+	# total_war = yes
+	surrender_acceptance = -45
+	cede_claims = occupied_only
+	# set_defender_wargoal = wg_civil_war_rebel
+	
+	potential = {
+		always = yes # event only
+	}
+	possible = {
+		always = yes
+	}
+	on_status_quo = { }
+	on_accept = {
+		# custom_tooltip = wg_civil_war_accept
+		hidden_effect = {
+			from = {
+				every_owned_planet = { conquer = root }
+				every_owned_starbase = { set_owner = root }
+				destroy_country = yes
+			}
+		}
+	}
+	ai_weight = { weight = 100 }
+}
+
+
+wg_demilitarisation = {
+	casus_belli = cb_demilitarisation
+
+	hide_if_no_cb = no
+	defender_default = yes
+	
+	surrender_acceptance = -75
+
+	potential = {
+		has_total_war_cb = no
+		is_assimilator = no
+		is_normal_country = yes
+	}
+	possible = {
+		always = yes
+	}
+	on_accept = {
+		custom_tooltip = wg_demilitarisation_accept
+		hidden_effect = {	
+			add_influence = 100
+			from = { add_modifier = { modifier = em_demilitarisation days = 3600 } }
+		}	
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+wg_trade_embargo = {
+	casus_belli = cb_trade_embargo
+	hide_if_no_cb = no
+	defender_default = yes
+	
+	surrender_acceptance = -75
+
+	potential = {
+		has_total_war_cb = no
+		is_assimilator = no
+		is_normal_country = yes
+	}
+	possible = {
+		always = yes
+	}
+	on_accept = {
+		custom_tooltip = wg_trade_embargo_accept
+		hidden_effect = {	
+			add_influence = 100
+			from = { add_modifier = { modifier = em_trade_embargo days = 3600 } }
+		}	
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+

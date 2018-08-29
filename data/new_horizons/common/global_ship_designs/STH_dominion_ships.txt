@@ -1,0 +1,138 @@
+# Rogue Jem'Hadar Station
+ship_design = {
+	name = "NAME_Rogue_Jem_Hadar_Station"
+	ship_size = pirate_station #CHANGE THIS
+	hide_size = yes
+	section = {
+		template = "PIRATE_STATION_SECTION"
+		slot = "west"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_RED_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_RED_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "SMALL_RED_LASER"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_ARMOR_1"
+		}
+	}
+	required_component="SENSOR_1"
+	required_component = "BATTLESHIP_FISSION_REACTOR"
+}
+
+ship_design = {
+	name = "NAME_Rogue_Jem_Hadar_Ship"
+	ship_size = corvette
+	section = {
+		template = "corvette_stern_1"
+		slot = "stern"
+		component = { slot = "SMALL_GUN_01" template = "SMALL_REVERSE_POLARON_1" }
+		component = { slot = "SMALL_GUN_02" template = "SMALL_REVERSE_POLARON_1" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_B_POLARON_TORPEDO_1" }
+	}
+	section = {
+		template = "corvette_mid_17"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_armor_1" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_1" }
+	}	
+	required_component="REQUIRED_WARP_1_C"
+	required_component="REQUIRED_COMPUTER_1_C"
+	required_component="REQUIRED_THRUSTER_1_C"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_ARMOR_1_C"
+	required_component="REQUIRED_HULL_A_2_C"
+}
+
+ship_design = {
+	name = "NAME_Jem_Hadar_Ship" #For Event
+	ship_size = corvette
+	section = {
+		template = "corvette_stern_1"
+		slot = "stern"
+		component = { slot = "SMALL_GUN_01" template = "SMALL_REVERSE_POLARON_1" }
+		component = { slot = "SMALL_GUN_02" template = "SMALL_REVERSE_POLARON_1" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_B_POLARON_TORPEDO_1" }
+	}
+	section = {
+		template = "corvette_mid_17"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_armor_1" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_1" }
+	}	
+	required_component="REQUIRED_WARP_1_C"
+	required_component="REQUIRED_COMPUTER_1_C"
+	required_component="REQUIRED_THRUSTER_1_C"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_ARMOR_1_C"
+	required_component="REQUIRED_HULL_A_2_C"
+}
+
+ship_design = {
+    name = "NAME_dominion_advanced_flagship"
+    ship_size = super_battleship
+    section = {
+        template = "super_battleship_stern_3"
+        slot = "stern"
+        component = { slot = "SMALL_GUN_01" template = "SMALL_PHASED_POLARON_4" }
+        component = { slot = "SMALL_GUN_02" template = "SMALL_PHASED_POLARON_4" }
+        component = { slot = "MEDIUM_GUN_01" template = "MEDIUM_PHASED_POLARON_4" }
+        component = { slot = "LARGE_GUN_01" template = "LARGE_PHASED_POLARON_4" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_D_POLARON_TORPEDO_6b" }
+        component = { slot = "SMALL_GUN_1" template = "POINT_DEFENCE_PYLON_POLARON_4" }
+        component = { slot = "SMALL_GUN_2" template = "POINT_DEFENCE_PYLON_POLARON_4" }
+        component = { slot = "SMALL_GUN_3" template = "POINT_DEFENCE_PYLON_POLARON_4" }
+        component = { slot = "SMALL_GUN_4" template = "POINT_DEFENCE_PYLON_POLARON_4" }
+		component = { slot = "SMALL_GUN_5" template = "POINT_DEFENCE_PYLON_POLARON_4" }
+		component = { slot = "SMALL_GUN_6" template = "POINT_DEFENCE_PYLON_POLARON_4" }
+		component = { slot = "SMALL_GUN_7" template = "POINT_DEFENCE_PYLON_POLARON_4" }
+		component = { slot = "SMALL_GUN_8" template = "POINT_DEFENCE_PYLON_POLARON_4" }
+        component = { slot = "STRIKE_CRAFT_01" template = "HANGAR_DOMINION_4" }
+        component = { slot = "STRIKE_CRAFT_02" template = "HANGAR_DOMINION_4" }
+		component = { slot = "STRIKE_CRAFT_03" template = "HANGAR_DOMINION_4" }
+		component = { slot = "STRIKE_CRAFT_04" template = "HANGAR_DOMINION_4" }
+    }
+    section = {
+        template = "super_battleship_mid_8"
+        slot = "mid"
+        component = { slot = "SMALL_UTILITY_1" template = "utility_small_generator_3" }
+        component = { slot = "SMALL_UTILITY_2" template = "utility_small_generator_3" }
+        component = { slot = "SMALL_UTILITY_3" template = "utility_small_generator_3" }
+		component = { slot = "MEDIUM_UTILITY_1" template = "utility_medium_eps_4" }
+        component = { slot = "MEDIUM_UTILITY_2" template = "utility_medium_eps_4" }
+        component = { slot = "MEDIUM_UTILITY_3" template = "utility_medium_eps_4" }
+		component = { slot = "MEDIUM_UTILITY_4" template = "utility_medium_eps_4" }
+        component = { slot = "MEDIUM_UTILITY_5" template = "utility_medium_eps_4" }
+        component = { slot = "MEDIUM_UTILITY_6" template = "utility_medium_eps_4" }
+		component = { slot = "MEDIUM_UTILITY_7" template = "utility_medium_eps_4" }
+        component = { slot = "MEDIUM_UTILITY_8" template = "utility_medium_eps_4" }
+        component = { slot = "LARGE_UTILITY_1" template = "utility_large_science_station_1" }
+        component = { slot = "LARGE_UTILITY_2" template = "utility_large_science_station_1" }
+        component = { slot = "LARGE_UTILITY_3" template = "utility_large_science_station_1" }
+        component = { slot = "AUX_UTILITY_1" template = "utility_aux_cargo_2" }
+		component = { slot = "AUX_UTILITY_2" template = "utility_aux_cargo_2" }
+    }
+    required_component="required_sensor_skirmisher_1"
+    required_component="REQUIRED_COMPUTER_3_M"
+    required_component="required_tactical_tactical"
+    required_component="REQUIRED_WARP_COMBAT_8_M"
+    required_component="REQUIRED_THRUSTER_A_7_M"
+    required_component="REQUIRED_DEFENSE_SHIELD_B_6_M"
+    required_component="REQUIRED_HULL_B_7_M"
+}

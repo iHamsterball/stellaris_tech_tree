@@ -1,0 +1,90 @@
+# Possible Tile Blocker Variables
+# spawn_chance, tile scope, value will compete with the spawn chance of every other item and there's a constant 100 for no blocker to spawn.
+# cost, resource table, the cost to clear this tile blocker
+# time, amount of days it takes to clear this tile blocker.
+# picture = tb_active_volcano #Use art from tb_active_volcano
+
+tb_mars_canyon = {
+	cost = { }
+
+	spawn_chance = {
+		modifier = {
+			add = 0
+		}
+	}
+}
+
+tb_dangerous_disrepair = {
+	picture = tb_ruined_station
+	time = 100
+	cost = {
+		energy = 200
+	}
+
+	spawn_chance = {
+		modifier = {
+			add = 0
+		}
+	}
+}
+
+tb_ruined_station = {
+	picture = tb_ruined_station
+	time = 100
+	cost = {
+		energy = 150
+	}
+	spawn_chance = {
+		modifier = {
+			add = 0
+		}
+	}
+}
+
+tb_station_expansion = {
+	time = 100
+	cost = { energy = 200 }
+	spawn_chance = { modifier = { add = 0 } }
+}
+
+tb_helix_expansion = {
+	time = 200
+	cost = { energy = 400 }
+	spawn_chance = { modifier = { add = 0 } }
+}
+
+tb_hunters_lodge_expansion = {
+	time = 200
+	cost = { energy = 400 }
+	spawn_chance = { modifier = { add = 0 } }
+}
+
+tb_asteroid_prison_expansion = {
+	time = 200
+	cost = { energy = 400 }
+	spawn_chance = { modifier = { add = 0 } }
+}
+
+#Unicomple Tile Blockers
+tb_unicomplex_expansion_0 = {
+	time = 100
+	cost = { energy = 300 }
+	spawn_chance = { modifier = { add = 0 } }
+    prerequisites = { "tech_society_new_worlds_1708" }
+}
+
+tb_unicomplex_expansion_1 = {
+	time = 100
+	cost = { energy = 400 }
+	spawn_chance = { modifier = { add = 0 } }
+
+    prerequisites = { "tech_society_new_worlds_1709" }
+}
+
+tb_unicomplex_expansion_2 = {
+	time = 100
+	cost = { energy = 500 }
+	spawn_chance = { modifier = { add = 0 } }
+
+    prerequisites = { "tech_society_new_worlds_1710" }
+}

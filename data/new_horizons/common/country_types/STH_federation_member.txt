@@ -1,0 +1,109 @@
+ufp_member_world = {
+	has_difficulty_bonuses = yes
+	counts_for_victory = yes
+	pop_growth = yes
+	playable = yes
+	shuffle_pop_ethos = yes
+	needs_survey = yes
+	diplomatic_wars = yes
+	ship_disengagement = yes
+	army_disengagement = yes
+	relations = yes
+	share_communications = no	
+	sub_title = "Federation Member World"
+	ai = {
+		enabled = yes
+		declare_war = no
+		traditions = yes	
+		colonizer = no
+		construction = yes
+		internal_policies = yes
+		follow = yes
+		modules = {
+			military_minister_module
+			interior_minister_module
+			foreign_minister_module
+		}
+		ship_data = {
+			constructor = { min = 0 max = 1 }
+			starbase_outpost = { min = 0 max = 0 }
+			science	= { min = 1 max = 1 }
+			colonizer = { min = 0 max = 0 }
+			assault_cruiser = {
+				fraction = {
+					modifier = { add = 10 has_technology = tech_starbase_5 }											
+				}
+			}
+			adv_cruiser = {
+				fraction = {
+					modifier = { add = 20 has_technology = tech_starbase_5 }										
+				}
+			}
+			saber = {
+				fraction = {
+					modifier = { add = 30 has_technology = tech_starbase_2 }
+					modifier = { add = -10 has_technology = tech_starbase_4 }
+					modifier = { add = -15 has_technology = tech_starbase_5 }
+				}
+			}
+
+			sovereign = {
+				fraction = {
+					modifier = { add = 20 has_technology = tech_starbase_3 }
+					modifier = { add = 5 has_technology = tech_starbase_4 }
+					modifier = { add = -10 has_technology = tech_starbase_5 }
+				}
+			}
+
+			steamrunner = {
+				fraction = {
+					modifier = { add = 10 has_technology = tech_starbase_4 }
+					modifier = { add = 15 has_technology = tech_starbase_5 }
+				}
+			}
+
+			strike = {
+				fraction = {
+					modifier = { add = 10 has_technology = tech_starbase_5 }
+				}
+			}
+			corvette = {
+				fraction = {
+					base = 100
+					modifier = { add = -30 has_technology = tech_starbase_2 }
+					modifier = { add = -35 has_technology = tech_starbase_3 }
+					modifier = { add = -20 has_technology = tech_starbase_4 }
+					modifier = { add = -15 has_technology = tech_starbase_5 }
+				}
+			}
+		}
+		army_data = {
+			defense_army = { fraction = { factor = 50 } }
+		}
+	}
+	faction = {
+		needs_colony = no
+		needs_border_access = yes
+	}
+	modules = {
+		standard_event_module = {}
+		standard_economy_module = {}
+		standard_leader_module = {}
+		exclusive_diplomacy_module = {
+			can_receive = {
+				action_declare_war
+				action_offer_peace
+				action_offer_trade_deal
+				action_cancel_trade_deal
+			}
+			can_send = {
+				action_declare_war
+				action_offer_peace
+				action_offer_trade_deal
+				action_cancel_trade_deal
+			}
+		}
+		standard_technology_module = {}
+		standard_species_rights_module = {}
+	}
+}

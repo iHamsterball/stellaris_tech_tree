@@ -1,0 +1,102 @@
+
+#Build Fund Expedition to Xindus
+special_project = {
+	key = "XINDUS_1_PROJECT"
+	days_to_research = 360
+	tech_department = engineering_technology
+	picture = sth_GFX_evt_xindusRemains
+	timelimit = -1
+	event_scope = ship_event
+    requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+	abort_trigger = { 
+        NOT = { any_planet_within_border = { has_planet_flag = xindus_fragment } }
+	}
+	on_success = {
+        owner = { 
+            random_list = {
+                5 = {
+                    country_event = { id = STH_xindi_story.10 scopes = { from = root } } #Find Aquatic Cultural Artefacts
+                }
+                5 = { 
+                    country_event = { id = STH_xindi_story.11 scopes = { from = root } } #Find Arboreal Cultural Artefacts
+                }
+                5 = { 
+                    country_event = { id = STH_xindi_story.12 scopes = { from = root } } #Find Insectoid Cultural Artefacts
+                }
+                5 = { 
+                    country_event = { id = STH_xindi_story.13 scopes = { from = root } } #Find Primate Cultural Artefacts
+                }
+                5 = { 
+                    country_event = { id = STH_xindi_story.14 scopes = { from = root } } #Find Reptilian Cultural Artefacts
+                }
+                5 = { 
+                    country_event = { id = STH_xindi_story.15 scopes = { from = root } } #Find Avian Cultural Artefacts
+                }
+                5 = { 
+                    country_event = { id = STH_xindi_story.20 scopes = { from = root } } #Find ancient weapons (energy)
+                }
+                5 = { 
+                    country_event = { id = STH_xindi_story.21 scopes = { from = root } } #Find ancient weapons (minerals)
+                }
+                5 = { 
+                    country_event = { id = STH_xindi_story.30 scopes = { from = root } } #Find ancient ship (military)
+                }
+                5 = { 
+                    country_event = { id = STH_xindi_story.31 scopes = { from = root } } #Find ancient ship (civilian)
+                }
+                0 = { 
+                    modifier = { add = 10 check_variable = { which = xindus_expeditions value > 0 } }
+                    modifier = { add = 10 check_variable = { which = xindus_expeditions value > 1 } }
+                    modifier = { add = 10 check_variable = { which = xindus_expeditions value > 2 } }
+                    modifier = { add = 10 check_variable = { which = xindus_expeditions value > 3 } }
+                    modifier = { add = 10 check_variable = { which = xindus_expeditions value > 4 } }
+                    modifier = { factor = 0 has_country_flag = xindi_avian_eggs_found }
+                    country_event = { id = STH_xindi_story.100 scopes = { from = root } } #Find Avian eggs!
+                }
+            }
+            change_variable = { which = xindus_expeditions value = 1 }
+        }
+	}
+}
+
+
+#Hatch Xindi Avian eggs
+special_project = {
+	key = "XINDI_AVIAN_1_PROJECT"
+	# cost = 200
+	days_to_research = 1080
+	tech_department = society_technology
+	picture = sth_GFX_evt_xindiCouncil1
+	timelimit = -1
+	event_scope = planet_event
+	on_success = {
+        owner = {
+            random_list = {
+                50 = {
+                    country_event = { id = STH_xindi_story.110 } #Fail
+                }
+                50 = {
+                    country_event = { id = STH_xindi_story.120 } #Success
+                }
+            }
+        }
+    }
+}
+#Build Fund Expedition to Xindus
+special_project = {
+	key = "XINDI_AVIAN_2_PROJECT"
+	# cost = 200
+	days_to_research = 1080
+	tech_department = society_technology
+	picture = sth_GFX_evt_xindiCouncil1
+	timelimit = -1
+	event_scope = planet_event
+	on_success = {
+        owner = {
+            country_event = { id = STH_xindi_story.130 } #Fail
+        }
+    }
+}

@@ -1,0 +1,6 @@
+has_module_type_shipyard = {
+	OR = {
+		has_starbase_module = shipyard
+		has_starbase_module = shipyard_utopia
+	}
+}

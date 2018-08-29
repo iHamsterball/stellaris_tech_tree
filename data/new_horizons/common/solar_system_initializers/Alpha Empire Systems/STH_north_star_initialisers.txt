@@ -1,0 +1,127 @@
+northstar_system_event_spawn = {
+	name = "Smith's Sun"
+	class = sc_k
+	flags = { north_star_system }
+	init_effect = { connect_neighbour_stars = yes }
+	planet = { name = "Smith's Sun" class = star size = 25 orbit_distance = 0 orbit_angle = 1 has_ring = no }
+	change_orbit = { min = 30 max = 40 }
+	planet = { name = "Copper Wanderer" class = "pc_b_class" size = 8 orbit_angle = { min = 45 max = 270 } has_ring = no }
+	change_orbit = { min = 20 max = 30 }
+	planet = {
+		name = "Swift Eagle"
+		class = "pc_b_class"
+		size = 8
+		orbit_angle = { min = 45 max = 270 }
+		has_ring = no
+		init_effect = { orbital_deposit_tile = { clear_deposits = yes add_deposit = d_sr_trellium_1_deposit } }
+	}
+	change_orbit = { min = 20 max = 30}
+	planet = {
+		name = "North Star"
+		class = "pc_savannah"
+		size = 20
+		orbit_angle = { min = 45 max = 270 }
+		starting_planet = yes
+		tile_blockers = none
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes			
+			if = {
+				limit = { NOT = { exists = event_target:skagaranSpecies } }
+				create_species = { 
+					name = "Skagaran"
+					class = SKA
+					portrait = skagaran
+					traits = { 
+						trait = "trait_survivor"
+						trait = "trait_sedentary"
+						trait = "trait_fragmented"
+						ideal_planet_class = "pc_savannah"  #CHANGE
+					}
+				}
+				last_created_species = { save_global_event_target_as = skagaranSpecies }
+			}
+			if = {
+				limit = { NOT = { exists = event_target:humanSpecies } }
+				create_species = { 
+					name = "Human" 
+					class = FED 
+					portrait = human
+					traits = { 
+						trait = "trait_charismatic" 
+						trait = "trait_natural_sociologists" 
+						ideal_planet_class = "pc_continental" 
+					} 
+				}
+				last_created_species = { save_global_event_target_as = humanSpecies }
+			}
+			create_country = {
+				name = NAME_north_star
+				type = primitive
+				ignore_initial_colony_error = yes
+				civics = { civic = "civic_frontier_spirit" civic = "civic_way_of_the_gun" }
+				authority = auth_oligarchic
+				name_list = "Human"
+				ethos = { ethic = "ethic_militarist" ethic = "ethic_fanatic_materialist" }
+				species = event_target:humanSpecies
+				flag = {
+					icon = { category = "trek" file = "north_star.dds" }
+					background = { category = "backgrounds" file = "00_solid.dds" }
+					colors = { "red" "red" "null" "null" }
+				}
+				ship_prefix="NSV"
+				effect = {
+					set_graphical_culture = generic_01
+					set_country_flag = north_star_confederation
+					set_country_flag = generic_ent
+					set_country_flag = alpha_beta_empire
+					set_country_flag = init_spawned
+					set_country_flag = no_spawn
+					save_global_event_target_as = north_star_confederation
+				}
+			}
+			create_colony = { owner = event_target:north_star_confederation species = event_target:humanSpecies ethos = owner }
+			set_capital = yes
+			random_tile = {
+				limit = { has_building = yes }
+				set_building = "building_north_saloon"
+				add_deposit = d_energy_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_pop = no }
+				set_building = "building_north_ranch"
+				add_deposit = d_farmland_deposit
+				create_pop = { species = event_target:humanSpecies }
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_pop = no }
+				set_building = "building_north_ranch"
+				add_deposit = d_farmland_deposit
+				create_pop = { species = event_target:skagaranSpecies }
+			}
+			event_target:north_star_confederation = { 
+				capital_scope = { set_name = "North Star" } 
+				every_owned_pop = { set_pop_flag = cowboy_pop }
+				if = {
+					limit = { has_global_flag = northStarRaceWar }
+					every_owned_pop = { kill_pop = yes }
+				}
+				if = {
+					limit = { has_global_flag = northStarIgnore }
+					#Set Skagaran Slavery
+					event_target:skagaranSpecies = { set_citizenship_type = { country = event_target:north_star_confederation type = citizenship_slavery } }
+				}
+			}
+			
+			
+			#VARIOUS EVENTS
+			random_country = {
+				limit = { earth_empires = yes }
+				country_event = { id = STH_united_earth_story.88 days = 45 random = 5 scopes = { from = root fromfrom = event_target:north_star_confederation } }
+			}
+			
+			
+			
+		}	
+	}
+}

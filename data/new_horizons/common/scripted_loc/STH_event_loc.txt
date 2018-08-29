@@ -1,0 +1,172 @@
+defined_text = {
+    name = GetExcellent
+    text = {
+        trigger = { is_assimilator = yes }
+        localization_key = "BORG_UNDERSTOOD"
+    }
+    text = {
+        localization_key = "EXCELLENT"
+    }
+}
+
+defined_text = {
+    name = GetFascinating
+    text = {
+        trigger = { is_assimilator = yes }
+        localization_key = "BORG_UNDERSTOOD"
+    }
+    text = {
+        localization_key = "FASCINATING"
+    }
+}
+
+defined_text = {
+    name = GetRemarkable
+    text = {
+        trigger = { is_assimilator = yes }
+        localization_key = "BORG_UNDERSTOOD"
+    }
+    text = {
+        localization_key = "REMARKABLE"
+    }
+}
+
+defined_text = {
+    name = GetIntriguing
+    text = {
+        trigger = { is_assimilator = yes }
+        localization_key = "BORG_UNDERSTOOD"
+    }
+    text = {
+        localization_key = "INTRIGUING"
+    }
+}
+
+defined_text = {
+    name = GetInteresting
+    text = {
+        trigger = { is_assimilator = yes }
+        localization_key = "BORG_UNDERSTOOD"
+    }
+    text = {
+        localization_key = "INTERESTING"
+    }
+}
+
+
+defined_text = {
+    name = GetMuseumMax
+    text = {
+        trigger = { has_technology = tech_engineering_03523 }
+        localization_key = "MUSEUM_MAX_EIGHT"
+    }
+    text = {
+        trigger = { check_variable = { which = "recomissioned_ships" value = 8 } has_technology = tech_engineering_03523 }
+        localization_key = "MUSEUM_MAX_EIGHT_FULL"
+    }
+    text = {
+        localization_key = "MUSEUM_MAX_FOUR"
+    }
+    text = {
+        trigger = { check_variable = { which = "recomissioned_ships" value = 4 } }
+        localization_key = "MUSEUM_MAX_FOUR_FULL"
+    }
+}
+
+defined_text = {
+    name = GetMuseumNumber
+    #Does not have the tech
+    text = {
+        trigger = { check_variable = { which = "recomissioned_ships" value = 0 } NOT = { has_technology = tech_engineering_03523 } }
+        localization_key = "MUSEUM_NUMBER_ZERO"
+    }
+    text = {
+        trigger = { check_variable = { which = "recomissioned_ships" value = 1 } NOT = { has_technology = tech_engineering_03523 } }
+        localization_key = "MUSEUM_NUMBER_ONE"
+    }
+    text = {
+        trigger = { check_variable = { which = "recomissioned_ships" value = 2 } NOT = { has_technology = tech_engineering_03523 } }
+        localization_key = "MUSEUM_NUMBER_TWO"
+    }
+    text = {
+        trigger = { check_variable = { which = "recomissioned_ships" value = 3 } NOT = { has_technology = tech_engineering_03523 } }
+        localization_key = "MUSEUM_NUMBER_THREE"
+    }
+    text = {
+        trigger = { check_variable = { which = "recomissioned_ships" value = 4 } NOT = { has_technology = tech_engineering_03523 } }
+        localization_key = "MUSEUM_NUMBER_FOUR"
+    }
+
+    #Does have the tech
+    text = {
+        trigger = { check_variable = { which = "recomissioned_ships" value = 0 }  has_technology = tech_engineering_03523 } 
+        localization_key = "MUSEUM_NUMBER_ZERO_TECH"
+    }
+    text = {
+        trigger = { check_variable = { which = "recomissioned_ships" value = 1 }  has_technology = tech_engineering_03523 } 
+        localization_key = "MUSEUM_NUMBER_ONE_TECH"
+    }
+    text = {
+        trigger = { check_variable = { which = "recomissioned_ships" value = 2 }  has_technology = tech_engineering_03523 } 
+        localization_key = "MUSEUM_NUMBER_TWO_TECH"
+    }
+    text = {
+        trigger = { check_variable = { which = "recomissioned_ships" value = 3 }  has_technology = tech_engineering_03523 } 
+        localization_key = "MUSEUM_NUMBER_THREE_TECH"
+    }
+    text = {
+        trigger = { check_variable = { which = "recomissioned_ships" value = 4 }  has_technology = tech_engineering_03523 } 
+        localization_key = "MUSEUM_NUMBER_FOUR_TECH"
+    }
+    text = {
+        trigger = { check_variable = { which = "recomissioned_ships" value = 5 }  has_technology = tech_engineering_03523 } 
+        localization_key = "MUSEUM_NUMBER_FIVE_TECH"
+    }
+    text = {
+        trigger = { check_variable = { which = "recomissioned_ships" value = 6 }  has_technology = tech_engineering_03523 } 
+        localization_key = "MUSEUM_NUMBER_SIX_TECH"
+    }
+    text = {
+        trigger = { check_variable = { which = "recomissioned_ships" value = 7 }  has_technology = tech_engineering_03523 } 
+        localization_key = "MUSEUM_NUMBER_SEVEN_TECH"
+    }
+    text = {
+        trigger = { check_variable = { which = "recomissioned_ships" value = 8 }  has_technology = tech_engineering_03523 } 
+        localization_key = "MUSEUM_NUMBER_EIGHT_TECH"
+    }
+}
+
+
+# defined_text = {
+    # name = GetLeaderSpecialTitle
+    # text = {
+        # trigger = { has_leader_flag = bajoranKai NOT = { has_global_flag = test } }
+        # localization_key = "TEST Kai"
+    # }
+	# text = {
+        # trigger = { has_leader_flag = bajoranKai has_global_flag = test }
+        # localization_key = "TEST Kai 2"
+    # }
+    # text = {
+        # localization_key = "TEST Default"
+    # }
+# }
+
+# defined_text = {
+    # name = GetSkillName
+    # text = {
+        # trigger = { has_level = 1 }
+        # localization_key = "Ensign"
+    # }
+	# text = {
+        # trigger = { has_level = 2 }
+        # localization_key = "Lieutenant"
+    # }
+	# text = {
+        # trigger = { has_level = 3 }
+        # localization_key = "Commander"
+    # }
+    # text = {
+        # localization_key = "Cadet"
+    # }
+# }

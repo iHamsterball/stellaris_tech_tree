@@ -1,0 +1,178 @@
+### Son'a Prime
+### Planet where the Son'a called home even though they originated from within the Briar Patch on a planet called Ba'ku.
+### TNG: Insurrection, DS9: Penumbra
+
+ sona_homeworld = {
+ 	name = "Son'a"
+ 	class = sc_m
+ 	flags = { sona_homeworld }
+ 	init_effect = { log = "sona homeworld" }
+ 	usage = custom_empire
+ 	max_instances = 1
+ 	planet = { 
+ 		name = "Son'a" 
+ 		class = star 
+ 		orbit_distance = 0 
+ 		orbit_angle = 1 
+ 		size = 30 
+ 		has_ring = no 
+ 	} 
+ 	planet = { 
+ 		count = { min = 1 max = 3 } 
+ 		class = random_non_colonizable 
+ 		orbit_distance = { min = 10 max = 25 } 
+ 		orbit_angle = {min = 15 max = 290} 
+ 		size = {min = 7 max = 17 } 
+ 		has_ring = no 
+ 		change_orbit = @base_moon_distance 
+     moon = { 
+ 		count = { min = 0 max = 3 } 
+ 		class = "pc_barren_cold" 
+ 		size = { min = 2 max =7} 
+ 		orbit_angle = { min = 45 max = 275 } 
+ 		orbit_distance = { min = 3 max = 7 } 
+ 		has_ring = no 
+ 		} 
+ 	} 
+ 	planet = {
+ 		name = "Son'a Prime"
+ 		class = "pc_arid"
+ 		orbit_distance = 21
+ 		orbit_angle = 60
+ 		size = 24
+ 		has_ring = no
+ 		starting_planet = yes
+ 		tile_blockers = none
+ 		modifiers = none
+ 		init_effect = {
+ 		prevent_anomaly = yes
+ 			if = {
+ 				limit = { NOT = { any_country = { has_country_flag = sona_command } } }
+ 				create_species = { 
+ 					name = "Son'a" 
+ 					class = SON 
+ 					portrait = sona
+ 					homeworld = THIS 
+ 					traits = { 
+ 						trait="trait_natural_sociologists"
+ 	                    trait="trait_enduring"
+ 	                    trait="trait_nomadic"
+ 						trait="trait_slow_breeders"
+ 						ideal_planet_class = "pc_arid" 
+ 					} 
+ 				}
+ 				last_created_species = { save_global_event_target_as = sonaSpecies }
+ 				create_country = {
+ 					name = "NAME_sona_command"
+ 					type = default
+ 					ignore_initial_colony_error = yes
+ 					civics = { civic = "civic_sona_1" civic = "civic_sona_2" }
+ 					authority = auth_dictatorial
+ 					name_list = "Sona"
+ 					ethos = { ethic = "ethic_authoritarian" ethic = "ethic_militarist" ethic = "ethic_xenophobe" }
+ 					species = event_target:sonaSpecies
+ 					flag = {
+ 						icon = { category = "trek" file = "sona.dds" }
+ 						background = { category = "backgrounds" file = "hexagon.dds" }
+ 						colors = { "dark_green" "customcolor1359" "null" "null" }
+ 					}
+ 					ship_prefix = "SEV"
+ 					effect = {
+ 						set_graphical_culture = generic_01
+ 						set_country_flag = sona_command
+ 						set_country_flag = custom_start_screen
+ 						set_country_flag = generic_ent
+ 						set_country_flag = alpha_beta_empire
+ 						set_country_flag = init_spawned
+ 						set_country_flag = first_alien_life
+ 						set_country_flag = first_contact_event
+ 						save_global_event_target_as = sona_command
+ 					}
+ 				}
+ 				create_colony = { owner = event_target:sona_command species = event_target:sonaSpecies ethos = owner }
+ 			}
+ 			set_capital = yes
+ 			random_country = {
+ 				limit = { has_country_flag = sona_command }
+ 				save_global_event_target_as = sona_command
+ 				add_appropriate_start_techs = yes
+ 				give_technology = { tech = "tech_society_new_worlds_1163" message = no }
+ 				give_technology = { tech = "tech_frontier_health" message = no }
+ 				species = { save_global_event_target_as = sonaSpecies }
+ 			}
+ 			if = {
+ 				limit = { NOT = { exists = event_target:elloraSpecies } }
+ 				create_species = {
+					name = "Ellora"
+					plural = "Elloran"
+					class = "ELL"
+					portrait = "ellora"
+					name_list = "ellora"
+					traits = {
+						ideal_planet_class = "pc_arid"
+						trait = "trait_weak"
+						trait = "trait_charismatic"
+						trait = "trait_fleeting"
+						trait = "trait_quick_learners"
+					}
+ 				}
+ 				last_created_species = { save_global_event_target_as = elloraSpecies }
+ 			}
+ 			random_tile = {
+ 				limit = { has_blocker = no has_grown_pop = no has_growing_pop = no }
+ 				create_pop = { species = event_target:elloraSpecies }
+ 			}
+ 			random_tile = {
+ 				limit = { has_blocker = no has_grown_pop = no has_growing_pop = no }
+ 				create_pop = { species = event_target:elloraSpecies }
+ 			}
+ 			if = {
+ 				limit = { NOT = { exists = event_target:tarlacSpecies } }
+ 				create_species = {
+					name = "Tarlac"
+					plural = "Tarlac"
+					class = "TAR" portrait = "tarlac"
+					name_list = "tarlac"
+					traits = {
+						ideal_planet_class = "pc_arid"
+						trait = "trait_slow_breeders"
+						trait = "trait_conformists"
+						trait = "trait_adaptive"
+						trait = "trait_quick_learners"
+					}
+ 				}
+ 				last_created_species = { save_global_event_target_as = tarlacSpecies }
+ 			}
+ 			random_tile = {
+ 				limit = { has_blocker = no has_grown_pop = no has_growing_pop = no }
+ 				create_pop = { species = event_target:tarlacSpecies }
+ 			}
+ 			random_tile = {
+ 				limit = { has_blocker = no has_grown_pop = no has_growing_pop = no }
+ 				create_pop = { species = event_target:tarlacSpecies }
+ 			}
+ 			set_owner = event_target:sona_command
+ 			generate_major_empire_start_buildings = yes
+ 			generate_major_empire_start_pops = yes
+ 			generate_major_empire_start_fleets = yes
+ 			set_name = "Son'a Prime"
+ 		}
+ 	}
+ 	planet = {
+ 		count = { min = 1 max = 3 }
+ 		class = random_non_colonizable
+ 		orbit_distance = { min = 10 max = 265}
+ 		orbit_angle = { min = 15 max = 290 }
+ 		size = { min = 4 max = 9 }
+ 		has_ring = no
+ 		change_orbit = @base_moon_distance
+ 		moon = {
+ 			count = { min = 0 max = 1 }
+ 			class = "pc_barren_cold"
+ 			size = { min = 1 max = 4 }
+ 			orbit_angle = { min = 45 max = 275 }
+ 			orbit_distance = { min = 3 max = 7 }
+ 			has_ring = no
+ 		}
+ 	}
+ }

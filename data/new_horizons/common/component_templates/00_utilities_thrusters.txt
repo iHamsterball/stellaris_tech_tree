@@ -1,0 +1,595 @@
+# Icons set here are the ones show in the actual slot.
+
+@cost1 = 3
+@cost2 = 6
+@cost3 = 9
+@cost4 = 12
+
+@power_1 = -10
+@power_2 = -15
+@power_3 = -20
+@power_4 = -25
+
+@destroyer_power_1 = -20
+@destroyer_power_2 = -30
+@destroyer_power_3 = -40
+@destroyer_power_4 = -50
+
+@cruiser_power_1 = -40
+@cruiser_power_2 = -60
+@cruiser_power_3 = -80
+@cruiser_power_4 = -100
+
+@battleship_power_1 = -80
+@battleship_power_2 = -120
+@battleship_power_3 = -160
+@battleship_power_4 = -200
+
+@titan_power_1 = -160
+@titan_power_2 = -240
+@titan_power_3 = -320
+@titan_power_4 = -400
+
+@colossus_power_1 = -200
+@colossus_power_2 = -300
+@colossus_power_3 = -400
+@colossus_power_4 = -500
+
+#############
+# THRUSTERS #
+#############
+
+### 1
+
+utility_component_template = {
+	key = "SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	hidden = yes
+	power = @power_1
+	cost = @cost1
+	
+	modifier = {
+	}
+		
+	#prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	size_restriction = { corvette colonizer constructor science transport }
+	upgrades_to = "SHIP_THRUSTER_2"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	hidden = yes
+	power = @destroyer_power_1
+	cost = @cost1
+	
+	modifier = {
+	}
+		
+	#prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	size_restriction = { destroyer }
+	upgrades_to = "DESTROYER_SHIP_THRUSTER_2"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	hidden = yes
+	power = @cruiser_power_1
+	cost = @cost1
+	
+	modifier = {
+	}
+		
+	#prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	size_restriction = { cruiser }
+	upgrades_to = "CRUISER_SHIP_THRUSTER_2"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	hidden = yes
+	power = @battleship_power_1
+	cost = @cost1
+	
+	modifier = {
+	}
+		
+	#prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	size_restriction = { battleship }
+	upgrades_to = "BATTLESHIP_SHIP_THRUSTER_2"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	hidden = yes
+	power = @titan_power_1
+	cost = @cost1
+	
+	modifier = {
+	}
+		
+	#prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	size_restriction = { titan }
+	upgrades_to = "TITAN_SHIP_THRUSTER_2"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	hidden = yes
+	power = @colossus_power_1
+	cost = @cost1
+
+	modifier = {
+	}
+
+	#prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	size_restriction = { colossus }
+	#upgrades_to = "COLOSSUS_SHIP_THRUSTER_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+### 2
+
+utility_component_template = {
+	key = "SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	hidden = yes
+	power = @power_2
+	cost = @cost2
+	modifier = {
+		ship_speed_mult = 0.20
+		ship_evasion_add = 5
+	}
+
+	#prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	size_restriction = { corvette colonizer constructor science transport }
+	upgrades_to = "SHIP_THRUSTER_3"
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	hidden = yes
+	power = @destroyer_power_2
+	cost = @cost1
+	
+	modifier = {
+		ship_speed_mult = 0.20
+		ship_evasion_add = 5
+	}
+		
+	#prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	size_restriction = { destroyer }
+	upgrades_to = "DESTROYER_SHIP_THRUSTER_3"
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	hidden = yes
+	power = @cruiser_power_2
+	cost = @cost1
+	
+	modifier = {
+		ship_speed_mult = 0.20
+		ship_evasion_add = 5
+	}
+		
+	#prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	size_restriction = { cruiser }
+	upgrades_to = "CRUISER_SHIP_THRUSTER_3"
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	hidden = yes
+	power = @battleship_power_2
+	cost = @cost1
+	
+	modifier = {
+		ship_speed_mult = 0.20
+		ship_evasion_add = 5
+	}
+		
+	#prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	size_restriction = { battleship }
+	upgrades_to = "BATTLESHIP_SHIP_THRUSTER_3"
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	hidden = yes
+	power = @titan_power_2
+	cost = @cost1
+	
+	modifier = {
+		ship_speed_mult = 0.20
+		ship_evasion_add = 5
+	}
+		
+	#prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	size_restriction = { titan }
+	upgrades_to = "TITAN_SHIP_THRUSTER_3"
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	hidden = yes
+	power = @colossus_power_2
+	cost = @cost1
+	
+	modifier = {
+		ship_speed_mult = 0.20
+		ship_evasion_add = 5
+	}
+		
+	#prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	size_restriction = { colossus }
+	upgrades_to = "COLOSSUS_SHIP_THRUSTER_3"
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+
+### 3
+
+utility_component_template = {
+	key = "SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	hidden = yes
+	power = @power_3
+	cost = @cost3
+	modifier = {
+		ship_speed_mult = 0.40
+		ship_evasion_add = 10
+	}
+
+	#prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	size_restriction = { corvette colonizer constructor science transport }
+	upgrades_to = "SHIP_THRUSTER_4"
+	
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	hidden = yes
+	power = @destroyer_power_3
+	cost = @cost3
+	modifier = {
+		ship_speed_mult = 0.40
+		ship_evasion_add = 10
+	}
+
+	#prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	size_restriction = { destroyer }
+	upgrades_to = "DESTROYER_SHIP_THRUSTER_4"
+	
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	hidden = yes
+	power = @cruiser_power_3
+	cost = @cost3
+	modifier = {
+		ship_speed_mult = 0.40
+		ship_evasion_add = 10
+	}
+
+	#prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	size_restriction = { cruiser }
+	upgrades_to = "CRUISER_SHIP_THRUSTER_4"
+	
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	hidden = yes
+	power = @battleship_power_3
+	cost = @cost3
+	modifier = {
+		ship_speed_mult = 0.40
+		ship_evasion_add = 10
+	}
+
+	#prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	size_restriction = { battleship }
+	upgrades_to = "BATTLESHIP_SHIP_THRUSTER_4"
+	
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	hidden = yes
+	power = @titan_power_3
+	cost = @cost3
+	modifier = {
+		ship_speed_mult = 0.40
+		ship_evasion_add = 10
+	}
+
+	#prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	size_restriction = { titan }
+	upgrades_to = "TITAN_SHIP_THRUSTER_4"
+	
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	hidden = yes
+	power = @colossus_power_3
+	cost = @cost3
+	modifier = {
+		ship_speed_mult = 0.40
+		ship_evasion_add = 10
+	}
+
+	#prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	size_restriction = { colossus }
+	upgrades_to = "COLOSSUS_SHIP_THRUSTER_4"
+	
+	ai_weight = {
+		weight = 3
+	}
+}
+
+### 4
+
+utility_component_template = {
+	key = "SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	hidden = yes
+	power = @power_4
+	cost = @cost4
+	modifier = {
+		ship_speed_mult = 0.60
+		ship_evasion_add = 15
+	}
+
+	#prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	size_restriction = { corvette colonizer constructor science transport }
+	
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	hidden = yes
+	power = @destroyer_power_4
+	cost = @cost4
+	modifier = {
+		ship_speed_mult = 0.60
+		ship_evasion_add = 15
+	}
+
+	#prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	size_restriction = { destroyer }
+	
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	hidden = yes
+	power = @cruiser_power_4
+	cost = @cost4
+	modifier = {
+		ship_speed_mult = 0.60
+		ship_evasion_add = 15
+	}
+
+	#prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	size_restriction = { cruiser }
+	
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	hidden = yes
+	power = @battleship_power_4
+	cost = @cost4
+	modifier = {
+		ship_speed_mult = 0.60
+		ship_evasion_add = 15
+	}
+
+	#prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	size_restriction = { battleship }
+	
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	hidden = yes
+	power = @titan_power_4
+	cost = @cost4
+	modifier = {
+		ship_speed_mult = 0.60
+		ship_evasion_add = 15
+	}
+
+	#prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	size_restriction = { titan }
+	
+	ai_weight = {
+		weight = 4
+	}
+}
+
+
+utility_component_template = {
+	key = "COLOSSUS_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	hidden = yes
+	power = @colossus_power_4
+	cost = @cost4
+	modifier = {
+		ship_speed_mult = 0.60
+		ship_evasion_add = 15
+	}
+
+	#prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	size_restriction = { colossus }
+	
+	ai_weight = {
+		weight = 4
+	}
+}

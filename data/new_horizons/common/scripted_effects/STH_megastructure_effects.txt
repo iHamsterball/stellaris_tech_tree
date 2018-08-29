@@ -1,0 +1,38 @@
+create_correct_spaceport = {
+	if = {
+		limit = { solar_system = { NOT = { exists = starbase } } }
+		solar_system = { create_starbase = { size = starbase_outpost owner = prev.FROM } }
+	}
+}
+
+create_correct_spaceport_planetscope = {
+	if = {
+		limit = { solar_system = { NOT = { exists = starbase } } }
+		solar_system = { 
+			create_starbase = { size = starbase_starport module = shipyard  owner = prev.owner } 
+		}
+	}
+}
+
+create_correct_outpost_planetscope = {
+	if = {
+		limit = { solar_system = { NOT = { exists = starbase } } }
+		solar_system = { create_starbase = { size = starbase_outpost owner = prev.owner } }
+	}
+}
+
+set_correct_spaceport_planet = {
+	FROM = {
+		switch = {
+			trigger = has_country_flag
+			united_earth = { prev = { change_pc = pc_starbase_blank_fed } }
+			terra_prime = { prev = { change_pc = pc_starbase_blank_fed } }
+			united_human_remnant = { prev = { change_pc = pc_starbase_blank_fed } }
+			united_federation_of_planets = { prev = { change_pc = pc_starbase_blank_fed } }
+			cardassian_union = { prev = { change_pc = pc_starbase_blank_car } }
+			default = { }
+		}
+		# if = { limit = { OR = { has_country_flag = cardassian_union has_country_flag = hebitian_union } } prev = { change_pc = pc_starbase_blank_car } }
+		if = { limit = { is_borg_empire = yes } prev = { change_pc = pc_starbase_blank_brg } }
+	}
+}

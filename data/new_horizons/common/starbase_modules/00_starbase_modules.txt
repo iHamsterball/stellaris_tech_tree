@@ -1,0 +1,251 @@
+### Shipyard
+   shipyard ={
+      icon = "GFX_spaceport_module_shipyard"
+      section = "ASSEMBLYYARD_STARBASE_SECTION"
+      construction_days = 180
+      initial = yes
+      cost = { minerals = 100 }
+      upkeep_resources = { energy = 1 }
+      station_modifier = {
+         starbase_shipyard_capacity_add = 1
+      }
+      ai_build_at_chokepoint = yes
+      ai_build_outside_chokepoint = yes
+      ai_weight = {
+         weight = 40
+      }
+   }
+   
+### Utopia Planitia
+   shipyard_utopia ={
+      icon = "GFX_spaceport_module_shipyard_utopia"
+      section = "ASSEMBLYYARD_STARBASE_SECTION"
+      construction_days = 180
+      cost = { minerals = 100 }
+      upkeep_resources = { energy = 2 }
+      station_modifier = {
+         starbase_shipyard_capacity_add = 4
+         starbase_shipyard_build_speed_mult = 0.1
+      }
+      potential = { always = no }
+      ai_build_at_chokepoint = no
+      ai_build_outside_chokepoint = yes
+      ai_weight = {
+         weight = 10
+      }
+   }
+   
+### Naval Depot
+   anchorage ={
+      icon = "GFX_spaceport_module_anchorage"
+      section = "ANCHORAGE_STARBASE_SECTION"
+      construction_days = 180
+      cost = { minerals = 100 }
+      upkeep_resources = { energy = 2 }
+      country_modifier = {
+         country_naval_cap_add = 5
+      }
+      triggered_country_modifier = {
+         potential = { has_starbase_building = naval_logistics_office }
+         country_naval_cap_add = 3
+      }
+      ai_build_at_chokepoint = no
+      ai_build_outside_chokepoint = yes
+      ai_weight = {
+         weight = 20
+         modifier = {
+            factor = 10
+            count_starbase_modules = { type = anchorage count < 2 }
+         }
+      }
+   }
+   
+### Energy Weapon Array
+   gun_battery ={
+      icon = "GFX_spaceport_module_gun_battery"
+      section = "BATTERY_STARBASE_SECTION"
+      construction_days = 180
+      cost = { minerals = 150 }
+      upkeep_resources = { energy = 1 }
+      ai_build_at_chokepoint = yes
+      ai_build_outside_chokepoint = no
+      ai_weight = {
+         weight = 10
+      }
+   }
+   
+### Torpedo Launcher Battery
+   missile_battery ={
+      icon = "GFX_spaceport_module_missile_battery"
+      section = "MISSILE_STARBASE_SECTION"
+      construction_days = 180
+      cost = { minerals = 150 }
+      upkeep_resources = { energy = 1 }
+      potential = {
+      exists = owner
+      owner = {
+         has_technology = tech_engineering_photon_654
+      }
+   }
+      ai_build_at_chokepoint = yes
+      ai_build_outside_chokepoint = no
+      ai_weight = {
+         weight = 10
+      }
+      show_in_tech = "tech_engineering_photon_654"
+   }
+   
+### Hangar Bay - standard
+   hangar_bay ={
+      icon = "GFX_spaceport_module_hangar"
+      section = "HANGAR_STARBASE_SECTION"
+      construction_days = 180
+      cost = { minerals = 250 }
+      upkeep_resources = { energy = 2 }
+      potential = {
+      exists = owner
+      owner = {
+         has_technology = tech_strike_craft_1
+      }
+   }
+      ai_build_at_chokepoint = yes
+      ai_build_outside_chokepoint = no
+      ai_weight = {
+         weight = 10
+      }
+      show_in_tech = "tech_strike_craft_1"
+   }
+   
+### Fission Reactor
+   borg_reactor ={
+      icon = "GFX_spaceport_module_borg_reactor"
+      section = "REFINERY_STARBASE_SECTION"
+      construction_days = 180
+      cost = { minerals = 100 }
+      produced_resources = {
+         energy = 4
+      }
+      potential = {
+      exists = owner
+      owner = {
+         has_technology = tech_society_new_worlds_1708
+      }
+   }
+      ai_build_at_chokepoint = no
+      ai_weight = {
+         weight = 10
+      }
+      show_in_tech = "tech_society_new_worlds_1708"
+   }
+   
+### Central Shield Generator
+   facility_shield ={
+      icon = "GFX_spaceport_building_shield_generator"
+      construction_days = 360
+      cost = { minerals = 200 }
+      upkeep_resources = { energy = 1 }
+      station_modifier = {
+         ship_shield_add = 40000
+      }
+      potential = {
+      exists = owner
+      owner = {
+         has_technology = tech_engineering_spaceport_564
+      }
+   }
+      ai_build_at_chokepoint = yes
+      ai_build_outside_chokepoint = no
+      ai_weight = {
+         weight = 10
+      }
+      show_in_tech = "tech_engineering_spaceport_564"
+   }
+   
+### Subspace Adaptive Field
+   facility_borg_shield ={
+      icon = "GFX_spaceport_building_borg_shield_generator"
+      construction_days = 360
+      cost = { minerals = 200 }
+      upkeep_resources = { energy = 2 }
+      station_modifier = {
+         ship_armor_add = 45000
+      }
+      potential = {
+      exists = owner
+      owner = {
+         has_technology = tech_physics_01340
+      }
+   }
+      ai_build_at_chokepoint = yes
+      ai_build_outside_chokepoint = no
+      ai_weight = {
+         weight = 10
+      }
+      show_in_tech = "tech_physics_01340"
+   }
+   
+### Armor Plating
+   facility_armor_plating ={
+      icon = "GFX_spaceport_building_armor_plating"
+      construction_days = 360
+      cost = { minerals = 200 }
+      station_modifier = {
+         ship_armor_add = 30000
+      }
+      potential = {
+      exists = owner
+      owner = {
+         has_technology = tech_engineering_spaceport_562
+      }
+   }
+      ai_build_at_chokepoint = yes
+      ai_build_outside_chokepoint = no
+      ai_weight = {
+         weight = 10
+      }
+      show_in_tech = "tech_engineering_spaceport_562"
+   }
+   
+### Trade Depot
+   trading_hub ={
+      icon = "GFX_spaceport_module_trading_hub"
+      section = "REFINERY_STARBASE_SECTION"
+      construction_days = 180
+      cost = { minerals = 100 }
+      produced_resources = {
+         energy = 4
+      }
+      produced_resource_trigger = {
+         modifier = {
+            hidden_trigger = { exists = this }
+            has_starbase_building = offworld_trading_company
+            resources = { energy = 3 }
+         }
+         modifier = {
+            hidden_trigger = { exists = this }
+            owner = { has_civic = civic_corporate_dominion }
+            resources = { energy = 1 }
+         }
+         modifier = {
+            hidden_trigger = { exists = this }
+            owner = { has_non_swapped_tradition = tr_prosperity_pursuit_of_profit }
+            resources = { energy = 1 }
+         }
+      }
+      potential = {
+      exists = owner
+      owner = {
+         is_borg_empire = no
+      }
+   }
+      possible = {
+         custom_tooltip = {
+            fail_text = "requires_colonized_planet"
+            solar_system = { any_planet = { is_colony = yes } }
+         }
+      }
+      ai_build_at_chokepoint = no
+      ai_weight = {
+         weight = 10
+      }
+   }

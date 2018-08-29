@@ -1,0 +1,21 @@
+defined_text = {
+    name = GetDerDieDas
+    text = {
+        trigger = {
+            OR = { DE_loc_der_empires = yes }
+        }
+        localization_key = der
+    }
+    text = {
+        trigger = {
+            OR = { DE_loc_die_empires = yes }
+        }
+        localization_key = die
+    }
+    text = {
+        trigger = {
+            OR = { DE_loc_das_empires = yes }
+        }
+        localization_key = das
+    }
+}

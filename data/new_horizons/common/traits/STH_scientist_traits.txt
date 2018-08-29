@@ -1,0 +1,58 @@
+leader_trait_doctor = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_doctor.dds"
+	modifier = {
+		category_biology_research_speed_mult = 0.075
+		leader_age = 10
+	}
+	leader_potential_add = {
+		from = { is_drone_authority = no }
+	}
+	opposites = { 
+		"leader_trait_expertise_materials" 
+		"leader_trait_expertise_propulsion" 
+		"leader_trait_expertise_voidcraft"
+		"leader_trait_expertise_industry" 
+		"leader_trait_expertise_field_manipulation"
+		"leader_trait_expertise_particles"
+		"leader_trait_expertise_psionics"
+		"leader_trait_expertise_computing" 
+		"leader_trait_expertise_new_worlds"
+		"leader_trait_expertise_statecraft"
+		"leader_trait_expertise_military_theory"
+		"leader_trait_expertise_biology"
+	}
+	leader_trait = yes
+	leader_class = { scientist }
+	# higher chance to generate techs in category biology (done in tech-script)
+	
+	ai_categories = {
+		society
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+### Gained from concert event chain
+leader_trait_art_patron = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_art_aficionado.dds"
+	modifier = {
+		ship_anomaly_generation_chance_mult = 0.05
+	}
+	leader_potential_add = {
+		from = { is_drone_authority = no }
+	}
+	leader_trait = yes
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+	
+	ai_weight = {
+		weight = 100
+	}
+}

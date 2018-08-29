@@ -1,0 +1,18 @@
+is_hero = { 
+	has_trait = leader_trait_hero
+}
+
+diplomacy_missions = {
+	always = yes
+}
+
+is_hero_ship = {
+	OR = {
+		has_modifier = herobuff_ent
+		has_modifier = herobuff_tos
+		has_modifier = herobuff_tmp
+		has_modifier = herobuff_tng
+		has_modifier = herobuff_tng2
+		has_modifier = sh_named_ship
+	}
+}

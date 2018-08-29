@@ -1,0 +1,114 @@
+# Available requirements:
+#
+#	SKILLS
+#	skill = 2
+#
+#	LEADER
+#	leader = scientist
+#	leader = admiral
+#	leader = general
+#	leader = ruler
+#	leader = governor
+#	
+#	MILITARY SHIPS
+#	shipclass_military = 1
+#	
+#	CIVILIAN SHIPS
+#	shipclass_constructor = 2
+#	shipclass_science_ship = 1
+#	shipclass_colonizer = 2
+#	
+#	ARMIES
+#	shipclass_transport = 1
+#	assault_armies = 2
+#	defense_armies = 1
+#	
+#	STATIONS
+#	research_station = yes
+#	mining_station = yes
+#	observation_station = yes
+#
+#	SCOPES
+#	abort_trigger
+#	this = country (project owner)
+#	from = event scope (planet or ship, MIGHT NOT EXIST)
+#	fromfrom = project creation scope (usually equals location)
+#	
+#	on_success
+#	this = event scope (ship or planet)
+#	from = project creation scope (usually equals location)
+#	
+#	on_fail
+#	this = country (project owner)
+#	from = project creation scope (usually equals location)
+
+#Use Admiral
+
+special_project = {
+	key = "DISTRESS_1_PROJECT"
+	days_to_research = 10
+	timelimit = 720
+	tech_department = society_technology
+	picture = sth_GFX_evt_spaceBackground
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+	on_success = {
+        random_list = {
+            5 = {
+                modifier = { factor = -1 owner = { has_country_flag = parallaxAnomaly } }
+                ship_event = { id = STH_distress_call_event.1000 scopes = { from = event_target:distressLocation } } #Parallax
+            }
+            10 = { 
+                ship_event = { id = STH_distress_call_event.200 scopes = { from = event_target:distressLocation } } #False Alarm 
+            }
+            20 = { 
+                ship_event = { id = STH_distress_call_event.300 scopes = { from = event_target:distressLocation } } #Rescue Own Freighter 
+            }
+            0 = { 
+                modifier = { 
+                    add = 20
+                    owner = { 
+                        count_relation = { 
+                            limit = { 
+                                has_normal_events = yes
+                                is_normal_country = yes
+                                NOR = { is_at_war_with = root.owner has_closed_borders = root.owner } 
+                            } 
+                            count > 0
+                        }
+                    }
+                }
+                ship_event = { id = STH_distress_call_event.400 scopes = { from = event_target:distressLocation } } #Rescue Neighbour Freighter 
+            }
+            #5 = { ship_event = { id = STH_distress_call_event.500 scopes = { from = from } } #Ambush Domestic Pirates 
+            #}
+            0 = { 
+                modifier = { 
+                    add = 20
+                    owner = { 
+                        count_relation = { 
+                            limit = { 
+                                has_normal_events = yes
+                                is_normal_country = yes
+                                OR = { is_at_war_with = root.owner has_closed_borders = root.owner } 
+                            } 
+                            count > 0 
+                        }
+                    }
+                }
+                ship_event = { id = STH_distress_call_event.600 scopes = { from = event_target:distressLocation } } #Ambush Neighbour Pirates 
+            }
+            #5 = { ship_event = { id = STH_distress_call_event.700 scopes = { from = from } } #Mysterious Debris Field 
+            #}
+            #5 = { ship_event = { id = STH_distress_call_event.800 scopes = { from = from } } #Ghost ship
+            #}
+        }
+	}
+	on_fail = {
+		country_event = { id = STH_distress_call_event.100 scopes = { from = event_target:distressLocation } } #Fail
+	}
+}

@@ -1,0 +1,25 @@
+civil_war_loss_effect = {
+	if = {
+		limit = {
+			has_country_flag = united_earth
+			FROM = { is_same_value = event_target:terraPrime }
+		}
+		set_name = "NAME_terra_prime"
+		copy_ethos_and_authority = FROM
+		remove_country_flag = federation_founder
+		remove_country_flag = united_earth
+		set_country_flag = terra_prime
+		change_country_flag = { icon = { category = "trek" file = "UnitedEarth.dds" } background = { category = "backgrounds" file = "circle.dds" } colors = { "customcolor1702" "black" "null" "null" } }
+	}
+	else_if = {
+		limit = {
+			has_country_flag = vulcan_high_command
+			FROM = { is_same_value = event_target:confederacyOfSurak }
+		}
+		set_name = "NAME_confederacy_of_surak"
+		copy_ethos_and_authority = FROM
+		remove_country_flag = vulcan_high_command
+		set_country_flag = confederacy_of_surak
+		change_country_flag = { icon = { category = "trek" file = "Vulcan.dds" } background = { category = "backgrounds" file = "circle.dds" } colors = { "customcolor1702" "black" "null" "null" } }
+	}
+}

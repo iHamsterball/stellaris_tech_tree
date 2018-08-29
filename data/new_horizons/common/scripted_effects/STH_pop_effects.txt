@@ -1,0 +1,72 @@
+
+remove_plagues = {
+    remove_modifier = po_tanerian_plague
+    remove_modifier = po_laurentian_plague
+    remove_modifier = po_seripian_flu
+    remove_modifier = po_centauran_flu
+    remove_modifier = po_ynorian_pox
+    remove_modifier = po_kentaran_pox
+}
+
+widen_plagues = {
+    if = {
+        limit = { has_modifier = po_tanerian_plague }
+        planet = {
+            random_owned_pop = {
+                limit = { is_robot_pop = no has_plague = no }
+                add_modifier = { modifier = po_tanerian_plague years = 5 }
+                save_event_target_as = diseasePop
+            }
+        }
+    }
+    if = {
+        limit = { has_modifier = po_laurentian_plague }
+        planet = {
+            random_owned_pop = {
+                limit = { is_robot_pop = no has_plague = no }
+                add_modifier = { modifier = po_laurentian_plague years = 5 }
+                save_event_target_as = diseasePop
+            }
+        }
+    }
+    if = {
+        limit = { has_modifier = po_seripian_flu }
+        planet = {
+            random_owned_pop = {
+                limit = { is_robot_pop = no has_plague = no }
+                add_modifier = { modifier = po_seripian_flu years = 5 }
+                save_event_target_as = diseasePop
+            }
+        }
+    }
+    if = {
+        limit = { has_modifier = po_centauran_flu }
+        planet = {
+            random_owned_pop = {
+                limit = { is_robot_pop = no has_plague = no }
+                add_modifier = { modifier = po_centauran_flu years = 5 }
+                save_event_target_as = diseasePop
+            }
+        }
+    }
+    if = {
+        limit = { has_modifier = po_tanerian_plague }
+        planet = {
+            random_owned_pop = {
+                limit = { is_robot_pop = no has_plague = no }
+                add_modifier = { modifier = po_tanerian_plague years = 5 }
+                save_event_target_as = diseasePop
+            }
+        }
+    }
+    if = {
+        limit = { has_modifier = po_tanerian_plague }
+        planet = {
+            random_owned_pop = {
+                limit = { is_robot_pop = no has_plague = no }
+                add_modifier = { modifier = po_tanerian_plague years = 5 }
+                save_event_target_as = diseasePop
+            }
+        }
+    }
+}

@@ -1,0 +1,595 @@
+# Generic cannon corvette early game
+ship_design = {
+	name = "Early generic cannon Patrol Frigate"
+	ship_size = corvette
+	section = {
+		template = "corvette_stern_1"
+		slot = "stern"
+		component = { slot = "SMALL_GUN_01" template = "SMALL_KANG_DISRUPTOR_1" }
+		component = { slot = "SMALL_GUN_02" template = "SMALL_KANG_DISRUPTOR_1" }
+		component = { slot = "SMALL_GUN_03" template = "SMALL_KANG_DISRUPTOR_1" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_B_PHOTON_TORPEDO_1" }
+	}
+	section = {
+		template = "corvette_mid_17"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_armor_1" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_1" }
+	}	
+	required_component="REQUIRED_WARP_1_C"
+	required_component="REQUIRED_COMPUTER_1_C"
+	required_component="REQUIRED_THRUSTER_1_C"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_ARMOR_1_C"
+	required_component="REQUIRED_HULL_A_2_C"
+}
+
+###############################
+#### Game Start Generic Designs
+###############################
+
+### Federation only
+ship_design = {
+	name = "Earth Frigate"
+	ship_size = corvette
+	section = {
+		template = "corvette_stern_1"
+		slot = "stern"
+		component = { slot = "SMALL_GUN_01" template = "SMALL_PULSE_PHASER_1" }
+		component = { slot = "SMALL_GUN_02" template = "SMALL_PULSE_PHASER_1" }
+		component = { slot = "SMALL_GUN_03" template = "SMALL_PULSE_PHASER_1" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_B_SPATIAL_TORPEDO_1" }
+	}
+	section = {
+		template = "corvette_mid_17"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_armor_1" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_1" }
+	}	
+	required_component="REQUIRED_WARP_1_C"
+	required_component="REQUIRED_COMPUTER_1_C"
+	required_component="REQUIRED_THRUSTER_1_C"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_ARMOR_1_C"
+	required_component="REQUIRED_HULL_BASIC_1_C"
+}
+
+
+### Cardassian Phaser users only
+ship_design = {
+	name = "Cardassian Frigate"
+	ship_size = corvette
+	section = {
+		template = "corvette_stern_1"
+		slot = "stern"
+		component = { slot = "SMALL_GUN_01" template = "SMALL_WAVE_DISRUPTOR_PHASER_1" }
+		component = { slot = "SMALL_GUN_02" template = "SMALL_WAVE_DISRUPTOR_PHASER_1" }
+		component = { slot = "SMALL_GUN_03" template = "SMALL_WAVE_DISRUPTOR_PHASER_1" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_B_PHOTON_TORPEDO_1" }
+	}
+	section = {
+		template = "corvette_mid_17"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_armor_1" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_1" }
+	}	
+	required_component="REQUIRED_WARP_1_C"
+	required_component="REQUIRED_COMPUTER_1_C"
+	required_component="REQUIRED_THRUSTER_1_C"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_ARMOR_1_C"
+	required_component="REQUIRED_HULL_BASIC_1_C"
+}
+
+### Andorians only
+ship_design = {
+	name = "Andorian Frigate"
+	ship_size = corvette
+	section = {
+		template = "corvette_stern_1"
+		slot = "stern"
+		component = { slot = "SMALL_GUN_01" template = "SMALL_ANDORIAN_PHASER_1" }
+		component = { slot = "SMALL_GUN_02" template = "SMALL_ANDORIAN_PHASER_1" }
+		component = { slot = "SMALL_GUN_03" template = "SMALL_ANDORIAN_PHASER_1" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_B_PHOTON_TORPEDO_1" }
+	}
+	section = {
+		template = "corvette_mid_17"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_armor_1" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_1" }
+	}	
+	required_component="REQUIRED_WARP_1_C"
+	required_component="REQUIRED_COMPUTER_1_C"
+	required_component="REQUIRED_THRUSTER_1_C"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_ARMOR_1_C"
+	required_component="REQUIRED_HULL_BASIC_1_C"
+}
+
+### Basic phaser users
+ship_design = {
+	name = "Phaser Frigate"
+	ship_size = corvette
+	section = {
+		template = "corvette_stern_1"
+		slot = "stern"
+		component = { slot = "SMALL_GUN_01" template = "SMALL_BASIC_PHASER_1" }
+		component = { slot = "SMALL_GUN_02" template = "SMALL_BASIC_PHASER_1" }
+		component = { slot = "SMALL_GUN_03" template = "SMALL_BASIC_PHASER_1" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_B_PHOTON_TORPEDO_1" }
+	}
+	section = {
+		template = "corvette_mid_17"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_armor_1" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_1" }
+	}	
+	required_component="REQUIRED_WARP_1_C"
+	required_component="REQUIRED_COMPUTER_1_C"
+	required_component="REQUIRED_THRUSTER_1_C"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_ARMOR_1_C"
+	required_component="REQUIRED_HULL_BASIC_1_C"
+}
+
+### Vulcan only - seperate from Tama
+ship_design = {
+	name = "Vulcan Frigate"
+	ship_size = corvette
+	section = {
+		template = "corvette_stern_1"
+		slot = "stern"
+		component = { slot = "SMALL_GUN_01" template = "SMALL_VULCAN_PHASER_1" }
+		component = { slot = "SMALL_GUN_02" template = "SMALL_VULCAN_PHASER_1" }
+		component = { slot = "SMALL_GUN_03" template = "SMALL_VULCAN_PHASER_1" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_B_PHOTON_TORPEDO_1" }
+	}
+	section = {
+		template = "corvette_mid_17"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_armor_1" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_1" }
+	}	
+	required_component="REQUIRED_WARP_RING_1_C"
+	required_component="REQUIRED_COMPUTER_1_C"
+	required_component="REQUIRED_THRUSTER_1_C"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_ARMOR_1_C"
+	required_component="REQUIRED_HULL_BASIC_1_C"
+}
+
+### Tamarian only - seperate from Vulcan
+ship_design = {
+	name = "Tamarian Frigate"
+	ship_size = corvette
+	section = {
+		template = "corvette_stern_1"
+		slot = "stern"
+		component = { slot = "SMALL_GUN_01" template = "SMALL_VULCAN_PHASER_1" }
+		component = { slot = "SMALL_GUN_02" template = "SMALL_VULCAN_PHASER_1" }
+		component = { slot = "SMALL_GUN_03" template = "SMALL_VULCAN_PHASER_1" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_B_PHOTON_TORPEDO_1" }
+	}
+	section = {
+		template = "corvette_mid_17"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_armor_1" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_1" }
+	}	
+	required_component="REQUIRED_WARP_1_C"
+	required_component="REQUIRED_COMPUTER_1_C"
+	required_component="REQUIRED_THRUSTER_1_C"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_ARMOR_1_C"
+	required_component="REQUIRED_HULL_BASIC_1_C"
+}
+
+
+### Klingon Only
+ship_design = {
+	name = "Klingon Frigate"
+	ship_size = corvette
+	section = {
+		template = "corvette_stern_4"
+		slot = "stern"
+		component = { slot = "SMALL_GUN_01" template = "SMALL_KANG_DISRUPTOR_1" }
+		component = { slot = "SMALL_GUN_02" template = "SMALL_KANG_DISRUPTOR_1" }
+		component = { slot = "SMALL_GUN_03" template = "SMALL_KANG_DISRUPTOR_1" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_B_PHOTON_TORPEDO_1" }
+		component = { slot = "TORPEDO_02" template = "TORPEDO_B_PHOTON_TORPEDO_1" }
+	}
+	section = {
+		template = "corvette_mid_17"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_armor_1" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_1" }
+	}	
+	required_component="REQUIRED_WARP_1_C"
+	required_component="REQUIRED_COMPUTER_1_C"
+	required_component="REQUIRED_THRUSTER_1_C"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_ARMOR_1_C"
+	required_component="REQUIRED_HULL_BASIC_1_C"
+}
+
+### Romulan/Garidian only - singularity warp engine
+ship_design = {
+	name = "Romulan Frigate"
+	ship_size = corvette
+	section = {
+		template = "corvette_stern_1"
+		slot = "stern"
+		component = { slot = "SMALL_GUN_01" template = "SMALL_ANTIPROTON_DISRUPTOR_1" }
+		component = { slot = "SMALL_GUN_02" template = "SMALL_ANTIPROTON_DISRUPTOR_1" }
+		component = { slot = "SMALL_GUN_03" template = "SMALL_ANTIPROTON_DISRUPTOR_1" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_B_FUSION_TORPEDO_1" }
+	}
+	section = {
+		template = "corvette_mid_17"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_armor_1" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_1" }
+	}	
+	required_component="REQUIRED_WARP_SINGULARITY_1_C"
+	required_component="REQUIRED_COMPUTER_1_C"
+	required_component="REQUIRED_THRUSTER_1_C"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_ARMOR_1_C"
+	required_component="REQUIRED_HULL_BASIC_1_C"
+}
+
+### Basic disruptor users only
+ship_design = {
+	name = "Disruptor Frigate"
+	ship_size = corvette
+	section = {
+		template = "corvette_stern_1"
+		slot = "stern"
+		component = { slot = "SMALL_GUN_01" template = "SMALL_BASIC_DISRUPTOR_1" }
+		component = { slot = "SMALL_GUN_02" template = "SMALL_BASIC_DISRUPTOR_1" }
+		component = { slot = "SMALL_GUN_03" template = "SMALL_BASIC_DISRUPTOR_1" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_B_PHOTON_TORPEDO_1" }
+	}
+	section = {
+		template = "corvette_mid_17"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_armor_1" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_1" }
+	}	
+	required_component="REQUIRED_WARP_1_C"
+	required_component="REQUIRED_COMPUTER_1_C"
+	required_component="REQUIRED_THRUSTER_1_C"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_ARMOR_1_C"
+	required_component="REQUIRED_HULL_BASIC_1_C"
+}
+
+### Polaron users only
+ship_design = {
+	name = "Polaron Frigate"
+	ship_size = corvette
+	section = {
+		template = "corvette_stern_1"
+		slot = "stern"
+		component = { slot = "SMALL_GUN_01" template = "SMALL_REVERSE_POLARON_1" }
+		component = { slot = "SMALL_GUN_02" template = "SMALL_REVERSE_POLARON_1" }
+		component = { slot = "SMALL_GUN_03" template = "SMALL_REVERSE_POLARON_1" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_B_POLARON_TORPEDO_1" }
+	}
+	section = {
+		template = "corvette_mid_17"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_armor_1" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_1" }
+	}	
+	required_component="REQUIRED_WARP_1_C"
+	required_component="REQUIRED_COMPUTER_1_C"
+	required_component="REQUIRED_THRUSTER_1_C"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_ARMOR_1_C"
+	required_component="REQUIRED_HULL_BASIC_1_C"
+}
+
+### Basic antiproton users
+ship_design = {
+	name = "Antiproton Frigate"
+	ship_size = corvette
+	section = {
+		template = "corvette_stern_1"
+		slot = "stern"
+		component = { slot = "SMALL_GUN_01" template = "SMALL_SPREAD_ANTI_1" }
+		component = { slot = "SMALL_GUN_02" template = "SMALL_SPREAD_ANTI_1" }
+		component = { slot = "SMALL_GUN_03" template = "SMALL_SPREAD_ANTI_1" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_B_PHOTON_TORPEDO_1" }
+	}
+	section = {
+		template = "corvette_mid_17"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_armor_1" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_1" }
+	}	
+	required_component="REQUIRED_WARP_1_C"
+	required_component="REQUIRED_COMPUTER_1_C"
+	required_component="REQUIRED_THRUSTER_1_C"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_ARMOR_1_C"
+	required_component="REQUIRED_HULL_BASIC_1_C"
+}
+
+### Borg only
+ship_design = {
+	name = "Borg Probe"
+	ship_size = borg_probe
+	section = {
+		template = "borg_probe_stern_1"
+		slot = "stern"
+		component = { slot = "MEDIUM_GUN_01" template = "MEDIUM_BORG_ANTI_1" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_B_BORG_TORPEDO_2" }
+	}
+	section = {
+		template = "borg_probe_mid_2"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_borg_armor_1" }
+		component = { slot = "MEDIUM_UTILITY_1" template = "utility_medium_eps_1" }
+		component = { slot = "LARGE_UTILITY_1" template = "UTILITY_REACTOR_1_LARGE" }
+		component = { slot = "AUX_UTILITY_1" template = "utility_aux_borg_alcove_1" }
+	}	
+	required_component="REQUIRED_WARP_BORG_1_D"
+	required_component="REQUIRED_COMPUTER_BORG_1_D"
+	required_component="REQUIRED_THRUSTER_BORG_1_D"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_BORG_1_D"
+	required_component="REQUIRED_HULL_BORG_1_D"
+}
+
+### Basic tetryon users only
+ship_design = {
+	name = "Tetryon Frigate"
+	ship_size = corvette
+	section = {
+		template = "corvette_stern_1"
+		slot = "stern"
+		component = { slot = "SMALL_GUN_01" template = "SMALL_BURST_TETRYON_1" }
+		component = { slot = "SMALL_GUN_02" template = "SMALL_BURST_TETRYON_1" }
+		component = { slot = "SMALL_GUN_03" template = "SMALL_BURST_TETRYON_1" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_B_PHOTON_TORPEDO_1" }
+	}
+	section = {
+		template = "corvette_mid_17"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_armor_1" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_1" }
+	}	
+	required_component="REQUIRED_WARP_1_C"
+	required_component="REQUIRED_COMPUTER_1_C"
+	required_component="REQUIRED_THRUSTER_1_C"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_ARMOR_1_C"
+	required_component="REQUIRED_HULL_BASIC_1_C"
+}
+
+
+### Vidiian only
+ship_design = {
+	name = "Thermionic Frigate"
+	ship_size = corvette
+	section = {
+		template = "corvette_stern_1"
+		slot = "stern"
+		component = { slot = "SMALL_GUN_01" template = "SMALL_HYPER_TETRYON_1" }
+		component = { slot = "SMALL_GUN_02" template = "SMALL_HYPER_TETRYON_1" }
+		component = { slot = "SMALL_GUN_03" template = "SMALL_HYPER_TETRYON_1" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_B_PHOTON_TORPEDO_1" }
+	}
+	section = {
+		template = "corvette_mid_17"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_armor_1" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_1" }
+	}	
+	required_component="REQUIRED_WARP_1_C"
+	required_component="REQUIRED_COMPUTER_1_C"
+	required_component="REQUIRED_THRUSTER_1_C"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_ARMOR_1_C"
+	required_component="REQUIRED_HULL_BASIC_1_C"
+}
+
+### Pralor/Cravik only
+ship_design = {
+	name = "Resonance Frigate"
+	ship_size = corvette
+	section = {
+		template = "corvette_stern_1"
+		slot = "stern"
+		component = { slot = "SMALL_GUN_01" template = "SMALL_QUANTUM_TETRYON_1" }
+		component = { slot = "SMALL_GUN_02" template = "SMALL_QUANTUM_TETRYON_1" }
+		component = { slot = "SMALL_GUN_03" template = "SMALL_QUANTUM_TETRYON_1" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_B_RESONANCE_TORPEDO_1" }
+	}
+	section = {
+		template = "corvette_mid_17"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_armor_1" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_1" }
+	}	
+	required_component="REQUIRED_WARP_1_C"
+	required_component="REQUIRED_COMPUTER_1_C"
+	required_component="REQUIRED_THRUSTER_1_C"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_ARMOR_1_C"
+	required_component="REQUIRED_HULL_BASIC_1_C"
+}
+
+### Krenim only
+ship_design = {
+	name = "Krenim Frigate"
+	ship_size = corvette
+	section = {
+		template = "corvette_stern_1"
+		slot = "stern"
+		component = { slot = "SMALL_GUN_01" template = "SMALL_CHRONITON_TETRYON_1" }
+		component = { slot = "SMALL_GUN_02" template = "SMALL_CHRONITON_TETRYON_1" }
+		component = { slot = "SMALL_GUN_03" template = "SMALL_CHRONITON_TETRYON_1" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_B_TEMPORAL_TORPEDO_1" }
+	}
+	section = {
+		template = "corvette_mid_17"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_armor_1" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_1" }
+	}	
+	required_component="REQUIRED_WARP_1_C"
+	required_component="REQUIRED_COMPUTER_1_C"
+	required_component="REQUIRED_THRUSTER_1_C"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_ARMOR_1_C"
+	required_component="REQUIRED_HULL_BASIC_1_C"
+}
+
+### Basic plasma users only
+ship_design = {
+	name = "Plasma Frigate"
+	ship_size = corvette
+	section = {
+		template = "corvette_stern_1"
+		slot = "stern"
+		component = { slot = "SMALL_GUN_01" template = "SMALL_PULSAR_PLASMA_1" }
+		component = { slot = "SMALL_GUN_02" template = "SMALL_PULSAR_PLASMA_1" }
+		component = { slot = "SMALL_GUN_03" template = "SMALL_PULSAR_PLASMA_1" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_B_FUSION_TORPEDO_1" }
+	}
+	section = {
+		template = "corvette_mid_17"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_armor_1" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_1" }
+	}	
+	required_component="REQUIRED_WARP_1_C"
+	required_component="REQUIRED_COMPUTER_1_C"
+	required_component="REQUIRED_THRUSTER_1_C"
+	required_component="required_sensor_skirmisher_1"
+	required_component="REQUIRED_DEFENSE_ARMOR_1_C"
+	required_component="REQUIRED_HULL_BASIC_1_C"
+}
+
+#######################
+### STNH Fallen Empires
+#######################
+
+# Interdictor
+ship_design = {
+	name = "Fallen Sword"
+	ship_size = fallen_interdictor
+	section = {
+		template = "fallen_interdictor_stern_1"
+		slot = "stern"
+		component = { slot = "TORPEDO_01" template = "TORPEDO_C_QUANTUM_TORPEDO_6b" }
+		component = { slot = "TORPEDO_02" template = "TORPEDO_C_QUANTUM_TORPEDO_6b" }
+		component = { slot = "TORPEDO_03" template = "TORPEDO_C_QUANTUM_TORPEDO_6b" }
+		component = { slot = "TORPEDO_04" template = "TORPEDO_C_QUANTUM_TORPEDO_6b" }
+		component = { slot = "TORPEDO_05" template = "TORPEDO_C_QUANTUM_TORPEDO_6b" }
+		component = { slot = "MEDIUM_GUN_01" template = "MEDIUM_MODULATED_TETRYON_4" }
+		component = { slot = "MEDIUM_GUN_02" template = "MEDIUM_MODULATED_TETRYON_4" }
+		component = { slot = "MEDIUM_GUN_03" template = "MEDIUM_MODULATED_TETRYON_4" }
+	}
+	section = {
+		template = "fallen_interdictor_mid_2"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_generator_3" }
+		component = { slot = "SMALL_UTILITY_2" template = "utility_small_generator_3" }
+		component = { slot = "MEDIUM_UTILITY_1" template = "utility_medium_eps_4" }
+		component = { slot = "MEDIUM_UTILITY_2" template = "utility_medium_eps_4" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_3" }
+		component = { slot = "LARGE_UTILITY_2" template = "utility_large_tracking_3" }
+	}	
+	required_component="REQUIRED_WARP_EXPLORATION_8_K"
+	required_component="REQUIRED_COMPUTER_5_K"
+	required_component="REQUIRED_THRUSTER_A_7_J"
+	required_component="required_sensor_picket_2"
+	required_component="REQUIRED_DEFENSE_SHIELD_A_7_K"
+	required_component="REQUIRED_HULL_A_7_J"
+}
+
+# Assault Vessel
+ship_design = {
+	name = "Fallen Mercy"
+	ship_size = fallen_assault
+	section = {
+		template = "fallen_assault_stern_1"
+		slot = "stern"
+		component = { slot = "LARGE_GUN_01" template = "LARGE_MODULATED_TETRYON_4" }
+		component = { slot = "LARGE_GUN_02" template = "LARGE_MODULATED_TETRYON_4" }
+		component = { slot = "LARGE_GUN_03" template = "LARGE_MODULATED_TETRYON_4" }
+		component = { slot = "LARGE_GUN_04" template = "LARGE_MODULATED_TETRYON_4" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_D_QUANTUM_TORPEDO_6b" }
+		component = { slot = "TORPEDO_02" template = "TORPEDO_D_QUANTUM_TORPEDO_6b" }
+		component = { slot = "TORPEDO_03" template = "TORPEDO_D_QUANTUM_TORPEDO_6b" }
+		component = { slot = "TORPEDO_04" template = "TORPEDO_D_QUANTUM_TORPEDO_6b" }
+		component = { slot = "TORPEDO_05" template = "TORPEDO_D_QUANTUM_TORPEDO_6b" }
+	}
+	section = {
+		template = "fallen_assault_mid_2"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_generator_3" }
+		component = { slot = "SMALL_UTILITY_2" template = "utility_small_generator_3" }
+		component = { slot = "SMALL_UTILITY_3" template = "utility_small_generator_3" }
+		component = { slot = "MEDIUM_UTILITY_1" template = "utility_medium_eps_4" }
+		component = { slot = "MEDIUM_UTILITY_2" template = "utility_medium_eps_4" }
+		component = { slot = "MEDIUM_UTILITY_3" template = "utility_medium_eps_4" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_3" }
+		component = { slot = "LARGE_UTILITY_2" template = "utility_large_tracking_3" }
+		component = { slot = "LARGE_UTILITY_3" template = "utility_large_tracking_3" }
+		component = { slot = "AUX_UTILITY_1" template = "utility_large_deflector_3" }
+	}	
+	required_component="REQUIRED_WARP_EXPLORATION_8_M"
+	required_component="REQUIRED_COMPUTER_5_M"
+	required_component="REQUIRED_THRUSTER_A_7_L"
+	required_component="required_sensor_sniper_2"
+	required_component="REQUIRED_DEFENSE_SHIELD_A_7_M"
+	required_component="REQUIRED_HULL_A_7_L"
+}
+
+# Flagship
+ship_design = {
+	name = "Fallen Justice"
+	ship_size = fallen_flagship
+	section = {
+		template = "fallen_flagship_stern_1"
+		slot = "stern"
+		component = { slot = "SMALL_GUN_01" template = "SMALL_MODULATED_TETRYON_4" }
+		component = { slot = "SMALL_GUN_02" template = "SMALL_MODULATED_TETRYON_4" }
+		component = { slot = "SMALL_GUN_03" template = "SMALL_MODULATED_TETRYON_4" }
+		component = { slot = "SMALL_GUN_04" template = "SMALL_MODULATED_TETRYON_4" }
+		component = { slot = "EXTRA_LARGE_01" template = "EXTRA_LARGE_TURRET_TETRYON_5" }
+		component = { slot = "EXTRA_LARGE_02" template = "EXTRA_LARGE_TURRET_TETRYON_5" }
+		component = { slot = "EXTRA_LARGE_03" template = "EXTRA_LARGE_TURRET_TETRYON_5" }
+		component = { slot = "TORPEDO_01" template = "TORPEDO_E_QUANTUM_TORPEDO_6b" }
+		component = { slot = "TORPEDO_02" template = "TORPEDO_E_QUANTUM_TORPEDO_6b" }
+		component = { slot = "TORPEDO_03" template = "TORPEDO_E_QUANTUM_TORPEDO_6b" }
+	}
+	section = {
+		template = "fallen_flagship_mid_2"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1" template = "utility_small_generator_3" }
+		component = { slot = "SMALL_UTILITY_2" template = "utility_small_generator_3" }
+		component = { slot = "SMALL_UTILITY_3" template = "utility_small_generator_3" }
+		component = { slot = "SMALL_UTILITY_4" template = "utility_small_generator_3" }
+		component = { slot = "MEDIUM_UTILITY_1" template = "utility_medium_eps_4" }
+		component = { slot = "MEDIUM_UTILITY_2" template = "utility_medium_eps_4" }
+		component = { slot = "MEDIUM_UTILITY_3" template = "utility_medium_eps_4" }
+		component = { slot = "MEDIUM_UTILITY_4" template = "utility_medium_eps_4" }
+		component = { slot = "LARGE_UTILITY_1" template = "utility_large_tracking_3" }
+		component = { slot = "LARGE_UTILITY_2" template = "utility_large_tracking_3" }
+		component = { slot = "LARGE_UTILITY_3" template = "utility_large_tracking_3" }
+		component = { slot = "LARGE_UTILITY_4" template = "utility_large_tracking_3" }
+		component = { slot = "AUX_UTILITY_1" template = "utility_large_deflector_3" }
+	}	
+	required_component="REQUIRED_WARP_EXPLORATION_8_N"
+	required_component="REQUIRED_COMPUTER_5_N"
+	required_component="REQUIRED_THRUSTER_A_7_M"
+	required_component="required_sensor_skirmisher_2"
+	required_component="REQUIRED_DEFENSE_SHIELD_A_7_N"
+	required_component="REQUIRED_HULL_A_7_M"
+}

@@ -1,0 +1,61 @@
+# All global modifiers are here.  They are applied from certain game-features.
+#
+#icon_frame = 1 # green frame
+#icon_frame = 2 # yellow frame
+#icon_frame = 3 # red frame
+# Effects are fully scriptable here.
+
+# The names can NOT be removed or changed since the code references them
+
+
+##########################################################################
+# Star Trek Horizons Modifiers
+##########################################################################
+
+pl_medical_module = {
+	icon = "gfx/interface/icons/planet_modifiers/pl_medical_module.dds"
+	icon_frame = 1 # green frame
+	pop_growth_speed = 0.1
+}
+
+pl_religious_module = {
+	icon = "gfx/interface/icons/planet_modifiers/pl_religious_module.dds"
+	icon_frame = 1 # green frame
+	tile_resource_unity_mult = 0.1
+}
+
+pl_prison_module = {
+	icon = "gfx/interface/icons/planet_modifiers/pl_prison_module.dds"
+	icon_frame = 1 # green frame
+	planet_unrest_add = -10
+}
+
+pl_diplomacy_module = {
+	icon = "gfx/interface/icons/planet_modifiers/pl_diplomacy_module.dds"
+	icon_frame = 1 # green frame
+}
+
+pl_gambling_module = {
+	icon = "gfx/interface/icons/planet_modifiers/pl_gambling_module.dds"
+	icon_frame = 1 # green frame
+}
+
+sh_cloak_1 = {
+	ship_weapon_damage = 0.30
+}
+sh_cloak_2 = {
+	ship_weapon_damage = 0.35
+}
+sh_cloak_3 = {
+	ship_weapon_damage = 0.40
+}
+sh_cloak_4 = {
+	ship_weapon_damage = 0.45
+}
+sh_cloak_5 = {
+	ship_weapon_damage = 0.50
+}
+sh_cloak_fed = {
+	ship_weapon_damage = 0.25
+}
+sh_recent_cloak = { }

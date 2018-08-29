@@ -1,0 +1,117 @@
+#Antedian
+antedian_homeworld = {
+	name = "Antede"
+	class = "sc_k"
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 88
+	}
+	flags = { antedian_homeworld }
+	usage = custom_empire
+	max_instances = 1
+	planet = {
+		name = "Antede"
+		class = "pc_k_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 35
+		has_ring = no
+	}
+	planet = {		
+		count = 2
+		orbit_distance = { min = 25 max = 50 }	
+		class = random_non_colonizable	
+		size = { min = 10 max = 20 }	
+	}		
+	planet = {
+		name = "Antede III"
+		class = pc_ocean
+		orbit_distance = 14.5
+		orbit_angle = 220
+		size = { min = 22 max = 24 }
+		starting_planet = yes
+		has_ring = no
+		tile_blockers = none
+		modifiers = none
+		init_effect = {
+			prevent_anomaly = yes
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = antedian_shoals } } }
+				create_species = {
+					class = ATE
+					portrait = antedian
+					homeworld = THIS
+					traits = {
+						trait="trait_catatonia"
+						trait="trait_rapid_breeders"
+						trait="trait_agrarian"
+						trait="trait_nonadaptive"
+						trait="trait_deviants"
+						ideal_planet_class = "pc_ocean"
+					}
+				}
+				last_created_species = { save_global_event_target_as = antedianSpecies }
+				create_country = {
+					name = "NAME_antedian_shoals"
+					ship_prefix = ""
+					type = default
+					ignore_initial_colony_error = yes
+					civics = { civic = civic_shadow_council civic = civic_antede_1 }
+					authority = auth_democratic
+					name_list = "antedian"
+					ethos = {
+						ethic="ethic_egalitarian"
+						ethic="ethic_materialist"
+						ethic="ethic_pacifist"
+					}
+					species = event_target:antedianSpecies
+					flag = {
+						icon = { category = "trek" file = "antedian.dds" }
+						background = { category = "backgrounds" file = "00_solid.dds" }
+						colors = { "customcolor1255" "customcolor1801" "null" "null" }
+					}
+					ship_prefix = "SAV"
+					effect = {
+						set_graphical_culture = generic_03					
+						set_country_flag = antedian_shoals
+						set_country_flag = custom_start_screen
+						set_country_flag = generic_ent
+						set_country_flag = alpha_beta_empire
+						set_country_flag = init_spawned
+						set_country_flag = sth_medium_galaxy
+						save_global_event_target_as = antedian_shoals
+					}
+				}
+				create_colony = { owner = event_target:antedian_shoals species = event_target:antedianSpecies ethos = owner }
+			}
+			set_capital = yes
+			random_country = {
+				limit = { has_country_flag = antedian_shoals }
+				save_global_event_target_as = antedian_shoals
+				add_appropriate_start_techs = yes
+				give_technology = {	tech = "tech_society_02335" message = no }
+				species = { save_global_event_target_as = antedianSpecies }
+				set_country_type = minorRace
+			}
+			set_owner = event_target:antedian_shoals
+			generate_minor_empire_start_buildings = yes
+			generate_minor_empire_start_pops = yes
+			generate_major_empire_start_fleets = yes
+			set_name = "Antede III"
+		}
+	}
+	planet = {
+		count = 1
+		orbit_distance = { min = 18 max = 25 }
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }	
+		change_orbit = @base_moon_distance
+		moon = {
+			count = { min = 0 max = 1 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+
+}

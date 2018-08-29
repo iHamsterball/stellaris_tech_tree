@@ -1,0 +1,229 @@
+##########################################################################
+# Empire Policies
+#
+# #####
+#
+# AI:
+# Base AI-weight is 100, if unchanged
+# AI will grab whatever policy-option has the highest weight
+#
+# #####
+#
+##########################################################################
+
+economic_policy = {
+
+	potential = {
+		has_technology = tech_society_biology_1021
+	}
+
+	option = {
+		name = "policy_import_mineral"
+		policy_flags = { policy_flag_import_mineral }
+		modifier = {}
+	}
+	option = {
+		name = "policy_import_food"
+		policy_flags = { policy_flag_import_food }
+		modifier = {}
+	}
+	option = {
+		name = "policy_import_research"
+		policy_flags = { policy_flag_import_research }
+		modifier = {}
+	}
+	option = {
+		name = "policy_import_unity"
+		policy_flags = { policy_flag_import_unity }
+		modifier = {}
+	}
+	option = {
+		name = "policy_import_influence"
+		policy_flags = { policy_flag_import_influence }
+		modifier = {}
+	}
+	option = { ### unique Ferengi policy
+		name = "policy_import_prosperity"
+		prerequisites = { tech_society_rules_376 }
+		policy_flags = { policy_flag_import_prosperity }
+		modifier = {}
+	}
+}
+
+health_policy = {
+
+	potential = {
+		has_technology = tech_frontier_health
+	}
+	
+	option = {
+		name = "policy_health_university"
+		policy_flags = { policy_flag_health_university }
+		modifier = {}
+	}
+	option = {
+		name = "policy_health_private"
+		policy_flags = { policy_flag_health_private }
+		modifier = {}
+	}
+	option = {
+		name = "policy_health_social"
+		policy_flags = { policy_flag_health_social }
+		modifier = {}
+	}
+	option = {
+		name = "policy_health_growth"
+		policy_flags = { policy_flag_health_growth }
+		modifier = {}
+	}
+}
+
+education_policy = {
+	
+	potential = {
+		has_technology = tech_society_interstellar_446
+	}
+	
+	option = {
+		name = "policy_edu_accelerated"
+		policy_flags = { policy_flag_edu_accelerated }
+		modifier = {}
+	}
+	option = {
+		name = "policy_edu_private"
+		policy_flags = { policy_flag_edu_private }
+		valid = { is_mechanical_empire = no }
+		modifier = {}
+	}
+	option = {
+		name = "policy_edu_social"
+		policy_flags = { policy_flag_edu_social }
+		modifier = {}
+	}
+	option = {
+		name = "policy_edu_religious"
+		policy_flags = { policy_flag_edu_religious }
+		modifier = {}
+	}
+	option = {
+		name = "policy_edu_propoganda"
+		policy_flags = { policy_flag_edu_propoganda }
+		modifier = {}
+	}
+}
+
+de_assimilation_policy = {
+	potential = { 
+		is_assimilator = no
+		any_country = {
+			is_assimilator = yes
+			has_communications = root
+		}
+	}
+	allow = { always = yes }
+	option = {
+		name = "drone_deactivation"
+		policy_flags = { drone_deactivation }
+		valid = { always = yes }
+		AI_weight = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = "drone_de_assimilation_1"
+		policy_flags = { drone_de_assimilation_1 }
+		prerequisites = { tech_deassimilate_1 }
+		AI_weight = {
+			factor = 2
+		}
+	}
+	option = {
+		name = "drone_de_assimilation_2"
+		policy_flags = { drone_de_assimilation_2 }
+		prerequisites = { tech_deassimilate_2 }
+		AI_weight = {
+			factor = 3
+		}
+	}
+}
+
+changeling_detection_policy = {
+	potential = { 
+		is_changeling_empire = no 
+		has_country_flag = changelingDetected
+	}
+	allow = { 
+		has_country_flag = changelingDetected
+	}
+	option = {
+		name = "changeling_detection_1"
+		policy_flags = { changeling_detection_1 }
+		modifier = { }
+		valid = { always = yes }
+		AI_weight = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = "changeling_detection_2"
+		policy_flags = { changeling_detection_2 }
+		modifier = { 
+			planet_unrest_add = 10 
+			tile_resource_minerals_mult = -0.025
+			tile_resource_energy_mult = -0.025
+		}
+		# prerequisites = { tech_deassimilate_1 }
+		AI_weight = {
+			factor = 2
+		}
+	}
+	option = {
+		name = "changeling_detection_3"
+		policy_flags = { changeling_detection_3 }
+		modifier = { 
+			planet_unrest_add = 25 
+			tile_resource_minerals_mult = -0.05
+			tile_resource_energy_mult = -0.05
+		}
+		# prerequisites = { tech_deassimilate_2 }
+		AI_weight = {
+			factor = 1
+		}
+	}
+}
+
+
+ufp_policy = {
+	potential = {
+		has_swapped_tradition = tr_federation_2
+		has_country_flag = united_federation_of_planets
+	}
+	
+	option = {
+		name = "policy_ufp_war"
+		policy_flags = { policy_flag_ufp_war }
+		modifier = {}
+	}
+	option = {
+		name = "policy_ufp_humanitarian"
+		policy_flags = { policy_flag_ufp_humanitarian }
+		modifier = {}
+	}
+	option = {
+		name = "policy_ufp_economic"
+		policy_flags = { policy_flag_ufp_economic }
+		modifier = {}
+	}
+	option = {
+		name = "policy_ufp_tech"
+		policy_flags = { policy_flag_ufp_tech }
+		modifier = {}
+	}
+	option = {
+		name = "policy_ufp_cultural"
+		policy_flags = { policy_flag_ufp_cultural }
+		modifier = {}
+	}
+}

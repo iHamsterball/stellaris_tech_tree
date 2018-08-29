@@ -1,0 +1,76 @@
+# Omicron Theta
+omicron_theta_b = {										
+	name = "Omicron Theta"									
+	class = sc_g
+	flags = { hostile_system elite_system }	
+	planet = { name = "Omicron Theta" class = star orbit_distance = 0 orbit_angle = 1 size = { min = 20 max = 30 } has_ring = no }									
+	change_orbit = 35
+	planet = { 
+		orbit_angle = 70 size = { min = 10 max = 16 }								
+		moon = { count = { min = 0 max = 2 } class = random	orbit_distance = { min = 6 max = 8 } size = { min = 1 max = 6 } }								
+	}
+	change_orbit = 30
+	planet = {									
+		orbit_angle = 130
+		size = { min = 10 max = 16 }								
+		moon = { count = { min = 0 max = 2 } class = random orbit_distance = { min = 6 max = 8 } size = { min = 1 max = 6 } }								
+	}
+	change_orbit = 20
+	planet = {									
+		class = random								
+		orbit_angle = 60
+		size = { min = 10 max = 16 }								
+		moon = {								
+			count = { min = 0 max = 2 }							
+			class = random							
+			orbit_distance = { min = 6 max = 8 }							
+			size = { min = 1 max = 6 }							
+		}								
+	}
+	change_orbit = 30
+	planet = {									
+		name = "Omicron Theta"
+		flags = { omicron_theta_planet }
+		class = "pc_desert"
+		orbit_angle = 100
+		size = { min = 20 max = 25 }	
+		has_ring = no
+		tile_blockers = none
+		init_effect = {
+			add_anomaly = STH_the_android_category
+			random_tile = { limit = { has_blocker = no has_building = no } set_blocker = "tb_mountain_range" add_deposit = d_vast_engineering_deposit }
+			random_tile = { limit = { has_blocker = no has_building = no } set_blocker = "tb_dense_jungle" add_deposit = d_vast_society_deposit }
+			random_tile = { limit = { has_blocker = no has_building = no } set_blocker = "tb_mountain_range" add_deposit = d_vast_mineral_deposit }
+			random_tile = { limit = { has_blocker = no has_building = no } set_blocker = "tb_dense_jungle" add_deposit = d_vast_energy_deposit }
+			random_tile = { limit = { has_blocker = no has_building = no } set_blocker = "tb_mountain_range" }
+			random_tile = { limit = { has_blocker = no has_building = no } set_blocker = "tb_dense_jungle" }		
+			random_tile = { limit = { has_blocker = no has_building = no } set_blocker = "tb_active_volcano" add_deposit = d_vast_physics_deposit }
+			random_tile = { limit = { has_blocker = no has_building = no } add_deposit = d_vast_farmland_deposit }
+			random_tile = { limit = { has_blocker = no has_building = no } add_deposit = d_vast_farmland_deposit }
+			random_tile = { limit = { has_blocker = no has_building = no } add_deposit = d_rich_mineral_deposit }
+			random_tile = { limit = { has_blocker = no has_building = no } add_deposit = d_rich_energy_deposit }
+			create_crystal_country = yes
+			event_target:crystal_country = {
+				create_fleet = {
+					name = "Crystalline Entity"
+					effect = {
+						set_owner = event_target:crystal_country
+						create_ship = { name = "NAME_Crystal_Nidus" design = "NAME_Crystal_Nidus" }
+						set_location = { target = prevprev distance = 40 angle = 0 }
+					}
+				}
+			}
+		}
+		moon = { name = "Omicron Theta a" orbit_distance = { min = 6 max = 8 } size = { min = 1 max = 6 } }								
+		moon = { name = "Omicron Theta b" orbit_distance = { min = 6 max = 8 } size = { min = 1 max = 6 } }										
+	}																	
+	change_orbit = { min = 40 max = 50}									
+	planet = {									
+		count = { min = 0 max = 2}								
+		orbit_distance = {min = 20 max = 30}								
+		class = random								
+		orbit_angle = { min = 90 max = 270 }								
+		size = { min = 12 max = 20 }								
+		moon = { count = { min = 0 max = 2 } class = random orbit_distance = { min = 6 max = 10 } size = { min = 5 max = 10 } }								
+	}	
+}

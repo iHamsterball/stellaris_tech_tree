@@ -1,0 +1,43 @@
+# see README.txt for example
+
+borg_transwarp_conduit_0 = {
+	entity = "transwarp_conduit_entity"
+	construction_entity = "transwarp_conduit_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	build_outside_gravity_well = no
+	show_galactic_map_icon = yes
+	build_time = 1080
+	build_cost = {
+		minerals = 10000
+		energy = 10000
+		influence = 100
+	}
+	construction_blocks_others = no
+	bypass_type = gateway
+	potential = { is_assimilator = yes has_technology = tech_physics_01276 }
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_no_existing_gateway"
+			NOR = {
+				has_megastructure = borg_transwarp_conduit_0
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_tech_physics_01276"
+			from = {
+				has_technology = tech_physics_01276
+			}
+		}
+	}
+	placement_rules = {
+		planet_possible = { is_star = yes }
+	}
+	ai_weight = { }
+	on_build_start = {}
+	on_build_cancel = {}	
+	on_build_complete = {
+		from = { add_seen_bypass_type = gateway }
+		activate_gateway = fromfrom
+	}
+}

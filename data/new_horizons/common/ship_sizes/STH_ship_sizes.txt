@@ -1,0 +1,3593 @@
+### Emette
+fed_frigate_emette = {
+      max_speed = 120
+      acceleration = 0.38
+      rotation_speed = 0.22
+      max_hitpoints = 750
+      size_multiplier = 4
+      fleet_slot_size = 1
+      graphical_culture = {  "federation"  }
+      modifier = {
+            ship_evasion_mult = -0.1
+      }
+      icon_frame = 2
+      base_buildtime = 60
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+	potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_frigate_emette NOT = { has_country_flag = drydock_fed_frigate_emette } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_frigate_emette } } }
+      prerequisites = { "tech_emette_frigate" }
+      combat_disengage_chance = 0.5
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_frigate_emette"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Engle
+   fed_frigate_engle ={
+      max_speed = 110
+      acceleration = 0.37
+      rotation_speed = 0.21
+      max_hitpoints = 1000
+      size_multiplier = 5
+      fleet_slot_size = 2
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_evasion_mult = -0.2
+      }
+      icon_frame = 2
+      base_buildtime = 80
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_frigate_engle NOT = { has_country_flag = drydock_fed_frigate_engle } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_frigate_engle } } }
+      prerequisites = { "tech_engineering_03508" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_frigate_engle"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Saladin
+   fed_frigate_saladin ={
+      max_speed = 110
+      acceleration = 0.37
+      rotation_speed = 0.21
+      max_hitpoints = 1000
+      size_multiplier = 5
+      fleet_slot_size = 2
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_evasion_mult = -0.2
+      }
+      icon_frame = 2
+      base_buildtime = 80
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_frigate_saladin NOT = { has_country_flag = drydock_fed_frigate_saladin } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_frigate_saladin } } }
+      prerequisites = { "tech_engineering_03510" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_frigate_saladin"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Akula
+   fed_frigate_akula ={
+      max_speed = 105
+      acceleration = 0.35
+      rotation_speed = 0.2
+      max_hitpoints = 1000
+      size_multiplier = 7
+      fleet_slot_size = 2
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 250
+         ship_evasion_mult = -0.25
+      }
+      icon_frame = 2
+      base_buildtime = 140
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_frigate_akula NOT = { has_country_flag = drydock_fed_frigate_akula } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_frigate_akula } } }
+      prerequisites = { "tech_engineering_03512" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_frigate_akula"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Challenger
+   fed_frigate_challenger ={
+      max_speed = 105
+      acceleration = 0.35
+      rotation_speed = 0.2
+      max_hitpoints = 1000
+      size_multiplier = 7
+      fleet_slot_size = 2
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 250
+         ship_evasion_mult = -0.25
+      }
+      icon_frame = 2
+      base_buildtime = 140
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_frigate_challenger NOT = { has_country_flag = drydock_fed_frigate_challenger } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_frigate_challenger } } }
+      prerequisites = { "tech_engineering_03514" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_frigate_challenger"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Intrepid_Type
+   fed_light_cruiser_intrepid_type ={
+      max_speed = 105
+      acceleration = 0.35
+      rotation_speed = 0.2
+      max_hitpoints = 1750
+      size_multiplier = 9
+      fleet_slot_size = 2
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 250
+         ship_evasion_mult = -0.25
+      }
+      icon_frame = 2
+      base_buildtime = 180
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_light_cruiser_intrepid_type NOT = { has_country_flag = drydock_fed_light_cruiser_intrepid_type } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_light_cruiser_intrepid_type } } }
+      prerequisites = { "tech_engineering_03502" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_light_cruiser_intrepid_type"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Bonaventure
+   fed_light_cruiser_bonaventure ={
+      max_speed = 100
+      acceleration = 0.34
+      rotation_speed = 0.19
+      max_hitpoints = 1750
+      size_multiplier = 11
+      fleet_slot_size = 2
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 750
+         ship_evasion_mult = -0.3
+      }
+      icon_frame = 2
+      base_buildtime = 220
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_light_cruiser_bonaventure NOT = { has_country_flag = drydock_fed_light_cruiser_bonaventure } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_light_cruiser_bonaventure } } }
+      prerequisites = { "tech_engineering_03505" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_light_cruiser_bonaventure"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Shepard
+   fed_light_cruiser_shepard ={
+      max_speed = 100
+      acceleration = 0.34
+      rotation_speed = 0.19
+      max_hitpoints = 1500
+      size_multiplier = 11
+      fleet_slot_size = 2
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 1000
+         ship_evasion_mult = -0.3
+      }
+      icon_frame = 2
+      base_buildtime = 220
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_light_cruiser_shepard NOT = { has_country_flag = drydock_fed_light_cruiser_shepard } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_light_cruiser_shepard } } }
+      prerequisites = { "tech_engineering_03508" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_light_cruiser_shepard"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Kelvin
+   fed_light_cruiser_kelvin ={
+      max_speed = 80
+      acceleration = 0.29
+      rotation_speed = 0.16
+      max_hitpoints = 4000
+      size_multiplier = 20
+      fleet_slot_size = 3
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 500
+         ship_evasion_mult = -0.5
+      }
+      icon_frame = 2
+      base_buildtime = 420
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_light_cruiser_kelvin NOT = { has_country_flag = drydock_fed_light_cruiser_kelvin } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_light_cruiser_kelvin } } }
+      prerequisites = { "tech_engineering_03510" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_light_cruiser_kelvin"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Talas
+   fed_light_cruiser_talas ={
+      max_speed = 90
+      acceleration = 0.32
+      rotation_speed = 0.18
+      max_hitpoints = 2000
+      size_multiplier = 14
+      fleet_slot_size = 3
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 1000
+         ship_evasion_mult = -0.4
+      }
+      icon_frame = 2
+      base_buildtime = 280
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_light_cruiser_talas NOT = { has_country_flag = drydock_fed_light_cruiser_talas } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_light_cruiser_talas } } }
+      prerequisites = { "tech_engineering_03519" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_light_cruiser_talas"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### T_Pol
+   fed_light_cruiser_t_pol ={
+      max_speed = 90
+      acceleration = 0.32
+      rotation_speed = 0.18
+      max_hitpoints = 2500
+      size_multiplier = 14
+      fleet_slot_size = 3
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 500
+         ship_evasion_mult = -0.4
+      }
+      icon_frame = 2
+      base_buildtime = 280
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_light_cruiser_t_pol NOT = { has_country_flag = drydock_fed_light_cruiser_t_pol } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_light_cruiser_t_pol } } }
+      prerequisites = { "tech_engineering_03520" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_light_cruiser_t_pol"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Gral
+   fed_light_cruiser_gral ={
+      max_speed = 90
+      acceleration = 0.32
+      rotation_speed = 0.18
+      max_hitpoints = 1500
+      size_multiplier = 14
+      fleet_slot_size = 3
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 1500
+         ship_evasion_mult = -0.4
+      }
+      icon_frame = 2
+      base_buildtime = 280
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_light_cruiser_gral NOT = { has_country_flag = drydock_fed_light_cruiser_gral } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_light_cruiser_gral } } }
+      prerequisites = { "tech_engineering_03521" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_light_cruiser_gral"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Centaur
+   fed_light_cruiser_centaur ={
+      max_speed = 90
+      acceleration = 0.32
+      rotation_speed = 0.18
+      max_hitpoints = 2500
+      size_multiplier = 14
+      fleet_slot_size = 3
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 750
+         ship_evasion_mult = -0.4
+      }
+      icon_frame = 2
+      base_buildtime = 280
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_light_cruiser_centaur NOT = { has_country_flag = drydock_fed_light_cruiser_centaur } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_light_cruiser_centaur } } }
+      prerequisites = { "tech_engineering_03511" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_light_cruiser_centaur"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Curry_type
+   fed_light_cruiser_curry_type ={
+      max_speed = 90
+      acceleration = 0.32
+      rotation_speed = 0.18
+      max_hitpoints = 2250
+      size_multiplier = 15
+      fleet_slot_size = 3
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 1000
+         ship_evasion_mult = -0.4
+      }
+      icon_frame = 2
+      base_buildtime = 300
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_light_cruiser_curry_type NOT = { has_country_flag = drydock_fed_light_cruiser_curry_type } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_light_cruiser_curry_type } } }
+      prerequisites = { "tech_engineering_03513" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_light_cruiser_curry_type"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Niagara
+   fed_light_cruiser_niagara ={
+      max_speed = 90
+      acceleration = 0.32
+      rotation_speed = 0.18
+      max_hitpoints = 2000
+      size_multiplier = 15
+      fleet_slot_size = 3
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 1250
+         ship_evasion_mult = -0.4
+      }
+      icon_frame = 2
+      base_buildtime = 300
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_light_cruiser_niagara NOT = { has_country_flag = drydock_fed_light_cruiser_niagara } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_light_cruiser_niagara } } }
+      prerequisites = { "tech_engineering_03514" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_light_cruiser_niagara"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Steamrunner
+   fed_light_cruiser_steamrunner ={
+      max_speed = 100
+      acceleration = 0.34
+      rotation_speed = 0.19
+      max_hitpoints = 2000
+      size_multiplier = 13
+      fleet_slot_size = 2
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 750
+         ship_evasion_mult = -0.3
+      }
+      icon_frame = 2
+      base_buildtime = 260
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_light_cruiser_steamrunner NOT = { has_country_flag = drydock_fed_light_cruiser_steamrunner } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_light_cruiser_steamrunner } } }
+      prerequisites = { "tech_engineering_03517" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_light_cruiser_steamrunner"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Saber
+   fed_light_cruiser_saber ={
+      max_speed = 100
+      acceleration = 0.34
+      rotation_speed = 0.19
+      max_hitpoints = 750
+      size_multiplier = 13
+      fleet_slot_size = 2
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 2000
+         ship_evasion_mult = -0.3
+      }
+      icon_frame = 2
+      base_buildtime = 260
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_light_cruiser_saber NOT = { has_country_flag = drydock_fed_light_cruiser_saber } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_light_cruiser_saber } } }
+      prerequisites = { "tech_engineering_03517" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_light_cruiser_saber"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### NX
+   fed_explorer_nx ={
+      max_speed = 105
+      acceleration = 0.35
+      rotation_speed = 0.2
+      max_hitpoints = 2000
+      size_multiplier = 11
+      fleet_slot_size = 2
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 500
+         ship_evasion_mult = -0.25
+      }
+      icon_frame = 2
+      base_buildtime = 220
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_explorer_nx NOT = { has_country_flag = drydock_fed_explorer_nx } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_explorer_nx } } }
+      prerequisites = { "tech_engineering_03501" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_explorer_nx"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_destroyer"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Hoover
+   fed_explorer_hoover ={
+      max_speed = 100
+      acceleration = 0.34
+      rotation_speed = 0.19
+      max_hitpoints = 3000
+      size_multiplier = 14
+      fleet_slot_size = 2
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 250
+         ship_evasion_mult = -0.3
+      }
+      icon_frame = 2
+      base_buildtime = 280
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_explorer_hoover NOT = { has_country_flag = drydock_fed_explorer_hoover } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_explorer_hoover } } }
+      prerequisites = { "tech_engineering_03507" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_explorer_hoover"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_destroyer"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Cardenas
+   fed_explorer_cardenas ={
+      max_speed = 90
+      acceleration = 0.32
+      rotation_speed = 0.18
+      max_hitpoints = 3000
+      size_multiplier = 17
+      fleet_slot_size = 3
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 750
+         ship_evasion_mult = -0.4
+      }
+      icon_frame = 2
+      base_buildtime = 360
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_explorer_cardenas NOT = { has_country_flag = drydock_fed_explorer_cardenas } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_explorer_cardenas } } }
+      prerequisites = { "tech_engineering_03507" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_explorer_cardenas"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_destroyer"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Miranda
+   fed_explorer_miranda ={
+      max_speed = 90
+      acceleration = 0.32
+      rotation_speed = 0.18
+      max_hitpoints = 3000
+      size_multiplier = 17
+      fleet_slot_size = 3
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 1000
+         ship_evasion_mult = -0.4
+      }
+      icon_frame = 2
+      base_buildtime = 360
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_explorer_miranda NOT = { has_country_flag = drydock_fed_explorer_miranda } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_explorer_miranda } } }
+      prerequisites = { "tech_engineering_03510" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_explorer_miranda"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_destroyer"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### New_Orleans
+   fed_explorer_new_orleans ={
+      max_speed = 90
+      acceleration = 0.32
+      rotation_speed = 0.18
+      max_hitpoints = 3250
+      size_multiplier = 19
+      fleet_slot_size = 3
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 1000
+         ship_evasion_mult = -0.4
+      }
+      icon_frame = 2
+      base_buildtime = 400
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_explorer_new_orleans NOT = { has_country_flag = drydock_fed_explorer_new_orleans } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_explorer_new_orleans } } }
+      prerequisites = { "tech_engineering_03514" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_explorer_new_orleans"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_destroyer"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Kiri_Kin_Tha
+   fed_explorer_kiri_kin_tha ={
+      max_speed = 80
+      acceleration = 0.29
+      rotation_speed = 0.16
+      max_hitpoints = 4500
+      size_multiplier = 27
+      fleet_slot_size = 3
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 1500
+         ship_evasion_mult = -0.5
+      }
+      icon_frame = 2
+      base_buildtime = 600
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_explorer_kiri_kin_tha NOT = { has_country_flag = drydock_fed_explorer_kiri_kin_tha } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_explorer_kiri_kin_tha } } }
+      prerequisites = { "tech_engineering_03522" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_explorer_kiri_kin_tha"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_destroyer"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Intrepid_class
+   fed_explorer_intrepid_class ={
+      max_speed = 90
+      acceleration = 0.32
+      rotation_speed = 0.18
+      max_hitpoints = 3250
+      size_multiplier = 20
+      fleet_slot_size = 3
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 1000
+         ship_evasion_mult = -0.4
+      }
+      icon_frame = 2
+      base_buildtime = 420
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_explorer_intrepid_class NOT = { has_country_flag = drydock_fed_explorer_intrepid_class } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_explorer_intrepid_class } } }
+      prerequisites = { "tech_engineering_03517" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_explorer_intrepid_class"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_destroyer"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Poseidon
+   fed_mmv_poseidon ={
+      max_speed = 105
+      acceleration = 0.35
+      rotation_speed = 0.2
+      max_hitpoints = 2000
+      size_multiplier = 10
+      fleet_slot_size = 2
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 500
+         ship_evasion_mult = -0.25
+      }
+      icon_frame = 2
+      base_buildtime = 200
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_mmv_poseidon NOT = { has_country_flag = drydock_fed_mmv_poseidon } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_mmv_poseidon } } }
+      prerequisites = { "tech_engineering_03503" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_mmv_poseidon"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_cruiser"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Walker
+   fed_mmv_walker ={
+      max_speed = 85
+      acceleration = 0.31
+      rotation_speed = 0.17
+      max_hitpoints = 3500
+      size_multiplier = 17
+      fleet_slot_size = 3
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 750
+         ship_evasion_mult = -0.45
+      }
+      icon_frame = 2
+      base_buildtime = 360
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_mmv_walker NOT = { has_country_flag = drydock_fed_mmv_walker } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_mmv_walker } } }
+      prerequisites = { "tech_engineering_03507" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_mmv_walker"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_cruiser"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Constellation
+   fed_mmv_constellation ={
+      max_speed = 70
+      acceleration = 0.28
+      rotation_speed = 0.15
+      max_hitpoints = 5500
+      size_multiplier = 27
+      fleet_slot_size = 4
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 1000
+         ship_evasion_mult = -0.6
+      }
+      icon_frame = 2
+      base_buildtime = 600
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_mmv_constellation NOT = { has_country_flag = drydock_fed_mmv_constellation } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_mmv_constellation } } }
+      prerequisites = { "tech_engineering_03511" }
+      combat_disengage_chance = 1.1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_mmv_constellation"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_cruiser"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Nebula
+   fed_mmv_nebula ={
+      max_speed = 65
+      acceleration = 0.26
+      rotation_speed = 0.14
+      max_hitpoints = 7000
+      size_multiplier = 34
+      fleet_slot_size = 4
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 1250
+         ship_evasion_mult = -0.65
+      }
+      icon_frame = 2
+      base_buildtime = 780
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_mmv_nebula NOT = { has_country_flag = drydock_fed_mmv_nebula } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_mmv_nebula } } }
+      prerequisites = { "tech_engineering_03514" }
+      combat_disengage_chance = 1.1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_mmv_nebula"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_cruiser"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Akira
+   fed_mmv_akira ={
+      max_speed = 70
+      acceleration = 0.28
+      rotation_speed = 0.15
+      max_hitpoints = 5500
+      size_multiplier = 31
+      fleet_slot_size = 4
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 1500
+         ship_evasion_mult = -0.6
+      }
+      icon_frame = 2
+      base_buildtime = 700
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_mmv_akira NOT = { has_country_flag = drydock_fed_mmv_akira } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_mmv_akira } } }
+      prerequisites = { "tech_engineering_03517" }
+      combat_disengage_chance = 1.1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_mmv_akira"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_cruiser"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Norway
+   fed_mmv_norway ={
+      max_speed = 90
+      acceleration = 0.32
+      rotation_speed = 0.18
+      max_hitpoints = 2500
+      size_multiplier = 17
+      fleet_slot_size = 3
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 1500
+         ship_evasion_mult = -0.4
+      }
+      icon_frame = 2
+      base_buildtime = 360
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_mmv_norway NOT = { has_country_flag = drydock_fed_mmv_norway } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_mmv_norway } } }
+      prerequisites = { "tech_engineering_03517" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_mmv_norway"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_cruiser"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Ares
+   fed_heavy_cruiser_ares ={
+      max_speed = 85
+      acceleration = 0.31
+      rotation_speed = 0.17
+      max_hitpoints = 3000
+      size_multiplier = 24
+      fleet_slot_size = 3
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 500
+         ship_evasion_mult = -0.45
+      }
+      icon_frame = 2
+      base_buildtime = 580
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_heavy_cruiser_ares NOT = { has_country_flag = drydock_fed_heavy_cruiser_ares } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_heavy_cruiser_ares } } }
+      prerequisites = { "tech_engineering_03506" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_heavy_cruiser_ares"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Nimitz
+   fed_heavy_cruiser_nimitz ={
+      max_speed = 90
+      acceleration = 0.32
+      rotation_speed = 0.18
+      max_hitpoints = 2250
+      size_multiplier = 20
+      fleet_slot_size = 3
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 750
+         ship_evasion_mult = -0.4
+      }
+      icon_frame = 2
+      base_buildtime = 480
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_heavy_cruiser_nimitz NOT = { has_country_flag = drydock_fed_heavy_cruiser_nimitz } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_heavy_cruiser_nimitz } } }
+      prerequisites = { "tech_engineering_03506" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_heavy_cruiser_nimitz"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Constitution
+   fed_heavy_cruiser_constitution ={
+      max_speed = 80
+      acceleration = 0.29
+      rotation_speed = 0.16
+      max_hitpoints = 3500
+      size_multiplier = 29
+      fleet_slot_size = 3
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 1000
+         ship_evasion_mult = -0.5
+      }
+      icon_frame = 2
+      base_buildtime = 720
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_heavy_cruiser_constitution NOT = { has_country_flag = drydock_fed_heavy_cruiser_constitution } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_heavy_cruiser_constitution } } }
+      prerequisites = { "tech_engineering_03509" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_heavy_cruiser_constitution"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Sovereign
+   fed_heavy_cruiser_sovereign ={
+      max_speed = 65
+      acceleration = 0.26
+      rotation_speed = 0.14
+      max_hitpoints = 5750
+      size_multiplier = 50
+      fleet_slot_size = 4
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 1250
+         ship_evasion_mult = -0.65
+      }
+      icon_frame = 2
+      base_buildtime = 1320
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_heavy_cruiser_sovereign NOT = { has_country_flag = drydock_fed_heavy_cruiser_sovereign } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_heavy_cruiser_sovereign } } }
+      prerequisites = { "tech_engineering_03517" }
+      combat_disengage_chance = 1.1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_heavy_cruiser_sovereign"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Crossfield
+   fed_advanced_cruiser_crossfield ={
+      max_speed = 85
+      acceleration = 0.31
+      rotation_speed = 0.17
+      max_hitpoints = 2500
+      size_multiplier = 27
+      fleet_slot_size = 3
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 750
+         ship_evasion_mult = -0.45
+      }
+      icon_frame = 2
+      base_buildtime = 720
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_advanced_cruiser_crossfield NOT = { has_country_flag = drydock_fed_advanced_cruiser_crossfield } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_advanced_cruiser_crossfield } } }
+      prerequisites = { "tech_engineering_03508" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_advanced_cruiser_crossfield"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Excelsior
+   fed_advanced_cruiser_excelsior ={
+      max_speed = 70
+      acceleration = 0.28
+      rotation_speed = 0.15
+      max_hitpoints = 4000
+      size_multiplier = 42
+      fleet_slot_size = 4
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 750
+         ship_evasion_mult = -0.6
+      }
+      icon_frame = 2
+      base_buildtime = 1180
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_advanced_cruiser_excelsior NOT = { has_country_flag = drydock_fed_advanced_cruiser_excelsior } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_advanced_cruiser_excelsior } } }
+      prerequisites = { "tech_engineering_03512" }
+      combat_disengage_chance = 1.1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_advanced_cruiser_excelsior"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Vesta
+   fed_advanced_cruiser_vesta ={
+      max_speed = 65
+      acceleration = 0.26
+      rotation_speed = 0.14
+      max_hitpoints = 5500
+      size_multiplier = 58
+      fleet_slot_size = 4
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 750
+         ship_evasion_mult = -0.65
+      }
+      icon_frame = 2
+      base_buildtime = 1700
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_advanced_cruiser_vesta NOT = { has_country_flag = drydock_fed_advanced_cruiser_vesta } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_advanced_cruiser_vesta } } }
+      prerequisites = { "tech_engineering_03518" }
+      combat_disengage_chance = 1.1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_advanced_cruiser_vesta"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Ambassador
+   fed_exploration_cruiser_ambassador ={
+      max_speed = 65
+      acceleration = 0.26
+      rotation_speed = 0.14
+      max_hitpoints = 8500
+      size_multiplier = 37
+      fleet_slot_size = 4
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_evasion_mult = -0.65
+      }
+      icon_frame = 2
+      base_buildtime = 860
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_exploration_cruiser_ambassador NOT = { has_country_flag = drydock_fed_exploration_cruiser_ambassador } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_exploration_cruiser_ambassador } } }
+      prerequisites = { "tech_engineering_03513" }
+      combat_disengage_chance = 1.1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_exploration_cruiser_ambassador"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_battleship"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Galaxy
+   fed_exploration_cruiser_galaxy ={
+      max_speed = 60
+      acceleration = 0.25
+      rotation_speed = 0.13
+      max_hitpoints = 10500
+      size_multiplier = 46
+      fleet_slot_size = 4
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_evasion_mult = -0.7
+      }
+      icon_frame = 2
+      base_buildtime = 1100
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_exploration_cruiser_galaxy NOT = { has_country_flag = drydock_fed_exploration_cruiser_galaxy } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_exploration_cruiser_galaxy } } }
+      prerequisites = { "tech_engineering_03514" }
+      combat_disengage_chance = 1.1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_exploration_cruiser_galaxy"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_battleship"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Defiant
+   fed_heavy_escort_defiant ={
+      max_speed = 100
+      acceleration = 0.34
+      rotation_speed = 0.19
+      max_hitpoints = 1500
+      size_multiplier = 29
+      fleet_slot_size = 2
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 1000
+         ship_evasion_mult = -0.3
+      }
+      icon_frame = 2
+      base_buildtime = 720
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture = yes OR = { has_country_flag = temp_drydock_fed_heavy_escort_defiant NOT = { has_country_flag = drydock_fed_heavy_escort_defiant } } }
+      potential_starbase = { owner = { NOT = { has_country_flag = drydock_fed_heavy_escort_defiant } } }
+      prerequisites = { "tech_engineering_03516" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_heavy_escort_defiant"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Prometheus
+   fed_heavy_escort_prometheus ={
+      max_speed = 80
+      acceleration = 0.29
+      rotation_speed = 0.16
+      max_hitpoints = 3000
+      size_multiplier = 44
+      fleet_slot_size = 3
+      graphical_culture = {  "federation"  }
+      modifier = {
+         ship_armor_add = 1500
+         ship_evasion_mult = -0.5
+      }
+      icon_frame = 2
+      base_buildtime = 1140
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { starfleet_graphical_culture  = yes }
+      prerequisites = { "tech_engineering_03518" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_data_fed_heavy_escort_prometheus"
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+
+### Patrol Frigate
+   corvette ={
+      max_speed = 120
+      acceleration = 0.38
+      rotation_speed = 0.22
+      max_hitpoints = 750
+      size_multiplier = 4
+      fleet_slot_size = 1
+      graphical_culture = { "andorian_01" "breen_01" "cardassian_01" "cytherian_01" "dominion_01" "ferengi_01" "fesarian_01" "federation" "federation_01" "federation_02" "federation_03" "federation_04" "federation_MU_04" "generic_01" "generic_02" "generic_03" "generic_04" "karemma_01" "kazon_01" "trabe_01" "klingon_01" "klingon_02" "klingon_03" "klingon_04" "romulan_01" "romulan_02" "romulan_03" "romulan_04" "tellarite_01" "tholian_01" "vulcan_01" "xindi_01" "undine_01" "suliban_01" "husnock_01" "vidiian_01" "kobali_01" "garidian_01" "garidian_02" "garidian_03" "garidian_04" "orion_01" "sheliak_01" "voth_01" "cravic_01" "pralor_01" "hebitian_01""cytherian_01" "generic_01" "fesarian_01" "voth_01" }
+      modifier = {
+         ship_evasion_mult = -0.1
+      }
+      icon_frame = 2
+      base_buildtime = 60
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { OR = { has_unique_corvette = no has_country_flag = temp_generic_corvette } }
+      prerequisites = { "tech_patrol_frigate" }
+      combat_disengage_chance = 0.5
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Destroyer
+   saber ={
+      max_speed = 105
+      acceleration = 0.35
+      rotation_speed = 0.2
+      max_hitpoints = 2000
+      size_multiplier = 10
+      fleet_slot_size = 2
+      graphical_culture = { "andorian_01" "breen_01" "cardassian_01" "cytherian_01" "dominion_01" "ferengi_01" "fesarian_01" "federation" "federation_01" "federation_02" "federation_03" "federation_04" "federation_MU_04" "generic_01" "generic_02" "generic_03" "generic_04" "karemma_01" "kazon_01" "trabe_01" "klingon_01" "klingon_02" "klingon_03" "klingon_04" "romulan_01" "romulan_02" "romulan_03" "romulan_04" "tellarite_01" "tholian_01" "vulcan_01" "xindi_01" "undine_01" "suliban_01" "husnock_01" "vidiian_01" "kobali_01" "garidian_01" "garidian_02" "garidian_03" "garidian_04" "orion_01" "sheliak_01" "voth_01" "cravic_01" "pralor_01" "hebitian_01" }
+      modifier = {
+         ship_evasion_mult = -0.25
+         ship_upkeep_mult = 0.25
+      }
+      icon_frame = 3
+      base_buildtime = 200
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+	  potential_country = { OR = { has_unique_destroyer = no has_country_flag = temp_generic_destroyer } }
+      prerequisites = { "tech_engineering_destroyer_541" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_destroyer"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Cruiser
+   sovereign ={
+      max_speed = 80
+      acceleration = 0.29
+      rotation_speed = 0.16
+      max_hitpoints = 4000
+      size_multiplier = 21
+      fleet_slot_size = 3
+      graphical_culture = { "andorian_01" "breen_01" "cardassian_01" "cytherian_01" "dominion_01" "ferengi_01" "fesarian_01" "federation" "federation_01" "federation_02" "federation_03" "federation_04" "federation_MU_04" "generic_01" "generic_02" "generic_03" "generic_04" "karemma_01" "kazon_01" "trabe_01" "klingon_01" "klingon_02" "klingon_03" "klingon_04" "romulan_01" "romulan_02" "romulan_03" "romulan_04" "tellarite_01" "tholian_01" "vulcan_01" "xindi_01" "undine_01" "suliban_01" "husnock_01" "vidiian_01" "kobali_01" "garidian_01" "garidian_02" "garidian_03" "garidian_04" "orion_01" "sheliak_01" "voth_01" "cravic_01" "pralor_01" "hebitian_01" }
+      modifier = {
+         ship_armor_add = 1000
+         ship_evasion_mult = -0.5
+      }
+      icon_frame = 4
+      base_buildtime = 460
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+	  potential_country = { OR = { has_unique_cruiser = no has_country_flag = temp_generic_cruiser } }
+      prerequisites = { "tech_engineering_cruiser_542" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_cruiser"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Battlecruiser
+   steamrunner ={
+      max_speed = 85
+      acceleration = 0.31
+      rotation_speed = 0.17
+      max_hitpoints = 3000
+      size_multiplier = 23
+      fleet_slot_size = 3
+      graphical_culture = { "andorian_01" "breen_01" "cardassian_01" "cytherian_01" "dominion_01" "ferengi_01" "fesarian_01" "federation" "federation_01" "federation_02" "federation_03" "federation_04" "federation_MU_04" "generic_01" "generic_02" "generic_03" "generic_04" "karemma_01" "kazon_01" "trabe_01" "klingon_01" "klingon_02" "klingon_03" "klingon_04" "romulan_01" "romulan_02" "romulan_03" "romulan_04" "tellarite_01" "tholian_01" "vulcan_01" "xindi_01" "undine_01" "suliban_01" "husnock_01" "vidiian_01" "kobali_01" "garidian_01" "garidian_02" "garidian_03" "garidian_04" "orion_01" "sheliak_01" "voth_01" "cravic_01" "pralor_01" "hebitian_01" }
+      modifier = {
+         ship_evasion_mult = -0.45
+         ship_upkeep_mult = 0.25
+      }
+      icon_frame = 13
+      base_buildtime = 500
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+	  potential_country = { OR = { has_unique_battlecruiser = no has_country_flag = temp_generic_battlecruiser } }
+      prerequisites = { "tech_engineering_battlecruiser_543" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Battleship
+   adv_cruiser ={
+      max_speed = 60
+      acceleration = 0.25
+      rotation_speed = 0.13
+      max_hitpoints = 9000
+      size_multiplier = 36
+      fleet_slot_size = 4
+      graphical_culture = { "andorian_01" "breen_01" "cardassian_01" "cytherian_01" "dominion_01" "ferengi_01" "fesarian_01" "federation" "federation_01" "federation_02" "federation_03" "federation_04" "federation_MU_04" "generic_01" "generic_02" "generic_03" "generic_04" "karemma_01" "kazon_01" "trabe_01" "klingon_01" "klingon_02" "klingon_03" "klingon_04" "romulan_01" "romulan_02" "romulan_03" "romulan_04" "tellarite_01" "tholian_01" "vulcan_01" "xindi_01" "undine_01" "suliban_01" "husnock_01" "vidiian_01" "kobali_01" "garidian_01" "garidian_02" "garidian_03" "garidian_04" "orion_01" "sheliak_01" "voth_01" "cravic_01" "pralor_01" "hebitian_01" }
+      modifier = {
+         ship_armor_add = 1000
+         ship_evasion_mult = -0.7
+      }
+      icon_frame = 5
+      base_buildtime = 820
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+	  potential_country = { OR = { has_unique_battleship = no has_country_flag = temp_generic_battleship } }
+      prerequisites = { "tech_engineering_battleship_544" }
+      combat_disengage_chance = 1.1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_battleship"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Heavy Raider
+   strike ={
+      max_speed = 100
+      acceleration = 0.34
+      rotation_speed = 0.19
+      max_hitpoints = 2000
+      size_multiplier = 20
+      fleet_slot_size = 2
+      graphical_culture = { "andorian_01" "breen_01" "cardassian_01" "cytherian_01" "dominion_01" "ferengi_01" "fesarian_01" "federation" "federation_01" "federation_02" "federation_03" "federation_04" "federation_MU_04" "generic_01" "generic_02" "generic_03" "generic_04" "karemma_01" "kazon_01" "trabe_01" "klingon_01" "klingon_02" "klingon_03" "klingon_04" "romulan_01" "romulan_02" "romulan_03" "romulan_04" "tellarite_01" "tholian_01" "vulcan_01" "xindi_01" "undine_01" "suliban_01" "husnock_01" "vidiian_01" "kobali_01" "garidian_01" "garidian_02" "garidian_03" "garidian_04" "orion_01" "sheliak_01" "voth_01" "cravic_01" "pralor_01" "hebitian_01" }
+      modifier = {
+         ship_armor_add = 500
+         ship_weapon_damage = 0.1
+         ship_evasion_mult = -0.3
+         ship_upkeep_mult = 0.15
+      }
+      icon_frame = 14
+      base_buildtime = 420
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+	  potential_country = { OR = { has_unique_heavy_escort = no has_country_flag = temp_generic_heavy_escort } }
+      prerequisites = { "tech_engineering_heavy_545" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Assault Cruiser
+   assault_cruiser ={
+      max_speed = 65
+      acceleration = 0.26
+      rotation_speed = 0.14
+      max_hitpoints = 6000
+      size_multiplier = 50
+      fleet_slot_size = 4
+      graphical_culture = { "andorian_01" "breen_01" "cardassian_01" "cytherian_01" "dominion_01" "ferengi_01" "fesarian_01" "federation" "federation_01" "federation_02" "federation_03" "federation_04" "federation_MU_04" "generic_01" "generic_02" "generic_03" "generic_04" "karemma_01" "kazon_01" "trabe_01" "klingon_01" "klingon_02" "klingon_03" "klingon_04" "romulan_01" "romulan_02" "romulan_03" "romulan_04" "tellarite_01" "tholian_01" "vulcan_01" "xindi_01" "undine_01" "suliban_01" "husnock_01" "vidiian_01" "kobali_01" "garidian_01" "garidian_02" "garidian_03" "garidian_04" "orion_01" "sheliak_01" "voth_01" "cravic_01" "pralor_01" "hebitian_01" }
+      modifier = {
+         ship_armor_add = 1000
+         ship_evasion_mult = -0.65
+         ship_upkeep_mult = 0.25
+      }
+      icon_frame = 15
+      base_buildtime = 1200
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+	  potential_country = { OR = { has_unique_assault_cruiser = no has_country_flag = temp_generic_assault_cruiser } }
+      prerequisites = { "tech_engineering_assault_546" }
+      combat_disengage_chance = 1.1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Dreadnought
+   super_battleship ={
+      max_speed = 50
+      acceleration = 0.23
+      rotation_speed = 0.12
+      max_hitpoints = 15000
+      size_multiplier = 85
+      fleet_slot_size = 8
+      graphical_culture = { dominion_01 }
+      modifier = {
+         ship_evasion_mult = -0.8
+         ship_upkeep_mult = 0.25
+      }
+      icon_frame = 5
+      base_buildtime = 2180
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      prerequisites = { "tech_engineering_industry_1222" }
+      has_mineral_upkeep = yes
+      class = shipclass_military
+	  potential_country = { 
+		has_super_battleship = yes
+	}
+      possible_starbase = {
+         has_starbase_size >= starbase_citadel
+         has_starbase_building = titan_yards
+      }
+      empire_limit = { base = 1 }
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Man-o-War
+   man_war ={
+      max_speed = 40
+      acceleration = 0.2
+      rotation_speed = 0.1
+      max_hitpoints = 50000
+      size_multiplier = 270
+      fleet_slot_size = 8
+      graphical_culture = { voth_01 }
+      modifier = {
+         ship_weapon_damage = 1
+         ship_evasion_mult = -0.9
+         ship_upkeep_mult = 0.275
+      }
+      icon_frame = 5
+      base_buildtime = 8000
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      prerequisites = { "tech_engineering_industry_1301" }
+      has_mineral_upkeep = yes
+      class = shipclass_military
+	  potential_country = { 
+		has_man_o_war = yes
+	}
+      possible_starbase = {
+         has_starbase_size >= starbase_citadel
+         has_starbase_building = titan_yards
+      }
+      empire_limit = { base = 1 }
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### NX-Class
+   ENT_enterprise ={
+      max_speed = 105
+      acceleration = 0.35
+      rotation_speed = 0.2
+      max_hitpoints = 2000
+      size_multiplier = 0
+      fleet_slot_size = 2
+      graphical_culture = { "hero_ships_01" }
+      modifier = {
+         ship_armor_add = 500
+         ship_evasion_mult = -0.25
+         ship_upkeep_mult = 0.25
+      }
+      icon_frame = 3
+      base_buildtime = 0
+      is_designable = no
+      is_space_object = yes
+      prerequisites = { "tech_hero_ships" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+   
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Columbia-Class
+   ENT_enterprise_refit ={
+      max_speed = 100
+      acceleration = 0.34
+      rotation_speed = 0.19
+      max_hitpoints = 3000
+      size_multiplier = 0
+      fleet_slot_size = 2
+      graphical_culture = { "hero_ships_01" }
+      modifier = {
+         ship_armor_add = 750
+         ship_evasion_mult = -0.3
+         ship_upkeep_mult = 0.25
+      }
+      icon_frame = 2
+      base_buildtime = 0
+      is_designable = no
+      is_space_object = yes
+      prerequisites = { "tech_hero_ships" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+   
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Crossfield-Class
+   DSC_discovery ={
+      max_speed = 85
+      acceleration = 0.31
+      rotation_speed = 0.17
+      max_hitpoints = 3000
+      size_multiplier = 0
+      fleet_slot_size = 3
+      graphical_culture = { "hero_ships_01" }
+      modifier = {
+         ship_armor_add = 1000
+         ship_evasion_mult = -0.45
+         ship_upkeep_mult = 0.25
+      }
+      icon_frame = 2
+      base_buildtime = 0
+      is_designable = no
+      is_space_object = yes
+      prerequisites = { "tech_hero_ships" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+   
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Constitution-Class
+   TOS_constitution ={
+      max_speed = 80
+      acceleration = 0.29
+      rotation_speed = 0.16
+      max_hitpoints = 4000
+      size_multiplier = 0
+      fleet_slot_size = 3
+      graphical_culture = { "hero_ships_01" }
+      modifier = {
+         ship_armor_add = 1000
+         ship_evasion_mult = -0.5
+         ship_upkeep_mult = 0.25
+      }
+      icon_frame = 2
+      base_buildtime = 0
+      is_designable = no
+      is_space_object = yes
+      prerequisites = { "tech_hero_ships" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+   
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Probe
+   borg_probe ={
+      max_speed = 110
+      acceleration = 0.37
+      rotation_speed = 0.21
+      max_hitpoints = 350
+      size_multiplier = 6
+      fleet_slot_size = 2
+      graphical_culture = { "borg_01" "borg_yellow_01" "borg_red_01" "borg_blue_01" "borg_purple_01" "borg_orange_01" }
+      modifier = {
+         ship_armor_add = 300
+         ship_evasion_mult = -0.2
+         ship_upkeep_mult = -0.1
+      }
+      icon_frame = 3
+      base_buildtime = 120
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { borg_graphical_culture = yes }
+      prerequisites = { "tech_engineering_02891" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Scout
+   borg_scout ={
+      max_speed = 145
+      acceleration = 0.4
+      rotation_speed = 0.23
+      max_hitpoints = 350
+      size_multiplier = 4
+      fleet_slot_size = 1
+      graphical_culture = { "borg_01" "borg_yellow_01" "borg_red_01" "borg_blue_01" "borg_purple_01" "borg_orange_01" }
+      modifier = {
+         ship_armor_add = 100
+         ship_evasion_mult = -0.05
+         ship_upkeep_mult = -0.05
+      }
+      icon_frame = 2
+      base_buildtime = 60
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { borg_graphical_culture = yes }
+      prerequisites = { "tech_engineering_02931" }
+      combat_disengage_chance = 0.5
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Pyramid
+   borg_pyramid ={
+      max_speed = 70
+      acceleration = 0.28
+      rotation_speed = 0.15
+      max_hitpoints = 3000
+      size_multiplier = 24
+      fleet_slot_size = 4
+      graphical_culture = { "borg_01" "borg_yellow_01" "borg_red_01" "borg_blue_01" "borg_purple_01" "borg_orange_01" }
+      modifier = {
+         ship_armor_add = 1000
+         ship_evasion_mult = -0.6
+         ship_upkeep_mult = 0.25
+      }
+      icon_frame = 4
+      base_buildtime = 520
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { borg_graphical_culture = yes }
+      prerequisites = { "tech_engineering_02892" }
+      combat_disengage_chance = 1.1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_aura_cruiser"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Sphere
+   borg_sphere ={
+      max_speed = 65
+      acceleration = 0.26
+      rotation_speed = 0.14
+      max_hitpoints = 5000
+      size_multiplier = 32
+      fleet_slot_size = 4
+      graphical_culture = { "borg_01" "borg_yellow_01" "borg_red_01" "borg_blue_01" "borg_purple_01" "borg_orange_01" }
+      modifier = {
+         ship_armor_add = 2000
+         ship_evasion_mult = -0.65
+         ship_upkeep_mult = 0.25
+      }
+      icon_frame = 5
+      base_buildtime = 720
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { borg_graphical_culture = yes }
+      prerequisites = { "tech_engineering_industry_1251" }
+      combat_disengage_chance = 1.1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_aura_destroyer"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Diamond
+   borg_diamond ={
+      max_speed = 60
+      acceleration = 0.25
+      rotation_speed = 0.13
+      max_hitpoints = 7000
+      size_multiplier = 46
+      fleet_slot_size = 4
+      graphical_culture = { "borg_01" "borg_yellow_01" "borg_red_01" "borg_blue_01" "borg_purple_01" "borg_orange_01" }
+      modifier = {
+         ship_armor_add = 3000
+         ship_evasion_mult = -0.7
+         ship_upkeep_mult = 0.25
+      }
+      icon_frame = 13
+      base_buildtime = 1100
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { borg_graphical_culture = yes }
+      prerequisites = { "tech_engineering_industry_1252" }
+      combat_disengage_chance = 1.1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_aura_destroyer"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Cube
+   borg_cube ={
+      max_speed = 45
+      acceleration = 0.22
+      rotation_speed = 0.11
+      max_hitpoints = 20000
+      size_multiplier = 82
+      fleet_slot_size = 8
+      graphical_culture = { "borg_01" "borg_yellow_01" "borg_red_01" "borg_blue_01" "borg_purple_01" "borg_orange_01" }
+      modifier = {
+         ship_weapon_damage = 0.05
+         ship_evasion_mult = -0.85
+         ship_upkeep_mult = 0.25
+      }
+      icon_frame = 14
+      base_buildtime = 2100
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { borg_graphical_culture = yes }
+      prerequisites = { "tech_engineering_industry_1253" }
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_aura_battleship"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Tactical Cube
+   borg_tactical ={
+      max_speed = 45
+      acceleration = 0.22
+      rotation_speed = 0.11
+      max_hitpoints = 25000
+      size_multiplier = 110
+      fleet_slot_size = 8
+      graphical_culture = { "borg_01" "borg_yellow_01" "borg_red_01" "borg_blue_01" "borg_purple_01" "borg_orange_01" }
+      modifier = {
+         ship_weapon_damage = 0.1
+         ship_evasion_mult = -0.85
+         ship_upkeep_mult = 0.5
+      }
+      icon_frame = 14
+      base_buildtime = 2900
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { borg_graphical_culture = yes }
+      prerequisites = { "tech_engineering_industry_1254" }
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_aura_battleship"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Omega Cube
+   super_cube ={
+      max_speed = 40
+      acceleration = 0.2
+      rotation_speed = 0.1
+      max_hitpoints = 30000
+      size_multiplier = 225
+      fleet_slot_size = 8
+      graphical_culture = { "borg_01" "borg_yellow_01" "borg_red_01" "borg_blue_01" "borg_purple_01" "borg_orange_01" }
+      modifier = {
+         ship_weapon_damage = 1
+         ship_evasion_mult = -0.9
+      }
+      icon_frame = 15
+      base_buildtime = 6500
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { borg_graphical_culture = yes }
+      prerequisites = { "tech_engineering_industry_1255" }
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      possible_starbase = {
+         has_starbase_size >= starbase_citadel
+         has_starbase_building = titan_yards
+      }
+      empire_limit = { base = 1 }
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_aura_battleship"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Interdictor
+   fallen_interdictor ={
+      max_speed = 70
+      acceleration = 0.28
+      rotation_speed = 0.15
+      max_hitpoints = 5000
+      size_multiplier = 32
+      fleet_slot_size = 4
+      graphical_culture = { "cytherian_01" "generic_01" "fesarian_01" "voth_01" }
+      modifier = {
+         ship_weapon_damage = 0.1
+         ship_evasion_mult = -0.6
+      }
+      icon_frame = 3
+      base_buildtime = 720
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      prerequisites = { "tech_engineering_industry_1298" }
+      combat_disengage_chance = 1.1
+      upkeep_override = { energy = 2 minerals = 0 }
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_destroyer"
+      required_component_set = "required_aura_cruiser"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Assault Vessel
+   fallen_assault ={
+      max_speed = 60
+      acceleration = 0.25
+      rotation_speed = 0.13
+      max_hitpoints = 8000
+      size_multiplier = 52
+      fleet_slot_size = 4
+      graphical_culture = { "cytherian_01" "generic_01" "fesarian_01" "voth_01" }
+      modifier = {
+         ship_armor_add = 1000
+         ship_evasion_mult = -0.7
+      }
+      icon_frame = 13
+      base_buildtime = 1260
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      prerequisites = { "tech_engineering_industry_1299" }
+      combat_disengage_chance = 1.1
+      upkeep_override = { energy = 4 minerals = 0 }
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Flagship
+   fallen_flagship ={
+      max_speed = 50
+      acceleration = 0.23
+      rotation_speed = 0.12
+      max_hitpoints = 35000
+      size_multiplier = 115
+      fleet_slot_size = 8
+      graphical_culture = { "cytherian_01" "generic_01" "fesarian_01" "voth_01" }
+      modifier = {
+         ship_armor_add = 20000
+         ship_weapon_damage = 0.25
+         ship_evasion_mult = -0.8
+      }
+      icon_frame = 5
+      base_buildtime = 3060
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      prerequisites = { "tech_engineering_industry_1300" }
+      upkeep_override = { energy = 6 minerals = 0 }
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_battleship"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Bio-Ship
+   undine_bio_ship ={
+      max_speed = 145
+      acceleration = 0.38
+      rotation_speed = 0.22
+      max_hitpoints = 1000
+      size_multiplier = 7
+      fleet_slot_size = 1
+      graphical_culture = { undine_01 }
+      modifier = {
+         ship_weapon_damage = 0.25
+         ship_evasion_mult = -0.1
+         ship_upkeep_mult = 0.5
+      }
+      icon_frame = 2
+      base_buildtime = 140
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { has_country_flag = undine_empire }
+      prerequisites = { "tech_undine_bio_ship" }
+      combat_disengage_chance = 0.5
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Bio-Warship
+   undine_bio_warship ={
+      max_speed = 85
+      acceleration = 0.31
+      rotation_speed = 0.17
+      max_hitpoints = 5000
+      size_multiplier = 42
+      fleet_slot_size = 3
+      graphical_culture = { undine_01 }
+      modifier = {
+         ship_weapon_damage = 0.5
+         ship_evasion_mult = -0.45
+         ship_upkeep_mult = 0.5
+      }
+      icon_frame = 4
+      base_buildtime = 980
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { has_country_flag = undine_empire }
+      prerequisites = { "tech_engineering_02864" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Behemoth
+   undine_bio_behemoth ={
+      max_speed = 50
+      acceleration = 0.23
+      rotation_speed = 0.12
+      max_hitpoints = 10000
+      size_multiplier = 97
+      fleet_slot_size = 8
+      graphical_culture = { undine_01 }
+      modifier = {
+         ship_weapon_damage = 0.75
+         ship_evasion_mult = -0.8
+         ship_upkeep_mult = 0.5
+      }
+      icon_frame = 5
+      base_buildtime = 2520
+      enable_default_design = yes
+      can_have_federation_design = yes
+      is_space_station = no
+      is_space_object = yes
+      potential_country = { has_country_flag = undine_empire }
+      prerequisites = { "tech_engineering_02865" }
+      has_mineral_upkeep = yes
+      class = shipclass_military
+      construction_type = starbase_shipyard
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_cruiser"
+      required_component_set = "required_aura_battleship"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Ancient Destroyer
+   destroyer ={
+      max_speed = 105
+      acceleration = 0.35
+      rotation_speed = 0.2
+      max_hitpoints = 800
+      size_multiplier = 0
+      fleet_slot_size = 2
+      graphical_culture = { "plantoid_01" "mammalian_01" "reptilian_01" "avian_01" "molluscoid_01" "fungoid_01" "arthropoid_01"  }
+      modifier = {
+         ship_evasion_mult = -0.25
+         ship_upkeep_mult = 0.25
+      }
+      icon_frame = 3
+      base_buildtime = 0
+      is_designable = no
+      is_space_object = yes
+      prerequisites = { "tech_destroyers" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+   
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Ancient Cruiser
+   cruiser ={
+      max_speed = 80
+      acceleration = 0.29
+      rotation_speed = 0.16
+      max_hitpoints = 1400
+      size_multiplier = 0
+      fleet_slot_size = 3
+      graphical_culture = { "plantoid_01" "mammalian_01" "reptilian_01" "avian_01" "molluscoid_01" "fungoid_01" "arthropoid_01"  }
+      modifier = {
+         ship_evasion_mult = -0.5
+      }
+      icon_frame = 4
+      base_buildtime = 0
+      is_designable = no
+      is_space_object = yes
+      prerequisites = { "tech_cruisers" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+   
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Ancient Battleship
+   battleship ={
+      max_speed = 85
+      acceleration = 0.31
+      rotation_speed = 0.17
+      max_hitpoints = 3000
+      size_multiplier = 0
+      fleet_slot_size = 3
+      graphical_culture = { "plantoid_01" "mammalian_01" "reptilian_01" "avian_01" "molluscoid_01" "fungoid_01" "arthropoid_01"  }
+      modifier = {
+         ship_evasion_mult = -0.45
+         ship_upkeep_mult = 0.25
+      }
+      icon_frame = 13
+      base_buildtime = 0
+      is_designable = no
+      is_space_object = yes
+      prerequisites = { "tech_battleships" }
+      combat_disengage_chance = 1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+   
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Ancient Titan
+   titan ={
+      max_speed = 65
+      acceleration = 0.26
+      rotation_speed = 0.14
+      max_hitpoints = 10000
+      size_multiplier = 0
+      fleet_slot_size = 4
+      graphical_culture = { "plantoid_01" "mammalian_01" "reptilian_01" "avian_01" "molluscoid_01" "fungoid_01" "arthropoid_01"  }
+      modifier = {
+         ship_evasion_mult = -0.65
+      }
+      icon_frame = 5
+      base_buildtime = 0
+      is_designable = no
+      is_space_object = yes
+      prerequisites = { "tech_titans" }
+      combat_disengage_chance = 1.1
+      has_mineral_upkeep = yes
+      class = shipclass_military
+   
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Ancient Colossus
+   colossus ={
+      max_speed = 40
+      acceleration = 0.2
+      rotation_speed = 0.1
+      max_hitpoints = 10000
+      size_multiplier = 0
+      fleet_slot_size = 8
+      graphical_culture = { "plantoid_01" "mammalian_01" "reptilian_01" "avian_01" "molluscoid_01" "fungoid_01" "arthropoid_01"  }
+      modifier = {
+         ship_evasion_mult = -0.9
+      }
+      icon_frame = 5
+      base_buildtime = 0
+      is_designable = no
+      is_space_object = yes
+      prerequisites = { "tech_titans" }
+      has_mineral_upkeep = yes
+      class = shipclass_military
+   
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Xindi Probe
+   xindi_probe ={
+      max_speed = 25
+      acceleration = 10
+      rotation_speed = 1
+      max_hitpoints = 10000
+      size_multiplier = 0
+      fleet_slot_size = 1
+      modifier = {
+         ship_armor_add = 3500
+      }
+      icon_frame = 5
+      base_buildtime = 0
+      is_designable = no
+      is_space_object = yes
+      is_civilian = yes
+      has_mineral_upkeep = yes
+      class = shipclass_military
+   
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Xindi Weapon
+   xindi_weapon ={
+      max_speed = 30
+      acceleration = 10
+      rotation_speed = 1
+      max_hitpoints = 5000
+      size_multiplier = 0
+      fleet_slot_size = 8
+      modifier = {
+         ship_armor_add = 500
+         ship_evasion_mult = -0.8
+      }
+      icon_frame = 5
+      base_buildtime = 0
+      is_designable = no
+      is_space_object = yes
+      has_mineral_upkeep = yes
+      class = shipclass_military
+   
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      required_component_set = "required_aura_battleship"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Doomsday Machine
+   doomsday ={
+      max_speed = 20
+      acceleration = 1
+      rotation_speed = 1
+      max_hitpoints = 75000
+      size_multiplier = 0
+      fleet_slot_size = 1
+      graphical_culture = no
+      modifier = {
+         ship_armor_add = 75000
+         ship_weapon_damage = 0.5
+         ship_upkeep_mult = 0.1
+      }
+      icon_frame = 5
+      base_buildtime = 0
+      is_designable = no
+      is_space_object = yes
+      has_mineral_upkeep = yes
+      class = shipclass_military
+   
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Whale Probe
+   whale_probe ={
+      max_speed = 20
+      acceleration = 5
+      rotation_speed = 0.01
+      max_hitpoints = 75000
+      size_multiplier = 0
+      fleet_slot_size = 1
+      graphical_culture = no
+      modifier = {
+         ship_armor_add = 75000
+         ship_upkeep_mult = 0.1
+      }
+      icon_frame = 5
+      base_buildtime = 0
+      is_designable = no
+      is_space_object = yes
+      has_mineral_upkeep = yes
+      class = shipclass_military
+   
+      required_component_set = "whale_aura_components"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Altamidian Swarmship
+   swarmship ={
+      max_speed = 100
+      acceleration = 0.2
+      rotation_speed = 0.5
+      max_hitpoints = 5000
+      size_multiplier = 0
+      fleet_slot_size = 1
+      graphical_culture = no
+      modifier = {
+         ship_weapon_damage = 0.1
+         ship_evasion_mult = 0.50
+      }
+      icon_frame = 5
+      base_buildtime = 0
+      is_designable = no
+      is_space_object = yes
+      has_mineral_upkeep = yes
+      class = shipclass_military
+   
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Bortas
+   ENT_bortas ={
+      max_speed = 100
+      acceleration = 0.34
+      rotation_speed = 0.19
+      max_hitpoints = 3000
+      size_multiplier = 0
+      fleet_slot_size = 2
+      graphical_culture = { "hero_ships_01" }
+      modifier = {
+         ship_armor_add = 750
+         ship_evasion_mult = -0.3
+         ship_upkeep_mult = 0.25
+      }
+      icon_frame = 2
+      base_buildtime = 0
+      is_designable = no
+      is_space_object = yes
+      prerequisites = { "tech_hero_ships" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+   
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Devoras
+   ENT_romulan ={
+      max_speed = 100
+      acceleration = 0.34
+      rotation_speed = 0.19
+      max_hitpoints = 3000
+      size_multiplier = 0
+      fleet_slot_size = 2
+      graphical_culture = { "hero_ships_01" }
+      modifier = {
+         ship_armor_add = 750
+         ship_evasion_mult = -0.3
+         ship_upkeep_mult = 0.25
+      }
+      icon_frame = 2
+      base_buildtime = 0
+      is_designable = no
+      is_space_object = yes
+      prerequisites = { "tech_hero_ships" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+   
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Seleya
+   ENT_seleya ={
+      max_speed = 100
+      acceleration = 0.34
+      rotation_speed = 0.19
+      max_hitpoints = 3000
+      size_multiplier = 0
+      fleet_slot_size = 2
+      graphical_culture = { "hero_ships_01" }
+      modifier = {
+         ship_armor_add = 750
+         ship_evasion_mult = -0.3
+         ship_upkeep_mult = 0.25
+      }
+      icon_frame = 2
+      base_buildtime = 0
+      is_designable = no
+      is_space_object = yes
+      prerequisites = { "tech_hero_ships" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+   
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Kumari
+   ENT_kumari ={
+      max_speed = 100
+      acceleration = 0.34
+      rotation_speed = 0.19
+      max_hitpoints = 3000
+      size_multiplier = 0
+      fleet_slot_size = 2
+      graphical_culture = { "hero_ships_01" }
+      modifier = {
+         ship_armor_add = 750
+         ship_evasion_mult = -0.3
+         ship_upkeep_mult = 0.25
+      }
+      icon_frame = 2
+      base_buildtime = 0
+      is_designable = no
+      is_space_object = yes
+      prerequisites = { "tech_hero_ships" }
+      combat_disengage_chance = 0.75
+      has_mineral_upkeep = yes
+      class = shipclass_military
+   
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_computer"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_tactical"
+      section_slots = { "stern" = { locator = "part1" } "mid" = { locator = "part1" } }
+      num_target_locators = 2
+   }
+   
+### Science Ship
+   science ={
+      formation_priority = 4
+      max_speed = 80
+      acceleration = 0.18
+      rotation_speed = 0.21
+      collision_radius = 2.5
+      max_hitpoints = 500
+      size_multiplier = 1
+      fleet_slot_size = 1
+      modifier = {
+         ship_evasion_mult = -0.5
+         ship_upkeep_mult = 0.375
+      }
+      icon_frame = 8
+      base_buildtime = 60
+      enable_default_design = yes
+      is_designable = yes
+      is_space_object = yes
+      is_civilian = yes
+      valid_target_aggressive_stance = no
+      prerequisites = { "tech_starbase_1" }
+   combat_disengage_chance = 2.0
+      has_mineral_upkeep = yes
+      class = shipclass_science_ship
+      construction_type = spaceport
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_science_module"
+      section_slots = { "mid" = { locator = "part1" } }
+      num_target_locators = 0
+   }
+   
+### XCV-330 Class
+   xcv330 ={
+      formation_priority = 4
+      max_speed = 60
+      acceleration = 0.18
+      rotation_speed = 0.21
+      collision_radius = 2.5
+      max_hitpoints = 400
+      size_multiplier = 1
+      fleet_slot_size = 1
+      graphical_culture = no
+      modifier = {
+         ship_evasion_mult = -0.5
+      }
+      icon_frame = 6
+      is_space_object = yes
+      is_civilian = yes
+      valid_target_aggressive_stance = no
+      prerequisites = { "tech_xcv330_1" }
+      has_mineral_upkeep = yes
+      class = shipclass_science_ship
+      construction_type = spaceport
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      section_slots = { "mid" = { locator = "part1" } }
+      num_target_locators = 0
+   }
+   
+### Constructor
+   constructor ={
+      formation_priority = 5
+      max_speed = 80
+      acceleration = 0.19
+      rotation_speed = 0.22
+      collision_radius = 2
+      max_hitpoints = 500
+      size_multiplier = 1
+      fleet_slot_size = 1
+      modifier = {
+         ship_evasion_mult = -0.5
+         ship_upkeep_mult = 0.125
+      }
+      icon_frame = 7
+      base_buildtime = 60
+      enable_default_design = yes
+      is_designable = yes
+      is_space_object = yes
+      is_civilian = yes
+      valid_target_aggressive_stance = no
+      prerequisites = { "tech_civilian_infrastructure" }
+   combat_disengage_chance = 1.0
+      has_mineral_upkeep = yes
+      class = shipclass_constructor
+      construction_type = spaceport
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      section_slots = { "mid" = { locator = "part1" } }
+      num_target_locators = 0
+   }
+   
+### Transporter
+   transport ={
+      formation_priority = 5
+      max_speed = 80
+      acceleration = 0.2
+      rotation_speed = 0.23
+      collision_radius = 2
+      max_hitpoints = 100
+      size_multiplier = 1
+      fleet_slot_size = 1
+      modifier = {
+         ship_armor_add = 100
+         ship_upkeep_mult = 0.25
+         ship_evasion_add = 20
+      }
+      icon_frame = 9
+      components_add_to_cost = no
+      enable_default_design = yes
+      is_designable = no
+      is_space_object = yes
+      auto_upgrade = yes
+      prerequisites = { "tech_defense_army" }
+   combat_disengage_chance = 1.5
+
+      has_mineral_upkeep = yes
+      class = shipclass_transport
+   
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      section_slots = { "mid" = { locator = "part1" } }
+      num_target_locators = 0
+   }
+   
+### Colony Ship
+   colonizer ={
+      formation_priority = 4
+      max_speed = 80
+      acceleration = 0.18
+      rotation_speed = 0.2
+      collision_radius = 2.5
+      max_hitpoints = 750
+      size_multiplier = 1
+      fleet_slot_size = 1
+      modifier = {
+         ship_evasion_mult = -0.5
+         ship_upkeep_mult = 0.275
+      }
+      icon_frame = 8
+      base_buildtime = 360
+      enable_default_design = yes
+      is_designable = yes
+      is_space_object = yes
+      is_civilian = yes
+      valid_target_aggressive_stance = no
+      prerequisites = { "tech_colonization_1" }
+   combat_disengage_chance = 0.5
+      has_mineral_upkeep = yes
+      class = shipclass_colonizer
+      construction_type = spaceport
+      required_component_set = "required_sensor"
+      required_component_set = "required_warp"
+      required_component_set = "required_defense"
+      required_component_set = "required_thruster"
+      required_component_set = "required_hull"
+      required_component_set = "required_colony_module"
+      section_slots = { "mid" = { locator = "part1" } }
+      num_target_locators = 0
+   }
+   
+### Light Defense Satellite
+   military_station_small ={
+      max_speed = 10
+      acceleration = 0.12
+      rotation_speed = 0.13
+      max_hitpoints = 15000
+      size_multiplier = 1
+      graphical_culture = { "andorian_01" "breen_01" "cardassian_01" "cytherian_01" "dominion_01" "ferengi_01" "fesarian_01" "federation" "federation_01" "federation_02" "federation_03" "federation_04" "federation_MU_04" "generic_01" "generic_02" "generic_03" "generic_04" "karemma_01" "kazon_01" "trabe_01" "klingon_01" "klingon_02" "klingon_03" "klingon_04" "romulan_01" "romulan_02" "romulan_03" "romulan_04" "tellarite_01" "tholian_01" "vulcan_01" "xindi_01" "undine_01" "suliban_01" "husnock_01" "vidiian_01" "kobali_01" "garidian_01" "garidian_02" "garidian_03" "garidian_04" "orion_01" "sheliak_01" "voth_01" "cravic_01" "pralor_01" "hebitian_01""cytherian_01" "generic_01" "fesarian_01" "voth_01""borg_01" "borg_yellow_01" "borg_red_01" "borg_blue_01" "borg_purple_01" "borg_orange_01" }
+      modifier = {
+         ship_armor_add = 1000
+         ship_evasion_mult = -1
+         ship_upkeep_mult = -0.25
+      }
+      base_buildtime = 120
+      enable_default_design = yes
+      is_designable = yes
+      is_space_station = yes
+      build_block_radius = 200
+      combat_size_multiplier = 2
+      prerequisites = { "tech_engineering_defense_556" }
+      has_mineral_upkeep = yes
+      class = shipclass_military_station
+      construction_type = starbase_defenses
+      uses_name_prefix = no
+      required_component_set = "required_sensor"
+      required_component_set = "required_defense"
+      required_component_set = "required_hull"
+      required_component_set = "required_station_reactor"
+      section_slots = { "west" = { locator = "part1" } "east" = { locator = "part1" } }
+      num_target_locators = 0
+   }
+   
+# ### Sentry Pod
+#    heavy_starbase_fighter ={
+#    100
+#       acceleration = 0.2
+#       rotation_speed = 0.2
+#       max_hitpoints = 300
+#       size_multiplier = 1
+#       graphical_culture = { "andorian_01" "breen_01" "cardassian_01" "cytherian_01" "dominion_01" "ferengi_01" "fesarian_01" "federation" "federation_01" "federation_02" "federation_03" "federation_04" "federation_MU_04" "generic_01" "generic_02" "generic_03" "generic_04" "karemma_01" "kazon_01" "trabe_01" "klingon_01" "klingon_02" "klingon_03" "klingon_04" "romulan_01" "romulan_02" "romulan_03" "romulan_04" "tellarite_01" "tholian_01" "vulcan_01" "xindi_01" "undine_01" "suliban_01" "husnock_01" "vidiian_01" "kobali_01" "garidian_01" "garidian_02" "garidian_03" "garidian_04" "orion_01" "sheliak_01" "voth_01" "cravic_01" "pralor_01" "hebitian_01" }
+#       base_buildtime = 120
+#       enable_default_design = yes
+#       is_designable = yes
+#       is_space_station = yes
+#       build_block_radius = 200
+#       prerequisites = { "tech_engineering_defense_556" }
+#       has_mineral_upkeep = yes
+#       class = shipclass_military_station
+#       construction_type = starbase_defenses
+#       uses_name_prefix = no
+#       required_component_set = "required_sensor"
+#       required_component_set = "required_computer"
+#       required_component_set = "required_defense"
+#       required_component_set = "required_thruster"
+#       required_component_set = "required_hull"
+#       required_component_set = "required_station_reactor"
+#       section_slots = { "west" = { locator = "part1" } "east" = { locator = "part1" } }
+#       num_target_locators = 0
+#    }
+   
+# ### Heavy Sentry Pod
+#    heavy_starbase_fighter ={
+#    100
+#       acceleration = 0.2
+#       rotation_speed = 0.2
+#       max_hitpoints = 300
+#       size_multiplier = 1
+#       graphical_culture = { "andorian_01" "breen_01" "cardassian_01" "cytherian_01" "dominion_01" "ferengi_01" "fesarian_01" "federation" "federation_01" "federation_02" "federation_03" "federation_04" "federation_MU_04" "generic_01" "generic_02" "generic_03" "generic_04" "karemma_01" "kazon_01" "trabe_01" "klingon_01" "klingon_02" "klingon_03" "klingon_04" "romulan_01" "romulan_02" "romulan_03" "romulan_04" "tellarite_01" "tholian_01" "vulcan_01" "xindi_01" "undine_01" "suliban_01" "husnock_01" "vidiian_01" "kobali_01" "garidian_01" "garidian_02" "garidian_03" "garidian_04" "orion_01" "sheliak_01" "voth_01" "cravic_01" "pralor_01" "hebitian_01" }
+#       modifier = {
+#          ship_armor_add = 100
+#          ship_weapon_damage = 0.1
+#       }
+#       base_buildtime = 120
+#       enable_default_design = yes
+#       is_designable = yes
+#       is_space_station = yes
+#       build_block_radius = 200
+#       prerequisites = { "tech_engineering_industry_1278" }
+#       has_mineral_upkeep = yes
+#       class = shipclass_military_station
+#       construction_type = starbase_defenses
+#       uses_name_prefix = no
+#       required_component_set = "required_sensor"
+#       required_component_set = "required_computer"
+#       required_component_set = "required_defense"
+#       required_component_set = "required_thruster"
+#       required_component_set = "required_hull"
+#       required_component_set = "required_station_reactor"
+#       section_slots = { "west" = { locator = "part1" } "east" = { locator = "part1" } }
+#       num_target_locators = 0
+#    }
+   
+# ### Danbue Runabout
+#    fed_danbue_runabout ={
+#    100
+#       acceleration = 0.21
+#       rotation_speed = 0.24
+#       max_hitpoints = 400
+#       size_multiplier = 1
+#       graphical_culture = {  "federation_01" "federation_02" "federation_03" "federation_04" "federation_MU_04"  }
+#       modifier = {
+#          ship_armor_add = 100
+#          ship_weapon_damage = 0.4
+#          ship_evasion_mult = -1
+#          ship_upkeep_mult = -0.5
+#       }
+#       base_buildtime = 20
+#       enable_default_design = yes
+#       is_space_station = yes
+#       build_block_radius = 200
+#       potential_country = { starfleet_graphical_culture = yes }
+#       prerequisites = { "" }
+#       has_mineral_upkeep = yes
+#       class = shipclass_military_station
+#       construction_type = starbase_defenses
+#       required_component_set = "required_sensor"
+#       required_component_set = "required_computer"
+#       required_component_set = "required_defense"
+#       required_component_set = "required_thruster"
+#       required_component_set = "required_hull"
+#       required_component_set = "required_station_reactor"
+#       section_slots = { "west" = { locator = "part1" } "east" = { locator = "part1" } }
+#       num_target_locators = 0
+#    }
+   
+# ### Yellowstone Runabout
+#    fed_yellowstone_runabout ={
+#    100
+#       acceleration = 0.21
+#       rotation_speed = 0.24
+#       max_hitpoints = 400
+#       size_multiplier = 1
+#       graphical_culture = {  "federation_01" "federation_02" "federation_03" "federation_04" "federation_MU_04"  }
+#       modifier = {
+#          ship_armor_add = 200
+#          ship_weapon_damage = 0.5
+#          ship_evasion_mult = -1
+#          ship_upkeep_mult = -0.5
+#       }
+#       base_buildtime = 20
+#       enable_default_design = yes
+#       is_space_station = yes
+#       build_block_radius = 200
+#       potential_country = { starfleet_graphical_culture = yes }
+#       prerequisites = { "" }
+#       has_mineral_upkeep = yes
+#       class = shipclass_military_station
+#       construction_type = starbase_defenses
+#       required_component_set = "required_sensor"
+#       required_component_set = "required_computer"
+#       required_component_set = "required_defense"
+#       required_component_set = "required_thruster"
+#       required_component_set = "required_hull"
+#       required_component_set = "required_station_reactor"
+#       section_slots = { "west" = { locator = "part1" } "east" = { locator = "part1" } }
+#       num_target_locators = 0
+#    }
+   
+### Unimatrix Static Defense Grid
+   borg_unimatrix_defense_small ={
+      max_speed = 10
+      acceleration = 0.12
+      rotation_speed = 0.13
+      max_hitpoints = 15000
+      size_multiplier = 1
+      graphical_culture = { "borg_01" "borg_yellow_01" "borg_red_01" "borg_blue_01" "borg_purple_01" "borg_orange_01" }
+      modifier = {
+         ship_armor_add = 5000
+         ship_evasion_mult = -1
+         ship_upkeep_mult = -0.975
+      }
+      base_buildtime = 120
+      enable_default_design = yes
+      is_designable = no
+      is_space_station = yes
+      build_block_radius = 200
+      prerequisites = { "tech_borg_queen_chamber" }
+      has_mineral_upkeep = yes
+      class = shipclass_military_station
+      uses_name_prefix = no
+      required_component_set = "required_sensor"
+      required_component_set = "required_defense"
+      required_component_set = "required_hull"
+      required_component_set = "required_station_reactor"
+      section_slots = { "west" = { locator = "part1" } "east" = { locator = "part1" } }
+      num_target_locators = 0
+   }
+   
+### Heavy Weapon Platform
+   military_station_medium ={
+      max_speed = 5
+      acceleration = 0.11
+      rotation_speed = 0.11
+      max_hitpoints = 25000
+      size_multiplier = 1
+      graphical_culture = { "andorian_01" "breen_01" "cardassian_01" "cytherian_01" "dominion_01" "ferengi_01" "fesarian_01" "federation" "federation_01" "federation_02" "federation_03" "federation_04" "federation_MU_04" "generic_01" "generic_02" "generic_03" "generic_04" "karemma_01" "kazon_01" "trabe_01" "klingon_01" "klingon_02" "klingon_03" "klingon_04" "romulan_01" "romulan_02" "romulan_03" "romulan_04" "tellarite_01" "tholian_01" "vulcan_01" "xindi_01" "undine_01" "suliban_01" "husnock_01" "vidiian_01" "kobali_01" "garidian_01" "garidian_02" "garidian_03" "garidian_04" "orion_01" "sheliak_01" "voth_01" "cravic_01" "pralor_01" "hebitian_01""cytherian_01" "generic_01" "fesarian_01" "voth_01" }
+      modifier = {
+         ship_weapon_damage = 0.5
+         ship_evasion_mult = -1
+         ship_upkeep_mult = -0.25
+      }
+      base_buildtime = 360
+      enable_default_design = yes
+      is_designable = yes
+      is_space_station = yes
+      build_block_radius = 200
+      prerequisites = { "tech_engineering_deep_558" }
+      has_mineral_upkeep = yes
+      class = shipclass_military_station
+      construction_type = starbase_defenses
+      uses_name_prefix = no
+      required_component_set = "required_sensor"
+      required_component_set = "required_defense"
+      required_component_set = "required_hull"
+      required_component_set = "required_station_reactor"
+      section_slots = { "west" = { locator = "part1" } "east" = { locator = "part1" } }
+      num_target_locators = 0
+   }
+   
+### Ion Cannon
+   ion_cannon ={
+      max_speed = 5
+      acceleration = 0.11
+      rotation_speed = 0.11
+      max_hitpoints = 10000
+      size_multiplier = 1
+      modifier = {
+         ship_evasion_mult = -1
+         ship_upkeep_mult = -0.25
+      }
+      icon_frame = 26
+      base_buildtime = 360
+      enable_default_design = yes
+      is_designable = no
+      is_space_station = yes
+      build_block_radius = 200
+      prerequisites = { "tech_hero_ships" }
+      has_mineral_upkeep = yes
+      class = shipclass_military_station
+      construction_type = starbase_defenses
+      uses_name_prefix = no
+      required_component_set = "required_sensor"
+      required_component_set = "required_defense"
+      required_component_set = "required_hull"
+      required_component_set = "required_station_reactor"
+      section_slots = { "west" = { locator = "part1" } "east" = { locator = "part1" } }
+      num_target_locators = 0
+   }
+   
+### Drydock
+   military_station_large ={
+      max_speed = 5
+      acceleration = 0.1
+      rotation_speed = 0.1
+      max_hitpoints = 20000
+      size_multiplier = 1
+      graphical_culture = { "andorian_01" "breen_01" "cardassian_01" "cytherian_01" "dominion_01" "ferengi_01" "fesarian_01" "federation" "federation_01" "federation_02" "federation_03" "federation_04" "federation_MU_04" "generic_01" "generic_02" "generic_03" "generic_04" "karemma_01" "kazon_01" "trabe_01" "klingon_01" "klingon_02" "klingon_03" "klingon_04" "romulan_01" "romulan_02" "romulan_03" "romulan_04" "tellarite_01" "tholian_01" "vulcan_01" "xindi_01" "undine_01" "suliban_01" "husnock_01" "vidiian_01" "kobali_01" "garidian_01" "garidian_02" "garidian_03" "garidian_04" "orion_01" "sheliak_01" "voth_01" "cravic_01" "pralor_01" "hebitian_01" }
+      modifier = {
+         ship_evasion_mult = -1
+      }
+      base_buildtime = 360
+      enable_default_design = yes
+      is_designable = yes
+      is_space_station = yes
+      build_block_radius = 200
+      prerequisites = { "tech_engineering_deep_563" }
+      has_mineral_upkeep = yes
+      class = shipclass_military_station
+      construction_type = starbase_defenses
+      uses_name_prefix = no
+      required_component_set = "required_sensor"
+      required_component_set = "required_defense"
+      required_component_set = "required_hull"
+      required_component_set = "required_station_reactor"
+      required_component_set = "required_aura_drydock"
+      section_slots = { "east" = { locator = "part1" } } 
+      num_target_locators = 0
+   }
+   
+### Starfleet Museum
+   fed_ent_naval_museum ={
+      max_speed = 5
+      acceleration = 0.1
+      rotation_speed = 0.1
+      max_hitpoints = 10000
+      size_multiplier = 01
+      graphical_culture = { "federation" "federation_01" "federation_02" "federation_03" "federation_04" "federation_MU_04"  }
+      modifier = {
+         ship_armor_add = 5000
+         ship_evasion_mult = -1
+      }
+      base_buildtime = 360
+      is_designable = no
+      is_space_station = yes
+      build_block_radius = 200
+      prerequisites = { "tech_engineering_03505" }
+      has_mineral_upkeep = yes
+      class = shipclass_military_station
+      construction_type = starbase_defenses
+      uses_name_prefix = no
+      required_component_set = "required_defense"
+      required_component_set = "required_hull"
+      required_component_set = "required_station_reactor"
+      required_component_set = "required_aura_drydock"
+      section_slots = { "east" = { locator = "part1" } } 
+      num_target_locators = 0
+   }
+   
+### Listening Post
+   station_listening ={
+      max_speed = 10
+      acceleration = 0.13
+      rotation_speed = 0.14
+      max_hitpoints = 5000
+      size_multiplier = 1
+      modifier = {
+         ship_evasion_mult = -1
+         ship_upkeep_mult = 0.25
+      }
+      base_buildtime = 360
+      enable_default_design = yes
+      is_designable = yes
+      is_space_station = yes
+      build_block_radius = 200
+      prerequisites = { "tech_engineering_listening_555" }
+      has_mineral_upkeep = yes
+      class = shipclass_military_station
+      construction_type = starbase_defenses
+      uses_name_prefix = no
+      required_component_set = "required_sensor"
+      required_component_set = "required_defense"
+      required_component_set = "required_hull"
+      required_component_set = "required_station_reactor"
+      section_slots = { "east" = { locator = "part1" } } 
+      num_target_locators = 0
+   }
+   
+### Mine Field
+   military_station_tiny ={
+      max_speed = 0
+      acceleration = 0
+      rotation_speed = 0
+      max_hitpoints = 10000
+      size_multiplier = 1
+      graphical_culture = { "andorian_01" "breen_01" "cardassian_01" "cytherian_01" "dominion_01" "ferengi_01" "fesarian_01" "federation" "federation_01" "federation_02" "federation_03" "federation_04" "federation_MU_04" "generic_01" "generic_02" "generic_03" "generic_04" "karemma_01" "kazon_01" "trabe_01" "klingon_01" "klingon_02" "klingon_03" "klingon_04" "romulan_01" "romulan_02" "romulan_03" "romulan_04" "tellarite_01" "tholian_01" "vulcan_01" "xindi_01" "undine_01" "suliban_01" "husnock_01" "vidiian_01" "kobali_01" "garidian_01" "garidian_02" "garidian_03" "garidian_04" "orion_01" "sheliak_01" "voth_01" "cravic_01" "pralor_01" "hebitian_01" }
+      modifier = {
+         ship_evasion_mult = -1
+         ship_upkeep_mult = 0.1
+      }
+      base_buildtime = 360
+      enable_default_design = yes
+      is_designable = yes
+      is_space_station = yes
+      build_block_radius = 200
+      prerequisites = { "tech_advanced_warheads" }
+      has_mineral_upkeep = yes
+      class = shipclass_military_station
+      construction_type = starbase_defenses
+      uses_name_prefix = no
+      required_component_set = "required_sensor"
+      required_component_set = "required_station_reactor"
+      required_component_set = "required_aura_minefield"
+      section_slots = { "east" = { locator = "part1" } } 
+      num_target_locators = 0
+   }
+   
+### Mining Station
+   mining_station ={
+      max_speed = 0
+      acceleration = 0
+      rotation_speed = 0
+      max_hitpoints = 2000
+      size_multiplier = 1
+      fleet_slot_size = 1
+      modifier = {
+         ship_armor_add = 1000
+         ship_evasion_mult = -1
+      }
+      cost = 90
+      components_add_to_cost = no
+      enable_default_design = yes
+      is_designable = no
+      is_space_station = yes
+      is_civilian = no
+      valid_target_aggressive_stance = no
+      build_block_radius = 0
+      prerequisites = { "tech_civilian_infrastructure" }
+      upkeep_override = { energy = 1 minerals = 0 }
+      class = shipclass_mining_station
+      uses_name_prefix = no
+      section_slots = { "mid" = { locator = "part1" } }
+      num_target_locators = 0
+   }
+   
+### Research Station
+   research_station ={
+      max_speed = 0
+      acceleration = 0
+      rotation_speed = 0
+      max_hitpoints = 2000
+      size_multiplier = 1
+      fleet_slot_size = 1
+      modifier = {
+         ship_armor_add = 1000
+         ship_evasion_mult = -1
+      }
+      cost = 90
+      components_add_to_cost = no
+      enable_default_design = yes
+      is_designable = no
+      is_space_station = yes
+      is_civilian = no
+      valid_target_aggressive_stance = no
+      build_block_radius = 0
+      prerequisites = { "tech_civilian_infrastructure" }
+      upkeep_override = { energy = 1 minerals = 0 }
+      class = shipclass_research_station
+      uses_name_prefix = no
+      section_slots = { "mid" = { locator = "part1" } }
+      num_target_locators = 1
+   }
+   
+### Observation Station
+   observation_station ={
+      max_speed = 0
+      acceleration = 0
+      rotation_speed = 0
+      max_hitpoints = 2000
+      size_multiplier = 1
+      fleet_slot_size = 1
+      modifier = {
+         ship_armor_add = 1000
+         ship_evasion_mult = -1
+      }
+      cost = 50
+      components_add_to_cost = no
+      enable_default_design = yes
+      is_designable = no
+      is_space_station = yes
+      is_civilian = yes
+      valid_target_aggressive_stance = no
+      build_block_radius = 20
+      upkeep_override = { energy = 1 minerals = 0 }
+      class = shipclass_observation_station
+      uses_name_prefix = no
+      num_target_locators = 0
+   }
+   

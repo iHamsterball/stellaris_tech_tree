@@ -1,0 +1,422 @@
+
+remove_ufp_policy_modifiers = {	
+	remove_modifier = em_sth_policy_ufp_war_1
+	remove_modifier = em_sth_policy_ufp_war_2
+	remove_modifier = em_sth_policy_ufp_war_3
+	remove_modifier = em_sth_policy_ufp_war_4
+	remove_modifier = em_sth_policy_ufp_war_5
+	remove_modifier = em_sth_policy_ufp_war_6
+	remove_modifier = em_sth_policy_ufp_war_7
+	remove_modifier = em_sth_policy_ufp_war_8
+	remove_modifier = em_sth_policy_ufp_war_9
+	remove_modifier = em_sth_policy_ufp_war_10
+	remove_modifier = em_sth_policy_ufp_humanitarian_1
+	remove_modifier = em_sth_policy_ufp_humanitarian_2
+	remove_modifier = em_sth_policy_ufp_humanitarian_3
+	remove_modifier = em_sth_policy_ufp_humanitarian_4
+	remove_modifier = em_sth_policy_ufp_humanitarian_5
+	remove_modifier = em_sth_policy_ufp_humanitarian_6
+	remove_modifier = em_sth_policy_ufp_humanitarian_7
+	remove_modifier = em_sth_policy_ufp_humanitarian_8
+	remove_modifier = em_sth_policy_ufp_humanitarian_9
+	remove_modifier = em_sth_policy_ufp_humanitarian_10
+	remove_modifier = em_sth_policy_ufp_economic_1
+	remove_modifier = em_sth_policy_ufp_economic_2
+	remove_modifier = em_sth_policy_ufp_economic_3
+	remove_modifier = em_sth_policy_ufp_economic_4
+	remove_modifier = em_sth_policy_ufp_economic_5
+	remove_modifier = em_sth_policy_ufp_economic_6
+	remove_modifier = em_sth_policy_ufp_economic_7
+	remove_modifier = em_sth_policy_ufp_economic_8
+	remove_modifier = em_sth_policy_ufp_economic_9
+	remove_modifier = em_sth_policy_ufp_economic_10
+	remove_modifier = em_sth_policy_ufp_tech_1
+	remove_modifier = em_sth_policy_ufp_tech_2
+	remove_modifier = em_sth_policy_ufp_tech_3
+	remove_modifier = em_sth_policy_ufp_tech_4
+	remove_modifier = em_sth_policy_ufp_tech_5
+	remove_modifier = em_sth_policy_ufp_tech_6
+	remove_modifier = em_sth_policy_ufp_tech_7
+	remove_modifier = em_sth_policy_ufp_tech_8
+	remove_modifier = em_sth_policy_ufp_tech_9
+	remove_modifier = em_sth_policy_ufp_tech_10
+	remove_modifier = em_sth_policy_ufp_cultural_1
+	remove_modifier = em_sth_policy_ufp_cultural_2
+	remove_modifier = em_sth_policy_ufp_cultural_3
+	remove_modifier = em_sth_policy_ufp_cultural_4
+	remove_modifier = em_sth_policy_ufp_cultural_5
+	remove_modifier = em_sth_policy_ufp_cultural_6
+	remove_modifier = em_sth_policy_ufp_cultural_7
+	remove_modifier = em_sth_policy_ufp_cultural_8
+	remove_modifier = em_sth_policy_ufp_cultural_9
+	remove_modifier = em_sth_policy_ufp_cultural_10		
+}
+
+remove_dominion_members_modifiers = {	
+	remove_modifier = em_dominion_members_1
+	remove_modifier = em_dominion_members_2
+	remove_modifier = em_dominion_members_3
+	remove_modifier = em_dominion_members_4
+	remove_modifier = em_dominion_members_5
+	remove_modifier = em_dominion_members_6
+	remove_modifier = em_dominion_members_7
+	remove_modifier = em_dominion_members_8
+	remove_modifier = em_dominion_members_9
+	remove_modifier = em_dominion_members_10
+}
+
+add_ufp_policy_modifiers = {
+	if = {
+		limit = { has_policy_flag = policy_flag_ufp_war }
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 1 } }
+			add_modifier = { modifier = em_sth_policy_ufp_war_1 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 2 } }
+			add_modifier = { modifier = em_sth_policy_ufp_war_2 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 3 } }
+			add_modifier = { modifier = em_sth_policy_ufp_war_3 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 4 } }
+			add_modifier = { modifier = em_sth_policy_ufp_war_4 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 5 } }
+			add_modifier = { modifier = em_sth_policy_ufp_war_5 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 6 } }
+			add_modifier = { modifier = em_sth_policy_ufp_war_6 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 7 } }
+			add_modifier = { modifier = em_sth_policy_ufp_war_7 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 8 } }
+			add_modifier = { modifier = em_sth_policy_ufp_war_8 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 9 } }
+			add_modifier = { modifier = em_sth_policy_ufp_war_9 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 10 } }
+			add_modifier = { modifier = em_sth_policy_ufp_war_10 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value > 10 } }
+			add_modifier = { modifier = em_sth_policy_ufp_war_10 days = -1 }
+			break = yes
+		}
+		break = yes																
+	}
+	if = {
+		limit = { has_policy_flag = policy_flag_ufp_humanitarian }
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 1 } }
+			add_modifier = { modifier = em_sth_policy_ufp_humanitarian_1 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 2 } }
+			add_modifier = { modifier = em_sth_policy_ufp_humanitarian_2 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 3 } }
+			add_modifier = { modifier = em_sth_policy_ufp_humanitarian_3 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 4 } }
+			add_modifier = { modifier = em_sth_policy_ufp_humanitarian_4 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 5 } }
+			add_modifier = { modifier = em_sth_policy_ufp_humanitarian_5 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 6 } }
+			add_modifier = { modifier = em_sth_policy_ufp_humanitarian_6 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 7 } }
+			add_modifier = { modifier = em_sth_policy_ufp_humanitarian_7 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 8 } }
+			add_modifier = { modifier = em_sth_policy_ufp_humanitarian_8 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 9 } }
+			add_modifier = { modifier = em_sth_policy_ufp_humanitarian_9 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 10 } }
+			add_modifier = { modifier = em_sth_policy_ufp_humanitarian_10 days = -1 }
+			break = yes
+		}			
+		if = {
+			limit = { check_variable = { which = "federation_members" value > 10 } }
+			add_modifier = { modifier = em_sth_policy_ufp_humanitarian_10 days = -1 }
+			break = yes
+		}
+		break = yes																
+	}
+	if = {
+		limit = { has_policy_flag = policy_flag_ufp_economic }
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 1 } }
+			add_modifier = { modifier = em_sth_policy_ufp_economic_1 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 2 } }
+			add_modifier = { modifier = em_sth_policy_ufp_economic_2 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 3 } }
+			add_modifier = { modifier = em_sth_policy_ufp_economic_3 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 4 } }
+			add_modifier = { modifier = em_sth_policy_ufp_economic_4 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 5 } }
+			add_modifier = { modifier = em_sth_policy_ufp_economic_5 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 6 } }
+			add_modifier = { modifier = em_sth_policy_ufp_economic_6 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 7 } }
+			add_modifier = { modifier = em_sth_policy_ufp_economic_7 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 8 } }
+			add_modifier = { modifier = em_sth_policy_ufp_economic_8 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 9 } }
+			add_modifier = { modifier = em_sth_policy_ufp_economic_9 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 10 } }
+			add_modifier = { modifier = em_sth_policy_ufp_economic_10 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value > 10 } }
+			add_modifier = { modifier = em_sth_policy_ufp_economic_10 days = -1 }
+			break = yes
+		}
+		break = yes																
+	}
+	if = {
+		limit = { has_policy_flag = policy_flag_ufp_tech }
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 1 } }
+			add_modifier = { modifier = em_sth_policy_ufp_tech_1 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 2 } }
+			add_modifier = { modifier = em_sth_policy_ufp_tech_2 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 3 } }
+			add_modifier = { modifier = em_sth_policy_ufp_tech_3 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 4 } }
+			add_modifier = { modifier = em_sth_policy_ufp_tech_4 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 5 } }
+			add_modifier = { modifier = em_sth_policy_ufp_tech_5 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 6 } }
+			add_modifier = { modifier = em_sth_policy_ufp_tech_6 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 7 } }
+			add_modifier = { modifier = em_sth_policy_ufp_tech_7 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 8 } }
+			add_modifier = { modifier = em_sth_policy_ufp_tech_8 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 9 } }
+			add_modifier = { modifier = em_sth_policy_ufp_tech_9 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 10 } }
+			add_modifier = { modifier = em_sth_policy_ufp_tech_10 days = -1 }
+			break = yes
+		}			
+		if = {
+			limit = { check_variable = { which = "federation_members" value > 10 } }
+			add_modifier = { modifier = em_sth_policy_ufp_tech_10 days = -1 }
+			break = yes
+		}
+		break = yes																
+	}
+	if = {
+		limit = { has_policy_flag = policy_flag_ufp_cultural }
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 1 } }
+			add_modifier = { modifier = em_sth_policy_ufp_cultural_1 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 2 } }
+			add_modifier = { modifier = em_sth_policy_ufp_cultural_2 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 3 } }
+			add_modifier = { modifier = em_sth_policy_ufp_cultural_3 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 4 } }
+			add_modifier = { modifier = em_sth_policy_ufp_cultural_4 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 5 } }
+			add_modifier = { modifier = em_sth_policy_ufp_cultural_5 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 6 } }
+			add_modifier = { modifier = em_sth_policy_ufp_cultural_6 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 7 } }
+			add_modifier = { modifier = em_sth_policy_ufp_cultural_7 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 8 } }
+			add_modifier = { modifier = em_sth_policy_ufp_cultural_8 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 9 } }
+			add_modifier = { modifier = em_sth_policy_ufp_cultural_9 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value = 10 } }
+			add_modifier = { modifier = em_sth_policy_ufp_cultural_10 days = -1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = "federation_members" value > 10 } }
+			add_modifier = { modifier = em_sth_policy_ufp_cultural_10 days = -1 }
+			break = yes
+		}
+		break = yes																
+	}
+}	
+
+add_dominion_members_modifiers = {
+	if = {
+		limit = { check_variable = { which = "dominion_members" value = 1 } }
+		add_modifier = { modifier = em_dominion_members_1 days = -1 }
+		break = yes
+	}
+	if = {
+		limit = { check_variable = { which = "dominion_members" value = 2 } }
+		add_modifier = { modifier = em_dominion_members_2 days = -1 }
+		break = yes
+	}
+	if = {
+		limit = { check_variable = { which = "dominion_members" value = 3 } }
+		add_modifier = { modifier = em_dominion_members_3 days = -1 }
+		break = yes
+	}
+	if = {
+		limit = { check_variable = { which = "dominion_members" value = 4 } }
+		add_modifier = { modifier = em_dominion_members_4 days = -1 }
+		break = yes
+	}
+	if = {
+		limit = { check_variable = { which = "dominion_members" value = 5 } }
+		add_modifier = { modifier = em_dominion_members_5 days = -1 }
+		break = yes
+	}
+	if = {
+		limit = { check_variable = { which = "dominion_members" value = 6 } }
+		add_modifier = { modifier = em_dominion_members_6 days = -1 }
+		break = yes
+	}
+	if = {
+		limit = { check_variable = { which = "dominion_members" value = 7 } }
+		add_modifier = { modifier = em_dominion_members_7 days = -1 }
+		break = yes
+	}
+	if = {
+		limit = { check_variable = { which = "dominion_members" value = 8 } }
+		add_modifier = { modifier = em_dominion_members_8 days = -1 }
+		break = yes
+	}
+	if = {
+		limit = { check_variable = { which = "dominion_members" value = 9 } }
+		add_modifier = { modifier = em_dominion_members_9 days = -1 }
+		break = yes
+	}
+	if = {
+		limit = { check_variable = { which = "dominion_members" value = 10 } }
+		add_modifier = { modifier = em_dominion_members_10 days = -1 }
+		break = yes
+	}
+	if = {
+		limit = { check_variable = { which = "dominion_members" value > 10 } }
+		add_modifier = { modifier = em_dominion_members_10 days = -1 }
+		break = yes
+	}
+}	

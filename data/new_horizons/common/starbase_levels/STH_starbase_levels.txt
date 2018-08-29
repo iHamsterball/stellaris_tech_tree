@@ -1,0 +1,23 @@
+#starbase_level_foo = {
+#	ship_size = starbase_foo 		# Required
+#	next_level = starbase_level_bar	# Optional
+#	show_in_outliner = yes			# Default yes, if yes starbase will be shown in outliner
+#	display_empire_shield = no		# Default no, if yes empire shield will be shown even if there's no colony
+#	display_map_icon = yes			# Default yes, if yes starbase map icon will be shown even if there's no colony
+#	level_weight = 1				# Default 0, used for claim cost and required module/building level
+#	ai_weight = { weight = 1.0 }	# Default 0, THIS = Starbase, FROM = Country
+#}
+
+# Normal
+
+
+
+starbase_level_terran_vanguard_01 = {
+	ship_size = starbase_terran_vanguard_01
+	# next_level = starbase_level_starport
+	show_in_outliner = yes
+	display_map_icon = yes
+	display_empire_shield = yes
+	level_weight = 1
+	ai_weight = { weight = 3 }	# AI will not prioritize defending a weight 0 starbase
+}

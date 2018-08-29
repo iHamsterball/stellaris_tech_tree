@@ -1,0 +1,15 @@
+
+special_project = {
+	key = "TELLARITE_1_PROJECT"
+	cost = 200
+	days_to_research = 0
+	tech_department = society_technology
+	picture = sth_GFX_evt_federationTellar
+	timelimit = -1
+	event_scope = planet_event
+	location = no
+	abort_trigger = { }
+	on_success = {
+		owner = { country_event = { id = STH_tellarite_flavour.102 } }
+	}
+}

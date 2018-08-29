@@ -1,0 +1,677 @@
+### Capacity Overload
+   country_edict = {
+      name = "capacity_overload"
+      prerequisites = { "tech_society_engineered_368" }
+      modifier = {
+         country_resource_energy_mult = 0.20
+      }
+      length = 3600
+      cost = { influence = 300 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Production Targets
+   country_edict = {
+      name = "production_targets"
+      prerequisites = { "tech_society_engineered_368" }
+      modifier = {
+         country_resource_minerals_mult = 0.20
+      }
+      length = 3600
+      cost = { influence = 300 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Farming Subsidies
+   country_edict = {
+      name = "farming_subsidies"
+      prerequisites = { "tech_society_engineered_368" }
+      modifier = {
+         country_resource_food_mult = 0.20
+      }
+      length = 3600
+      cost = { influence = 200 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Research Grants - Basic edict, available at game start
+   country_edict = {
+      name = "research_focus"
+      potential = {
+         NOT = { has_swapped_tradition = tr_diversity_4 }
+      }
+      modifier = {
+         all_technology_research_speed = 0.05
+      }
+      length = 3600
+      cost = { influence = 200 }
+      ai_weight = { weight = 1 }
+   }
+   
+### STEM Subsidies
+   country_edict = {
+      name = "research_focus_2"
+      potential = {
+            has_swapped_tradition = tr_diversity_4
+      }
+      modifier = {
+         all_technology_research_speed = 0.1
+      }
+      length = 3600
+      cost = { influence = 200 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Religious Unity
+   country_edict = {
+      name = "declare_saint"
+      potential = {
+         OR = {
+            has_swapped_tradition = tr_doctrine_4
+            has_swapped_tradition = tr_prophecy_3
+         }
+      }
+      modifier = {
+         country_resource_unity_mult = 0.15
+      }
+      length = 3600
+      cost = { influence = 200 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Peace Festival - Generic happiness edict. Available at game start.
+   country_edict = {
+      name = "peace_festivals"
+      potential = {
+         has_unique_festival = no
+      }
+      modifier = {
+         pop_happiness = 0.10
+      }
+      length = 3600
+      cost = { influence = 200 }
+      ai_weight = { weight = 1 }
+   }
+   
+### First Contact Day - UE unique
+   country_edict = {
+      name = "local_festival_1_edict"
+      potential = {
+         has_country_flag = united_earth
+      }
+      modifier = {
+         pop_happiness = 0.10
+      }
+      length = 3600
+      cost = { influence = 200 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Kot'baval Festival - Klingon unique
+   country_edict = {
+      name = "local_festival_2_edict"
+      potential = {
+         has_country_flag = klingon_empire
+      }
+      modifier = {
+         pop_happiness = 0.10
+      }
+      length = 3600
+      cost = { influence = 200 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Kal Rekk Observation - Vulcan unique
+   country_edict = {
+      name = "local_festival_3_edict"
+      potential = {
+         has_country_flag = vulcan_high_command
+      }
+      modifier = {
+         pop_happiness = 0.10
+      }
+      length = 3600
+      cost = { influence = 200 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Peldor Gratitude Festival - Bajoran unique
+   country_edict = {
+      name = "local_festival_4_edict"
+      potential = {
+         has_country_flag = bajoran_republic 
+      }
+      modifier = {
+         pop_happiness = 0.10
+      }
+      length = 3600
+      cost = { influence = 200 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Prixin Celebration - Talaxian unique
+   country_edict = {
+      name = "local_festival_5_edict"
+      potential = {
+         has_country_flag = talaxian_empire
+      }
+      modifier = {
+         pop_happiness = 0.10
+      }
+      length = 3600
+      cost = { influence = 200 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Eitreih'hveinn Farmer Festival - Romulan unique
+   country_edict = {
+      name = "local_festival_6_edict"
+      potential = {
+         has_country_flag = romulan_star_empire
+      }
+      modifier = {
+         pop_happiness = 0.10
+      }
+      length = 3600
+      cost = { influence = 200 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Bread and Circuses - Terran empire unique
+   country_edict = {
+      name = "local_festival_7_edict"
+      potential = {
+         has_country_flag = terran_empire
+      }
+      modifier = {
+         pop_happiness = 0.10
+      }
+      length = 3600
+      cost = { influence = 200 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Mother's Day - Lissepian empire unique
+   country_edict = {
+      name = "local_festival_8_edict"
+      potential = {
+         has_country_flag = lissepian_parliaments
+      }
+      modifier = {
+         pop_happiness = 0.10
+      }
+      length = 3600
+      cost = { influence = 200 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Information Quarntine
+   country_edict = {
+      name = "information_quarantine"
+      prerequisites = { "tech_society_statecraft_993" }
+      modifier = {
+         pop_government_ethic_attraction = 0.33
+         pop_ethics_shift_speed_mult = 0.33
+      }
+      length = 3600
+      cost = { influence = 200 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Encourage Free Thought
+   country_edict = {
+      name = "encourage_free_thought"
+      prerequisites = { "tech_society_statecraft_993" }
+      modifier = {
+         pop_ethics_shift_speed_mult = 0.5
+      }
+      length = 3600
+      cost = { influence = 200 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Map the Stars
+   country_edict = {
+      name = "map_the_stars"
+      prerequisites = { "tech_society_statecraft_993" }
+      modifier = {
+         science_ship_survey_speed = 0.25
+         ship_anomaly_generation_chance_mult = 0.10
+      }
+      length = 3600
+      cost = { influence = 100 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Land of Opportunity
+   country_edict = {
+      name = "land_of_opportunity"
+      prerequisites = { "tech_society_statecraft_915" }
+      potential = {
+         has_comms_with_alien_empire = yes
+      }
+      modifier = {
+         planet_migration_xeno_pull = 0.5
+      }
+      length = 3600
+      cost = { influence = 200 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Interstellar Cultural Exchange
+   country_edict = {
+      name = "diplomatic_grants"
+      potential = {
+         OR = {
+            has_non_swapped_tradition = tr_diplomacy_dynamic_ecomorphism
+            has_swapped_tradition = tr_greed_1
+         }
+         has_comms_with_alien_empire = yes
+      }
+      modifier = {
+         country_trust_growth = 0.50
+         country_trade_attractiveness = 0.10
+      }
+      length = 3600
+      cost = { influence = 100 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Early warnings
+   country_edict = {
+      name = "early_warning_edict"
+      prerequisites = { "tech_society_statecraft_915" }
+      modifier = {
+         planet_sensor_range_add = 1
+      }
+      length = 3600
+      cost = { influence = 100 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Eductional Reforms
+   country_edict = {
+      name = "education_campaign"
+      prerequisites = { "tech_society_02217" }
+      modifier = {
+         species_leader_exp_gain = 0.25
+      }
+      length = 3600
+      cost = { energy = 1000 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Ecological Campgain
+   country_edict = {
+      name = "recycling_campaign"
+      prerequisites = { "tech_society_02217" }
+      modifier = {
+         pop_consumer_goods_mult = -0.15
+      }
+      length = 3600
+      cost = { energy = 1000 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Healthcare Reforms
+   country_edict = {
+      name = "healthcare_campaign"
+      prerequisites = { "tech_society_statecraft_991" }
+      modifier = {
+         pop_growth_speed = 0.20
+      }
+      length = 3600
+      cost = { energy = 1000 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Civilian Conscriptions
+   country_edict = {
+      name = "war_drone_campaign"
+      prerequisites = { "tech_society_statecraft_991" }
+      modifier = {
+         army_damage_mult = 0.15
+      }
+      length = 3600
+      cost = { energy = 1000 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Naval Modernisation
+   country_edict = {
+      name = "naval_revitalization_edict"
+      prerequisites = { "tech_society_statecraft_991" }
+      modifier = {
+         country_ship_upgrade_cost_mult = -0.2
+      }
+      length = 3600
+      cost = { energy = 1000 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Infrastructure Revitilization
+   country_edict = {
+      name = "infrastructure_revitilization_edict"
+      prerequisites = { "tech_society_statecraft_915" }
+      modifier = {
+         planet_building_cost_mult = -0.2
+      }
+      length = 3600
+      cost = { energy = 1000 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Share the Burden
+   country_edict = {
+      name = "share_burden_country_edict"
+      potential = {
+         OR = {
+            has_non_swapped_tradition = tr_domination_protection_racket
+            has_swapped_tradition = tr_cunning_3
+         }
+      }
+      modifier = {
+         slave_mineral_output = 0.15
+         slave_food_output = 0.15
+         country_unrest_unhappy_slave_effect_mult = 0.5
+      }
+      length = 3600
+      cost = { energy = 1000 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Full War Footing
+   country_edict = {
+      name = "desperate_measures"
+      prerequisites = { "tech_society_02223" }
+      modifier = {
+         starbase_defensive_war_ship_build_speed_mult = 1.00
+         ship_home_territory_fire_rate_mult = 0.40
+      }
+      length = 3600
+      is_ambition = yes   ai_weight = { weight = 1 }
+   }
+   
+### Defensive War Policy
+   country_edict = {
+      name = "fortress_proclamation"
+      prerequisites = { "tech_society_02223" }
+      modifier = {
+         starbase_upgrade_speed_mult = 1.00
+         shipsize_military_station_small_build_speed_mult = 1.00
+      }
+      length = 3600
+      is_ambition = yes   ai_weight = { weight = 1 }
+   }
+   
+### Architectural Renaissance
+   country_edict = {
+      name = "architectural_renaissance"
+      prerequisites = { "tech_society_02337" }
+      modifier = {
+         megastructure_build_speed_mult = 0.50
+         planet_building_build_speed_mult = 1.00
+      }
+      length = 3600
+      is_ambition = yes   ai_weight = { weight = 1 }
+   }
+   
+### Economic Reforms
+   country_edict = {
+      name = "omnifarious_acquisition"
+      prerequisites = { "tech_society_02337" }
+      modifier = {
+         country_resource_minerals_mult = 0.33
+      }
+      length = 3600
+      is_ambition = yes   ai_weight = { weight = 1 }
+   }
+   
+### Hearts and Minds
+   country_edict = {
+      name = "hearts_and_minds"
+      prerequisites = { "tech_society_02337" }
+      modifier = {
+         pop_government_ethic_attraction = 1.00
+         pop_ethics_shift_speed_mult = 1.00
+      }
+      length = 3600
+      is_ambition = yes   ai_weight = { weight = 1 }
+   }
+   
+### The Grand Fleet
+   country_edict = {
+      name = "grand_fleet"
+      potential = {
+         OR = {
+            has_non_swapped_tradition = tr_supremacy_right_of_conquest
+            has_swapped_tradition = tr_victory_2
+         }
+      }
+      modifier = {
+         country_naval_cap_mult = 0.20
+         ship_upkeep_mult = -0.20
+      }
+      length = 3600
+      cost = { influence = 300 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Arms Race
+   planet_edict = {
+      name = "arms_race_edict"
+      potential = {
+         owner = {
+         OR = {
+            has_non_swapped_tradition = tr_supremacy_right_of_conquest
+            has_swapped_tradition = tr_victory_2
+         }
+         }
+      }
+      modifier = {
+         planet_army_build_speed_mult = 0.33
+         planet_army_build_cost_mult = -0.33
+      }
+      length = 3600
+      cost = { influence = 100 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Land Clearance
+   planet_edict = {
+      name = "land_clearance"
+      potential = {
+         owner = {
+         OR = {
+            has_non_swapped_tradition = tr_expansion_a_new_life
+            has_swapped_tradition = tr_expansion_a_new_life_machine
+         }
+         }
+         is_artificial_planet = no
+      }
+      modifier = {
+         
+      }
+      length = 3600
+      cost = { influence = 300 }
+      allow = { custom_tooltip = { fail_text = land_clearance_not_max_size planet_size < 25 } custom_tooltip = { fail_text = land_clearance_not_happened NOT = { has_planet_flag = land_clearance_happened } } }
+      effect = { custom_tooltip = land_clearance_increase_size_1 hidden_effect = { change_planet_size = 1 } hidden_effect = { set_planet_flag = land_clearance_happened } }
+      ai_weight = { weight = 10 }
+   }
+   
+### Tourism Bureau
+   planet_edict = {
+      name = "legal_aliens_edict"
+      potential = {
+         owner = {
+         OR = {
+            has_non_swapped_tradition = tr_diplomacy_dynamic_ecomorphism
+            has_swapped_tradition = tr_greed_1
+         }
+         }
+      }
+      modifier = {
+         planet_migration_xeno_pull = 1
+      }
+      length = 3600
+      cost = { influence = 100 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Consencrated World
+   planet_edict = {
+      name = "consecrated_worlds_edict"
+      potential = {
+         owner = {
+         OR = {
+            has_swapped_tradition = tr_doctrine_4
+            has_swapped_tradition = tr_prophecy_3
+         }
+         }
+      }
+      modifier = {
+         pop_happiness = 0.05
+         pop_growth_speed = 0.15
+         tile_resource_unity_mult = 0.15
+      }
+      length = 36000
+      cost = { influence = 300 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Bio-Nutrient Harvesting Optimization
+   planet_edict = {
+      name = "borg_planetary_food_edict"
+      prerequisites = { "tech_society_02338" }
+      modifier = {
+         tile_resource_food_mult = 0.25
+      }
+      length = 3600
+      cost = { influence = 100 }
+      allow = { custom_tooltip = { fail_text = recent_planet_edict_borg NOT = { has_planet_flag = edict_flag_planetary_borg } } }
+      effect = { hidden_effect = { set_timed_planet_flag = { flag = edict_flag_planetary_borg days = 5000 } } }
+      ai_weight = { weight = 1 }
+   }
+   
+### Mineral Processing Optimization
+   planet_edict = {
+      name = "borg_planetary_minerals_edict"
+      prerequisites = { "tech_society_02338" }
+      modifier = {
+         tile_resource_minerals_mult = 0.25
+      }
+      length = 3600
+      cost = { influence = 100 }
+      allow = { custom_tooltip = { fail_text = recent_planet_edict_borg NOT = { has_planet_flag = edict_flag_planetary_borg } } }
+      effect = { hidden_effect = { set_timed_planet_flag = { flag = edict_flag_planetary_borg days = 5000 } } }
+      ai_weight = { weight = 1 }
+   }
+   
+### Energy Gathering Protocol Optimization
+   planet_edict = {
+      name = "borg_planetary_energy_edict"
+      prerequisites = { "tech_society_02338" }
+      modifier = {
+         tile_resource_energy_mult = 0.25
+      }
+      length = 3600
+      cost = { influence = 100 }
+      allow = { custom_tooltip = { fail_text = recent_planet_edict_borg NOT = { has_planet_flag = edict_flag_planetary_borg } } }
+      effect = { hidden_effect = { set_timed_planet_flag = { flag = edict_flag_planetary_borg days = 5000 } } }
+      ai_weight = { weight = 1 }
+   }
+   
+### Basic Research Investment
+   planet_edict = {
+      name = "spirit_science_physics_edict"
+      prerequisites = { "tech_society_planetary_367" }
+      potential = {
+         owner = {
+         is_borg_empire = no
+         }
+      }
+      modifier = {
+         tile_resource_physics_research_mult = 0.20
+      }
+      length = 3600
+      cost = { influence = 100 }
+      allow = { custom_tooltip = { fail_text = recent_planet_edict_research NOT = { has_planet_flag = edict_flag_planetary_research } } }
+      effect = { hidden_effect = { set_timed_planet_flag = { flag = edict_flag_planetary_research days = 5000 } } }
+      ai_weight = { weight = 1 }
+   }
+   
+### Art Program
+   planet_edict = {
+      name = "spirit_science_society_edict"
+      prerequisites = { "tech_society_planetary_367" }
+      potential = {
+         owner = {
+         is_borg_empire = no
+         }
+      }
+      modifier = {
+         tile_resource_society_research_mult = 0.20
+      }
+      length = 3600
+      cost = { influence = 100 }
+      allow = { custom_tooltip = { fail_text = recent_planet_edict_research NOT = { has_planet_flag = edict_flag_planetary_research } } }
+      effect = { hidden_effect = { set_timed_planet_flag = { flag = edict_flag_planetary_research days = 5000 } } }
+      ai_weight = { weight = 1 }
+   }
+   
+### Prototype Technologies
+   planet_edict = {
+      name = "spirit_science_engineering_edict"
+      prerequisites = { "tech_society_planetary_367" }
+      potential = {
+         owner = {
+         is_borg_empire = no
+         }
+      }
+      modifier = {
+         tile_resource_engineering_research_mult = 0.20
+      }
+      length = 3600
+      cost = { influence = 100 }
+      allow = { custom_tooltip = { fail_text = recent_planet_edict_research NOT = { has_planet_flag = edict_flag_planetary_research } } }
+      effect = { hidden_effect = { set_timed_planet_flag = { flag = edict_flag_planetary_research days = 5000 } } }
+      ai_weight = { weight = 1 }
+   }
+   
+### Martial Law - Basic edict for all planets
+   planet_edict = {
+      name = "martial_law"
+      potential = {
+         owner = {
+         is_borg_empire = no
+         }
+         has_orbital_bombardment = no
+      }
+      modifier = {
+         planet_unrest_mult = -0.4
+      }
+      length = 3600
+      cost = { influence = 100 }
+      ai_weight = { weight = 1 }
+   }
+   
+### Propaganda Broadcast
+   planet_edict = {
+      name = "crush_rebellion_edict"
+      potential = {
+         owner = {
+         OR = {
+            has_non_swapped_tradition = tr_domination_protection_racket
+            has_swapped_tradition = tr_cunning_3
+         }
+         }
+         has_orbital_bombardment = no
+      }
+      modifier = {
+         planet_unrest_mult = -0.6
+      }
+      length = 3600
+      cost = { influence = 100 }
+      ai_weight = { weight = 1 }
+   }
+   

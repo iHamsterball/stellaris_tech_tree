@@ -1,0 +1,398 @@
+﻿l_german:
+ ####################################
+ # Traditions
+ ####################################
+ UNITY:0 "Einigkeit"
+ UNITY_DESC:0 "Einigkeit ist eine Ressource, die zum Freischalten von $TRADITIONS$ benutzt wird. Einigkeit wird monatlich erzeugt. Wie viel, das hängt von bestimmten Gebäuden und von der Einigkeitsstufe Ihres Reichs ab."
+ TRADITIONS:0 "Traditionen"
+ TRADITIONS_DESC:0 "Traditionen sind Boni, die anhand von Traditionsbäumen organisiert werden. Eine Tradition kann jedes Mal freigeschaltet werden, wenn Ihr Reich dafür genügend Einigkeit angesammelt hat. Die Einigkeitskosten zum Freischalten neuer Traditionen werden durch eine Reihe unterschiedlicher Faktoren erhöht, zum Beispiel eine große Anzahl an Kolonien oder eine ideologisch zersplitterte Bevölkerung."
+ TRADITIONS_PROGRESS:0 "$KEY$-Fortschritt"
+ TRADITIONS_PROGRESS_TITLE:0 "Fortschritt"
+ TRADITIONS_PROGRESS_DESC:0 "Zum Annehmen einer neuen Tradition benötigt Ihr noch zusätzlich $MISSING|Y$ £unity . Bei der gegenwärtigen Geschwindigkeit erreicht Ihr dies bis: $DATE|Y$."
+ UNLOCK_TRADITION_DESC:0 "Ihr habt genügend £unity  zur Annahme einer neuen Tradition."
+ TRADITIONS_TIME_TO_NEXT:0 "Monate verbleibend"
+ TRADITIONS_TIME_TO_NEXT_DESC:0 "$MONTHS$ verbleibend."
+ TRADITIONS_UNLOCKED:0 "Ihr habt $COUNT|Y$ von $MAX|Y$ Traditionen dieses Baums freigeschaltet."
+ TRADITION_ADOPT_BUTTON:0 "Annehmen"
+ TRADITIONS_ADOPT:0 "Annahme-Effekt"
+ TRADITIONS_FINISH:0 "Abschluss-Effekt"
+ TRADITIONS_FINISH_AP:0 " Es wird zusätzlich §Y1§! Aufstiegsvorteil-Slot freigeschaltet."
+ TRADITION_COST:0 "Traditionskosten"
+ TRADITIONS_UNAFFORDABLE:0 "§RIhr benötigt noch §Y$RESOURCES$§!, bevor Ihr diese Tradition freischalten können.§!"
+ MUST_ADOPT_TRADITION_CATEGORY:0 "$TRIGGER_FAIL$Hat $CATEGORY|Y$-Traditionen angenommen."
+ MUST_ACTIVATE_ALL_TRADITIONS:0 "$TRIGGER_FAIL$Hat alle Traditionen dieser Gruppe angenommen"
+ TRADITION_ADOPT_CONFIRM:0 "Tradition annehmen"
+ TRADITION_ADOPTED_COUNT:0 "$COUNT$ / $MAX$"
+ TRADITION_CLICK_DESC:0 "§GZum Annehmen dieser Traditionen klicken§!"
+ TRADITION_GROUP_CLICK_DESC:0 "§GZum Annehmen dieser Traditionsgruppe klicken§!"
+ TRADITION_COST_NEXT:0 "Nächste Tradition"
+ TRADITION_COST_MULT_NUM_TR:0 "$COUNT|Y$ Traditionen: $VALUE|Y$"
+ TRADITION_COST_MULT_NUM_COLONIES:0 "$COUNT|Y$ Kolonien: $VALUE|%$"
+ TRADITION_COST_MULT_NUM_SYSTEMS:0 "$COUNT|Y$ Systeme: $VALUE|%$"
+ TRADITION_COST_MULT_NUM_POPS:1 "$COUNT|Y$ Basis-Bewohnerkosten: $VALUE|Y$"
+ TRADITION_COST_MULT_NUM_POPS_EFFECT:2 "Zusätzliche Bewohnerkosten: $VALUE|Y$"
+ TRADITION_COST_MULT_NUM_POP_TYPES_EFFECT:0 "$NUM|Y$ $TYPE$: $VALUE|Y$"
+ TRADITION_COST_MULT_NUM_GROUPS:0 "$COUNT|Y$ Angenommene Traditionskategorien: $VALUE$"
+ pop_xenos:0 "Alien-Bewohner"
+ pop_xeno_slaves:0 "Alien-Sklaven-Bewohner"
+ pop_slaves:0 "Sklaven-Bewohner"
+ pop_founders:0 "Gründer-Bewohner"
+ pop_robots:0 "Roboter-Bewohner"
+
+ ################################################################
+ # EXPANSION
+ ################################################################
+
+ tradition_expansion_hive:0 "Ausbreitung"
+ #tradition_expansion_desc: ""
+ tradition_expansion_hive_desc:0 "Es gibt nur zwei mögliche Zustände für unseren Schwarm: Wachstum oder Tod."
+ tr_expansion_adopt_hive:0 "$tr_expansion_adopt_machine$"
+ tr_expansion_adopt_hive_desc:0 "$tradition_expansion_hive_desc$\n\n$tr_expansion_adopt_hive_effect$\n\n$tr_expansion_finish_hive_effect$"
+ tr_expansion_adopt_hive_effect:1 "§E$TRADITIONS_ADOPT$:§!\n§Y$MOD_PLANET_COLONY_DEVELOPMENT_SPEED_MULT$§! um §G+50%§! erhöht."
+ tr_expansion_colonization_fever_hive:0 "Ein Verstand"
+ tr_expansion_colonization_fever_hive_desc:0 "$tr_expansion_colonization_fever_desc$"
+ tr_expansion_colonization_fever_hive_delayed:0 "Das Überbewusstsein ist ein Chor des Denkens, dass auch die kalte Leere des Weltraums nicht zum Schweigen bringen kann."
+ tr_expansion_a_new_life_hive:0 "Vermehrungswahnsinn"
+ tr_expansion_a_new_life_hive_desc:0 "$tr_expansion_a_new_life_desc$"
+ tr_expansion_a_new_life_hive_delayed:0 "Bei der Beanspruchung eines neuen Baus haben die Brüter den starken instinktiven Zwang, sich mit einer frenetischen Rate zu vermehren. Sie sterben typischerweise an der Belastung, aber die Geburt vieler neuer Drohnen beschleunigt die Bearbeitung neuer Welten."
+#tr_expansion_standardized_colony_ships: ""
+#tr_expansion_standardized_colony_ships_desc: ""
+#tr_expansion_standardized_colony_ships_delayed: ""
+ tr_expansion_courier_network_hive:0 "Divergenzunterdrückung"
+ tr_expansion_courier_network_hive_desc:0 "$tr_expansion_courier_network_desc$"
+ tr_expansion_courier_network_hive_delayed:0 "Gelegentlich wird unsere Einheit durch abtrünnige Drohnen gefährdet. Diese Bedrohung hat sich durch die Ausbreitung in der Galaxie erhöht. Das Säubern und Recycling dieser Einheiten gibt ihnen die Chance, mit ihrem Tod zum Schwarm beizutragen, wie sie es nicht mit ihrem Leben gekonnt hätten."
+ tr_expansion_reach_for_the_stars_hive:0 "Amöbensynapsen"
+ tr_expansion_reach_for_the_stars_hive_desc:0 "$tr_expansion_reach_for_the_stars_desc$"
+ tr_expansion_reach_for_the_stars_hive_delayed:0 "Das Verschalen von Synapsen für den Hyperraum-Antrieb, die für die Raumfahrt zusätzlich verhärtet sind, erlaubt das weitergeben von Befehlen des Schwarms, um so die Sterne zu erobern."
+ tr_expansion_galactic_ambition_hive:0 "Verdunkelung der Sterne"
+ tr_expansion_galactic_ambition_hive_desc:0 "$tr_expansion_galactic_ambition_desc$"
+ tr_expansion_galactic_ambition_hive_delayed:0 "Panische Angst begleitete die ersten Schritte in die Dunkelheit, weg von unserem Heimatnest und dem Mutter-Schwarm, der uns nährte. Nur durch die Eroberung und das Besiegen der Angst können wir weiterwachsen. Millionen von Drohnen sterben, damit der Schwarm überleben kann."
+ tr_expansion_finish_hive_effect:0 "$tr_expansion_finish_machine_effect$"
+
+ ################################################################
+ # DOMINATION
+ ################################################################
+
+ tradition_domination_hive:0 "$tradition_domination$"
+ tradition_domination_hive_desc:0 "Alles, was nicht wir sind, muss uns dienen. Entweder als Untergebe oder als Nahrung."
+ tr_domination_colonial_viceroys_hive:0 "Zusammentreffen der Bewusstsein"
+ tr_domination_colonial_viceroys_hive_desc:0 "$tr_domination_colonial_viceroys_desc$"
+ tr_domination_colonial_viceroys_hive_delayed:0 "Wir benötigen mehr autonome Drohnen, um die Harmonie nach dem Wachstum unseres Schwarm weiterhin zu erzwingen."
+ tr_domination_fleet_levies_hive:0 "Gedankenkontroll-Symbionten"
+ tr_domination_fleet_levies_hive_desc:0 "$tr_domination_fleet_levies_desc$"
+ tr_domination_fleet_levies_hive_delayed:0 "Das Versprechen untergebene Schwärme in unsere Einigkeit zu integrieren scheint sie nicht zu freuen. Sie bieten stattdessen an, unseren Sternenschwärmen im Austausch für die Erhaltung ihrer zerbrechlichen, einsamen Individualität zu unterstützen. Dieses Verhalten verwirrt uns."
+ tr_domination_protection_racket_hive:0 "Bio-Tribute"
+ tr_domination_protection_racket_hive_desc:0 "$tr_domination_protection_racket_desc$"
+ tr_domination_protection_racket_hive_delayed:0 "Regelmäßige Lieferungen von williger und verdaulicher Biomasse aus Untertanen-Schwärmen generiert oft mehr Energie als eine groß angelegte planetarische Invasion."
+ tr_domination_star_lords_hive:0 "Einschlaf-Pheromone"
+ tr_domination_star_lords_hive_desc:0 "$tr_domination_star_lords_desc$"
+ tr_domination_star_lords_hive_delayed:0 "Experimente haben ergeben, dass bestimmte Kombinationen von gasförmigen Emissionen und Pheromonen die Kampfmoral und den Willen, anderen zu widerstehen, stark reduzieren. Manche sterben, scheiden aber mit Glückseligkeit dahin, in dem Wissen die herrliche Reinheit unseres Geistes kurz berührt zu haben."
+ tr_domination_vassal_acculturation_hive:0 "Gehirnabsaugung"
+ tr_domination_vassal_acculturation_hive_desc:0 "$tr_domination_vassal_acculturation_desc$"
+ tr_domination_vassal_acculturation_hive_delayed:0 "Die Drohnenleichensteuer, die wir unseren Untertanen verordnet hatten, war am Anfang unpopulär, doch mit der Zeit schwand der Widerstand, wie es immer bei kurzlebigen Wesen der Fall ist. Die Körper nähren uns und die Gehirne haben Reste von Erinnerungen, die ebenfalls geerntet werden können."
+
+ ################################################################
+ # PURITY
+ ################################################################
+ 
+ tr_purity_never_surrender:0 "Niemals Aufgeben"
+ tr_purity_never_surrender_desc:1 "§Y$shipclass_starbase_hull_mult$§! um §G+10%§! erhöht und §Y$MOD_ARMY_DEFENSE_HEALTH_MULT$§! um §G+50%§! erhöht."
+ tr_purity_never_surrender_delayed:1 "Wir werden uns niemals denen beugen, die minderwertig sind. Lasst sie sich selbst gegen unsere unzerbrechliche Verteidigung schleudern! Tausend Jahre beginnend von jetzt an, werden sie nur eine weitere Fußnote in der Geschichte unseres Aufstiegs sein."
+ tr_purity_symbol_purity:0 "Symbol der Reinheit"
+ tr_purity_symbol_purity_desc:1 "§HNeues Gebäude:§! $building_symbol_purity$\n§EDieses Gebäude produziert Einigkeit und erhöht gleichzeitig die Anziehung der Regierungsethik.§!"
+ tr_purity_symbol_purity_delayed:0 "$tech_purity_campaigns_desc$"
+ tr_purity_natural_order:0 "Natürliche Ordnung"
+ tr_purity_natural_order_desc:1 "Das Verspeisen von außerirdischen Bewohnern bringt £unity  Einigkeit. Zählt nicht für Roboter."
+ tr_purity_natural_order_delayed:0 "Alle Wesen haben ihren zugewiesenen Platz im Universum. Diejenigen, die zu einer niederen Spezies gehören, sollten sich in ihrer Knechtschaft trösten."
+ tr_purity_age_machines:1 "Zeitalter der Maschinen"
+ tr_purity_age_machines_desc:2 "Ressourcenproduktion von baubaren Bewohnern um §G+5%§! erhöht."
+ tr_purity_age_machines_delayed:1 "Die chaotische Zeit, in der organische Reiche den Verlauf der galaktischen Geschichte diktierten, ist vorbei. Das Zeitalter der Maschinen ist endlich gekommen."
+ tr_purity_the_chosen:0 "Der Auserwählte"
+ tr_purity_the_chosen_desc:4 "£pop  §Y$pop_citizen_happiness$§! um §G+5%§! erhöht und §Y$MOD_COUNTRY_STARBASE_INFLUENCE_COST_MULT$§! um §G5%§! reduziert."
+ tr_purity_the_chosen_delayed:0 "Ob durch eine höhere Macht erschaffen oder einfach nur unsere überlegenden Gene auserkoren, unsere Spezies ist unvergleichbar. Wir sind eindeutig für große Dinge bestimmt."
+ tr_purity_waste_processing:0 "Abfallverarbeitung"
+ tr_purity_waste_processing_desc:0 "§Y$MOD_POP_PROCESSING_OUTPUT$§! um §G+50%§! erhöht."
+ tr_purity_waste_processing_delayed:1 "Optimierte Verarbeitungsmethoden erhöhen die Erträge, wenn Bewohner geerntet werden. Nichts darf verschwendet werden."
+ tr_purity_appropriation:0 "Fördermittel"
+ tr_purity_appropriation_desc:1 "§Y$MOD_POP_RESETTLEMENT_COST_MULT$§! um §G50%§! reduziert."
+ tr_purity_appropriation_delayed:1 "Land, das nicht bearbeitet wird, trägt nichts zu unserem Reich bei. Arbeiter müssen auf eine effiziente Weise auf die Planeten umgesiedelt werden, wo sie am meisten benötigt werden."
+
+ ################################################################
+ # HARMONY
+ ################################################################
+
+ tr_harmony_mind_and_body_hive:0 "Geklonte Organe"
+ tr_harmony_mind_and_body_hive_delayed:0 "Die Klonapparaturen produzieren die häufiger verbrauchten Organe wie Herz und Lunge massenhaft, wodurch die nutzbare Lebensdauer von wichtigen Drohnen erhöht werden kann."
+
+ ################################################################
+ # SYNCHRONICITY
+ ################################################################
+ 
+ tr_synchronicity_hive_adopt:0 "Synchronizitätstraditionen"
+ tr_synchronicity_hive_adopt_desc:0 "$tradition_synchronicity_desc$\n\n$tr_synchronicity_hive_adopt_effect$\n\n$tr_synchronicity_finish_effect$"
+ tr_synchronicity_hive_adopt_effect:0 "$tr_harmony_adopt_effect$"
+ tr_synchronicity_hive_mind_synapse:0 "Schwarmsynapse"
+ tr_synchronicity_hive_mind_synapse_desc:1 "§HNeues Gebäude:§! $building_hive_synapse$\n§EDieses Gebäude produziert Energie und Einigkeit und erhöht zusätzlich die Ressourcenproduktion von Bewohnern.§!"
+ tr_synchronicity_hive_mind_synapse_delayed:0 "$building_hive_synapse_desc$"
+ tr_synchronicity_machine_center:0 "Verarbeitungs-Hubs"
+ tr_synchronicity_machine_center_desc:1 "§HNeues Gebäude:§! $building_control_center$\n§EDieses Gebäude produziert Energie und Einigkeit und erhöht zusätzlich die Ressourcenproduktion von Robotern.§!"
+ tr_synchronicity_machine_center_delayed:0 "$building_control_center_desc$"
+
+################################################################
+# PURITY
+################################################################
+#
+# tradition_purity: "Reinheit"
+# #tradition_purity_desc: ""
+# tradition_purity_desc: "Reinheit von Geist und Bestimmung sind der einzige Weg, um unsere Spezies vor den Gefahren einer feindseligen Galaxie zu schützen."
+# tr_purity_adopt: "Reinheitstraditionen"
+# tr_purity_adopt_desc: "$tradition_purity_desc$\n\n$tr_purity_adopt_effect$\n\n$tr_purity_finish_effect$"
+# tr_purity_adopt_effect: "§E$TRADITIONS_ADOPT$:§!\n£blocker  §Y$MOD_PLANET_CLEAR_BLOCKER_COST_MULT$§! um §G-25%§! erhöht."
+# tr_purity_indoctrination: ""
+# tr_purity_indoctrination_desc: ""
+# tr_purity_indoctrination_delayed: ""
+# tr_purity_suffer_not_alien: ""
+# tr_purity_suffer_not_alien_desc: ""
+# tr_purity_suffer_not_alien_delayed: ""
+# tr_purity_the_chosen: "Der Auserwählte"
+# tr_purity_the_chosen_desc: "£pop  §Y$pop_citizen_happiness$§! um §G+5%§! erhöht und Kriegspunktkosten um §Y10%§! reduziert."
+# tr_purity_the_chosen_delayed: "Ob durch eine höhere Macht erschaffen oder einfach nur unsere überlegenden Gene auserkoren, unsere Spezies ist unvergleichbar. Wir sind eindeutig für große Dinge bestimmt."
+# tr_purity_natural_order: "Natürliche Ordnung"
+# tr_purity_natural_order_desc: "Das Verspeisen von außerirdischen Bewohnern bringt £unity  Einigkeit. Zählt nicht für Roboter."
+# tr_purity_natural_order_delayed: "Alle Wesen haben ihren zugewiesenen Platz im Universum. Diejenigen, die zu einer niederen Spezies gehören, sollten sich in ihrer Knechtschaft trösten."
+# tr_purity_never_surrender: "Niemals Aufgeben"
+# tr_purity_never_surrender_desc: "§Y$shipclass_military_station_hit_points_mult$§! um §G+33%§! erhöht und §Y$MOD_ARMY_GARRISON_HEALTH$§! um §G+100%§! verringert."
+# tr_purity_never_surrender_delayed: "Wir werden uns niemals denen beugen, die minderwertig sind. Lasst sie sich selbst gegen unsere unzerbrechliche Verteidigung schleudern! Tausend Jahre beginnend von jetzt an, werden sie nur eine weitere Fußnote in der Geschichte unseres Aufstiegs sein."
+# tr_purity_finish: "Reinheitstratiodionen abgeschlossen"
+# tr_purity_finish_effect: "§E$TRADITIONS_FINISH$:§!\nDie Annahme aller $tr_purity_adopt$ erhöht die  £unity  §Y$country_resource_unity_mult$§! um §G+10%§!."
+
+################################################################
+# SUPREMACY
+################################################################
+
+ tradition_supremacy_hive:0 "$tradition_supremacy$"
+ tradition_supremacy_hive_desc:0 "Es gibt nur eine Regel: Essen, oder gegessen werden."
+ tr_supremacy_adopt_hive:0 "$tr_supremacy_adopt$"
+ tr_supremacy_adopt_hive_desc:0 "$tradition_supremacy_hive_desc$\n\n$tr_supremacy_adopt_hive_effect$\n\n$tr_supremacy_finish_hive_effect$"
+ tr_supremacy_adopt_hive_effect:0 "$tr_supremacy_adopt_effect$"
+ tr_supremacy_above_the_fray:0 "Über den Dingen"
+ tr_supremacy_above_the_fray_desc:0 "£unity  §YEinigkeit§! um §G+10%§! erhöht"
+ tr_supremacy_above_the_fray_delayed:0 "Wir stehen über kleinlichen Rivalitäten und politischen Zänkereien. Lasst kleine Reiche sagen, was sie wollen, unser Ziel wird nicht weichen."
+ tr_supremacy_armed_deterrence:0 "Bewaffnete Abschreckung"
+ tr_supremacy_armed_deterrence_desc:0 "§Y$shipsize_military_station_small_build_cost_mult$§! um §G25%§! reduziert und §Y$shipsize_military_station_small_hull_mult$§! um §G20%§! erhöht."
+ tr_supremacy_armed_deterrence_delayed:0 "Diejenigen, die Frieden wünschen, müssen sich auf Krieg vorbereiten. Unsere Grenzen müssen eine Mauer sein, an der die Flotten von Möchtegern-Eroberern abprallen."
+ tr_supremacy_natural_preeminence:0 "Natürliche Überlegenheit"
+ tr_supremacy_natural_preeminence_desc:0 "§Y$MOD_PLANET_UNREST_ADD$§! um §G20%§! auf all unseren Planeten reduziert."
+ tr_supremacy_natural_preeminence_delayed:0 "Es ist, durch die natürliche Ordnung der Dinge, eine Tatsache, dass wir einfach besser als andere Spezies sind. Wir sollten dafür sorgen, dass diese Wahrheit allen bekannt ist, damit unser Volk sich seiner Überlegenheit erfreuen kann und andere das Schicksal annehmen, dass wir rechtmäßig für sie gewählt haben."
+ tr_supremacy_great_game_hive:0 "Auge des Jägers"
+ tr_supremacy_great_game_hive_desc:0 "$tr_supremacy_great_game_desc$"
+ tr_supremacy_great_game_hive_delayed:0 "Letztlich ist alles außerhalb unseres Schwarm eine potenzielle Quelle Nahrung. Es beruhigt uns zu wissen, welche wir zuerst verschlingen werden."
+ tr_supremacy_right_of_conquest_hive:0 "Sich beugen oder gefressen werden"
+ tr_supremacy_right_of_conquest_hive_desc:0 "$tr_supremacy_right_of_conquest_desc$"
+ tr_supremacy_right_of_conquest_hive_delayed:0 "Andere haben schon merkwürdige Bewusstsein. Sie reagieren stärker auf eine einzige Drohne, die öffentlich in den Verdauungswannen aufgelöst wird, als Tausende, die durch Orbitalbeschuss getötet werden. Diese Form der selektiven Terrorisierung ist bei dem Ausmerzen ihres Widerstandes sehr wirksam."
+ tr_supremacy_master_shipwrights_hive:0 "Organische Architektur"
+ tr_supremacy_master_shipwrights_hive_desc:0 "$tr_supremacy_master_shipwrights_desc$"
+ tr_supremacy_master_shipwrights_hive_delayed:0 "Wir konstruieren die Rahmen unserer Schiffe wie das Skelett eines Lebewesens, dann befestigen wir alle Komponenten, die wir brauchen, als wären sie Organe, Fleisch uns Haut."
+ tr_supremacy_war_games_hive:0 "Dreidimensionales Bewusstsein"
+ tr_supremacy_war_games_hive_desc:0 "$tr_supremacy_war_games_desc$"
+ tr_supremacy_war_games_hive_delayed:0 "Wasserkreaturen haben ein überlegendes räumliches Bewusstsein aufgrund der dreidimensionalen Natur ihres natürlichen Lebensraumes. Unsere Schwärme bewegen sich wie Fischschulen, sobald wir diesen Teil des Kortex in unsere Schlachtschiffe gespeist haben."
+ tr_supremacy_overwhelming_force_hive:0 "Jäger-Exoskelett"
+ tr_supremacy_overwhelming_force_hive_desc:0 "$tr_supremacy_overwhelming_force_desc$"
+ tr_supremacy_overwhelming_force_hive_delayed:0 "Massenproduzierte Kriegsdrohnen die gegen feindlichen Beschuss gehärtet wurden, mit redundanten Organen gefüllt sind und unterdrückte Selbsterhaltungsinstinkte besitzen. Millionen davon."
+ tr_supremacy_finish_hive:0 "$tr_supremacy_finish$"
+ tr_supremacy_finish_hive_effect:0 "$tr_supremacy_finish_effect$"
+
+################################################################
+# DIPLOMACY
+################################################################
+
+ tr_adaptability_dietary_enrichment:0 "Bereicherung durch Diät"
+ tr_adaptability_dietary_enrichment_desc:0 "£food  §Y$tile_resource_food_mult$§! Produktion um §G+20%§! erhöht."
+ tr_adaptability_dietary_enrichment_delayed:1 "Der Nährwert von Nahrung, den wir für unsere Bevölkerung ernten, kann durch verschiedene Anreicherungstechniken erhöht werden, so dass wir mehr Münder mit weniger Nahrung ernähren können."
+ tr_adaptability_survival_fittest:0 "Überleben der Stärksten"
+ tr_adaptability_survival_fittest_desc:1 "§Y$species_trait_points_add$§! um §Y1§! erhöht und die Zeit, die benötigt wird um eine Spezies zu modifizieren ist um §G15%§! reduziert."
+ tr_adaptability_survival_fittest_delayed:0 "Durch das in Berührung kommen mit anderen Spezies haben wir gelernt, wie wir ihre Stärken zu unseren eigenen hinzufügen können."
+ tr_adaptability_dynamic_ecomorphism:0 "$tr_diplomacy_dynamic_ecomorphism$"
+ tr_adaptability_dynamic_ecomorphism_desc:0 "$tr_diplomacy_dynamic_ecomorphism_desc$"
+ tr_adaptability_dynamic_ecomorphism_delayed:0 "Durch das einfache studieren der Methoden anderer haben wir neue Wege der Anpassung an fremde Umgebungen gelernt."
+ tr_adaptability_environmental_diversification:0 "Umweltdiversifizierung"
+ tr_adaptability_environmental_diversification_desc:0 "£unity  Einigkeit um §G+5%§!, pro unterschiedlicher Planetenklasse die Ihr kolonisiert habt, erhöht, bis zu einem Maximum von §G+30%§!."
+ tr_adaptability_environmental_diversification_delayed:0 "Durch die Anpassung an verschiedene Umgebungen haben wir gelernt uns weiterzuentwickeln und schneller anzupassen."
+ tr_adaptability_adaptive_ecology:0 "Umweltanpassung"
+ tr_adaptability_adaptive_ecology_desc:2 "§Y$MOD_COUNTRY_TERRAFORMING_COST_MULT$§! um §G15%§! reduziert."
+ tr_adaptability_adaptive_ecology_delayed:1 "Die oberste Funktion der Ökologie ist das Verständnis von Konsequenzen."
+
+ tr_synchronicity_cyber_comms:0 "Cyber-Comms"
+ tr_synchronicity_cyber_comms_desc:0 "§HNeues Gebäude:§! $building_neuro_electric_amplifier$"
+ tr_synchronicity_cyber_comms_delayed:0 "$building_neuro_electric_amplifier_desc$"
+ tr_synchronicity_organic_paradise:0 "Organische Utopie"
+ tr_synchronicity_organic_paradise_desc:2 "Alle £building  §Horganischen Sanktuarien§! werden zu £building  §Horganischen Paradiesen§! aufgewertet. Zusätzlich ist die £happiness  §Y$MOD_POP_HAPPINESS$§! aller Bio-Trophäen um §G+10%§! erhöht."
+ tr_synchronicity_organic_paradise_delayed:2 "Die fortgesetzte Überwachung fühlender organischer Wesen unter unserer Pflege hat uns neue Einblicke in ihre physischen und psychologischen Bedürfnisse gegeben."
+
+################################################################
+# DISCOVERY
+################################################################
+
+ tradition_discovery_hive:0 "$tradition_discovery$"
+ #tradition_discovery_desc: ""
+ tradition_discovery_hive_desc:0 "Vor langer Zeit wurden Entdecker-Drohnen aus der Sicherheit unseres Schwarms entsandt, um Orte für neue Nester zu finden. Jetzt bereisen sie die Sterne, angetrieben von der gleichen Sehnsucht wir ihre Ahnen."
+ tr_discovery_adopt_hive:0 "$tr_discovery_adopt$"
+ tr_discovery_adopt_hive_desc:0 "$tradition_discovery_hive_desc$\n\n$tr_discovery_adopt_hive_effect$\n\n$tr_discovery_finish_hive_effect$"
+ tr_discovery_adopt_hive_effect:0 "$tr_discovery_adopt_effect$"
+ tr_discovery_to_boldly_go_hive:0 "Außenfühler"
+ tr_discovery_to_boldly_go_hive_desc:0 "$tr_discovery_to_boldly_go_desc$"
+ tr_discovery_to_boldly_go_hive_delayed:0 "Wie kann man wirklich etwas wissen, wenn man nur die Zahlen auf einem Bildschirm betrachtet? Unsere Entdecker-Drohnen atmen die Atmosphäre jeder neuen Welt und spüren die Hitze jedes neuen Sterns auf ihrer eigenen Haut. Wir erleben das Universum. Ihr lest lediglich darüber."
+ tr_discovery_science_division_hive:0 "Gedankenverbindung"
+ tr_discovery_science_division_hive_desc:0 "$tr_discovery_science_division_desc$"
+ tr_discovery_science_division_hive_delayed:0 "Auch wenn es sie gewöhnlich verrückt macht, wenn das Bewusstsein anderer kurz in das unsere eintaucht, schafft es hin und wieder nutzvolle Ideen, denen wir weiter nachgehen können."
+ tr_discovery_polytechnic_education_hive:0 "Hochanpassende Evolution"
+ tr_discovery_polytechnic_education_hive_desc:0 "$tr_discovery_polytechnic_education_desc$"
+ tr_discovery_polytechnic_education_hive_delayed:0 "Die Verringerung des physischen Rahmens unserer Denkerdrohnen zu wenig mehr als einem minimalen Lebenserhaltungssystem für ihre übergroßen Gehirne hat sich als sehr effizient erwiesen. Sie werden von anderen Drohnen gefüttert und gepflegt und können sich ausschließlich darauf konzentrieren, ihren Studienbereich zu perfektionieren."
+ tr_discovery_faith_in_science_hive:0 "Synaptische Übertragung"
+ tr_discovery_faith_in_science_hive_desc:0 "$tr_discovery_faith_in_science_desc$"
+ tr_discovery_faith_in_science_hive_delayed:0 "Durch die strategische Anwendung von synaptischen Sendern können wir den Willen des Schwarms aus der Umlaufbahn auf den ganzen Planeten übertragen."
+ tr_discovery_finish_hive:0 "$tr_discovery_finish$"
+ tr_discovery_finish_hive_effect:0 "$tr_discovery_finish_effect$"
+
+################################################################
+# PROSPERITY
+################################################################
+
+
+ tradition_prosperity_hive_mind:0 "$tradition_prosperity$"
+ tradition_prosperity_hive_mind_desc:0 "Wir müssen einen starken, wohlhabenden Schwarm bauen, wenn wir uns unter den Sternen verbreiten wollen."
+ tr_prosperity_adopt_hive:0 "$tr_prosperity_adopt$"
+ #tr_prosperity_hive_mind_adopt_desc:0 "\n"
+ tr_prosperity_adopt_hive_desc:0 "$tradition_prosperity_hive_mind_desc$\n\n$tr_prosperity_adopt_hive_effect$\n\n$tr_prosperity_finish_hive_effect$"
+ tr_prosperity_adopt_hive_effect:0 "$tr_prosperity_adopt_effect$"
+ tr_prosperity_hive_mind_finish:0 "$tr_prosperity_finish$"
+ tr_prosperity_hive_mind_finish_effect:0 "$tr_prosperity_finish_effect$"
+ tr_prosperity_hive_warrior_forms:0 "Kriegerformen"
+ tr_prosperity_hive_warrior_forms_desc:1 "§Y$MOD_ARMY_UPKEEP_MULT$§! um §G20%§! reduziert."
+ tr_prosperity_hive_warrior_forms_delayed:0 "Spezialisierte Kriegerformen für unsere Drohnen ermöglicht uns einen effizienteren Einsatz von Bodenstreitkräften gegen die Feinde des Schwarms."
+ tr_prosperity_efficiency_algorithms:0 "Effizienzalgorithmen"
+ tr_prosperity_efficiency_algorithms_desc:2 "§YUnterhalt von £pops  Bewohnern§! um §G10%§! reduziert."
+ tr_prosperity_efficiency_algorithms_delayed:1 "Es gibt kein größeres Verbrechen als eine ineffiziente Maschine."
+ tr_prosperity_hive_neural_signal_boosters:0 "Neurale Signalverstärker"
+ tr_prosperity_hive_neural_signal_boosters_delayed:0 "Die Energienetze, die unsere Städte antreiben, können auch dazu verwendet werden, die neuronalen Signale zu verstärken, die zu unseren Drohnen übertragen werden, was weitere Modifikationen und Verbesserungen des gesamten Schwarms ermöglicht."
+ tr_prosperity_finish_hive:0 "$tr_prosperity_finish$"
+ tr_prosperity_finish_hive_effect:0 "§E$TRADITIONS_FINISH$:§!\nDie Annahme aller $tr_prosperity_adopt_hive$ reduziert die Mineralienkosten unserer §Y$CONSUMER_GOODS$§!, die von unseren £pops  Bewohnern verbraucht werden um §G-20%§!."
+
+####################################
+# Ascension Perks
+####################################
+
+ requires_tradition_the_federation:1 "$TRIGGER_FAIL$§RErfordert die Diplomatietradition §YDie Föderation§!.§!"
+ requires_tradition_universal_compatibility:0 "§RErfordert die Vielseitigkeitstradition §YUniversalkompabilität§!.§!"
+
+ requires_ascension_perks_1:0 "$TRIGGER_FAIL$Erfordert zuerst einen weiteren Aufstiegsvorteil, um ausgewählt werden zu können."
+ requires_ascension_perks_2:1 "$TRIGGER_FAIL$Erfordert zuerst zwei weitere Aufstiegsvorteile, um ausgewählt werden zu können."
+ requires_ascension_perks_3:1 "$TRIGGER_FAIL$Erfordert zuerst drei weitere Aufstiegsvorteile, um ausgewählt werden zu können."
+
+ requires_ap_engineered_evolution:1 "$TRIGGER_FAIL$Erfordert den Aufstiegsvorteil §Y$ap_engineered_evolution$§!."
+ requires_not_ap_engineered_evolution:1 "$TRIGGER_FAIL$Hat NICHT den Aufstiegsvorteil §Y$ap_engineered_evolution$§!."
+
+ requires_ap_the_flesh_is_weak:1 "$TRIGGER_FAIL$Erfordert den Aufstiegsvorteil §Y$ap_the_flesh_is_weak$§!."
+ requires_not_ap_the_flesh_is_weak:1 "$TRIGGER_FAIL$Hat NICHT den Aufstiegsvorteil §Y$ap_the_flesh_is_weak$§!."
+ requires_finished_cybernetics_project:1 "$TRIGGER_FAIL$Hat das Spezialprojekt §YDas Fleisch ist schwach§! abgeschlossen."
+
+ requires_ap_mind_over_matter:1 "$TRIGGER_FAIL$Erfordert den Aufstiegsvorteil §Y$ap_mind_over_matter$§!."
+ requires_not_ap_mind_over_matter:1 "$TRIGGER_FAIL$Hat NICHT den Aufstiegsvorteil §Y$ap_mind_over_matter$§!."
+ allow_edict_land_clearance:0 "§HNeuer Planetenerlass:§! Landräumung"
+ describe_edict_land_clearance:1 "§EDies ist ein planetarer Erlass, der die Größe eines Planeten permanent um §G1§! bis §G3§! Felder erhöht, wobei kleinere Planeten mehr Felder erhalten. Er kann auf jedem Planeten nur einmalig eingesetzt werden, allerdings nicht auf Planeten, die bereits die maximale Größe (25 Felder) haben.§!"
+ land_clearance_increase_size_1:0 "Erhöht die Größe des Planeten permanent um §G1§! Feld. Kann auf jedem Planeten nur einmalig eingesetzt werden."
+ land_clearance_increase_size_2:0 "Erhöht die Größe des Planeten permanent um §G2§! Felder. Kann auf jedem Planeten nur einmalig eingesetzt werden."
+ land_clearance_increase_size_3:0 "Erhöht die Größe des Planeten permanent um §G3§! Felder. Kann auf jedem Planeten nur einmalig eingesetzt werden."
+ land_clearance_not_max_size:0 "§RLandräumung kann auf diesem Planeten nicht benutz werden, um seine Größe weiter zu erhöhen.§!"
+
+ requires_ap_voidborn_OR_ap_galactic_wonders:1 "$TRIGGER_FAIL$Erfordert den Aufstiegsvorteil §Y$ap_voidborn$§! ODER §Y$ap_galactic_wonders$§!."
+ 
+ requires_technology_zero_point_power:0 "$TRIGGER_FAIL$Erfordert die Technologie £physics  §Y$tech_zero_point_power$§!."
+ requires_technology_tech_climate_restoration:0 "$TRIGGER_FAIL$Erfordert die Technologie £society  §Y$tech_climate_restoration$§!."
+ requires_technology_robomodding:0 "$TRIGGER_FAIL$Benötigt die Technologie £engineering  §Y$tech_robomodding$§!."
+ requires_technology_gene_expressions:2 "$TRIGGER_FAIL$Erfordert die Technologie £society  §Y$tech_gene_expressions$§!."
+ requires_technology_gene_seed_purification:1 "$TRIGGER_FAIL$Erfordert die Technologie £society  §Y$tech_gene_seed_purification$§!."
+ requires_technology_gene_tailoring:1 "$TRIGGER_FAIL$Erfordert die Technologie £society  §Y$tech_gene_tailoring$§!."
+ requires_technology_starbase_4:0 "$TRIGGER_FAIL$Erfordet die Technologie £engineering  §Y$tech_starbase_4$§!."
+ requires_technology_starbase_5:0 "$TRIGGER_FAIL$Erfordert die Technologie £engineering  §Y$tech_starbase_5$§!."
+ requires_technology_battleships:0 "$TRIGGER_FAIL$Erfordert die Technologie £engineering  §Y$tech_battleships$§!."
+ requires_technology_glandular_acclimation:0 "$TRIGGER_FAIL$Erfordert die Technologie £society  §Y$tech_glandular_acclimation$§!."
+ requires_mega_engineering:1 "$TRIGGER_FAIL$Erfordert die Technologie £engineering  §Y$tech_mega_engineering$§!."
+ hive_mind_biological_ascension_only1:0 "$TRIGGER_FAIL$Ein Schwarmbewusstsein kann den Weg des psionischen Aufstiegs nicht beschreiten."
+ hive_mind_biological_ascension_only2:0 "$TRIGGER_FAIL$Ein Schwarmbewusstsein kann den Weg des synthetischen Aufstiegs nicht beschreiten."
+ requires_zero_point_power:1 "$TRIGGER_FAIL$Erfordert die Technologie £physics  §Y$tech_zero_point_power$§!."
+ requires_ap_voidborn:1 "$TRIGGER_FAIL$Erfordert den Aufstiegsvorteil §Y$ap_voidborn$§!."
+ requires_technology_droid_workers:1 "$TRIGGER_FAIL$Erfordert die Technologie £engineering  §Y$tech_droid_workers$§!."
+ requires_technology_synthetic_workers:1 "$TRIGGER_FAIL$Erfordert die Technologie £engineering  §Y$tech_synthetic_workers$§!."
+ requires_technology_synthetic_leaders:1 "$TRIGGER_FAIL$Erfordert die Technologie £engineering  §Y$tech_synthetic_leaders$§!."
+ requires_technology_psionic_theory:1 "$TRIGGER_FAIL$Erfordert die Technologie £society  §Y$tech_psionic_theory$§!."
+ requires_technology_terrestrial_sculpting:1 "$TRIGGER_FAIL$Erfordert die Technologie £society  §Y$tech_terrestrial_sculpting$§!."
+ gestalt_consciousness_biological_ascension_only1:1 "$TRIGGER_FAIL$Ein Schwarmbewusstsein kann den Pfad des psionischen Aufstiegs nicht beschreiten."
+ gestalt_consciousness_biological_ascension_only2:1 "$TRIGGER_FAIL$Ein Schwarmbewusstsein kann den Pfad des synthetischen Aufstiegs nicht beschreiten."
+ synthetic_empire_synthetic_ascension:0 "$TRIGGER_FAIL$Synthetische Reiche können den Weg des synthetischen Aufstiegs nicht beschreiten."
+ synthetic_empire_biological_ascension:0 "$TRIGGER_FAIL$Synthetische Reiche können den Weg des biologischen Aufstiegs nicht beschreiten."
+ synthetic_empire_psionic_ascension:0 "$TRIGGER_FAIL$Synthetische Reiche können den Weg des psionischen Aufstiegs nicht beschreiten."
+ 
+ allow_gaia:0 "Erlaubt uns, Welten zu §YGaia-Welten§! zu terraformen."
+ no_rev_engineering:0 "Unsere Technologie und unsere Ingenieurswesen ist für andere zu geheimnisvoll, um es nachzuahmen."
+ allow_raiding:0 "Schaltet die Bombardierungshaltung §Y$bombardment_raiding$§! frei, welche uns ermöglicht, Bewohner von belagerten Planeten zu entführen und sie in unsere eigenen Welten umzusiedeln."
+
+
+ ap_engineered_evolution:0 "Organisierte Evolution"
+ ap_engineered_evolution_modifier_desc:0 "$species_trait_points_add$: $POINTS|0=+$\n$MOD_COUNTRY_MODIFY_SPECIES_COST_MULT$: $COST_MULT|%0=-$"
+ ap_evolutionary_mastery:0 "Evolutionskontrolle"
+ ap_evolutionary_mastery_modifier_desc:0 "$species_trait_points_add$: $POINTS|0=+$\n$MOD_COUNTRY_MODIFY_SPECIES_COST_MULT$: $COST_MULT|%0=-$"
+ ap_the_flesh_is_weak:0 "Das Fleisch ist schwach"
+ ap_synthetic_evolution:0 "Synthetische Evolution"
+ ap_world_shaper:0 "Weltenformer"
+ ap_mind_over_matter:0 "Verstand über Materie"
+ ap_transcendence:0 "Transzendenz"
+
+ ap_imperial_prerogative:0 "Imperiales Vorrecht"
+ ap_one_vision:0 "Gemeinsame Vision"
+ ap_consecrated_worlds:0 "Gesegnete Welten"
+ ap_executive_vigor:0 "Führungsstärke"
+ ap_executive_vigor_desc:0 "Es wird keine halben Sachen oder Kompromisse geben, wenn die von unserer Regierung beschlossenen Richtlinien umgesetzt werden. Wir gehen den ganzen Weg oder gar nicht."
+
+ ap_galactic_force_projection:0 "Galaktische Macht"
+ ap_galactic_contender:0 "Galaktischer Anwärter"
+ ap_technological_ascendancy:0 "Technologischer Aufstieg"
+ ap_mastery_of_nature:0 "Beherrschung der Natur"
+ ap_the_circle_of_life:0 "Der Kreislauf des Lebens"
+ ap_interstellar_dominion:0 "Interstellare Herrschaft"
+ ap_eternal_vigilance:0 "Ewige Wachsamkeit"
+ ap_eternal_vigilance_desc:0 "Schwäche zu zeigen bedeutet, einen Angriff zu provozieren. Der Preis für die Invasion unseres Reiches muss so hoch sein, dass so wenige wie möglich darauf vorbereitet sind."
+ ap_grasp_the_void:0 "Kontrolle der Leere"
+ ap_grasp_the_void_desc:0 "Die Weiter der Galaxis birgt grenzenlose Reichtümer für jene, die verstehen, wie sie die Kontrolle über die Leere beibehalten können."
+ 
+ ap_engineered_evolution_desc:0 "Unsere genetische Bestimmung in den Händen der Natur zu lassen, ist ein ineffizienter und entsetzlich langsamer Prozess. Warum sollten wir die Zukunft unserer Spezies nicht auf Touren bringen?"
+ ap_evolutionary_mastery_desc:0 "Die Evolution ist ein zielstrebiges Ungetüm, das einem linearen Weg bis zum unweigerlichen Ende folgt. Wir können es uns nicht leisten, uns darauf beschränken zu lassen - wir sollten sämtliche Pfade gleichzeitig erkunden."
+
+ ap_the_flesh_is_weak_desc:0 "Die Grenzen und Beschränkungen, die uns unsere schwächlichen organischen Körper auferlegt haben, sind schlicht und ergreifend inakzeptabel. Um unser volles Potenzial auszuschöpfen, müssen wir auf kybernetische Implantate zurückgreifen."
+ ap_synthetic_evolution_desc:0 "Es ist an der Zeit, die fehlerhaften organischen Behälter zu verlassen, die unseren Verstand in Ketten legen. Indem wir unsere Neuralmuster in synthetische Körper transferieren, können wir eine höhere Wesensform erreichen."
+
+ ap_mind_over_matter_desc:0 "Bislang nutzen wir nämlich nur einen Bruchteil des Potenzials unseres Verstands. Die latenten psionischen Fähigkeiten unserer Spezies beginnen jetzt erst, sich in bestimmten Individuen zu manifestieren."
+ ap_transcendence_desc:0 "Wir stehen an der Schwelle zur Erweckung der wahrhaften psionischen Macht unserer Spezies. Unser Verstand ist bereit, und wir haben Geflüster aus einem psychischen Reich jenseits des unseren gehört ..."
+
+ ap_synthetic_age:0 "Synthetisches Zeitalter"
+ ap_synthetic_age_desc:0 "Das Zeitalter der organischen Wesen nähert sich dem Ende. Die Zukunft der Galaxie gehört den Maschinen. Dies ist der Beginn eines synthetischen Zeitalters."
+ ap_machine_worlds:0 "Maschinenwelten"
+ ap_machine_worlds_desc:0 "Wir sollten unsere Welten zu einem Abbild unserer selbst umgestalten und die Gebrechlichkeit der Biologie durch die unveränderliche Perfektion des Metalls ersetzten."
+ ap_shared_destiny:0 "Gemeinsames Schicksal"
+ ap_shared_destiny_desc:0 "In einer Zeit, wo wir nach immer höheren Zielen streben, dürfen wir nicht jene zurücklassen, die uns treu gedient haben. Die glorreiche Zukunft unseres Reiches war schon immer einem gemeinsamen Schicksal bestimmt."
+ ap_world_shaper_desc:0 "Das vorsichtige Formen und Veränderen des Ökosystems eines gesamten Planeten unterscheidet sich nicht allzu sehr von einem Künstler, der eine Statue aus Ton formt."
+ ap_imperial_prerogative_desc:0 "Während unsere Zivilisation immer weiter wächst, muss sich auch ihr schlagendes Herz erweitern. Wir werden mehr Systeme unter seine direkte Kontrolle stellen."
+ ap_one_vision_desc:0 "Wahre Einheit wird nur dann erreicht, wenn die ultimativen Ziele einer Nation und ihrer Bevölkerung identisch sind. Schließlich kann ein Haus, das mit sich selbst uneins ist, nicht bestehen. "
+ ap_consecrated_worlds_desc:0 "In der Galaxie gibt es viele heilige Stätten, von denen manche offenkundiger als andere sind. Wir als Sterbliche haben immer noch Schwierigkeiten damit, die wahre Natur des Universums zu ermitteln."
+ ap_galactic_force_projection_desc:0 "Die Flotte ist das Instrument, durch das sich der Wille unseres Reichs manifestiert - ihre Stärke ist es, die über Leben und Tod entscheidet."
+ ap_technological_ascendancy_desc:0 "Technologien, die wir noch vor wenigen Generationen mit Magie verwechselt hätten, sind jetzt in unserer Reichweite. Ein neues Zeitalter der Technologie hat begonnen."
+ ap_mastery_of_nature_desc:0 "Wir beherrschen die Natur unserer Heimatwelt zwar schon seit langer Zeit, die Alien-Biome aber, auf die wir getroffen sind, stellen neue Herausforderungen für uns dar. Aber auch diese werden wir überwinden."
+ ap_the_circle_of_life_desc:0 "Eine gewaltige, ringförmige Megastruktur mit künstlichen Habitaten, gebaut um den Orbit eines Sterns. Theoretisch ist das machbar ..."
+ ap_interstellar_dominion_desc:2 "Die Sterne rufen und wir folgen. Möge nichts zwischen uns und ihnen stehen."
+
+ ap_colossus:0 "Koloss-Projekt"
+ ap_colossus_desc:0 "Das Koloss-Projekt ist der Ort, an dem sich Träume und Terror treffen. Es ist eine Vision des größten Schiffs mit einer Waffe, die ganze Welten vernichten kann."
+ ap_transcendent_learning:0 "Transzendentes Lernen"
+ ap_transcendent_learning_desc:0 "Unsere Gesellschaft muss ihre Herangehensweise an das klassische "Lernen" ändern und so unsere Besten und Klügsten Köpfe in die Lage versetzen, ein völlig neues Level von Errungenschaften zu erreichen."
+ 
+

@@ -1,0 +1,311 @@
+# 
+mirror_universe_fed_portal_system_1 = {
+	class = sc_black_hole
+	flags = { mirrorCrossover mirror_universe_portal_system_1 terranInvasion }
+	planet = { class = star orbit_distance = 0 }
+	init_effect = { 
+		connect_neighbour_stars = yes
+		save_global_event_target_as = mirror_universe_portal_system_1
+		if = {
+			limit = { exists = event_target:mirror_universe_target }
+			ensure_terran_empire_vanguard_exists = yes
+			create_starbase = { 
+				size = starbase_terran_vanguard_01 
+				owner = event_target:terran_empire_vanguard 
+				module = shipyard 
+				effect = { save_event_target_as = terranVanguardStarbase }
+			}
+			event_target:mirror_universe_target = {
+				saveGCulture = yes
+				set_graphical_culture = federation #REPLACE! MU replace
+				while = {
+					count = 4
+					create_fleet_from_naval_cap = 0.1
+					last_created_fleet = { 
+						set_owner = event_target:terran_empire_vanguard
+						set_location = event_target:terranVanguardStarbase 
+						set_fleet_flag = terran_empire_vanguard_fleet_1
+						set_fleet_stance = passive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 200
+						set_home_base = event_target:terranVanguardStarbase
+						set_owner = event_target:terran_empire_vanguard
+					}
+				}
+				rootChangeToOrigGCulture = yes
+			}
+			event_target:terran_empire_vanguard = {
+				create_terran_empire_vanguard_leader_1 = yes
+				every_owned_ship = { 
+					limit = {  
+						exists = fleet
+						fleet = { has_fleet_flag = terran_empire_vanguard_fleet_1 }
+					}  
+					set_name = "Terran Vanguard Ship" #REPLACE with loc sync
+				}
+				random_owned_fleet = {
+					limit = { has_fleet_flag = terran_empire_vanguard_fleet_1 }
+					assign_leader = event_target:terran_empire_vanguard_leader
+				}
+			}
+		}
+	}
+}
+
+mirror_universe_kca_portal_system_1 = {
+	class = sc_p_red
+	name = "Amber Maelstrom"
+	flags = { p_red mirrorCrossover mirror_universe_portal_system_1 kcaInvasion }
+	planet = {
+		class = "pc_nebula_red"
+		name = "Amber Maelstrom"
+		orbit_distance = 1
+		size = 1
+		init_effect = {
+			create_p_red_space = yes
+			prevent_anomaly = yes
+		}
+	}
+	init_effect = { 
+		connect_neighbour_stars = yes
+		save_global_event_target_as = mirror_universe_portal_system_1
+		if = {
+			limit = { exists = event_target:mirror_universe_target }
+			ensure_klingon_cardassian_alliance_vanguard_exists = yes
+			create_starbase = { 
+				size = starbase_terran_vanguard_01 
+				owner = event_target:klingon_cardassian_alliance_vanguard 
+				module = shipyard 
+				effect = { save_event_target_as = klingonCardassianVanguardStarbase }
+			}
+			event_target:mirror_universe_target = {
+				saveGCulture = yes
+				# set_graphical_culture = cardassian_01 #REPLACE!
+				while = {
+					count = 4
+					random_list = {
+						10 = { modifier = { factor = 1 always = yes } set_graphical_culture = cardassian_01 }
+						10 = { modifier = { factor = 1 always = yes } set_graphical_culture = klingon_04 }
+					}					
+					create_fleet_from_naval_cap = 0.1
+					last_created_fleet = { 
+						set_owner = event_target:klingon_cardassian_alliance_vanguard
+						set_location = event_target:klingonCardassianVanguardStarbase 
+						set_fleet_flag = klingon_cardassian_alliance_vanguard_fleet_1
+						set_fleet_stance = passive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 200
+						set_home_base = event_target:klingonCardassianVanguardStarbase
+						set_owner = event_target:klingon_cardassian_alliance_vanguard
+					}
+				}
+				rootChangeToOrigGCulture = yes
+			}
+			event_target:klingon_cardassian_alliance_vanguard = {
+				create_klingon_cardassian_alliance_vanguard_leader_1 = yes
+				every_owned_ship = { 
+					limit = {  
+						exists = fleet
+						fleet = { has_fleet_flag = klingon_cardassian_alliance_vanguard_fleet_1 }
+					}  
+					set_name = "Klingon Cardassian Alliance Vanguard Ship" #REPLACE with loc sync
+				}
+				random_owned_fleet = {
+					limit = { has_fleet_flag = klingon_cardassian_alliance_vanguard_fleet_1 }
+					assign_leader = event_target:klingon_cardassian_alliance_vanguard_leader
+				}
+			}
+		}
+	}
+}
+
+mirror_universe_fed_portal_system_2a = {
+	class = sc_black_hole
+	init_effect = { connect_neighbour_stars = yes }
+	flags = { mirrorCrossover mirror_universe_fed_portal_system_2a }
+	planet = { class = star orbit_distance = 0 }
+}
+mirror_universe_fed_portal_system_2b = {
+	class = sc_black_hole
+	init_effect = { connect_neighbour_stars = yes }
+	flags = { mirrorCrossover mirror_universe_fed_portal_system_2b }
+	planet = { class = star orbit_distance = 0 }
+}
+
+
+
+
+#Tholian Scout System
+tholian_scout_system_event_spawn = {
+	class = "rl_starting_stars"
+	asteroid_belt = { type = rocky_asteroid_belt radius = 95 }
+	flags = { tholianScoutLoc }
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	change_orbit = 30
+	planet = { count = 2 orbit_distance = 20 orbit_angle = { min = 90 max = 270 } }
+	change_orbit = 25
+	planet = { class = random_asteroid orbit_distance = 0 orbit_angle = { min = 0 max = 150 } }
+	planet = { class = random_asteroid orbit_distance = 0 orbit_angle = { min = 160 max = 330 } }
+	planet = {
+		count = { min = 2 max = 5 }
+		orbit_distance = 25
+		orbit_angle = { min = 90 max = 270 }
+		change_orbit = @base_moon_distance
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	init_effect = { 
+		connect_neighbour_stars = yes
+		ensure_tholian_exist = yes
+		random_system_planet = {
+			limit = { is_star = no }
+			save_global_event_target_as = tholianScoutLoc #REMEMBER TO REMOVE
+		}
+		create_country = {
+			name = "Tholian"
+			type = faction
+			species = event_target:tholianSpecies
+			name_list = "Tholian"
+			flag = {
+				icon = { category = "trek" file = "tholian.dds" }
+				background = { category = "backgrounds" file = "00_solid.dds" }
+				colors = { "green" "green" "null" "null" }
+			}
+			effect = {  
+				set_graphical_culture = tholian_01
+				save_global_event_target_as = tholianScoutFaction
+				set_country_flag = tholian_scout_faction
+				# establish_communications_no_message = event_target:terran_empire
+			}
+		}
+		event_target:tholianScoutFaction = {
+			create_leader = { type = admiral species = event_target:tholianSpecies name = random skill = 1 }
+			create_fleet = { name = "Tholian Scout Ship" }
+			last_created_fleet = {
+				set_owner = event_target:tholianScoutFaction
+				create_ship = { name = random design = "Tholian Attack Ship" graphical_culture = "tholian_01" prefix = no }
+				last_created_ship = { set_ship_flag = "tholianScoutShip" set_disable_at_health = 0.2 }
+				assign_leader = last_created_leader
+				set_location = event_target:tholianScoutLoc
+				save_event_target_as = tholianScoutPos
+				set_fleet_stance = aggressive
+				set_aggro_range_measure_from = self
+				set_aggro_range = 150
+				queue_actions = {
+					repeat = {
+						find_closest_planet = {
+							trigger = { id = "tholianscout.1.trigger.1" is_same_value = event_target:tholianScoutLoc }
+							found_planet = { orbit_planet = THIS wait = { duration = 50 }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+#Tholian Base System
+tholian_base_system_event_spawn = {
+	class = "rl_starting_stars"
+	asteroid_belt = { type = rocky_asteroid_belt radius = 120 }
+	flags = { tholianScoutLoc }
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	change_orbit = 30
+	planet = { count = 2 orbit_distance = 20 orbit_angle = { min = 90 max = 270 } }
+	change_orbit = 25
+	planet = { class = random_asteroid orbit_distance = 0 orbit_angle = { min = 0 max = 150 } }
+	planet = { class = random_asteroid orbit_distance = 0 orbit_angle = { min = 160 max = 330 } }
+	planet = {
+		count = { min = 2 max = 5 }
+		orbit_distance = 25
+		orbit_angle = { min = 90 max = 270 }
+		change_orbit = @base_moon_distance
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	init_effect = { 
+		connect_neighbour_stars = yes
+		ensure_tholian_exist = yes
+		random_system_planet = {
+			limit = { is_star = no }
+			save_global_event_target_as = tholianBaseLoc #REMEMBER TO REMOVE
+		}
+		create_country = {
+			name = "Tholian"
+			type = faction
+			species = event_target:tholianSpecies
+			name_list = "Tholian"
+			flag = {
+				icon = { category = "trek" file = "tholian.dds" }
+				background = { category = "backgrounds" file = "00_solid.dds" }
+				colors = { "green" "green" "null" "null" }
+			}
+			effect = {  
+				set_graphical_culture = tholian_01
+				save_global_event_target_as = tholianBaseFaction
+				set_country_flag = tholian_base_faction
+				# establish_communications_no_message = event_target:terran_empire
+			}
+		}
+		event_target:tholianBaseFaction = {
+			create_leader = { type = admiral species = event_target:tholianSpecies name = random skill = 1 }
+			create_fleet = { name = "Tholian Defence Fleet" }
+			last_created_fleet = {
+				set_owner = event_target:tholianBaseFaction
+				create_ship = { name = random design = "Tholian Attack Ship" graphical_culture = "tholian_01" prefix = no }
+				create_ship = { name = random design = "Tholian Attack Ship" graphical_culture = "tholian_01" prefix = no }
+				create_ship = { name = random design = "Tholian Attack Ship" graphical_culture = "tholian_01" prefix = no }
+				create_ship = { name = random design = "Tholian Attack Ship" graphical_culture = "tholian_01" prefix = no }
+				create_ship = { name = random design = "Tholian Attack Ship" graphical_culture = "tholian_01" prefix = no }
+				assign_leader = last_created_leader
+				set_location = event_target:tholianBaseLoc
+				set_fleet_stance = aggressive
+				set_aggro_range_measure_from = self
+				set_aggro_range = 150
+				queue_actions = {
+					repeat = {
+						find_closest_planet = {
+							trigger = { id = "tholian.1.trigger.1" is_same_value = event_target:tholianBaseLoc }
+							found_planet = { orbit_planet = THIS wait = { duration = 20 } }
+						}
+					}
+				}
+			}
+			create_fleet = {
+				name = "Tholian Base"
+				effect = {
+					set_owner = event_target:tholianBaseFaction
+					create_ship = {
+						name = "Tholian Base" design = "NAME_Tholian_Base" graphical_culture = "pirate_01" prefix = no
+						effect = { set_ship_flag = "tholianBaseStation" set_disable_at_health = 0.2 }
+					}
+					set_location = event_target:tholianBaseLoc
+					save_event_target_as = tholianBasePos
+				}
+			}
+		}
+	}
+}

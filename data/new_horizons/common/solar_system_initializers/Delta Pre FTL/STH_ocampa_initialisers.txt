@@ -1,0 +1,194 @@
+# Ocampa
+ocampa_b = {			
+	name = "Ocampa"		
+	class = sc_g		
+	planet = {		
+		name = "Ocampa"	
+		class = star	
+		orbit_distance = 0	
+		orbit_angle = 1	
+		size = 30	
+		has_ring = no	
+	}		
+	planet = {		
+		count = 4
+		orbit_distance = {min = 20 max = 30}	
+		size = { min = 10 max = 20 }	
+		moon = {	
+			count = { min = 0 max = 2 }
+			class = random_non_colonizable
+			orbit_distance = { min = 8 max = 10 }
+			size = { min = 8 max = 10 }
+		}	
+	}		
+	planet = {		
+		name = "Ocampa V"	
+		class = "pc_continental"	
+		orbit_distance = 20	
+		orbit_angle = 120	
+		size = {min = 12 max = 14}	
+		has_ring = no	
+		entity = "continental_planet_01_entity"	
+		tile_blockers = none
+		modifiers = none	
+		init_effect = {
+			prevent_anomaly = yes
+			random_list = {							
+				90 = {
+					create_species = {
+						class = "OCA"
+						portrait = "ocampa"
+						homeworld = THIS
+						traits = {
+							trait = "trait_chosen_people"
+							trait = "trait_psionic_masters"
+							trait = "trait_quick_learners"
+							trait = "trait_talented"
+							trait = "trait_fleeting"
+						}
+					}
+					create_country = {
+						name = random
+						civics = { civic = civic_increasing_urbanization civic = civic_atmospheric_pollution }
+						authority = auth_oligarchic
+						species = last_created
+						ethos = random
+						type = primitive
+						flag = {
+							icon = { category = "trek" file = "ocampa.dds" }
+							background = { category = "backgrounds" file = "v.dds" }
+							colors = { "customcolor1268" "customcolor715" "null" "null" }
+						}
+					}
+					last_created_country = {
+						set_graphical_culture = industrial_01
+						set_country_flag = atomic_age 
+						set_primitive_age = atomic_age
+					}
+					create_colony = {
+						owner = last_created_country
+						species = last_created
+						ethos = owner
+					}
+					# create_army = {
+						# name = "Post-Atomic Army"					
+						# owner = last_created
+						# species = last_created
+						# type = "postatomic_army"
+					# }
+					# create_army = {
+						# name = "Post-Atomic Army"					
+						# owner = last_created
+						# species = last_created
+						# type = "postatomic_army"
+					# }
+					# create_army = {
+						# name = "Post-Atomic Army"					
+						# owner = last_created
+						# species = last_created
+						# type = "postatomic_army"
+					# }
+					# create_army = {
+						# name = "Post-Atomic Army"					
+						# owner = last_created
+						# species = last_created
+						# type = "postatomic_army"
+					# }
+					# create_army = {
+						# name = "Post-Atomic Army"					
+						# owner = last_created
+						# species = last_created
+						# type = "postatomic_army"
+					# }
+					random_tile = {
+						limit = {
+							has_blocker = no
+							has_grown_pop = no
+							has_growing_pop = no
+						}
+						create_pop = { species = last_created }
+					}
+					random_tile = {
+						limit = {
+							has_blocker = no
+							has_grown_pop = no
+							has_growing_pop = no
+						}
+						create_pop = { species = last_created }
+					}
+					random_tile = {
+						limit = {
+							has_blocker = no
+							has_grown_pop = no
+							has_growing_pop = no
+						}
+						create_pop = { species = last_created }
+					}
+					random_tile = {
+						limit = { 
+							has_blocker = no 
+							has_building = no 
+							has_grown_pop = yes
+						}
+						set_building = "building_primitive_factory"
+						add_deposit = d_mineral_deposit	
+					}
+					random_tile = {
+						limit = { 
+							has_blocker = no 
+							has_building = no 
+							has_grown_pop = yes
+						}
+						set_building = "building_primitive_farm"
+						add_deposit = d_farmland_deposit
+					}
+					random_tile = {
+						limit = { 
+							has_blocker = no 
+							has_building = no 
+							has_grown_pop = yes
+						}
+						set_building = "building_primitive_farm"
+						add_deposit = d_farmland_deposit
+					}
+					random_tile = {
+						limit = { has_blocker = no has_building = no }
+						set_blocker = "tb_mountain_range"
+						add_deposit = d_engineering_deposit	
+					}
+					random_tile = {
+						limit = { has_blocker = no has_building = no }
+						set_blocker = "tb_dense_jungle"
+						add_deposit = d_society_deposit			
+					}
+					random_tile = {
+						limit = { has_blocker = no has_building = no }
+						set_blocker = "tb_mountain_range"
+						add_deposit = d_physics_deposit				
+					}
+					random_tile = {
+						limit = { has_blocker = no has_building = no }
+						set_blocker = "tb_dense_jungle"
+						add_deposit = d_energy_deposit					
+					}
+					random_tile = {
+						limit = { has_blocker = no has_building = no }
+						set_blocker = "tb_mountain_range"
+					}
+					random_tile = {
+						limit = { has_blocker = no has_building = no }
+						set_blocker = "tb_dense_jungle"
+					}
+					random_tile = {
+						limit = { has_building = "building_colony_shelter" }
+						remove_building = yes
+					}
+					last_created_country = {
+						capital_scope = { set_name = "Ocampa V" }
+					}
+				}
+				10 = {}
+			}
+		}
+	}
+}

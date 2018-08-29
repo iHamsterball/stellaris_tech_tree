@@ -1,0 +1,108 @@
+# Acamar
+acamarian_homeworld = {			
+	name = "Acamar"		
+	class = sc_a		
+	usage = custom_empire
+	flags = { acamarian_sovereignty }
+	init_effect = { log = "acamarian homeworld" }	
+	planet = {		
+		name = "Acamar"	
+		class = star	
+		orbit_distance = 0	
+		orbit_angle = 1	
+		size = 30
+		has_ring = no	
+	}		
+	planet = {		
+		name = "Acamar I"
+		orbit_distance = {min = 40 max = 60}	
+		class = random_non_colonizable	
+		size = { min = 10 max = 20 }	
+	}		
+		planet = {		
+		name = "Acamar II"
+		orbit_distance = {min = 20 max = 50}	
+		class = random_non_colonizable	
+		size = { min = 10 max = 20 }	
+	}
+		planet = {		
+		name = "Acamar III"
+		orbit_distance = {min = 30 max = 50}	
+		class = "pc_ocean"
+		size = { min = 22 max = 24 }
+		starting_planet = yes		
+		tile_blockers = none
+		modifiers = none
+		init_effect = {
+			prevent_anomaly = yes
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = acamarian_sovereignty } } }					
+					create_species = {
+						class = "ACA"
+						portrait = acamarian
+						homeworld = THIS
+						traits = {
+							trait="trait_nomadic"
+							trait="trait_traditional"
+							trait="trait_talented"
+							trait="trait_fragmented"
+							ideal_planet_class = "pc_ocean" 
+						}
+					}
+					last_created_species = { save_global_event_target_as = acamarianSpecies }
+					create_country = {
+						name = "NAME_acamarian_sovereignty"
+						type = "default"
+						ignore_initial_colony_error = yes
+						civics = { civic = civic_acamarian_1 civic = civic_parliamentary_system }
+						authority = auth_democratic
+						ethos = { ethic = "ethic_xenophile" ethic = "ethic_militarist" ethic = "ethic_egalitarian" }
+						species = event_target:acamarianSpecies
+						flag = {
+							icon = { category = "trek" file = "acamarian.dds" }
+							background = { category = "backgrounds" file = "inverse_v.dds" }
+							colors = { "customcolor457" "customcolor1656" "null" "null" }
+						}
+					ship_prefix = "ACS"
+					effect = {
+						set_graphical_culture = generic_02
+						set_country_flag = acamarian_sovereignty
+						set_country_flag = custom_start_screen
+						set_country_flag = generic_ent
+						set_country_flag = alpha_beta_empire
+						set_country_flag = init_spawned
+						set_country_flag = botf_minor
+						save_global_event_target_as = acamarian_sovereignty
+					}
+				}
+				create_colony = { owner = event_target:acamarian_sovereignty species = event_target:acamarianSpecies ethos = owner }
+				}
+			set_capital = yes
+			random_country = {
+				limit = { has_country_flag = acamarian_sovereignty }
+				save_global_event_target_as = acamarian_sovereignty
+				add_appropriate_start_techs = yes
+				give_technology = {	tech = "tech_society_02333" message = no }
+				species = { save_global_event_target_as = acamarianSpecies }
+				set_country_type = minorRace
+			}
+			set_owner = event_target:acamarian_sovereignty
+			generate_minor_empire_start_buildings = yes
+			generate_minor_empire_start_pops = yes
+			generate_major_empire_start_fleets = yes
+			set_name = "Acamar III"
+		}
+	}
+	planet = {		
+		name = "Acamar IV"
+		orbit_distance = {min = 40 max = 50}	
+		class = "pc_gas_giant"
+		size = { min = 30 max = 50 }	
+	}
+	planet = {		
+		name = "Acamar V"
+		orbit_distance = {min = 40 max = 50}	
+		class = "pc_gas_giant"
+		size = { min = 30 max = 50 }	
+	}
+}

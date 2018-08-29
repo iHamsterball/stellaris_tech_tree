@@ -1,0 +1,500 @@
+generic_specialisation = {
+	always = yes
+}
+
+###...
+has_tier_2_ships = {
+	always = no
+}
+has_tier_3_ships = {
+	always = no
+}
+has_tier_4_ships = {
+	always = no
+}
+has_tier_5_ships = {
+	always = no
+}
+###...
+
+
+has_transporters = {
+	OR = {
+		has_technology = tech_physics_transporters_23
+	}
+}
+
+has_tractor_beam = {
+	OR = {
+		has_technology = tech_physics_tractor_122
+		has_technology = tech_physics_field_manipulation_239
+		has_technology = tech_borg_defense
+	}
+}
+
+has_second_tier_starting_weapon = {
+	OR = {
+		has_technology = tech_physics_phase_156 #Phase Cannon - FED
+		has_technology = tech_physics_nadion_159 #Phasers - NON-FED
+		has_technology = tech_physics_phase_202 #Disruptors
+		has_technology = tech_physics_modulated_203 #Plasma Disruptors
+		has_technology = tech_physics_modulating_241 #Plasma
+		has_technology = tech_physics_focused_296 #Polaron
+		has_technology = tech_physics_tetryon_321 #Tetryon		
+	}
+}
+
+### Unique ship triggers
+
+has_unique_fighter_variant = {
+    OR = {
+        is_species_class = ROM
+        is_species_class = GAR
+        is_species_class = REM
+        is_species_class = DOM
+        is_species_class = CAR
+        is_species_class = FED
+        is_species_class = KDF
+        is_species_class = BRG ### to disable access to fighters
+    }
+}
+
+### Lists all species that has ships that require large ship yard facilities
+has_access_to_capital_ships = {
+    OR = {
+        is_species_class = DOM # Supercarrier
+		is_species_class = VOT # City Ship
+		is_species_class = BRG # Omega Cube
+    }
+}
+
+### Warp triggers
+
+uses_singularity_cores = {
+	OR = {
+		is_species_class = ROM
+		is_species_class = GAR
+		is_species_class = REM
+	}
+}
+
+uses_ring_engine = {
+    OR = {
+        is_species_class = VUL
+    }
+}
+
+uses_transwarp_engine = {
+    OR = {
+        is_species_class = BRG
+    }
+}
+
+does_not_use_warp_engine = {
+    OR = {
+        uses_singularity_cores = yes
+        uses_ring_engine = yes
+        uses_transwarp_engine = yes
+    }
+}
+
+uses_warp_cores = {
+    OR = {
+        does_not_use_warp_engine = no
+    }
+}
+
+######################################
+### Technology and weapon triggers ###
+######################################
+
+uses_cloaks = {
+	OR = {
+		is_species_class = GAR
+		is_species_class = KDF
+		is_species_class = KRA
+		is_species_class = KRE
+		is_species_class = REM
+		is_species_class = ROM
+		is_species_class = VOT # Voth
+		is_species_class = SUL # Suliban
+		is_species_class = CHE # Cheronite
+		is_species_class = VID # Vidiians
+		is_species_class = YRI # Yridians
+		has_country_flag = terran_empire
+		has_country_flag = mirror_klingon_cardassian_alliance
+	}
+}
+
+starts_with_colony_tech = {
+    OR = {
+		is_species_class = UND
+		is_species_class = KDF
+        is_species_class = ROM
+        is_species_class = CAR
+        is_species_class = KRE
+		is_species_class = HUS
+		is_species_class = VUL
+		is_species_class = VAA
+		is_species_class = VOT
+		is_species_class = DOM
+    }
+}
+
+major_temporal_last_increased_tech = {
+	OR = {
+		last_increased_tech = tech_physics_temporal_64
+		last_increased_tech = tech_physics_manheim_62
+		last_increased_tech = tech_physics_temporal_63
+		last_increased_tech = tech_physics_field_manipulation_131
+		last_increased_tech = tech_physics_01231
+		last_increased_tech = tech_physics_subatomic_145
+		last_increased_tech = tech_physics_field_manipulation_134
+		last_increased_tech = tech_engineering_temporal_699
+		last_increased_tech = tech_physics_field_manipulation_184
+	}
+}
+
+minor_temporal_last_increased_tech = {
+	OR = {
+		last_increased_tech = tech_physics_particles_764
+		last_increased_tech = tech_physics_particles_766
+		last_increased_tech = tech_physics_particles_766
+		last_increased_tech = tech_physics_particles_769
+		last_increased_tech = tech_physics_particles_768
+		last_increased_tech = tech_physics_particles_769
+		last_increased_tech = tech_physics_particles_770
+		last_increased_tech = tech_engineering_rocketry_1674
+		last_increased_tech = tech_engineering_rocketry_1675
+		last_increased_tech = tech_engineering_rocketry_1676
+		last_increased_tech = tech_engineering_rocketry_1677
+		last_increased_tech = tech_engineering_rocketry_1678
+	}
+}
+
+genetic_last_increased_tech = {
+	OR = {
+		last_increased_tech = tech_society_mass_471
+        last_increased_tech = tech_epigenetic_triggers
+		last_increased_tech = tech_society_selected_470
+		last_increased_tech = tech_society_capacity_472
+		last_increased_tech = tech_gene_tailoring
+		last_increased_tech = tech_society_deep_475
+		last_increased_tech = tech_society_retrovirus_468
+		last_increased_tech = tech_society_targeted_473
+		last_increased_tech = tech_society_the_476
+		last_increased_tech = tech_society_morphegenic_474
+	}
+}
+
+################
+# Polaron Branch
+################
+
+### Also uses early Polaron torpedo
+uses_polaron_weapons = {
+	OR = {
+		is_species_class = DOM
+		is_species_class = KAR
+		is_species_class = NRC
+	}
+}
+
+################
+# TETRYON BRANCH
+################
+
+### Also uses early resonance torpedo
+uses_quantum_resonance_weapons = {
+    OR = {
+		is_species_class = CRA
+		is_species_class = PRA
+	}
+}
+
+uses_thermic_weapons = {
+	OR = {
+		is_species_class = VID
+	}
+}
+
+### Also uses early temporal torpedo
+uses_chroniton_weapons = {
+	OR = {
+		is_species_class = KRE
+	}
+}
+
+uses_tetryon_weapons = {
+	OR = {
+		is_species_class = FER
+		is_species_class = THO
+		is_species_class = HIR
+		is_species_class = BYN
+		is_species_class = YAD
+		is_species_class = VOT
+		is_species_class = HUR
+		is_species_class = FES # First Federation
+		is_species_class = MET # Metrons
+		is_species_class = CYT # Cytherians
+	}
+}
+
+uses_tetryon_weapons_any = {
+	OR = {
+		uses_tetryon_weapons = yes
+		uses_chroniton_weapons = yes
+		uses_thermic_weapons = yes
+		uses_quantum_resonance_weapons = yes
+	}
+}
+
+####################
+# ANTI-MATTER BRANCH
+####################
+
+### Also gains Borg torpedo
+uses_antiproton_weapons_borg = {
+    OR = {
+        is_species_class = BRG
+    }
+}
+
+uses_antiproton_weapons_subspace = {
+	OR = {
+        is_species_class = SON
+    }
+}
+
+uses_antiproton_weapons_bio = {
+	OR = {
+        is_species_class = UND
+    }
+}
+
+uses_antiproton_weapons_metreon = {
+	OR = {
+        is_species_class = HAA
+    }
+}
+
+uses_antiproton_weapons = {
+	OR = {
+		is_species_class = VAA
+		is_species_class = HUS
+		is_species_class = BAN
+		is_species_class = TZE
+	}
+}
+
+uses_antiproton_weapons_any = {
+    OR = {
+        uses_antiproton_weapons_borg = yes
+		uses_antiproton_weapons_metreon = yes
+		uses_antiproton_weapons_bio = yes
+		uses_antiproton_weapons_subspace = yes
+		uses_antiproton_weapons = yes
+    }
+}
+
+###############
+# PLASMA BRANCH
+###############
+
+uses_plasma_weapons = {
+	OR = {
+		is_species_class = NAU
+		is_species_class = KAZ
+		is_species_class = TRA
+		is_species_class = ORI
+		is_species_class = ZAH
+		is_species_class = BRU
+		is_species_class = MOR
+		is_species_class = RAK
+		is_species_class = FLA
+		is_species_class = XINMAM
+		is_species_class = XINREP
+		is_species_class = XININS
+		is_species_class = XINAQU
+		is_species_class = XINARB
+		is_species_class = KRA
+		is_species_class = ZAK
+		is_species_class = KOB
+		is_species_class = LIS
+		is_species_class = LUR
+		is_species_class = VLR
+		is_species_class = XEP
+	}
+}
+
+################
+# DISRUPTOR BRANCH
+################
+
+uses_disruptor_weapons_klingon = {
+	OR = {
+		is_species_class = KDF
+	}
+}
+
+uses_plasma_disruptor_weapons = {
+	OR = {
+		is_species_class = GAR
+		is_species_class = REM
+		is_species_class = ROM
+	}
+}
+
+uses_disruptor_weapons = {
+	OR = {
+		is_species_class = BRE
+		is_species_class = GOR
+		is_species_class = LYR
+		is_species_class = DOS
+		is_species_class = WAD
+		is_species_class = TRO
+		is_species_class = DEV
+		is_species_class = SHE
+		is_species_class = FEN
+		is_species_class = NYB
+		is_species_class = ARG
+		is_species_class = SUL
+		is_species_class = ANT
+		is_species_class = SEL
+		is_species_class = SKR
+		is_species_class = OSC
+		is_species_class = ATE
+	}
+}
+
+uses_disruptor_weapons_any = {
+	OR = {
+	    uses_disruptor_weapons_klingon = yes
+		uses_disruptor_weapons = yes
+		uses_plasma_disruptor_weapons = yes
+	}
+}
+
+###############
+# PHASER BRANCH
+###############
+
+uses_phaser_weapons_fed = {
+	OR = {
+		is_species_class = FED
+	}
+}
+
+uses_phaser_weapons_cardassian = {
+	OR = {
+		is_species_class = CAR
+	}
+}
+
+uses_phaser_weapons_andorian = {
+	OR = {
+		is_species_class = ADR
+	}
+}
+
+uses_phaser_weapons_particle = {
+	OR = {
+		is_species_class = TAM
+		is_species_class = VUL
+	}
+}
+
+uses_phaser_weapons = {
+	OR = {
+		is_species_class = TEL
+		is_species_class = BAJ
+		is_species_class = BEN
+		is_species_class = BET
+		is_species_class = BOL
+		is_species_class = CAT
+		is_species_class = CHE
+		is_species_class = DEN
+		is_species_class = RIG
+		is_species_class = TAL
+		is_species_class = TRI
+		is_species_class = KEL
+		is_species_class = ACA
+		is_species_class = TLR
+		is_species_class = YRI
+		is_species_class = SAU # Saurians
+		is_species_class = RANDOMTREK
+	}
+}
+
+uses_phaser_weapons_any = {
+	OR = {
+		uses_phaser_weapons = yes
+		uses_phaser_weapons_fed = yes
+		uses_phaser_weapons_cardassian = yes
+		uses_phaser_weapons_andorian = yes
+		uses_phaser_weapons_particle = yes
+	}
+}
+
+#########
+# TORPEDO
+#########
+
+uses_quantum_torp = { ### used for advanced torp gating
+	OR = {
+		uses_quantum_resonance_weapons = yes
+		is_species_class = FED
+		is_species_class = CAR
+	}
+}
+
+uses_polaron_torp = { ### used for advanced torp gating
+	OR = {
+		uses_polaron_weapons = yes
+		is_species_class = KDF
+	}
+}
+
+uses_plasma_torpedo = { 
+	OR = {
+		uses_plasma_weapons = yes
+		uses_plasma_disruptor_weapons = yes
+		uses_antiproton_weapons_borg = yes
+	}
+}
+
+uses_photonic_torpedo = {
+    OR = {
+        uses_phaser_weapons_any = yes
+        uses_disruptor_weapons_klingon = yes
+        uses_disruptor_weapons = yes
+        uses_antiproton_weapons = yes
+		uses_antiproton_weapons_subspace = yes
+		uses_antiproton_weapons_bio = yes
+		uses_antiproton_weapons_metreon = yes
+        uses_tetryon_weapons = yes
+        uses_thermic_weapons = yes
+    }
+}
+
+#############
+# BEAM/CANNON
+#############
+
+use_weapon_beam = {
+	OR = {
+		uses_phaser_weapons_any = yes
+		uses_polaron_weapons = yes
+		uses_antiproton_weapons_any = yes
+		uses_plasma_disruptor_weapons = yes	
+	}
+}
+
+use_weapon_cannon = {
+	OR = {
+	    uses_plasma_weapons = yes
+		uses_tetryon_weapons_any = yes
+		uses_disruptor_weapons_klingon = yes
+		uses_disruptor_weapons = yes
+	}
+}

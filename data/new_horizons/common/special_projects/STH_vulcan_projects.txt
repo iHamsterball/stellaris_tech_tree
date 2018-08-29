@@ -1,0 +1,117 @@
+
+#Build Pjem
+special_project = {
+	key = "PJEM_1_PROJECT"
+	cost = 200
+	# days_to_research = 0
+	tech_department = engineering_technology
+	picture = sth_GFX_evt_pJem
+	timelimit = -1
+	event_scope = planet_event
+	abort_trigger = { 
+		OR = {
+			NOT = { any_owned_planet = { has_planet_flag = pjem_planet } }
+			any_country = {
+				any_subject = { has_country_flag = andorian_empire }
+				any_subject = { vulcan_empires = yes }
+			}
+		}
+	}
+	on_success = {
+		planet_event = { id = STH_vulcan_story.2 }
+	}
+}
+
+#Andorians assemble Pjem assault
+special_project = {
+	key = "PJEM_2_PROJECT"
+	# cost = 0
+	days_to_research = 30
+	tech_department = society_technology
+	picture = sth_GFX_evt_pJem
+	timelimit = -1
+	event_scope = ship_event
+	requirements = {
+		shipclass_military = 1
+		leader = admiral
+	}
+	abort_trigger = { 
+		OR = {
+			any_country = { 
+				vulcan_empires = yes
+				NOT = { any_owned_planet = { has_planet_flag = pjem_planet } }
+			}
+			any_country = {
+				any_subject = { has_country_flag = andorian_empire }
+				any_subject = { vulcan_empires = yes }
+			}
+		}
+	}
+	on_success = {
+		ship_event = { id = STH_vulcan_story.20 }
+	}
+}
+
+
+#Humans visit PJem
+special_project = {
+	key = "PJEM_3_PROJECT"
+	# cost = 0
+	days_to_research = 30
+	tech_department = society_technology
+	picture = sth_GFX_evt_pJem
+	timelimit = -1
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+	abort_trigger = { 
+		has_global_flag = pjem_exposed
+	}
+	on_success = {
+		owner = { set_country_flag = pjem_visit_in_progress }
+		ship_event = { id = STH_vulcan_story.31 } 
+	}
+}
+
+
+#Syrrannite Investigation (Earth)
+special_project = {
+	key = "SYRRANNITE_1_PROJECT"
+	# cost = 0
+	days_to_research = 30
+	tech_department = society_technology
+	picture = sth_GFX_evt_earthEmbassyBomb2
+	timelimit = 1080
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+	on_success = {
+		random_country = {
+			limit = { vulcan_empires = yes }
+			save_event_target_as = vulcanCountry
+			#TODO MAKE THIS BETTER!
+		}
+		leader = {
+			save_global_event_target_as = embassyBombInvestigator
+		}
+		owner = { 
+			country_event = { id = STH_vulcan_story.1005 scopes = { from = event_target:vulcanCountry fromfrom = event_target:embassyBombInvestigator } } 
+			save_event_target_as = humanCountry
+		}
+		event_target:vulcan_high_command = { country_event = { id = STH_vulcan_story.1036 scopes = { from = event_target:humanCountry fromfrom = event_target:embassyBombInvestigator } } }
+	}
+	on_fail = {
+		save_event_target_as = humanCountry
+		random_country = {
+			limit = { vulcan_empires = yes }
+			save_event_target_as = vulcanCountry
+			#TODO MAKE THIS BETTER!
+		}
+		country_event = { id = STH_vulcan_story.1037 scopes = { from = event_target:vulcanCountry } } 
+		event_target:vulcan_high_command = { country_event = { id = STH_vulcan_story.1038 scopes = { from = event_target:humanCountry } } }
+	}
+}

@@ -1,0 +1,775 @@
+
+
+
+### Assault Army
+   assault_army = {
+      damage = 1
+      health = 1
+      morale = 1
+      morale_damage = 1
+      collateral_damage = 1
+      war_exhaustion = 1
+      time = 90
+      maintenance = 1
+      cost = { minerals = 100 }
+      icon_frame = 2
+      prerequisites = { "tech_defense_army" }
+      show_tech_unlock_if = { is_borg_empire = no }
+      potential = {
+         owner = { is_borg_empire = no }
+      }
+   }
+   
+### Drone Army
+   assault_army_borg = {
+      damage = 1
+      health = 1.5
+      has_morale = no
+      morale_damage = 1
+      collateral_damage = 1
+      war_exhaustion = 0.5
+      time = 90
+      maintenance = 1.5
+      cost = { minerals = 150 }
+      icon_frame = 2
+      prerequisites = { "tech_defense_army" }
+      show_tech_unlock_if = { is_borg_empire = yes }
+      potential = {
+         owner = { is_borg_empire = yes }
+      }
+   }
+   
+### Slave Army
+   slave_army = {
+      damage = 1
+      health = 1
+      morale = 0.75
+      morale_damage = 0.75
+      collateral_damage = 1.5
+      war_exhaustion = 0.5
+      time = 60
+      maintenance = 0.75
+      cost = { minerals = 75 }
+      icon_frame = 10
+      show_tech_unlock_if = { is_nomadic_empire = no }
+      allow = { has_building = "building_slave_processing" }
+      potential = {
+         owner = { is_nomadic_empire = no }
+         owner = { has_non_swapped_tradition =tr_domination_protection_racket }
+      }
+   }
+   
+### Slave Army
+   slave_army_space = {
+      damage = 1
+      health = 1
+      morale = 0.75
+      morale_damage = 0.75
+      collateral_damage = 1.5
+      war_exhaustion = 0.5
+      time = 60
+      maintenance = 0.75
+      cost = { minerals = 75 }
+      icon_frame = 10
+      show_tech_unlock_if = { is_nomadic_empire = yes }
+      allow = { has_building = "space_building_slave_processing" }
+      potential = {
+         owner = { is_nomadic_empire = yes }
+         owner = { has_non_swapped_tradition =tr_domination_protection_racket }
+      }
+   }
+   
+### Clone Army
+   clone_army = {
+      damage = 1
+      health = 1
+      morale = 1
+      morale_damage = 1
+      collateral_damage = 1.25
+      war_exhaustion = 0.5
+      time = 30
+      maintenance = 0.5
+      cost = { minerals = 50 }
+      icon_frame = 7
+      prerequisites = { "tech_society_mass_471" }
+      show_tech_unlock_if = { is_nomadic_empire = no }
+      allow = { has_building = "building_clone_vats" }
+      potential = {
+         owner = { is_nomadic_empire = no }
+      }
+   }
+   
+### Clone Army
+   clone_army_space = {
+      damage = 1
+      health = 1
+      morale = 1
+      morale_damage = 1
+      collateral_damage = 1.25
+      war_exhaustion = 0.5
+      time = 30
+      maintenance = 0.5
+      cost = { minerals = 50 }
+      icon_frame = 7
+      prerequisites = { "tech_society_mass_471" }
+      show_tech_unlock_if = { is_nomadic_empire = yes }
+      allow = { has_building = "space_building_clone_vats" }
+      potential = {
+         owner = { is_nomadic_empire = yes }
+      }
+   }
+   
+### Robotic Army - Always disabled
+   robotic_army = {
+      damage = 1
+      health = 2
+      has_morale = no
+      morale_damage = 1
+      collateral_damage = 1.5
+      war_exhaustion = 0.5
+      time = 90
+      maintenance = 1.5
+      cost = { minerals = 150 }
+      icon_frame = 4
+      has_species = yes
+      potential = {
+         always = no
+      }
+   }
+   
+### Android Army - Always disabled
+   android_army = {
+      damage = 2
+      health = 2.5
+      has_morale = no
+      morale_damage = 1.25
+      collateral_damage = 1.5
+      war_exhaustion = 0.75
+      time = 120
+      maintenance = 2.5
+      cost = { minerals = 250 }
+      icon_frame = 4
+      has_species = yes
+      potential = {
+         always = no
+      }
+   }
+   
+### Telepathic Army
+   psionic_army = {
+      damage = 2
+      health = 1.75
+      morale = 2.5
+      morale_damage = 1.5
+      collateral_damage = 0.5
+      war_exhaustion = 3
+      time = 120
+      maintenance = 2.5
+      cost = { minerals = 250 }
+      icon_frame = 9
+      prerequisites = { "tech_telepathy" }
+   }
+   
+### Xenomorphs
+   xenomorph_army = {
+      damage = 3
+      health = 2
+      has_morale = no
+      morale_damage = 2
+      collateral_damage = 5
+      war_exhaustion = 0.25
+      time = 90
+      maintenance = 1.5
+      cost = { minerals = 150 }
+      icon_frame = 8
+      prerequisites = { "tech_society_morphegenic_474" }
+      show_tech_unlock_if = { is_nomadic_empire = no }
+      has_species = no
+      allow = { has_building = "building_clone_vats" }
+      potential = {
+         owner = { is_nomadic_empire = no }
+      }
+   }
+   
+### Xenomorphs
+   xenomorph_army_space = {
+      damage = 3
+      health = 2
+      has_morale = no
+      morale_damage = 2
+      collateral_damage = 5
+      war_exhaustion = 0.25
+      time = 90
+      maintenance = 1.5
+      cost = { minerals = 150 }
+      icon_frame = 8
+      prerequisites = { "tech_society_morphegenic_474" }
+      show_tech_unlock_if = { is_nomadic_empire = yes }
+      has_species = no
+      allow = { has_building = "space_building_clone_vats" }
+      potential = {
+         owner = { is_nomadic_empire = yes }
+      }
+   }
+   
+### Gene Warriors
+   gene_warrior_army = {
+      damage = 2
+      health = 2.5
+      morale = 2.5
+      morale_damage = 1
+      collateral_damage = 0.75
+      war_exhaustion = 3
+      time = 150
+      maintenance = 3
+      cost = { minerals = 300 }
+      icon_frame = 6
+      prerequisites = { "tech_society_the_476" }
+      show_tech_unlock_if = { is_nomadic_empire = no }
+      allow = { has_building = "building_clone_vats" }
+      potential = {
+         owner = { is_nomadic_empire = no }
+      }
+   }
+   
+### Gene Warriors
+   gene_warrior_army_space = {
+      damage = 2
+      health = 2.5
+      morale = 2.5
+      morale_damage = 1
+      collateral_damage = 0.75
+      war_exhaustion = 3
+      time = 150
+      maintenance = 3
+      cost = { minerals = 300 }
+      icon_frame = 6
+      prerequisites = { "tech_society_the_476" }
+      show_tech_unlock_if = { is_nomadic_empire = yes }
+      allow = { has_building = "space_building_clone_vats" }
+      potential = {
+         owner = { is_nomadic_empire = yes }
+      }
+   }
+   
+### Hunter-Killers
+   machine_assault_1 = {
+      damage = 1
+      health = 1
+      has_morale = no
+      morale_damage = 1
+      collateral_damage = 2
+      war_exhaustion = 0.5
+      time = 90
+      maintenance = 1
+      cost = { minerals = 100 }
+      icon_frame = 11
+      prerequisites = { "tech_automated_units" }
+      has_species = yes
+      potential = {
+         owner = { NOT = { has_authority = auth_machine_intelligence }}
+      }
+   }
+   
+### Battle Frame
+   machine_assault_2 = {
+      damage = 1.5
+      health = 2.5
+      has_morale = no
+      morale_damage = 1.5
+      collateral_damage = 2
+      war_exhaustion = 1
+      time = 120
+      maintenance = 2
+      cost = { minerals = 200 }
+      icon_frame = 11
+      prerequisites = { "tech_physics_01080" }
+      has_species = yes
+      potential = {
+         owner = { NOT = { has_authority = auth_machine_intelligence }}
+      }
+   }
+   
+### Mechanized Combat Platform
+   machine_assault_3 = {
+      damage = 4
+      health = 6
+      has_morale = no
+      morale_damage = 1.5
+      collateral_damage = 4
+      war_exhaustion = 4
+      time = 500
+      maintenance = 8
+      cost = { minerals = 800 }
+      icon_frame = 11
+      has_species = no
+      potential = {
+         owner = { has_swapped_tradition =tr_innovation_3 }
+      }
+   }
+   
+### Drop Marines - Produced by special module only
+   army_marines_1 = {
+      damage = 0.75
+      health = 2
+      morale = 1.25
+      morale_damage = 1
+      collateral_damage = 1
+      war_exhaustion = 0.5
+      time = 90
+      maintenance = 0.5
+      cost = { minerals = 10 }
+      icon_frame = 2
+      prerequisites = { "tech_society_special_395" }
+      has_species = no
+      potential = {
+         always = no
+      }
+   }
+   
+### Heavy Marines - Produced by special module only
+   army_marines_2 = {
+      damage = 0.75
+      health = 2.5
+      morale = 1.5
+      morale_damage = 1
+      collateral_damage = 1
+      war_exhaustion = 0.5
+      time = 90
+      maintenance = 0.5
+      cost = { minerals = 10 }
+      icon_frame = 2
+      prerequisites = { "tech_physics_01040" }
+      has_species = no
+      potential = {
+         always = no
+      }
+   }
+   
+### Deep Strike Commandos
+   army_commandos_1 = {
+      damage = 1.25
+      health = 1
+      morale = 1
+      morale_damage = 1.3
+      collateral_damage = 0.25
+      war_exhaustion = 2
+      time = 100
+      maintenance = 1.5
+      cost = { minerals = 150 }
+      icon_frame = 2
+      prerequisites = { "tech_society_02273" }
+   }
+   
+### Deep Strike Commandos II
+   army_commandos_2 = {
+      damage = 1.5
+      health = 1.5
+      morale = 1
+      morale_damage = 1.4
+      collateral_damage = 0.25
+      war_exhaustion = 2.5
+      time = 110
+      maintenance = 2
+      cost = { minerals = 200 }
+      icon_frame = 2
+      prerequisites = { "tech_physics_elwin_48" }
+   }
+   
+### Deep Strike Commandos III
+   army_commandos_3 = {
+      damage = 1.75
+      health = 1.75
+      morale = 1
+      morale_damage = 1.5
+      collateral_damage = 0.25
+      war_exhaustion = 3
+      time = 120
+      maintenance = 2.5
+      cost = { minerals = 250 }
+      icon_frame = 2
+      prerequisites = { "tech_physics_01040" }
+   }
+   
+### Deep Strike Commandos IV
+   army_commandos_4 = {
+      damage = 2
+      health = 2
+      morale = 1
+      morale_damage = 1.75
+      collateral_damage = 0.25
+      war_exhaustion = 3.5
+      time = 130
+      maintenance = 3
+      cost = { minerals = 300 }
+      icon_frame = 2
+      prerequisites = { "tech_physics_01231" }
+   }
+   
+### Mobile Energy Artillery
+   army_artillery_phaser = {
+      damage = 3
+      health = 2
+      morale = 1
+      morale_damage = 1.5
+      collateral_damage = 3.5
+      war_exhaustion = 6
+      time = 400
+      maintenance = 5
+      cost = { minerals = 500 }
+      icon_frame = 11
+      prerequisites = { "tech_physics_01642" }
+   }
+   
+### Mobile Energy Artillery
+   army_artillery_disruptor = {
+      damage = 3
+      health = 2
+      morale = 1
+      morale_damage = 1.5
+      collateral_damage = 3.5
+      war_exhaustion = 6
+      time = 400
+      maintenance = 5
+      cost = { minerals = 500 }
+      icon_frame = 11
+      prerequisites = { "tech_physics_01733" }
+   }
+   
+### Mobile Energy Artillery
+   army_artillery_plasma = {
+      damage = 3
+      health = 2
+      morale = 1
+      morale_damage = 1.5
+      collateral_damage = 3.5
+      war_exhaustion = 6
+      time = 400
+      maintenance = 5
+      cost = { minerals = 500 }
+      icon_frame = 11
+      prerequisites = { "tech_physics_01820" }
+   }
+   
+### Mobile Energy Artillery
+   army_artillery_anti = {
+      damage = 3
+      health = 2
+      morale = 1
+      morale_damage = 1.5
+      collateral_damage = 3.5
+      war_exhaustion = 6
+      time = 400
+      maintenance = 5
+      cost = { minerals = 500 }
+      icon_frame = 11
+      prerequisites = { "tech_physics_01926" }
+   }
+   
+### Mobile Energy Artillery
+   army_artillery_polaron = {
+      damage = 3
+      health = 2
+      morale = 1
+      morale_damage = 1.5
+      collateral_damage = 3.5
+      war_exhaustion = 6
+      time = 400
+      maintenance = 5
+      cost = { minerals = 500 }
+      icon_frame = 11
+      prerequisites = { "tech_physics_02016" }
+   }
+   
+### Mobile Energy Artillery
+   army_artillery_tetryon = {
+      damage = 3
+      health = 2
+      morale = 1
+      morale_damage = 1.5
+      collateral_damage = 3.5
+      war_exhaustion = 6
+      time = 400
+      maintenance = 5
+      cost = { minerals = 500 }
+      icon_frame = 11
+      prerequisites = { "tech_physics_02139" }
+   }
+   
+### Tactical Drone
+   army_borg_tactical = {
+      damage = 3
+      health = 1
+      has_morale = no
+      morale_damage = 1
+      collateral_damage = 0.5
+      war_exhaustion = 1.5
+      time = 120
+      maintenance = 2
+      cost = { minerals = 250 }
+      icon_frame = 4
+      prerequisites = { "tech_society_statecraft_1763" }
+      potential = {
+         from = { is_species_class = BRG }
+      }
+   }
+   
+### Armored Drone
+   army_borg_armor = {
+      damage = 1
+      health = 3
+      has_morale = no
+      morale_damage = 1
+      collateral_damage = 1
+      war_exhaustion = 1
+      time = 120
+      maintenance = 2
+      cost = { minerals = 250 }
+      icon_frame = 4
+      prerequisites = { "tech_society_statecraft_1764" }
+      potential = {
+         from = { is_species_class = BRG }
+      }
+   }
+   
+### Terror Drone
+   army_borg_terror = {
+      damage = 1
+      health = 1
+      has_morale = no
+      morale_damage = 1.5
+      collateral_damage = 5
+      war_exhaustion = 0.5
+      time = 120
+      maintenance = 2
+      cost = { minerals = 250 }
+      icon_frame = 4
+      prerequisites = { "tech_society_statecraft_1765" }
+      potential = {
+         from = { is_species_class = BRG }
+      }
+   }
+   
+### Black Ops
+   army_black_ops = {
+      damage = 1
+      health = 1
+      morale = 2
+      morale_damage = 1.5
+      collateral_damage = 0.5
+      war_exhaustion = 2
+      time = 90
+      maintenance = 1.5
+      cost = { minerals = 150 }
+      icon_frame = 8
+      prerequisites = { "tech_society_secret_436" }
+   }
+   
+### Tholian Shock Troops
+   army_tholian_shock = {
+      damage = 1.5
+      health = 2.5
+      morale = 1
+      morale_damage = 1.25
+      collateral_damage = 2
+      war_exhaustion = 2
+      time = 150
+      maintenance = 2.5
+      cost = { minerals = 250 }
+      icon_frame = 11
+      prerequisites = { "tech_society_new_worlds_1134" }
+      potential = {
+         from = { is_species_class = THO }
+      }
+   }
+   
+### Hirogen Hunters - Produced by special module only
+   hirogen_hunters_army = {
+      damage = 1.5
+      health = 2.3
+      morale = 2
+      morale_damage = 1
+      collateral_damage = 1.25
+      war_exhaustion = 0.5
+      time = 0
+      maintenance = 0.5
+      cost = {  }
+      icon_frame = 8
+      prerequisites = { "tech_society_statecraft_1179" }
+      potential = {
+         always = no
+      }
+   }
+   
+### Mercenries
+   army_mercenry = {
+      damage = 1
+      health = 1
+      morale = 0.8
+      morale_damage = 0.8
+      collateral_damage = 1.25
+      war_exhaustion = 0.4
+      time = 55
+      maintenance = 0.4
+      cost = { energy = 150 }
+      icon_frame = 8
+      prerequisites = { "tech_society_02305" }
+      has_species = no
+   }
+   
+### Bajoran Militia
+   army_militia = {
+      damage = 0.9
+      health = 0.9
+      morale = 1.25
+      morale_damage = 0.8
+      collateral_damage = 1.25
+      war_exhaustion = 0.5
+      time = 55
+      maintenance = 0.5
+      cost = { unity = 30 }
+      icon_frame = 8
+      prerequisites = { "tech_society_words_379" }
+      has_species = no
+      potential = {
+         from = { is_species_class = BAJ }
+      }
+   }
+   
+### Reman Shock Troops
+   army_reman = {
+      damage = 1.75
+      health = 1.5
+      morale = 2.25
+      morale_damage = 1.25
+      collateral_damage = 0.75
+      war_exhaustion = 3.5
+      time = 150
+      maintenance = 3
+      cost = { minerals = 300 }
+      icon_frame = 9
+      show_tech_unlock_if = { has_country_flag = romulan_star_empire }
+      allow = {
+         custom_tooltip = {
+            text = army_reman_limit_tooltip
+            owner = { NOT = { check_variable = { which = "army_reman_count" value = 3 } } }
+         }
+      }
+      on_queued = { owner = { change_variable = { which = "army_reman_count" value = 1 } } }
+      on_unqueued = { owner = { change_variable = { which = "army_reman_count" value = -1 } } }
+      potential = {
+         owner = { has_country_flag = romulan_star_empire }
+         from = { is_species_class = REM }
+         owner = { NOT = { check_variable = { which = "army_reman_count" value = 3 } } }
+      }
+   }
+   
+### Klingon Honor Guard
+   army_honor_guard = {
+      damage = 1.8
+      health = 2.3
+      morale = 2.3
+      morale_damage = 1.25
+      collateral_damage = 1.25
+      war_exhaustion = 3.5
+      time = 200
+      maintenance = 3.5
+      cost = { minerals = 350 }
+      icon_frame = 8
+      prerequisites = { "tech_society_the_380" }
+      allow = {
+         custom_tooltip = {
+            text = army_honor_guard_limit_tooltip
+            owner = { NOT = { check_variable = { which = "army_honor_guard_count" value = 3 } } }
+         }
+      }
+      on_queued = { owner = { change_variable = { which = "army_honor_guard_count" value = 1 } } }
+      on_unqueued = { owner = { change_variable = { which = "army_honor_guard_count" value = -1 } } }
+      potential = {
+         from = { is_species_class = KDF }
+         owner = { NOT = { check_variable = { which = "army_honor_guard_count" value = 3 } } }
+      }
+   }
+   
+### First Order Battalion
+   army_first_order = {
+      damage = 1.5
+      health = 2
+      morale = 2
+      morale_damage = 1
+      collateral_damage = 1
+      war_exhaustion = 3
+      time = 150
+      maintenance = 3
+      cost = { minerals = 300 }
+      icon_frame = 8
+      show_tech_unlock_if = { has_country_flag = cardassian_union  }
+      allow = {
+         custom_tooltip = {
+            text = army_first_order_limit_tooltip
+            owner = { NOT = { check_variable = { which = "army_first_order_count" value = 3 } } }
+         }
+      }
+      on_queued = { owner = { change_variable = { which = "army_first_order_count" value = 1 } } }
+      on_unqueued = { owner = { change_variable = { which = "army_first_order_count" value = -1 } } }
+      potential = {
+         owner = { has_country_flag = cardassian_union  }
+         from = { is_species_class = CAR }
+         owner = { NOT = { check_variable = { which = "army_first_order_count" value = 3 } } }
+      }
+   }
+   
+### MACO
+   army_maco = {
+      damage = 1.75
+      health = 2.25
+      morale = 2.25
+      morale_damage = 1
+      collateral_damage = 0.75
+      war_exhaustion = 3.5
+      time = 200
+      maintenance = 3.5
+      cost = { minerals = 350 }
+      icon_frame = 2
+      prerequisites = { "tech_society_statecraft_931" }
+      allow = {
+         custom_tooltip = {
+            text = army_maco_limit_tooltip
+            owner = { NOT = { check_variable = { which = "army_maco_count" value = 3 } } }
+         }
+      }
+      on_queued = { owner = { change_variable = { which = "army_maco_count" value = 1 } } }
+      on_unqueued = { owner = { change_variable = { which = "army_maco_count" value = -1 } } }
+      potential = {
+         from = { is_species_class = FED }
+         owner = { NOT = { check_variable = { which = "army_maco_count" value = 3 } } }
+      }
+   }
+   
+### Jem'Hadar Shock Troops
+   army_jemhadar = {
+      damage = 1.9
+      health = 2.4
+      morale = 2.4
+      morale_damage = 1
+      collateral_damage = 0.75
+      war_exhaustion = 4
+      time = 250
+      maintenance = 4
+      cost = { minerals = 400 }
+      icon_frame = 8
+      prerequisites = { "tech_jem_hadar_cloning" }
+      allow = {
+         custom_tooltip = {
+            text = army_jemhadar_limit_tooltip
+            owner = { NOT = { check_variable = { which = "army_jemhadar_count" value = 3 } } }
+         }
+      }
+      on_queued = { owner = { change_variable = { which = "army_jemhadar_count" value = 1 } } }
+      on_unqueued = { owner = { change_variable = { which = "army_jemhadar_count" value = -1 } } }
+      potential = {
+         from = { is_species_class = JEM }
+         owner = { NOT = { check_variable = { which = "army_jemhadar_count" value = 3 } } }
+      }
+   }
+   

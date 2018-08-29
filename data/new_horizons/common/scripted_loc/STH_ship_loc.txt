@@ -1,0 +1,57 @@
+defined_text = {
+	name = Get00ShipRegistry
+	text = {
+		trigger = { check_variable = { which = shipRegistryTemp value < 10 } }
+		localization_key = "0"
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GetShipLetter
+	text = {
+		trigger = { check_variable = { which = shipLetterTemp value = 1 } }
+		localization_key = "-A"
+	}
+	text = {
+		trigger = { check_variable = { which = shipLetterTemp value = 2 } }
+		localization_key = "-B"
+	}
+	text = {
+		trigger = { check_variable = { which = shipLetterTemp value = 3 } }
+		localization_key = "-C"
+	}
+	text = {
+		trigger = { check_variable = { which = shipLetterTemp value = 4 } }
+		localization_key = "-D"
+	}
+	text = {
+		trigger = { check_variable = { which = shipLetterTemp value = 5 } }
+		localization_key = "-E"
+	}
+	text = {
+		trigger = { check_variable = { which = shipLetterTemp value = 6 } }
+		localization_key = "-F"
+	}
+	text = {
+		trigger = { check_variable = { which = shipLetterTemp value = 7 } }
+		localization_key = "-G"
+	}
+	text = {
+		trigger = { check_variable = { which = shipLetterTemp value = 8 } }
+		localization_key = "-H"
+	}
+	text = {
+		trigger = { check_variable = { which = shipLetterTemp value = 9 } }
+		localization_key = "-I"
+	}
+	text = {
+		trigger = { check_variable = { which = shipLetterTemp value = 10 } }
+		localization_key = "-J"
+	}
+	text = {
+		localization_key = ""
+	}
+}

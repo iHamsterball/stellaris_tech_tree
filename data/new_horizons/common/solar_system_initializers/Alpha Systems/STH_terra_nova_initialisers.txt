@@ -1,0 +1,105 @@
+# Terra Nova
+# Flavor, not a homeworld
+# To be used in an event disaster to be scripted that devistates Eta Cassiopeiae III
+terra_nova_b = {
+	name = "Eta Cassiopeiae"
+	class = sc_binary_gk
+	asteroid_belt = { type = rocky_asteroid_belt radius = 540 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 380 }
+	#pc_invisible_star
+	planet = {
+		name = "Achird"
+		class = pc_g_star
+		orbit_distance = 460
+		orbit_angle = 20
+		size = 30
+		has_ring = no
+		planet = {
+			name = "Achird I"
+			class = "pc_b_class"
+			orbit_distance = 30
+			orbit_angle = 30
+			size = 8
+			has_ring = no
+		}
+		planet = {
+			name = "Achird II"
+			class = "pc_toxic"
+			orbit_distance = 15
+			orbit_angle = 145
+			size = 15
+			has_ring = no
+		}
+		planet = {
+			name = "Terra Nova"
+			class = "pc_continental"
+			orbit_distance = 31
+			orbit_angle = 240
+			size = 16
+			has_ring = no
+			init_effect = {
+				prevent_anomaly = yes
+				add_modifier = { modifier = surface_impact days = -1 }
+				add_anomaly = STH_terra_nova_category
+				random_tile = {
+					limit = { has_building = no num_adjacent_tiles > 3 }
+					remove_blocker = yes
+				}
+				random_tile = {
+					limit = { has_blocker = yes }
+					remove_blocker = yes
+					set_blocker = tb_crater
+					add_deposit = d_rich_mineral_deposit
+					random_neighboring_tile = {
+						remove_blocker = yes
+						set_blocker = tb_radioactive_wasteland
+						add_deposit = d_mineral_deposit
+					}
+					random_neighboring_tile = {
+						remove_blocker = yes
+						set_blocker = tb_radioactive_wasteland
+						add_deposit = d_mineral_deposit
+					}
+				}
+			}
+			moon = {
+				name = "Luna Nova"
+				orbit_distance = 10
+				class = "pc_barren_cold"
+				size = 7
+				orbit_angle = { min = 30 max = 270}
+			}
+			moon = {
+				name = "Luna Nova Secunda"
+				orbit_distance = 5
+				class = "pc_barren_cold"
+				size = 3
+				orbit_angle = { min = 30 max = 270}
+			}
+		}
+	}
+	planet = {
+		name = "Eta Cassiopeiae B"
+		class = pc_k_star
+		orbit_distance = 0
+		orbit_angle = 180
+		size = 30
+		has_ring = no
+		planet = {
+			name = "Eta Cassiopeiae B I"
+			class = "pc_b_class"
+			orbit_distance = 40
+			orbit_angle = 145
+			size = 15
+			has_ring = no
+		}
+		planet = {
+			name = "Eta Cassiopeiae B II"
+			class = "pc_b_class"
+			orbit_distance = 20
+			orbit_angle = 20
+			size = 5
+			has_ring = no
+		}
+	}
+}

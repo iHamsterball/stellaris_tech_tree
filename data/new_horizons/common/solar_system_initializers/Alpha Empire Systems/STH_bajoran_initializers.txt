@@ -1,0 +1,331 @@
+@distance = 30
+@base_moon_distance = 10
+
+# Bajor
+bajoran_homeworld= {			
+	name = "Bajor"
+	class = "sc_g"
+	flags = { bajoran_homeworld }
+	init_effect = { log = "bajoran homeworld" }
+	usage = custom_empire
+	max_instances = 1
+	planet = {
+		name = "Bajor"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 30
+		has_ring = no
+		init_effect = {
+			solar_system = { save_global_event_target_as = bajoran_system }
+			save_event_target_as = bajor_sun
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 0 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 10 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 20 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 30 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 40 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 50 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 60 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 70 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 80 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 90 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 100 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 110 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 120 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 130 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 140 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 150 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 160 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 170 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 180 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 190 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 200 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 210 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 220 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 230 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 240 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 250 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 260 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 270 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 280 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 290 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 300 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 310 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 320 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 330 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 340 } set_ambient_object_flag = denorios_belt }
+			create_ambient_object = { type = "sth_denorios_belt" location = this entity_offset = { min = 10 max = 20 } entity_offset_height = { min = -9 max = -11 } }
+			last_created_ambient_object = { set_location = { target = event_target:bajor_sun distance = 180 angle = 350 } set_ambient_object_flag = denorios_belt }
+		}
+	}
+	planet = {
+		name = "B'hava'el I"
+		class = "pc_b_class"
+		orbit_distance = 40
+		orbit_angle = -50
+		size = 9
+		has_ring = no
+	}
+	planet = {
+		name = "B'hava'el II"
+		class = "pc_b_class"
+		orbit_distance = 15
+		orbit_angle = -160
+		size = 11
+		has_ring = no
+	}
+	planet = {
+		name = "B'hava'el III"
+		class = "pc_b_class"
+		orbit_distance = 15
+		orbit_angle = 180
+		size = 14
+		has_ring = no
+	}
+	planet = {
+		name = "B'hava'el IV"
+		class = "pc_b_class"
+		orbit_distance = 15
+		orbit_angle = 120
+		size = 15
+		has_ring = no
+	}	
+	planet = {
+		name = "B'hava'el V"
+		class = "pc_toxic"
+		orbit_distance = 15
+		orbit_angle = 110
+		size = 13
+		has_ring = no
+	}
+	planet = {
+		name = "B'hava'el VI"
+		class = "pc_barren"
+		orbit_distance = 15
+		orbit_angle = -50
+		size = 13
+		has_ring = no
+	}
+	planet = {
+		name = "B'hava'el VII"
+		class = "pc_barren"
+		orbit_distance = 15
+		orbit_angle = -150
+		size = 14
+		has_ring = no
+	}
+	planet = {
+		name = "Andros"
+		class = "pc_barren"
+		orbit_distance = 15
+		orbit_angle = -160
+		size = 15
+		has_ring = no
+		moon = {
+			name = "Andros a"
+			class = "pc_barren"
+			size = 3
+			orbit_distance = 8
+			orbit_angle = 10
+			has_ring = no
+		}
+		moon = {
+			name = "Andros b"
+			class = "pc_barren"
+			size = 2
+			orbit_distance = 3
+			orbit_angle = 10
+			has_ring = no
+		}
+	}
+	planet = {
+		name = "B'hava'el IX"
+		class = "pc_barren"
+		orbit_distance = 15
+		orbit_angle = 170
+		size = 15
+		has_ring = no
+	}
+	planet = {
+		name = "B'hava'el X"
+		class = "pc_barren"
+		orbit_distance = 38
+		orbit_angle = 140
+		size = 12
+		has_ring = no
+	}
+	planet = {
+		name = "Bajor"
+		class = "pc_continental"
+		orbit_distance = 15
+		orbit_angle = 160
+		size = { min = 18 max = 20 }
+		starting_planet = yes
+		has_ring = no
+		tile_blockers = none
+		modifiers = none
+		init_effect = { prevent_anomaly = yes }
+		init_effect = {
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = bajoran_republic } } }
+				create_species = { 
+				    name = "Bajoran" 
+				    class = BAJ  
+				    portrait = bajoran 
+				    homeworld = THIS 
+				    traits = { 
+				        trait = "trait_agrarian" 
+				        trait = "trait_chosen_people"
+				        trait = "trait_sedentary" 
+				        ideal_planet_class = "pc_continental" 
+					} 
+				}
+				last_created_species = { save_global_event_target_as = bajoranSpecies }
+				create_country = {
+					name = "NAME_bajoran_republic"
+					type = default
+					ignore_initial_colony_error = yes
+					civics = { civic = "civic_prophet_1" civic = "civic_prophet_2" }
+					authority = auth_oligarchic
+					name_list = "Bajoran"
+					ethos = { ethic = "ethic_pacifist" ethic = "ethic_fanatic_spiritualist" }
+					species = event_target:bajoranSpecies
+					flag = {
+						icon = { category = "trek" file = "Bajor.dds" }
+						background = { category = "backgrounds" file = "circle.dds" }
+						colors = { "customcolor1454" "customcolor1806" "null" "null" }
+					}
+					ship_prefix = BV
+					effect = {
+						set_graphical_culture = generic_02
+						set_country_flag = bajoran_republic
+						set_country_flag = custom_start_screen
+						set_country_flag = generic_ent
+						set_country_flag = alpha_beta_empire
+						set_country_flag = init_spawned
+						set_country_flag = sth_medium_galaxy
+						set_country_flag = botf_minor
+						save_global_event_target_as = bajoran_republic
+					}
+				}
+				create_colony = { owner = event_target:bajoran_republic species = event_target:bajoranSpecies ethos = owner }
+			}
+			set_capital = yes
+			set_planet_flag = planet_bajor
+			random_country = {
+				limit = { has_country_flag = bajoran_republic }
+				save_global_event_target_as = bajoran_republic
+				add_appropriate_start_techs = yes
+				give_technology = {	tech = "tech_society_words_379" message = no }
+				species = { save_global_event_target_as = bajoranSpecies }
+				set_country_type = minorRace
+			}
+			set_owner = event_target:bajoran_republic
+			generate_minor_empire_start_buildings = yes
+			random_tile = { limit = { has_blocker = no has_building = no } set_building = "building_central_temple_bajor" }
+			generate_minor_empire_start_pops = yes
+			generate_major_empire_start_fleets = yes
+			set_name = "Bajor"
+		}
+		moon = {
+			name = "Derna"
+			class = "pc_barren"
+			size = 5
+			orbit_distance = 8
+			orbit_angle = 10
+			has_ring = no
+		}
+		moon = {
+			name = "B'hava'el XI b"
+			class = "pc_barren"
+			size = 5
+			orbit_distance = 3
+			orbit_angle = 10
+			has_ring = no
+		}
+		moon = {
+			name = "B'hava'el XI c"
+			class = "pc_barren"
+			size = 8
+			orbit_distance = 3
+			orbit_angle = 10
+			has_ring = no
+		}
+		moon = {
+			name = "B'hava'el XI d"
+			class = "pc_barren"
+			size = 5
+			orbit_distance = 3
+			orbit_angle = 10
+			has_ring = no
+		}
+		moon = {
+			name = "Jeraddo"
+			class = "pc_toxic"
+			size = 5
+			orbit_distance = 3
+			orbit_angle = 10
+			has_ring = no
+		}
+	}
+	planet = {
+		name = "B'hava'el XII"
+		class = "pc_gas_giant"
+		orbit_distance = 15						#distance from center, relative to previous planets orbit. ( if the previous planet was placed at distance 100 from the center, orbit_distance = 10 would put us 110 from the center ).
+		orbit_angle = 60						#orbit angle from previous planet, in degrees. orbit_distance and orbit_angle together makes the polar coordinate of the planet
+		size = 35								#planet size. remember that all numeric values support { min = x max = y } syntax
+		has_ring = no
+	}
+	planet = {
+		name = "B'hava'el XIII"
+		class = "pc_gas_giant"
+		orbit_distance = 15						#distance from center, relative to previous planets orbit. ( if the previous planet was placed at distance 100 from the center, orbit_distance = 10 would put us 110 from the center ).
+		orbit_angle = 180						#orbit angle from previous planet, in degrees. orbit_distance and orbit_angle together makes the polar coordinate of the planet
+		size = 25								#planet size. remember that all numeric values support { min = x max = y } syntax
+		has_ring = no
+	}
+	planet = {
+		name = "B'hava'el XIV"
+		class = "pc_gas_giant"
+		orbit_distance = 15						#distance from center, relative to previous planets orbit. ( if the previous planet was placed at distance 100 from the center, orbit_distance = 10 would put us 110 from the center ).
+		orbit_angle = -140						#orbit angle from previous planet, in degrees. orbit_distance and orbit_angle together makes the polar coordinate of the planet
+		size = 25								#planet size. remember that all numeric values support { min = x max = y } syntax
+		has_ring = no
+	}
+
+}

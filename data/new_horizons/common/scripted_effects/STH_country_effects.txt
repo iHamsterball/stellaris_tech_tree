@@ -1,0 +1,1344 @@
+ensure_global_event_country_exists = {
+	if = {
+		limit = { NOT = { exists = event_target:global_event_country } }
+		create_country = { name = "global_event_country" type = global_event effect = { save_global_event_target_as = global_event_country } }
+	}
+}
+
+
+#Create Maquis country
+set_rebel_flag = {
+	if = {
+		limit = { is_species_class = CAR }
+		change_country_flag = {
+			icon = { category = "trek" file = "Cardassian2.dds" } 
+			background = { category = "backgrounds" file = "00_solid.dds" } 
+			colors = { "customcolor301" "customcolor101" "null" "null" } #REPLACE!
+		}
+	}
+	if = {
+		limit = { is_species_class = KDF }
+		change_country_flag = {
+			icon = { category = "trek" file = "Klingon.dds" } #REPLACE!
+			background = { category = "backgrounds" file = "00_solid.dds" } 
+			colors = { "customcolor401" "customcolor201" "null" "null" } #REPLACE!
+		}
+	}
+	if = {
+		limit = { is_species_class = ROM }
+		change_country_flag = {
+			icon = { category = "trek" file = "Romulan3.dds" } #REPLACE!
+			background = { category = "backgrounds" file = "00_solid.dds" } 
+			colors = { "customcolor501" "customcolor301" "null" "null" } #REPLACE!
+		}
+	}
+}
+
+set_maquis_name = {
+	if = {
+		limit = { NOT = { any_country = { has_country_flag = maquisActual } } }
+		set_name = "NAME_Maquis"
+		change_country_flag = {
+			icon = { category = "trek" file = "maquis.dds" }
+			background = { category = "backgrounds" file = "00_solid.dds" }
+			colors = { "customcolor1001" "customcolor2001" "null" "null" }
+		}
+		set_country_flag = maquisActual
+	}
+	else = {
+		random_list = {
+			10 = {
+				set_name = "NAME_Maquis_A"
+				change_country_flag = { 
+					icon = { category = "trek" file = "maquis.dds" }
+					background = { category = "backgrounds" file = "00_solid.dds" }
+					colors = { "customcolor1501" "customcolor2001" "null" "null" }
+				}
+			}
+			10 = {
+				set_name = "NAME_Maquis_B"
+				change_country_flag = { 
+					icon = { category = "trek" file = "maquis.dds" }
+					background = { category = "backgrounds" file = "00_solid.dds" }
+					colors = { "customcolor1701" "customcolor2001" "null" "null" }
+				}	
+			}
+			10 = {
+				set_name = "NAME_Maquis_C"
+				change_country_flag = { 
+					icon = { category = "trek" file = "maquis.dds" }
+					background = { category = "backgrounds" file = "00_solid.dds" }
+					colors = { "customcolor1901" "customcolor2001" "null" "null" }
+				}	
+			}
+		}
+		set_country_flag = maquisGeneric
+	}
+}
+
+
+#Root and From
+create_neutral_zone_country = {
+	create_country = {
+		name = "Neutral Zone"
+		type = neutral_zone
+		name_list = Human
+		authority = "auth_agency"
+		ship_prefix = ""
+		# civics = { civic = "civic_slaver_guilds" civic = "civic_cutthroat_politics" }
+		species = Root
+		ethos = { ethic = ethic_neutral }
+		flag = { 
+			icon = { category = "trek" file = "neutral.dds" } 
+			background = { category = "backgrounds" file = "00_solid.dds" } 
+			colors = { "customcolor2001" "customcolor2001" "null" "null" } 
+		}
+		auto_delete = no
+		ignore_initial_colony_error = yes
+		effect = { 
+			establish_communications_no_message = root
+			establish_communications_no_message = root.from
+			set_country_flag = "neutralZoneFor:@Root"
+			set_country_flag = "neutralZoneFor:@Root.From"
+			set_neutral_zone_name = yes
+			set_closed_borders = { who = Root status = yes }
+			Root = { set_closed_borders = { who = Prev status = yes } }
+			set_closed_borders = { who = Root.From status = yes }
+			Root.From = { set_closed_borders = { who = Prev status = yes } }
+		}
+	}
+}
+
+set_neutral_zone_name = {
+	set_name = "[Root.GetSpeciesName] - [Root.From.GetSpeciesName] Neutral Zone"
+	if = {
+		limit = { root = { has_country_flag = united_federation_of_planets } }
+		set_name = "Federation - [Root.From.GetSpeciesName] Neutral Zone" #LOCALISE LATER!
+	}
+	if = {
+		limit = { root.from = { has_country_flag = united_federation_of_planets } }
+		set_name = "Federation - [Root.GetSpeciesName] Neutral Zone" #LOCALISE LATER!
+	}
+	if = {
+		limit = { root.from = { has_country_flag = united_federation_of_planets } root = { has_country_flag = cardassian_union } }
+		set_name = "Federation - [Root.GetSpeciesName] Demilitarised Zone" #LOCALISE LATER!
+	}
+	if = {
+		limit = { root.from = { has_country_flag = cardassian_union } root = { has_country_flag = united_federation_of_planets } }
+		set_name = "Federation - [Root.GetSpeciesName] Demilitarised Zone" #LOCALISE LATER!
+	}
+}
+
+
+#Root and From
+create_neutral_zone = {
+	if = {
+		limit = { any_country = { has_country_flag = "neutralZoneFor:@Root" has_country_flag = "neutralZoneFor:@Root.From" } }
+		random_country = {
+			limit = { has_country_flag = "neutralZoneFor:@Root" has_country_flag = "neutralZoneFor:@Root.From" }
+			save_event_target_as = neutral_zone_country
+		}		
+	}	
+	else = {
+		create_neutral_zone_country = yes
+		last_created_country = { save_event_target_as = neutral_zone_country }
+	}
+	every_system = {
+		limit = { 
+			OR = {
+				AND = { is_owned_by = FROM any_neighbor_system = { is_owned_by = root } }
+				AND = { is_owned_by = root any_neighbor_system = { is_owned_by = FROM } }
+			}
+		}
+		set_variable = { which = friendlyNeighbours value = 0 }
+		every_neighbor_system = {
+			limit = { is_owned_by = prev.owner }
+			prev = { change_variable = { which = friendlyNeighbours value = 1 } }
+		}
+		set_variable = { which = unfriendlyNeighbours value = 0 }
+		every_neighbor_system = {
+			limit = { NOT = { is_owned_by = prev.owner } OR = { is_owned_by = FROM is_owned_by = root } }
+			prev = { change_variable = { which = unfriendlyNeighbours value = 1 } }
+		}
+		random_system = {
+			limit = { 
+				OR = {
+					AND = { is_owned_by = FROM any_neighbor_system = { is_owned_by = root } }
+					AND = { is_owned_by = root any_neighbor_system = { is_owned_by = FROM } }
+				}
+				check_variable = { which = unfriendlyNeighbours value > 2 }
+				NOT = { any_planet = { OR = { is_capital = yes is_homeworld = yes } } }
+			}
+			set_star_flag = "neutralFrom:@This.Owner"
+			if = {
+				limit = { exists = starbase }
+				starbase = { set_owner = event_target:neutral_zone_country }
+			}
+			else = {
+				create_starbase = { size = starbase_outpost owner = event_target:neutral_zone_country }
+			}
+			every_system_planet = {
+				limit = { has_owner = yes }
+				set_owner = event_target:neutral_zone_country
+			}
+		}
+		every_system = {
+			set_variable = { which = friendlyNeighbours value = 0 }
+			set_variable = { which = unfriendlyNeighbours value = 0 }
+		}
+	}
+
+	while = {
+		limit = {
+			any_system = {
+				# has_star_flag = "Neutral Zone Candidate"
+				OR = {
+					AND = { is_owned_by = FROM any_neighbor_system = { is_owned_by = root } }
+					AND = { is_owned_by = root any_neighbor_system = { is_owned_by = FROM } }
+				}
+				NOT = { any_planet = { OR = { is_capital = yes is_homeworld = yes } } }
+			}
+		}
+		random_system = {
+			limit = { 
+				# has_star_flag = "Neutral Zone Candidate" 
+				OR = {
+					AND = { is_owned_by = FROM any_neighbor_system = { is_owned_by = root } }
+					AND = { is_owned_by = root any_neighbor_system = { is_owned_by = FROM } }
+				}
+				NOT = { any_planet = { OR = { is_capital = yes is_homeworld = yes } } }
+			}			
+			set_variable = { which = friendlyNeighbours value = 0 }
+			every_neighbor_system = {
+				limit = { is_owned_by = prev.owner }
+				prev = { change_variable = { which = friendlyNeighbours value = 1 } }
+			}
+			set_variable = { which = unfriendlyNeighbours value = 0 }
+			every_neighbor_system = {
+				limit = { NOT = { is_owned_by = prev.owner } }
+				prev = { change_variable = { which = unfriendlyNeighbours value = 1 } }
+			}
+			
+			random_list = {
+				10 = {
+					# modifier = { factor = 50 any_planet = { is_colony = yes } }
+					# modifier = { factor = 100 check_variable = { which = unfriendlyNeighbours value = 0 } }
+					modifier = { factor = 2 check_variable = { which = friendlyNeighbours value > 0 } }
+					modifier = { factor = 3 check_variable = { which = friendlyNeighbours value > 1 } }
+					modifier = { factor = 4 check_variable = { which = friendlyNeighbours value > 2 } }
+					modifier = { factor = 5 check_variable = { which = friendlyNeighbours value > 3 } }
+				}
+				10 = {
+					# modifier = { factor = 100 check_variable = { which = friendlyNeighbours value = 0 } }
+					modifier = { factor = 2 check_variable = { which = unfriendlyNeighbours value > 0 } }
+					modifier = { factor = 3 check_variable = { which = unfriendlyNeighbours value > 1 } }
+					modifier = { factor = 4 check_variable = { which = unfriendlyNeighbours value > 2 } }
+					modifier = { factor = 5 check_variable = { which = unfriendlyNeighbours value > 3 } }
+					set_star_flag = "neutralFrom:@This.Owner"
+					if = {
+						limit = { exists = starbase }
+						starbase = { set_owner = event_target:neutral_zone_country }
+					}
+					else = {
+						create_starbase = { size = starbase_outpost owner = event_target:neutral_zone_country }
+					}
+					every_system_planet = {
+						limit = { has_owner = yes }
+						set_owner = event_target:neutral_zone_country
+					}
+				}
+			}
+			
+			set_variable = { which = friendlyNeighbours value = 0 }
+			set_variable = { which = unfriendlyNeighbours value = 0 }
+		}
+	}
+}
+
+#Sets starting resources for minor races
+set_starting_resources = {
+    add_minerals = 200
+    add_energy = 100
+	add_food = 100
+	add_influence = 100
+}
+
+#Sets starting resources for fallen empires
+set_fallen_starting_resources = {
+    add_minerals = 2000
+    add_energy = 1000
+	add_food = 1000
+	add_influence = 1000
+	add_unity = 1000
+}
+
+
+ensure_terran_empire_vanguard_exists = {
+	if = {
+		limit = { NOT = { exists = event_target:humanSpecies } }
+		create_species = { 
+			name = "Terran" 
+			class = FED 
+			portrait = human 
+			traits = { trait = "trait_charismatic" trait = "trait_natural_sociologists" ideal_planet_class = "pc_continental" } 
+		}
+		last_created_species = { save_global_event_target_as = humanSpecies }
+	}
+	if = {
+		limit = { NOT = { exists = event_target:terran_empire_vanguard } }
+		create_country = {
+			name = "NAME_terran_empire"
+			type = mirrorUniverseVanguard
+			name_list = Human
+			authority = "auth_imperial"
+			ship_prefix = "ISS"
+			civics = { civic = "civic_slaver_guilds" civic = "civic_cutthroat_politics" }
+			species = event_target:humanSpecies
+			ethos = { ethic = ethic_fanatic_militarist ethic = ethic_authoritarian }
+			flag = { icon = { category = "trek" file = "Mirror1.dds" } background = { category = "backgrounds" file = "circle.dds" } colors = { "customcolor1891" "customcolor1452" "null" "null" } }
+			effect = {
+				save_global_event_target_as = terran_empire_vanguard
+				set_country_flag = terran_empire_vanguard
+				set_country_flag = terran_empire
+				set_graphical_culture = federation #REPLACE WITH ERA SPECIFIC
+				add_minerals = 10000
+				add_energy = 10000
+				set_subject_of = { who = none }
+				copy_techs_from = { target = event_target:mirror_universe_target except = { } } 
+				give_technology = { tech = "tech_phaser_cannon_1" message = no }
+				give_technology = { tech = "tech_nuclear_torpedo" message = no }
+				give_technology = { tech = "tech_engineering_starship-class_717" message = no }
+				give_technology = { tech = "tech_society_statecraft_931" message = no }
+				add_modifier = { modifier = "em_mirror_universe_supply" }				
+				every_system = {
+					limit = { is_surveyed = { who = event_target:mirror_universe_target status = yes } }
+					every_system_planet = { surveyed = { set_surveyed = yes surveyor = event_target:terran_empire_vanguard } }
+				}
+			}		
+		}
+	}
+}
+
+create_terran_empire_vanguard_leader_1 = {
+	create_leader = { type = admiral species = owner_main_species name = random skill = random traits = { trait = leader_trait_unyielding } }
+	last_created_leader = {
+		set_leader_flag = terran_empire_vanguard_leader
+		save_global_event_target_as = terran_empire_vanguard_leader
+		if = { 
+			limit = { gender = male species = { is_species_class = FED } }
+			random_list = {
+				10 = { set_name = "Benjamin Sisko" change_leader_portrait = mirrorBenSisko }
+				10 = { set_name = "Jean-Luc Picard" change_leader_portrait = mirrorJeanLucPicard }
+			}
+		}
+		else_if = { 
+			limit = { gender = male species = { is_species_class = VUL } }
+			random_list = {
+				10 = { set_name = "Tuvok" change_leader_portrait = mirrorTuvok }
+			}
+		}
+		else_if = { 
+			limit = { gender = female species = { is_species_class = FED } }
+			random_list = {
+				10 = { set_name = "Kathryn Janeway" change_leader_portrait = mirrorKathrynJaneway }
+				10 = { set_name = "Jennifer Sisko" change_leader_portrait = mirrorJenniferSisko }
+			}
+		}
+	}
+}
+
+create_terran_empire_vanguard_ruler_1 = {
+	create_leader = { type = ruler species = owner_main_species name = random skill = random traits = { trait = leader_trait_unyielding trait = random_trait } } 
+	last_created_leader = {
+		set_leader_flag = terran_empire_vanguard_ruler
+		save_global_event_target_as = terran_empire_vanguard_ruler 
+		if = { 
+			limit = { gender = female species = { is_species_class = FED } }  
+			random_list = { 
+				10 = { set_name = "Kassidy Yates" change_leader_portrait = mirrorKassidyYates } 
+				10 = { set_name = "Annika Hansen" change_leader_portrait = mirrorAnnikaHansen } 
+				10 = { set_name = "Beverly Crusher" change_leader_portrait = mirrorBeverleyCrusher } 
+			} 
+		}
+		else_if = { 
+			limit = { gender = male species = { is_species_class = FED } }  
+			random_list = { 
+				10 = { set_name = "William Riker" change_leader_portrait = mirrorWillRiker } 
+				10 = { set_name = "Miles O'Brien" change_leader_portrait = mirrorMilesObrien } 
+				10 = { set_name = "Wesley Crusher" change_leader_portrait = mirrorWesleyCrusher } 
+			} 
+		} 
+	} 
+}
+
+
+ensure_klingon_cardassian_alliance_vanguard_exists = {
+	ensure_klingon_cardassian_species_exist = yes
+	if = {
+		limit = { NOT = { exists = event_target:klingon_cardassian_alliance_vanguard } }
+		create_country = {
+			name = "NAME_klingon_cardassian_alliance"
+			type = mirrorUniverseVanguard
+			name_list = Klingon
+			authority = "auth_imperial"
+			ship_prefix = "KCV"
+			civics = { civic = "civic_slaver_guilds" civic = "civic_cutthroat_politics" }
+			species = event_target:klingonSpecies
+			ethos = { ethic = ethic_fanatic_militarist ethic = ethic_authoritarian }
+			flag = { icon = { category = "trek" file = "Mirror2.dds" } background = { category = "backgrounds" file = "stripes.dds" } colors = { "customcolor1601" "customcolor557" "null" "null" } }
+			effect = {
+				save_global_event_target_as = klingon_cardassian_alliance_vanguard
+				set_country_flag = klingon_cardassian_alliance_vanguard
+				set_country_flag = klingon_cardassian_alliance_bajor_tolerance
+				set_country_flag = klingon_cardassian_alliance
+				set_graphical_culture = cardassian_01
+				add_minerals = 10000
+				add_energy = 10000
+				set_subject_of = { who = none }
+				copy_techs_from = { target = event_target:mirror_universe_target except = { } } 
+				give_technology = { tech = "tech_phaser_cannon_1" message = no }
+				give_technology = { tech = "tech_nuclear_torpedo" message = no }
+				give_technology = { tech = "tech_engineering_starship-class_717" message = no }
+				give_technology = { tech = "tech_society_statecraft_931" message = no }
+				add_modifier = { modifier = "em_mirror_universe_supply" }				
+				every_system = {
+					limit = { is_surveyed = { who = event_target:mirror_universe_target status = yes } }
+					every_system_planet = { surveyed = { set_surveyed = yes surveyor = event_target:klingon_cardassian_alliance_vanguard } }
+				}
+			}		
+		}
+	}
+}
+
+create_klingon_cardassian_alliance_vanguard_leader_1 = {
+	ensure_klingon_cardassian_species_exist = yes
+	random_list = {
+		10 = { create_leader = { type = admiral species = event_target:klingonSpecies name = random skill = random traits = { trait = leader_trait_unyielding } } }
+		10 = { create_leader = { type = admiral species = event_target:cardassianSpecies name = random skill = random traits = { trait = leader_trait_unyielding } } }
+		2 = { create_leader = { type = admiral species = event_target:bajoranSpecies name = random skill = random traits = { trait = leader_trait_unyielding } } }
+	}
+	last_created_leader = {
+		set_leader_flag = klingon_cardassian_alliance_vanguard_leader
+		save_global_event_target_as = klingon_cardassian_alliance_vanguard_leader
+		if = { 
+			limit = { gender = male species = { is_species_class = CAR } }
+			random_list = {
+				10 = { set_name = "Elim Garak" }
+				10 = { set_name = "Enabran Tain" }
+			}
+		}
+		else_if = { 
+			limit = { gender = female species = { is_species_class = CAR } }
+			random_list = {
+				10 = { set_name = "Natima Lang" }
+				10 = { set_name = "Gilora Rejal" }
+			}
+		}
+		else_if = { 
+			limit = { gender = male species = { is_species_class = KDF } }
+			random_list = {
+				10 = { set_name = "Martok" }
+				10 = { set_name = "Kurn" }
+			}
+		}
+		else_if = { 
+			limit = { gender = female species = { is_species_class = KDF } }
+			random_list = {
+				10 = { set_name = "Lursa" }
+				10 = { set_name = "B'Etor" }
+			}
+		}
+		else_if = { 
+			limit = { gender = male species = { is_species_class = BAJ } }
+			random_list = {
+				10 = { set_name = "Bareil Antos" }
+				10 = { set_name = "Shakaar Edon" }
+			}
+		}
+		else_if = { 
+			limit = { gender = female species = { is_species_class = KDF } }
+			random_list = {
+				10 = { set_name = "Ro Laren" }
+				10 = { set_name = "Kira Nerys" }
+			}
+		}
+	}
+}
+
+create_klingon_cardassian_alliance_vanguard_ruler_1 = {
+	ensure_klingon_cardassian_species_exist = yes
+	random_list = {
+		10 = { create_leader = { type = ruler species = event_target:klingonSpecies name = random skill = random traits = { trait = leader_trait_unyielding trait = random_trait } } }
+		10 = { create_leader = { type = ruler species = event_target:cardassianSpecies name = random skill = random traits = { trait = leader_trait_unyielding trait = random_trait } } }
+	}
+	last_created_leader = {
+		set_leader_flag = klingon_cardassian_alliance_vanguard_ruler
+		save_global_event_target_as = klingon_cardassian_alliance_vanguard_ruler 
+		if = { 
+			limit = { gender = female species = { is_species_class = KDF } }  
+			random_list = { 
+				10 = { set_name = "Grilka" } 
+			} 
+		}
+		else_if = { 
+			limit = { gender = male species = { is_species_class = KDF } }  
+			random_list = { 
+				10 = { set_name = "Worf" } 
+			} 
+		}
+		else_if = { 
+			limit = { gender = female species = { is_species_class = CAR } }  
+			random_list = { 
+				10 = { set_name = "Malyn Ocett" } 
+			} 
+		}
+		else_if = { 
+			limit = { gender = male species = { is_species_class = CAR } }  
+			random_list = { 
+				10 = { set_name = "Skrain Dukat" } 
+			} 
+		} 
+	} 
+}
+
+
+
+
+
+
+##REMOVE LATER
+create_federation_mirror_universe_country = {	
+	if = {
+		limit = { NOT = { exists = event_target:humanSpecies } }
+		create_species = { 
+			name = "Human" 
+			class = FED 
+			portrait = human 
+			traits = { trait = "trait_charismatic" trait = "trait_natural_sociologists" ideal_planet_class = "pc_continental" } 
+		}
+		last_created_species = { save_global_event_target_as = humanSpecies }
+	}
+	create_country = {
+		name = "Terran Empire"
+		type = mirrorUniverseVanguard
+		name_list = Human
+		authority = "auth_imperial"
+		ship_prefix = "ISS"
+		civics = { civic = "civic_slaver_guilds" civic = "civic_cutthroat_politics" }
+		species = event_target:humanSpecies
+		ethos = { ethic = ethic_fanatic_militarist ethic = ethic_authoritarian }
+		flag = { icon = { category = "trek" file = "Mirror1.dds" } background = { category = "backgrounds" file = "circle.dds" } colors = { "customcolor1891" "customcolor1452" "null" "null" } }
+		effect = {
+			save_global_event_target_as = mirror_universe_fed_vanguard
+			set_country_flag = mirror_universe_fed_vanguard
+			set_country_flag = terran_empire
+			set_graphical_culture = federation #REPLACE WITH ERA SPECIFIC
+			add_minerals = 10000
+			add_energy = 10000
+			set_subject_of = { who = none }
+			copy_techs_from = { target = event_target:mirror_universe_target except = { } } 
+			give_technology = { tech = "tech_phaser_cannon_1" message = no } 
+			give_technology = { tech = "tech_nuclear_torpedo" message = no }
+			give_technology = { tech = "tech_engineering_starship-class_717" message = no } 
+			give_technology = { tech = "tech_society_statecraft_931" message = no }
+			establish_communications_no_message = event_target:mirror_universe_target
+			create_leader = { type = admiral species = owner_main_species name = random skill = random traits = { trait = leader_trait_unyielding } }
+			last_created_leader = {
+				save_global_event_target_as = mirror_universe_fed_leader				
+				if = { 
+					limit = { gender = male species = { is_species_class = FED } }
+					random_list = {
+						10 = { set_name = "Benjamin Sisko" change_leader_portrait = mirrorBenSisko }
+						10 = { set_name = "Jean-Luc Picard" change_leader_portrait = mirrorJeanLucPicard }
+					}
+				}
+				if = { 
+					limit = { gender = male species = { is_species_class = VUL } }
+					random_list = {
+						10 = { set_name = "Tuvok" change_leader_portrait = mirrorTuvok }
+					}
+				}
+				if = { 
+					limit = { gender = female species = { is_species_class = FED } }
+					random_list = {
+						10 = { set_name = "Kathryn Janeway" change_leader_portrait = mirrorKathrynJaneway }
+						10 = { set_name = "Jennifer Sisko" change_leader_portrait = mirrorJenniferSisko }
+					}
+				}
+			}
+			add_modifier = { modifier = "em_mirror_universe_supply" }
+			
+			every_system = {
+				limit = { is_surveyed = { who = event_target:mirror_universe_target status = yes } }
+				every_system_planet = { surveyed = { set_surveyed = yes surveyor = event_target:mirror_universe_fed_vanguard } }
+			}
+			
+		}		
+	}
+}
+
+configure_mirror_universe_beachhead = {
+	every_tile = {
+		limit = { has_blocker = yes }
+		remove_blocker = yes
+	}
+	every_tile = {
+		limit = { has_blocker = no has_pop = no }
+		create_pop = { species = owner_main_species  }
+	}
+	every_tile = {
+		limit = { has_building = no has_resource = { type = food amount > 0 } }
+		set_building = "building_hydroponics_farm_3"
+	}
+	every_tile = {
+		limit = { has_building = no has_resource = { type = energy amount > 0 } }
+		set_building = "building_power_plant_4"
+	}
+	every_tile = {
+		limit = { has_building = no has_resource = { type = minerals amount > 0 } }
+		set_building = "building_mining_network_4"
+	}
+	every_tile = {
+		limit = { has_building = no has_resource = { type = society_research amount > 0 } }
+		set_building = "building_bio_lab_3"
+	}
+	every_tile = {
+		limit = { has_building = no has_resource = { type = engineering_research amount > 0 } }
+		set_building = "building_engineering_facility_3"
+	}
+	every_tile = {
+		limit = { has_building = no has_resource = { type = physics_research amount > 0 } }
+		set_building = "building_physics_lab_3"
+	}
+	every_tile = {
+		limit = { has_building = no }
+		random_list = {
+			10 = {
+				modifier = { factor = 0 planet = { has_building = "building_naval_HQ" } }
+				set_building = "building_naval_HQ"
+			}
+			10 = {
+				modifier = { factor = 0 planet = { has_building = "building_planetary_shield_2" } }
+				set_building = "building_planetary_shield_2"
+			}
+			10 = {
+				modifier = { factor = 0.5 planet = { has_building = "building_planetary_shield_3" } }
+				set_building = "building_planetary_shield_3"
+			}
+			2 = {
+				set_building = "building_power_plant_4"
+			}
+			2 = {
+				set_building = "building_mining_network_4"
+			}
+			2 = {
+				set_building = "building_hydroponics_farm_3"
+			}
+		}
+	}
+}
+
+configure_mirror_universe_beachhead_kca = {
+	every_tile = {
+		limit = { has_blocker = yes }
+		remove_blocker = yes
+	}
+	every_tile = {
+		limit = { has_blocker = no has_pop = no }
+		random_list = {
+			10 = { create_pop = { species = event_target:klingonSpecies  } }
+			10 = { create_pop = { species = event_target:cardassianSpecies  } }
+			2 = { create_pop = { species = event_target:bajoranSpecies  } }
+		}
+	}
+	every_tile = {
+		limit = { has_building = no has_resource = { type = food amount > 0 } }
+		set_building = "building_hydroponics_farm_3"
+	}
+	every_tile = {
+		limit = { has_building = no has_resource = { type = energy amount > 0 } }
+		set_building = "building_power_plant_4"
+	}
+	every_tile = {
+		limit = { has_building = no has_resource = { type = minerals amount > 0 } }
+		set_building = "building_mining_network_4"
+	}
+	every_tile = {
+		limit = { has_building = no has_resource = { type = society_research amount > 0 } }
+		set_building = "building_bio_lab_3"
+	}
+	every_tile = {
+		limit = { has_building = no has_resource = { type = engineering_research amount > 0 } }
+		set_building = "building_engineering_facility_3"
+	}
+	every_tile = {
+		limit = { has_building = no has_resource = { type = physics_research amount > 0 } }
+		set_building = "building_physics_lab_3"
+	}
+	every_tile = {
+		limit = { has_building = no }
+		random_list = {
+			10 = {
+				modifier = { factor = 0 planet = { has_building = "building_naval_HQ" } }
+				set_building = "building_naval_HQ"
+			}
+			10 = {
+				modifier = { factor = 0 planet = { has_building = "building_planetary_shield_2" } }
+				set_building = "building_planetary_shield_2"
+			}
+			10 = {
+				modifier = { factor = 0.5 planet = { has_building = "building_planetary_shield_3" } }
+				set_building = "building_planetary_shield_3"
+			}
+			2 = {
+				set_building = "building_power_plant_4"
+			}
+			2 = {
+				set_building = "building_mining_network_4"
+			}
+			2 = {
+				set_building = "building_hydroponics_farm_3"
+			}
+		}
+	}
+}
+
+##REMOVE LATER
+create_federation_mirror_universe_country_2 = {	
+	if = {
+		limit = { NOT = { exists = event_target:mirror_universe_fed_vanguard_2 } }	
+		create_country = { 
+			name = "Terran Empire"
+			type = mirrorUniverseVanguard
+			name_list = Human
+			authority = "auth_imperial"
+			ship_prefix = "ISS"
+			civics = { civic = "civic_slaver_guilds" civic = "civic_cutthroat_politics" }
+			species = event_target:humanSpecies
+			ethos = { ethic = ethic_fanatic_militarist ethic = ethic_authoritarian }
+			flag = { icon = { category = "trek" file = "Mirror1.dds" } background = { category = "backgrounds" file = "circle.dds" } colors = { "customcolor1891" "customcolor1452" "null" "null" } }
+			effect = {
+				save_global_event_target_as = mirror_universe_fed_vanguard_2
+				set_country_flag = mirror_universe_fed_vanguard_2
+				set_country_flag = terran_empire
+				set_graphical_culture = federation #REPLACE WITH ERA SPECIFIC
+				set_subject_of = { who = none }
+				add_minerals = 10000
+				add_energy = 10000
+				give_technology = { tech = "tech_phaser_cannon_1" message = no } 
+				give_technology = { tech = "tech_engineering_starship-class_717" message = no } 
+				give_technology = { tech = "tech_society_statecraft_931" message = no }
+				copy_techs_from = { target = event_target:mirror_universe_target except = { } } 
+				establish_communications_no_message = event_target:mirror_universe_target
+				add_modifier = { modifier = "em_mirror_universe_supply" }
+			}
+		}
+	}
+}
+
+ensure_mirror_universe_exile_country_exists = {
+	if = {
+		limit = { any_country = { is_country_type = exile has_country_flag = mirrorUniverseExileCountry } }
+		random_country = { 
+			limit = { is_country_type = exile has_country_flag = mirrorUniverseExileCountry } 
+			save_event_target_as = mirrorUniverseExileCountry
+		}
+	}
+	else = {
+		create_country = { name = "Mirror Universe" species = random type = exile ethos = { } authority = random civics = random flag = random auto_delete = no }
+		last_created_country = { set_country_flag = mirrorUniverseExileCountry save_event_target_as = mirrorUniverseExileCountry }
+	}
+}
+
+become_hebitian_union = {
+	change_country_flag = {
+		icon = { category = "trek" file = "hebitian.dds" }
+		background = { category = "backgrounds" file = "circle.dds" }
+		colors = { "blue" "black" "null" "null" }
+	}	
+	remove_country_flag = cardassian_union
+	set_country_flag = hebitian_union
+	change_government = { 
+		authority = "auth_democratic"
+		civics = { civic = "civic_environmentalist" civic = "civic_agrarian_idyll" }
+	}
+	clear_ethos = yes
+	country_add_ethic = ethic_egalitarian
+	country_add_ethic = ethic_pacifist
+	country_add_ethic = ethic_spiritualist
+	owner_species = { rename_species = { name_list = hebitian_name } }
+	set_empire_name = "Hebitian Union"
+}
+
+become_hebitian_country = {	
+	remove_country_flag = cardassian_country
+	remove_country_flag = cardassian_union
+	set_country_flag = hebitian_country
+	change_government = { 
+		authority = "auth_democratic"
+		civics = { civic = "civic_environmentalist" civic = "civic_agrarian_idyll" }
+	}
+	clear_ethos = yes
+	country_add_ethic = ethic_egalitarian
+	country_add_ethic = ethic_pacifist
+	country_add_ethic = ethic_spiritualist
+	owner_species = { rename_species = { name_list = hebitian_name } }
+	random_list = {
+		1000 = {  
+			modifier = { factor = 0 any_country = { has_country_flag = hebitian_alliance } }
+			set_country_flag = "Hebitian Alliance"
+			set_empire_name = "Hebitian Alliance"
+		}
+		1000 = {  
+			modifier = { factor = 0 any_country = { has_country_flag = hebitian_confederation } }
+			set_country_flag = "Hebitian Confederation"
+			set_empire_name = "Hebitian Confederation"
+		}
+		1000 = {  
+			modifier = { factor = 0 any_country = { has_country_flag = hebitian_states } }
+			set_country_flag = "United Hebitian States"
+			set_empire_name = "United Hebitian States"
+		}
+		1000 = {  
+			modifier = { factor = 0 any_country = { has_country_flag = hebitian_serene_republic } }
+			set_country_flag = "Serene Hebitian Republic"
+			set_empire_name = "Serene Hebitian Republic"
+		}
+		1 = {}
+	}	
+}
+
+create_borg_rebel_country = {	
+	random_list = {
+		10 = {	
+			modifier = { factor = 0 exists = event_target:borg_cooperative }
+			create_rebels = { 
+				name = "Borg Cooperative" 
+				authority = auth_cybernetic_consensus 
+				civics = { civic = civic_former_drones civic = civic_idealistic_foundation } 
+				species = root 
+				ethos = { ethic = "ethic_egalitarian" ethic = "ethic_cybernetic_consensus" ethic = "ethic_xenophile" }
+				flag = { 
+					icon = { category = "trek" file = "borg-cooperative.dds" }
+					background = { category = "backgrounds" file = "00_solid.dds" }
+					colors = { "customcolor1127" "customcolor1127" "null" "null" }
+				}
+			}
+			last_created_country = { 
+				create_leader = { type = ruler species = owner_main_species name = random skill = random traits = { trait = random_trait trait = random_trait } }
+				remove_country_flag = the_borg_collective
+				set_country_flag = borg_cooperative
+				save_global_event_target_as = borg_cooperative
+				set_graphical_culture = borg_blue_01
+			}
+		}
+		10 = {
+			modifier = { factor = 0 exists = event_target:unimatrix_zero }
+			create_rebels = { 
+				name = "Unimatrix Zero" 
+				authority = auth_cybernetic_consensus 
+				civics = { civic = civic_former_drones civic = civic_environmentalist }
+				species = root 
+				ethos = { ethic = "ethic_egalitarian" ethic = "ethic_pacifist" ethic = "ethic_cybernetic_consensus" }
+				flag = { 
+					icon = { category = "trek" file = "borg-cooperative.dds" }
+					background = { category = "backgrounds" file = "00_solid.dds" }
+					colors = { "customcolor709" "customcolor709" "null" "null" }
+				}
+			}
+			last_created_country = { 
+				create_leader = { type = ruler species = owner_main_species name = random skill = random traits = { trait = leader_trait_partially_assimilated trait = random_trait } } 
+				remove_country_flag = the_borg_collective
+				set_country_flag = unimatrix_zero
+				save_global_event_target_as = unimatrix_zero
+				set_graphical_culture = borg_yellow_01
+			}
+		}
+	}
+	last_created_country = {
+		assign_leader = last_created_leader
+		create_leader = { type = scientist species = root name = random skill = random traits = { trait = leader_trait_partially_assimilated trait = random_trait } }
+		create_leader = { type = scientist species = root name = random skill = random traits = { trait = leader_trait_partially_assimilated trait = random_trait } }
+		create_leader = { type = scientist species = root name = random skill = random traits = { trait = leader_trait_partially_assimilated trait = random_trait } }
+		create_leader = { type = admiral species = root name = random skill = random traits = { trait = leader_trait_partially_assimilated trait = random_trait } }
+		create_leader = { type = general species = root name = random skill = random traits = { trait = leader_trait_partially_assimilated trait = random_trait } }
+		create_leader = { type = governor species = root name = random skill = random traits = { trait = leader_trait_partially_assimilated trait = random_trait } }
+		set_country_type = default
+		set_subject_of = { who = none }
+
+		if = {
+			limit = { NOT = { has_casus_belli = { target = root type = cb_total_conquest } } }
+			add_casus_belli = { type = cb_total_conquest who = root days = 10000 }
+			declare_war = { target = root name = "Borg Civil War" attacker_war_goal = "wg_total_conquest" }
+		}
+		
+		add_modifier = { modifier = em_rebel_borg_supply days = 1080 }
+		add_modifier = { modifier = em_rebel_borg_naval_cap days = 900 }
+		every_owned_planet = {
+			create_correct_spaceport = yes
+		}
+		add_energy = 5000
+		add_minerals = 12000
+		add_influence = 250
+		add_unity = 500	
+	}
+}
+
+create_undine_country = {
+	create_species = { name = "Undine" class = UND portrait = undine traits = { ideal_planet_class = "pc_continental" } }
+	create_country = {
+		name = "Undine"
+		type = undine
+		auto_delete = no
+		species = last_created
+		flag = {
+			icon = { category = "trek" file = "8472.dds" }
+			background = { category = "backgrounds" file = "new_dawn.dds" }
+			colors = { "orange" "black" "null" "null" }
+		}
+		ethos = { ethic = "ethic_fanatic_xenophobe"	ethic = "ethic_militarist" }
+	}
+	last_created_country = { 
+		set_country_flag = undine 
+		save_event_target_as = undine
+		establish_communications_no_message = root
+		set_faction_hostility = { set_hostile = yes }
+	}
+	#Undine Spawn 1
+	random_planet = {
+		limit = { 
+			is_inside_border = root 
+			is_colony  = no
+		}
+		save_global_event_target_as = undineSpawn1
+		create_undine_fleet = yes
+	}
+	#Undine Spawn 2
+	random_planet = {
+		limit = { 
+			is_inside_border = root 
+			is_colony  = no
+		}
+		save_global_event_target_as = undineSpawn2
+		create_undine_fleet = yes
+	}
+	#Undine Spawn 3
+	random_planet = {
+		limit = { 
+			is_inside_border = root 
+			is_colony  = no
+		}
+		save_global_event_target_as = undineSpawn3
+		create_undine_fleet = yes
+	}
+}
+
+create_terra_prime_country = {
+	if = {
+		limit = { NOT = { exists = event_target:humanSpecies } }
+		random_country = {
+			limit = { is_species_class = FED }
+			species = { save_global_event_target_as = humanSpecies }
+		}
+	}
+	create_country = {
+		name = "NAME_terra_prime"
+		authority = auth_oligarchic
+		civics = random #BANKS CHANGE
+		species = event_target:humanSpecies
+		ship_prefix = TSS
+		type = default
+		ethos = { ethic = "ethic_xenophobe" ethic = "ethic_militarist" ethic = "ethic_egalitarian" }
+		flag = { icon = { category = "trek" file = "UnitedEarth.dds" } background = { category = "backgrounds" file = "circle.dds" } colors = { "customcolor1702" "black" "null" "null" } }
+		name_list = Human
+		effect = {
+			set_country_flag = terra_prime
+			save_global_event_target_as = terraPrime
+			add_energy = 1000
+			add_minerals = 1000
+			create_species = { name = "Human" class = TREKHEROES portrait = JohnPaxton traits = random }
+			create_leader = {
+				type = governor
+				species = last_created
+				name = "John Paxton"
+				skill = random
+				traits = { trait = random_trait trait = random_trait }
+				effect = { 
+					set_is_female = no 
+					save_global_event_target_as = johnPaxton
+				}
+			}
+			assign_leader = event_target:johnPaxton
+			create_leader = { type = scientist species = event_target:humanSpecies name = random skill = random traits = { trait = random_trait trait = random_trait } }
+			create_leader = { type = scientist species = event_target:humanSpecies name = random skill = random traits = { trait = random_trait trait = random_trait } }
+			create_leader = { type = scientist species = event_target:humanSpecies name = random skill = random traits = { trait = random_trait trait = random_trait } }
+			create_leader = { type = admiral species = event_target:humanSpecies name = random skill = random traits = { trait = random_trait trait = random_trait } }
+			create_leader = { type = general species = event_target:humanSpecies name = random skill = random traits = { trait = random_trait trait = random_trait } }
+			create_leader = { type = governor species = event_target:humanSpecies name = random skill = random traits = { trait = random_trait trait = random_trait } }
+			set_subject_of = { who = none }
+			give_technology = { tech = "tech_phaser_cannon_1" message = no }
+			give_technology = { tech = "tech_engineering_starship-class_717" message = no }
+			give_technology = { tech = "tech_society_statecraft_931" message = no }
+		}
+	}	
+}
+
+create_confederacy_of_surak_country = {
+	if = {
+		limit = { NOT = { exists = event_target:vulcanSpecies } }
+		random_country = {
+			limit = { is_species_class = VUL }
+			species = { save_global_event_target_as = vulcanSpecies }
+		}
+	}
+	create_country = {
+		name = "NAME_confederacy_of_surak"
+		authority = auth_democratic
+		civics = { civic = civic_kir_shara civic = civic_efficient_bureaucracy }
+		species = event_target:vulcanSpecies
+		ship_prefix = VSS
+		type = default
+		ethos = { ethic = "ethic_pacifist" ethic = "ethic_spiritualist" ethic = "ethic_xenophile" }
+		flag = { icon = { category = "trek" file = "Vulcan.dds" } background = { category = "backgrounds" file = "circle.dds" } colors = { "customcolor2018" "customcolor1501" "null" "null" } }
+		name_list = Human
+		effect = {
+			set_country_flag = confederacy_of_surak
+			save_global_event_target_as = confederacyOfSurak
+			add_energy = 1000
+			add_minerals = 1000
+			create_leader = { type = scientist species = event_target:vulcanSpecies name = random skill = random traits = { trait = random_trait trait = random_trait } }
+			create_leader = { type = scientist species = event_target:vulcanSpecies name = random skill = random traits = { trait = random_trait trait = random_trait } }
+			create_leader = { type = scientist species = event_target:vulcanSpecies name = random skill = random traits = { trait = random_trait trait = random_trait } }
+			create_leader = { type = admiral species = event_target:vulcanSpecies name = random skill = random traits = { trait = random_trait trait = random_trait } }
+			create_leader = { type = general species = event_target:vulcanSpecies name = random skill = random traits = { trait = random_trait trait = random_trait } }
+			create_leader = { type = governor species = event_target:vulcanSpecies name = random skill = random traits = { trait = random_trait trait = random_trait } }
+			set_subject_of = { who = none }
+			#TODO Harel Change
+			give_technology = {	tech = "tech_society_teaching_375" message = no }
+			give_technology = {	tech = "tech_physics_01350" message = no }
+		}
+	}	
+}
+
+
+
+add_hundred_return_bonus = {
+	#IMPROVE THIS
+	add_unity = 500
+	add_society_research = 500
+}
+
+
+create_klingon_rebel_country_1 = {	
+	random_list = {
+		10 = {	
+			create_rebels = { name = "House of Durel" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = "Durel" skill = random traits = { trait = random_trait trait = random_trait } }	}
+		}
+		10 = {
+			create_rebels = { name = "House of Martek" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = "Martek" skill = random traits = { trait = random_trait trait = random_trait } } }
+		}
+		10 = {
+			create_rebels = { name = "House of K'pel" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = "K'pel" skill = random traits = { trait = random_trait trait = random_trait } } }
+		}
+		10 = {
+			create_rebels = { name = "House of Os'to" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = "Os'to" skill = random traits = { trait = random_trait trait = random_trait } } }
+		}
+		10 = {
+			create_rebels = { name = "House of Grin'sEl" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = "Grin'sEl" skill = random traits = { trait = random_trait trait = random_trait } } }
+		}
+		10 = {
+			create_rebels = { name = "House of Sha'goH" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = "Sha'goH" skill = random traits = { trait = random_trait trait = random_trait } } }
+		}
+		10 = {
+			create_rebels = { name = "House of ha'Rel" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = "ha'Rel" skill = random traits = { trait = random_trait trait = random_trait } } }
+		}
+	}
+	set_owner = last_created_country
+	set_controller = last_created_country
+	solar_system = {
+		if = {
+			limit = { exists = starbase starbase = { owner = { is_same_value = root } } }
+			starbase = { set_owner = last_created_country }
+		}
+	}
+	last_created_country = {
+		change_country_flag = {
+			icon = { category = "trek" file = "Klingon.dds" }
+			background = { category = "backgrounds" file = "diagonal.dds" }
+			colors = { "customcolor1891" "customcolor1452" "null" "null" }
+		}
+		set_country_flag = klingon_rebel_house
+		set_country_type = default
+		assign_leader = last_created_leader
+		set_subject_of = { who = none }		
+		root = { add_casus_belli = { type = cb_civil_war_loyalist who = prev days = 10 } }
+		add_casus_belli = { type = cb_civil_war_rebel who = root days = 10 }
+		declare_war = { target = root name = "Klingon Civil War" attacker_war_goal = "wg_civil_war_rebel" }
+		
+		add_minerals = 1000
+		add_energy = 1000
+		create_fleet_from_naval_cap = 0.5
+		last_created_fleet = {
+			set_name = "House Fleet"
+			set_owner = last_created_country
+			set_location = last_created_country.capital_scope
+		}
+	}
+}
+
+create_klingon_rebel_country_2 = {	
+	random_list = {
+		10 = {	
+			create_rebels = { name = "House of J'nack" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = "J'nack" skill = random traits = { trait = random_trait trait = random_trait } }	}
+		}
+		10 = {
+			create_rebels = { name = "House of p'Leb" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = "p'Leb" skill = random traits = { trait = random_trait trait = random_trait } } }
+		}
+		10 = {
+			create_rebels = { name = "House of m'Aht" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = "m'Aht" skill = random traits = { trait = random_trait trait = random_trait } } }
+		}
+		10 = {
+			create_rebels = { name = "House of m'Tix" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = "m'Tix" skill = random traits = { trait = random_trait trait = random_trait } } }
+		}
+		10 = {
+			create_rebels = { name = "House of Qo'sel" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = "Qo'sel" skill = random traits = { trait = random_trait trait = random_trait } } }
+		}
+		10 = {
+			create_rebels = { name = "House of Mogh" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = "Mogh" skill = random traits = { trait = random_trait trait = random_trait } } }
+		}
+		10 = {
+			create_rebels = { name = "House of Martok" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = "Martok" skill = random traits = { trait = random_trait trait = random_trait } } }
+		}
+	}
+	set_owner = last_created_country
+	set_controller = last_created_country
+	solar_system = {
+		if = {
+			limit = { exists = starbase starbase = { owner = { is_same_value = root } } }
+			starbase = { set_owner = last_created_country }
+		}
+	}
+	last_created_country = {
+		change_country_flag = {
+			icon = { category = "trek" file = "Klingon.dds" }
+			background = { category = "backgrounds" file = "diagonal.dds" }
+			colors = { "customcolor1291" "customcolor1452" "null" "null" }
+		}
+		set_country_flag = klingon_rebel_house
+		set_country_type = default
+		assign_leader = last_created_leader
+		set_subject_of = { who = none }
+		
+		root = { add_casus_belli = { type = cb_civil_war_loyalist who = prev days = 10 } }
+		add_casus_belli = { type = cb_civil_war_rebel who = root days = 10 }
+		declare_war = { target = root name = "Klingon Civil War" attacker_war_goal = "wg_civil_war_rebel" }
+		
+		add_minerals = 1000
+		add_energy = 1000
+		create_fleet_from_naval_cap = 0.5
+		last_created_fleet = {
+			set_name = "House Fleet"
+			set_owner = last_created_country
+			set_location = last_created_country.capital_scope
+		}
+	}
+}
+
+
+
+create_kazon_rebel_country_1 = {	
+	random_list = {
+		10 = {	
+			create_rebels = { name = "Kazon-Halik" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = random skill = random traits = { trait = random_trait trait = random_trait } }	}
+		}
+		10 = {
+			create_rebels = { name = "Kazon-Hobii" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = random skill = random traits = { trait = random_trait trait = random_trait } } }
+		}
+		10 = {
+			create_rebels = { name = "Kazon-Mostral" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = random skill = random traits = { trait = random_trait trait = random_trait } } }
+		}
+		10 = {
+			create_rebels = { name = "Kazon-Nistrim" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = random skill = random traits = { trait = random_trait trait = random_trait } } }
+		}
+		10 = {
+			create_rebels = { name = "Kazon-Osito" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = random skill = random traits = { trait = random_trait trait = random_trait } } }
+		}
+	}
+	set_owner = last_created_country
+	set_controller = last_created_country
+	solar_system = {
+		if = {
+			limit = { exists = starbase starbase = { owner = { is_same_value = root } } }
+			starbase = { set_owner = last_created_country }
+		}
+	}
+	last_created_country = {
+		change_country_flag = {
+			icon = { category = "trek" file = "kazon.dds" }
+			background = { category = "backgrounds" file = "diagonal.dds" }
+			colors = { "customcolor1891" "customcolor1452" "null" "null" }
+		}
+		set_country_flag = kazon_rebel_sect
+		set_country_type = default
+		assign_leader = last_created_leader
+		set_subject_of = { who = none }
+		
+		root = { add_casus_belli = { type = cb_civil_war_loyalist who = prev days = 10 } }
+		add_casus_belli = { type = cb_civil_war_rebel who = root days = 10 }
+		declare_war = { target = root name = "Kazon Civil War" attacker_war_goal = "wg_civil_war_rebel" }
+		
+		add_minerals = 1000
+		add_energy = 1000
+		create_fleet_from_naval_cap = 0.5
+		last_created_fleet = {
+			set_name = "Sect Fleet"
+			set_owner = last_created_country
+			set_location = last_created_country.capital_scope
+		}
+	}
+}
+
+create_kazon_rebel_country_2 = {
+	random_list = {
+		10 = {	
+			create_rebels = { name = "Kazon-Ogla" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = random skill = random traits = { trait = random_trait trait = random_trait } }	}
+		}
+		10 = {
+			create_rebels = { name = "Kazon-Oglamar" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = random skill = random traits = { trait = random_trait trait = random_trait } } }
+		}
+		10 = {
+			create_rebels = { name = "Kazon-Pommar" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = random skill = random traits = { trait = random_trait trait = random_trait } } }
+		}
+		10 = {
+			create_rebels = { name = "Kazon-Relora" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = random skill = random traits = { trait = random_trait trait = random_trait } } }
+		}
+		10 = {
+			create_rebels = { name = "Kazon-Vistik" authority = root civics = root species = root ethos = root flag = random }
+			last_created_country = { create_leader = { type = ruler species = owner_main_species name = random skill = random traits = { trait = random_trait trait = random_trait } } }
+		}
+	}
+	set_owner = last_created_country
+	set_controller = last_created_country
+	solar_system = {
+		if = {
+			limit = { exists = starbase starbase = { owner = { is_same_value = root } } }
+			starbase = { set_owner = last_created_country }
+		}
+	}
+	last_created_country = {
+		change_country_flag = {
+			icon = { category = "trek" file = "kazon.dds" }
+			background = { category = "backgrounds" file = "diagonal.dds" }
+			colors = { "customcolor1291" "customcolor1452" "null" "null" }
+		}
+		set_country_flag = kazon_rebel_sect
+		set_country_type = default
+		assign_leader = last_created_leader
+		set_subject_of = { who = none }
+		
+		root = { add_casus_belli = { type = cb_civil_war_loyalist who = prev days = 10 } }
+		add_casus_belli = { type = cb_civil_war_rebel who = root days = 10 }
+		declare_war = { target = root name = "Kazon Civil War" attacker_war_goal = "wg_civil_war_rebel" }
+		
+		add_minerals = 1000
+		add_energy = 1000
+		create_fleet_from_naval_cap = 0.5
+		last_created_fleet = {
+			set_name = "Sect Fleet"
+			set_owner = last_created_country
+			set_location = last_created_country.capital_scope
+		}
+	}
+}
+
+
+
+become_united_terran_remnant = {
+	set_empire_name = "United Human Remnant"
+	save_global_event_target_as = united_human_remnant
+	clear_global_event_target = united_earth
+	change_country_flag = {
+		icon = { category = "trek" file = "UnitedEarth.dds" }
+		background = { category = "backgrounds" file = "circle.dds" }
+		colors = { "black" "black" "null" "null" }
+	}
+	country_remove_ethic = "ethic_fanatic_xenophile"
+	country_remove_ethic = "ethic_xenophile"
+	country_remove_ethic = "ethic_fanatic_pacifist"
+	country_remove_ethic = "ethic_pacifist"
+	country_add_ethic = "ethic_fanatic_xenophobe"
+	country_add_ethic = "ethic_militarist"
+	remove_country_flag = united_earth
+	set_country_flag = united_human_remnant
+	change_government = { authority = auth_oligarchic }
+	every_owned_pop = {
+		limit = { is_same_species = prev }
+		random_list = {
+			10 = { 
+				pop_change_ethic = "ethic_xenophobe"
+			}
+			10 = { 
+				pop_change_ethic = "ethic_militarist" 
+			}
+		}
+	}
+}
+
+create_generic_corvette = {
+	create_ship = { 
+		name = random 
+		random_existing_design = corvette 
+		graphical_culture = root 
+		prefix = yes 
+		effect = { 
+			set_ship_registry = yes 
+		}
+	}
+}	
+
+create_generic_borg_probe = {
+	create_ship = { 
+		name = random 
+		random_existing_design = borg_probe 
+		graphical_culture = root 
+		prefix = yes 
+		effect = { 
+			set_ship_registry = yes 
+		}
+	}
+}	
+
+create_generic_fed_corvette = {
+	create_ship = { 
+		name = random 
+		random_existing_design = fed_frigate_emette 
+		graphical_culture = root 
+		prefix = yes 
+		effect = { 
+			set_ship_registry = yes 
+		}
+	}
+}

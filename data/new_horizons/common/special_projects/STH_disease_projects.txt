@@ -1,0 +1,125 @@
+# Available requirements:
+#
+#	SKILLS
+#	skill = 2
+#
+#	LEADER
+#	leader = scientist
+#	leader = admiral
+#	leader = general
+#	leader = ruler
+#	leader = governor
+#	
+#	MILITARY SHIPS
+#	shipclass_military = 1
+#	
+#	CIVILIAN SHIPS
+#	shipclass_constructor = 2
+#	shipclass_science_ship = 1
+#	shipclass_colonizer = 2
+#	
+#	ARMIES
+#	shipclass_transport = 1
+#	assault_armies = 2
+#	defense_armies = 1
+#	
+#	STATIONS
+#	research_station = yes
+#	mining_station = yes
+#	observation_station = yes
+#
+#	SCOPES
+#	abort_trigger
+#	this = country (project owner)
+#	from = event scope (planet or ship, MIGHT NOT EXIST)
+#	fromfrom = project creation scope (usually equals location)
+#	
+#	on_success
+#	this = event scope (ship or planet)
+#	from = project creation scope (usually equals location)
+#	
+#	on_fail
+#	this = country (project owner)
+#	from = project creation scope (usually equals location)
+
+#Use Admiral
+
+special_project = {
+	key = "DISEASE_1_PROJECT"
+	days_to_research = 10
+	timelimit = 1080
+	tech_department = society_technology
+	picture = sth_GFX_evt_virus1
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+	on_success = {
+        random_list = {
+            90 = { 
+                ship_event = { id = STH_disease.1100 scopes = { from = event_target:diseaseLocation fromfrom = event_target:diseasePop } } #Pop dies
+            }
+            10 = {
+                modifier = { add = 20 leader = { has_skill >= 1 } }
+                modifier = { add = 20 leader = { has_skill >= 2 } }
+                modifier = { add = 20 leader = { has_skill >= 3 } }
+                modifier = { add = 20 leader = { has_skill >= 4 } }
+                modifier = { add = 20 leader = { has_skill >= 5 } }
+                modifier = { add = 200 leader = { is_medical_leader = yes } }
+                ship_event = { id = STH_disease.1200 scopes = { from = event_target:diseaseLocation fromfrom = event_target:diseasePop } } #Successful
+            }
+            
+        }
+	}
+	on_fail = {
+		random_list = {
+            10 = { country_event = { id = STH_disease.1110 scopes = { from = event_target:diseaseLocation fromfrom = event_target:diseasePop } } } #Pop Dies
+            0 = { 
+                modifier = { add = 5 event_target:diseaseLocation = { count_pops = { limit = { is_robot_pop = no has_plague = no } count >= 1 } } }
+                country_event = { id = STH_disease.1120 scopes = { from = event_target:diseaseLocation fromfrom = event_target:diseasePop } } 
+            } #Pop Dies + Another Infected
+        }
+	}
+}
+
+special_project = {
+	key = "DISEASE_2_PROJECT"
+	days_to_research = 10
+	timelimit = 1080
+	tech_department = society_technology
+	picture = sth_GFX_evt_virus1
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+	on_success = {
+        random_list = {
+            90 = { 
+                ship_event = { id = STH_disease.1100 scopes = { from = event_target:diseaseLocation fromfrom = event_target:diseasePop } } #Pop dies
+            }
+            10 = {
+                modifier = { add = 20 leader = { has_skill >= 1 } }
+                modifier = { add = 20 leader = { has_skill >= 2 } }
+                modifier = { add = 20 leader = { has_skill >= 3 } }
+                modifier = { add = 20 leader = { has_skill >= 4 } }
+                modifier = { add = 20 leader = { has_skill >= 5 } }
+                modifier = { add = 200 leader = { is_medical_leader = yes } }
+                ship_event = { id = STH_disease.1200 scopes = { from = event_target:diseaseLocation fromfrom = event_target:diseasePop } } #Successful
+            }
+            
+        }
+	}
+	on_fail = {
+		random_list = {
+            10 = { country_event = { id = STH_disease.1110 scopes = { from = event_target:diseaseLocation fromfrom = event_target:diseasePop } } } #Pop Dies
+            0 = { 
+                modifier = { add = 5 event_target:diseaseLocation = { count_pops = { limit = { is_robot_pop = no has_plague = no } count >= 1 } } }
+                country_event = { id = STH_disease.1120 scopes = { from = event_target:diseaseLocation fromfrom = event_target:diseasePop } } 
+            } #Pop Dies + Another Infected
+        }
+	}
+}
