@@ -8,12 +8,13 @@ function waitLoadDrag(elementId, time) {
   }
 }
 
+let minX, minY, maxX, maxY;
 function drag(elementId) {
   let element = document.getElementById(elementId);
-  let minX = -element.scrollWidth + window.innerWidth;
-  let minY = -element.scrollHeight + window.innerHeight;
-  let maxX = 0;
-  let maxY = 0;
+  minX = -element.scrollWidth + window.innerWidth;
+  minY = -element.scrollHeight + window.innerHeight;
+  maxX = 0;
+  maxY = 0;
   element.style.position = 'absolute';
   element.style.top = '58px';//初态的位置
   element.style.left = '0px';
@@ -163,7 +164,7 @@ function drag(elementId) {
     position.offsetY = e.clientY;
     position.state = 1;
   }
- 
+
   //绑定触屏开始动作
   function onTouchstart(event) {
     //获得触屏点
@@ -249,4 +250,4 @@ function drag(elementId) {
       event.target.dispatchEvent(evt);
     }
   }, false);
-}   
+}
