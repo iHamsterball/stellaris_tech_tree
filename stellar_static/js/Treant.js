@@ -416,6 +416,7 @@
 
             this.CONFIG = UTIL.extend( Tree.CONFIG, jsonConfig.chart );
             this.drawArea = UTIL.findEl( this.CONFIG.container, true );
+            this.drawAreaValue = {clientWidth: 0, clientHeight: 0};
             if ( !this.drawArea ) {
                 throw new Error( 'Failed to find element by selector "'+this.CONFIG.container+'"' );
             }
@@ -766,8 +767,8 @@
 
             var
                 containerCenter = {
-                    x: self.drawArea.clientWidth/2,
-                    y: self.drawArea.clientHeight/2
+                    x: self.drawAreaValue.clientWidth/2,
+                    y: self.drawAreaValue.clientHeight/2
                 },
 
                 deltaX = containerCenter.x - treeCenter.x,
@@ -791,8 +792,8 @@
                 }
 
                 // if the tree is smaller than the draw area, then center the tree within drawing area
-                node.X += negOffsetX + ((treeWidth < this.drawArea.clientWidth) ? deltaX : this.CONFIG.padding);
-                node.Y += negOffsetY + ((treeHeight < this.drawArea.clientHeight) ? deltaY : this.CONFIG.padding);
+                node.X += negOffsetX + ((treeWidth < this.drawAreaValue.clientWidth) ? deltaX : this.CONFIG.padding);
+                node.Y += negOffsetY + ((treeHeight < this.drawAreaValue.clientHeight) ? deltaY : this.CONFIG.padding);
 
                 var collapsedParent = node.collapsedParent(),
                     hidePoint = null;
@@ -833,8 +834,8 @@
          * @returns {Tree}
          */
         handleOverflow: function( treeWidth, treeHeight ) {
-            var viewWidth = (treeWidth < this.drawArea.clientWidth) ? this.drawArea.clientWidth : treeWidth + this.CONFIG.padding*2,
-                viewHeight = (treeHeight < this.drawArea.clientHeight) ? this.drawArea.clientHeight : treeHeight + this.CONFIG.padding*2;
+            var viewWidth = (treeWidth < this.drawAreaValue.clientWidth) ? this.drawAreaValue.clientWidth : treeWidth + this.CONFIG.padding*2,
+                viewHeight = (treeHeight < this.drawAreaValue.clientHeight) ? this.drawAreaValue.clientHeight : treeHeight + this.CONFIG.padding*2;
 
             this._R.setSize( viewWidth, viewHeight );
 
@@ -843,11 +844,11 @@
             }
             else if ( !UTIL.isjQueryAvailable() || this.CONFIG.scrollbar === 'native' ) {
 
-                if ( this.drawArea.clientWidth < treeWidth ) { // is overflow-x necessary
+                if ( this.drawAreaValue.clientWidth < treeWidth ) { // is overflow-x necessary
                     this.drawArea.style.overflowX = "auto";
                 }
 
-                if ( this.drawArea.clientHeight < treeHeight ) { // is overflow-y necessary
+                if ( this.drawAreaValue.clientHeight < treeHeight ) { // is overflow-y necessary
                     this.drawArea.style.overflowY = "auto";
                 }
             }
@@ -1922,6 +1923,7 @@
             /////////// CREATE NODE //////////////
             node = document.createElement( this.link.href? 'a': 'div' );
 
+        var drawAreaValue = {clientWidth: tree.drawArea.clientWidth, clientHeight: tree.drawArea.clientHeight};
         node.className = ( !this.pseudo )? TreeNode.CONFIG.nodeHTMLclass: 'pseudo';
         if ( this.nodeHTMLclass && !this.pseudo ) {
             node.className += ' ' + this.nodeHTMLclass;
