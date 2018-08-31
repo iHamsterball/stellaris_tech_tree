@@ -416,7 +416,7 @@
 
             this.CONFIG = UTIL.extend( Tree.CONFIG, jsonConfig.chart );
             this.drawArea = UTIL.findEl( this.CONFIG.container, true );
-            this.drawAreaValue = {clientWidth: 0, clientHeight: 0};
+            this.drawAreaValue = {clientWidth: this.drawArea.clientWidth, clientHeight: this.drawArea.clientHeight};
             if ( !this.drawArea ) {
                 throw new Error( 'Failed to find element by selector "'+this.CONFIG.container+'"' );
             }
@@ -1923,7 +1923,7 @@
             /////////// CREATE NODE //////////////
             node = document.createElement( this.link.href? 'a': 'div' );
 
-        var drawAreaValue = {clientWidth: tree.drawArea.clientWidth, clientHeight: tree.drawArea.clientHeight};
+        var drawAreaValue = {clientWidth: tree.drawAreaValue.clientWidth, clientHeight: tree.drawAreaValue.clientHeight};
         node.className = ( !this.pseudo )? TreeNode.CONFIG.nodeHTMLclass: 'pseudo';
         if ( this.nodeHTMLclass && !this.pseudo ) {
             node.className += ' ' + this.nodeHTMLclass;
@@ -1962,8 +1962,12 @@
         /////////// APPEND all //////////////
         drawArea.appendChild(node);
 
-        this.width = node.offsetWidth;
-        this.height = node.offsetHeight;
+        if (this.pseudo) {
+            this.width = this.height = 0;
+        } else {
+            this.width = 287;
+            this.height = 78;
+        }
 
         this.nodeDOM = node;
 
