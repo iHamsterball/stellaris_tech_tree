@@ -13,12 +13,10 @@
         <link rel="stylesheet" href="{% static "css/notosansscsliced.css" %}">
         <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
     </head>
-    <body>
+    <body id="about">
         <div class="wrapper">
             <div class="panel-wrapper">
                 <div id="panel" class="panel">
-                    <button type="button" class="expand-section-nav header-icon-button button-flat material-icons" 
-                        data-label="Hamburger menu" onclick="showHamburger()"></button>
                     <div class="project-name-wrapper">
                         <a class="project-name-link" href="/stellaris/">
                             <img src="/stellar_static/img/stellaris.bmp" class="project-logo" alt="Stellaris">
@@ -59,7 +57,68 @@
                     </div>
                 </div>
             </div>
+            <div class="content">
+                <div class="card hovercard">
+                    <picture>
+                        <source srcset="{% static 'img/stellaris.webp' %}" type="image/webp">
+                        <source srcset="{% static 'img/stellaris.jpg' %}" type="image/jpeg">
+                        <img src="{% static 'img/stellaris.jpg' %}">
+                    </picture>
+                    <div class="card-description">
+                        {% trans 'If you really like this project, please consider making a donation to support me. Thanks a lot! ' %}<br>
+                        {% trans 'The qrcode on the left supports Alipay, WeChat and QQ, or you can donate via PayPal below.' %}
+                        <a href="#donate"><i class="material-icons">arrow_downward</i></a>
+                    </div>
+                </div>
+                <article class="content-inner">
+                    <h2 name="about">{% trans 'About Stellaris Tech Tree' %}</h2>
+                    <p>
+                        {% trans 'Stellaris Tech Tree Project is inspired by ' %}
+                        <a href="https://gitlab.com/bipedalshark/stellaris-tech-tree" target="_blank">
+                            {% trans 'this project' %}
+                        </a>
+                        {% trans ' and modified to make it easy to support new versions and new languages.' %}
+                        <br>
+                        {% trans 'It contains several localized versions for different language users, and can be expanded by adding new localization files.' %}
+                    </p>
+                    <p>
+                        {% trans 'Copyright © 2017 Cother' %}<br>
+                        {% trans 'Licensed under General Public License v2.0 License.' %}
+                    </p>
+                    <p>
+                        {% trans 'It is obvious that ‘Stellaris Tech Tree’ is a boring name for a project, but I give up thinking anyway. It is concise at least.' %}
+                    </p>
+
+                    <h2 name="gayhub">{% trans 'Get source code' %}</h2>
+                    <p>
+                        {% trans 'If you are willing to make contributions to this project, Stellaris Tech Tree is available on GitHub.' %}<br>
+                        <a href="https://github.com/iHamsterball/stellaris_tech_tree" target="_blank">
+                            <i class="material-icons">code</i>
+                            iHamsterball/stellaris_tech_tree
+                        </a>
+                    </p>
+
+                    <h2 name="donate" id="donate">{% trans 'Donate' %}</h2>
+                    <p>
+                        {% trans 'I will try my best to keep this website free and free from ads and mining scripts, but a donation will be a great help.' %}<br>
+                        {% trans 'If you really like this project, please consider making a donation to support me. Thanks a lot!' %}<br>
+                        {% trans 'If you want to donate via Alipay, WeChat or QQ, please scan the qrcode above. If you want to pay via PayPal, click the button.' %}<br>
+                        <button class="button button-donate" onclick="window.open('https://www.paypal.me/cother')" target="_blank" type="button">PayPal</button><br>
+                        {% trans 'Thanks again, every penny counts.' %}
+                    </p>
+                </article>
+            </div>
         </div>
+        <footer class="footer">
+            <p>Copyright © 2017 Cother | Powered by <a href="https://www.djangoproject.com" target="_blank">Django</a></p>
+        </footer>
+        <script type="text/javascript">
+            function switchLanguage(self) {
+                let language = document.getElementById('language');
+                language.value = self.getAttribute('value') || self.children[0].getAttribute('id');
+                language.addEventListener("change", language.form.submit(), false);
+            }
+        </script>
     {% include "analytics.html" %}
     </body>
 </html>

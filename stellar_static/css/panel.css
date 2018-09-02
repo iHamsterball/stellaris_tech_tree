@@ -18,8 +18,26 @@ body,html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
-    overflow-x: hidden; 
+    overflow-x: hidden;
     overflow-y: hidden;
+}
+
+body#about,html {
+    overflow-y: auto !important;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    overflow: hidden;
+    padding: 0;
+    text-overflow: ellipsis
+}
+
+h1,.content-inner h2 {
+    color: inherit;
+    font: 400 32px/40px 'Noto Sans SC Sliced',sans-serif;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 24px 0 0 24px;
 }
 
 img,video {
@@ -93,6 +111,29 @@ ul {
 
 .button-flat,.button-transparent {
     padding: 8px
+}
+
+.button-donate {
+    background-color: #ececec;
+    height: 24px !important;
+    text-transform: none !important;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.button-donate:hover {
+    -webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14),0 1px 7px 0 rgba(0,0,0,0.12),0 3px 1px -1px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14),0 1px 7px 0 rgba(0,0,0,0.12),0 3px 1px -1px rgba(0,0,0,0.2);
+    background-color: #bcddeb;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles*/
+    .button-donate {
+        height: 40px !important;
+    }
 }
 
 #embedded-explorer input[type="text"],input[type="date"],input[type="datetime"],input[type="datetime-local"],input[type="email"],input[type="month"],input[type="number"],input[type="password"],input[type="search"],input[type="tel"],input[type="text"],input[type="time"],input[type="url"],input[type="week"],select[multiple],select[size],textarea {
@@ -181,6 +222,99 @@ ul {
     word-wrap: normal;
     margin-right: -36px;
 
+}
+
+.card {
+	margin-top: 4%;
+	background-color: rgba(214, 224, 226, 0.2);
+	-webkit-border-top-left-radius: 4px;
+	-moz-border-top-left-radius: 4px;
+	border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-top-right-radius: 4px;
+	border-top-right-radius: 4px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.card.hovercard {
+    display: inline-flex;
+	position: relative;
+	padding-top: 0;
+	overflow: hidden;
+	text-align: center;
+	background-color: #fff;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.card.hovercard img {
+    width: 100%;
+    height: auto;
+}
+
+.card-description {
+    color: #fff;
+    color:  rgba(255, 255, 255, 1);
+    display: inline-block;
+    font-family: 'Noto Sans SC Sliced';
+    font-weight: normal;
+    max-width: 32%;
+    position: absolute;
+    text-align: left;
+    top: 50%;
+    right: 5%;
+    transform: translate(-5%, -50%);
+}
+
+.card-description a {
+    display: inline-flex;
+    vertical-align: middle !important;
+}
+
+@media screen and (max-width: 720px) {
+    .card-description {
+        display: none;
+    }
+}
+
+.content {
+    background-color: #fff;
+    min-height: calc(100vh - 562px);
+    padding: 0 9%;
+}
+
+.content-inner {
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
+.content-inner p {
+    color: #757575;
+    font: normal 16px/20px 'Noto Sans SC Sliced',sans-serif;
+    line-height: 150%;
+    margin: 12px 0 12px 24px;
+}
+
+.content-inner p a {
+    display: inline-flex;
+    font: normal 16px/20px 'Noto Sans SC Sliced',sans-serif;
+    text-decoration: none;
+}
+
+.content-inner::after {
+    display: block;
+    content: '';
+    height: 24px;
+}
+
+.footer {
+    color: #9eabb3;
+    font-size: 0.9rem;
+    text-align: center;
+    height: auto;
+    padding: 20px
 }
 
 .header-icon-button {
@@ -706,7 +840,7 @@ input.search-field:focus {
     display: inline;
 }
 
-.search-popout::-webkit-scrollbar,.nav-responsive::-webkit-scrollbar,.menulist::-webkit-scrollbar{
+.search-popout::-webkit-scrollbar,.nav-responsive::-webkit-scrollbar,.menulist::-webkit-scrollbar,body::-webkit-scrollbar {
     height: 4px;
     width: 4px
 }
@@ -716,7 +850,7 @@ input.search-field:focus {
     width: 0
 }
 
-.search-popout::-webkit-scrollbar-thumb,.nav-responsive::-webkit-scrollbar-thumb,.menulist::-webkit-scrollbar-thumb {
+.search-popout::-webkit-scrollbar-thumb,.nav-responsive::-webkit-scrollbar-thumb,.menulist::-webkit-scrollbar-thumb,body::-webkit-scrollbar-thumb {
     background: rgba(0,0,0,.26)
 }
 
