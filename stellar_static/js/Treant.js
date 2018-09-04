@@ -845,11 +845,11 @@
             else if ( !UTIL.isjQueryAvailable() || this.CONFIG.scrollbar === 'native' ) {
 
                 if ( this.drawAreaValue.clientWidth < treeWidth ) { // is overflow-x necessary
-                    this.drawArea.style.overflowX = "auto";
+                    //this.drawArea.style.overflowX = "auto";
                 }
 
                 if ( this.drawAreaValue.clientHeight < treeHeight ) { // is overflow-y necessary
-                    this.drawArea.style.overflowY = "auto";
+                    //this.drawArea.style.overflowY = "auto";
                 }
             }
             // Fancy scrollbar relies heavily on jQuery, so guarding with if ( $ )
