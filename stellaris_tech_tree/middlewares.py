@@ -13,12 +13,15 @@ class AddServerPushHeaderMiddleware(MiddlewareMixin):
 
         if 'text/html' in response['content-type']:
             content = str(response.content)
-            links = re.findall(r'(<(link|script|img).+?/?>)', content)
+            links = re.findall(r'(<(link|script|img|source).+?/?>)', content)
             link_headers = []
             for link in links:
                 if re.search(r'rel=.+preload.+', link[0]) and re.search(r'as=.+\w.+', link[0]):
                     if link[1] != 'link':
-                        href = re.search(r'src=[\'"](.+?)[\'"]', link[0]).group(1)
+                        if link[1] == 'source':
+                            href = re.search(r'srcset=[\'"](.+?)[\'"]', link[0]).group(1)
+                        else:
+                            href = re.search(r'src=[\'"](.+?)[\'"]', link[0]).group(1)
                     else:
                         href = re.search(r'href=[\'"](.+?)[\'"]', link[0]).group(1)
                     as_value = re.search(r'as=[\'"](.+?)[\'"]', link[0]).group(1)
