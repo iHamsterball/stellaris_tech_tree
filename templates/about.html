@@ -17,6 +17,8 @@
         <div class="wrapper">
             <div class="panel-wrapper">
                 <div id="panel" class="panel">
+                    <button type="button" role="button" class="expand-section-nav header-icon-button button-flat material-icons" 
+                        aria-label="Hamburger menu" data-label="Hamburger menu" onclick="showHamburger()"></button>
                     <div class="project-name-wrapper">
                         <a class="project-name-link" href="/stellaris/">
                             <img rel="preload" as="image" src="/stellar_static/img/stellaris.bmp" class="project-logo" alt="Stellaris">
@@ -117,6 +119,17 @@
                 let language = document.getElementById('language');
                 language.value = self.getAttribute('value') || self.children[0].getAttribute('id');
                 language.addEventListener("change", language.form.submit(), false);
+            }
+            function showHamburger() {
+                document.getElementById('nav').classList.add('nav-responsive-open');
+                let mask = document.getElementById('mask');
+                mask.style.opacity || (c.style.opacity = 0);
+                mask.style.display || (c.style.display = "none");
+                mask.style.transform = "opacity .2s";
+                mask.style.display = "block"
+                window.setTimeout(function () {
+                    mask.style.opacity = .5;
+                }, 0);
             }
         </script>
     {% include "analytics.html" %}
