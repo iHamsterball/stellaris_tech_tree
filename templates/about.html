@@ -59,6 +59,7 @@
                     </div>
                 </div>
             </div>
+            {% include "hamburger.html" %}
             <div class="content">
                 <div class="card hovercard">
                     <picture>
@@ -130,6 +131,16 @@
                 window.setTimeout(function () {
                     mask.style.opacity = .5;
                 }, 0);
+            }
+            function hideHamburger(self) {
+                document.getElementById('nav').classList.remove('nav-responsive-open');
+                self.style.opacity || (c.style.opacity = .5);
+                self.style.display || (c.style.display = "block");
+                self.style.transform = "opacity .6s";
+                self.style.opacity = 0;
+                window.setTimeout(function () {
+                    self.style.display = "none";
+                }, 600);
             }
         </script>
     {% include "analytics.html" %}

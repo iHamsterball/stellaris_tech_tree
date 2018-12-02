@@ -99,52 +99,11 @@
                         </div>
                     </div>
                 </form>
-                <button id="search-button" class="search-button header-icon-button button-flat material-icons" 
+                <button id="search-button" class="search-button header-icon-button button-flat material-icons"
                         onclick="searchActive()"></button>
             </div>
         </div>
-        <div class="site-mask" id="mask" style="opacity: 0; display: none;" onclick="hideHamburger(this)"></div>
-        <div class="nav-responsive nav nocontent" id="nav">
-            <div class="nav-responsive-tabs-panel">
-                <div class="nav-responsive-tabs nav">
-                    <ul class="nav-list">
-                        <li class="nav-item nav-item-heading">
-                            <a href="#" class="nav-responsive-tab nav-title nav-active">
-                                <span>{% trans "LANGUAGE" %}</span>
-                            </a>
-                            <nav class="nav-responsive-tabs nav">
-                                <ul class="nav-list">
-                                    {% for language in languages %}
-                                        <li class="nav-item nav-item-heading" onclick="switchLanguage(this)">
-                                            <span class="nav-responsive-tab nav-title" id="{{ language.code }}">
-                                                <span>{{ language.name_local }}</span>
-                                            </span>
-                                        </li>
-                                    {% endfor %}
-                                </ul>
-                            </nav>
-                        </li>
-                        <li class="nav-item nav-item-heading">
-                            <a href="#" class="nav-responsive-tab nav-title nav-active">
-                                <span>{% trans "VERSION" %}</span>
-                            </a>
-                            <nav class="nav-responsive-tabs nav">
-                                <ul class="nav-list">
-                                    {% for version, name in version_list.items %}
-                                        <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
-                                            value="{{ version }}" id="{{ version }}">
-                                            <span class="nav-responsive-tab nav-title">
-                                                <span>{{ name }}</span>
-                                            </span>
-                                        </li>
-                                    {% endfor %}
-                                </ul>
-                            </nav>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        {% include "hamburger.html" %}
         <div class="banner-wrapper hidden">
             <div class="banner banner-info" id="banner" onclick="hideBanner()">
                 <div class="banner-inner">Loading...</div>
