@@ -1,3 +1,4 @@
+{% load i18n %}
 <div class="site-mask" id="mask" style="opacity: 0; display: none;" onclick="hideHamburger(this)"></div>
 <div class="nav-responsive nav nocontent" id="nav">
     <div class="nav-responsive-tabs-panel">
@@ -26,7 +27,7 @@
                     <nav class="nav-responsive-tabs nav">
                         <ul class="nav-list">
                             {% for version, name in version_list.items %}
-                                <li class="nav-item nav-item-heading" onclick="switchVersion(this)" 
+                                <li class="nav-item nav-item-heading" onclick="switchVersion(this)"
                                     value="{{ version }}" id="{{ version }}">
                                     <span class="nav-responsive-tab nav-title">
                                         <span>{{ name }}</span>
