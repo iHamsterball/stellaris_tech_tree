@@ -22,7 +22,6 @@ let config = {
           let $button = $(this);
           if ( $button.is('p.feature-unlocks') ) {
             let unlocks = $button.attr('title').split(', ');
-            console.log(unlocks);
             var $content = unlocks.map(
               function(unlock) {
                 return $('<li>').html(
@@ -35,7 +34,6 @@ let config = {
               },
               $('<ul>')
             );
-            console.log($content[0]);
           }
           else {
             var $content = $('<span>')
@@ -45,7 +43,7 @@ let config = {
 
           return $('<div class="tooltip-header">')
             .html($button.data('header'))
-            .after($content);
+            .add($content);
         },
       });
     }
