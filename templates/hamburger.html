@@ -10,6 +10,9 @@
                     </a>
                     <nav class="nav-responsive-tabs nav">
                         <ul class="nav-list">
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
                             {% for language in languages %}
                                 <li class="nav-item nav-item-heading" onclick="switchLanguage(this)">
                                     <span class="nav-responsive-tab nav-title" id="{{ language.code }}">
@@ -20,6 +23,7 @@
                         </ul>
                     </nav>
                 </li>
+                {% if about %}
                 <li class="nav-item nav-item-heading">
                     <a href="#" class="nav-responsive-tab nav-title nav-active">
                         <span>{% trans "VERSION" %}</span>
@@ -37,7 +41,31 @@
                         </ul>
                     </nav>
                 </li>
+                {% endif %}
             </ul>
         </div>
     </div>
 </div>
+<script>
+    function showHamburger() {
+        document.getElementById('nav').classList.add('nav-responsive-open');
+        let mask = document.getElementById('mask');
+        mask.style.opacity || (c.style.opacity = 0);
+        mask.style.display || (c.style.display = "none");
+        mask.style.transform = "opacity .2s";
+        mask.style.display = "block"
+        window.setTimeout(function () {
+            mask.style.opacity = .5;
+        }, 0);
+    }
+    function hideHamburger(self) {
+        document.getElementById('nav').classList.remove('nav-responsive-open');
+        self.style.opacity || (c.style.opacity = .5);
+        self.style.display || (c.style.display = "block");
+        self.style.transform = "opacity .6s";
+        self.style.opacity = 0;
+        window.setTimeout(function () {
+            self.style.display = "none";
+        }, 600);
+    }
+</script>

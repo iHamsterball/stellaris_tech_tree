@@ -148,7 +148,6 @@
             document.getElementById('version').innerText = document.querySelector("li.menulistitem[value='{0}']".format(version)).innerText;
             document.getElementById(version).children[0].classList.add('nav-active');
             let language = "{% get_current_language as CUR_LANGUAGE %}{% get_language_info for CUR_LANGUAGE as cur %}{{ cur.code }}";
-            console.log(language);
             document.getElementById(language).classList.add('nav-active');
             waitLoadDrag('tech-tree', 100);
         });
@@ -291,27 +290,6 @@
             document.getElementById('panel').classList.remove('search-active');
             document.getElementById('panel').classList.remove('responsive-search-open');
             document.getElementById('search-popout').classList.add('hidden');
-        }
-        function showHamburger() {
-            document.getElementById('nav').classList.add('nav-responsive-open');
-            let mask = document.getElementById('mask');
-            mask.style.opacity || (c.style.opacity = 0);
-            mask.style.display || (c.style.display = "none");
-            mask.style.transform = "opacity .2s";
-            mask.style.display = "block"
-            window.setTimeout(function () {
-                mask.style.opacity = .5;
-            }, 0);
-        }
-        function hideHamburger(self) {
-            document.getElementById('nav').classList.remove('nav-responsive-open');
-            self.style.opacity || (c.style.opacity = .5);
-            self.style.display || (c.style.display = "block");
-            self.style.transform = "opacity .6s";
-            self.style.opacity = 0;
-            window.setTimeout(function () {
-                self.style.display = "none";
-            }, 600);
         }
         function locateTech(self) {
             console.log('excuted');
