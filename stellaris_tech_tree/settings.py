@@ -52,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'stellaris_tech_tree.middlewares.AddServerPushHeaderMiddleware',
 ]
 
 ROOT_URLCONF = 'stellaris_tech_tree.urls'
@@ -131,6 +132,7 @@ DEFAULT_CHARSET = 'utf-8'
 
 FILE_CHARSET = 'utf-8'
 
+ENABLE_SERVER_PUSH = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/

@@ -8,13 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>{% trans "STELLARIS_TECH_TREE" %}</title>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Material+Icons">
-    <link rel="stylesheet" href="{% static "css/panel.css" %}?">
-    <link rel="stylesheet" href="{% static "css/Treant.css" %}">
-    <link rel="stylesheet" href="{% static "css/tech-tree.css" %}">
-    <link rel="stylesheet" href="{% static "css/notosansscsliced.css" %}">
-    <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
+    <link rel="stylesheet preload" as="style" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet preload" as="style" href="//fonts.googleapis.com/css?family=Material+Icons">
+    <link rel="stylesheet preload" as="style" href="{% static "css/panel.css" %}">
+    <link rel="stylesheet preload" as="style" href="{% static "css/Treant.css" %}">
+    <link rel="stylesheet preload" as="style" href="{% static "css/tech-tree.css" %}">
+    <link rel="stylesheet preload" as="style" href="{% static "css/notosansscsliced.css" %}">
+    <script rel="preload" as="script" type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -24,7 +24,7 @@
                         data-label="Hamburger menu" onclick="showHamburger()"></button>
                 <div class="project-name-wrapper">
                     <a class="project-name-link" href="/stellaris/">
-                        <img src="/stellar_static/img/stellaris.bmp" class="project-logo" alt="Stellaris">
+                        <img rel="preload" as="image" src="/stellar_static/img/stellaris.bmp" class="project-logo" alt="Stellaris">
                     </a>
                     <span class="project-name">
                         <a class="project-name-link" src="/stellaris/">
@@ -154,14 +154,14 @@
 
 
     <div class="chart no-select" id="tech-tree" unselectable="on" onselectstart="return false;">
-            <script src="{% static "vendor/raphael.js" %}"></script>
-            <script src="{% static "js/Treant.js" %}"></script>
-            <script src="{% static "vendor/jquery.min.js" %}"></script>
-            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+            <script rel="preload" as="script" src="{% static "vendor/raphael.js" %}"></script>
+            <script rel="preload" as="script" src="{% static "js/Treant.js" %}"></script>
+            <script rel="preload" as="script" src="{% static "vendor/jquery.min.js" %}"></script>
+            <script rel="preload" as="script" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
             <!--<script src="{% static "vendor/jquery.mousewheel.js" %}"></script>-->
             <!--<script src="{% static "vendor/perfect-scrollbar/perfect-scrollbar.js" %}"></script>-->
-            <script src="{% static "js/tech-tree.js" %}"></script>
-            <script src="{% static "js/drag.js" %}"></script>
+            <script rel="preload" as="script" src="{% static "js/tech-tree.js" %}"></script>
+            <script rel="preload" as="script" src="{% static "js/drag.js" %}"></script>
         </div>
     <script>
         if(!String.prototype.format) {
