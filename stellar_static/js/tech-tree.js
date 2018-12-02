@@ -74,7 +74,7 @@ function loadTech(version) {
 }
 
 function generateTechTree(locale, version) {
-  jQuery.getJSON('techs?locale=' + locale + '&version=' + version, 'techs.json', function(techData) {
+  $.getJSON('techs?locale=' + locale + '&version=' + version, 'techs.json', function(techData) {
     let techs = techData.filter(function(tech) {
       return Object.keys(tech)[0].search(/^@\w+$/) == -1;
     }).map(function(tech) {
@@ -199,7 +199,7 @@ function generateTechTree(locale, version) {
 
     tree = new Treant([config, rootNode].concat(techs));
   })
-  .success(function() {
+  .done(function() {
     console.log('success')
     setBanner('banner-success', gettext('Load complete.'));
     //setTimeout(hideBanner(), 200000);
@@ -263,6 +263,6 @@ function setBanner(mode, msg) {
   let cur = banner.classList[1];
   banner.classList.remove(cur);
   banner.classList.add(mode);
-  banner.childNodes[1].innerText = msg;
+  banner.childNodes[1].innerHTML = msg;
   showBanner();
 }
