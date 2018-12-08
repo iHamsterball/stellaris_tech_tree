@@ -1,0 +1,244 @@
+## Categories used in this file must have use_for_ai_budget = yes defined in economic_categories ##
+## It is possible to have multiple entries with the same category and resource ##
+
+#################
+## Expenditure ##
+#################
+minerals_expenditure_buffer = { # Buffer, will not be spent
+	resource = minerals 
+	type = expenditure
+	category = buffer
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.05
+	}	
+}
+
+minerals_expenditure_planets_low = {
+	resource = minerals 
+	type = expenditure
+	category = planets
+	
+	potential = {
+		resource_stockpile_compare = { resource = minerals value < 1000 }
+	}
+	
+	fraction = {
+		weight = 0.50
+	}	
+}
+
+minerals_expenditure_planets_med = {
+	resource = minerals 
+	type = expenditure
+	category = planets
+	
+	potential = {
+		resource_stockpile_compare = {
+			resource = minerals
+			value > 1000
+		}
+		resource_stockpile_compare = {
+			resource = minerals
+			value < 2500
+		}
+	}
+	
+	fraction = {
+		weight = 0.40
+	}
+
+	static_max = {
+		base = 4000
+	}	
+}
+
+minerals_expenditure_planets_high = {
+	resource = minerals 
+	type = expenditure
+	category = planets
+	
+	potential = {
+		resource_stockpile_compare = {
+			resource = minerals
+			value > 2500
+		}
+	}
+	
+	fraction = {
+		weight = 0.30
+	}	
+}
+
+minerals_expenditure_stations = {
+	resource = minerals 
+	type = expenditure
+	category = stations
+	
+	potential = {
+		always = yes
+		resource_stockpile_compare = { resource = minerals value < 800 }
+	}
+	
+	fraction = {
+		weight = 0.3
+	}	
+}
+
+minerals_expenditure_stations_2 = {
+	resource = minerals 
+	type = expenditure
+	category = stations
+	
+	potential = {
+		always = yes
+		resource_stockpile_compare = { resource = minerals value >= 800 }
+		resource_stockpile_compare = { resource = minerals value < 1200 }
+	}
+	
+	fraction = {
+		weight = 0.15
+	}	
+}
+
+minerals_expenditure_stations_3 = {
+	resource = minerals 
+	type = expenditure
+	category = stations
+	
+	potential = {
+		always = yes
+		resource_stockpile_compare = { resource = minerals value >= 1200 }
+	}
+	
+	fraction = {
+		weight = 0.1
+	}	
+}
+
+minerals_expenditure_armies = {
+	resource = minerals 
+	type = expenditure
+	category = armies
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.05
+	}	
+}
+
+minerals_expenditure_armies_high = {
+	resource = minerals 
+	type = expenditure
+	category = armies
+	
+	potential = {
+		highest_threat > 20
+	}
+	
+	fraction = {
+		weight = 0.15
+	}	
+}
+
+minerals_expenditure_starbases_expand = {
+	resource = minerals 
+	type = expenditure
+	category = starbases
+	
+	potential = {
+		exploitable_planets > 2
+		resource_stockpile_compare = {
+			resource = minerals
+			value >= 2000
+		}
+	}
+	
+	fraction = {
+		weight = 0.03
+	}	
+}
+
+minerals_expenditure_stations_expand = {
+	resource = minerals 
+	type = expenditure
+	category = stations
+	
+	potential = {
+		exploitable_planets > 2
+		resource_stockpile_compare = {
+			resource = minerals
+			value < 800
+		}
+	}
+	
+	fraction = {
+		weight = 0.7
+	}	
+}
+
+minerals_expenditure_planets_expand = {
+	resource = minerals 
+	type = expenditure
+	category = planets
+	
+	potential = {
+		exploitable_planets > 3
+	}
+	
+	fraction = {
+		weight = 0.10
+	}	
+}
+
+############
+## Upkeep ##
+############
+minerals_upkeep_buffer = {	# Buffer, will not be spent
+	resource = minerals 
+	type = upkeep
+	category = buffer
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.30
+	}	
+}
+
+minerals_upkeep_planets = {
+	resource = minerals 
+	type = upkeep
+	category = planets
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.50
+	}	
+}
+
+minerals_upkeep_starbases = {
+	resource = minerals 
+	type = upkeep
+	category = starbases
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.20
+	}	
+}

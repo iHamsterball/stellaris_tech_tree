@@ -1,0 +1,30 @@
+is_valid_refugee_pop = {
+	is_robot_pop = no
+	has_culture_shock = no
+	NOR = {
+		has_trait = trait_hive_mind 
+		has_trait = trait_nerve_stapled
+	}
+	owner = {
+		any_relation = {
+			is_country_type = default
+			NOT = { has_policy_flag = refugees_not_allowed }
+			prevprev = { #this ensures Pop scope, as root will not always be pop scope
+				OR = { 
+					has_citizenship_type = { type = citizenship_full country = prev }
+					has_citizenship_type = { type = citizenship_caste_system country = prev }
+					AND = {
+						has_citizenship_type = { type = citizenship_limited country = prev }
+						has_citizenship_type = { type = citizenship_caste_system_limited country = prev }
+						prev = { has_policy_flag = refugees_allowed }
+					}
+				}
+			}
+			any_owned_planet = {
+				is_under_colonization = no
+				is_controlled_by = owner
+				has_orbital_bombardment = no
+			}
+		}
+	}
+}

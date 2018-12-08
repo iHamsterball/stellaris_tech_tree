@@ -1,0 +1,375 @@
+###################
+# Special Jobs
+###################
+servant = {
+	category = worker
+	is_capped_by_modifier = no
+	building_icon = building_luxury_residence
+	clothes_texture_index = 2
+		
+	possible = {
+		can_take_servant_job = yes
+	}
+	
+	resources = {}
+	
+	triggered_pop_modifier = {
+		potential = {
+			is_organic_species = yes
+		}
+		pop_housing_usage_add = -0.5
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = 4
+	}	
+	
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			planet_amenities_add = -1
+		}
+	}	
+		
+	weight = {
+		weight = @special_job_weight
+	}
+}
+
+slave_overseer = {
+	category = worker
+	is_capped_by_modifier = yes
+	building_icon = building_crude_huts
+	clothes_texture_index = 3
+	icon = enforcer
+		
+	possible = {
+		is_enslaved = yes
+		exists = planet
+		planet = { has_modifier = slave_colony } 		
+	}
+	
+	resources = {
+		category = planet_enforcers	
+		upkeep = {
+			trigger = {
+				planet = { has_modifier = anticrime_campaign }
+			}
+			energy = 2
+		}
+	}
+	
+	pop_modifier = {
+		pop_happiness = 0.25
+		pop_defense_armies_add = 2
+	}
+		
+	planet_modifier = {
+		planet_crime_add = -25
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_non_swapped_tradition = tr_domination_judgment_corps }
+		}
+		modifier = {
+			planet_crime_add = -5
+		}		
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			planet = { has_modifier = anticrime_campaign }
+		}
+		modifier = {
+			planet_crime_add = -10
+		}		
+	}
+	
+	weight = {
+		weight = @specialist_job_weight
+	}
+		
+	weight = {
+		weight = @worker_job_weight
+	}
+}
+
+slave_toiler = {
+	category = worker
+	is_capped_by_modifier = no
+	building_icon = building_crude_huts
+	clothes_texture_index = 3
+	icon = primitive_laborer
+		
+	possible = {
+		is_enslaved = yes
+		exists = planet
+		planet = { has_modifier = slave_colony } 		
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = 2
+	}	
+	
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			planet_amenities_add = 0.5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			planet_amenities_add = -0.5
+		}
+	}		
+		
+	weight = {
+		weight = @special_job_weight
+	}
+}
+
+scavenger_drone = {
+	category = simple_drone
+	is_capped_by_modifier = no
+	building_icon = building_residence
+	clothes_texture_index = 2
+	icon = mining_drone
+	
+	possible = {
+		exists = owner
+		owner = { is_hive_empire = yes } 
+		drone_job_check_trigger = yes
+		days_passed >= 1 # So drones are not assigned this job before other jobs are created by the game start
+	}
+	
+	resources = {
+		category = planet_jobs
+		produces = {
+			minerals = 1
+		}
+		
+		upkeep = {
+			trigger = { 
+				planet = {
+					has_modifier = activity_program
+				}
+			}
+			food = 1
+		}
+	}	
+		
+	weight = {
+		weight = @special_job_weight
+	}
+}
+
+organic_battery = {
+	category = worker
+	is_capped_by_modifier = no
+	clothes_texture_index = 2
+	
+	pop_modifier = {
+		pop_housing_usage_add = -0.5
+	}
+	
+	possible = {
+		has_citizenship_type = { type = citizenship_slavery }
+		has_slavery_type = { type = slavery_matrix }
+	}
+	
+	resources = {
+		category = planet_jobs
+		produces = {
+			energy = 4
+		}
+	}
+	
+	weight = {
+		weight = @special_job_weight
+	}
+}
+
+livestock = {
+	category = worker
+	is_capped_by_modifier = no
+	clothes_texture_index = 2
+	
+	pop_modifier = {
+		pop_housing_usage_add = -0.5
+	}
+		
+	possible = {
+		has_citizenship_type = { type = citizenship_slavery }
+		has_slavery_type = { type = slavery_livestock }
+	}
+	
+	resources = {
+		category = planet_livestock
+		produces = {
+			food = 4
+		}
+	}
+		
+	weight = {
+		weight = @special_job_weight
+	}
+}
+
+bio_trophy = {
+	category = bio_trophy
+	clothes_texture_index = 1
+	building_icon = building_organic_sanctuary
+	
+	possible = {
+		has_citizenship_type = { type = citizenship_organic_trophy }
+	}
+
+	resources = {
+		category = planet_bio_trophies
+		produces = {
+			unity = 2
+		}
+	}
+	
+	weight = {
+		weight = @special_job_weight
+	}
+}
+
+purge = {
+	category = purge
+	is_capped_by_modifier = no
+	clothes_texture_index = 2
+		
+	possible = {
+		OR = {
+			has_citizenship_type = { type = citizenship_purge_machine }
+			has_citizenship_type = { type = citizenship_purge }
+		}	
+	}	
+
+	resources = {
+		category = planet_jobs
+		produces = {
+			trigger = { 
+				owner = { has_valid_civic = civic_fanatic_purifiers } 
+			}
+			unity = 2
+		}
+		produces = {
+			trigger = { 	
+				owner = { has_valid_civic = civic_hive_devouring_swarm } 
+			}
+			society_research = 2
+		}
+		produces = {
+			trigger = {
+				has_purge_type = { type = purge_processing }
+			}
+			food = 6
+		}
+		produces = {
+			trigger = {
+				has_purge_type = { type = purge_matrix }
+			}		
+			energy = 6
+		}
+		produces = {
+			trigger = {
+				has_purge_type = { type = purge_labor_camps }
+			}		
+			food = 3
+			minerals = 3
+		}		
+	}	
+		
+	weight = {
+		weight = @special_job_weight	
+	}
+}
+
+criminal = {
+	category = criminal
+	is_capped_by_modifier = yes
+	can_set_priority = no
+	clothes_texture_index = 2
+	building_icon = building_residence
+	
+	planet_modifier = {
+		trade_value_add = -1
+	}
+		
+	weight = {
+		weight = @criminal_job_weight
+	}
+}
+
+deviant_drone = {
+	category = deviant_drone
+	is_capped_by_modifier = yes
+	can_set_priority = no
+	clothes_texture_index = 2
+	icon = criminal
+		
+	possible = {
+		exists = planet
+		planet = { has_modifier = drone_deviancy }
+	}
+	
+	resources = {
+		category = planet_jobs
+		upkeep = {
+			energy = 1
+		}
+	}
+		
+	weight = {
+		weight = @criminal_job_weight
+	}
+}
+
+corrupt_drone = {
+	category = corrupt_drone
+	is_capped_by_modifier = yes
+	can_set_priority = no
+	clothes_texture_index = 2
+	icon = criminal
+		
+	possible = {
+		exists = planet
+		planet = { has_modifier = drone_corruption }
+	}
+
+	resources = {
+		category = planet_jobs
+		upkeep = {
+			energy = 1
+		}
+	}
+		
+	weight = {
+		weight = @criminal_job_weight
+	}
+}

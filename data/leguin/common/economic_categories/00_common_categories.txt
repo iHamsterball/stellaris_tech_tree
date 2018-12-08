@@ -1,0 +1,615 @@
+buffer = {
+	hidden = yes
+	use_for_ai_budget = yes
+}
+
+country = {
+	hidden = yes
+}
+
+# Base income of country
+country_base = {
+	icon = "dummy"
+}
+
+trade = {
+	icon = "dummy"
+}
+
+trade_routes = {
+	icon = "dummy"
+	parent = trade
+}
+
+edicts = {
+	icon = "dummy"
+	use_for_ai_budget = yes
+	parent = country
+}
+
+rare_edicts = {
+	icon = "dummy"
+	parent = edicts
+	use_for_ai_budget = yes
+}
+
+ship_edicts = {
+	icon = "dummy"
+	parent = rare_edicts
+	use_for_ai_budget = yes
+}
+
+campaigns = {
+	icon = "dummy"
+	parent = edicts
+}
+
+decisions = {
+	icon = "dummy"
+	use_for_ai_budget = yes
+	parent = country
+}
+
+megastructures = {
+	icon = "dummy"
+	parent = country
+}
+
+colonies = {
+	icon = "dummy"
+	use_for_ai_budget = yes
+	parent = country
+}
+
+ships = {
+	icon = "dummy"
+	use_for_ai_budget = yes
+	parent = country
+
+	triggered_cost_modifier = {
+		key = starbase_shipyard_build
+	}
+
+	triggered_cost_modifier = {
+		key = ship_colonizer
+		trigger = {
+			is_scope_valid = yes #When called from ship designer the design is not valid yet.
+			is_ship_class = shipclass_colonizer
+		}
+	}
+
+	triggered_cost_modifier = {
+		key = ship_corvette
+		trigger = {
+			is_scope_valid = yes #When called from ship designer the design is not valid yet.
+			is_ship_size = corvette
+		}
+	}
+
+	triggered_cost_modifier = {
+		key = ship_destroyer
+		trigger = {
+			is_scope_valid = yes #When called from ship designer the design is not valid yet.
+			is_ship_size = destroyer
+		}
+	}
+	
+	triggered_cost_modifier = {
+		key = ship_cruiser
+		trigger = {
+			is_scope_valid = yes #When called from ship designer the design is not valid yet.
+			is_ship_size = cruiser
+		}
+	}
+	
+	triggered_cost_modifier = {
+		key = ship_battleship
+		trigger = {
+			is_scope_valid = yes #When called from ship designer the design is not valid yet.
+			is_ship_size = battleship
+		}
+	}
+	
+	triggered_cost_modifier = {
+		key = ship_military_station_small
+		trigger = {
+			is_scope_valid = yes #When called from ship designer the design is not valid yet.
+			is_ship_size = military_station_small
+		}
+	}
+
+	triggered_cost_modifier = {
+		key = ship_science
+		trigger = {
+			is_scope_valid = yes #When called from ship designer the design is not valid yet.
+			is_ship_class = shipclass_science_ship
+		}
+	}
+}
+
+ship_components = {
+	icon = "dummy"
+	parent = ships
+}
+
+ship_sections = {
+	icon = "dummy"
+	parent = ships
+}
+
+ship_upgrades = {
+	icon = "dummy"
+	parent = ships
+	use_for_ai_budget = yes
+}
+
+stations = {
+	icon = "dummy"
+	use_for_ai_budget = yes
+	parent = country
+}
+
+station_gatherers = {
+	icon = "dummy"
+	parent = stations
+}
+
+station_researchers = {
+	icon = "dummy"
+	parent = stations
+}
+
+station_observers = {
+	icon = "dummy"
+	parent = stations
+}
+
+station_observer_missions = {
+	icon = "dummy"
+	parent = station_observers
+}
+
+starbases = {
+	icon = "dummy"
+	use_for_ai_budget = yes
+	parent = country
+}
+
+starbase_stations = {
+	icon = "dummy"
+	parent = starbases
+
+	triggered_cost_modifier = {
+		key = starbase_outpost
+		trigger = {
+			is_scope_valid = yes #When called from ship designer the design is not valid yet.
+			is_ship_size = starbase_outpost
+		}
+	}
+}
+
+starbase_buildings = {
+	icon = "dummy"
+	parent = starbases
+}
+
+starbase_modules = {
+	icon = "dummy"
+	parent = starbases
+}
+
+planets = {
+	icon = "dummy"
+	parent = country
+	use_for_ai_budget = yes
+	hidden = yes
+}
+
+planet_structures = {
+	icon = "dummy"
+	parent = planets
+	hidden = yes
+}
+
+planet_buildings = {
+	icon = "dummy"
+	parent = planet_structures
+}
+
+planet_branch_offices = {
+	icon = "dummy"
+	parent = planets
+}
+
+planet_branch_office_buildings = {
+	icon = "dummy"
+	parent = planets
+}
+
+planet_districts = {
+	icon = "dummy"
+	parent = planet_structures
+}
+
+planet_jobs = {
+	icon = "dummy"
+	parent = planets
+
+	triggered_produces_modifier = {
+		key = planet_jobs_slave
+		trigger = {
+			is_pop_category = slave
+		}
+	}
+	
+	triggered_produces_modifier = {
+		key = planet_jobs_worker
+		trigger = {
+			OR = {
+				is_pop_category = worker
+				is_pop_category = slave # Yes, slave should count towards both worker and slave
+			}
+		}
+	}
+	
+	triggered_produces_modifier = {
+		key = planet_jobs_specialist
+		trigger = {
+			is_pop_category = specialist
+		}
+	}
+	
+	triggered_produces_modifier = {
+		key = planet_jobs_ruler
+		trigger = {
+			is_pop_category = ruler
+		}
+	}
+	
+	triggered_produces_modifier = {
+		key = planet_jobs_simple_drone
+		trigger = {
+			is_pop_category = simple_drone
+		}
+	}	
+	
+	triggered_produces_modifier = {
+		key = planet_jobs_complex_drone
+		trigger = {
+			is_pop_category = complex_drone
+		}
+	}		
+
+	triggered_produces_modifier = {
+		key = planet_jobs_robotic
+		trigger = {
+			is_robot_pop = yes
+		}
+	}	
+}
+
+planet_bio_trophies = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_pop_assemblers = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_farmers = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_miners = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_livestock = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_technician = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_executives = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_managers = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_administrators = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_researchers = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_metallurgists = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_culture_workers = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_nobles = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_entertainers = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_soldiers = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_priests = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_enforcers = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_telepaths = {
+	icon = "dummy"
+	parent = planet_enforcers
+}
+
+planet_doctors = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_refiners = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_translucers = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_chemists = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_artisans = {
+	icon = "dummy"
+	parent = planet_jobs
+}
+
+planet_pops = {
+	icon = "dummy"
+	parent = planets
+
+	triggered_upkeep_modifier = {
+		key = planet_pops_robotics
+		trigger = {
+			is_robot_pop = yes
+		}
+	}
+	
+	triggered_upkeep_modifier = {
+		key = planet_pops_organics
+		trigger = {
+			is_robot_pop = no
+		}
+	}
+
+	triggered_upkeep_modifier = {
+		key = planet_pops_unemployed
+		trigger = {
+			has_job = unemployed
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_pops_enforcer
+		trigger = {
+			has_job = enforcer
+		}
+	}
+}
+
+unemployment_resources = {
+	icon = "dummy"
+	parent = planet_pops
+}
+
+pop_category_precursor = {
+	icon = "dummy"
+	parent = planet_pops
+}
+
+pop_category_xeno_ward = {
+	icon = "dummy"
+	parent = planet_pops
+}
+
+pop_category_pre_sapients = {
+	icon = "dummy"
+	parent = planet_pops
+}
+
+pop_category_purge = {
+	icon = "dummy"
+	parent = planet_pops
+}
+
+pop_category_bio_trophy = {
+	icon = "dummy"
+	parent = planet_pops
+}
+
+pop_category_slave = {
+	icon = "dummy"
+	parent = planet_pops
+}
+
+pop_category_robot = {
+	icon = "dummy"
+	parent = planet_pops
+}
+
+pop_category_drones = {
+	icon = "dummy"
+	parent = planet_pops
+}
+
+pop_category_workers = {
+	icon = "dummy"
+	parent = planet_pops
+}
+
+pop_category_specialists = {
+	icon = "dummy"
+	parent = planet_pops
+}
+
+pop_category_rulers = {
+	icon = "dummy"
+	parent = planet_pops
+}
+
+planet_deposits = {
+	icon = "dummy"
+	parent = planets
+}
+
+orbital_mining_deposits = {
+	icon = dummy
+	parent = station_gatherers
+}
+
+orbital_research_deposits = {
+	icon = dummy
+	parent = station_researchers
+}
+
+deposit_blockers = {
+	icon = dummy
+	use_for_ai_budget = yes
+	parent = country
+}
+
+armies = {
+	icon = "dummy"
+	use_for_ai_budget = yes
+	parent = country
+}
+
+leaders = {
+	icon = "dummy"
+	use_for_ai_budget = yes
+	parent = country
+}
+
+leader_admirals = {
+	icon = "dummy"
+	parent = leaders
+}
+
+leader_generals = {
+	icon = "dummy"
+	parent = leaders
+}
+
+leader_scientists = {
+	icon = "dummy"
+	parent = leaders
+}
+
+leader_governors = {
+	icon = "dummy"
+	parent = leaders
+}
+
+diplomacy = {
+	icon = "dummy"
+	hidden = yes
+	parent = country
+}
+
+pop_factions = {
+	icon = "dummy"
+	parent = country
+}
+
+subjects = {
+	icon = "dummy"
+	parent = diplomacy
+}
+
+federation = {
+	icon = "dummy"
+	parent = diplomacy
+}
+
+rivalries = {
+	icon = "dummy"
+	parent = diplomacy
+}
+
+non_aggression_pacts = {
+	icon = "dummy"
+	parent = diplomacy
+}
+
+research_agreements = {
+	icon = "dummy"
+	parent = diplomacy
+}
+
+commercial_pacts = {
+	icon = "dummy"
+	parent = diplomacy
+}
+
+defensive_pacts = {
+	icon = "dummy"
+	parent = diplomacy
+}
+
+guarantees = {
+	icon = "dummy"
+	parent = diplomacy
+}
+
+monthly_trades = {
+	icon = "dummy"
+}
+
+claims = {
+	icon = "dummy"
+	use_for_ai_budget = yes
+	parent = country
+}
+
+subject_tax = {
+	icon = "dummy"
+	parent = diplomacy
+}

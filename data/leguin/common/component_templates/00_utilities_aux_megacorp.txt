@@ -1,0 +1,33 @@
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes. 
+
+#######################
+# Orbital Bombardment #
+#######################
+utility_component_template = {
+	key = "ORBITAL_TRASH_1"
+	size = aux
+	icon = "GFX_ship_part_orbital_trash_dispersal"
+	icon_frame = 1
+	power = -10
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+		}
+	}
+
+	ship_modifier = {
+		ship_orbital_bombardment_mult = 0.25
+	}
+	class_restriction = { shipclass_military }
+	prerequisites = { "tech_orbital_trash_dispersal" }
+	component_set = "ORBITAL_TRASH_1"
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 2.0
+			has_policy_flag = orbital_bombardment_indiscriminate
+		}
+	}
+}

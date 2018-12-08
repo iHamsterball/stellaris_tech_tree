@@ -1,0 +1,23 @@
+frontier_sector = {
+
+	system_scores = {
+		base = 1
+	}
+
+	local_capital_scores = {
+		base = 1
+
+		# disallow sectors for systems that are not fully colonized
+		modifier = {
+			mult = -100
+			is_under_colonization = yes
+		}
+	}
+
+	resource_conversion_table = {
+		energy = 1
+		minerals = 1
+	}
+
+	max_jumps = 2
+}

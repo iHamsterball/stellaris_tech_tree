@@ -1,0 +1,142 @@
+
+#############
+# Trade buildings
+#############
+building_commercial_zone = {
+	base_buildtime = 360
+
+	category = trade
+	
+	potential = {
+		NOT = { is_planet_class = pc_habitat }
+		exists = owner
+		owner = { is_regular_empire = yes }
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	planet_modifier = {
+		job_clerk_add = 5
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 300
+		}	
+		upkeep = {
+			energy = 2
+		}		
+	}
+	
+	prerequisites = {
+		"tech_interplanetary_commerce"
+	}
+	
+	show_tech_unlock_if = { 
+		is_regular_empire = yes
+	}
+	
+	triggered_desc = {
+		text = job_clerk_effect_desc
+	}
+	
+	upgrades = {
+		"building_commercial_megaplex"
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_commercial_megaplex = {
+	base_buildtime = 480
+	can_build = no
+
+	category = trade
+	
+	potential = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	planet_modifier = {
+		job_merchant_add = 1
+		job_clerk_add = 10
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+			rare_crystals = 50	
+		}	
+		upkeep = {
+			energy = 2
+			rare_crystals = 1
+		}		
+	}
+	
+	prerequisites = {
+		"tech_interstellar_economics"
+	}
+	
+	show_tech_unlock_if = { 
+		is_regular_empire = yes
+	}
+	
+	triggered_desc = {
+		text = job_clerk_effect_desc
+	}
+	triggered_desc = {
+		text = job_merchant_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_galactic_stock_exchange = {
+	base_buildtime = 480	
+	base_cap_amount = 1
+
+	category = trade
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	
+	planet_modifier = {
+		job_merchant_add = 2
+		trade_value_mult = 0.20
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+	
+	prerequisites = {
+		"tech_galactic_markets"
+	}
+	
+	triggered_desc = {
+		text = job_merchant_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}

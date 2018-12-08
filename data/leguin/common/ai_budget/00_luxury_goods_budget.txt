@@ -1,0 +1,47 @@
+## Categories used in this file must have use_for_ai_budget = yes defined in economic_categories ##
+## It is possible to have multiple entries with the same category and resource ##
+
+#################
+## Expenditure ##
+#################
+consumer_goods_expenditure_buffer = { # Buffer, will not be spent
+	resource = consumer_goods
+	type = expenditure
+	category = buffer
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.5
+	}	
+}
+
+consumer_goods_expenditure_colonies = {
+	resource = consumer_goods
+	type = expenditure
+	category = colonies
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.3
+	}	
+}
+
+consumer_goods_expenditure_decisions  = {
+	resource = consumer_goods
+	type = expenditure
+	category = decisions
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.2
+	}	
+}

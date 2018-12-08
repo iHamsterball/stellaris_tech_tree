@@ -1,0 +1,288 @@
+# Strategic Coordination Center
+strategic_coordination_center_0 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 5000
+			influence = 300
+		}
+
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	potential = {
+		has_gw_strategic_coordination_center = yes
+	}
+	
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}		
+		custom_tooltip = {
+			fail_text = "requires_surveyed_system"
+			NOT = {
+				any_planet = {
+					is_surveyed = {
+						who = prev.from
+						status = no
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_megastructure"
+			#will be changed to type-specific string with next translation pass
+			#fail_text = "requires_no_existing_strategic_coordination_center"
+			from = {
+				NOT = {
+					any_owned_megastructure = {
+						OR = {
+							is_megastructure_type = strategic_coordination_center_0
+							is_megastructure_type = strategic_coordination_center_1
+							is_megastructure_type = strategic_coordination_center_2
+							is_megastructure_type = strategic_coordination_center_3
+							#is_megastructure_type = strategic_coordination_center_restored
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_megastructure"
+			has_no_non_gate_megastructure = yes
+		}
+	}
+	
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "must_build_around_star"
+				is_star = yes
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_orbital_station"
+				has_orbital_station = no
+			}
+		}
+	}
+	
+	# root = system
+	# from = country	
+	ai_weight = {
+		factor = 15
+		
+		modifier = {
+			factor = 0.1
+			starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
+		}	
+		
+		modifier = {
+			factor = 0.1
+			any_neighbor_system = {
+				exists = owner
+				NOT = { 
+					owner = { is_same_value = from } 
+				}
+			}
+		}
+	}
+	
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		from = { set_country_flag = built_strategic_coordination_center_site }
+	}
+}
+
+# Strategic Coordination Center 1
+strategic_coordination_center_1 = {
+	entity = "strategic_coordination_center_stage_1_entity"
+	construction_entity = "strategic_coordination_center_stage_1_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	upgrade_from = {
+		strategic_coordination_center_0
+	}
+
+	build_time = 3600
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 15000
+		}
+
+		upkeep = {
+			energy = 25
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 75
+		country_starbase_capacity_add = 5
+		starbase_defense_platform_capacity_add = 8
+		ship_speed_mult = 0.05
+	}
+
+	possible = {
+		from = { has_gw_strategic_coordination_center = yes }
+	}
+
+	on_build_complete = {
+		set_star_flag = strategic_coordination_center_built
+		from = { country_event = { id = mega.9003 } }
+	}
+}
+
+# Strategic Coordination Center 2
+strategic_coordination_center_2 = {
+	entity = "strategic_coordination_center_stage_2_entity"
+	construction_entity = "strategic_coordination_center_stage_2_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	upgrade_from = {
+		strategic_coordination_center_1
+	}
+
+	build_time = 3600
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 15000
+		}
+
+		upkeep = {
+			energy = 50
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 150
+		country_starbase_capacity_add = 10
+		starbase_defense_platform_capacity_add = 16
+		ship_speed_mult = 0.10
+	}
+
+	possible = {
+		from = { has_gw_strategic_coordination_center = yes }
+	}
+
+	on_build_complete = {
+		set_star_flag = strategic_coordination_center_built
+		from = { country_event = { id = mega.9004 } }
+		# TODO (DB) mid-stage built event
+	}
+}
+
+# Strategic Coordination Center 3
+strategic_coordination_center_3 = {
+	entity = "strategic_coordination_center_stage_3_entity"
+	construction_entity = "strategic_coordination_center_stage_3_entity"
+	portrait = "GFX_strategic_coordination_center_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	upgrade_from = {
+		strategic_coordination_center_2
+	}
+
+	build_time = 3600
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 15000
+		}
+
+		upkeep = {
+			energy = 75
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 225
+		country_starbase_capacity_add = 15
+		starbase_defense_platform_capacity_add = 24
+		ship_speed_mult = 0.15
+	}
+
+	possible = {
+		from = { has_gw_strategic_coordination_center = yes }
+	}
+
+	on_build_complete = {
+		set_star_flag = strategic_coordination_center_built
+		from = { country_event = { id = mega.9005 } }
+	}
+}
+
+# Ruined Strategic Coordination Center
+strategic_coordination_center_ruined = {
+	entity = "strategic_coordination_center_01_destroyed_entity"
+	construction_entity = "strategic_coordination_center_01_destroyed_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	
+	potential = { always = no }
+}
+
+# Restored Strategic Coordination Center
+strategic_coordination_center_restored = {
+	entity = "strategic_coordination_center_stage_3_entity"
+	construction_entity = "strategic_coordination_center_stage_3_entity"
+	portrait = "GFX_strategic_coordination_center_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	upgrade_from = {
+		strategic_coordination_center_ruined
+	}
+
+	build_time = 3600
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 15000
+		}
+
+		upkeep = {
+			energy = 75
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 225
+		country_starbase_capacity_add = 15
+		starbase_defense_platform_capacity_add = 24
+		ship_speed_mult = 0.15
+	}
+
+	possible = {
+		from = { has_technology = tech_mega_engineering }
+	}
+
+	on_build_start = {
+		fromfrom = {
+			set_graphical_culture = root.from
+		}
+	}
+
+	on_build_complete = {
+		set_star_flag = strategic_coordination_center_built
+		every_system_ambient_object = { destroy_ambient_object = this }
+		from = { country_event = { id = mega.9111 } }
+	}
+}

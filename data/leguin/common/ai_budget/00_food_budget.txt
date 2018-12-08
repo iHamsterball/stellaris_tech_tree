@@ -1,0 +1,66 @@
+## Categories used in this file must have use_for_ai_budget = yes defined in economic_categories ##
+## It is possible to have multiple entries with the same category and resource ##
+
+#################
+## Expenditure ##
+#################
+food_expenditure_buffer = { # Buffer, will not be spent
+	resource = food
+	type = expenditure
+	category = buffer
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.5
+	}	
+}
+
+food_expenditure_colonies = {
+	resource = food
+	type = expenditure
+	category = colonies
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.3
+	}	
+}
+
+food_expenditure_colonies_expand = {
+	resource = food 
+	type = expenditure
+	category = colonies
+	
+	potential = {
+		controlled_colonizable > 0
+		has_resource = { type = alloys amount > 400 }
+		has_monthly_income = {
+			resource = alloys
+			value > 0
+		}
+	}
+	
+	fraction = {
+		weight = 1.0
+	}	
+}
+
+food_expenditure_decisions = {
+	resource = food
+	type = expenditure
+	category = decisions
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.2
+	}	
+}

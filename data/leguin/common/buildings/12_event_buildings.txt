@@ -1,0 +1,190 @@
+#####################
+# Event buildings
+#####################
+
+building_junkheap = {
+	capital = yes
+	can_build = no
+	can_demolish = yes
+	can_be_ruined = no
+	can_be_disabled = no
+	
+	potential = {
+		exists = owner
+		owner = { is_country_type = ratlings }
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 15
+		planet_amenities_add = 20
+		job_ratling_scavenger_add = 10
+	}
+		
+	upgrades = {
+	}
+}
+
+building_akx_worm_3 = {
+	base_buildtime = 900
+	base_cap_amount = 1	
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	
+	potential = {
+		exists = planet
+		planet = { is_capital = yes }
+	}	
+	
+	allow = {	
+	}
+
+	planet_modifier  = {
+	}
+	
+	prerequisites = {
+		"tech_akx_worm_3"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 6
+		}
+		produces = {
+			physics_research = 16
+		}	
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+
+building_great_pyramid = {
+	base_buildtime = 480
+	can_build = no
+	can_demolish = yes
+	can_be_ruined = no
+	can_be_disabled = no
+	
+	potential = {
+	}
+	
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			food = 2
+			society_research = 2
+		}	
+	}
+}
+
+building_artist_patron = {
+	base_buildtime = 480
+	can_demolish = yes
+	base_cap_amount = 1
+	
+	potential = {
+		owner = { has_country_flag = artist_building_patron }
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+		}
+		planet_jobs_unity_produces_mult = 0.15
+		job_culture_worker_add = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_ethic = ethic_gestalt_consciousness }
+		}
+		planet_jobs_unity_produces_mult = 0.15
+		job_coordinator_add = 3
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 2
+		}
+	}
+		
+	triggered_desc = {
+		trigger = { 
+			owner = { NOT = { has_ethic = ethic_gestalt_consciousness } }	
+		}
+		text = job_culture_worker_effect_desc
+	}	
+	triggered_desc = {
+		trigger = { 
+			owner = { has_ethic = ethic_gestalt_consciousness }	
+		}
+		text = job_coordinator_effect_desc
+	}
+}
+building_waste_reprocessing_center = {
+	icon = building_waste_reprocessing_center
+	base_buildtime = 480
+	base_cap_amount = 1
+	can_build = yes
+	can_demolish = yes
+	
+	potential = {
+		owner = { has_country_flag = bought_waste_reprocessing_center }
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 5
+		job_technician_drone_add = 2
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 100
+		}
+		produces = {
+			minerals = 10
+			energy = 10
+		}	
+	}
+		
+	triggered_desc = {
+		text = job_technician_drone_effect_desc
+	}
+}
+
+building_nuumismatic_shrine = {
+	base_buildtime = 180
+	can_demolish = yes
+	base_cap_amount = 1
+	
+	potential = {
+		owner = { has_country_flag = nuumismatic_shrine }
+	}
+	
+	planet_modifier = {
+		job_merchant_add = 2
+		job_priest_add = 2
+	}
+
+	resources = {
+		category = planet_buildings
+	}
+	
+	triggered_desc = {
+		text = job_priest_effect_desc
+	}
+	triggered_desc = {
+		text = job_merchant_effect_desc
+	}
+}

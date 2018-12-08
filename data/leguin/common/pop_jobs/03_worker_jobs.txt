@@ -1,0 +1,737 @@
+###################
+# Basic Jobs
+###################
+
+clerk = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_residence
+	clothes_texture_index = 2
+
+	possible = {
+		complex_worker_job_check_trigger = yes
+		owner = { is_fallen_empire = no }
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = 2
+		trade_value_add = 2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			planet_amenities_add = 0.4
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			planet_amenities_add = -0.4
+		}
+	}		
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_nuumismatic_administration
+			}
+		}
+		modifier = {
+			trade_value_add = 0.5
+		}
+	}	
+	
+	weight = {
+		weight = @clerk_job_weight
+		modifier = {
+			factor = 0.25
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 2
+			OR = {	
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+		}	
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_nuumismatic_administration
+			}	
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}	
+		modifier = {
+			factor = 1.5
+			has_trait = trait_syncretic_proles
+		}
+		modifier = {
+			factor = 1.2
+			has_trait = trait_very_strong
+		}
+		modifier = {
+			factor = 1.1
+			has_trait = trait_strong
+		}	
+		modifier = {
+			factor = 0.9
+			has_trait = trait_weak
+		}		
+	}
+}
+
+technician = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_power_plant
+	clothes_texture_index = 2
+	
+	possible = {
+		hidden_trigger = { exists = owner }
+		complex_worker_job_check_trigger = yes
+		owner = { 
+			is_gestalt = no
+			is_fallen_empire_spiritualist = no
+		}
+	}
+
+	resources = {
+		category = planet_technician
+		produces = {
+			energy = 4
+		}
+	}	
+
+	weight = {
+		weight = @worker_job_weight
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_robot_superconductive
+				has_trait = trait_thrifty
+				has_trait = trait_nuumismatic_administration
+			}		
+		}
+		modifier = {
+			factor = 8
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 2
+			OR = {	
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}		
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 0.25
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_syncretic_proles
+		}
+		modifier = {
+			factor = 4
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}	
+		modifier = {
+			factor = 1.2
+			has_trait = trait_very_strong
+		}
+		modifier = {
+			factor = 1.1
+			has_trait = trait_strong
+		}	
+		modifier = {
+			factor = 0.9
+			has_trait = trait_weak
+		}			
+	}
+}
+
+miner = {	
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_crystal_mines
+	clothes_texture_index = 2
+
+	possible = {
+		hidden_trigger = { exists = owner }
+		worker_job_check_trigger = yes
+		owner = { 
+			is_gestalt = no
+			is_fallen_empire_spiritualist = no
+		}
+	}
+
+	resources = {
+		category = planet_miners
+		produces = {
+			minerals = 4
+		}
+	}	
+	
+	weight = {
+		weight = @worker_job_weight
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_industrious
+				has_trait = trait_robot_power_drills
+			}		
+		}
+		modifier = {
+			factor = 10
+			is_enslaved = yes
+			can_take_servant_job = no
+		}	
+		modifier = {
+			factor = 2
+			OR = {	
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+		}	
+		modifier = {
+			factor = 0.25
+			can_take_servant_job = yes
+		}		
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}		
+		modifier = {
+			factor = 1.2
+			has_trait = trait_very_strong
+		}
+		modifier = {
+			factor = 1.1
+			has_trait = trait_strong
+		}	
+		modifier = {
+			factor = 0.9
+			has_trait = trait_weak
+		}			
+	}
+}
+
+crystal_miner = {	
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_crystal_mines
+	clothes_texture_index = 2
+	
+	possible = {
+		hidden_trigger = { exists = owner }
+		worker_job_check_trigger = yes
+		owner = { is_gestalt = no }
+	}
+
+	resources = {
+		category = planet_miners
+		produces = {
+			rare_crystals = 2
+		}
+	}	
+	
+	weight = {
+		weight = @worker_job_weight
+		modifier = {
+			factor = 10
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 2
+			OR = {	
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+		}	
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}	
+		modifier = {
+			factor = 2
+			has_trait = trait_syncretic_proles
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+			factor = 1.2
+			has_trait = trait_very_strong
+		}
+		modifier = {
+			factor = 1.1
+			has_trait = trait_strong
+		}	
+		modifier = {
+			factor = 0.9
+			has_trait = trait_weak
+		}			
+	}
+}
+
+gas_extractor = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_gas_mine
+	clothes_texture_index = 2
+	
+	possible = {
+		worker_job_check_trigger = yes
+	}
+	
+	resources = {
+		category = planet_miners
+		produces = {
+			exotic_gases = 2
+		}
+	}	
+	
+	weight = {
+		weight = @worker_job_weight
+		modifier = {
+			factor = 10
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 2
+			OR = {	
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+		}	
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_syncretic_proles
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+			factor = 1.2
+			has_trait = trait_very_strong
+		}
+		modifier = {
+			factor = 1.1
+			has_trait = trait_strong
+		}	
+		modifier = {
+			factor = 0.9
+			has_trait = trait_weak
+		}			
+	}
+}
+
+mote_harvester = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_gas_mine
+	clothes_texture_index = 2
+	
+	possible = {
+		worker_job_check_trigger = yes
+	}
+	
+	resources = {
+		category = planet_miners
+		produces = {
+			volatile_motes = 2
+		}
+	}	
+	
+	weight = {
+		weight = @worker_job_weight
+		modifier = {
+			factor = 10
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 2
+			OR = {	
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+		}	
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_syncretic_proles
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+			factor = 1.2
+			has_trait = trait_very_strong
+		}
+		modifier = {
+			factor = 1.1
+			has_trait = trait_strong
+		}	
+		modifier = {
+			factor = 0.9
+			has_trait = trait_weak
+		}			
+	}
+}
+
+farmer = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_food_processing_facility
+	clothes_texture_index = 2
+	
+	possible = {
+		hidden_trigger = { exists = owner }
+		worker_job_check_trigger = yes
+		owner = { 
+			is_gestalt = no
+			is_fallen_empire_spiritualist = no
+		}
+	}
+
+	resources = {
+		category = planet_farmers
+		produces = {
+			food = 6
+		}
+	}	
+	
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_valid_civic = civic_agrarian_idyll }
+		}
+		modifier = {
+			planet_amenities_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_valid_civic = civic_agrarian_idyll }
+			OR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+			}			
+		}
+		modifier = {
+			planet_amenities_add = 0.4
+		}
+	}	
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_valid_civic = civic_agrarian_idyll }
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			planet_amenities_add = -0.4
+		}
+	}		
+	
+	weight = {
+		weight = @worker_job_weight
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_robot_harvesters
+				has_trait = trait_agrarian
+			}
+		}
+		modifier = {
+			factor = 1.1
+			owner = { has_valid_civic = civic_agrarian_idyll }
+		}
+		modifier = {
+			factor = 10
+			is_enslaved = yes
+			can_take_servant_job = no
+		}	
+		modifier = {
+			factor = 2
+			OR = {	
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 0.25
+			can_take_servant_job = yes
+		}	
+		modifier = {
+			factor = 2
+			has_trait = trait_syncretic_proles
+		}	
+		modifier = {
+			factor = 1.2
+			has_trait = trait_very_strong
+		}
+		modifier = {
+			factor = 1.1
+			has_trait = trait_strong
+		}	
+		modifier = {
+			factor = 0.9
+			has_trait = trait_weak
+		}			
+	}
+}
+
+soldier = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER	
+	building_icon = building_stronghold
+	clothes_texture_index = 4
+	
+	country_modifier = {
+		country_naval_cap_add = 4
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			planet = {
+				exists = owner 
+				owner = { has_technology = "tech_ground_defense_planning" }
+			}
+		}
+		modifier = {
+			country_naval_cap_add = 2
+		}
+	}	
+	
+	pop_modifier = {
+		pop_defense_armies_add = 3
+	}	
+	
+	resources = {
+		category = planet_soldiers
+		produces = {
+			trigger = { 
+				owner = { has_valid_civic = civic_citizen_service }
+			}
+			unity = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			planet = {
+				has_modifier = martial_law
+			}
+		}
+		modifier = {
+			planet_stability_add = 5
+		}
+	}
+	
+	possible = {
+		hidden_trigger = { exists = owner }
+		worker_job_check_trigger = yes
+		owner = { is_gestalt = no }
+	}
+	
+	weight = {
+		weight = @soldier_job_weight
+		modifier = {
+			factor = 10
+			planet = { has_modifier = martial_law }
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_resilient
+		}			
+		modifier = {
+			factor = 2
+			has_trait = trait_very_strong
+		}	
+		modifier = {
+			factor = 1.5
+			has_trait = trait_strong
+		}	
+		modifier = {
+			factor = 0.5	
+			has_trait = trait_weak
+		}	
+		modifier = {
+			factor = 0.1
+			is_enslaved = yes
+			NOT = { has_slavery_type = { type = slavery_military } }
+		}	
+		modifier = {
+			factor = 10
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_military }
+		}	
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}		
+	}
+}
+
+preacher = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_temple_of_prosperity
+	clothes_texture_index = 3
+	icon = priest
+
+	possible = {
+		complex_worker_job_check_trigger = yes
+	}
+	
+	resources = {
+		category = planet_priests
+		produces = {
+			unity = 1
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = 3
+		trade_value_add = 3
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			planet_amenities_add = 0.6
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			planet_amenities_add = -0.6
+		}
+	}	
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_nuumismatic_administration
+			}
+		}
+		modifier = {
+			trade_value_add = 0.6
+		}
+	}		
+	
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no	
+			NOT = { has_trait = trait_mechanical }	
+		}
+		modifier = {
+			factor = 2
+			owner = { has_civic = civic_exalted_priesthood }
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_nuumismatic_administration
+			}	
+		}		
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_robot_propaganda_machines
+				has_trait = trait_traditional
+			}		
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = trait_quarrelsome
+		}		
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}		
+		modifier = {
+			factor = 0.1
+			has_ethic = ethic_materialist
+			NOT = { has_job = preacher }
+		}	
+		modifier = {
+			factor = 1.2
+			has_trait = trait_very_strong
+		}
+		modifier = {
+			factor = 1.1
+			has_trait = trait_strong
+		}	
+		modifier = {
+			factor = 0.9
+			has_trait = trait_weak
+		}			
+	}
+}
