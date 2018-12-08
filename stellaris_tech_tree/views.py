@@ -9,6 +9,7 @@ from django.conf import settings
 def index(request):
     template = loader.get_template('index.html')
     version_list = {
+        'leguin' : 'Le Guin v2.2.0',
         'niven' : 'Niven v2.1.2',
         'cherryh' : 'Cherryh v2.0.5',
         'boulle' : 'Boulle v1.9.1',
