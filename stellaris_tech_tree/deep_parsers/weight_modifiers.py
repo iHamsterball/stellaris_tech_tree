@@ -76,6 +76,10 @@ def _localize_has_valid_civic(value):
     civic = localization_map[value]
     return ugettext('Has {} Government Civic').format(civic)
 
+def _localize_has_not_valid_civic(value):
+    civic = localization_map[value]
+    return ugettext('Does NOT have {} Government Civic').format(civic)
+
 def _localize_has_ascension_perk(value):
     perk = localization_map[value]
     return ugettext('Has {} Ascension Perk').format(perk)
@@ -85,13 +89,20 @@ def _localize_has_megastructure(value):
     return ugettext('Has Megatructure {}').format(megastructure)
 
 def _localize_has_policy_flag(value):
-    policy_flag = localization_map[value]
+    try:
+        policy_flag = localization_map[value]
+    except (KeyError):
+        policy_flag = localization_map[value+'_name']
     return ugettext('Has {} Policy').format(policy_flag)
 
 
 def _localize_has_trait(value):
     trait = localization_map[value]
     return ugettext('Has {} Trait').format(trait)
+
+def _localize_pop_has_trait(value):
+    trait = localization_map[value]
+    return ugettext('Pop in empire has {} trait').format(trait)
 
 def _localize_has_authority(value):
     authority = localization_map[value]
@@ -134,7 +145,7 @@ def _localize_has_not_modifier(value):
 
 
 def _localize_is_country_type(value):
-    return ugettext('Is of the {} country type').format(value)
+    return ugettext('Is of the {} country type').format(ugettext(value))
 
 
 def _localize_ideal_planet_class(value):
@@ -520,25 +531,41 @@ def _localize_is_sapient(value):
         else ugettext('This Species is NOT pre-sapient')
 
 def _localize_has_not_seen_any_bypass(value):
-    bypass = localization_map['bypass_{}'.format(value).upper()]
+    bypass = localization_map.get('bypass_{}'.format(value).upper(), None)
+    if not bypass:
+        bypass = localization_map.get('{}_base'.format(value).lower(), None)
+    if not bypass:
+        bypass = value
     if bypass.startswith('$'):
         bypass = localization_map[bypass.replace('$', '')]
     return ugettext('Has NOT encountered a {}').format(bypass)
 
 def _localize_has_seen_any_bypass(value):
-    bypass = localization_map['bypass_{}'.format(value).upper()]
+    bypass = localization_map.get('bypass_{}'.format(value).upper(), None)
+    if not bypass:
+        bypass = localization_map.get('{}_base'.format(value).lower(), None)
+    if not bypass:
+        bypass = value
     if bypass.startswith('$'):
         bypass = localization_map[bypass.replace('$', '')]
     return ugettext('Has encountered a {}').format(bypass)
 
 def _localize_not_owns_any_bypass(value):
-    bypass = localization_map['bypass_{}'.format(value).upper()]
+    bypass = localization_map.get('bypass_{}'.format(value).upper(), None)
+    if not bypass:
+        bypass = localization_map.get('{}_base'.format(value).lower(), None)
+    if not bypass:
+        bypass = value
     if bypass.startswith('$'):
         bypass = localization_map[bypass.replace('$', '')]
     return ugettext('Does NOT control any system with a {}').format(bypass)
 
 def _localize_owns_any_bypass(value):
-    bypass = localization_map['bypass_{}'.format(value).upper()]
+    bypass = localization_map.get('bypass_{}'.format(value).upper(), None)
+    if not bypass:
+        bypass = localization_map.get('{}_base'.format(value).lower(), None)
+    if not bypass:
+        bypass = value
     if bypass.startswith('$'):
         bypass = localization_map[bypass.replace('$', '')]
     return ugettext('Controls a system with a {}').format(bypass)
@@ -559,10 +586,28 @@ def _localize_is_spiritualist(value):
     return ugettext('Is some degree of Spiritualist') if value == 'yes' \
         else ugettext('Is NOT some degree of Spiritualist')
 
+def _localize_is_xenophile(value):
+    return ugettext('Is some degree of Xenophile') if value == 'yes' \
+        else ugettext('Is NOT some degree of Xenophile')
+
 def _localize_count_starbase_sizes(value):
     starbase_size = localization_map[value[0]['starbase_size']]
     operator, value = _operator_and_value(value[1]['count'])
     return ugettext('Number of Starbase {} is {} {}').format(starbase_size, operator, value)
+
+def _localize_is_machine_empire(value):
+    return ugettext('Is machine empire') if value == 'yes' else ugettext('Is NOT machine empire')
+
+def _localize_num_districts(value):
+    district_type_key = value[0].get('type')
+    district_type = localization_map[district_type_key]
+    operator, value = _operator_and_value(value[1].get('value'))
+    return ugettext('Number of {} districts is {} {}').format(district_type, operator, value)
+
+def _localize_has_deposit(value):
+    deposit = localization_map[value]
+    return ugettext('Has deposit {}').format(deposit)
+
 
 def _localize_always(value):
     return ugettext('Always') if value == 'yes' else ugettext('Never')

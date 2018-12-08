@@ -33,23 +33,27 @@ class FeatureUnlocks:
                     try:
                         localized = __localize(alt_key)
                     except KeyError:
-                        prefix = 'MOD_COUNTRY_'
-                        alt_key = (prefix + key).upper()
                         try:
+                            alt_key = alt_key.lower()
                             localized = __localize(alt_key)
                         except KeyError:
-                            prefix = 'MOD_POP_'
+                            prefix = 'MOD_COUNTRY_'
                             alt_key = (prefix + key).upper()
                             try:
                                 localized = __localize(alt_key)
                             except KeyError:
-                                prefix = 'MOD_PLANET_'
+                                prefix = 'MOD_POP_'
                                 alt_key = (prefix + key).upper()
                                 try:
                                     localized = __localize(alt_key)
                                 except KeyError:
-                                    # Give up.
-                                    localized = string
+                                    prefix = 'MOD_PLANET_'
+                                    alt_key = (prefix + key).upper()
+                                    try:
+                                        localized = __localize(alt_key)
+                                    except KeyError:
+                                        # Give up.
+                                        localized = string
                 else:
                     localized = _localize('tech_gene_tailoring_POINTS')
 

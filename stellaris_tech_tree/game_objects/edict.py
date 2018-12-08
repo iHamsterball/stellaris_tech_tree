@@ -5,9 +5,14 @@ class Edict:
         self.prerequisites = self._prerequisites(edict_data)
 
     def _name(self, edict_data):
-        return next(iter(
-            subkey for subkey in edict_data if list(subkey)[0] == 'name'
-        ))['name']
+        try:
+            name = next(iter(
+                subkey for subkey in edict_data if list(subkey)[0] == 'name'
+            ))['name']
+        except (StopIteration):
+            # Where is your name?
+            name = ""
+        return name
 
     def _prerequisites(self, edict_data):
         try:
