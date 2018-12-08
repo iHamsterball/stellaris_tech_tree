@@ -216,7 +216,7 @@ def localized_strings(loc_file_paths, locale):
 
             not_yaml += line
 
-        still_not_yaml = re.sub(r'£\w+  |§[A-Z!]', '', not_yaml)
+        still_not_yaml = re.sub(r'£\w+£*|§[A-Z!]', '', not_yaml)
         resembles_yaml = re.sub(r'(?<=\w):\d+ (?=")', ': ', still_not_yaml)
         need_escape_yaml = re.sub(r'^[ \t]+', '  ', resembles_yaml, flags=re.M)
         actual_yaml = re.sub(r'(?<![\\])\\(?![\'\"abenvtrfox])', r'\\\\', need_escape_yaml)
