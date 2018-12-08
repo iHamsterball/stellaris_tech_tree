@@ -8,56 +8,56 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-02 21:13+0800\n"
+"POT-Creation-Date: 2018-12-09 01:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Cother <ihamsterball@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: en_US\n"
 
-#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:140
+#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:144
 msgid "Unlocks Feature: "
 msgstr "Unlocks Feature: "
 
-#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:155
+#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:159
 msgid "Unlocks Army: {}"
 msgstr "Unlocks Army: {}"
 
-#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:162
+#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:166
 msgid "Unlocks Attachment: {}"
 msgstr "Unlocks Attachment: {}"
 
-#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:169
+#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:173
 msgid "Unlocks Buildable Pop: {}"
 msgstr "Unlocks Buildable Pop: {}"
 
-#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:175
+#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:179
 msgid "Unlocks Building: {}"
 msgstr "Unlocks Building: {}"
 
-#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:181
+#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:185
 msgid "Unlocks Component: {}"
 msgstr "Unlocks Component: {}"
 
-#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:187
+#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:191
 msgid "Unlocks Edict: {}"
 msgstr "Unlocks Edict: {}"
 
-#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:202
+#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:206
 msgid "Unlocks Policy: {} - {}"
 msgstr "Unlocks Policy: {} - {}"
 
-#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:209
+#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:213
 msgid "Reveals Resource: {} ([[{}]])"
 msgstr "Reveals Resource: {} ([[{}]])"
 
-#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:216
+#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:220
 msgid "Unlocks Module: {}"
 msgstr "Unlocks Module: {}"
 
-#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:222
+#: .\stellaris_tech_tree\deep_parsers\feature_unlocks.py:226
 msgid "Clear Blockers: {}"
 msgstr "Clear Blockers: {}"
 
@@ -87,637 +87,665 @@ msgid "Has {} Government Civic"
 msgstr "Has {} Government Civic"
 
 #: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:81
+msgid "Does NOT have {} Government Civic"
+msgstr "Does NOT have {} Goverment civic"
+
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:85
 msgid "Has {} Ascension Perk"
 msgstr "Has {} Ascension Perk"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:85
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:89
 msgid "Has Megatructure {}"
 msgstr "Has Megatructure {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:89
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:96
 msgid "Has {} Policy"
 msgstr "Has {} Policy"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:94
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:101
 msgid "Has {} Trait"
 msgstr "Has {} Trait"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:98
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:105
+msgid "Pop in empire has {} trait"
+msgstr ""
+
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:109
 msgid "Has {} Authority"
 msgstr "Has {} Authority"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:102
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:113
 msgid "Host does has the {} DLC"
 msgstr "Host does has the {} DLC"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:106
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:117
 msgid "Host does NOT have the {} DLC"
 msgstr "Host does NOT have the {} DLC"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:114
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:125
 msgid "Has {} Technology"
 msgstr "Has {} Technology"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:123
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:134
 msgid "Does NOT have {} Technology"
 msgstr "Does NOT have {} Technology"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:128
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:139
 msgid "Has the {} modifier"
 msgstr "Has the {} modifier"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:133
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:144
 msgid "Does NOT have the {} modifier"
 msgstr "Does NOT have the {} modifier"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:137
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:149
 msgid "Is of the {} country type"
 msgstr "Is of the {} country type"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:141
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:153
 msgid "Is ideal class"
 msgstr "Is ideal class"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:146
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:268
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:158
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:280
 msgid "Is {}"
 msgstr "Is {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:151
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:163
 msgid "Has {}"
 msgstr "Has {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:155
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:167
 msgid "Is a Colony"
 msgstr "Is a Colony"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:156
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:168
 msgid "Is NOT a Colony"
 msgstr "Is NOT a Colony"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:160
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:172
 msgid "Allows Slavery"
 msgstr "Allows Slavery"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:161
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:173
 msgid "Does NOT allow Slavery"
 msgstr "Does NOT allow Slavery"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:165
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:177
 msgid "Is in a Federation"
 msgstr "Is in a Federation"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:166
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:178
 msgid "Is NOT in a Federation"
 msgstr "Is NOT in a Federation"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:170
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:178
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:182
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:190
 msgid "Number of owned planets is {} {}"
 msgstr "Number of owned planets is {} {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:174
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:186
 msgid "Number of enslaved planets {} {}"
 msgstr "Number of enslaved planets {} {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:182
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:194
 msgid "Has communications with your Empire"
 msgstr "Has communications with your Empire"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:186
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:198
 msgid "Is AI controlled"
 msgstr "Is AI controlled"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:186
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:198
 msgid "Is NOT AI controlled"
 msgstr "Is NOT AI controlled"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:193
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:205
 msgid "Is of the {} Species"
 msgstr "Is of the {} Species"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:202
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:209
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:214
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:221
 msgid "Is {} {}"
 msgstr "Is {} {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:213
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:225
 msgid "Pop is enslaved"
 msgstr "Pop is enslaved"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:213
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:225
 msgid "Pop is NOT enslaved"
 msgstr "Pop is NOT enslaved"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:218
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:230
 msgid "Number of years since game start is {} {}"
 msgstr "Number of years since game start is {} {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:223
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:235
 msgid "Number of years since game start is NOT {} {}"
 msgstr "Number of years since game start is NOT {} {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:227
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:239
 msgid "Has {} country flag"
 msgstr "Has {} country flag"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:231
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:243
 msgid "Does NOT have {} country flag"
 msgstr "Does NOT have {} country flag"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:235
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:247
 msgid "Research Leader ({})"
 msgstr "Research Leader ({})"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:237
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:249
 msgid "NOT "
 msgstr "NOT "
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:259
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:271
 msgid "Skill level is {} {}"
 msgstr "Skill level is {} {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:266
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:278
 msgid "Is {} Expert"
 msgstr "Is {} Expert"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:275
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:287
 msgid "physics"
 msgstr "Physics"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:279
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:291
 msgid "Any System within Borders"
 msgstr "Any System within Borders"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:284
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:296
 msgid "NOT Any System within Borders"
 msgstr "NOT Any System within Borders"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:287
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:299
 msgid "Is in a {} Cluster"
 msgstr "Is in a {} Cluster"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:291
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:303
 msgid "Any Country"
 msgstr "Any Country"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:295
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:307
 msgid "Any Relation"
 msgstr "Any Relation"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:299
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:311
 msgid "Any empire Pop"
 msgstr "Any empire Pop"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:303
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:315
 msgid "NOT any owned Pop"
 msgstr "NOT any owned Pop"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:307
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:319
 msgid "Any Pop"
 msgstr "Any Pop"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:312
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:324
 msgid "Any owned Planet"
 msgstr "Any owned Planet"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:316
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:328
 msgid "Any Planet"
 msgstr "Any Planet"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:320
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:332
 msgid "NOT any owned Planet"
 msgstr "NOT any owned Planet"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:324
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:336
 msgid "Any Planet within Borders"
 msgstr "Any Planet within Borders"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:328
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:340
 msgid "Any Tile"
 msgstr "Any Tile"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:333
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:345
 msgid "Has {} Tile Blocker"
 msgstr "Has {} Tile Blocker"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:338
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:350
 msgid "Any Neighbor Country"
 msgstr "Any Neighbor Country"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:346
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:358
 msgid "Has {} {} {}"
 msgstr "Has {} {} {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:349
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:361
 msgid "Has any megastructure in empire"
 msgstr "Has any megastructure in empire"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:349
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:361
 msgid "Does NOT have any megastructure in empire"
 msgstr "Does NOT have any megastructure in empire"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:352
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:364
 msgid "Is FTL restricted"
 msgstr "Is FTL restricted"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:352
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:364
 msgid "Is NOT FTL restricted"
 msgstr "Is NOT FTL restricted"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:356
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:368
 msgid "{} has NOT authority"
 msgstr "{} has NOT Authority"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:360
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:372
 msgid "{} Slavery for all species"
 msgstr "{} Slavery for all species"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:366
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:378
 msgid "Is NOT same species with ROOT species"
 msgstr "Is NOT same species with ROOT species"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:370
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:382
 msgid "Has building {}"
 msgstr "Has building {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:374
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:386
 msgid "Does NOT have any dark matter in empire"
 msgstr "Does NOT have any dark matter in empire"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:374
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:386
 msgid "Has any dark matter in empire"
 msgstr "Has any dark matter in empire"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:378
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:390
 msgid "Does NOT have {} tradition"
 msgstr "Does NOT have {} tradition"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:382
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:394
 msgid "Is playable country"
 msgstr "Is playable country"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:382
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:394
 msgid "Is NOT playable country"
 msgstr "Is NOT playable country"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:387
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:399
 msgid "Number of years since mid game is {} {}"
 msgstr "Number of years since mid game is {} {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:391
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:403
 msgid "Is Nomadic Empire"
 msgstr ""
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:391
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:403
 msgid "Is NOT Nomadic Empire"
 msgstr ""
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:395
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:407
 msgid "TOS era or higher"
 msgstr ""
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:395
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:407
 msgid "NOT TOS era or higher"
 msgstr ""
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:399
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:411
 msgid "TMP era or higher"
 msgstr ""
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:399
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:411
 msgid "NOT TMP era or higher"
 msgstr ""
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:403
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:415
 msgid "Has non-standard ships"
 msgstr ""
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:403
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:415
 msgid "Does NOT have standard ships"
 msgstr "Does NOT have standard ships"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:407
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:419
 msgid "Is borg empire"
 msgstr ""
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:407
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:419
 msgid "Is NOT borg empire"
 msgstr ""
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:411
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:423
 msgid "Has unique fighter variant"
 msgstr ""
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:411
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:423
 msgid "Does NOT have fighter variant"
 msgstr "Does NOT have fighter variant"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:415
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:427
 msgid "Is temporal masters"
 msgstr "Is temporal masters"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:415
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:427
 msgid "Is NOT teporal masters"
 msgstr "Is NOT teporal masters"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:419
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:431
 msgid "Uses polaron torp"
 msgstr "Uses polaron torpedo"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:419
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:431
 msgid "Does NOT use polaron torp"
 msgstr "Does NOT use polaron torpedo"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:423
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:435
 msgid "Uses quantum torp"
 msgstr "Uses quantum torpedo"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:423
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:435
 msgid "Does NOT use quantum torp"
 msgstr "Does NOT use quantum torpedo"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:427
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:439
 msgid "Uses photonic torpedo"
 msgstr "Uses photonic torpedo"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:427
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:439
 msgid "Does NOT use photonic torpedo"
 msgstr "Does NOT use photonic torpedo"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:431
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:443
 msgid "Uses plasma torpedo"
 msgstr "Uses plasma torpedo"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:431
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:443
 msgid "Does NOT use plasma torpedo"
 msgstr "Does NOT use plasma torpedo"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:435
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:447
 msgid "Uses warp cores"
 msgstr "Uses warp cores"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:435
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:447
 msgid "Does NOT use warp cores"
 msgstr "Does NOT use warp cores"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:439
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:451
 msgid "Uses cloaks"
 msgstr "Uses cloaks"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:439
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:451
 msgid "Does NOT use cloaks"
 msgstr "Does NOT use cloaks"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:443
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:455
 msgid "Uses any kind of phaser weapons"
 msgstr "Uses any kind of phaser weapons"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:443
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:455
 msgid "Does NOT use any kind of phaser weapons"
 msgstr "Does NOT use any kind of phaser weapons"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:447
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:459
 msgid "Uses any kind of disruptor weapons"
 msgstr "Uses any kind of disruptor weapons"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:447
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:459
 msgid "Does NOT use any kind of disruptor weapons"
 msgstr "Does NOT use any kind of disruptor weapons"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:451
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:463
 msgid "Uses any kind of antiproton weapons"
 msgstr "Uses any kind of antiproton weapons"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:451
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:463
 msgid "Does NOT use any kind of antiproton weapons"
 msgstr "Does NOT use any kind of antiproton weapons"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:455
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:467
 msgid "Uses any kind of tetryon weapons"
 msgstr "Uses any kind of tetryon weapons"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:455
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:467
 msgid "Does NOT use any kind of tetryon weapons"
 msgstr "Does NOT use any kind of tetryon weapons"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:459
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:471
 msgid "Does NOT have any factions"
 msgstr "Does NOT have any factions"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:459
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:471
 msgid "Has any factions"
 msgstr "Has any factions"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:463
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:475
 msgid "Is machine cybernetic empire"
 msgstr "Is machine cybernetic empire"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:463
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:475
 msgid "Is NOT machine cybernetic empire"
 msgstr "Is NOT machine cybernetic empire"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:467
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:479
 msgid "Has espionage agency"
 msgstr "Has espionage agency"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:467
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:479
 msgid "Does NOT have espionage agency"
 msgstr "Does NOT have espionage agency"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:471
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:483
 msgid "Can NOT use cloning"
 msgstr "Can NOT use cloning"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:471
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:483
 msgid "Can use cloning"
 msgstr "Can use cloning"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:475
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:487
 msgid "Is non-humanoid"
 msgstr "Is non-humanoid"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:475
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:487
 msgid "Is humanoid"
 msgstr "Is humanoid"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:479
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:491
 msgid "Is master geneticist"
 msgstr "Is master geneticist"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:479
-#, fuzzy
-#| msgid "Is NOT some degree of Materialist"
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:491
 msgid "Is NOT master geneticist"
 msgstr "Is NOT master geneticist"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:483
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:495
 msgid "Empire can NOT study gagarin"
 msgstr "Empire can NOT study gagarin"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:483
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:495
 msgid "Empire can study gagarin"
 msgstr "Empire can study gagarin"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:487
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:499
 msgid "Empire can NOT study psionic techs"
 msgstr "Empire can NOT study psionic techs"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:487
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:499
 msgid "Empire can study psionic techs"
 msgstr "Empire can study psionic techs"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:491
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:503
 msgid "Is terran empire"
 msgstr "Is terran empire"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:491
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:503
 msgid "Is NOT terran empire"
 msgstr "Is NOT terran empire"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:495
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:507
 msgid "Has terran empire met kelpien"
 msgstr "Has terran empire met kelpien"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:495
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:507
 msgid "Has NOT terran empire met kelpien"
 msgstr "Has NOT terran empire met kelpien"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:499
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:511
 msgid "Empire has met borg"
 msgstr "Empire has met borg"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:499
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:511
 msgid "Empire has NOT met borg"
 msgstr "Empire has NOT met borg"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:503
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:515
 msgid "Is united earth"
 msgstr "Is united earth"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:503
-#, fuzzy
-#| msgid "Is NOT in a Federation"
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:515
 msgid "Is NOT united earth"
 msgstr "Is NOT united earth"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:507
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:519
 msgid "Is non-standard colonization"
 msgstr "Is non-standard colonization"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:507
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:519
 msgid "Is standard colonization"
 msgstr "Is standard colonization"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:510
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:522
 msgid "Does NOT have {}"
 msgstr "Does NOT have {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:513
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:525
 msgid "Does NOT have {} civic"
 msgstr "Does NOT have {} civic"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:516
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:528
 msgid "Has {} tradition"
 msgstr "Has {} tradition"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:519
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:531
 msgid "This Species is pre-sapient"
 msgstr "This Species is pre-sapient"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:520
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:532
 msgid "This Species is NOT pre-sapient"
 msgstr "This Species is NOT pre-sapient"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:526
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:542
 msgid "Has NOT encountered a {}"
 msgstr "Has NOT encountered a {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:532
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:552
 msgid "Has encountered a {}"
 msgstr "Has encountered a {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:538
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:562
 msgid "Does NOT control any system with a {}"
 msgstr "Does NOT control any system with a {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:544
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:572
 msgid "Controls a system with a {}"
 msgstr "Controls a system with a {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:547
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:575
 msgid "Is some degree of Pacifist"
 msgstr "Is some degree of Pacifist"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:548
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:576
 msgid "Is NOT some degree of Pacifist"
 msgstr "Is NOT some degree of Pacifist"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:551
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:579
 msgid "Is some degree of Militarist"
 msgstr "Is some degree of Militarist"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:552
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:580
 msgid "Is NOT some degree of Militarist"
 msgstr "Is NOT some degree of Militarist"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:555
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:583
 msgid "Is some degree of Materialist"
 msgstr "Is some degree of Materialist"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:556
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:584
 msgid "Is NOT some degree of Materialist"
 msgstr "Is NOT some degree of Materialist"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:559
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:587
 msgid "Is some degree of Spiritualist"
 msgstr "Is some degree of Spiritualist"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:560
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:588
 msgid "Is NOT some degree of Spiritualist"
 msgstr "Is NOT some degree of Spiritualist"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:565
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:591
+msgid "Is some degree of Xenophile"
+msgstr "Is some degree of Xenophile"
+
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:592
+msgid "Is NOT some degree of Xenophile"
+msgstr "Is NOT some degree of Xenophile"
+
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:597
 msgid "Number of Starbase {} is {} {}"
 msgstr "Number of Starbase {} is {} {}"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:568
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:600
+msgid "Is machine empire"
+msgstr "Is machine empire"
+
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:600
+msgid "Is NOT machine empire"
+msgstr "Is NOT machine empire"
+
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:606
+msgid "Number of {} districts is {} {}"
+msgstr "Number of {} districts is {} {}"
+
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:610
+msgid "Has deposit {}"
+msgstr "Has deposit {}"
+
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:614
 msgid "Always"
 msgstr "Always"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:568
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:614
 msgid "Never"
 msgstr "Never"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:573
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:619
 msgid "All of the following"
 msgstr "All of the following"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:578
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:624
 msgid "Any of the following"
 msgstr "Any of the following"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:583
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:629
 msgid "None of the following"
 msgstr "None of the following"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:604
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:650
 msgid "equal to"
 msgstr "equal to"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:608
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:654
 msgid "greater than"
 msgstr "greater than"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:609
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:655
 msgid "less than"
 msgstr "less than"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:610
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:656
 msgid "greater than or equal to"
 msgstr "greater than or equal to"
 
-#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:611
+#: .\stellaris_tech_tree\deep_parsers\weight_modifiers.py:657
 msgid "less than or equal to"
 msgstr "less than or equal to"
 
@@ -725,90 +753,115 @@ msgstr "less than or equal to"
 msgid "STELLARIS_TECH_TREE"
 msgstr "Stellaris Tech Tree"
 
-#: .\templates\about.html:70
+#: .\templates\about.html:71
 msgid ""
 "If you really like this project, please consider making a donation to "
 "support me. Thanks a lot! "
-msgstr "If you really like this project, please consider making a donation to support me. Thanks a lot! "
+msgstr ""
+"If you really like this project, please consider making a donation to "
+"support me. Thanks a lot! "
 
-#: .\templates\about.html:71
+#: .\templates\about.html:72
 msgid ""
 "The qrcode on the left supports Alipay, WeChat and QQ, or you can donate via "
 "PayPal below."
-msgstr "The qrcode on the left supports Alipay, WeChat and QQ, or you can donate via PayPal below."
+msgstr ""
+"The qrcode on the left supports Alipay, WeChat and QQ, or you can donate via "
+"PayPal below."
 
-#: .\templates\about.html:76
+#: .\templates\about.html:77
 msgid "About Stellaris Tech Tree"
 msgstr "About Stellaris Tech Tree"
 
-#: .\templates\about.html:78
+#: .\templates\about.html:79
 msgid "Stellaris Tech Tree Project is inspired by "
 msgstr "Stellaris Tech Tree Project is inspired by "
 
-#: .\templates\about.html:80
+#: .\templates\about.html:81
 msgid "this project"
 msgstr "this project"
 
-#: .\templates\about.html:82
+#: .\templates\about.html:83
 msgid ""
 " and modified to make it easy to support new versions and new languages."
-msgstr " and modified to make it easy to support new versions and new languages."
+msgstr ""
+" and modified to make it easy to support new versions and new languages."
 
-#: .\templates\about.html:84
+#: .\templates\about.html:85
 msgid ""
 "It contains several localized versions for different language users, and can "
 "be expanded by adding new localization files."
-msgstr "It contains several localized versions for different language users, and can be expanded by adding new localization files."
+msgstr ""
+"It contains several localized versions for different language users, and can "
+"be expanded by adding new localization files."
 
-#: .\templates\about.html:87
+#: .\templates\about.html:88
 msgid "Copyright © 2017 Cother"
 msgstr "Copyright © 2017 Cother"
 
-#: .\templates\about.html:88
+#: .\templates\about.html:89
 msgid "Licensed under General Public License v2.0 License."
 msgstr "Licensed under General Public License v2.0 License."
 
-#: .\templates\about.html:91
+#: .\templates\about.html:92
 msgid ""
 "It is obvious that ‘Stellaris Tech Tree’ is a boring name for a project, but "
 "I give up thinking anyway. It is concise at least."
-msgstr "It is obvious that ‘Stellaris Tech Tree’ is a boring name for a project, but I give up thinking anyway. It is concise at least."
+msgstr ""
+"It is obvious that ‘Stellaris Tech Tree’ is a boring name for a project, but "
+"I give up thinking anyway. It is concise at least."
 
-#: .\templates\about.html:94
+#: .\templates\about.html:95
 msgid "Get source code"
 msgstr "Get source code"
 
-#: .\templates\about.html:96
+#: .\templates\about.html:97
 msgid ""
 "If you are willing to make contributions to this project, Stellaris Tech "
 "Tree is available on GitHub."
-msgstr "If you are willing to make contributions to this project, Stellaris Tech Tree is available on GitHub."
+msgstr ""
+"If you are willing to make contributions to this project, Stellaris Tech "
+"Tree is available on GitHub."
 
-#: .\templates\about.html:103
+#: .\templates\about.html:104
 msgid "Donate"
 msgstr "Donate"
 
-#: .\templates\about.html:105
+#: .\templates\about.html:106
 msgid ""
 "I will try my best to keep this website free and free from ads and mining "
 "scripts, but a donation will be a great help."
-msgstr "I will try my best to keep this website free and free from ads and mining scripts, but a donation will be a great help."
-
-#: .\templates\about.html:106
-msgid ""
-"If you really like this project, please consider making a donation to "
-"support me. Thanks a lot!"
-msgstr "If you really like this project, please consider making a donation to support me. Thanks a lot!"
+msgstr ""
+"I will try my best to keep this website free and free from ads and mining "
+"scripts, but a donation will be a great help."
 
 #: .\templates\about.html:107
 msgid ""
+"If you really like this project, please consider making a donation to "
+"support me. Thanks a lot!"
+msgstr ""
+"If you really like this project, please consider making a donation to "
+"support me. Thanks a lot!"
+
+#: .\templates\about.html:108
+msgid ""
 "If you want to donate via Alipay, WeChat or QQ, please scan the qrcode "
 "above. If you want to pay via PayPal, click the button."
-msgstr "If you want to donate via Alipay, WeChat or QQ, please scan the qrcode above. If you want to pay via PayPal, click the button."
+msgstr ""
+"If you want to donate via Alipay, WeChat or QQ, please scan the qrcode "
+"above. If you want to pay via PayPal, click the button."
 
-#: .\templates\about.html:109
+#: .\templates\about.html:110
 msgid "Thanks again, every penny counts."
 msgstr "Thanks again, every penny counts."
+
+#: .\templates\hamburger.html:9
+msgid "LANGUAGE"
+msgstr "Language"
+
+#: .\templates\hamburger.html:29
+msgid "VERSION"
+msgstr "Version"
 
 #: .\templates\index.html:77 .\templates\index.html:79
 msgid "SEARCH"
@@ -822,31 +875,23 @@ msgstr "Category Sample"
 msgid "SEARCH BY TECHNOLOGY NAME"
 msgstr "Search by technology name"
 
-#: .\templates\index.html:113
-msgid "LANGUAGE"
-msgstr "Language"
-
-#: .\templates\index.html:129
-msgid "VERSION"
-msgstr "Version"
-
-#: .\templates\index.html:178 .\templates\index.html:227
+#: .\templates\index.html:137 .\templates\index.html:185
 msgid "Loading..."
 msgstr "Loading..."
 
-#: .\templates\index.html:244
+#: .\templates\index.html:202
 msgid "PHYSICS"
 msgstr "Physics"
 
-#: .\templates\index.html:244
+#: .\templates\index.html:202
 msgid "SOCIETY"
 msgstr "Society"
 
-#: .\templates\index.html:244
+#: .\templates\index.html:202
 msgid "ENGINEERING"
 msgstr "Engineering"
 
-#: .\templates\index.html:298 .\templates\index.html:308
+#: .\templates\index.html:256 .\templates\index.html:266
 msgid "NO SUGGESTIONS PROVIDED"
 msgstr "There are no suggestions for your query."
 
@@ -864,3 +909,11 @@ msgstr "There are no suggestions for your query."
 
 #~ msgid "root"
 #~ msgstr "root"
+
+#Country types
+msgid "default"
+msgstr "Default"
+msgid "fallen_empire"
+msgstr "Fallen Empire"
+msgid "awakened_fallen_empire"
+msgstr "Awakened Fallen Empire"
