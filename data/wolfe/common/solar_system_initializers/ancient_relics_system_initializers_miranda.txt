@@ -1,0 +1,74 @@
+@distance = 50
+@base_moon_distance = 10
+#### README: On changing and saving file, game must be restarted from desktop to prevent crash.
+
+
+####### The Rubricator System #######
+rubricator_system = {
+	class = rl_standard_stars
+	usage = misc_system_init
+	
+	usage_odds = 0
+	
+	flags = { rubricator_system }
+
+	prevent_anomalies = yes
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		count = { min = 2 max = 4 }
+		class = rl_unhabitable_planets
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+
+	planet = {
+		class = pc_relic
+		orbit_distance = 30
+		init_effect = {
+			set_planet_flag = rubricator_planet
+			save_global_event_target_as = rubricator_planet
+			relic_world_deposits = yes
+			create_archaeological_site = rubricator_digsite
+		}
+	}
+	planet = {
+		count = { min = 2 max = 4 }
+		class = rl_unhabitable_planets
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	init_effect = {
+		save_global_event_target_as = rubricator_system
+	}
+}
+
+
+
+

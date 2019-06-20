@@ -1,0 +1,20 @@
+@precursor_easy = 6
+@precursor_medium = 8
+@precursor_hard = 10
+
+ANCREL_MECHANO_CAT = {
+	desc = "ANCREL_MECHANO_CAT_DESC"
+	picture = "GFX_evt_relic_world"
+	level = 5
+	
+	spawn_chance = {
+		modifier = {
+			add = 0 #Called in initializer
+		}
+	}
+
+	on_spawn = {
+	}
+	
+	on_success = ancrel.2050
+}
