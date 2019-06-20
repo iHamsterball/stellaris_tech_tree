@@ -119,6 +119,11 @@ def p_expression_number(tokens):
     tokens[0] = tokens[1]
 
 
+def p_expression_event_target(tokens):
+    'expression : key COLON key'
+    tokens[0] = [tokens[1], tokens[2]]
+
+
 def p_binop(tokens):
     '''binop : key EQUALS expression
              | key GTHAN expression
@@ -328,7 +333,7 @@ def generate_localized_tech(locale, version):
     pdx_scripted_variables = '\r\n'.join([open(file_path).read() for file_path
                                     in scripted_variables_paths])
     pdx_parser = yacc()
-    
+
     parsed_scripts = {
         'technology': pdx_parser.parse(pdx_tech_scripts),
         'army': pdx_parser.parse(pdx_army_scripts),

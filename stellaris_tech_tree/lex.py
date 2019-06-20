@@ -3,7 +3,7 @@ from ply.lex import lex
 import sys
 
 tokens = ('BAREWORD', 'STRING', 'VARIABLE', 'NUMBER', 'EQUALS', 'GTHAN', 'LTHAN',
-          'GTHANEQ', 'LTHANEQ', 'LBRACE', 'RBRACE')
+          'GTHANEQ', 'LTHANEQ', 'LBRACE', 'RBRACE', 'COLON')
 
 t_EQUALS = '='
 t_GTHAN = r'>'
@@ -12,6 +12,7 @@ t_GTHANEQ = r'>='
 t_LTHANEQ = r'<='
 t_LBRACE = '{'
 t_RBRACE = '}'
+t_COLON = ':'
 t_ignore = ' \t'
 
 def lexed_tokens(lexer):

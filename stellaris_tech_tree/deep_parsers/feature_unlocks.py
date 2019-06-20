@@ -3,6 +3,7 @@
 from django.utils.translation import ugettext
 import re
 
+
 class FeatureUnlocks:
     def __init__(self, armies, army_attachments, buildable_pops, buildings,
                  components, edicts, policies, resources, spaceport_modules,
@@ -18,48 +19,56 @@ class FeatureUnlocks:
         self._spaceport_modules = spaceport_modules
         self._tile_blockers = tile_blockers
 
-        def __localize(alt_key):
-            return loc_data[alt_key]
+        def _alt_key(key):
+            yield key
+            yield key.upper()
+            yield key.lower()
+            yield _prefix_key('mod_', key)
+            yield _prefix_key('MOD_', key).upper()
+            yield _prefix_key('MOD_', key).lower()
+            yield _prefix_key('MOD_COUNTRY_', key).upper()
+            yield _prefix_key('MOD_POP_', key).upper()
+            yield _prefix_key('MOD_PLANET_', key).upper()
 
-        def _localize(string):
-            try:
-                localized = loc_data[string] if type(string) is str \
-                            else loc_data[string.group(1)]
-            except KeyError:
-                if isinstance(string, str):
-                    prefix = 'MOD_'
-                    key = string
-                    alt_key = (prefix + key).upper()
-                    try:
-                        localized = __localize(alt_key)
-                    except KeyError:
-                        try:
-                            alt_key = alt_key.lower()
-                            localized = __localize(alt_key)
-                        except KeyError:
-                            prefix = 'MOD_COUNTRY_'
-                            alt_key = (prefix + key).upper()
-                            try:
-                                localized = __localize(alt_key)
-                            except KeyError:
-                                prefix = 'MOD_POP_'
-                                alt_key = (prefix + key).upper()
-                                try:
-                                    localized = __localize(alt_key)
-                                except KeyError:
-                                    prefix = 'MOD_PLANET_'
-                                    alt_key = (prefix + key).upper()
-                                    try:
-                                        localized = __localize(alt_key)
-                                    except KeyError:
-                                        # Give up.
-                                        localized = string
-                else:
-                    localized = _localize('tech_gene_tailoring_POINTS')
+        def _prefix_key(prefix, key):
+            return prefix + key
+
+        def _typo_fix(key):
+            key = key.replace('archeaological', 'archaeological')
+            return key
+
+        def _mapping_key(key):
+            return dict(
+                all_technology_research_speed='MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED',
+                science_ship_survey_speed='MOD_SHIP_SCIENCE_SURVEY_SPEED',
+                ship_anomaly_research_speed_mult='MOD_SHIP_ANOMALY_RESEARCH_SPEED',
+                ship_anomaly_generation_chance_mult='MOD_SHIP_ANOMALY_GENERATION_CHANCE',
+                species_leader_exp_gain='MOD_LEADER_SPECIES_EXP_GAIN',
+            ).get(key, key)
+
+        def _localize(arg):
+            localized = None
+            key = arg if isinstance(arg, str) else arg.group(1)
+            key = _typo_fix(key)
+            key = _mapping_key(key)
+            for alt_key in _alt_key(key):
+                try:
+                    localized = loc_data[alt_key]
+                    break
+                except KeyError:
+                    continue
+                except Exception as e:
+                    print(e.with_traceback)
+            if not localized:
+                localized = key
 
             while '$' in localized:
-                localized = re.sub(r'\$([\w\|\+=]+)\$', _localize, localized)
-
+                localized = re.sub(r'\$([\w|+=]+)\$', _localize, localized)
+            if '@' in localized:
+                localized = _localize(localized.replace('@', ''))
+            if '_' in localized:
+                print('Potential unprocessed localisation {}: {}'.format(
+                    key, localized))
             return localized
 
         self._localize = _localize
@@ -69,19 +78,19 @@ class FeatureUnlocks:
         feature_flags = self._feature_flags(tech_data)
         custom_unlock_tooltip = self._unlocks(tech_data)
         unlocks = self._modifiers(tech_data) \
-                  + custom_unlock_tooltip + feature_flags \
-                  + ([] if custom_unlock_tooltip != []
-                     else self._army_unlocks(tech_key)
-                     + self._army_attachment_unlocks(tech_key)
-                     + self._buildable_pop_unlocks(tech_key)
-                     + self._building_unlocks(tech_key)
-                     + feature_flags
-                     + self._component_unlocks(tech_key)
-                     + self._edict_unlocks(tech_key)
-                     + self._policy_unlocks(tech_key)
-                     + self._resource_unlocks(tech_key)
-                     + self._spaceport_module_unlocks(tech_key)
-                     + self._tile_blocker_unlocks(tech_key))
+            + custom_unlock_tooltip + feature_flags \
+            + ([] if custom_unlock_tooltip != []
+               else self._army_unlocks(tech_key)
+               + self._army_attachment_unlocks(tech_key)
+               + self._buildable_pop_unlocks(tech_key)
+               + self._building_unlocks(tech_key)
+               + feature_flags
+               + self._component_unlocks(tech_key)
+               + self._edict_unlocks(tech_key)
+               + self._policy_unlocks(tech_key)
+               + self._resource_unlocks(tech_key)
+               + self._spaceport_module_unlocks(tech_key)
+               + self._tile_blocker_unlocks(tech_key))
 
         return unlocks
 
@@ -91,20 +100,15 @@ class FeatureUnlocks:
             key = list(modifier)[0]
             try:
                 value = ('{:+.0%}'.format(modifier[key])
-                        if modifier[key] < 1
-                        or int(modifier[key]) != modifier[key]
-                        else '{:+d}'.format(int(modifier[key])))
+                         if modifier[key] < 1
+                         or int(modifier[key]) != modifier[key]
+                         else '{:+d}'.format(int(modifier[key])))
             except TypeError:
                 try:
                     value = self._localize(modifier[key])
                 except AttributeError:
-                    #description_parameters
+                    # description_parameters
                     value = ''
-
-            if key == 'all_technology_research_speed':
-                key = 'MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED'
-            elif key == 'science_ship_survey_speed':
-                key = 'MOD_SHIP_SCIENCE_SURVEY_SPEED'
 
             localized = {self._localize(key): value}
 
@@ -119,7 +123,6 @@ class FeatureUnlocks:
             acquired_modifiers = []
 
         return acquired_modifiers
-
 
     def _unlocks(self, tech_data):
         def localize(string):
@@ -141,7 +144,8 @@ class FeatureUnlocks:
     def _feature_flags(self, tech_data):
         try:
             feature_flags = [
-                ugettext('Unlocks Feature: ') + self._localize('feature_' + feature_flag)
+                ugettext('Unlocks Feature: ') +
+                self._localize('feature_' + feature_flag)
                 for feature_flag
                 in next(iter(
                     attribute for attribute in tech_data
@@ -155,7 +159,7 @@ class FeatureUnlocks:
 
     def _army_unlocks(self, tech_key):
         unlocked_armies = [army for army in self._armies
-                              if tech_key in army.prerequisites]
+                           if tech_key in army.prerequisites]
         return [ugettext('Unlocks Army: {}').format(army.name)
                 for army in unlocked_armies]
 
@@ -181,20 +185,20 @@ class FeatureUnlocks:
 
     def _component_unlocks(self, tech_key):
         unlocked_components = [component for component in self._components
-                              if tech_key in component.prerequisites]
+                               if tech_key in component.prerequisites]
         return [ugettext('Unlocks Component: {}').format(self._localize(component.name))
                 for component in unlocked_components]
 
     def _edict_unlocks(self, tech_key):
         unlocked_edicts = [edict for edict in self._edicts
-                              if tech_key in edict.prerequisites]
+                           if tech_key in edict.prerequisites]
         return [ugettext('Unlocks Edict: {}').format(edict.name)
                 for edict in unlocked_edicts]
 
     def _policy_unlocks(self, tech_key):
         def relevant_options(policy):
             return [{'name': option.name,
-                     'policy_name': policy.name }
+                     'policy_name': policy.name}
                     for option in policy.options
                     if tech_key in option.prerequisites]
 
@@ -204,14 +208,14 @@ class FeatureUnlocks:
                             for option in options]
 
         return [ugettext('Unlocks Policy: {} - {}').format(self._localize(option['policy_name']),
-                                                 self._localize(option['name']))
+                                                           self._localize(option['name']))
                 for option in unlocked_options]
 
     def _resource_unlocks(self, tech_key):
         unlocked_resources = [resource for resource in self._resources
                               if tech_key in resource.prerequisites]
         return [ugettext('Reveals Resource: {} ([[{}]])').format(resource.name,
-                                                       resource.key)
+                                                                 resource.key)
                 for resource in unlocked_resources]
 
     def _spaceport_module_unlocks(self, tech_key):
