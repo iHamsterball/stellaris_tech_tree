@@ -7,6 +7,7 @@ import sys
 
 localization_map = {}
 
+
 def parse(modifier, loc_data):
     global localization_map
     localization_map = loc_data
@@ -40,6 +41,37 @@ def parse(modifier, loc_data):
     return pseudo_yaml
 
 
+def _alt_key(key):
+    yield key
+    yield 'bypass_{}'.format(key).upper()
+    yield '{}_base'.format(key).lower()
+    yield '{}_name'.format(key).lower()
+
+
+def _localize(arg):
+    localized = None
+    key = arg if isinstance(arg, str) else arg.group(1)
+    for alt_key in _alt_key(key):
+        try:
+            localized = localization_map[alt_key]
+            break
+        except KeyError:
+            continue
+        except Exception as e:
+            print(e.with_traceback)
+    if not localized:
+        print('Unprocessed weight modifier {}: {}'.format(key, localized))
+    else:
+        while '$' in localized:
+            localized = re.sub(r'\$([\w|+=]+)\$', _localize, localized)
+        if '@' in localized:
+            localized = _localize(localized.replace('@', ''))
+            print(key, localized)
+        if '_' in localized:
+            print('Unprocessed weight modifier {}: {}'.format(key, localized))
+    return localized
+
+
 def _parse_condition(condition):
     key = next(iter(condition))
     value = condition[key]
@@ -60,6 +92,9 @@ def _expert(expert):
 
 
 def _localize_factor(factor):
+    # TODO: Temporary workaround, highly probably malfunctioned on next update.
+    # Version 2.3
+    factor = factor if not isinstance(factor, str) else 1.5
     return u'\xD7{}'.format(factor)
 
 
@@ -69,76 +104,76 @@ def _localize_add(add):
 
 
 def _localize_has_ethic(value):
-    ethic = localization_map[value]
+    ethic = _localize(value)
     return ugettext('Has {} Ethic').format(ethic)
 
 
 def _localize_has_not_ethic(value):
-    ethic = localization_map[value]
+    ethic = _localize(value)
     return ugettext('Does NOT have {} Ethic').format(ethic)
 
 
 def _localize_has_civic(value):
-    civic = localization_map[value]
+    civic = _localize(value)
     return ugettext('Has {} Government Civic').format(civic)
 
 
 def _localize_has_valid_civic(value):
-    civic = localization_map[value]
+    civic = _localize(value)
     return ugettext('Has {} Government Civic').format(civic)
 
 
 def _localize_has_not_valid_civic(value):
-    civic = localization_map[value]
+    civic = _localize(value)
     return ugettext('Does NOT have {} Government Civic').format(civic)
 
 
 def _localize_has_ascension_perk(value):
-    perk = localization_map[value]
+    perk = _localize(value)
     return ugettext('Has {} Ascension Perk').format(perk)
 
 
 def _localize_has_megastructure(value):
-    megastructure = localization_map[value]
+    megastructure = _localize(value)
     return ugettext('Has Megatructure {}').format(megastructure)
 
 
 def _localize_has_policy_flag(value):
     try:
-        policy_flag = localization_map[value]
+        policy_flag = _localize(value)
     except (KeyError):
-        policy_flag = localization_map[value+'_name']
+        policy_flag = _localize(value+'_name')
     return ugettext('Has {} Policy').format(policy_flag)
 
 
 def _localize_has_trait(value):
-    trait = localization_map[value]
+    trait = _localize(value)
     return ugettext('Has {} Trait').format(trait)
 
 
 def _localize_pop_has_trait(value):
-    trait = localization_map[value]
+    trait = _localize(value)
     return ugettext('Pop in empire has {} trait').format(trait)
 
 
 def _localize_has_authority(value):
-    authority = localization_map[value]
+    authority = _localize(value)
     return ugettext('Has {} Authority').format(authority)
 
 
 def _localize_host_has_dlc(dlc):
-    # dlc = localization_map[value]
+    # dlc = _localize(value)
     return ugettext('Host does has the {} DLC').format(dlc)
 
 
 def _localize_host_has_not_dlc(dlc):
-    # dlc = localization_map[value]
+    # dlc = _localize(value)
     return ugettext('Host does NOT have the {} DLC').format(dlc)
 
 
 def _localize_has_technology(value):
     try:
-        technology = localization_map[value]
+        technology = _localize(value)
     except KeyError:
         technology = value
 
@@ -147,7 +182,7 @@ def _localize_has_technology(value):
 
 def _localize_has_not_technology(value):
     try:
-        technology = localization_map[value]
+        technology = _localize(value)
     except KeyError:
         technology = value
 
@@ -155,12 +190,12 @@ def _localize_has_not_technology(value):
 
 
 def _localize_has_modifier(value):
-    modifier = localization_map[value]
+    modifier = _localize(value)
     return ugettext('Has the {} modifier').format(modifier)
 
 
 def _localize_has_not_modifier(value):
-    modifier = localization_map[value]
+    modifier = _localize(value)
     return ugettext('Does NOT have the {} modifier').format(modifier)
 
 
@@ -173,12 +208,12 @@ def _localize_ideal_planet_class(value):
 
 
 def _localize_is_planet_class(value):
-    planet_class = localization_map[value]
+    planet_class = _localize(value)
     return ugettext('Is {}').format(planet_class)
 
 
 def _localize_has_government(value):
-    government = localization_map[value]
+    government = _localize(value)
     return ugettext('Has {}').format(government)
 
 
@@ -223,21 +258,21 @@ def _localize_is_ai(value):
 def _localize_is_same_species(value):
     localized_value = 'Dominant' \
                       if value.lower() == 'root' \
-        else localization_map[value]
+        else _localize(value)
     return ugettext('Is of the {} Species').format(localized_value)
 
 
 def _localize_is_species(value):
     localized_value = 'Dominant' \
                       if value.lower() == 'root' \
-        else localization_map[value]
+        else _localize(value)
     article = 'an' if localized_value[0].lower() in 'aeiou' else 'a'
 
     return ugettext('Is {} {}').format(article, localized_value)
 
 
 def _localize_is_species_class(value):
-    localized_value = localization_map[value]
+    localized_value = _localize(value)
     article = 'an' if localized_value[0].lower() in 'aeiou' else 'a'
 
     return ugettext('Is {} {}').format(article, localized_value)
@@ -295,7 +330,7 @@ def _localize_has_level(value):
 
 
 def _localize_has_expertise(value):
-    expertise = localization_map[value]
+    expertise = _localize(value)
     if expertise.find(':') != -1 or expertise.find('：') != -1:
         colon_loc = 1 + expertise.find(':') + expertise.find('：')
         truncated = expertise.replace(expertise[0:colon_loc+1], '')
@@ -383,7 +418,7 @@ def _localize_any_tile(values):
 
 
 def _localize_has_blocker(value):
-    blocker = localization_map[value]
+    blocker = _localize(value)
     return ugettext('Has {} Tile Blocker').format(blocker)
 
 
@@ -395,14 +430,14 @@ def _localize_any_neighbor_country(values):
 def _localize_has_resource(value):
     resource, amount = value[0]['type'], value[1]['amount']
     operator, amount = _operator_and_value(amount)
-    localized_resource = localization_map[resource]
+    localized_resource = _localize(resource)
     return ugettext('Has {} {} {}').format(operator, amount, localized_resource)
 
 
 def _localize_has_not_resource(value):
     resource, amount = value[0]['type'], value[1]['amount']
     operator, amount = _operator_and_value(amount)
-    localized_resource = localization_map[resource]
+    localized_resource = _localize(resource)
     return ugettext('Does NOT have {} {} {}').format(operator, amount, localized_resource)
 
 
@@ -415,13 +450,13 @@ def _localize_is_ftl_restricted(value):
 
 
 def _localize_has_not_authority(value):
-    localized_machine_intelligence = localization_map[value]
+    localized_machine_intelligence = _localize(value)
     return ugettext('{} has NOT authority').format(localized_machine_intelligence)
 
 
 def _localize_has_not_policy_flag(value):
     # Version 1.3 and earlier
-    return ugettext('{} Slavery for all species').format(localization_map[value])
+    return ugettext('{} Slavery for all species').format(_localize(value))
 
 
 def _localize_not_is_same_species(value):
@@ -433,7 +468,7 @@ def _localize_not_is_same_species(value):
 
 def _localize_has_building(value):
     # Alpha Mod
-    return ugettext('Has building {}').format(localization_map[value])
+    return ugettext('Has building {}').format(_localize(value))
 
 
 def _localize_empire_has_not_sr_dark_matter(value):
@@ -443,7 +478,7 @@ def _localize_empire_has_not_sr_dark_matter(value):
 
 def _localize_has_not_tradition(value):
     # Alpha Mod
-    return ugettext('Does NOT have {} tradition').format(localization_map[value])
+    return ugettext('Does NOT have {} tradition').format(_localize(value))
 
 
 def _localize_is_playable_country(value):
@@ -608,15 +643,15 @@ def _localize_is_non_standard_colonization(value):
 
 
 def _localize_has_not_government(value):
-    return ugettext('Does NOT have {}').format(localization_map[value])
+    return ugettext('Does NOT have {}').format(_localize(value))
 
 
 def _localize_has_not_civic(value):
-    return ugettext('Does NOT have {} civic').format(localization_map[value])
+    return ugettext('Does NOT have {} civic').format(_localize(value))
 
 
 def _localize_has_tradition(value):
-    return ugettext('Has {} tradition').format(localization_map[value])
+    return ugettext('Has {} tradition').format(_localize(value))
 
 
 def _localize_is_sapient(value):
@@ -625,47 +660,19 @@ def _localize_is_sapient(value):
 
 
 def _localize_has_not_seen_any_bypass(value):
-    bypass = localization_map.get('bypass_{}'.format(value).upper(), None)
-    if not bypass:
-        bypass = localization_map.get('{}_base'.format(value).lower(), None)
-    if not bypass:
-        bypass = value
-    if bypass.startswith('$'):
-        bypass = localization_map[bypass.replace('$', '')]
-    return ugettext('Has NOT encountered a {}').format(bypass)
+    return ugettext('Has NOT encountered a {}').format(_localize(value))
 
 
 def _localize_has_seen_any_bypass(value):
-    bypass = localization_map.get('bypass_{}'.format(value).upper(), None)
-    if not bypass:
-        bypass = localization_map.get('{}_base'.format(value).lower(), None)
-    if not bypass:
-        bypass = value
-    if bypass.startswith('$'):
-        bypass = localization_map[bypass.replace('$', '')]
-    return ugettext('Has encountered a {}').format(bypass)
+    return ugettext('Has encountered a {}').format(_localize(value))
 
 
 def _localize_not_owns_any_bypass(value):
-    bypass = localization_map.get('bypass_{}'.format(value).upper(), None)
-    if not bypass:
-        bypass = localization_map.get('{}_base'.format(value).lower(), None)
-    if not bypass:
-        bypass = value
-    if bypass.startswith('$'):
-        bypass = localization_map[bypass.replace('$', '')]
-    return ugettext('Does NOT control any system with a {}').format(bypass)
+    return ugettext('Does NOT control any system with a {}').format(_localize(value))
 
 
 def _localize_owns_any_bypass(value):
-    bypass = localization_map.get('bypass_{}'.format(value).upper(), None)
-    if not bypass:
-        bypass = localization_map.get('{}_base'.format(value).lower(), None)
-    if not bypass:
-        bypass = value
-    if bypass.startswith('$'):
-        bypass = localization_map[bypass.replace('$', '')]
-    return ugettext('Controls a system with a {}').format(bypass)
+    return ugettext('Controls a system with a {}').format(_localize(value))
 
 
 def _localize_is_pacifist(value):
@@ -709,7 +716,7 @@ def _localize_is_authoritarian(value):
 
 
 def _localize_count_starbase_sizes(value):
-    starbase_size = localization_map[value[0]['starbase_size']]
+    starbase_size = _localize(value[0]['starbase_size'])
     operator, value = _operator_and_value(value[1]['count'])
     return ugettext('Number of Starbase {} is {} {}').format(starbase_size, operator, value)
 
@@ -720,13 +727,13 @@ def _localize_is_machine_empire(value):
 
 def _localize_num_districts(value):
     district_type_key = value[0].get('type')
-    district_type = localization_map[district_type_key]
+    district_type = _localize(district_type_key)
     operator, value = _operator_and_value(value[1].get('value'))
     return ugettext('Number of {} districts is {} {}').format(district_type, operator, value)
 
 
 def _localize_has_deposit(value):
-    deposit = localization_map[value]
+    deposit = _localize(value)
     return ugettext('Has deposit {}').format(deposit)
 
 

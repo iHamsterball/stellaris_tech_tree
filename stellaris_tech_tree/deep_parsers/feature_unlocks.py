@@ -67,8 +67,7 @@ class FeatureUnlocks:
             if '@' in localized:
                 localized = _localize(localized.replace('@', ''))
             if '_' in localized:
-                print('Potential unprocessed localisation {}: {}'.format(
-                    key, localized))
+                print('Unprocessed feature unlock {}: {}'.format(key, localized))
             return localized
 
         self._localize = _localize
