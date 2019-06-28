@@ -8,6 +8,19 @@ function waitLoadDrag(elementId, time) {
   }
 }
 
+// Test via a getter in the options object to see if the passive property is accessed
+var supportsPassive = false;
+try {
+  var opts = Object.defineProperty({}, 'passive', {
+    get: function() {
+      supportsPassive = true;
+    }
+  });
+  window.addEventListener("testPassive", null, opts);
+  window.removeEventListener("testPassive", null, opts);
+} catch (e) {}
+
+
 let minX, minY, maxX, maxY;
 function drag(elementId) {
   let element = document.getElementById(elementId);
@@ -200,7 +213,7 @@ function drag(elementId) {
   element.addEventListener('mousedown', function (event) {
     element.style.cursor = "move";
     onMousedown(event);
-  }, false);
+  }, supportsPassive ? { passive: true } : false);
 
   //触屏开始状态
   element.addEventListener('touchstart', function (event) {
@@ -214,18 +227,18 @@ function drag(elementId) {
     evt.initEvent("mouseout", true, true);
     event.target.dispatchEvent(evt);
     onTouchstart(event);
-  }, false);
+  }, supportsPassive ? { passive: true } : false);
 
   //元素移动过程中
   element.addEventListener('mousemove', function (event) {
     onMousemove(event);
-  }, false);
+  }, supportsPassive ? { passive: true } : false);
 
   //触屏移动过程中
   element.addEventListener('touchmove', function (event) {
     event.preventDefault();
     onTouchmove(event);
-  }, false);
+  }, supportsPassive ? { passive: true } : false);
 
   //释放拖拽状态
   element.addEventListener('mouseup', function (event) {
@@ -233,7 +246,7 @@ function drag(elementId) {
     position.state = false;
     position.rAF = true;
     cancelAnimationFrame(pendingUpdate);
-  }, false);
+  }, supportsPassive ? { passive: true } : false);
 
   //触屏释放状态
   element.addEventListener('touchend', function (event) {
@@ -247,5 +260,5 @@ function drag(elementId) {
       evt.initEvent("mouseover", true, true);
       event.target.dispatchEvent(evt);
     }
-  }, false);
+  }, supportsPassive ? { passive: true } : false);
 }
