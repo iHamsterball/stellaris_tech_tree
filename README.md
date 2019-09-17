@@ -1,5 +1,13 @@
 # Stellaris Tech Tree Project
 
+![GitHub](https://img.shields.io/github/license/iHamsterball/stellaris_tech_tree)
+![Stellaris Version](https://img.shields.io/badge/dynamic/json?url=http%3A%2F%2Flab.cother.org%2Fstellaris%2Fversions%2F&label=stellaris&query=%24.latest&color=yellow)
+![Uptime Robot status](https://img.shields.io/uptimerobot/status/m781815671-e95b7e1b8e40acf6bb134359)
+![Uptime Robot ratio (7 days)](https://img.shields.io/uptimerobot/ratio/7/m781815671-e95b7e1b8e40acf6bb134359)
+![Requires.io](https://img.shields.io/requires/github/iHamsterball/stellaris_tech_tree)
+![GitHub top language](https://img.shields.io/github/languages/top/iHamsterball/stellaris_tech_tree)
+![GitHub repo size](https://img.shields.io/github/repo-size/iHamsterball/stellaris_tech_tree)
+
 The Stellaris Tech Tree Project is a visual, expandable, free query & display system for game Stellaris. It contains several localized versions for different language users, and can be expanded by adding new localization files.
 
 The [foundation](https://gitlab.com/bipedalshark/stellaris-tech-tree "foundation") of this project is written by Richard Simões, according to the license file he added several months after this project was started. Here is my regard and [original license file](docs/ORIGINAL.md) required by MIT license.
