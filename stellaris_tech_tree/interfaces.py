@@ -5,7 +5,9 @@ import re
 import yaml
 from django.http import JsonResponse, HttpResponseBadRequest
 from django.views.decorators.gzip import gzip_page
+
 from .parse import generate_localized_tech
+from .versions import versions as version_dict
 
 @gzip_page
 def techs(request, fallback=False):
@@ -40,5 +42,8 @@ def techs(request, fallback=False):
             return techs(request, fallback=True)
 
     #print(type(data))
-
     return JsonResponse(data, safe=False)
+
+
+def versions(request, fallback=False):
+    return JsonResponse(version_dict)

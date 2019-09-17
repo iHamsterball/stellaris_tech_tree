@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^index/', views.index),
     url(r'^about/', views.about),
     url(r'^techs/', interfaces.techs),
+    url(r'^versions/', interfaces.versions),
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^jsi18n/$', JavaScriptCatalog.as_view(), name='javascript-catalog'),
 ]
