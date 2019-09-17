@@ -46,4 +46,5 @@ def techs(request, fallback=False):
 
 
 def versions(request, fallback=False):
+    version_dict['latest'] = next(iter(version_dict.values()))
     return JsonResponse(version_dict)
