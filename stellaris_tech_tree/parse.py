@@ -227,7 +227,7 @@ def localized_strings(loc_file_paths, locale):
         actual_yaml = re.sub(r'(?<![\\])\\(?![\'\"abenvtrfox])', r'\\\\', need_escape_yaml)
 
         file_data = yaml.load(actual_yaml, Loader=yaml.Loader)
-        loc_map = file_data[locale_postfix[locale]]
+        loc_map = file_data[locale_postfix[locale]] if file_data else dict()
         try:
             loc_data.update(loc_map)
         except TypeError:
