@@ -1,0 +1,182 @@
+
+automate_habitat_energy_planet = {
+	available = {
+		has_designation = col_habitat_energy
+		owner = {
+			NOR = {
+				has_authority = auth_machine_intelligence
+				has_authority = auth_hive_mind
+			}
+		}
+		free_jobs < 3
+	}
+
+	prio_districts = {
+		district_hab_housing
+		district_hab_energy
+	}
+
+	buildings = {
+		1 = {
+			building = building_hab_capital
+			available = {
+				always = yes
+			}
+		}
+
+		2 = {
+			building = building_robot_assembly_plant
+			available = {
+				owner = {
+					robot_assembly_plant_upkeep_affordable = yes
+				}
+			}
+			building = building_temple
+			available = {
+				owner = {
+					temple_upkeep_affordable = yes
+				}
+				OR = {
+					owner = { has_ethic = ethic_spiritualist }
+					owner = { has_ethic = ethic_fanatic_spiritualist }
+				}
+			}
+		}
+
+		3 = {
+			building = building_clinic
+			available = {
+				owner = {
+					clinic_upkeep_affordable = yes
+				}
+			}
+		}
+
+		4 = {
+			building = building_energy_grid
+			available = {
+				owner = {
+					energy_grid_upkeep_affordable = yes
+				}
+			}
+		}
+
+		5 = {
+			building = building_autochthon_monument
+			available = {
+				owner = {
+					autochthon_monument_upkeep_affordable = yes
+				}
+			}
+			building = building_factory_1
+			available = {
+				OR = {
+					owner = { has_ethic = ethic_spiritualist }
+					owner = { has_ethic = ethic_fanatic_spiritualist }
+				}
+				owner = {
+					factory_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		6 = {
+			building = building_commercial_zone
+			available = {
+				owner = {
+					commercial_zone_upkeep_affordable = yes
+				}
+			}
+		}
+
+		7 = {
+			building = building_crystal_plant
+			available = {
+				owner = {
+					crystal_plant_upkeep_affordable = yes
+				}
+			}
+		}
+
+		8 = {
+			building = building_commercial_zone
+			available = {
+				owner = {
+					commercial_zone_upkeep_affordable = yes
+				}
+			}
+		}
+
+		9 = {
+			building = building_holo_theatres
+			available = {
+				owner = {
+					holo_theatres_upkeep_affordable = yes
+				}
+			}
+		}
+
+		10 = {
+			building = building_stronghold
+			available = {
+				owner = {
+					stronghold_upkeep_affordable = yes
+				}
+			}
+		}
+
+		11 = {
+			building = building_commercial_zone
+			available = {
+				owner = {
+					commercial_zone_upkeep_affordable = yes
+				}
+			}
+		}
+
+		12 = {
+			building = building_stronghold
+			available = {
+				owner = {
+					stronghold_upkeep_affordable = yes
+				}
+			}
+		}
+
+		13 = {
+			building = building_chemical_plant
+			available = {
+				owner = {
+					chemical_plant_upkeep_affordable = yes
+				}
+			}
+		}
+
+		14 = {
+			building = building_stronghold
+			available = {
+				owner = {
+					stronghold_upkeep_affordable = yes
+				}
+			}
+		}
+
+		15 = {
+			building = building_commercial_zone
+			available = {
+				owner = {
+					commercial_zone_upkeep_affordable = yes
+				}
+			}
+		}
+
+		16 = {
+			building = building_stronghold
+			available = {
+				owner = {
+					stronghold_upkeep_affordable = yes
+				}
+			}
+		}
+	}
+}

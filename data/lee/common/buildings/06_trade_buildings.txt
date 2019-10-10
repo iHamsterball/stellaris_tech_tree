@@ -1,0 +1,246 @@
+#############
+# Trade buildings
+#############
+building_commercial_zone = {
+	base_buildtime = 360
+
+	category = trade
+	
+	potential = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+		owner = { is_regular_empire = no }
+			has_modifier = slave_colony
+		}
+	}
+	
+	planet_modifier = {
+		job_clerk_add = 5
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 300
+		}	
+		upkeep = {
+			energy = 2
+		}		
+	}
+	
+	prerequisites = {
+		"tech_interplanetary_commerce"
+	}
+	
+	show_tech_unlock_if = { 
+		is_regular_empire = yes
+	}
+	
+	triggered_desc = {
+		text = job_clerk_effect_desc
+	}
+	
+	upgrades = {
+		"building_commercial_megaplex"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			planet = { 
+				OR = {
+					has_building = building_holo_theatres
+					has_building = building_hyper_entertainment_forum
+				}
+				OR = {
+					num_buildings = { type = building_research_lab_1 value = 3 } #Prevents AI falling behind on research to all but the most research dedicated players
+					has_building = building_research_lab_2
+					has_building = building_research_lab_3
+				}
+				NOR = { 
+					has_building = building_commercial_zone
+					has_building = building_commercial_megaplex
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		energy = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_commercial_megaplex = {
+	base_buildtime = 480
+	can_build = no
+
+	category = trade
+	
+	potential = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+		NOT = { has_modifier = slave_colony }
+		has_building = building_commercial_zone
+	}
+	
+	allow = {
+		buildings_upgrade_allow = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			owner = { is_regular_empire = no }
+			buildings_no_crystals = yes
+		}
+	}
+	
+	planet_modifier = {
+		job_merchant_add = 1
+		job_clerk_add = 10
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+			rare_crystals = 50	
+		}	
+		upkeep = {
+			energy = 2
+			rare_crystals = 1
+		}		
+	}
+	
+	prerequisites = {
+		"tech_interstellar_economics"
+	}
+	
+	show_tech_unlock_if = { 
+		is_regular_empire = yes
+	}
+	
+	triggered_desc = {
+		text = job_clerk_effect_desc
+	}
+	triggered_desc = {
+		text = job_merchant_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			buildings_has_crystals = yes
+		}
+	}
+
+	ai_resource_production = {
+		energy = 1
+		trigger = {
+			always = yes
+		}
+	}
+
+	on_queued = {
+		IF = {
+			limit = {
+				owner = { has_technology = tech_construction_templates }
+			}
+			owner = { set_timed_country_flag = { flag = buildings_new_crystal_building days = 270 } }
+		}
+		ELSE_IF = {
+			limit = {
+				owner = { has_technology = tech_assembly_pattern }
+			}
+			owner = { set_timed_country_flag = { flag = buildings_new_crystal_building days = 390 } }
+		}
+		else = {
+			planet = { 
+				owner = { set_timed_country_flag = { flag = buildings_new_crystal_building days = 510 } }
+			}
+		}
+	}
+}
+
+building_galactic_stock_exchange = {
+	base_buildtime = 480	
+	base_cap_amount = 1
+
+	category = trade
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	
+	destroy_trigger = {
+		exists = owner
+		owner = { is_regular_empire = no }
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	
+	planet_modifier = {
+		job_merchant_add = 2
+		trade_value_mult = 0.20
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+	
+	prerequisites = {
+		"tech_galactic_markets"
+	}
+	
+	triggered_desc = {
+		text = job_merchant_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			planet = {
+				OR = {
+					NOT = { has_building = building_commercial_megaplex }
+					NOT = { has_building = building_commercial_zone }
+					NOT = { has_district = district_hab_commercial }
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		energy = 1
+		trigger = {
+			always = yes
+		}
+	}
+}

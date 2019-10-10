@@ -1,0 +1,259 @@
+
+@tributeallow1 = 250
+
+@tributeallow2 = 500
+
+@tributeallow3 = 1000
+
+@tributeallow4 = 1500
+
+@tributeallow5 = 2000
+
+@tributeallow6 = 2500
+
+@tributeallowraided1 = 500
+
+@tributeallowraided2 = 1000
+
+@tributeallowraided3 = 2000
+
+@tributeallowraided4 = 3000
+
+@tributeallowraided5 = 4000
+
+@tributeallowraided6 = 5000
+
+
+determine_energy_tribute = {
+	if = {
+		limit = { has_country_flag = marauder_tribute_6@event_target:raiding_marauder }
+		resource_stockpile_compare = { resource = energy value >= @tributeallow6 }
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_5@event_target:raiding_marauder }
+		resource_stockpile_compare = { resource = energy value >= @tributeallow5 }
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_4@event_target:raiding_marauder }
+		resource_stockpile_compare = { resource = energy value >= @tributeallow4 }
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_3@event_target:raiding_marauder }
+		resource_stockpile_compare = { resource = energy value >= @tributeallow3 }
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_2@event_target:raiding_marauder }
+		resource_stockpile_compare = { resource = energy value >= @tributeallow2 }
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_1@event_target:raiding_marauder }
+		resource_stockpile_compare = { resource = energy value >= @tributeallow1 }
+	}
+}
+
+determine_mineral_tribute = {
+	if = {
+		limit = { has_country_flag = marauder_tribute_6@event_target:raiding_marauder }
+		resource_stockpile_compare = { resource = minerals value >= @tributeallow6 }
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_5@event_target:raiding_marauder }
+		resource_stockpile_compare = { resource = minerals value >= @tributeallow5 }
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_4@event_target:raiding_marauder }
+		resource_stockpile_compare = { resource = minerals value >= @tributeallow4 }
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_3@event_target:raiding_marauder }
+		resource_stockpile_compare = { resource = minerals value >= @tributeallow3 }
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_2@event_target:raiding_marauder }
+		resource_stockpile_compare = { resource = minerals value >= @tributeallow2 }
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_1@event_target:raiding_marauder }
+		resource_stockpile_compare = { resource = minerals value >= @tributeallow1 }
+	}
+}
+
+determine_food_tribute = {
+	if = {
+		limit = { has_country_flag = marauder_tribute_6@event_target:raiding_marauder }
+		resource_stockpile_compare = { resource = food value >= @tributeallow6 }
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_5@event_target:raiding_marauder }
+		resource_stockpile_compare = { resource = food value >= @tributeallow5 }
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_4@event_target:raiding_marauder }
+		resource_stockpile_compare = { resource = food value >= @tributeallow4 }
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_3@event_target:raiding_marauder }
+		resource_stockpile_compare = { resource = food value >= @tributeallow3 }
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_2@event_target:raiding_marauder }
+		resource_stockpile_compare = { resource = food value >= @tributeallow2 }
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_1@event_target:raiding_marauder }
+		resource_stockpile_compare = { resource = food value >= @tributeallow1 }
+	}
+}
+
+determine_energy_tribute_raided = {
+	if = {
+		limit = { has_country_flag = marauder_tribute_6@event_target:marauder_country }
+		resource_stockpile_compare = {
+			resource = energy
+			value >= @tributeallowraided6
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_5@event_target:marauder_country }
+		resource_stockpile_compare = {
+			resource = energy
+			value >= @tributeallowraided5
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_4@event_target:marauder_country }
+		resource_stockpile_compare = {
+			resource = energy
+			value >= @tributeallowraided4
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_3@event_target:marauder_country }
+		resource_stockpile_compare = {
+			resource = energy
+			value >= @tributeallowraided3
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_2@event_target:marauder_country }
+		resource_stockpile_compare = {
+			resource = energy
+			value >= @tributeallowraided2
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_1@event_target:marauder_country }
+		resource_stockpile_compare = {
+			resource = energy
+			value >= @tributeallowraided1
+		}
+	}
+	else = {
+		resource_stockpile_compare = {
+			resource = energy
+			value >= @tributeallowraided1
+		}
+	}
+}
+
+determine_mineral_tribute_raided = {
+	if = {
+		limit = { has_country_flag = marauder_tribute_6@event_target:marauder_country }
+		resource_stockpile_compare = {
+			resource = minerals
+			value >= @tributeallowraided6
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_5@event_target:marauder_country }
+		resource_stockpile_compare = {
+			resource = minerals
+			value >= @tributeallowraided5
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_4@event_target:marauder_country }
+		resource_stockpile_compare = {
+			resource = minerals
+			value >= @tributeallowraided4
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_3@event_target:marauder_country }
+		resource_stockpile_compare = {
+			resource = minerals
+			value >= @tributeallowraided3
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_2@event_target:marauder_country }
+		resource_stockpile_compare = {
+			resource = minerals
+			value >= @tributeallowraided2
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_1@event_target:marauder_country }
+		resource_stockpile_compare = {
+			resource = minerals
+			value >= @tributeallowraided1
+		}
+	}
+	else = {
+		resource_stockpile_compare = {
+			resource = minerals
+			value >= @tributeallowraided1
+		}
+	}
+}
+
+determine_food_tribute_raided = {
+	if = {
+		limit = { has_country_flag = marauder_tribute_6@event_target:marauder_country }
+		resource_stockpile_compare = {
+			resource = food
+			value >= @tributeallowraided6
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_5@event_target:marauder_country }
+		resource_stockpile_compare = {
+			resource = food
+			value >= @tributeallowraided5
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_4@event_target:marauder_country }
+		resource_stockpile_compare = {
+			resource = food
+			value >= @tributeallowraided4
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_3@event_target:marauder_country }
+		resource_stockpile_compare = {
+			resource = food
+			value >= @tributeallowraided3
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_2@event_target:marauder_country }
+		resource_stockpile_compare = {
+			resource = food
+			value >= @tributeallowraided2
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = marauder_tribute_1@event_target:marauder_country }
+		resource_stockpile_compare = {
+			resource = food
+			value >= @tributeallowraided1
+		}
+	}
+	else = {
+		resource_stockpile_compare = {
+			resource = food
+			value >= @tributeallowraided1
+		}
+	}
+}

@@ -1,0 +1,198 @@
+##########################################################################
+# Unity Ambitions - edicts
+##########################################################################
+
+# Ambition duration variable
+@ambitionDuration = 3600
+
+scientific_revolution = {
+	length = @ambitionDuration
+	
+	is_ambition = yes 		# Costs Unity scaled to tradition cost
+	resources = {
+		category = edicts
+	}
+
+	modifier = {
+		all_technology_research_speed = 0.20
+		num_tech_alternatives_add = 1
+	}
+	
+	potential = {
+		has_technology = tech_ascension_theory
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+desperate_measures = {
+	length = @ambitionDuration
+	
+	is_ambition = yes 		# Costs Unity scaled to tradition cost
+	resources = {
+		category = edicts
+	}
+	
+	modifier = {
+		starbase_defensive_war_ship_build_speed_mult = 1.00
+		ship_home_territory_fire_rate_mult = 0.40
+	}	
+	
+	potential = {
+		has_technology = tech_ascension_theory
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			is_at_war = yes
+		}
+	}
+}
+
+fortress_proclamation = {
+	length = @ambitionDuration
+	
+	is_ambition = yes 		# Costs Unity scaled to tradition cost
+	resources = {
+		category = edicts
+	}
+	
+	modifier = {
+		starbase_upgrade_speed_mult = 1.00
+		shipsize_military_station_small_build_speed_mult = 1.00
+	}	
+	
+	potential = {
+		has_technology = tech_ascension_theory
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+architectural_renaissance = {
+	length = @ambitionDuration
+	
+	is_ambition = yes 		# Costs Unity scaled to tradition cost
+	resources = {
+		category = edicts
+	}
+	
+	modifier = {
+		megastructure_build_speed_mult = 0.50
+		country_megastructure_build_cap_add = 1
+		planet_building_build_speed_mult = 1.00
+	}	
+	
+	potential = {
+		has_technology = tech_ascension_theory
+	}
+	
+	allow = {
+		has_technology = tech_mega_engineering	
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+hearts_and_minds = {
+	length = @ambitionDuration
+	
+	is_ambition = yes 		# Costs Unity scaled to tradition cost
+	resources = {
+		category = edicts
+	}
+	
+	modifier = {
+		pop_government_ethic_attraction = 1.00	
+		pop_ethics_shift_speed_mult = 1.00
+	}	
+	
+	potential = {
+		has_technology = tech_ascension_theory
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+omnifarious_acquisition = {
+	length = @ambitionDuration
+	
+	is_ambition = yes 		# Costs Unity scaled to tradition cost
+	resources = {
+		category = edicts
+	}
+	
+	modifier = {
+		country_minerals_produces_mult = 0.33
+	}	
+	
+	potential = {
+		has_technology = tech_ascension_theory
+	}
+	
+	ai_weight = {
+		weight = 5
+	}
+}
+
+grand_fleet = {
+	length = @ambitionDuration
+	
+	is_ambition = yes 		# Costs Unity scaled to tradition cost
+	resources = {
+		category = edicts
+	}
+	
+	modifier = {
+		country_naval_cap_mult = 0.20
+		ships_upkeep_mult = -0.20
+	}	
+	
+	potential = {
+		has_technology = tech_ascension_theory
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			is_at_war = yes
+		}
+	}
+}
+
+will_to_power = {
+	length = @ambitionDuration
+	
+	is_ambition = yes 		# Costs Unity scaled to tradition cost
+	resources = {
+		category = edicts
+	}
+	
+	modifier = {
+		country_base_influence_produces_add = 5
+	}	
+	
+	potential = {
+		has_technology = tech_ascension_theory
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			is_at_war = yes
+		}
+	}
+}

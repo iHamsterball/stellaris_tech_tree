@@ -1,0 +1,15 @@
+
+ANCREL_RUBRICATOR_CAT = {
+	desc = "ANCREL_RUBRICATOR_CAT_DESC"
+	picture = "GFX_evt_space_debris"
+	level = 4
+	
+	spawn_chance = {
+		modifier = {
+			add = 1
+			has_ancrel = yes
+		}
+	}
+	
+	on_success = ancrel.4010
+}
