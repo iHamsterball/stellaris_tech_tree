@@ -1,4 +1,5 @@
 import codecs
+import copy
 import json
 import os
 import re
@@ -8,6 +9,7 @@ from django.views.decorators.gzip import gzip_page
 
 from .parse import generate_localized_tech
 from .versions import versions as version_dict
+
 
 @gzip_page
 def techs(request, fallback=False):
@@ -46,5 +48,6 @@ def techs(request, fallback=False):
 
 
 def versions(request, fallback=False):
-    version_dict['latest'] = next(iter(version_dict.values()))
-    return JsonResponse(version_dict)
+    versions = copy.deepcopy(version_dict)
+    versions['latest'] = next(iter(versions.values()))
+    return JsonResponse(versions)
