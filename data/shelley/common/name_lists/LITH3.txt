@@ -1,0 +1,197 @@
+﻿### Lithoid 3
+### Created by Gemma Thomson
+
+LITHOID3 = {
+	ship_names = {
+
+		generic = {
+			 "B'nonn Benn Aart" "B'nonn Ghlash" "B'nonn Laat Phraaw" "B'nonn Phenn" "B'nonn Stobhenn" "B'nonn Vhrech" "Bhreach Lonn" "Bhreach Un'taawn" "Bhreach Unn" "Bhreach Yaa'shonn" "Brenn Pho'khaan" "Brenn Phrostuun" "Donn'rhevenn Stobb" "Gheallenn Nuun" "Ghlash Chenn" "Ghlash Jhlosk" "Ghlash Ph'shonn" "Ghlash Yaawp" "Gruichenn Phrostunn" "Gruichenn Taarn" "Gruichenn Yawwshk" "Hesghenn Oshk" "Hesghenn Taarn" "Heshgenn Sochenn" "Jh'daawn Rhu Sengsk" "Kenronn He'laan" "Kentoph'lenn Tonn" "Khaat'losh Vawnn" "Khennen'okh Naawn" "Khraawn Jhlaa Phuun" "Laat Lunn Ph'shaan" "Laat Tonnlonn" "Laat Tun'yaawkh" "Lenn'ghashtenn Okh" "Lenn'phrostenn Pho" "Lethenn Sochenn" "Meunn Gaoinn" "Meunn Khrellenn" "Meunn Lenntenn" "Meunn Optaarn" "Meunn Stuun" "Mullenn Skurren" "Mullenn Stoh'khenn" "Mullenn Taarmh" "Mullonn Khrellenn" "Mullonn Vrawn Tenn" "Munn Laat Phoch" "Munn Tenn'losh" "Munn Tenn'phronn" "Nann Hokh'venn" "Nesk'taarn Ah'venn" "Nesk'taarn Ah'venn" "Nesk'taarn Brenn" "Nivenn Krawkh" "Nivenn Lonnch" "Ontenn Phrawn Tekh" "Phenn'loshk Taarmh" "Phorenn Khattuun" "Phrenn Bhreach" "Phrenn Lunn Meunn" "Phrenn Tenn'losh" "Phrenn Tonnlonn" "Phro'nephrenn Lonn" "Phuun Lawn'ch'tekh" "Raawn Lonn Lonn" "Rhunn Yaawpsk" "Schurrenn Lenn" "Schurrenn Tonn" "Skrenn Ph'shonn" "Spennenn Loshk" "Stob Chonn" "Stob Chonn Lenn" "Stobb Nesenn" "Stobb Phro'khenn" "Taarn Krann" "Vrawn Laat Shonn" "Vrawn Optaarn" "Vrawn Tenn Shuun" "Yaarn Tonn Phenn" "Brech'uun Loshh" "Brech'uun T'nonn" "K'phawn Naar" "Lenruun" "Narphonn" "Ph'tarn Haulonn" Plarkuun "Ratuun Osh'leekh" Rheshlaan "Shlaan Ret'nuun" "Ush'phenn" "Ush'toch"
+		}
+
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+
+		titan = {
+		}
+
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+
+	ship_class_names = {
+		generic = {
+			Kroshhk Na'phonn Naawr'hekh Hekhunn Noch Lonnunn T'luun Khennsgk Throsh'gkh Skurronn Huuhn Jhaawr Jhunn'thenn Lonntenn Rhesh'gkh Menngsk Okk'tunn Okk'rhesh Tullonn Yaawphenn Megh'unn Megh'nekh B'naan B'naawr B'taarmh B'phrunn Donnen Donn'gunn Gaoenn Gaawrunn Phonn'luu Phonn'eph Phonnenn Stobbkech Stobbjhunn Stobb'khrekh Attuun Ashkhlenn Ashkhaarn Ash'jh'phronn
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			"Skelph Abdonn" "Skelph Aon'phunn" "Skelph Jh'daawn" "Skelph Krenndonn" "Skelph Laarhn" "Skelph Laat Maawr" "Skelph Lin'tull" "Skelph Lonnarv" "Skelph Maawn" "Skelph Monn'taarn" "Skelph Okk'truun" "Skelph Phommh" "Skelph Phos'lenn" "Skelph Phoshhk" "Skelph Rhesh'khobb" "Skelph Rhesharv" "Skelph Rhevenn" "Skelph Stobb" "Skelph T'lokh" "Skelph Taarmh" "Skelph Taarn" "Skelph Uun'lokh"
+		}
+		sequential_name = "%O% Skell'phenn"
+	}
+
+	army_names = {
+		defense_army = {
+			sequential_name = "%O% Kaarn Jh'daawn"
+		}
+			
+		assault_army = {
+			sequential_name = "%O% Kaarn T'lokh"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Kaarn Bennkh"
+		}
+		
+		clone_army = {
+			sequential_name = "%O% Kaarn Hosh'awn"
+		}
+		
+		robotic_army = {
+			sequential_name = "%O% Kaarn Meunn"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "%O% Kaarn Meunn'okh"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O% Kaarn A'nokh"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Kaarn Taarn"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% Kaarn O'dhunn"
+		}
+
+		occupation_army = {
+			sequential_name = "%O% Khaarn Ghenn"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% Kaarn Gh'meunn"
+		}
+
+		primitive_army = {
+			sequential_name = "%O% Kaarn Lhonnsk"
+		}
+		industrial_army = {
+			sequential_name = "%O% Kaarn Jhloss"
+		}
+		postatomic_army = {
+			sequential_name = "%O% Kaarn Nenn'kh"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"Ablaan" "Abunn'lonn" "Alum Ghuun" "Alum Nartunn" "Alum Optoon" "Aon'phunn" "Aonon Ph'sheen" "Aonon Ushtonn" "Benn'shunn" "Bennavonn" "Danntoch" "Donnkrech" "Donnphenn" "Donnlhobb" "Gaarnh Odphenn" "Ghekh Nha'phronn" "Ghekh Odphenn" "Grumm" "H'lonn Jhophenn" "H'lonntepp" "Hjossun" "Huun Gephraan" "Jhleshenn Lhaaw" "Ka'lunn Skhree" "Kenn't" "Khnunnech" "Khthunn" "Laarh'phenn" "Leht Maawr" "Leht Och'nesh" "Lommh" "Lonntoch" "Mek'tuun" "O'donnphesh" "O'lokhnenn" "O'phoss" "O'phrenn" "O'stebbenn" "O'venngsk" "Od'pheen Ushtonn" "P'flunn" "Ph'soon" "Phlonn Kh'tuun" "Phos'lenn" "Phos'noch" "Phoshhk" "Phrenngsk" "Plaawn Ret'naawn" "Rhevenn" "Rhunn" "Taarmh" "Thunn'khtich" "Tinuun" "Uun'phrenn"
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+			}
+			
+			# Always combined with a second name
+			first_names = {
+				A'sunn Aluum Buun'lonn Ghuun Graat Kaarlonn Laanh-shonn Laanh-tepp Lokh Luut Mekh'laar Naarlunn Naartunn Odphuun Odtaarn Odtepp Ochmunn Onntepp Onnyech Ph'shonn Phlaarn Phrin-thoon Schaawn Stebb-tenn Stobb Taarn-phon Thraanh Thunn Tonn-rikh Ut'taarn Yaawkh
+			}
+			
+			# Always combined with a first name
+			second_names = {
+				A't'toom Aarnoch An'lonn An'nuun B'tunn Daartun Gaarnh H'laarn J'naawp K'tokh-lonn K'tokh-suun Laaw-phonn Laawtunn Lataarn Lentaarn Loshh M'noskh M'nuun Mon'lonn Ok'naarn Ok'phlonn Okhunn Paarn Paatepp Ph'taawn Pho'gaarnh Riktull Shenuun Staanuun Tunn-laaws
+			}
+			
+			regnal_first_names = {
+				Greh'ennt Laaht Lokht Maawrt Nhuut O'nenn't Ph'shuut Phlosst Phrennekht Phrennt Shkreht Skhennt Stebbet Thraaht Tonn'phret Uh'jhrennt Uh'khennt Uh'phrunnt Uh'shennt Uh'taarnt Ut'tennt Yaawt
+			}
+			
+			regnal_second_names = {
+				Vhaawr
+			}
+		}
+	}
+}

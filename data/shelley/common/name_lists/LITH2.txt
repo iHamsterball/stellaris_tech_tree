@@ -1,0 +1,227 @@
+﻿	### Lithoid 2
+	### Created by Douglas Furen
+
+	LITHOID2 = {
+		ship_names = {
+			
+			corvette = {
+				"Alma" "Amal" "Apat" "Ber" "Bil" "Bor" "Cann" "Cenu" "Colc" "Cul" "Dek" "Deke" "Dicu" "Dis" "Dyre" "Emea" "Eri" "Erod" "Feld" "Fint" "Fonn" "Garg" "Glir" "Haz" "Hetz" "Holl" "Idene" "Immu" "Iode" "Iro" "Jani" "Jebe" "Jun" "Jute" "Kans" "Kler" "Konc" "Korz" "Mand" "Mene" "Muci" "Neu" "Noph" "Obene" "Oper" "Pati" "Pen" "Phon" "Pyr" "Quer" "Reph" "Rundi" "Sed" "Sene" "Spod" "Sten" "Suph" "Temi" "Ther" "Top" "Topi" "Tuor" "Umen" "Une" "Uri" "Valc" "Vene" "Xell" "Xir" "Zep" "Zir" "Zoph"
+			}
+
+			destroyer = {
+				"Arite" "Amene" "Aryl" "Acone" "Becite" "Beltoz" "Bhine" "Bephor" "Celite" "Camene" "Cophen" "Cysite" "Denerz" "Domene" "Dirite" "Epene" "Elune" "Espur" "Edum" "Etinel" "Fetyl" "Fonite" "Girelen" "Ganene" "Herlop" "Hancite" "Komene" "Korupe" "Lamese" "Letine" "Larcon" "Methine" "Momene" "Mitete" "Ophenoz" "Pycene" "Pracite" "Suldene" "Stromaz" "Tectene" "Urofene"
+			}
+
+			cruiser = {
+				"Icanulope" "Icomolite" "Idecumine" "Imonefyl" "Innicephone" "Ioducitene" "Iporphinite" "Irrodipaz" "Isolphenor" "Iteronez" "Nandofite" "Nartorope" "Neptalune" "Nerudite" "Ninopat" "Nirepartine" "Nudolmene" "Nutornia" "Nylandryl" "Nyxerite" "Obiteryte" "Ocuracene" "Odinepaz" "Ofeturyte" "Ollyphere" "Omelerope" "Opacumene" "Orapertine" "Orriconia" "Oterupel" "Talamonel" "Tantenine" "Tegonicyte" "Terostonite" "Tharmipyte" "Tiluropaz" "Tirconia" "Tollifite" "Tracortine" "Tuctanene"
+			}
+			
+			battleship = {
+				"Abropopyte" "Acurricene" "Adinelune" "Afolumene" "Agarotex" "Ahumenite" "Alcerumene" "Alcusite" "Aselucyte" "Ateroxite" "Batromidum" "Benocephene" "Bentophyr" "Betorinel" "Bimozafite" "Bircambene" "Bocantorite" "Boryeldine" "Bulconia" "Byzenutine" "Ranumese" "Raxertine" "Recturanel" "Retulpete" "Rhurondere" "Rikrocon" "Riyoundrum" "Rohzaphen" "Rovalucite" "Ryphonite" "Sapestron" "Secrinrope" "Semtrocyte" "Sicteryl" "Smoldyrite" "Sovulitine" "Stromepaz" "Sulpherote" "Suricomene" "Sycraneline" 
+			}
+
+			titan = {
+				"Blunt Tenibratite" "Coarse Gantrumene" "Dense Cyrcomerite" "Hard Cenlundine" "Hard Girconya" "Honed Trazephyr" "Rough Cantropite" "Rough Getrumtine" "Sharp Crecorundum" "Sharp Griphetaz" "Solid Grecoronia" "Tough Cilorene" "Tough Gyzelorope" 
+			}
+
+			colossus = {
+				"Dougulacite" "Laviranorope" "Vocturazine" "Driquelophene" "Lemboriculdrum" "Vextorimand" "Daqturocyte" "Lonturotine" "Vulmectoryl" "Dymercepylite" "Lophendoryne" "Vircymeterene" "Drymethorope"
+			}
+			
+			constructor = {
+				"Calphite Gather" "Cennubrium Harvest" "Cerulophene Growth" "Cryphon Crop" "Cyntrosite Yield" "Palopherote Gather" "Pelperutene Crop" "Pentrope Yield" "Peraz Growth" "Prentipez Harvest" "Controtine Forge" "Phyrocyte Forge" "Cilonia Growth" 
+			}
+			
+			colonizer = {
+				"Halmundocaryl" "Halpericyte" "Harollicumene" "Hemiphyrconia" "Henizotrope" "Hiquinarycone" "Hittomaldine" "Honnectophyte" "Hrungophonel" "Hulgrumitonite" "Hutronidite" "Hyrocemotine" "Hoyberidium" 
+			}
+
+			sponsored_colonizer = {
+			}
+			
+			science = {
+				"Iandecine" "Ibrukonia" "Icrozyne" "Idenetal" "Ifermoline" "Igropenel" "Ilophyr" "Imantine" "Inyphanx" "Iodene" "Itropene" "Iseduronia" "Ivalucute" 
+			}
+			
+			transport = {
+				"Spen" "Abele" "Bennt" "Cron" "Dorem" "Eluci" "Fyxo" "Genli" "Hyx" "Itoz" "Jaqe" "Kyrr" "Lonce" "Meti" "Nymel" "Opro" "Perlo" "Romst" "Spacu" "Thirm" "Urex" "Vect" "Zomel" 
+			} 
+
+			military_station_small = {
+				"Acorope" "Betorite" "Cynania" "Doquerel" "Edrumene" "Gelpyrite" "Hecyltone" "Icurrondine" "Jomultate" "Luphonite" "Molducyte" "Namurone" "Ocorpaz" "Plexite" "Rafotite" "Skenmene" "Torpinel" "Ulopone" 
+			}
+
+			ion_cannon = {
+				"Ursoperene" "Yelenomant" "Fonnelucyte" "Ummantine" "Ysterocyne" "Fraculotine" "Ueponesthene" "Ytrymelite" "Felbanetrope" "Ussonedyx" "Vrocasteron" "Foculumetine" "Uvecentrine"  
+			}
+		}
+
+		fleet_names = {
+			random_names = {
+				"Aberacite Fragments" "Berinel Fragments" "Cyzalt Shards" "Dhyle Shards" "Egyrite Fragments" "Fresidian Shards" "Gontrite Fragments" "Hecondine Shards" "Ibellisk Fragments" "Jonilith Shards" "Keruntyne Fragments" "Quaretz Shards" "Throndrite Shards" "Yberite Shards" "Lentopaz Fragments" "Menulotine Shards" "Numiryne Fragments" "Oparunia Shards" "Pyculite Fragments" "Socurene Shards" "Trentite Fragments"
+			}
+		}
+
+		army_names = {
+			defense_army = {
+				random_names = {
+					"Acudite" "Anrite" "Bormene" "Bylcite" "Cennite" "Cephene" "Dontite" "Dricene" "Enusite" "Etoline" "Firdine" "Fyldite" "Galtine" "Ghymene" "Hidene" "Huertz" "Itenel" "Jonrope" "Kocene" "Kynocope" "Medurite" "Myodine" "Nacite" "Nodeline" "Ontite" "Orytine" "Phyrtz" "Prymene" "Qurinel" "Rhydene" "Rilocope" "Sepodine" "Stretrope" "Teutorite" "Thytine" "Ultrope" "Ulvocite" "Vertite" "Xelnite" "Ynesite"
+				}
+			}
+				
+			assault_army = {
+				random_names = {
+					"Almarit" "Bernit" "Bilrit" "Bortit" "Cannit" "Cenurit" "Colcit" "Dekenit" "Dektit" "Dicunit" "Disrit" "Dyrerit" "Erinit" "Erodit" "Feldnit" "Gargrit" "Hazrit" "Idenrit" "Iodrit" "Irotit" "Janrit" "Jeberit" "Jundit" "Klerit" "Mandnit" "Menerit" "Neutit" "Nophit" "Obenerit" "Penrit" "Phontit" "Querit" "Rephit" "Senedit" "Suphit" "Temitit" "Thernit" "Topidit" "Umenit" "Venerit"
+				}
+			}
+			
+			slave_army = {
+				random_names = {
+					"Deranrite" "Derenusite" "Derhidene" "Dermyodine" "Dervertite" "Derkocene" "Derontite" "Derorytine" "Derhydene" "Derthytine" "Derxelnite" "Derbylcite" "Derfirdine"
+				}
+			}
+			
+			clone_army = {
+				random_names = {
+					"Golcennite" "Golnusite" "Golgaltine" "Golkynocope" "Golontite" "Golprymene" "Golrilocope" "Golultrope" "Goldricene" "Golfyldite" "Golnacite" "Golnodeline" "Golthytine"
+				}
+			}
+
+			robotic_army = {
+				random_names = {
+					"Helbormene" "Helcennite" "Helnusite" "Helghymene" "Helhuertz" "Helnacite" "Helontite" "Helprymene" "Helstretrope" "Helvocite" "Helynesite" "Helkynocope" "Helmedurite"
+				}
+			}
+
+			robotic_defense_army = {
+				random_names = {
+					"Halcephene" "Haloricene" "Halfirdine" "Halfyldite" "Halghymene" "Halyonrope" "Halnodeline" "Halorytine" "Halrilocope" "Halteutorite" "Halenusite" "Haletoline" "Halfirdine"
+				}
+			}
+
+			psionic_army = {
+				random_names = {
+					"Zingaltine" "Zinhuertz" "Zinkocene" "Zinnacite" "Zinnodeline" "Zinphyrtz" "Zinqurinel" "Zinstretrope" "Zinthytine" "Zinulvocite" "Zinxelnite" "Zinuertone" "Zinitenel" 
+				}
+			}
+
+			xenomorph_army = {
+				random_names = {
+					"Longaltine" "Longhymene" "Lonjonrope" "Lonkocene" "Lonmyodine" "Lonontite" "Lonprymene" "Lonrilocope" "Lonstretrope" "Lonulvocite" "Lonynesite" "Londricene" "Lonenusite" 
+				}
+			}
+
+			gene_warrior_army = {
+				random_names = {
+					"Gyldontite" "Gylodite" "Gylkynocope" "Gylnacite" "Gylontite" "Gylorytine" "Gylprymene" "Gylrhydene" "Gylsepodine" "Gylstretrope" "Gylthytine" "Gylultrope" "Gylvertite" 
+				}
+			}
+
+			occupation_army = {
+				random_names = {
+					"Ontcennite" "Ontenusite" "Ontgaltine" "Onthidene" "Ontitenel" "Ontocene" "Ontacite" "Ontorytine" "Ontrilocope" "Ontstretrope" "Ontultrope" "Ontxelnite" "Ontdricene" 
+				}
+			}
+
+			robotic_occupation_army = {
+				random_names = {
+					"Onilcephene" "Oniloricene" "Onilfirdine" "Onilfyldite" "Onilghymene" "Onilyonrope" "Onilnodeline" "Onilorytine" "Onilrilocope" "Onilteutorite" "Onilenusite" "Oniletoline" "Onilfirdine"  
+				}
+			}
+
+			primitive_army = {
+				random_names = {
+					"Dynbortit" "Dyncolcit" "Dyndicunit" "Dyndyrerit" "Dynerodit" "Dynidenrit" "Dynjanrit" "Dynnophit" "Dynpenrit" "Dynrephit" "Dynthernit" "Dynvenerit" "Dynhazrit"  
+				}
+			}
+			
+			industrial_army = {
+				random_names = {
+					"Tecacudite" "Teccennite" "Tecdricene" "Tecfyldite" "Tecuertz" "Teconrope" "Tecynocope" "Tecnacite" "Tecorytine" "Tequrinel" "Tecstretrope" "Tecultrope" "Tecvertite" 
+				}
+			}
+			
+			postatomic_army = {
+				random_names = {
+					"Beracudite" "Bercennite" "Berdricene" "Berfyldite" "Beruertz" "Berjonrope" "Berkynocope" "Bernacite" "Berorytine" "Bequrinel" "Berstretrope" "Berultrope" "Bervertite" 
+				}
+			}
+		}
+
+		planet_names = {
+			generic = {
+				names = {
+					"Zoic" "Radae" "Eoarc" "Chean" "Mesoa" "Eoarch" "Ambria" "Otero" "Ogene" "Eocen" "Tetia" "Attia" "Serr" "Zanc" "Uitania" "Presia" "Anethi" "Eland" "Nori" "Ladinu" "Cemon" "Turon" "Tricht" "Sozo" "Ermian" "Voni" "Mennia" "Ilure" "Ordo" "Proter" "Tero" "Phagi" "Isea" "Viser" "Bashcamb" "Ectalym" "Stenect" "Arche" "Daeceus" "Olenru" "Calad" "Tricre" "Creter" "Genet" "Cenelur" "Oliget" "Zoicel" "Arpore" "Niand" "Guskan" "Apitea" "Lamder" "Panoc" "Haumeni" "Vahung" "Rukto" "Benosi" 
+				}
+			}
+			
+			pc_desert = {
+				names = {
+				}
+			}
+			
+			pc_arid = {
+				names = {
+				}
+			}
+			
+			pc_tropical = {
+				names = {
+				}
+			}
+			
+			pc_continental = {
+				names = {
+				}
+			}
+			
+			pc_ocean = {
+				names = {
+				}
+			}
+			
+			pc_tundra = {
+				names = {
+				}
+			}
+			
+			pc_arctic = {
+				names = {
+				}
+			}
+
+			pc_savannah = {
+				names = {
+				}
+			}
+
+			pc_alpine = {
+				names = {
+				}
+			}
+
+		}
+
+		character_names = {
+			default = {
+				full_names = {
+				}
+				
+				first_names = {
+					"Alu" "Acu" "Bel" "Byn" "Cul" "Can" "Dil" "Dend" "Elo" "Ene" "Fyr" "Fari" "Gan" "Gil" "Her" "Hol" "Ine" "Ipo" "Jil" "Jat" "Kont" "Kil" "Lym" "Lod" "Men" "Mur" "Nin" "Neq" "Osi" "Oru" "Phel" "Pyn" "Seq" "Sant" "Tilu" "Tem" "Ure" "Ulk" "Ven" "Vyx" "Amd" "Bosh" "Cren" "Drun" "Egur" "Fylt" "Gori" "Hyst" "Iono" "Jemt" "Kamt" "Lyze" "Momb" "Nuer" "Otuc" "Phyr" "Rycel"
+				}
+				
+				second_names = {
+					"Abite" "Adrum" "Arym" "Cene" "Cite" "Conia" "Cope" "Cyne" "Cyte" "Dian" "Dine" "Dite" "Donia" "Dym" "Dyne" "Dyte" "Eurtz" "Fyne" "Mene" "Mite" "Mone" "Myne" "Myte" "Nel" "Nil" "Nine" "Nit" "Nite" "Nyl" "Nez" "Nyle" "Nyne" "Nyte" "Odum" "Ondum" "Onia" "Onit" "Ophene" "Paz" "Rax" "Rite" "Rone" "Rope" "Ryl" "Ryte" "Selt" "Site" "Spar" "Sten" "Syte" "Thane" "Tite" "Trex" "Trine" "Tryne" "Tryx" "Undum"  
+				}
+				
+				regnal_first_names = {
+					"Alk" "Bas" "Cal" "Des" "Eru" "Fir" "Fon" "Ghor" "Hec" "Irri" "Jut" "Ker" "Lon" "Myr" "Nen" "Ocu" "Pyr" "Quer" "Sur" "Ther" "Und" "Vex" 
+				}
+				
+				regnal_second_names = {
+					"de Sinanite" "de Natashene" "de Jaelite" "de Nordinite" "de Furenite" "de Carrolite" "de Numenite" "de Zirconel" "de Medutrine" "de Thondyrite" "de Wentricene" "de Aprentonia" "de Chrusalt" "de Xultrate" "de Astemirite"
+				}
+			}
+		}
+	}

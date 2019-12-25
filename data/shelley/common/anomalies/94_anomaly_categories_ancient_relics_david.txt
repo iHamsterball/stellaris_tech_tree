@@ -1,0 +1,17 @@
+@precursor_easy = 6
+@precursor_medium = 8
+@precursor_hard = 10
+
+ANCREL_ARC_CAT = {
+	desc = "ANCREL_ARC_CAT_DESC"
+	picture = "GFX_evt_alien_cavemen"
+	level = 3
+	
+	spawn_chance = {
+		modifier = {
+			add = 0 #Added by arc site event
+		}
+	}
+	
+	on_success = ancrel.107
+}

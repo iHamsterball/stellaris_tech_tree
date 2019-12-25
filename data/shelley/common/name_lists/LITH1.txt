@@ -1,0 +1,227 @@
+﻿	### Lithoid 1
+	### Created by Douglas Furen
+
+	LITHOID1 = {
+		ship_names = {
+			
+			corvette = {
+				"Akerr" "Akkre" "Akorr" "Arekk" "Arett" "Arkk" "Arutt" "Ater" "Atorr" "Betr" "Drekk" "Ekurr" "Erekk" "Eter" "Frekk" "Frit" "Ikrot" "Ikrr" "Irk" "Kerr" "Korok" "Korr" "Kort" "Kratt" "Kravv" "Krek" "Kren" "Krett" "Krikk" "Krit" "Kro" "Krot" "Krurr" "Krut" "Kurr" "Nekt" "Nerk" "Notrr" "Nrokk" "Oert" "Okerr" "Ort" "Orukk" "Otakk" "Otarr" "Prek" "Rakr" "Rakt" "Rerr" "Ritrr" "Rott" "Rottr" "Takrr" "Tark" "Terk" "Tkurr" "Tnerr" "Tokk" "Tokrr" "Trak" "Trakk" "Tret" "Trik" "Trokk" "Turr" "Uterr" "Utrok" "Vakk" "Verk" "Vrat" "Vret" "Vrik" 
+			}
+
+			destroyer = {
+				"Akerret" "Akrett" "Arkerr" "Aterakk" "Aterek" "Bekrett" "Berkkat" "Brektt" "Dekerr" "Dekrakk" "Drekurr" "Durkerr" "Fatrekk" "Fetrak" "Frekurr" "Kertrakk" "Kortrokk" "Krekorr" "Krettor" "Nekorak" "Neterr" "Nokrukk" "Notrarr" "Nrakott" "Oerterr" "Okerrat" "Orekkut" "Orokkur" "Oterrok" "Potrakk" "Prekerr" "Prukterr" "Rakturr" "Rekrott" "Rektarr" "Rekurr" "Ruturr" "Trakkner" "Tretkur" "Vetrokk" "Vroknerr"
+			}
+
+			cruiser = {
+				"Akre'Korr" "Aktr'Utrok" "Arek'Eter" "Atre'Kro" "Bekk'Rott" "Bekt'Uterr" "Betr'Krut" "Brek'Tret" "Dakk'Turr" "Dek'Otakk" "Dekt'Akerr" "Detr'Korr" "Dret'Atorr" "Erok'Arett" "Etar'Kurr" "Ferk'Otarr" "Fetr'Tark" "Fre'Orukk" "Frot'Kerr" "Kerr'Tokk" "Kett'Kort" "Kre'Drekk" "Kret'Betr" "Nekr'Krurr" "Nekt'Erekk" "Okk'Tokrr" "Okot'Ekurr" "Oret'Trokk" "Orte'Tkurr" "Otek'Arutt" "Pre'Trakk" "Prek'Kurr" "Pret'Erekk" "Prukk'Ort" "Rak'Arekk" "Rakt'Orukk" "Rek'Akorr" "Trakk'Rak" "Tret'Korr" "Trot'Kerr" "Vret'Akerr"
+			}
+			
+			battleship = {
+				"Kre Akrott" "Kre Brutt" "Kre Drekk" "Kre Nettr" "Kre Pkurr" "Kre Rertt" "Kre Rokk" "Kre Terrt" "Kre Truktt" "Kre Vetekk" "Kre Vrokt" "Rekk Akurr" "Rekk Aret" "Rekk Feterr" "Rekk Kerett" "Rekk Kret" "Rekk Krott" "Rekk Trokk" "Trok Atret" "Trok Brekk" "Trok Drett" "Trok Dturr" "Trok Ferr" "Trok Ftur" "Trok Kertt" "Trok Korrt" "Trok Krekk" "Trok Nekt" "Trok Nterr" "Trok Prek" "Trok Pter" "Trok Rekk" "Trok Rett" "Trok Rutt" "Trok Tarkk" "Trok Terr" "Trok Varet" "Trok Vertt" "Trok Vrek" 
+			}
+
+			titan = {
+				"Akkorr'Trekkott" "Atrekk'Kurrtok" "Brekkurr'Koterrt" "Bretarr'Tretokk" "Ketrokk'Utrekk" "Krettok'Etrakk" "Nektrorr'Takarr" "Nutrokku'Akurrt" "Rektru'Kruttok" "Terakk'Attro" "Tretokk'Oterak" "Vetorrok'Ekurott" "Vrekorr'Akrott" 
+			}
+
+			colossus = {
+				"Nekrr Atro'Krattokk" "Nekrr Arokk'Korott" "Nekrr Brekk'Etrukurr" "Nekrr Bartekk'Krett" "Nekrr Detrakk'Korukk" "Nekrr Krotturr'Atokk" "Nekrr Kreturr'Nokott" "Nekrr Rekrot'Neter" "Nekrr Okretur'Rakt" "Nekrr Prekkurr'Torukk" "Nekrr Pret'Arrekk" "Nekrr Trokk'Etrett" "Nekrr Vrekt'Aterett" 
+			}
+			
+			constructor = {
+				"Trokk Arut" "Trokk Atre" "Trokk Berr" "Trokk Brek" "Trokk Druk" "Trokk Kant" "Trokk Kerr" "Trokk Nekt" "Trokk Nettr" "Trokk Oret" "Trokk Raktt" "Trokk Rerr" "Trokk Vekt" 
+			}
+			
+			colonizer = {
+				"Ar'Tek Krurr" "At'Erk Krurr" "Br'Uk Krurr" "Ber'Tu Krurr" "De'Ret Krurr" "Dre'Kt Krurr" "Ko'tre Krurr" "Kre'Ur Krurr" "Nok'Tre Krurr" "Ne'Tek Krurr" "Re'Ket Krurr" "Rak'Te Krurr" "Vr'Ek Krurr" "Va'Kt Krurr" 
+			}
+
+			sponsored_colonizer = {
+				"Akt'T Krurr'Te" "Bek'Tr Krurr'Te" "Dre'Tr Krurr'Te" "Kr'Okk Krurr'Te" "Net'Ker Krurr'Te" "Vr'Ok Krurr'Te" 
+			}
+			
+			science = {
+				"Tre'Ka'Tr" "Akt'Ko'Tr" "Bek'Tok'Tr" "Dr'Ek'Tr" "Kr'Ok'Tr" "Tr'Ek'Tr" "Te'Ke'Tr" "Vr'Ukk'Tr" "Nu'Kt'Tr" 
+			}
+			
+			transport = {
+				"Vrokt Akkre" "Vrokt Ater" "Vrokt Ferr" "Vrokt Fret" "Vrokt Ikrot" "Vrokt Ikrr" "Vrokt Korok" "Vrokt Kravv" "Vrokt Krek" "Vrokt Krikk" "Vrokt Krot" "Vrokt Nekt" "Vrokt Noktt" "Vrokt Oterr" "Vrokt Prekk" "Vrokt Rakr" "Vrokt Rett" "Vrokt Ritrr" "Vrokt Takr" "Vrokt Tertt" "Vrokt Trikk" "Vrokt Vak" "Vrokt Verk" 
+			} 
+
+			military_station_small = {
+				"Art'Tekt Takt" "Atr'Ekk Takt" "Akk'Urt Takt" "Bekt'Ett Takt" "Brek'Trr Takt" "Drok'Ek Takt" "Drerr'Tuk Takt" "Nek'Tr Takt" "Nakt'Ert Takt" "Net'Kett Takt" "Kot'Rekk Takt" "Kret'Turr Takt" "Otok'Terr Takt" "Oker'Urr Takt" "Rekt'Ekk Takt" "Rot'Korr Takt" "Vret'Ett Takt" "Vark'Er Takt" 
+			}
+
+			ion_cannon = {
+				"Akerrt Atrokk'Dterr" "Brekkt Atrokk'Dterr" "Dekkra Atrokk'Dterr" "Frekurr Atrokk'Dterr" "Krekorr Atrokk'Dterr" "Nekorak Atrokk'Dterr" "Okerret Atrokk'Dterr" "Prekert Atrokk'Dterr" "Rekrokk Atrokk'Dterr" "Trektur Atrokk'Dterr" "Vrotekk Atrokk'Dterr" "Aterakk Atrer'Vorkk" "Bektt Atrer'Vorkk" "Durkrr Atrer'Vorkk" "Fetrakk Atrer'Vorkk" "Krett Atrer'Vorkk" "Nokturr Atrer'Vorkk" "Oterrt Atrer'Vorkk" "Raktak Atrer'Vorkk" "Trettok Atrer'Vorkk" "Vrett Atrer'Vorkk" 
+			}
+		}
+
+		fleet_names = {
+			random_names = {
+				"Trokk Atre'Akrr" "Trokk Akro'Akrr" "Trokk Brekt'Akrr" "Trokk Beret'Akrr" "Trokk Dre'Akrr" "Trokk Dertt'Akrr" "Trokk Frut'Akrr" "Trokk Fetr'Akrr" "Trokk Knet'Akrr" "Trokk Krat'Akrr" "Trokk Netek'Akrr" "Trokk Notrr'Akrr" "Trokk Pret'Akrr" "Trokk Pter'Akrr" "Trokk Oker'Akrr" "Trokk Retek'Akrr" "Trokk Rekut'Akrr" "Trokk Terek'Akrr" "Trokk Tret'Akrr" "Trokk Tratt'Akrr" "Trokk Vetek'Akrr"
+			}
+		}
+
+		army_names = {
+			defense_army = {
+				random_names = {
+					"De'Tukk Akkre" "De'Tukk Arkk" "De'Tukk Ater" "De'Tukk Frekk" "De'Tukk Frit" "De'Tukk Ikrot" "De'Tukk Ikrr" "De'Tukk Irk" "De'Tukk Korok" "De'Tukk Kratt" "De'Tukk Kravv" "De'Tukk Krek" "De'Tukk Kren" "De'Tukk Krett" "De'Tukk Krikk" "De'Tukk Krit" "De'Tukk Krot" "De'Tukk Nekt" "De'Tukk Nerk" "De'Tukk Notrr" "De'Tukk Nrokk" "De'Tukk Oert" "De'Tukk Okerr" "De'Tukk Prek" "De'Tukk Rakr" "De'Tukk Rakt" "De'Tukk Rerr" "De'Tukk Ritrr" "De'Tukk Rottr" "De'Tukk Takrr" "De'Tukk Tark" "De'Tukk Terk" "De'Tukk Tnerr" "De'Tukk Trak" "De'Tukk Trik" "De'Tukk Vakk" "De'Tukk Verk" "De'Tukk Vrat" "De'Tukk Vret" "De'Tukk Vrik" 
+				}
+			}
+				
+			assault_army = {
+				random_names = {
+					"At'Tkk Akrott" "At'Tkk Brutt" "At'Tkk Drekk" "At'Tkk Frekk" "At'Tkk Kotru" "At'Tkk Nettr" "At'Tkk Pkurr" "At'Tkk Rertt" "At'Tkk Rokk" "At'Tkk Terrt" "At'Tkk Truktt" "At'Tkk Vetekk" "At'Tkk Vrokt" "At'Tkk Akurr" "At'Tkk Aret" "At'Tkk Feterr" "At'Tkk Kerett" "At'Tkk Kret" "At'Tkk Krott" "At'Tkk Trokk" "At'Tkk Atret" "At'Tkk Brekk" "At'Tkk Drett" "At'Tkk Dturr" "At'Tkk Ferr" "At'Tkk Ftur" "At'Tkk Kertt" "At'Tkk Korrt" "At'Tkk Krekk" "At'Tkk Nekt" "At'Tkk Nterr" "At'Tkk Prek" "At'Tkk Pter" "At'Tkk Rekk" "At'Tkk Rett" "At'Tkk Rutt" "At'Tkk Tarkk" "At'Tkk Terr" "At'Tkk Varet" "At'Tkk Vertt" "At'Tkk Vrek" 			
+				}
+			}
+			
+			slave_army = {
+				random_names = {
+					"Kan'Tr Arut" "Kan'Tr Atre" "Kan'Tr Berr" "Kan'Tr Brek" "Kan'Tr Druk" "Kan'Tr Kant" "Kan'Tr Kerr" "Kan'Tr Nekt" "Kan'Tr Nettr" "Kan'Tr Oret" "Kan'Tr Raktt" "Kan'Tr Rerr" "Kan'Tr Vekt" 
+				}
+			}
+			
+			clone_army = {
+				random_names = {
+					"Kro'r Krett" "Kro'r Krikk" "Kro'r Krit" "Kro'r Krot" "Kro'r Nekt" "Kro'r Nerk" "Kro'r Notrr" "Kro'r Nrokk" "Kro'r Oert" "Kro'r Okerr" "Kro'r Prek" "Kro'r Rakr" "Kro'r Rakt" 
+				}
+			}
+
+			robotic_army = {
+				random_names = {
+					"Tek'Akkre" "Tek'Arkk" "Tek'Ater" "Tek'Frekk" "Tek'Frit" "Tek'Ikrot" "Tek'Ikrr" "Tek'Irk" "Tek'Korok" "Tek'Kratt" "Tek'Kravv" "Tek'Krek" "Tek'Kren" 			
+				}
+			}
+
+			robotic_defense_army = {
+				random_names = {
+					"Tek'Ur Rerr" "Tek'Ur Ritrr" "Tek'Ur Rottr" "Tek'Ur Takrr" "Tek'Ur Tark" "Tek'Ur Terk" "Tek'Ur Tnerr" "Tek'Ur Trak" "Tek'Ur Trik" "Tek'Ur Vakk" "Tek'Ur Verk" "Tek'Ur Vrat" "Tek'Ur Vret"
+				}
+			}
+
+			psionic_army = {
+				random_names = {
+					"Pek'Tr Ater" "Pek'Tr Druk" "Pek'Tr Krett" "Pek'Tr Kant" "Pek'Tr Rerr" "Pek'Tr Ritrr" "Pek'Tr Notrr" "Pek'Tr Terk" "Pek'Tr Vrat" "Pek'Tr Vret" "Pek'Tr Atre" "Pek'Tr Nettr" "Pek'Tr Oret" 
+				}
+			}
+
+			xenomorph_army = {
+				random_names = {
+					"Ekk'Et Kratt" "Ekk'Et Krit" "Ekk'Et Korok" "Ekk'Et Frekk" "Ekk'Et Kravv" "Ekk'Et Krot" "Ekk'Et Trak" "Ekk'Et Ikrr" "Ekk'Et Nekt" "Ekk'Et Nerk" "Ekk'Et Frit" "Ekk'Et Okerr" "Ekk'Et Oert" 
+				}
+			}
+
+			gene_warrior_army = {
+				random_names = {
+					"Not'Et Tnerr" "Not'Et Irk" "Not'Et Nekt" "Not'Et Berr" "Not'Et Arut" "Not'Et Akkre" "Not'Et Trik" "Not'Et Vakk" "Not'Et Rottr" "Not'Et Tark" "Not'Et Kren" "Not'Et Nrokk" "Not'Et Takrr" 
+				}
+			}
+
+			occupation_army = {
+				random_names = {
+					"Okk'Te Verk" "Okk'Te Rakr" "Okk'Te Rerr" "Okk'Te Arkk" "Okk'Te Vekt" "Okk'Te Ikrot" "Okk'Te Kerr" "Okk'Te Krikk" "Okk'Te Brek" "Okk'Te Rakt" "Okk'Te Krek" "Okk'Te Raktt" "Okk'Te Prek" 
+				}
+			}
+
+			robotic_occupation_army = {
+				random_names = {
+					"Tek'Te Frekk" "Tek'Te Rekk" "Tek'Te Vrek" "Tek'Te Rett" "Tek'Te Truktt" "Tek'Te Ferr" "Tek'Te Terrt" "Tek'Te Dturr" "Tek'Te Krekk" "Tek'Te Rutt" "Tek'Te Vertt" "Tek'Te Feterr" "Tek'Te Ftur" 
+				}
+			}
+
+			primitive_army = {
+				random_names = {
+					"Pre'Kt Pter" "Pre'Kt Kerett" "Pre'Kt Nettr" "Pre'Kt Nekt" "Pre'Kt Brutt" "Pre'Kt Kotru" "Pre'Kt Kret" "Pre'Kt Vetekk" "Pre'Kt Korrt" "Pre'Kt Nterr" "Pre'Kt Brekk" "Pre'Kt Akrott" "Pre'Kt Prek" 
+				}
+			}
+			
+			industrial_army = {
+				random_names = {
+					"En'Dukt Vrokt" "En'Dukt Trokk" "En'Dukt Akurr" "En'Dukt Drett" "En'Dukt Pkurr" "En'Dukt Rokk" "En'Dukt Terr" "En'Dukt Atret" "En'Dukt Krott" "En'Dukt Rertt" "En'Dukt Drekk" "En'Dukt Kertt" "En'Dukt Tarkk" 
+				}
+			}
+			
+			postatomic_army = {
+				random_names = {
+					"At'Enkur Rottr" "At'Enkur Krett" "At'Enkur Vrat" "At'Enkur Vrik" "At'Enkur Krikk" "At'Enkur Notrr" "At'Enkur Tnerr" "At'Enkur Trik" "At'Enkur Ater" "At'Enkur Terk" "At'Enkur Akkre" "At'Enkur Krot" "At'Enkur Nekt" 
+				}
+			}
+		}
+
+		planet_names = {
+			generic = {
+				names = {
+					"Attru'Korr" "Arret'Kett" "Akerr'Drokt" "Brekk'Trokk" "Bett'Utokk" "Burr'Okott" "Drukt'Ott" "Dett'Attok" "Drekt'Batt" "Frek'Tett" "Fetorr'Okt" "Fekk'Torr" "Fekt'Utt" "Farr'Kett" "Iter'Rekt" "Iturr'Kott" "Ittek'Karr" "Ikkut'Rokt" "Iterr'Akt" "Iterr'Kant" "Kantt'Kont" "Kettu'Kort" "Krett'Rott" "Keterr'Ikt" "Korr'Fekkt" "Nokt'Korr" "Nekt'Oktur" "Nerrt'Bekt" "Nakt'Ikorr" "Nekk'Trarr" "Nukt'Toktar" "Okte'Nerr" "Ortekk'Pakt" "Oterr'Arrek" "Otekk'Barr" "Oeket'Trerr" "Pret'Korrt" "Prakt'Kurr" "Pter'Akett" "Rakt'Okutt" "Rekket'Otarr" "Reterr'Bokk" "Rakott'Drekt" "Rukt'Otekk" "Rutt'Prokt" "Trakkt'Iker" "Trekt'Ater" "Terrt'Kott" "Tekkt'Drokt" "Tekterr'Okt" "Tokkt'Nurt" "Vaktt'Tekt" "Vekkt'Aturr" "Vekkut'Drakt" "Vritt'Rekt" "Verrt'Ikerr" "Vakk'Okett" }
+			}
+			
+			pc_desert = {
+				names = {
+				}
+			}
+			
+			pc_arid = {
+				names = {
+				}
+			}
+			
+			pc_tropical = {
+				names = {
+				}
+			}
+			
+			pc_continental = {
+				names = {
+				}
+			}
+			
+			pc_ocean = {
+				names = {
+				}
+			}
+			
+			pc_tundra = {
+				names = {
+				}
+			}
+			
+			pc_arctic = {
+				names = {
+				}
+			}
+
+			pc_savannah = {
+				names = {
+				}
+			}
+
+			pc_alpine = {
+				names = {
+				}
+			}
+
+		}
+
+		character_names = {
+			default = {
+				full_names = {
+				}
+				
+				first_names = {
+				   "Hakkt" "Haktek" "Hatekk" "Hekt" "Hektt" "Hertokt" "Hertt" "Heturr" "Hkort" "Hokt" "Hokterr" "Hukot" "Hurrt" "Huktt" "Ykt" "Yterr" "Ykekt" "Yttek" "Ykrett" "Ytok" "Yrekkt" "Ykerrt" "Yretet" "Yrekekk" "Yteker" "Yekerr" "Makt" "Mektt" "Mott" "Makrr" "Mekkt" "Merkt" "Merttek" "Meket" "Mokt" "Moktet" "Mettr" "Aket" "Ekekt" "Etekk" "Ettert" "Ektuk" "Eterr" "Ektokt" "Arett" "Bhekt" "Butokt" "Drokt" "Detrr" "Kokt" "Kektt" "Krett" "Krrot" "Tekt" "Tekett" "Trakt" "Trutok" 
+				}
+				
+				second_names = {
+					"Okk Akk'Ett" "Okk Akutt" "Okk Arr'Tek" "Okk Bet'Ek" "Okk Brak'Tek" "Okk Droktt" "Okk Dret'Tek" "Okk Fret" "Okk Frak'Tet" "Okk Kro'Err" "Okk Kat'Nekt" "Okk Kerr'Tukt" "Okk Noktt" "Okk Nett'Ekt" "Okk Nak'Terr" "Okk Obett'Err" "Okk Oraktt" "Okk Perk" "Okk Pekt'Ut" "Okk Rak'Tukt" "Okk Rekt'Ikt" "Okk Rukturr" "Okk Trakk'Te" "Okk Tok'Terr" "Okk Takk'Bekt" "Okk Tekket" "Okk Takt'Aret" "Okk Trok'Okt" "Okk Terrek" "Okk Vrakt'Terr" "Orr At'Ert" "Orr Atekk" "Orr Bakett" "Orr Bre'Kokt" "Orr Derett" "Orr Drrot" "Orr Dekt'Ert" "Orr Frokk'Oket" "Orr Fekt'Arrt" "Orr Itek'Etek" "Orr Irk'Ett" "Orr Krekt'Err" "Orr Kakt'Tak" "Orr Kerekkt" "Orr Nettet" "Orr Nekt'Dret" "Orr Okkett" "Orr Pakt'Err" "Orr Petakt" "Orr Rokott" "Orr Rek'Eterr" "Orr Rokt'Bekk" "Orr Trok'Tek" "Orr Takt'Kett" "Orr Tekk'Akt" "Orr Ter'Korr" "Orr Vret'Terr" 
+				}
+				
+				regnal_first_names = {
+					"Ak'Te" "Art'Ekt" "Atek'Er" "Brek'Te" "Brot'Ukt" "Dr'Akt" "Dek'Te" "Frok'Te" "Itek'Re" "Iter'Ot" "Ket'Re" "Kan'Te" "Nek'Te" "Pet'Re" "Rak'Te" "Ret'Re" "Rektt" "Trakt" "Ter'Ke" "Tret'Re" "Vrok'Te" "Vakt'Re" 
+				}
+				
+				regnal_second_names = {
+					"Akat Akk'Tek" "Akat Arr'Kott" "Akat Brak'Rek" "Akat Drek'Rek" "Akat Frak'Ret" "Akat Kat'Nekt" "Akat Kerr'Tek" "Akat Nak'Ret" "Akat Nett'Ert" "Akat Orak'Tek" "Akat Pekt'Ret" "Akat Takt'Ret" "Akat Trok'Ket" "Akat Vekt'Rek" "Akat Veterr'Ek" 
+				}
+			}
+		}
+	}

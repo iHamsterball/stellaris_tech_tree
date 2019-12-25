@@ -1,0 +1,175 @@
+@distance = 50
+@base_moon_distance = 10
+
+# Relic World
+relic_system_1 = {
+	class = "rl_binary_stars"
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 168
+	}
+	
+	usage = misc_system_init
+
+	usage_odds = {
+		base = 4
+		modifier = {
+            factor = 0
+            has_star_flag = empire_cluster
+        }
+        modifier = {
+			factor = 0
+			is_bottleneck_system = yes
+		}
+		 modifier = {
+			factor = 0
+			has_ancrel = no
+		}
+	}
+
+	max_instances = 1
+
+	flags = { relic_system_1 }
+	
+	planet = {
+        count = 1
+        class = star
+        orbit_distance = 25
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+        has_ring = no
+    }
+
+    planet = {
+        count = 1
+        class = star
+        orbit_distance = 0
+        size = { min = 15 max = 25 }
+        has_ring = no
+    }
+
+    change_orbit = 45
+
+	planet = {
+		class = pc_molten
+		size = 13
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		class = pc_molten
+		size = 9
+		orbit_distance = 25
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		class = pc_molten
+		size = 17
+		orbit_distance = 25
+		orbit_angle = { min = 90 max = 270 }
+
+		moon = {
+			class = "pc_barren"
+			orbit_distance = 12
+			size = 10
+			orbit_angle = { min = 90 max = 270 }
+		}
+	}
+
+	change_orbit = 30
+
+	planet = {
+		count = { min = 2 max = 3 }
+		class = pc_ice_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	change_orbit = 35
+
+	planet = {
+		class = pc_toxic
+		size = 26
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	change_orbit = 30
+
+	planet = {
+		class = pc_shielded
+		size = 26
+		has_ring = no
+		orbit_angle = { min = 90 max = 270 }
+		flags = { minigalaxy_planet }
+
+		init_effect = { 
+			prevent_anomaly = yes
+
+			create_country = {
+				name = "NAME_Armistice_Initiative"
+				type = faction
+			}
+			last_created_country = {
+				create_fleet = {
+					name = "NAME_Occupation_Flotilla"
+					settings = { spawn_debris = no }
+					effect = {
+						set_owner = PREV
+						while = {
+							count = 12
+							create_ship = {
+								name = "NAME_Autonomous_Drone"
+								design = "NAME_Guardian"
+							}
+						}					
+						set_location = prevprev
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 500
+						add_modifier = {
+							modifier = armistice_power
+							days = -1
+						}							
+					}
+				}
+			}
+		}
+
+		moon = {
+			class = "pc_barren_cold"
+			orbit_distance = 12
+			size = 10
+			has_ring = no
+			orbit_angle = { min = 90 max = 270 }
+			flags = { minigalaxy_moon }
+
+			init_effect = { prevent_anomaly = yes }
+		}
+	}
+
+	planet = {
+		class = pc_gas_giant
+		size = 22
+		orbit_distance = 30
+		orbit_angle = { min = 90 max = 270 }
+
+		moon = {
+			class = "pc_barren_cold"
+			orbit_distance = 14
+			orbit_angle = { min = 90 max = 270 }
+		}
+
+		moon = {
+			class = "pc_barren_cold"
+			orbit_distance = 6
+			orbit_angle = { min = 90 max = 270 }
+		}
+
+		moon = {
+			class = "pc_frozen"
+			orbit_distance = 6
+			orbit_angle = { min = 90 max = 270 }
+		}
+	}
+}

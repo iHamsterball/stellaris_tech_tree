@@ -1,0 +1,1541 @@
+#############
+# Resource buildings
+#############
+building_foundry_1 = {
+	base_buildtime = 360
+
+	category = manufacturing
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+	allow = {
+		OR = {
+			NOT = { is_planet_class = pc_city }
+			owner = { is_ai = no }
+		}
+		OR = {
+			buildings_simple_allow = yes
+			is_capital = yes
+			NOR = {
+				has_building = building_foundry_1
+				has_building = building_foundry_2
+				has_building = building_foundry_3
+			}
+			owner = {
+				has_monthly_income = {
+					resource = alloys
+					value < 30
+				}
+			}
+		}
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		owner = { 
+			is_ai = yes
+			has_monthly_income = {
+				resource = alloys
+				value > 200
+			}
+		}#Need to check alloy income to make sure that the AI has built a couple of alloy plants on the new city world.
+		is_planet_class = pc_city
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_alloy_drone_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_fabricator_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_foundry_add = 2
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 4
+		}
+	}
+	
+	upgrades = {
+		building_foundry_2
+	}
+
+	prerequisites = {
+		tech_basic_industry
+	}	
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_regular_empire = yes } 
+		}
+		text = job_foundry_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_hive_empire = yes } 
+		}
+		text = job_alloy_drone_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_machine_empire = yes } 
+		}
+		text = job_fabricator_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 7
+			OR = {
+				planet_crime < 15
+				has_building = building_hall_judgment
+			}
+			is_capital = no
+			free_amenities > 2
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value > 100
+				}
+				has_monthly_income = {
+					resource = alloys
+					value < 100
+				}
+				has_monthly_income = {
+					resource = alloys
+					value > 6
+				}#Check for alloy shutdown
+			}
+		}
+		modifier = {
+			weight = 10000
+			planet = {
+				is_capital = yes
+				NOR = {
+					has_building = building_foundry_2
+					has_building = building_foundry_3
+				}
+				num_buildings = { type = building_foundry_1 value < 3 }
+				has_building_construction = no
+			}
+		}
+		modifier = {
+			weight = 22000
+			OR = {
+				AND = {
+					owner = {
+						OR = {
+							has_monthly_income = {
+								resource = consumer_goods
+								value > 0
+							}
+							country_uses_consumer_goods = no
+						}
+					}
+					NOR = {
+						num_buildings = { type = building_foundry_1 value > 1 }
+						has_building = building_foundry_2
+						has_building = building_foundry_3
+					}	
+					owner = { 
+						has_ai_personality_behaviour = conqueror
+						OR = {
+							has_ai_personality_behaviour = opportunist
+							has_ai_personality_behaviour = purger
+							has_ai_personality_behaviour = propagator
+						}
+					}#Agressive empires but not robot liberators as they tend to be erudite explorers and the like.
+				}#Give agressive empires 2 alloy factories on planets early on.
+				NOR = {
+					has_building = building_foundry_1
+					has_building = building_foundry_2
+					has_building = building_foundry_3
+				}
+			}
+		}
+		modifier = {
+			weight = 25000
+			has_building = building_foundry_1
+			free_building_slots = 0
+		}#Repairs
+	}
+
+	ai_resource_production = {
+		alloys = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_foundry_2 = {
+	base_buildtime = 480
+	can_build = no
+
+	category = manufacturing
+	
+	allow = {
+		has_upgraded_capital = yes
+		buildings_upgrade_allow = yes
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			AND = {
+				is_planet_class = pc_city
+				owner = { 
+					is_ai = yes
+					has_monthly_income = {
+						resource = alloys
+						value > 200
+					}
+				}#Need to check alloy income to make sure that the AI has built a couple of alloy plants on the new city world.
+			}
+			buildings_no_motes = yes #New scripted trigger
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_alloy_drone_add = 5
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_fabricator_add = 5
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_foundry_add = 5
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 600
+			volatile_motes = 50
+		}
+		upkeep = {
+			energy = 5
+			volatile_motes = 1
+		}
+	}
+	
+	upgrades = {
+		building_foundry_3
+	}
+
+	prerequisites = {
+		tech_alloys_1
+	}	
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_regular_empire = yes } 
+		}
+		text = job_foundry_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_hive_empire = yes } 
+		}
+		text = job_alloy_drone_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_machine_empire = yes } 
+		}
+		text = job_fabricator_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 10
+			buildings_has_motes = yes
+		}
+	}
+
+	ai_resource_production = {
+		alloys = 1
+		trigger = {
+			always = yes
+		}
+	}
+	
+	on_queued = {
+		IF = {
+			limit = {
+				owner = { has_technology = tech_construction_templates }
+			}
+			owner = { set_timed_country_flag = { flag = buildings_new_mote_building days = 270 } }
+		}
+		ELSE_IF = {
+			limit = {
+				owner = { has_technology = tech_assembly_pattern }
+			}
+			owner = { set_timed_country_flag = { flag = buildings_new_mote_building days = 390 } }
+		}
+		ELSE = {
+			planet = { 
+				owner = { set_timed_country_flag = { flag = buildings_new_mote_building days = 510 } }
+			}
+		}
+	}
+}
+
+building_foundry_3 = {
+	base_buildtime = 600
+	can_build = no
+
+	category = manufacturing
+	
+	allow = {
+		has_major_upgraded_capital = yes
+		buildings_upgrade_allow = yes
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			AND = {
+				is_planet_class = pc_city
+				owner = { 
+					is_ai = yes
+					has_monthly_income = {
+						resource = alloys
+						value > 200
+					}
+				}#Need to check alloy income to make sure that the AI has built a couple of alloy plants on the new city world.
+			}
+			buildings_no_motes = yes #New scripted trigger
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_alloy_drone_add = 8
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_fabricator_add = 8
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_foundry_add = 8
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 800
+			volatile_motes = 100
+		}
+		upkeep = {
+			energy = 6
+			volatile_motes = 2
+		}
+	}
+
+	prerequisites = {
+		tech_alloys_2
+	}	
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_regular_empire = yes } 
+		}
+		text = job_foundry_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_hive_empire = yes } 
+		}
+		text = job_alloy_drone_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_machine_empire = yes } 
+		}
+		text = job_fabricator_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 10
+			buildings_has_motes = yes
+		}
+	}
+
+	ai_resource_production = {
+		alloys = 1
+		trigger = {
+			always = yes
+		}
+	}
+	
+	on_queued = {
+		IF = {
+			limit = {
+				owner = { has_technology = tech_construction_templates }
+			}
+			owner = { set_timed_country_flag = { flag = buildings_new_mote_building days = 270 } }
+		}
+		ELSE_IF = {
+			limit = {
+				owner = { has_technology = tech_assembly_pattern }
+			}
+			owner = { set_timed_country_flag = { flag = buildings_new_mote_building days = 390 } }
+		}
+		ELSE = {
+			planet = { 
+				owner = { set_timed_country_flag = { flag = buildings_new_mote_building days = 510 } }
+			}
+		}
+	}
+}
+
+building_factory_1 = {
+	base_buildtime = 360
+
+	category = manufacturing
+	
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_gestalt = no
+				has_valid_civic = civic_machine_servitor
+			}
+		}		
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+	allow = {
+		OR = {
+			buildings_simple_allow = yes
+			NOR = { 
+				has_building = building_factory_1
+				has_building = building_factory_2
+				has_building = building_factory_3
+			}
+			owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 0
+				}
+			}
+		}
+	}
+	
+	destroy_trigger = { # destroys if true
+		OR = {
+			planet = {
+				exists = owner
+				owner = {
+					is_gestalt = yes
+					NOT = { has_valid_civic = civic_machine_servitor }
+				}
+			}
+			has_modifier = resort_colony
+			has_modifier = slave_colony 
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_artisan_add = 2
+		}
+	}	
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_artisan_drone_add = 2
+		}
+	}		
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}	
+		upkeep = {
+			energy = 4
+		}
+	}	
+	
+	prerequisites = {
+		tech_basic_industry
+	}
+	
+	upgrades = {
+		building_factory_2
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_regular_empire = yes } 
+		}
+		text = job_artisan_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = yes } 
+		}
+		text = job_artisan_drone_effect_desc
+	}	
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 25000
+			NOR = {
+				has_building = building_factory_1
+				has_building = building_factory_2
+				has_building = building_factory_3
+			}
+			owner = {
+				OR = {
+					is_gestalt = no
+					has_valid_civic = civic_machine_servitor
+				}
+			}
+		}
+		modifier = {
+			weight = 25000
+			jobs_work_minerals_goods = no
+			owner = {
+				OR = {
+					is_gestalt = no
+					has_valid_civic = civic_machine_servitor
+				}
+			}
+			owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 30
+				}
+				OR = {
+					has_monthly_income = {
+						resource = food
+						value >= 0
+					}
+					has_resource = {
+						type = food
+						amount > 0
+					}
+				}#Check to see if consumer goods shortage is being caused by a food shortage.
+			}
+		}
+		modifier = {
+			weight = 1
+			has_building = building_factory_1
+			free_building_slots = 0
+		}#Repairs
+	}
+
+	ai_resource_production = {
+		consumer_goods = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_factory_2 = {
+	base_buildtime = 480
+	can_build = no
+
+	category = manufacturing
+	
+	allow = {
+		has_upgraded_capital = yes
+		buildings_upgrade_allow = yes
+	}
+	
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_gestalt = no
+				has_valid_civic = civic_machine_servitor
+			}
+		}		
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	destroy_trigger = { # destroys if true
+		OR = {
+			planet = {
+				exists = owner
+				OR = {
+					owner = {
+						is_gestalt = yes
+						NOT = { has_valid_civic = civic_machine_servitor }
+					}
+					has_modifier = resort_colony
+					has_modifier = slave_colony
+					buildings_no_crystals = yes
+				}
+			}
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_artisan_add = 5
+		}
+	}	
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_artisan_drone_add = 5
+		}
+	}	
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 600
+			rare_crystals = 50
+		}	
+		upkeep = {
+			energy = 5
+			rare_crystals = 1				
+		}
+	}	
+	
+	prerequisites = {
+		tech_luxuries_1
+	}
+	
+	upgrades = {
+		building_factory_3
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_regular_empire = yes } 
+		}
+		text = job_artisan_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = yes } 
+		}
+		text = job_artisan_drone_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 3
+			buildings_has_crystals = yes
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods = 1
+		trigger = {
+			always = yes
+		}
+	}
+
+	on_queued = {
+		IF = {
+			limit = {
+				owner = { has_technology = tech_construction_templates }
+			}
+			owner = { set_timed_country_flag = { flag = buildings_new_crystal_building days = 270 } }
+		}
+		ELSE_IF = {
+			limit = {
+				owner = { has_technology = tech_assembly_pattern }
+			}
+			owner = { set_timed_country_flag = { flag = buildings_new_crystal_building days = 390 } }
+		}
+		ELSE = {
+			planet = { 
+				owner = { set_timed_country_flag = { flag = buildings_new_crystal_building days = 510 } }
+			}
+		}
+	}
+}
+
+building_factory_3 = {
+	base_buildtime = 600
+	can_build = no
+
+	category = manufacturing
+	
+	allow = {
+		has_major_upgraded_capital = yes
+		buildings_upgrade_allow = yes
+	}
+	
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_gestalt = no
+				has_valid_civic = civic_machine_servitor
+			}
+		}		
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	destroy_trigger = { # destroys if true
+		planet = {
+			exists = owner
+			OR = {
+				owner = {
+					is_gestalt = yes
+					NOT = { has_valid_civic = civic_machine_servitor }
+				}
+				has_modifier = resort_colony
+				has_modifier = slave_colony
+				buildings_no_crystals = yes
+			}
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_artisan_add = 8
+		}
+	}	
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_artisan_drone_add = 8
+		}
+	}	
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 800
+			rare_crystals = 100	
+		}	
+		upkeep = {
+			energy = 6
+			rare_crystals = 2
+		}
+	}	
+	
+	prerequisites = {
+		tech_luxuries_2
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_regular_empire = yes } 
+		}
+		text = job_artisan_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = yes } 
+		}
+		text = job_artisan_drone_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 3
+			buildings_has_crystals = yes
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods = 1
+		trigger = {
+			always = yes
+		}
+	}
+	
+	on_queued = {
+		IF = {
+			limit = {
+				owner = { has_technology = tech_construction_templates }
+			}
+			owner = { set_timed_country_flag = { flag = buildings_new_crystal_building days = 270 } }
+		}
+		ELSE_IF = {
+			limit = {
+				owner = { has_technology = tech_assembly_pattern }
+			}
+			owner = { set_timed_country_flag = { flag = buildings_new_crystal_building days = 390 } }
+		}
+		ELSE = {
+			planet = { 
+				owner = { set_timed_country_flag = { flag = buildings_new_crystal_building days = 510 } }
+			}
+		}
+	}
+}
+
+building_refinery = {
+	base_buildtime = 480
+
+	category = manufacturing
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	destroy_trigger = {
+		free_building_slots = 0
+		exists = owner
+		owner = {
+			is_ai = yes
+			has_monthly_income = {
+				resource = exotic_gases
+				value > 11
+			}
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }					
+		}
+		modifier = {
+			job_gas_refiner_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }					
+		}
+		modifier = {
+			job_gas_refiner_drone_add = 1
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}	
+		upkeep = {
+			energy = 3
+		}
+	}	
+	
+	prerequisites = {
+		"tech_exotic_gases"
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = no } 
+		}
+		text = job_gas_refiner_effect_desc
+	}	
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = yes } 
+		}
+		text = job_gas_refiner_drone_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 50
+			owner = { 
+				NOT = { has_country_flag = buildings_new_exotic_gases_plant }
+				has_monthly_income = {
+					resource = exotic_gases
+					value < 5
+				}
+			}
+			buildings_build_building = yes
+		}
+		modifier = {
+			weight = 600
+			owner = {
+				NOT = { has_country_flag = buildings_new_exotic_gases_plant }
+				has_monthly_income = {
+					resource = exotic_gases
+					value < 1
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		exotic_gases = 1
+		trigger = {
+			always = yes
+		}
+	}
+
+	on_queued = {
+		IF = {
+			limit = {
+				owner = { has_technology = tech_construction_templates }
+			}
+			owner = { set_timed_country_flag = { flag = buildings_new_exotic_gases_plant days = 270 } }
+		}
+		ELSE_IF = {
+			limit = {
+				owner = { has_technology = tech_assembly_pattern }
+			}
+			owner = { set_timed_country_flag = { flag = buildings_new_exotic_gases_plant days = 390 } }
+		}
+		ELSE = {
+			planet = { 
+				owner = { set_timed_country_flag = { flag = buildings_new_exotic_gases_plant days = 510 } }
+			}
+		}
+	}
+}
+
+building_chemical_plant = {
+	base_buildtime = 480
+
+	category = manufacturing
+
+	potential = {
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+	}	
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+	destroy_trigger = {
+		free_building_slots = 0
+		exists = owner
+		owner = {
+			is_ai = yes
+			has_monthly_income = {
+				resource = volatile_motes
+				value > 9
+			}
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }					
+		}
+		modifier = {
+			job_chemist_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }					
+		}
+		modifier = {
+			job_chemist_drone_add = 1
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}	
+		upkeep = {
+			energy = 3
+		}
+	}	
+	
+	prerequisites = {
+		"tech_volatile_motes"
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = no } 
+		}
+		text = job_chemist_effect_desc
+	}	
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = yes } 
+		}
+		text = job_chemist_drone_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 30
+			owner = { 
+				has_monthly_income = {
+					resource = volatile_motes
+					value < 3
+				}#5 is too high since that means 2 extra buildings. Better to just go with 1 extra building
+				NOT = {
+					has_country_flag = buildings_new_mote_plant
+				}
+			}
+			buildings_build_building = yes
+		}
+		modifier = {
+			weight = 600
+			owner = {
+				has_monthly_income = {
+					resource = volatile_motes
+					value < 0
+				}#5 is too high since that means 2 extra buildings. Better to just go with 1 extra building
+				NOT = {
+					has_country_flag = buildings_new_mote_plant
+				}
+			}
+			buildings_build_building = yes
+		}
+	}
+	
+	ai_resource_production = {
+		volatile_motes = 1
+		trigger = {
+			always = yes
+		}
+	}
+
+	on_queued = {
+		IF = {
+			limit = {
+				owner = { has_technology = tech_construction_templates }
+			}
+			owner = { set_timed_country_flag = { flag = buildings_new_mote_plant days = 270 } }
+		}
+		ELSE_IF = {
+			limit = {
+				owner = { has_technology = tech_assembly_pattern }
+			}
+			owner = { set_timed_country_flag = { flag = buildings_new_mote_plant days = 390 } }
+		}
+		ELSE = {
+			planet = { 
+				owner = { set_timed_country_flag = { flag = buildings_new_mote_plant days = 510 } }
+			}
+		}
+	}
+}
+
+building_crystal_plant = {
+	base_buildtime = 480
+
+	category = manufacturing
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		free_building_slots = 0
+		exists = owner
+		owner = {
+			is_ai = yes
+			has_monthly_income = {
+				resource = rare_crystals
+				value > 9
+			}
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }					
+		}
+		modifier = {
+			job_translucer_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }					
+		}
+		modifier = {
+			job_translucer_drone_add = 1
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}	
+		upkeep = {
+			energy = 3
+		}
+	}	
+	
+	prerequisites = {
+		"tech_rare_crystals"
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = no } 
+		}
+		text = job_translucer_effect_desc
+	}	
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = yes } 
+		}
+		text = job_translucer_drone_effect_desc
+	}
+
+	upgrades = {
+		"building_crystal_plant_2"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 30
+			owner = { 
+				has_monthly_income = {
+					resource = rare_crystals
+					value < 3
+				}#5 is too high since that means 2 extra buildings. Better to just go with 1 extra building
+				NOT = {
+					has_country_flag = buildings_new_crystal_plant
+				}#Prevents mass spamming of building
+			}
+			buildings_build_building = yes
+		}
+		modifier = {
+			weight = 600
+			owner = {
+				has_monthly_income = {
+					resource = rare_crystals
+					value < 0
+				}#5 is too high since that means 2 extra buildings. Better to just go with 1 extra building
+				NOT = {
+					has_country_flag = buildings_new_crystal_plant
+				}#Prevents mass spamming of building
+			}
+			buildings_build_building = yes
+		}
+	}
+
+	ai_resource_production = {
+		rare_crystals = 1
+		trigger = {
+			always = yes
+		}
+	}
+	
+	on_queued = {
+		IF = {
+			limit = {
+				owner = { has_technology = tech_construction_templates }
+			}
+			owner = { set_timed_country_flag = { flag = buildings_new_crystal_plant days = 270 } }
+		}
+		ELSE_IF = {
+			limit = {
+				owner = { has_technology = tech_assembly_pattern }
+			}
+			owner = { set_timed_country_flag = { flag = buildings_new_crystal_plant days = 390 } }
+		}
+		ELSE = {
+			planet = { 
+				owner = { set_timed_country_flag = { flag = buildings_new_crystal_plant days = 510 } }
+			}
+		}
+	}
+}
+
+building_nanite_transmuter = {
+	base_buildtime = 600
+
+	category = manufacturing
+	
+	potential = {
+		OWNER = {
+			OR = {
+				has_monthly_income = {
+					resource = nanites
+					value > 0
+				}
+				AND = {
+					is_ai = no
+					has_resource = { 
+						type = nanites 
+						amount > 0 
+					}
+				}
+			}
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		produces = {
+			trigger = {
+				owner = {
+					NOT = {
+						has_deficit = nanites
+					}
+				}
+			}
+			rare_crystals = 2
+			volatile_motes = 2
+			exotic_gases = 2
+		}
+		upkeep = {
+			nanites = 1
+			energy = 5
+		}
+	}
+	
+	prerequisites = {
+		"tech_nanite_transmutation"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			buildings_build_building = yes
+			owner = { 
+				has_monthly_income = {
+					resource = nanites
+					value < 5
+				}
+			}
+		}#Nothing else uses the monthly income but new starships. As such the only important check is the number of nanites coming into the country.
+	}
+
+	ai_resource_production = {
+		rare_crystals = 2
+		volatile_motes = 2
+		exotic_gases = 2
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_ministry_production = {
+	base_buildtime = 480	
+	base_cap_amount = 1
+	icon = building_production_center
+
+	category = manufacturing
+	
+	potential = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	
+	planet_modifier = {
+		job_administrator_add = 1
+		planet_metallurgists_produces_mult = 0.15
+		planet_artisans_produces_mult = 0.15
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+	
+	prerequisites = {
+		"tech_global_production_strategy"
+	}
+	
+	triggered_desc = {
+		text = job_administrator_effect_desc
+	}
+	
+	show_tech_unlock_if = { 
+		is_regular_empire = yes
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 10
+			OR = { 
+				has_building = building_foundry_1
+				has_building = building_foundry_2
+				has_building = building_foundry_3
+
+				has_building = building_factory_1
+				has_building = building_factory_2
+				has_building = building_factory_3
+			}
+		}#No reason to build before the factory and foundry are built
+		modifier = {
+			weight = 1
+			free_building_slots = 0
+		}#Repairs
+	}
+}
+
+building_production_center = {
+	base_buildtime = 480	
+	base_cap_amount = 1
+
+	category = manufacturing
+	
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	
+	planet_modifier = {
+		planet_metallurgists_produces_mult = 0.15
+		planet_artisans_produces_mult = 0.15
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		job_administrator_add = 1
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		job_synapse_drone_add = 1
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		job_coordinator_add = 1
+	}
+	
+	prerequisites = {
+		"tech_global_production_strategy"
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}		
+		text = job_coordinator_effect_desc
+	}		
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}	
+		text = job_synapse_drone_effect_desc
+	}	
+	
+	show_tech_unlock_if = { 
+		is_gestalt = yes
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 10
+			OR = { 
+				has_building = building_foundry_1
+				has_building = building_foundry_2
+				has_building = building_foundry_3
+
+				has_building = building_factory_1
+				has_building = building_factory_2
+				has_building = building_factory_3
+			}
+		}#No reason to build before the factory and foundry are built
+		modifier = {
+			weight = 1
+			free_building_slots = 0
+		}#Repairs
+	}
+}

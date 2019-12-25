@@ -1,0 +1,281 @@
+#################
+# Campaigns
+# shorter duration, cost energy
+#################
+
+# Sets the cost for all campaigns with this variable
+@campaignCost = 1000
+@campaignDuration = 3600
+
+fear_campaign = {
+	length = @campaignDuration
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @campaignCost
+		}
+	}
+
+	modifier = {
+		country_unity_produces_mult = 0.10
+		pop_ethic_xenophobe_attraction_mult = 0.25
+	}
+
+	potential = {
+		is_xenophobe = yes
+		has_comms_with_alien_civilization = yes
+		has_technology = tech_planetary_unification
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictLowPrio
+			has_resource = { type = energy amount > 5000 }
+		}
+	}
+}
+
+education_campaign = {
+	length = @campaignDuration
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @campaignCost
+		}
+	}
+
+	modifier = {
+		species_leader_exp_gain = 0.25
+	}
+
+	potential = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		has_technology = tech_planetary_unification
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			has_edict = healthcare_campaign
+		}
+	}
+}
+
+recycling_campaign = {
+	length = @campaignDuration
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @campaignCost
+		}
+	}
+
+	modifier = {
+		planet_pops_consumer_goods_upkeep_mult = -0.10
+	}
+
+	potential = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		has_technology = tech_planetary_unification
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictLowPrio
+			has_monthly_income = {
+				resource = consumer_goods
+				value < 0
+			}
+		}
+	}
+}
+
+healthcare_campaign = {
+	length = @campaignDuration
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @campaignCost
+		}
+	}
+
+	modifier = {
+		pop_growth_speed = 0.10
+	}
+
+	potential = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		has_technology = tech_planetary_unification
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+###########
+# Machine Empire
+###########
+
+robot_campaign = {
+	length = @campaignDuration
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @campaignCost
+		}
+	}
+
+	modifier = {
+		planet_pop_assembly_mult = 0.10
+	}
+
+	potential = {
+		has_authority = auth_machine_intelligence
+		has_technology = tech_planetary_unification
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+machine_learning_campaign = {
+	length = @campaignDuration
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @campaignCost
+		}
+	}
+
+	modifier = {
+		species_leader_exp_gain = 0.25
+	}
+
+	potential = {
+		has_authority = auth_machine_intelligence
+		has_technology = tech_planetary_unification
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			has_edict = robot_campaign
+		}
+	}
+}
+
+#################
+# Hive Mind
+#################
+
+@hiveFood = 500
+
+drone_campaign = {
+	length = @campaignDuration
+	resources = {
+		category = campaigns
+		cost = {
+			trigger = {
+				is_lithoid_empire = no
+			}
+			food = @hiveFood
+		}
+		cost = {
+			trigger = {
+				is_lithoid_empire = yes
+			}
+			minerals = @hiveFood
+		}
+	}
+
+	modifier = {
+		pop_growth_speed = 0.10
+	}
+
+	potential = {
+		has_authority = auth_hive_mind
+		has_technology = tech_planetary_unification
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+learning_campaign = {
+	length = @campaignDuration
+	resources = {
+		category = campaigns
+		cost = {
+			trigger = {
+				is_lithoid_empire = no
+			}
+			food = @hiveFood
+		}
+		cost = {
+			trigger = {
+				is_lithoid_empire = yes
+			}
+			minerals = @hiveFood
+		}
+	}
+
+	modifier = {
+		species_leader_exp_gain = 0.25
+	}
+
+	potential = {
+		has_authority = auth_hive_mind
+		has_technology = tech_planetary_unification
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			has_edict = drone_campaign
+		}
+	}
+}
+
+war_drone_campaign = {
+	length = @campaignDuration
+	resources = {
+		category = campaigns
+		cost = {
+			trigger = {
+				is_lithoid_empire = no
+			}
+			food = @hiveFood
+		}
+		cost = {
+			trigger = {
+				is_lithoid_empire = yes
+			}
+			minerals = @hiveFood
+		}
+	}
+
+	modifier = {
+		army_damage_mult = 0.15
+	}
+
+	potential = {
+		has_authority = auth_hive_mind
+		has_technology = tech_planetary_unification
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictMedPrio
+			is_at_war = yes
+		}
+	}
+}
