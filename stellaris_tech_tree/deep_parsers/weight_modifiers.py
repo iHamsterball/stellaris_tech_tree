@@ -725,6 +725,10 @@ def _localize_is_machine_empire(value):
     return ugettext('Is machine empire') if value == 'yes' else ugettext('Is NOT machine empire')
 
 
+def _localize_is_lithoid_empire(value):
+    return ugettext('Is lithoid empire') if value == 'yes' else ugettext('Is NOT lithoid empire')
+
+
 def _localize_num_districts(value):
     district_type_key = value[0].get('type')
     district_type = _localize(district_type_key)
