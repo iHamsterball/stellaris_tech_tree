@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 versions = {
+    'shelley': 'Shelley v2.5.1',
     'lee': 'Lee v2.4.0',
     'wolfe': 'Wolfe v2.3.2',
     'leguin': 'Le Guin v2.2.0',
