@@ -1,0 +1,157 @@
+
+automate_resort_planet = {
+	available = {
+		has_designation = col_resort
+		free_jobs < 3
+	}
+
+	prio_districts = {
+	}
+
+	buildings = {
+		1 = {
+			building = building_capital
+			available = {
+				always = yes
+			}
+		}
+
+		2 = {
+			building = building_luxury_residence
+			available = {
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value > 2
+					}
+				}
+			}
+		}
+
+		3 = {
+			building = building_luxury_residence
+			available = {
+				owner = {
+					luxury_residence_upkeep_affordable = yes
+				}
+			}
+		}
+
+		4 = {
+			building = building_commercial_zone
+			available = {
+				owner = {
+					commercial_zone_upkeep_affordable = yes
+				}
+			}
+		}
+
+		5 = {
+			building = building_luxury_residence
+			available = {
+				owner = {
+					luxury_residence_upkeep_affordable = yes
+				}
+			}
+		}
+
+		6 = {
+			building = building_precinct_house
+			available = {
+				owner = {
+					precinct_house_upkeep_affordable = yes
+				}
+			}
+		}
+
+		7 = {
+			building = building_commercial_zone
+			available = {
+				owner = {
+					commercial_zone_upkeep_affordable = yes
+				}
+			}
+		}
+
+		8 = {
+			building = building_luxury_residence
+			available = {
+				owner = {
+					luxury_residence_upkeep_affordable = yes
+				}
+			}
+		}
+
+		9 = {
+			building = building_luxury_residence
+			available = {
+				owner = {
+					luxury_residence_upkeep_affordable = yes
+				}
+			}
+		}
+
+		10 = {
+			building = building_luxury_residence
+			available = {
+				owner = {
+					luxury_residence_upkeep_affordable = yes
+				}
+			}
+		}
+
+		11 = {
+			building = building_luxury_residence
+			available = {
+				owner = {
+					luxury_residence_upkeep_affordable = yes
+				}
+			}
+		}
+
+		12 = {
+			building = building_luxury_residence
+			available = {
+				owner = {
+					luxury_residence_upkeep_affordable = yes
+				}
+			}
+		}
+
+		13 = {
+			building = building_commercial_zone
+			available = {
+				owner = {
+					commercial_zone_upkeep_affordable = yes
+				}
+			}
+		}
+
+		14 = {
+			building = building_luxury_residence
+			available = {
+				owner = {
+					luxury_residence_upkeep_affordable = yes
+				}
+			}
+		}
+
+		15 = {
+			building = building_luxury_residence
+			available = {
+				owner = {
+					luxury_residence_upkeep_affordable = yes
+				}
+			}
+		}
+
+		16 = {
+			building = building_commercial_zone
+			available = {
+				owner = {
+					commercial_zone_upkeep_affordable = yes
+				}
+			}
+		}
+	}
+}

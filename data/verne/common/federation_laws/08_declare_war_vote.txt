@@ -1,0 +1,197 @@
+@cooldown = 3600
+
+declare_war_unanimous_vote = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = declare_war_unanimous_vote }
+					has_modifier = federation_law_category_war_declaration_vote_cooldown
+				}
+			}
+		}
+	}
+	on_enact = {
+		set_diplomacy_action_setting = {
+			action = action_declare_war
+			settings = {
+				vote_type = unanimous_vote
+			}
+		}
+		set_diplomacy_action_setting = {
+			action = action_offer_peace
+			settings = {
+				vote_type = unanimous_vote
+			}
+		}
+		if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_war_declaration_vote_cooldown
+				days = @cooldown
+			}
+		}
+		add_cohesion = -5
+	}
+
+	ai_weight = {
+		base = 61
+	}
+}
+
+declare_war_majority_vote = {
+	potential = {
+		host_has_dlc = Federations
+		NOT = { has_federation_type = hegemony_federation }
+	}
+	allow = {
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = declare_war_majority_vote }
+					has_modifier = federation_law_category_war_declaration_vote_cooldown
+				}
+			}
+		}
+	}
+	required_centralization = {
+		base = 2
+	}
+	on_enact = {
+		set_diplomacy_action_setting = {
+			action = action_declare_war
+			settings = {
+				vote_type = majority_vote
+			}
+		}
+		set_diplomacy_action_setting = {
+			action = action_offer_peace
+			settings = {
+				vote_type = majority_vote
+			}
+		}
+		if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_war_declaration_vote_cooldown
+				days = @cooldown
+			}
+		}
+		add_cohesion = -5
+	}
+
+	ai_weight = {
+		base = 51
+	}
+}
+
+declare_war_majority_vote_hegemony = {
+	potential = {
+		host_has_dlc = Federations
+		has_federation_type = hegemony_federation
+	}
+	allow = {
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = declare_war_majority_vote_hegemony }
+					has_modifier = federation_law_category_war_declaration_vote_cooldown
+				}
+			}
+		}
+	}
+
+	on_enact = {
+		set_diplomacy_action_setting = {
+			action = action_declare_war
+			settings = {
+				vote_type = majority_vote
+			}
+		}
+		set_diplomacy_action_setting = {
+			action = action_offer_peace
+			settings = {
+				vote_type = majority_vote
+			}
+		}
+		if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_war_declaration_vote_cooldown
+				days = @cooldown
+			}
+		}
+		add_cohesion = -5
+	}
+
+	ai_weight = {
+		base = 51
+	}
+}
+
+declare_war_president_vote = {
+	potential = { host_has_dlc = Federations }
+	allow = {
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = declare_war_president_vote }
+					has_modifier = federation_law_category_war_declaration_vote_cooldown
+				}
+			}
+		}
+	}
+	required_centralization = {
+		base = 4
+	}
+	modifier = {
+		cohesion_add = -0.50
+	}
+	on_enact = {
+		set_diplomacy_action_setting = {
+			action = action_declare_war
+			settings = {
+				vote_type = leader
+			}
+		}
+		set_diplomacy_action_setting = {
+			action = action_offer_peace
+			settings = {
+				vote_type = leader
+			}
+		}
+		if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_war_declaration_vote_cooldown
+				days = @cooldown
+			}
+		}
+		add_cohesion = -5
+	}
+
+	ai_weight = {
+		base = 26
+
+		modifier = {
+			add = 25
+			relative_power = { who = from value >= superior }
+		}
+
+		modifier = {
+			add = 25
+			federation = {
+				OR = {
+					has_federation_type = hegemony_federation
+					has_federation_type = military_federation
+				}
+			}
+		}
+
+		modifier = {
+			add = 75
+			is_federation_leader = yes
+		}
+	}
+}

@@ -1,0 +1,274 @@
+@cooldown = 3600
+
+succession_term_years_10 = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = succession_term_years_10 }
+					has_modifier = federation_law_category_succession_term_cooldown
+				}
+			}
+		}
+	}
+	on_enact = {
+		set_federation_succession_term = years_10
+		if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_succession_term_cooldown
+				days = @cooldown
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 51
+		
+		#Behaviour-specific
+		modifier = {
+			factor = 0
+			is_federation_leader = yes
+			federation = {
+				has_federation_law = succession_term_status_change
+				OR = {
+					has_federation_law = succession_type_strongest
+					has_federation_law = succession_type_diplomatic_weight				
+				}
+			}
+		}
+	}
+}
+
+succession_term_years_20 = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = succession_term_years_20 }
+					has_modifier = federation_law_category_succession_term_cooldown
+				}
+			}
+		}
+	}
+	on_enact = {
+		set_federation_succession_term = years_20
+		if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_succession_term_cooldown
+				days = @cooldown
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 51
+		
+		#Behaviour-specific
+		modifier = {
+			factor = 0
+			is_federation_leader = yes
+			federation = {
+				has_federation_law = succession_term_status_change
+				OR = {
+					has_federation_law = succession_type_strongest
+					has_federation_law = succession_type_diplomatic_weight				
+				}
+			}
+		}
+		modifier = {
+			add = 25
+			OR = {
+				has_ai_personality = democratic_crusaders
+				has_ai_personality = federation_builders			
+			}
+		}
+		
+		#Attempt to change from status change when cohesion is low
+		modifier = {
+			add = 25
+			is_federation_leader = no
+			federation = {			
+				federation_cohesion < 0
+				OR = {
+					has_federation_law = succession_type_strongest
+					has_federation_law = succession_type_diplomatic_weight				
+				}
+			}
+		}
+		modifier = {
+			add = 25
+			is_federation_leader = no
+			federation = {			
+				federation_cohesion < -25
+				OR = {
+					has_federation_law = succession_type_strongest
+					has_federation_law = succession_type_diplomatic_weight				
+				}
+			}
+		}
+		modifier = {
+			add = 25
+			is_federation_leader = no
+			federation = {			
+				federation_cohesion < -50
+				OR = {
+					has_federation_law = succession_type_strongest
+					has_federation_law = succession_type_diplomatic_weight				
+				}
+			}
+		}
+		modifier = {
+			add = 25
+			is_federation_leader = no
+			federation = {			
+				federation_cohesion < -75
+				OR = {
+					has_federation_law = succession_type_strongest
+					has_federation_law = succession_type_diplomatic_weight				
+				}
+			}
+		}
+	}
+}
+
+succession_term_years_30 = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = succession_term_years_30 }
+					has_modifier = federation_law_category_succession_term_cooldown
+				}
+			}
+		}
+	}
+	on_enact = {
+		set_federation_succession_term = years_30
+		if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_succession_term_cooldown
+				days = @cooldown
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 51
+		
+		#Behaviour-specific
+		modifier = {
+			factor = 0
+			is_federation_leader = yes
+			federation = {
+				has_federation_law = succession_term_status_change
+				OR = {
+					has_federation_law = succession_type_strongest
+					has_federation_law = succession_type_diplomatic_weight				
+				}
+			}
+		}
+	}
+}
+
+succession_term_years_40 = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = succession_term_years_40 }
+					has_modifier = federation_law_category_succession_term_cooldown
+				}
+			}
+		}
+	}
+	on_enact = {
+		set_federation_succession_term = years_40
+		if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_succession_term_cooldown
+				days = @cooldown
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 51 # AI will always accept, but not suggest
+		
+		#Behaviour-specific
+		modifier = {
+			factor = 0
+			is_federation_leader = yes
+			federation = {
+				has_federation_law = succession_term_status_change
+				OR = {
+					has_federation_law = succession_type_strongest
+					has_federation_law = succession_type_diplomatic_weight				
+				}
+			}
+		}
+	}
+}
+
+succession_term_status_change = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_strongest"
+			OR = {
+				has_federation_law = succession_type_strongest
+				has_federation_law = succession_type_strongest_hegemony
+			}
+		}
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = succession_term_status_change }
+					has_modifier = federation_law_category_succession_term_cooldown
+				}
+			}
+		}
+	}
+	on_enact = {
+		set_federation_succession_term = status_change
+		if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_succession_term_cooldown
+				days = @cooldown
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 26
+		
+		modifier = {
+			add = 25
+			relative_power = { who = from value >= superior }
+		}
+		
+		#Behaviour-specific
+		modifier = {
+			add = 75
+			is_federation_leader = yes
+			federation = {
+				OR = {
+					has_federation_law = succession_type_strongest
+					has_federation_law = succession_type_strongest_hegemony
+				}
+			}
+		}
+		modifier = {
+			add = 25
+			is_subject = yes
+		}
+	}
+}

@@ -1,0 +1,121 @@
+#icon_frame = 1 # green frame
+#icon_frame = 2 # yellow frame
+#icon_frame = 3 # red frame
+
+##########################################################################
+# Faction Modifiers
+##########################################################################
+faction_approval_very_low = {
+	pop_happiness = -0.4
+}
+
+faction_approval_low = {
+	pop_happiness = -0.1
+}
+
+faction_approval_average = {
+}
+
+faction_approval_high = {
+	pop_happiness = 0.05
+}
+
+faction_approval_very_high = {
+	pop_happiness = 0.1
+}
+
+embraced_another_faction = {
+	faction_approval = -0.2
+}
+
+embraced_faction_timer = {
+	icon = "gfx/interface/icons/modifiers/mod_pop_government_ethic_attraction.dds"
+}
+
+embraced_faction = {
+	faction_approval = 0.1
+}
+
+suppressed_faction = {
+	faction_approval = -0.2
+}
+
+suppressed_xenophobe = {
+	pop_ethic_xenophobe_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+
+promoted_xenophobe = {
+	pop_ethic_xenophobe_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}
+
+suppressed_xenophile = {
+	pop_ethic_xenophile_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+
+promoted_xenophile = {
+	pop_ethic_xenophile_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}
+
+suppressed_spiritualist = {
+	pop_ethic_spiritualist_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+
+promoted_spiritualist = {
+	pop_ethic_spiritualist_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}
+
+suppressed_materialist = {
+	pop_ethic_materialist_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+
+promoted_materialist = {
+	pop_ethic_materialist_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}
+
+suppressed_pacifist = {
+	pop_ethic_pacifist_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+
+promoted_pacifist = {
+	pop_ethic_pacifist_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}
+
+suppressed_militarist = {
+	pop_ethic_militarist_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+
+promoted_militarist = {
+	pop_ethic_militarist_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}
+
+suppressed_egalitarian = {
+	pop_ethic_egalitarian_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+
+promoted_egalitarian = {
+	pop_ethic_egalitarian_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}
+
+suppressed_authoritarian = {
+	pop_ethic_authoritarian_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+
+promoted_authoritarian = {
+	pop_ethic_authoritarian_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}

@@ -1,0 +1,19 @@
+## Categories used in this file must have use_for_ai_budget = yes defined in economic_categories ##
+## It is possible to have multiple entries with the same category and resource ##
+
+#################
+## Expenditure ##
+#################
+unity_expenditure_edicts = {
+	resource = unity 
+	type = expenditure
+	category = edicts
+	
+	potential = {
+		has_unlocked_all_traditions = yes
+	}
+	
+	fraction = {
+		weight = 1
+	}	
+}

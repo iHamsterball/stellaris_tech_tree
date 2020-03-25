@@ -1,0 +1,24 @@
+automate_crime_management = {
+
+	available = {
+		planet_crime > 15
+	}
+
+	crisis = yes
+
+	buildings = {
+		precinct = {
+			building = building_precinct_house
+			available = {
+				NOR = {
+					AND = {
+						has_building = building_precinct_house
+						owner = { has_technology = tech_colonial_centralization }
+					}
+					has_building = building_hall_judgment
+					num_buildings = { type = building_precinct_house value >= 3 }
+				}
+			}
+		}
+	}
+}

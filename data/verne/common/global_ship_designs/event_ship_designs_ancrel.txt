@@ -1,0 +1,120 @@
+# The Grand Herald
+ship_design = {
+	name = "NAME_Herald"
+	ship_size = titan
+	is_event_design = yes
+	is_special_buildable = yes
+
+	section = {
+		template = "TITAN_BOW"
+		slot = "bow"
+		
+		component = {
+			slot = "TITANIC_01"
+			template = "PERDITION_BEAM_TITAN"
+		}
+		
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+	}
+	section = {
+		template = "TITAN_MID"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "ENERGY_TORPEDO_2"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "ENERGY_TORPEDO_2"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "ENERGY_TORPEDO_2"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_ARMOR_5"
+		}
+	}
+	section = {
+		template = "TITAN_STERN"
+		slot = "stern"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "FIRE_CONTROL_1"
+		}
+		component = {
+			slot = "AUX_UTILITY_3"
+			template = "AFTERBURNER_2"
+		}
+	}
+	required_component="TITAN_DARK_MATTER_REACTOR"
+	required_component="JUMP_DRIVE_1"
+	required_component="COMBAT_COMPUTER_ARTILLERY_ADVANCED"
+	required_component="TITAN_SHIP_THRUSTER_5"
+	required_component="SENSOR_4"
+	required_component="SHIP_AURA_INSPIRING_PRESENCE"
+}

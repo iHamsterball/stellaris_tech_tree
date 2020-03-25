@@ -1,0 +1,99 @@
+### Federations Scripted Triggers
+
+scion_losing_defensive_war = {
+	any_war = {
+		any_defender = {
+			is_same_value = root
+		}
+		any_attacker = {
+			OR = {
+				relative_power = {
+					who = root
+					category = fleet
+					value = overwhelming
+				}
+				relative_power = {
+					who = root
+					category = fleet
+					value = superior
+				}
+			}
+		}
+		defender_war_exhaustion > 0.8
+		attacker_war_exhaustion < 0.6
+	}	
+}
+
+scion_losing_offensive_war = {
+	any_war = {
+		any_attacker = {
+			is_same_value = root
+		}
+		any_defender = {
+			OR = {
+				relative_power = {
+					who = root
+					category = fleet
+					value = overwhelming
+				}
+				relative_power = {
+					who = root
+					category = fleet
+					value = superior
+				}
+			}
+		}
+		attacker_war_exhaustion > 0.8	
+		defender_war_exhaustion < 0.6
+	}
+}
+
+scion_losing_defensive_war_combatant = {
+	any_war = {
+		any_defender = {
+			is_same_value = root
+		}
+		any_attacker = {
+			is_same_value = prevprev
+			OR = {
+				relative_power = {
+					who = root
+					category = fleet
+					value = overwhelming
+				}
+				relative_power = {
+					who = root
+					category = fleet
+					value = superior
+				}
+			}
+		}
+		defender_war_exhaustion > 0.8
+		attacker_war_exhaustion < 0.6
+	}	
+}
+
+scion_losing_offensive_war_combatant = {
+	any_war = {
+		any_attacker = {
+			is_same_value = root
+		}
+		any_defender = {
+			is_same_value = prevprev
+			OR = {
+				relative_power = {
+					who = root
+					category = fleet
+					value = overwhelming
+				}
+				relative_power = {
+					who = root
+					category = fleet
+					value = superior
+				}
+			}
+		}
+		attacker_war_exhaustion > 0.8	
+		defender_war_exhaustion < 0.6
+	}
+}

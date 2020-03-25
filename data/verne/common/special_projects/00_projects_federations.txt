@@ -1,0 +1,417 @@
+###########################
+#						  #
+#  RESEARCH PROJECTS FOR  #
+#       FEDERATIONS       #
+#						  #
+###########################
+
+special_project = {
+	key = "INVESTIGATE_CAVE_SHROOM_PROJECT"
+	event_chain = "feral_overload_chain"
+	cost = 500
+	tech_department = society_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	picture = GFX_evt_emergency_workers
+
+	event_scope = planet_event
+
+	on_success = {
+		planet_event = { id = colony.8004 }
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "UTILIZE_CAVE_SHROOM_PROJECT"
+	event_chain = "feral_overload_chain"
+	cost = 500
+	tech_department = society_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	picture = GFX_evt_analyzing_artifacts
+
+	event_scope = planet_event
+
+	on_success = {
+		planet_event = { id = colony.8005 }
+	}
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "EXTERMINATE_CAVE_SHROOM_PROJECT"
+	event_chain = "feral_overload_chain"
+	cost = 500
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	picture = GFX_evt_nuclear_explosion
+
+	event_scope = planet_event
+
+	on_success = {
+		planet_event = { id = colony.8006 }
+	}
+
+	on_fail = {
+	}
+}
+
+# The Lesser Messenger Remodel
+special_project = {
+	key = "LESSENGER_REMODEL"
+	picture = GFX_evt_space_hangar
+	icon = "gfx/interface/icons/situation_log/situation_log_engineering.dds"
+	cost = 1500
+	sound = no
+	tech_department = engineering_technology
+	location = no
+	timelimit = -1
+
+	event_scope = ship_event
+
+	requirements = {
+	}
+
+	abort_trigger = {
+	}
+
+	on_success = {
+		from = {
+			owner = {
+				country_event = { id = fedev.9480 }
+			}
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# Galactic Doorstep Origin - A Closer Look Project
+special_project = {
+	key = "A_CLOSER_LOOK_PROJECT"
+	cost = 250
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_scanning_beam.dds"
+	picture = GFX_evt_big_landing_ship
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	on_success = {
+		event_target:probe_crashsite = {
+			planet_event = { id = origin.1011 }
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# Galactic Doorstep Origin - The Gateway Cannon Project
+special_project = {
+	key = "THE_GATEWAY_CANNON_PROJECT"
+	cost = 1000
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_extradimensional.dds"
+	picture = GFX_evt_drifting_gateway
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	on_success = {
+		leader = {
+			exile_leader_as = gateway_explorer
+		}
+		delete_ship = this
+		hidden_effect = {
+			owner = {
+				country_event = { id = origin.1015 days = 1 }
+			}
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+
+# On the Shoulders of Giants Origin - Pathfinding Project
+special_project = {
+	key = "PATHFINDING_PROJECT"
+	event_chain = "intercepting_history_chain"
+	cost = 500
+	tech_department = physics_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_scanning_beam.dds"
+	picture = GFX_evt_ship_travel
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	### This research project triggers an event that spawns a new system
+	on_success = {
+		hidden_effect = {
+			owner = {
+				country_event = { id = origin.1340 days = 5 }
+			}
+			clear_global_event_target = fusion_drive_trail
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# On the Shoulders of Giants Origin - Investigate the Dead Station Project
+special_project = {
+	key = "INVESTIGATE_THE_DEAD_STATION_PROJECT"
+	event_chain = "intercepting_history_chain"
+	cost = 1000
+	tech_department = society_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_society.dds"
+	picture = GFX_evt_mining_station
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	### This research project triggers an event that spawns a new system
+	on_success = {
+		hidden_effect = {
+			owner = {
+				country_event = { id = origin.1350 days = 1 }
+			}
+			clear_global_event_target = benefactor_station
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# On the Shoulders of Giants Origin - Project Ouroboros Project
+special_project = {
+	key = "PROJECT_OUROBOROS_PROJECT"
+	event_chain = "intercepting_history_chain"
+	cost = 750
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_engineering.dds"
+	picture = GFX_evt_physics_research
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	### This research project triggers an event that spawns an Arc Site
+	on_success = {
+		hidden_effect = {
+			owner = {
+				country_event = { id = origin.1359 days = 1 }
+			}
+			clear_global_event_target = primitive_benefactor_species
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# On the Shoulders of Giants Origin - Tracking the Predators Project
+special_project = {
+	key = "TRACKING_THE_PREDATOR_PROJECT"
+	event_chain = "relentless_pursuit_chain"
+	cost = 500
+	tech_department = physics_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_scanning_beam.dds"
+	picture = GFX_evt_ship_travel
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	### This research project triggers an event that spawns a new system
+	on_success = {
+		hidden_effect = {
+			owner = {
+				country_event = { id = origin.1385 days = 5 }
+			}
+			clear_global_event_target = fusion_drive_trail
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# On the Shoulders of Giants Origin - Investigate Silent Freighter Project
+special_project = {
+	key = "INVESTIGATE_SILENT_FREIGHTER_PROJECT"
+	event_chain = "relentless_pursuit_chain"
+	cost = 1000
+	tech_department = society_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_society.dds"
+	picture = GFX_evt_ship_in_orbit_2
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	### This research project triggers an event that spawns a new system
+	on_success = {
+		hidden_effect = {
+			owner = {
+				country_event = { id = origin.1395 days = 1 }
+			}
+			clear_global_event_target = abandoned_freighter
+			clear_global_event_target = rendezvous_with_freighter_system
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# On the Shoulders of Giants Origin - The Old Beacon Project
+special_project = {
+	key = "OLD_BEACON_PROJECT"
+	event_chain = "relentless_pursuit_chain"
+	cost = 750
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_engineering.dds"
+	picture = GFX_evt_mining_station
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	### This research project triggers an event that spawns an Arc Site
+	on_success = {
+		hidden_effect = {
+			owner = {
+				country_event = { id = origin.1405 days = 1 }
+			}
+			clear_global_event_target = mindwipe_cannon
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+## DANCING PLAGUE PROJECT
+special_project = {
+	key = "DANCING_PLAGUE_PROJECT"
+	cost = 1000
+	tech_department = society_technology
+	picture = GFX_evt_tradestation_interior
+	icon = "gfx/interface/icons/situation_log/situation_log_alert.dds"
+
+	event_scope = planet_event
+
+	on_success = {
+		random_list = {
+			3 = {
+				planet_event = { id = federations2.10 }
+			}
+			1 = {
+				planet_event = { id = federations2.11 }
+			}
+		}
+	}
+	on_fail = {
+		
+	}
+}
+
+## REMOVE DANCING PLAGUE PROJECT
+special_project = {
+	key = "DANCING_PLAGUE_PROJECT2"
+	cost = 1000
+	tech_department = society_technology
+	picture = GFX_evt_disease_outbreak
+	icon = "gfx/interface/icons/situation_log/situation_log_alert.dds"
+
+	event_scope = planet_event
+
+	on_success = {
+		planet_event = { id = federations2.15 }
+	}
+	on_fail = {
+		
+	}
+}
+
+## PROJECT BLUE LOTUS (IMPOSSIBLE CORRIE)
+special_project = {
+	key = "BLUELOTUS_SCALE_PROJECT"
+	cost = 3500
+	tech_department = physics_technology
+	picture = GFX_evt_strategic_resources
+	icon = "gfx/interface/icons/situation_log/situation_log_physics.dds"
+
+	event_scope = planet_event # Negates requirement for a science ship
+	
+	on_success = {
+		planet_event = { id = colony_fed.115 }
+	}
+	
+	on_fail = {
+		from = { planet_event = { id = colony_fed.111 } }
+	}
+	
+	abort_trigger = {	
+	}
+}
+
+## WENKWORT ZEN WORLD
+special_project = {
+	key = "WENKWORT_PROJECT"
+	event_chain = "wenkwort_chain"
+	days_to_research = 100
+	tech_department = society_technology
+	picture = GFX_evt_cold_barren_planet
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+	event_scope = ship_event
+	
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	on_success = {
+		ship_event = { id = federations3.135 }
+	}
+	
+	on_fail = {
+	}
+}

@@ -1,0 +1,45 @@
+# Archaeologist - Singular
+defined_text = {
+	name = GetArchaeologist
+	text = {
+		trigger = {
+			NOT = { owner = { has_ethic = ethic_gestalt_consciousness } }
+		}
+		localization_key = archaeologist_1
+	}
+	text = {
+		trigger = {
+			owner = { has_authority = auth_machine_intelligence }
+		}
+		localization_key = archaeologist_2
+	}
+	text = {
+		trigger = {
+			owner = { has_authority = auth_hive_mind }
+		}
+		localization_key = archaeologist_3
+	}
+}
+
+# Archaeologists - Plural
+defined_text = {
+	name = GetArchaeologistPlural
+	text = {
+		trigger = {
+			NOT = { owner = { has_ethic = ethic_gestalt_consciousness } }
+		}
+		localization_key = archaeologists_1
+	}
+	text = {
+		trigger = {
+			owner = { has_authority = auth_machine_intelligence }
+		}
+		localization_key = archaeologists_2
+	}
+	text = {
+		trigger = {
+			owner = { has_authority = auth_hive_mind }
+		}
+		localization_key = archaeologists_3
+	}
+}

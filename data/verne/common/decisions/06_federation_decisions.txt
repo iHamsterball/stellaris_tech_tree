@@ -1,0 +1,118 @@
+##########################################################################
+# Federation Decisions
+##########################################################################
+
+decision_transplant_tree = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = decision_resources
+
+	enactment_time = 180
+
+	resources = {
+		category = decisions
+		cost = {
+			food = 500
+		}
+	}
+
+	potential = {
+		has_modifier = no_lifetree
+	}
+
+	allow = {
+
+	}
+
+	effect = {
+		add_deposit = d_tree_of_life_colony
+		remove_modifier = no_lifetree
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+decision_extradimensional_experimentation = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = decision_engineering_research
+
+	resources = {
+		category = decisions
+		cost = {
+			sr_zro = 500
+		}
+	}
+
+	potential = {
+		owner = {
+			is_galactic_community_member = yes
+		}
+		is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+		NOT = { has_modifier = pm_extradimensional_experimentation }
+	}
+
+	allow = {
+
+	}
+
+	effect = {
+		add_modifier = { modifier = pm_extradimensional_experimentation days = -1 }
+	}
+
+	ai_weight = {
+		weight = 1
+
+		modifier = {
+			factor = 0
+			exists = owner
+			owner = {
+				has_monthly_income = {
+					resource = sr_zro
+					value < 1
+				}
+			}
+		}
+	}
+}
+
+decision_end_extradimensional_experimentation = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = decision_engineering_research
+
+	resources = {
+		category = decisions
+		cost = {
+		}
+	}
+
+	potential = {
+		has_modifier = pm_extradimensional_experimentation
+	}
+
+	allow = {
+
+	}
+
+	effect = {
+		remove_modifier = pm_extradimensional_experimentation
+	}
+
+	ai_weight = {
+		weight = 1
+
+		modifier = {
+			factor = 0
+			exists = owner
+			owner = {
+				NOT = {
+					has_deficit = sr_zro
+				}
+			}
+
+		}
+	}
+}

@@ -1,0 +1,26 @@
+######################################################
+#
+# Added possible_pre_triggers to jobs
+#
+# pre_triggers are fast triggers that are tested before full triggers
+# they are meant to be fast and quickly exclude pops from jobs
+# they take the form of yes/no question, if an entry is not included it will be ignored.
+# possible values:
+# 	possible_pre_triggers = {
+#		has_owner					# whether the pop planet has an owner
+#		is_enslaved					# whether the pop is enslaved
+#		is_being_purged				# whether the pop is being purged
+#		is_being_assimilated		# whether the pop is being assimilated
+#		has_planet					# whether the pop is on a planet or not
+#		is_sapient					# whether the pop is sapient
+#	}
+#
+# example:
+#	possible_pre_triggers = {
+#		has_owner = yes
+#		is_enslaved = no
+#		is_being_purged = no
+#		is_being_assimilated = no
+#	}
+#
+######################################################

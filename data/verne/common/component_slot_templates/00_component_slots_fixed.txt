@@ -1,0 +1,32 @@
+invisible_extra_large_fixed = {
+	size = extra_large
+	component = weapon
+	is_fixed = yes
+}
+
+invisible_titanic_fixed = {
+	size = titanic
+	component = weapon
+	is_fixed = yes
+}
+
+invisible_planet_killer_fixed = {
+	size = planet_killer
+	component = weapon
+	is_fixed = yes
+}
+
+invisible_missile_fixed = {
+	size = torpedo
+	component = weapon
+	is_fixed = yes
+}
+
+large_missile_fixed = {
+	size = torpedo
+	component = weapon
+	is_fixed = yes
+	entities = {
+		weapon_type_explosive = "turret_missile_large_entity"
+	}
+}

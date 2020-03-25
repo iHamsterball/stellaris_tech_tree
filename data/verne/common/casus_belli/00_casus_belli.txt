@@ -1,0 +1,390 @@
+#my_casus_belli = {
+#	potential = { ... }		# trigger to make some CBs invalid for certain types of countries; this = attacker (CB owner); default: { always = yes }
+#	is_valid = { ... }		# trigger, evaluated daily to check if CB should be created or destroyed automatically, does not affect CBs granted via script;
+#								# this = attacker (CB owner), from = defender (target country); default: { always = yes }
+#	destroy_if = { ... }	# trigger, evaluated daily to destroy CBs that have been granted via script ahead of expiration date;
+#								# this = attacker (CB owner), from = defender (target country); default: { always = no }
+#	show_notification = no/yes	# optional (default = yes), flag to control whether this CB will generate a notification (to avoid duplicate
+# 								# notification when a claim CB is generated)
+#}
+
+
+cb_claim = {
+	show_in_diplomacy = yes
+	show_notification = no
+	potential = {
+		is_country_type = default
+		NOT = { is_in_federation_with = from }
+	}
+	is_valid = {
+		has_claim = FROM
+		has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+cb_subjugation = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		OR = {
+			is_country_type = default
+			is_country_type = awakened_fallen_empire
+		}
+		NOT = { is_in_federation_with = from }
+		is_subject = no
+	}
+	is_valid = {
+		NOT = { is_overlord_to = FROM }
+		is_country_type = awakened_fallen_empire
+		NOT = { has_authority = auth_machine_intelligence }
+	}
+}
+
+cb_humiliation = {
+	show_in_diplomacy = yes
+	show_notification = no
+	potential = {
+		OR = {
+			is_country_type = default
+			is_country_type = fallen_empire
+		}
+		NOT = { is_in_federation_with = from }
+	}
+	is_valid = {
+		OR = {
+			NOT = { has_policy_flag = liberation_wars }
+			from = { has_ethic = ethic_gestalt_consciousness }
+		}
+		OR = {
+			is_rival = FROM
+			AND = {
+				OR = {
+					is_active_resolution = "resolution_mutualdefense_castigation_proclamation"
+					is_active_resolution = "resolution_mutualdefense_renegade_containment"
+				}
+				FROM = {
+					OR = {
+						has_modifier = resolution_denounced
+						is_in_breach_of_any = yes
+					}
+				}
+			}
+		}
+
+		has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+cb_ideology = {
+	show_in_diplomacy = yes
+	show_notification = no
+	potential = {
+		is_country_type = default
+		NOR = {
+			has_ethic = ethic_gestalt_consciousness
+			is_in_federation_with = from
+		}
+	}
+	is_valid = {
+		has_policy_flag = liberation_wars
+		from = { is_country_type = default }
+		from = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+		has_total_war_cb = no
+		OR = {
+			AND = {
+				is_xenophile = yes
+				from = { is_xenophile = no }
+			}
+			AND = {
+				is_xenophobe = yes
+				from = { is_xenophobe = no }
+			}
+			AND = {
+				is_authoritarian = yes
+				from = { is_authoritarian = no }
+			}
+			AND = {
+				is_egalitarian = yes
+				from = { is_egalitarian = no }
+			}
+			AND = {
+				is_spiritualist = yes
+				from = { is_spiritualist = no }
+			}
+			AND = {
+				is_materialist = yes
+				from = { is_materialist = no }
+			}
+			AND = {
+				is_militarist = yes
+				from = { is_militarist = no }
+			}
+			AND = {
+				is_pacifist = yes
+				from = { is_pacifist = no }
+			}
+		}
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+cb_sublimation = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		has_valid_civic = civic_machine_assimilator
+	}
+	is_valid = {
+		has_total_war_cb = yes
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+cb_purification = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		OR = {
+			is_berserk_fallen_machine_empire = yes
+			has_valid_civic = civic_fanatic_purifiers
+			has_valid_civic = civic_machine_terminator
+		}
+	}
+	is_valid = {
+		has_total_war_cb = yes
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+cb_hunger = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		is_country_type = default
+		has_valid_civic = civic_hive_devouring_swarm
+	}
+	is_valid = {
+		has_total_war_cb = yes
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+cb_despoliation = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		is_country_type = default
+		has_valid_civic = civic_barbaric_despoilers
+	}
+	is_valid = {
+		has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+cb_colossus = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		is_country_type = default
+		has_technology = "tech_colossus"
+		has_policy_flag = unrestricted_wars
+		NOT = { is_in_federation_with = from }
+	}
+	is_valid = {
+		has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+		any_owned_fleet = { 
+			is_ship_class = shipclass_military_special
+			any_owned_ship = { is_ship_size = colossus } 
+		}
+	}
+}
+
+cb_stop_colossus = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		is_country_type = default
+		NOT = { is_in_federation_with = from }
+	}
+	is_valid = {
+		has_total_war_cb = no
+		from = { is_country_type = default }
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+		from = { 
+			any_owned_fleet = { 
+				is_ship_class = shipclass_military_special
+				any_owned_ship = { is_ship_size = colossus } 
+			}
+		}
+		NOT = { 
+			any_owned_fleet = {
+				is_ship_class = shipclass_military_special
+				any_owned_ship = { is_ship_size = colossus } 
+			}
+		}
+	}
+}
+
+cb_containment = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		is_country_type = default
+		NOR = {
+			has_valid_civic = civic_fanatic_purifiers
+			has_valid_civic = civic_machine_terminator
+			has_valid_civic = civic_machine_assimilator
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+	}
+	is_valid = {
+		has_total_war_cb = yes
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+		NOT = { is_overlord_to = FROM }
+		from = {
+			OR = {
+				is_country_type = awakened_fallen_empire
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_assimilator
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+	}
+}
+
+cb_subject = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		is_country_type = default
+		is_subject = yes
+	}
+	is_valid = {
+		overlord = { is_same_value = from }
+	}
+}
+
+cb_counterattack = {
+	show_in_diplomacy = yes
+	show_notification = no
+	potential = {
+		is_country_type = default
+		NOT = { is_in_federation_with = from }
+	}
+	is_valid = {
+		is_galactic_community_member = yes
+		OR = {
+			is_active_resolution = "resolution_mutualdefense_enemy_of_my_enemy"
+			is_active_resolution = "resolution_mutualdefense_castigation_proclamation"
+			is_active_resolution = "resolution_mutualdefense_renegade_containment"
+		}
+		from = {
+			is_galactic_community_member = no
+			is_at_war = yes
+			any_war = {
+				is_war_participant = { who = prev side = attackers }
+				any_defender = { is_galactic_community_member = yes }
+			}
+		}
+
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+cb_renegade_containment = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		is_country_type = default
+		is_galactic_community_member = yes
+		is_active_resolution = "resolution_mutualdefense_renegade_containment"
+		NOT = { is_in_federation_with = from }
+	}
+	is_valid = {
+		OR = {
+			has_policy_flag = unrestricted_wars
+			from = { has_ethic = ethic_gestalt_consciousness }
+		}
+
+		has_total_war_cb = no
+		from = {
+			is_galactic_community_member = no
+		}
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+cb_end_threat_renegade_containment = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		is_country_type = default
+		NOT = { is_in_federation_with = from }
+	}
+	is_valid = {
+		has_total_war_cb = no
+		from = {
+			is_country_type = default
+			any_war = {
+				using_war_goal = { type = wg_renegade_containment owner = attacker }
+			}
+		}
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}

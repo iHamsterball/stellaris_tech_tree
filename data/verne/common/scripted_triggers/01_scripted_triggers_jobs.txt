@@ -1,0 +1,223 @@
+ruler_job_check_trigger = {
+	custom_tooltip = RULER_JOB_TRIGGER
+	hidden_trigger = {
+		exists = owner
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		NOT = { has_trait = trait_syncretic_proles }
+		NOT = { has_trait = trait_nerve_stapled }
+		OR = {
+			NOT = { has_trait = trait_mechanical }
+			AND = {
+				owner = { has_technology = tech_synthetic_workers }
+				owner = { has_policy_flag = ai_full_rights }
+			}
+		}
+		NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
+	}
+}
+
+complex_specialist_job_check_trigger = {
+	specialist_job_check_trigger = yes
+	hidden_trigger = {
+		exists = owner
+		OR = {
+			NOT = { has_trait = trait_mechanical }
+			AND = {
+				owner = { has_technology = tech_synthetic_workers }
+				owner = { NOT = { has_policy_flag = ai_outlawed } }
+			}
+		}
+	}
+}
+
+specialist_job_check_trigger = {
+	custom_tooltip = SPECIALIST_JOB_TRIGGER
+	hidden_trigger = {
+		exists = owner
+		OR = {
+			is_enslaved = no
+			has_slavery_type = { type = slavery_indentured }
+		}
+		is_being_purged = no
+		is_being_assimilated = no
+		NOT = { has_trait = trait_syncretic_proles }
+		NOT = { has_trait = trait_nerve_stapled }
+		OR = {
+			NOT = { has_trait = trait_mechanical }
+			owner = { has_technology = tech_droid_workers }
+		}
+		NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
+	}
+}
+
+entertainer_job_check_trigger = {
+	custom_tooltip = SPECIALIST_JOB_TRIGGER
+	hidden_trigger = {
+		exists = owner
+		OR = {
+			is_enslaved = no
+			has_slavery_type = { type = slavery_domestic }
+		}
+		is_being_purged = no
+		is_being_assimilated = no
+		NOT = { has_trait = trait_syncretic_proles }
+		NOT = { has_trait = trait_nerve_stapled }
+		OR = {
+			NOT = { has_trait = trait_mechanical }
+			owner = { has_technology = tech_droid_workers }
+		}
+		NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
+	}
+}
+
+battle_thrall_job_check_trigger = {
+	custom_tooltip = SPECIALIST_JOB_TRIGGER
+	hidden_trigger = {
+		exists = owner
+		OR = {
+			is_enslaved = no
+			has_slavery_type = { type = slavery_military }
+		}
+		is_being_purged = no
+		is_being_assimilated = no
+		NOT = { has_trait = trait_syncretic_proles }
+		NOT = { has_trait = trait_nerve_stapled }
+		OR = {
+			NOT = { has_trait = trait_mechanical }
+			owner = { has_technology = tech_droid_workers }
+		}
+		NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
+	}
+}
+
+complex_worker_job_check_trigger = {
+	worker_job_check_trigger = yes
+	hidden_trigger = {
+		exists = owner
+		OR = {
+			NOT = { has_trait = trait_mechanical }
+			owner = { has_technology = tech_droid_workers }
+		}
+	}
+}
+
+worker_job_check_trigger = {
+	custom_tooltip = WORKER_JOB_TRIGGER
+	hidden_trigger = {
+		exists = owner
+		is_being_purged = no
+		is_being_assimilated = no
+		NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
+		NAND = {
+			has_citizenship_type = { type = citizenship_slavery }
+			OR = {
+				has_slavery_type = { type = slavery_livestock }
+				has_slavery_type = { type = slavery_matrix }
+			}
+		}
+	}
+}
+
+drone_job_check_trigger = {
+	custom_tooltip = DRONE_JOB_TRIGGER
+	hidden_trigger = {
+		exists = owner
+		owner = { is_gestalt = yes }
+		is_being_purged = no
+		is_enslaved = no
+		is_being_assimilated = no
+		NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
+	}
+}
+
+has_utopian_living_standard_type = {
+	has_living_standard = { type = living_standard_utopian }
+}
+
+has_very_high_living_standard_type = {
+	OR = {
+		has_living_standard = { type = living_standard_chemical_bliss }
+		has_living_standard = { type = living_standard_utopian }
+	}
+}
+
+has_shared_burden_living_standard_type = {
+	has_living_standard = { type = living_standard_shared_burden }
+}
+
+has_academic_living_standard_type = {
+	has_living_standard = { type = living_standard_academic_privilege }
+}
+
+has_high_living_standard_type = {
+	has_living_standard = { type = living_standard_good }
+}
+
+has_normal_living_standard_type = {
+	has_living_standard = { type = living_standard_normal }
+}
+
+has_stratified_living_standard_type = {
+	has_living_standard = { type = living_standard_stratified }
+}
+
+has_low_living_standard_type = {
+	has_living_standard = { type = living_standard_subsistence }
+}
+
+is_lithoid = {
+	species = {
+		is_archetype = LITHOID
+	}
+}
+
+is_organic_species = {
+	species = {
+		OR = {
+			is_archetype = BIOLOGICAL # original trigger did not include pre-sapient classes
+			is_archetype = LITHOID
+		}
+	}
+}
+
+is_robotic_species = {
+	species = {
+		OR = {
+			is_archetype = ROBOT
+			is_archetype = MACHINE
+		}
+	}
+}
+
+can_take_servant_job = {
+	OR = {
+		is_domestic_robot = yes
+		is_domestic_servant = yes
+	}
+}
+
+is_domestic_servant = {
+	is_enslaved = yes
+	has_slavery_type = { type = slavery_domestic }
+}
+
+is_domestic_robot = {
+	has_citizenship_type = { type = citizenship_robot_servitude }
+	has_trait = trait_robot_domestic_protocols
+}
+
+prosperity_gospel_check_trigger = {
+	is_spiritualist = yes
+	planet = {
+		exists = owner
+		OR = {
+			owner = { has_valid_civic = civic_gospel_of_the_masses }
+			AND = {
+				has_branch_office = yes
+				branch_office_owner = { has_valid_civic = civic_gospel_of_the_masses }
+			}
+		}
+	}
+}

@@ -1,0 +1,2811 @@
+
+# Critially important things goes here, such as amenities, housing and countering crime
+# Should be blocked unless they are not needed
+basic = {
+	hidden = yes
+
+	clear_blockers = yes
+	district = {
+		key = district_city
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = consumer_goods
+						value < 0
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				free_housing < 0
+			}
+
+			# Let's not go full spam on this.
+			modifier = {
+				factor = 0
+				free_housing >= 0
+			}
+		}
+	}
+
+	district = {
+		key = district_hive
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 5
+				free_housing < 0
+			}
+
+			# Let's not go full spam on this.
+			modifier = {
+				factor = 0
+				free_housing >= 0
+			}
+		}
+	}
+
+	district = {
+		key = district_nexus
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 5
+				free_housing < 0
+			}
+
+			# Let's not go full spam on this.
+			modifier = {
+				factor = 0
+				free_housing >= 0
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					has_monthly_income = {
+						resource = energy
+						value < 2
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_luxury_residence
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+
+			modifier = {
+				factor = 3
+				free_amenities < 0
+			}
+
+			modifier = {
+				factor = 0
+				free_amenities >= 0
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					has_monthly_income = {
+						resource = energy
+						value < 2
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_holo_theatres
+		weight = {
+			weight = 1
+
+			modifier = {
+				factor = 4
+				free_amenities < 0
+			}
+
+			modifier = {
+				factor = 10
+				free_amenities < -10
+			}
+
+			modifier = {
+				factor = 0
+				free_amenities >= 0
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					has_monthly_income = {
+						resource = energy
+						value < 2
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_hyper_entertainment_forum
+		weight = {
+			weight = 1
+
+			modifier = {
+				factor = 4
+				free_amenities < 0
+			}
+
+			modifier = {
+				factor = 10
+				free_amenities < -10
+			}
+
+			modifier = {
+				factor = 0
+				free_amenities >= 0
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					OR = {
+						has_monthly_income = {
+							resource = exotic_gases
+							value < 1
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 2
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_clinic
+		weight = {
+			weight = 1
+
+			modifier = {
+				factor = 4
+				free_amenities < 0
+			}
+
+			modifier = {
+				factor = 0
+				free_amenities >= 0
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					has_monthly_income = {
+						resource = energy
+						value < 2
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_hospital
+		weight = {
+			weight = 1
+
+			modifier = {
+				factor = 4
+				free_amenities < 0
+			}
+
+			modifier = {
+				factor = 0
+				free_amenities >= 0
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					OR = {
+						has_monthly_income = {
+							resource = exotic_gases
+							value < 1
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 2
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_spawning_pool
+		weight = {
+			weight = 1
+
+			modifier = {
+				factor = 4
+				free_amenities < 0
+			}
+
+			modifier = {
+				factor = 0
+				free_amenities >= 0
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_robot_assembly_plant
+		weight = {
+			weight = 1
+
+			modifier = {
+				factor = 0
+				free_housing <= 0
+			}
+		}
+	}
+
+	building = {
+		key = building_machine_assembly_plant
+		weight = {
+			weight = 1
+
+			modifier = {
+				factor = 0
+				free_housing <= 0
+			}
+		}
+	}
+
+	building = {
+		key = building_precinct_house
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 0
+				planet_crime < 10
+			}
+
+			modifier = {
+				factor = 3
+				planet_crime > 10
+				planet_crime < 25
+			}
+
+			modifier = {
+				factor = 8
+				planet_crime > 25
+				planet_crime < 50
+			}
+
+			modifier = {
+				factor = 15
+				planet_crime > 50
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = { # in case it's been demolished for some reason
+		key = building_colony_shelter
+		weight = {
+			weight = 5
+		}
+	}
+
+	building = {
+		key = building_capital
+		weight = {
+			weight = 2
+		}
+	}
+
+	building = {
+		key = building_major_capital
+		weight = {
+			weight = 2
+		}
+	}
+
+	building = {
+		key = building_system_capital
+		weight = {
+			weight = 2
+		}
+	}
+
+	building = { # in case it's been demolished for some reason
+		key = building_deployment_post
+		weight = {
+			weight = 5
+		}
+	}
+
+	building = {
+		key = building_machine_capital
+		weight = {
+			weight = 2
+		}
+	}
+
+	building = {
+		key = building_machine_major_capital
+		weight = {
+			weight = 2
+		}
+	}
+
+	building = {
+		key = building_machine_system_capital
+		weight = {
+			weight = 2
+		}
+	}
+
+	building = {
+		key = building_hive_capital
+		weight = {
+			weight = 2
+		}
+	}
+
+	building = {
+		key = building_hive_major_capital
+		weight = {
+			weight = 2
+		}
+	}
+
+	building = { # in case it's been demolished for some reason
+		key = building_hab_capital
+		weight = {
+			weight = 5
+		}
+	}
+
+	building = {
+		key = building_hab_major_capital
+		weight = {
+			weight = 2
+		}
+	}
+
+	building = { # in case it's been demolished for some reason
+		key = building_resort_capital
+		weight = {
+			weight = 5
+		}
+	}
+
+	building = {
+		key = building_resort_major_capital
+		weight = {
+			weight = 2
+		}
+	}
+
+	building = { # in case it's been demolished for some reason
+		key = building_slave_capital
+		weight = {
+			weight = 5
+		}
+	}
+
+	building = {
+		key = building_slave_major_capital
+		weight = {
+			weight = 2
+		}
+	}
+}
+
+#############
+# BALANCED FOCUS
+#############
+
+balanced = {
+
+	ai_weight = {
+		weight = 100
+	}
+
+	district = {
+		key = district_generator
+		weight = {
+			weight = 1
+			modifier = 
+			{
+				factor = 3
+				owner = { 
+					has_monthly_income = {
+						resource = energy
+						value < 8
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+
+			modifier = {
+				factor = 3
+				any_owned_pop = { 
+					OR = { 
+						is_unemployed = yes 
+						has_job = servant 
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	district = {
+		key = district_mining
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 3
+				owner = { 
+					has_monthly_income = {
+						resource = minerals
+						value < 0
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+
+			modifier = {
+				factor = 3
+				any_owned_pop = { 
+					OR = { 
+						is_unemployed = yes 
+						has_job = servant 
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	district = {
+		key = district_farming
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 3
+				owner = { 
+					has_monthly_income = {
+						resource = food
+						value < 5
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+
+			modifier = {
+				factor = 3
+				any_owned_pop = { 
+					OR = { 
+						is_unemployed = yes 
+						has_job = servant 
+					}
+				}
+			}
+
+			modifier = { # MI and Synth. Asc. don't build food unless they need it
+				factor = 0
+				owner = { 
+					OR = {
+						has_authority = auth_machine_intelligence
+						has_country_flag = synthetic_empire
+					}
+					has_monthly_income = {
+						resource = food
+						value >= 0
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_hydroponics_farm
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 5
+				owner = { 
+					has_monthly_income = {
+						resource = food
+						value < 5
+					}
+				}
+			}
+
+			modifier = { # MI and Synth. Asc. don't build food unless they need it
+				factor = 0
+				owner = { 
+					OR = {
+						has_authority = auth_machine_intelligence
+						has_country_flag = synthetic_empire
+					}
+					has_monthly_income = {
+						resource = food
+						value >= 0
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_mineral_purification_plant
+		weight = {
+			weight = 1
+			modifier = 
+			{
+				factor = 5
+				owner = { 
+					has_monthly_income = {
+						resource = minerals
+						value < 5
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_energy_grid
+		weight = {
+			weight = 1
+			modifier = 
+			{
+				factor = 5
+				owner = { 
+					has_monthly_income = {
+						resource = energy
+						value < 10
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_bio_reactor
+		weight = {
+			weight = 1
+			modifier = 
+			{
+				factor = 5
+				owner = { 
+					has_monthly_income = {
+						resource = energy
+						value < 10
+					}
+
+					has_monthly_income = {
+						resource = food
+						value > 50
+					}
+				}
+			}
+
+			modifier = 
+			{
+				factor = 0
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value < 50
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					has_monthly_income = {
+						resource = food
+						value < 25
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_mote_harvesters
+		weight = {
+			weight = 10
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}		
+	}
+
+	building = {
+		key = building_gas_extractors
+		weight = {
+			weight = 10
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_crystal_mines
+		weight = {
+			weight = 10
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+
+		
+	}
+
+	building = {
+		key = building_betharian_power_plant
+		weight = {
+			weight = 10
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_foundry_1
+		weight = {
+			weight = 1
+
+			modifier = 
+			{
+				factor = 5
+				owner = { 
+					has_monthly_income = {
+						resource = alloys
+						value < 5
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_factory_1
+		weight = {
+			weight = 1
+
+			modifier = 
+			{
+				factor = 5
+				owner = { 
+					has_monthly_income = {
+						resource = consumer_goods
+						value < 5
+					}
+					has_monthly_income = {
+						resource = minerals
+						value > 6
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_refinery
+		weight = {
+			weight = 1
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_chemical_plant
+		weight = {
+			weight = 1
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_crystal_plant
+		weight = {
+			weight = 1
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_nanite_transmuter
+		weight = {
+			weight = 1
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				controller = {
+					OR = {
+						has_monthly_income = {
+							resource = nanites
+							value < 1
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 5
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_ministry_production
+		weight = {
+			weight = 2
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_production_center
+		weight = {
+			weight = 2
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_autochthon_monument
+		weight = {
+			weight = 1
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_heritage_site
+		weight = {
+			weight = 1
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_hypercomms_forum
+		weight = {
+			weight = 1
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					OR = {
+						has_monthly_income = {
+							resource = rare_crystals
+							value < 1
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 3
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_autocurating_vault
+		weight = {
+			weight = 1
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					OR = {
+						has_monthly_income = {
+							resource = rare_crystals
+							value < 2
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 4
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_temple
+		weight = {
+			weight = 1
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_holotemple
+		weight = {
+			weight = 1
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_sacred_nexus
+		weight = {
+			weight = 1
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					OR = {
+						has_monthly_income = {
+							resource = rare_crystals
+							value < 1
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 3
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_citadel_of_faith
+		weight = {
+			weight = 1
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					OR = {
+						has_monthly_income = {
+							resource = rare_crystals
+							value < 2
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 4
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_hive_node
+		weight = {
+			weight = 1
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_hive_confluence
+		weight = {
+			weight = 1
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					OR = {
+						has_monthly_income = {
+							resource = rare_crystals
+							value < 1
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 3
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_uplink_node
+		weight = {
+			weight = 1
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_organic_sanctuary
+		weight = {
+			weight = 1
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_corporate_monument
+		weight = {
+			weight = 1
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#############
+# PRODUCTION FOCUS
+#############
+
+production = {
+	
+	ai_weight = {
+		weight = 0
+	}
+
+	district = {
+		key = district_generator
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 3
+				owner = { 
+					has_monthly_income = {
+						resource = energy
+						value < 8
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+
+			modifier = {
+				factor = 3
+				any_owned_pop = { 
+					OR = { 
+						is_unemployed = yes 
+						has_job = servant 
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	district = {
+		key = district_mining
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 3
+				owner = { 
+					has_monthly_income = {
+						resource = minerals
+						value < 0
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+
+			modifier = {
+				factor = 3
+				any_owned_pop = { 
+					OR = { 
+						is_unemployed = yes 
+						has_job = servant 
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	district = {
+		key = district_farming
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 3
+				owner = { 
+					has_monthly_income = {
+						resource = food
+						value < 5
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+
+			modifier = {
+				factor = 3
+				any_owned_pop = { 
+					OR = { 
+						is_unemployed = yes 
+						has_job = servant 
+					}
+				}
+			}
+
+			modifier = { # MI and Synth. Asc. don't build food unless they need it
+				factor = 0
+				owner = { 
+					OR = {
+						has_authority = auth_machine_intelligence
+						has_country_flag = synthetic_empire
+					}
+					has_monthly_income = {
+						resource = food
+						value >= 0
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_hydroponics_farm
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 5
+				owner = { 
+					has_monthly_income = {
+						resource = food
+						value < 5
+					}
+				}
+			}
+
+			modifier = { # MI and Synth. Asc. don't build food unless they need it
+				factor = 0
+				owner = { 
+					OR = {
+						has_authority = auth_machine_intelligence
+						has_country_flag = synthetic_empire
+					}
+					has_monthly_income = {
+						resource = food
+						value >= 0
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_food_processing_facility
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 5
+				owner = { 
+					has_monthly_income = {
+						resource = food
+						value < 5
+					}
+				}
+			}
+
+			modifier = { # MI and Synth. Asc. don't build food unless they need it
+				factor = 0
+				owner = { 
+					OR = {
+						has_authority = auth_machine_intelligence
+						has_country_flag = synthetic_empire
+					}
+					has_monthly_income = {
+						resource = food
+						value >= 0
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_food_processing_center
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 5
+				owner = { 
+					has_monthly_income = {
+						resource = food
+						value < 5
+					}
+				}
+			}
+
+			modifier = { # MI and Synth. Asc. don't build food unless they need it
+				factor = 0
+				owner = { 
+					OR = {
+						has_authority = auth_machine_intelligence
+						has_country_flag = synthetic_empire
+					}
+					has_monthly_income = {
+						resource = food
+						value >= 0
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					OR = {
+						has_monthly_income = {
+							resource = volatile_motes
+							value < 1
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_mineral_purification_plant
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 5
+				owner = { 
+					has_monthly_income = {
+						resource = minerals
+						value < 5
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_energy_grid
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 5
+				owner = { 
+					has_monthly_income = {
+						resource = energy
+						value < 10
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_energy_nexus
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 5
+				owner = { 
+					has_monthly_income = {
+						resource = energy
+						value < 10
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					OR = {
+						has_monthly_income = {
+							resource = exotic_gases
+							value < 1
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_bio_reactor
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 5
+				owner = { 
+					has_monthly_income = {
+						resource = energy
+						value < 10
+					}
+
+					has_monthly_income = {
+						resource = food
+						value > 50
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value < 50
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					has_monthly_income = {
+						resource = food
+						value < 25
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_mote_harvesters
+		weight = {
+			weight = 10
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_gas_extractors
+		weight = {
+			weight = 10
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_crystal_mines
+		weight = {
+			weight = 10
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_betharian_power_plant
+		weight = {
+			weight = 10
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#############
+# MANUFACTURING FOCUS
+#############
+
+manufacturing = {
+	ai_weight = {
+		weight = 0
+	}
+
+	district = {
+		key = district_generator
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 3
+				owner = { 
+					has_monthly_income = {
+						resource = energy
+						value < 8
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+
+			modifier = {
+				factor = 3
+				any_owned_pop = { 
+					OR = { 
+						is_unemployed = yes 
+						has_job = servant 
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	district = {
+		key = district_mining
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 3
+				owner = { 
+					has_monthly_income = {
+						resource = minerals
+						value < 0
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+
+			modifier = {
+				factor = 3
+				any_owned_pop = { 
+					OR = { 
+						is_unemployed = yes 
+						has_job = servant 
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	district = {
+		key = district_farming
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 3
+				owner = { 
+					has_monthly_income = {
+						resource = food
+						value < 5
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+
+			modifier = {
+				factor = 3
+				any_owned_pop = { 
+					OR = { 
+						is_unemployed = yes 
+						has_job = servant 
+					}
+				}
+			}
+
+			modifier = { # MI and Synth. Asc. don't build food unless they need it
+				factor = 0
+				owner = { 
+					OR = {
+						has_authority = auth_machine_intelligence
+						has_country_flag = synthetic_empire
+					}
+					has_monthly_income = {
+						resource = food
+						value >= 0
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_foundry_1
+		weight = {
+			weight = 1
+
+			modifier = {
+				factor = 5
+				owner = { 
+					has_monthly_income = {
+						resource = alloys
+						value < 0
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_foundry_2
+		weight = {
+			weight = 1
+
+			modifier = {
+				factor = 5
+				owner = { 
+					has_monthly_income = {
+						resource = alloys
+						value < 10
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					OR = {
+						has_monthly_income = {
+							resource = volatile_motes
+							value < 1
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 5
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_foundry_3
+		weight = {
+			weight = 1
+
+			modifier = {
+				factor = 5
+				owner = { 
+					has_monthly_income = {
+						resource = alloys
+						value < 20
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					OR = {
+						has_monthly_income = {
+							resource = volatile_motes
+							value < 2
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 6
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_factory_1
+		weight = {
+			weight = 1
+
+			modifier = {
+				factor = 5
+				owner = { 
+					has_monthly_income = {
+						resource = consumer_goods
+						value < 5
+					}
+					has_monthly_income = {
+						resource = minerals
+						value > 6
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_factory_2
+		weight = {
+			weight = 1
+
+			modifier = {
+				factor = 5
+				owner = { 
+					has_monthly_income = {
+						resource = consumer_goods
+						value < 8
+					}
+					has_monthly_income = {
+						resource = minerals
+						value > 10
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					OR = {
+						has_monthly_income = {
+							resource = rare_crystals
+							value < 1
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 5
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_factory_3
+		weight = {
+			weight = 1
+
+			modifier = {
+				factor = 5
+				owner = { 
+					has_monthly_income = {
+						resource = consumer_goods
+						value < 10
+					}
+					has_monthly_income = {
+						resource = minerals
+						value > 20
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					OR = {
+						has_monthly_income = {
+							resource = rare_crystals
+							value < 2
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 6
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_refinery
+		weight = {
+			weight = 1
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_chemical_plant
+		weight = {
+			weight = 1
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_crystal_plant
+		weight = {
+			weight = 1
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_nanite_transmuter
+		weight = {
+			weight = 1
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					OR = {
+						has_monthly_income = {
+							resource = nanites
+							value < 1
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 5
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_ministry_production
+		weight = {
+			weight = 2
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_production_center
+		weight = {
+			weight = 2
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#############
+# RESEARCH FOCUS
+#############
+
+research = {
+
+	ai_weight = {
+		weight = 0
+	}
+
+	district = {
+		key = district_generator
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 3
+				owner = { 
+					has_monthly_income = {
+						resource = energy
+						value < 8
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+
+			modifier = {
+				factor = 3
+				any_owned_pop = { 
+					OR = { 
+						is_unemployed = yes 
+						has_job = servant 
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	district = {
+		key = district_mining
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 3
+				owner = { 
+					has_monthly_income = {
+						resource = minerals
+						value < 0
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+
+			modifier = {
+				factor = 3
+				any_owned_pop = { 
+					OR = { 
+						is_unemployed = yes 
+						has_job = servant 
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	district = {
+		key = district_farming
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 3
+				owner = { 
+					has_monthly_income = {
+						resource = food
+						value < 5
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+
+			modifier = {
+				factor = 3
+				any_owned_pop = { 
+					OR = { 
+						is_unemployed = yes 
+						has_job = servant 
+					}
+				}
+			}
+
+			modifier = { # MI and Synth. Asc. don't build food unless they need it
+				factor = 0
+				owner = { 
+					OR = {
+						has_authority = auth_machine_intelligence
+						has_country_flag = synthetic_empire
+					}
+					has_monthly_income = {
+						resource = food
+						value >= 0
+					}
+				}
+			}
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_research_lab_1
+		weight = {
+			weight = 10
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_research_lab_2
+		weight = {
+			weight = 8
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					OR = {
+						has_monthly_income = {
+							resource = exotic_gases
+							value < 1
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 5
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_research_lab_3
+		weight = {
+			weight = 10
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				controller = {
+					OR = {
+						has_monthly_income = {
+							resource = exotic_gases
+							value < 2
+						}
+					
+						has_monthly_income = {
+							resource = energy
+							value < 6
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_institute
+		weight = {
+			weight = 10
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_supercomputer
+		weight = {
+			weight = 10
+
+			# No one to work it anyway
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_pop = { 
+						OR = { 
+							is_unemployed = yes 
+							has_job = servant 
+						}
+					}
+				}
+			}
+		}
+	}
+}

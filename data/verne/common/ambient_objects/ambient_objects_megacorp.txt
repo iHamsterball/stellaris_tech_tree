@@ -1,0 +1,33 @@
+# Galactic Market Station
+ambient_object = {
+	name = "galactic_market_station"
+	entity = "sensor_station_01_entity"
+	selectable = yes
+	show_name = yes
+	tooltip = galactic_market_station_desc
+	description = galactic_market_station_desc
+}
+
+# Billboard 1
+ambient_object = {
+	name = caravaneer_billboard_1
+	entity = "caravaneer_billboard_asteroid_01_entity"
+	selectable = no
+	show_name = no
+}
+
+# Billboard 2
+ambient_object = {
+	name = caravaneer_billboard_2
+	entity = "caravaneer_billboard_asteroid_02_entity"
+	selectable = no
+	show_name = no
+}
+
+# Billboard 3
+ambient_object = {
+	name = caravaneer_billboard_3
+	entity = "caravaneer_billboard_asteroid_03_entity"
+	selectable = no
+	show_name = no
+}

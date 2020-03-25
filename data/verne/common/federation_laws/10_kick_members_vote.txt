@@ -1,0 +1,141 @@
+@cooldown = 3600
+
+kick_members_majority_vote = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = kick_members_majority_vote }
+					has_modifier = federation_law_category_kick_members_vote_cooldown
+				}
+			}
+		}
+	}
+	on_enact = {
+		set_diplomacy_action_setting = {
+			action = action_kick_from_federation
+			settings = {
+				vote_type = majority_vote
+			}
+		}
+		if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_kick_members_vote_cooldown
+				days = @cooldown
+			}
+		}
+		add_cohesion = -5
+	}
+
+	ai_weight = {
+		base = 51
+	}
+}
+
+kick_members_president_vote = {
+	potential = {
+		host_has_dlc = Federations
+		NOT = { has_federation_type = hegemony_federation }
+	}
+	allow = {
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = kick_members_president_vote }
+					has_modifier = federation_law_category_kick_members_vote_cooldown
+				}
+			}
+		}
+	}
+	required_centralization = {
+		base = 5
+	}
+	modifier = {
+		cohesion_add = -0.50
+	}
+	on_enact = {
+		set_diplomacy_action_setting = {
+			action = action_kick_from_federation
+			settings = {
+				vote_type = leader
+			}
+		}
+		if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_kick_members_vote_cooldown
+				days = @cooldown
+			}
+		}
+		add_cohesion = -5
+	}
+
+	ai_weight = {
+		base = 26
+
+		modifier = {
+			add = 25
+			relative_power = { who = from value >= superior }
+		}
+
+		modifier = {
+			add = 50
+			is_federation_leader = yes
+		}
+	}
+}
+
+
+kick_members_president_vote_hegemony = {
+	potential = {
+		host_has_dlc = Federations
+		has_federation_type = hegemony_federation
+	}
+	allow = {
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = kick_members_president_vote_hegemony }
+					has_modifier = federation_law_category_kick_members_vote_cooldown
+				}
+			}
+		}
+	}
+
+	modifier = {
+		cohesion_add = -0.50
+	}
+	on_enact = {
+		set_diplomacy_action_setting = {
+			action = action_kick_from_federation
+			settings = {
+				vote_type = leader
+			}
+		}
+		if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_kick_members_vote_cooldown
+				days = @cooldown
+			}
+		}
+		add_cohesion = -5
+	}
+
+	ai_weight = {
+		base = 51
+
+		modifier = {
+			add = 25
+			relative_power = { who = from value >= superior }
+		}
+
+		modifier = {
+			add = 50
+			is_federation_leader = yes
+		}
+	}
+}
+

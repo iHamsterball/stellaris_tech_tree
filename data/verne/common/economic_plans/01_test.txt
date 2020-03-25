@@ -1,0 +1,117 @@
+
+early_test_plan = {
+	type = early
+
+	income = {
+		energy = 50
+		minerals = 200
+		food = 50
+		consumer_goods = 50 
+		alloys = 100
+		unity = 50
+
+		physics_research = 200
+		society_research = 200
+		engineering_research = 200
+
+		exotic_gases = 1
+		volatile_motes = 1
+		rare_crystals = 1
+		sr_living_metal = 1
+		sr_zro = 1
+		sr_dark_matter = 1
+	}
+
+	focus = {
+		energy = 10
+		minerals = 30
+		alloys = 50
+		food = 10
+		consumer_goods = 20
+	}
+
+	pops = 500
+	empire_size = 1.25
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+middle_test_plan = {
+	type = middle
+
+	income = {
+		energy = 100
+		minerals = 500
+		food = 100
+		consumer_goods = 50 
+		alloys = 300
+		unity = 100
+
+		physics_research = 500
+		society_research = 500
+		engineering_research = 500
+
+		exotic_gases = 2
+		volatile_motes = 2
+		rare_crystals = 2
+		sr_living_metal = 2
+		sr_zro = 2
+		sr_dark_matter = 2
+	}
+
+	focus = {
+		energy = 30
+		minerals = 50
+		alloys = 100
+		food = 30
+		consumer_goods = 20
+	}
+
+	pops = 1000
+	empire_size = 1
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+end_test_plan = {
+	type = end
+
+	income = {
+		energy = 100
+		minerals = 500
+		food = 100
+		consumer_goods = 50 
+		alloys = 500
+		unity = 300
+
+		physics_research = 1500
+		society_research = 1500
+		engineering_research = 1500
+
+		exotic_gases = 3
+		volatile_motes = 3
+		rare_crystals = 3
+		sr_living_metal = 3
+		sr_zro = 3
+		sr_dark_matter = 3
+	}
+
+	focus = {
+		energy = 50
+		minerals = 100
+		alloys = 200
+		food = 50
+		consumer_goods = 20
+	}
+
+	pops = 3000
+	empire_size = 1
+
+	ai_weight = {
+		weight = 1
+	}
+}

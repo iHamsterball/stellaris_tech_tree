@@ -1,0 +1,164 @@
+
+# All leaders will have a common trait-point value set in defines, which they use to grab traits
+
+# leader_trait = yes - this tags the trait as a leader-trait and not a species-trait
+# initial = no - if set to no, this trait can not be granted to leaders when they are generated
+# leader_class = { admiral scientist }  -- OR  - if not set, it can be given to all leader-types except Rulers
+# requires_traits = { trait_psionic } -- AND - leader-trait can only be randomly given on generation if the leaders species has this trait
+# requires_governments = { despotic_hegemony ai_overlordship } -- OR - leader-trait can only be randomly given on generation if the Empire has this type of government form
+# prerequisites = { tech_psionic_theory } - AND - leader-trait can only be given if the technology specified has been researched by the Empire
+
+############################
+# Generic Leader Traits    #
+# (Available For Everyone) #
+############################
+
+leader_trait_traumatized = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_traumatized.dds"
+
+	modifier = {
+		all_technology_research_speed = -0.10
+		ship_anomaly_research_speed_mult = -0.10
+		ship_archaeological_site_excavation_speed_mult = -0.30
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	
+	ai_categories = {
+		survey
+		physics
+		society
+		engineering
+	}
+	
+	initial = no
+	randomized = no
+}
+
+leader_trait_maimed = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_maimed.dds"
+	
+	self_modifier = {
+		leader_age = -40
+	}
+
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	
+	ai_categories = {
+		survey
+		physics
+		society
+		engineering
+	}
+	
+	initial = no
+	randomized = no
+}
+
+leader_trait_inspired_archaeologist = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_inspired.dds"
+
+	self_modifier = {
+		species_leader_exp_gain = 0.25
+	}
+
+	modifier = {
+		ship_archaeological_site_excavation_speed_mult = 0.30
+	}
+
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	
+	ai_categories = {
+		survey
+		physics
+		society
+		engineering
+	}
+	
+	initial = no
+	randomized = no
+}
+
+leader_trait_inspired_researcher = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_inspired.dds"
+
+	self_modifier = {
+		species_leader_exp_gain = 0.25
+	}
+
+	modifier = {
+		all_technology_research_speed = 0.10
+	}
+
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	
+	ai_categories = {
+		survey
+		physics
+		society
+		engineering
+	}
+	
+	initial = no
+	randomized = no
+}
+
+leader_trait_inspired_surveyor = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_inspired.dds"
+
+	self_modifier = {
+		species_leader_exp_gain = 0.25
+	}
+	modifier = {
+		ship_anomaly_research_speed_mult = 0.10
+	}
+
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	
+	ai_categories = {
+		survey
+		physics
+		society
+		engineering
+	}
+	
+	initial = no
+	randomized = no
+}
+
+############################
+# Event Leader Traits    #
+############################
+
+leader_trait_governor_oracle = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_oracle.dds"
+	immortal_leaders = yes
+	modifier = {
+		planet_stability_add = 10
+		planet_jobs_unity_produces_mult = 0.20
+		planet_crime_add = -45
+		planet_jobs_engineering_research_produces_mult = -0.10
+		planet_jobs_physics_research_produces_mult = -0.10
+		planet_jobs_society_research_produces_mult = -0.10
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no
+}

@@ -1,0 +1,65 @@
+#my_casus_belli = {
+#	potential = { ... }		# trigger to make some CBs invalid for certain types of countries; this = attacker (CB owner); default: { always = yes }
+#	is_valid = { ... }		# trigger, evaluated daily to check if CB should be created or destroyed automatically, does not affect CBs granted via script;
+#								# this = attacker (CB owner), from = defender (target country); default: { always = yes }
+#	destroy_if = { ... }	# trigger, evaluated daily to destroy CBs that have been granted via script ahead of expiration date;
+#								# this = attacker (CB owner), from = defender (target country); default: { always = no }
+#	show_notification = no/yes	# optional (default = yes), flag to control whether this CB will generate a notification (to avoid duplicate 
+# 								# notification when a claim CB is generated)
+#}
+
+cb_scion = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		is_country_type = default
+		is_subject = yes
+		is_subject_type = scion
+	}
+	is_valid = {
+		from = {
+			is_country_type = default
+			NOT = { is_subject_type = scion }
+		}
+		has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+	}
+}
+
+cb_hegemon = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		has_federation = yes
+		is_federation_leader = yes
+		federation = {
+			has_federation_type = hegemony_federation
+			has_federation_perk = president_hegemony_cb_1
+		}
+	}
+	is_valid = {
+		from = {
+			is_country_type = default
+			NOT = { is_in_federation_with = from }
+		}
+		has_total_war_cb = no
+	}
+}
+
+cb_secession = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		has_federation = yes
+		federation = { has_federation_type = hegemony_federation }
+		has_country_flag = asked_to_leave_hegemony
+		NOT = { has_country_flag = failed_hegemony_rebellion }
+	}
+	is_valid = {
+		from = {
+			is_in_federation_with = prev
+			is_federation_leader = yes
+		}
+		has_total_war_cb = no
+	}
+}
