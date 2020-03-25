@@ -675,6 +675,22 @@ def _localize_owns_any_bypass(value):
     return ugettext('Controls a system with a {}').format(_localize(value))
 
 
+def _localize_federation(value):
+    federation_perk = _localize(value[0]['has_federation_perk'])
+    technology = _localize(value[1]['any_member'][0]['has_technology'])
+    return [ugettext('Has {} Federation Perk').format(federation_perk),
+            ugettext('Any member has {} technology').format(technology)]
+
+
+def _localize_is_galactic_community_member(value):
+    return ugettext('Is galactic community member') if value == 'yes' \
+        else ugettext('Is NOT galactic community member')
+
+
+def _localize_has_origin(value):
+    return ugettext('Has origin {}').format(_localize(value))
+
+
 def _localize_is_pacifist(value):
     return ugettext('Is some degree of Pacifist') if value == 'yes' \
         else ugettext('Is NOT some degree of Pacifist')
