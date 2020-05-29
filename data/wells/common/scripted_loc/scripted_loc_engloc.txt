@@ -1,0 +1,87 @@
+############################################
+###   SCRIPTED LOCALIZATION FOR ENGLISH  ###
+###    Scripted by Pierre du Plessis     ###
+############################################
+#This is for gender-neutral species
+
+##To apply, use [event_target.GetXIn] or [scope.Leader.GetXInDE]
+
+#Used for species with no gender dimorphism
+
+#Ex: "he/she is / they are"
+defined_text = {
+	name = GetIsAre
+	text = {
+		trigger = { loc_leader_genders = yes }
+		localization_key = ENGLOC_is
+	}
+	text = {
+		trigger = { loc_leader_nogenders = yes }
+		localization_key = ENGLOC_are
+	}
+}
+
+#Ex: "he/she has / they have"
+defined_text = {
+	name = GetHasHave
+	text = {
+		trigger = { loc_leader_genders = yes }
+		localization_key = ENGLOC_has
+	}
+	text = {
+		trigger = { loc_leader_nogenders = yes }
+		localization_key = ENGLOC_have
+	}
+}
+
+#Ex: "he/she does / they do"
+defined_text = {
+	name = GetDoesDo
+	text = {
+		trigger = { loc_leader_genders = yes }
+		localization_key = ENGLOC_does
+	}
+	text = {
+		trigger = { loc_leader_nogenders = yes }
+		localization_key = ENGLOC_do
+	}
+}
+
+#Ex: "he/she was / they were"
+defined_text = {
+	name = GetWasWere
+	text = {
+		trigger = { loc_leader_genders = yes }
+		localization_key = ENGLOC_was
+	}
+	text = {
+		trigger = { loc_leader_nogenders = yes }
+		localization_key = ENGLOC_were
+	}
+}
+
+#Ex: "[Root.Ruler.GetHerHim]sel[Root.Ruler.GetFVes]" => "himself / themselves"
+defined_text = {
+	name = GetFVes
+	text = {
+		trigger = { loc_leader_genders = yes }
+		localization_key = ENGLOC_f
+	}
+	text = {
+		trigger = { loc_leader_nogenders = yes }
+		localization_key = ENGLOC_ves
+	}
+}
+
+#Ex: "he/she support[s] / they support[]"
+defined_text = {
+	name = GetSXX
+	text = {
+		trigger = { loc_leader_genders = yes }
+		localization_key = ENGLOC_s
+	}
+	text = {
+		trigger = { loc_leader_nogenders = yes }
+		localization_key = ENGLOC_xx
+	}
+}

@@ -1,0 +1,142 @@
+law_category_centralization = {
+	centralization = yes
+	laws = {
+		centralization_minimal
+		centralization_low
+		centralization_medium
+		centralization_high
+		centralization_very_high
+	}
+}
+
+law_category_fleet_contribution = {
+	laws = {
+		fleet_contribution_none
+		fleet_contribution_low
+		fleet_contribution_low_trade
+		fleet_contribution_low_hegemony
+		fleet_contribution_low_research
+		fleet_contribution_low_martial
+		fleet_contribution_medium
+		fleet_contribution_medium_trade
+		fleet_contribution_medium_hegemony
+		fleet_contribution_medium_research
+		fleet_contribution_medium_martial
+		fleet_contribution_high
+		fleet_contribution_high_trade
+		fleet_contribution_high_hegemony
+		fleet_contribution_high_martial
+	}
+}
+
+law_category_succession_type = {
+	laws = {
+		succession_type_rotation
+		succession_type_random
+		succession_type_challenge
+		succession_type_strongest
+		succession_type_strongest_hegemony
+	}
+}
+
+law_category_succession_power = {
+	potential = {
+		OR = {
+			has_federation_law = succession_type_strongest
+			has_federation_law = succession_type_strongest_hegemony
+		}
+	}
+	laws = {
+		succession_power_economy
+		succession_power_diplomatic_weight
+		succession_power_tech
+		succession_power_fleet
+	}
+}
+
+law_category_succession_term = {
+	show_succession_date = yes
+	laws = {
+		succession_term_years_10
+		succession_term_years_20
+		succession_term_years_30
+		succession_term_years_40
+		succession_term_status_change
+	}
+}
+
+law_category_challenge = {
+	potential = { has_federation_law = succession_type_challenge }
+	laws = {
+		challenge_type_arena_combat
+		challenge_type_psionic_battle
+		challenge_type_bidding_war
+		challenge_type_thesis
+	}
+}
+
+law_category_build_fleets = {
+	potential = {
+		NOT = {
+			has_federation_law = fleet_contribution_none
+		}
+	}
+	laws = {
+		federation_build_fleets_everyone
+		federation_build_fleets_only_leader
+	}
+}
+
+law_category_allow_subjects_to_join = {
+	laws = {
+		allow_subjects_to_join_no
+		allow_subjects_to_join_yes
+	}
+}
+
+law_category_voting_weight = {
+	laws = {
+		vote_weight_equal
+		vote_weight_diplomatic
+	}
+}
+
+law_category_war_declaration_vote = {
+	laws = {
+		declare_war_unanimous_vote
+		declare_war_majority_vote
+		declare_war_majority_vote_hegemony
+		declare_war_president_vote
+	}
+}
+
+law_category_invite_members_vote = {
+	laws = {
+		invite_members_unanimous_vote
+		invite_members_majority_vote
+		invite_members_president_vote
+		invite_members_president_vote_hegemony
+	}
+}
+
+law_category_kick_members_vote = {
+	laws = {
+		kick_members_majority_vote
+		kick_members_president_vote
+		kick_members_president_vote_hegemony
+	}
+}
+
+law_category_free_migration = {
+	laws = {
+		free_migration_no
+		free_migration_yes
+	}
+}
+
+law_category_separate_treaties = {
+	laws = {
+		treaties_separate_yes
+		treaties_separate_no
+	}
+}

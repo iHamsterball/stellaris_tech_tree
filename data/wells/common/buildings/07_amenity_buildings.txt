@@ -1,0 +1,1313 @@
+#############
+# Amenities buildings
+#############
+building_luxury_residence = {
+	base_buildtime = @b1_time
+
+	category = amenity
+
+	potential = {
+		OR = {
+			NOT = { is_planet_class = pc_habitat }
+			has_planet_flag = advanced_habitat
+		}
+		NOT = { has_modifier = slave_colony }
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			NOT = { has_valid_civic = civic_shared_burden }
+		}
+	}
+
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			AND = {
+				free_building_slots = 0
+				free_jobs < 1
+				free_housing > 10
+				owner = {
+					is_ai = yes
+				}
+			}
+			owner = { is_regular_empire = no }
+			owner = { has_valid_civic = civic_shared_burden }
+			has_modifier = slave_colony
+		}
+	}
+
+	convert_to = {
+		building_drone_storage
+		building_hive_warren
+		building_communal_housing
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3
+		planet_amenities_add = 5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_non_swapped_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	upgrades = {
+		"building_paradise_dome"
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 100 #High weight to gurantee that if the below is true then the AI should build it
+			free_housing < 2 #Prevents the AI from running out of residences when nearly out of tiles
+			OR = {
+				free_jobs > 0 #prevents spamming of residence buildings when no jobs are open
+				AND = {
+					free_housing < 0 #Prevents the AI from running out of residences when nearly out of tiles
+					NOT = { any_owned_pop = { is_unemployed = yes } }
+				}
+			}
+			free_district_slots = 0 #Do not build when city districts can still be built
+		}
+		modifier = {
+			factor = 0
+			has_building = building_luxury_residence
+			owner = { has_technology = tech_paradise_dome }
+		}
+	}
+}
+
+building_paradise_dome = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = amenity
+
+	potential = {
+		has_building = building_luxury_residence
+		OR = {
+			NOT = { is_planet_class = pc_habitat }
+			AND = {
+				has_planet_flag = advanced_habitat
+				exists = owner
+				owner = {
+					has_ascension_perk = ap_voidborn
+				}
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { has_valid_civic = civic_shared_burden }
+			buildings_no_crystals = yes
+			has_modifier = slave_colony
+		}
+	}
+
+	convert_to = {
+		building_organic_paradise
+		building_drone_megastorage
+		building_expanded_warren
+		building_communal_housing_large
+	}
+
+	planet_modifier = {
+		planet_housing_add = 6
+		planet_amenities_add = 10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_non_swapped_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			rare_crystals = @b2_rare_cost
+		}
+		upkeep = {
+			energy = 3
+			rare_crystals = @b2_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		"tech_paradise_dome"
+	}
+
+	show_tech_unlock_if = {
+		owner = {
+			is_regular_empire = yes
+			NOT = { has_valid_civic = civic_shared_burden }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			buildings_has_crystals = yes
+		}
+		modifier = {
+			factor = 10
+			free_housing < 0
+		}
+	}
+}
+
+building_communal_housing = {
+	base_buildtime = @b1_time
+	icon = building_residence
+
+	category = amenity
+
+	potential = {
+		OR = {
+			NOT = { is_planet_class = pc_habitat }
+			has_planet_flag = advanced_habitat
+		}
+		NOT = { has_modifier = slave_colony }
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_shared_burden
+		}
+	}
+
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			AND = {
+				owner = { is_ai = yes }
+				free_building_slots = 0
+				free_jobs < 1
+				free_housing > 10
+			}
+			AND = {
+				is_planet_class = pc_habitat
+				NOT = { has_planet_flag = advanced_habitat }
+			}
+			has_modifier = slave_colony
+			NOT = {
+				owner = {
+					is_regular_empire = yes
+					has_valid_civic = civic_shared_burden
+				}
+			}
+		}
+	}
+
+	convert_to = {
+		building_drone_storage
+		building_hive_warren
+		building_luxury_residence
+	}
+
+	planet_modifier = {
+		planet_housing_add = 5
+		planet_amenities_add = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_non_swapped_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	upgrades = {
+		"building_communal_housing_large"
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 100 #High weight to gurantee that if the below is true then the AI should build it
+			free_housing < 3 #Prevents the AI from running out of residences when nearly out of tiles
+			OR = {
+				free_jobs > 0 #prevents spamming of residence buildings when no jobs are open
+				AND = {
+					free_housing < 0 #Prevents the AI from running out of residences when nearly out of tiles
+					NOT = { any_owned_pop = { is_unemployed = yes } }
+				}
+			}
+			free_district_slots = 0 #Do not build when city districts can still be built
+		}
+		modifier = {
+			factor = 0
+			has_building = building_communal_housing
+			owner = { has_technology = tech_paradise_dome }
+		}
+	}
+}
+
+building_communal_housing_large = {
+	base_buildtime = @b2_time
+	can_build = no
+	icon = building_paradise_dome
+
+	category = amenity
+
+	potential = {
+		has_building = building_communal_housing
+		OR = {
+			NOT = { is_planet_class = pc_habitat }
+			AND = {
+				has_planet_flag = advanced_habitat
+				exists = owner
+				owner = {
+					has_ascension_perk = ap_voidborn
+				}
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			buildings_no_crystals = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_shared_burden
+		}
+	}
+
+	convert_to = {
+		building_drone_megastorage
+		building_expanded_warren
+		building_paradise_dome
+	}
+
+	planet_modifier = {
+		planet_housing_add = 10
+		planet_amenities_add = 6
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_non_swapped_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			rare_crystals = @b2_rare_cost
+		}
+		upkeep = {
+			energy = 3
+			rare_crystals = @b2_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		"tech_paradise_dome"
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			buildings_has_crystals = yes
+		}
+		modifier = {
+			factor = 10
+			free_housing < 0
+		}
+	}
+}
+
+#Machine housing
+building_drone_storage = {
+	base_buildtime = @b1_time
+
+	category = amenity
+
+	potential = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			AND = {
+				free_building_slots = 0
+				free_jobs < 1
+				free_housing > 10
+				owner = {
+					is_ai = yes
+				}
+			}
+			NOR = {
+				owner = { is_machine_empire = yes }
+			}
+		}
+	}
+
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	convert_to = {
+		building_luxury_residence
+		building_communal_housing
+		building_hive_warren
+	}
+
+	planet_modifier = {
+		planet_housing_add = 4
+		planet_amenities_add = 3
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	upgrades = {
+		"building_drone_megastorage"
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 100 #High weight to gurantee that if the below is true then the AI should build it
+			free_housing < 3 #Prevents the AI from running out of residences when nearly out of tiles
+			OR = {
+				free_jobs > 0 #prevents spamming of residence buildings when no jobs are open
+				AND = {
+					free_housing < 0 #Prevents the AI from running out of residences when nearly out of tiles
+					NOT = { any_owned_pop = { is_unemployed = yes } }
+				}
+			}
+			free_district_slots = 0 #Do not build when city districts can still be built
+		}
+		modifier = {
+			weight = 100 #High weight to gurantee that if the below is true then the AI should build it
+			is_planet_class = pc_habitat
+			free_housing < 4
+			OR = {
+				not = { any_owned_pop = { is_unemployed = yes } }
+				free_jobs > 0 #Servitors can run into a situation with no houses but free jobs open
+			}
+		}
+		modifier = {
+			factor = 0
+			has_building = building_drone_storage
+			owner = { has_technology = tech_micro_replicators }
+		}
+	}
+}
+
+building_drone_megastorage = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = amenity
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+	potential = {
+		has_building = building_drone_storage
+	}
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_machine_empire = no }
+			buildings_no_crystals = yes
+		}
+	}
+
+	convert_to = {
+		building_paradise_dome
+		building_expanded_warren
+		building_communal_housing_large
+	}
+
+	planet_modifier = {
+		planet_housing_add = 8
+		planet_amenities_add = 6
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_non_swapped_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			rare_crystals = @b2_rare_cost
+		}
+		upkeep = {
+			energy = 3
+			rare_crystals = @b2_rare_upkeep
+		}
+	}
+
+
+	prerequisites = {
+		"tech_micro_replicators"
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			buildings_has_crystals = yes
+		}
+	}
+}
+
+#Hive housing
+building_hive_warren = {
+	base_buildtime = @b1_time
+
+	category = amenity
+
+	potential = {
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			AND = {
+				owner = { is_ai = yes }
+				years_passed < 3
+			}#Blow up the one on the homeworld.
+			AND = {
+				planet = {
+					free_building_slots = 0
+					free_jobs < 1
+					free_housing > 10
+					owner = {
+						is_ai = yes
+					}
+				}
+			}
+			NOR = {
+				owner = { is_hive_empire = yes }
+			}
+		}
+	}
+
+	convert_to = {
+		building_luxury_residence
+		building_drone_storage
+		building_communal_housing
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3
+		planet_amenities_add = 5
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	upgrades = {
+		"building_expanded_warren"
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 100 #High weight to gurantee that if the below is true then the AI should build it
+			free_housing < 3 #Prevents the AI from running out of residences when nearly out of tiles
+			OR = {
+				free_jobs > 0 #prevents spamming of residence buildings when no jobs are open
+				AND = {
+					free_housing < 0 #Prevents the AI from running out of residences when nearly out of tiles
+					NOT = { any_owned_pop = { is_unemployed = yes } }
+				}
+			}
+			free_district_slots = 0 #Do not build when city districts can still be built
+		}
+		modifier = {
+			weight = 100 #High weight to gurantee that if the below is true then the AI should build it
+			is_planet_class = pc_habitat
+			free_housing < 4
+			OR = {
+				not = { any_owned_pop = { is_unemployed = yes } }
+				free_jobs > 0 #Servitors can run into a situation with no houses but free jobs open
+			}
+		}
+		modifier = {
+			factor = 0
+			has_building = building_hive_warren
+			owner = { has_technology = tech_housing_2 }
+		}
+	}
+}
+
+building_expanded_warren = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = amenity
+
+	potential = {
+		has_building = building_hive_warren
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	show_tech_unlock_if = {
+		owner = { is_hive_empire = yes }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		buildings_no_crystals = yes
+	}
+
+	convert_to = {
+		building_paradise_dome
+		building_drone_megastorage
+		building_communal_housing_large
+	}
+
+	planet_modifier = {
+		planet_housing_add = 6
+		planet_amenities_add = 10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_non_swapped_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			rare_crystals = @b2_rare_cost
+		}
+		upkeep = {
+			energy = 3
+			rare_crystals = @b2_rare_upkeep
+		}
+	}
+
+
+	prerequisites = {
+		"tech_housing_2"
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			buildings_has_crystals = yes
+		}
+	}
+}
+
+building_holo_theatres = {
+	base_buildtime = @b1_time
+
+	category = amenity
+
+	potential = {
+		NOT = {	has_modifier = slave_colony	}
+		owner = { is_regular_empire = yes }
+	}
+
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			has_modifier = slave_colony
+			AND = {
+				free_building_slots = 0
+				owner = { is_ai = yes }
+				OR = {
+					free_amenities > 30
+					AND = {
+						count_pops = { limit = { is_sapient = yes } count < 75 }
+						owner = {
+							has_technology = tech_frontier_health
+						}
+						NOR = {
+							has_building = building_clinic
+							has_building = building_hospital
+						}
+					}
+					AND = {
+						owner = {
+							NOT = { has_policy_flag = robots_outlawed }
+							has_technology = tech_robotic_workers
+						}
+						NOT = { has_building = building_robot_assembly_plant }
+					}
+				}
+			}
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				NOT = { has_valid_civic = civic_warrior_culture }
+			}
+		}
+		modifier = {
+			job_entertainer_add = @b1_jobs
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_warrior_culture
+			}
+		}
+		modifier = {
+			job_duelist_add = @b1_jobs
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	upgrades = {
+		"building_hyper_entertainment_forum"
+	}
+
+	prerequisites = {
+		"tech_holo_entertainment"
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				NOT = { has_valid_civic = civic_warrior_culture }
+			}
+		}
+		text = job_entertainer_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_warrior_culture
+			}
+		}
+		text = job_duelist_effect_desc
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 50
+			free_amenities < 5
+			OR = {
+				free_jobs < 3 #makes it come before any free_jobs = 0 building checks. This makes the build a high priority building.
+				NOT = { has_building = building_holo_theatres }
+				NOT = { has_building = building_hyper_entertainment_forum }
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				free_amenities > 20
+
+				# we shouldn't be building more than one of these
+				has_building = building_holo_theatres
+				has_building = building_hyper_entertainment_forum
+
+				# don't build in consumer goods deficit ( if we care about goods )
+				AND = {
+					owner = {
+						OR = {
+							is_regular_empire = yes
+							has_valid_civic = civic_machine_servitor
+						}
+
+						has_monthly_income = {
+							resource = consumer_goods
+							value < 0
+						}
+
+						# this civic changes upkeep to alloys
+						NOT = { has_valid_civic = civic_warrior_culture }
+					}
+				}
+
+				AND = {
+					count_pops = { limit = { is_sapient = yes } count < 75 }
+					owner = {
+						is_ai = yes
+						has_technology = tech_frontier_health
+					}
+					NOR = {
+						has_building = building_clinic
+						has_building = building_hospital
+					}
+				}
+				AND = {
+					owner = {
+						is_ai = yes
+						NOT = { has_policy_flag = robots_outlawed }
+						has_technology = tech_robotic_workers
+					}
+					count_pops = { limit = { is_sapient = yes } count < 75 }
+					NOT = { has_building = building_robot_assembly_plant }
+				}
+			}
+		}
+	}
+}
+
+building_hyper_entertainment_forum = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = amenity
+
+	potential = {
+		has_building = building_holo_theatres
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		buildings_upgrade_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			has_modifier = slave_colony
+			buildings_no_exotic_gases = yes
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				NOT = { has_valid_civic = civic_warrior_culture }
+			}
+		}
+		modifier = {
+			job_entertainer_add = @b2_jobs
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_warrior_culture
+			}
+		}
+		modifier = {
+			job_duelist_add = @b2_jobs
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			exotic_gases = @b2_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		"tech_hyper_entertainment_forum"
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				NOT = { has_valid_civic = civic_warrior_culture }
+			}
+		}
+		text = job_entertainer_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_warrior_culture
+			}
+		}
+		text = job_duelist_effect_desc
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value >= 4
+				}
+			}
+			buildings_has_exotic_gases = yes
+		}
+	}
+}
+
+building_clinic = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+
+	category = amenity
+
+	potential = {
+		owner = { is_regular_empire = yes }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			has_modifier = slave_colony
+			AND = {
+				buildings_stop_pop = yes
+				owner = { is_ai = yes }
+			}
+		}
+	}
+
+	planet_modifier = {
+		job_healthcare_add = 2
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	prerequisites = {
+		"tech_frontier_health"
+	}
+
+	upgrades = {
+		"building_hospital"
+	}
+
+	triggered_desc = {
+		text = job_healthcare_effect_desc
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0
+			OR = {
+				is_planet_class = pc_habitat
+				buildings_stop_pop = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			count_pops = { limit = { is_sapient = yes } count > 75 }
+		}
+	}
+}
+
+building_hospital = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = amenity
+
+	potential = {
+		has_building = building_clinic
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			has_modifier = slave_colony
+			buildings_no_exotic_gases = yes
+			AND = {
+				buildings_stop_pop = yes
+				owner = { is_ai = yes }
+			}
+		}
+	}
+
+	planet_modifier = {
+		job_healthcare_add = @b2_jobs
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			exotic_gases = @b2_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		"tech_frontier_hospital"
+	}
+
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+
+	triggered_desc = {
+		text = job_healthcare_effect_desc
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			buildings_has_exotic_gases = yes
+		}
+	}
+}
+
+building_maintenance_depot = {
+	base_buildtime = 240
+	can_build = no
+
+	category = amenity
+
+	potential = {
+		owner = { is_gestalt = yes }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_gestalt = no }
+			AND = {
+				owner = { is_ai = yes }
+				free_amenities > 30
+				free_building_slots = 0
+			}
+		}
+	}
+
+	planet_modifier = {
+		job_maintenance_drone_add = 5
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	triggered_desc = {
+		text = job_maintenance_drone_effect_desc
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 75
+			free_amenities < 3
+			OR = {
+				free_jobs < 3
+				NOT = { has_building = building_maintenance_depot }
+			}
+			if = {
+				limit = {
+					owner = { is_hive_empire = yes }
+				}
+				has_building = building_spawning_pool
+			}
+			if = {
+				limit = {
+					owner = { has_valid_civic = civic_machine_servitor }
+				}
+				OR = {
+					has_building = building_organic_sanctuary
+					has_building = building_organic_paradise
+				}
+			}
+		}
+	}
+}
+
+building_spawning_pool = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+
+	category = amenity
+
+	potential = {
+		owner = { is_hive_empire = yes }
+		or = {
+			num_buildings = { type = any value < 15 }
+			owner = { is_ai = no }
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { is_hive_empire = no }
+	}
+
+	planet_modifier = {
+		job_spawning_drone_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	triggered_desc = {
+		text = job_spawning_drone_effect_desc
+	}
+
+	ai_weight = {
+		weight = 750
+	}#Best hive mind building in the game - should always be built.
+}
+
+building_slave_huts = {
+	base_buildtime = 240
+	icon = building_crude_huts
+
+	category = amenity
+
+	potential = {
+		has_modifier = slave_colony
+	}
+
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			NOT = { has_modifier = slave_colony }
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 8
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 7 #High weight to gurantee that if the below is true then the AI should build it
+			free_housing < 5 #Prevents the AI from running out of residences when nearly out of tiles
+			free_jobs > 0 #prevents spamming of residence buildings when no jobs are open
+			free_district_slots = 0 #Do not build when city districts can still be built
+		}
+	}
+}
+
+building_overseer_homes = {
+	base_buildtime = 240
+	icon = building_residence
+
+	category = amenity
+
+	potential = {
+		has_modifier = slave_colony
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			NOT = { has_modifier = slave_colony }
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 2
+		job_slave_overseer_add = 2
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 3
+			planet_crime > 15 #under 15 is usually handled by the planet upgrading its capital
+			free_jobs < 2
+		}
+	}
+}

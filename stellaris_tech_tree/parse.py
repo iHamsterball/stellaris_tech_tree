@@ -154,7 +154,8 @@ def p_expression_list(tokens):
 
 
 def p_block(tokens):
-    '''block : LBRACE statements RBRACE'''
+    '''block : LBRACE statements RBRACE
+             | LBRACE LBRACE statements RBRACE RBRACE'''
     tokens[0] = tokens[2]
 
 

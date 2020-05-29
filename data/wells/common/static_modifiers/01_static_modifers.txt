@@ -1,0 +1,489 @@
+##########################################################################
+# Planet Modifiers
+##########################################################################
+
+drone_space_elevator = {
+	planet_jobs_minerals_produces_mult = -0.2
+	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
+	icon_frame = 3
+}
+
+drone_mineral_gift = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
+	icon_frame = 1
+}
+
+drone_fl_satellite = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
+	icon_frame = 1
+}
+
+rock_brain = {
+	icon = "gfx/interface/icons/planet_modifiers/capital.dds"
+	icon_frame = 1
+}
+
+cunning_flora = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_lush.dds"
+	icon_frame = 1
+}
+
+fascinating_flora = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
+	icon_frame = 1
+}
+
+old_genetic_library = {
+	icon = "gfx/interface/icons/planet_modifiers/capital.dds"
+	icon_frame = 1
+}
+
+zro_ice = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
+	icon_frame = 1
+}
+
+dark_matter_funnel = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_extensive_moon_system.dds"
+	icon_frame = 1
+}
+
+pheromoned_1 = {
+	pop_happiness = +0.10
+	icon = "gfx/interface/icons/planet_modifiers/pm_factory.dds"
+	icon_frame = 1
+}
+
+pheromoned_2 = {
+	planet_jobs_produces_mult = -0.15
+	icon = "gfx/interface/icons/planet_modifiers/pm_factory.dds"
+	icon_frame = 3
+}
+
+depheromoned_1 = {
+	planet_jobs_produces_mult = +0.10
+	icon = "gfx/interface/icons/planet_modifiers/pm_factory.dds"
+	icon_frame = 1
+}
+
+pheromoned_3 = {
+	planet_migration_all_mult = -0.75
+	icon = "gfx/interface/icons/planet_modifiers/pm_factory.dds"
+	icon_frame = 2
+}
+
+pheromoned_4 = {
+	planet_jobs_produces_mult = +0.05
+	pop_happiness = -0.10
+	icon = "gfx/interface/icons/planet_modifiers/pm_factory.dds"
+	icon_frame = 2
+}
+
+pheromoned_detox = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_factory.dds"
+	icon_frame = 3
+}
+
+pheromoned_grief = {
+	pop_happiness = -0.10
+	country_unity_produces_mult = -0.10
+}
+
+uplift_rocky = {
+	planet_jobs_minerals_produces_mult = -0.05
+	icon = "gfx/interface/icons/planet_modifiers/capital.dds"
+	icon_frame = 3
+}
+
+unhappy_with_experiments = {
+	pop_happiness = -0.15
+	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
+	icon_frame = 3
+}
+
+unproductive_without_experiments = {
+	planet_jobs_society_research_produces_mult = -0.20
+	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
+	icon_frame = 3
+}
+
+projecting_moon = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_extensive_moon_system.dds"
+	icon_frame = 1
+}
+
+unbalanced_ecosystem = {
+	planet_jobs_food_produces_mult = -0.20
+	icon = "gfx/interface/icons/planet_modifiers/pm_lush.dds"
+	icon_frame = 3
+}
+
+cornucopia = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_lush.dds"
+	icon_frame = 1
+}
+
+raw_materials = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_impacts.dds"
+	icon_frame = 1
+}
+
+shadow_play = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
+	icon_frame = 1
+}
+
+grimacing = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_wasteland.dds"
+	icon_frame = 1
+}
+
+comet_sighted_negative = {
+	pop_happiness = -0.05
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 3
+}
+
+comet_sighted_positive = {
+	pop_happiness = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+}
+
+skid_marks = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_extensive_moon_system.dds"
+	icon_frame = 1
+}
+
+dust_circuits = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_extensive_moon_system.dds"
+	icon_frame = 1
+}
+
+unusual_tectonics = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_wasteland.dds"
+	icon_frame = 1
+}
+
+##########################################################################
+# Empire Modifiers
+##########################################################################
+
+massex_happy = {
+	pop_happiness = 0.10
+}
+
+stellar_salt = {
+	pop_happiness = 0.05
+}
+
+inspired_arts = {
+	pop_happiness = 0.10
+}
+
+ruler_failed_savior = {
+	pop_happiness = -0.1
+}
+
+ruler_savior = {
+	pop_happiness = 0.1
+}
+
+missing_scientist = {
+	planet_jobs_society_research_produces_mult = -0.10
+}
+
+humiliated = {
+	country_influence_produces_mult = -0.33
+	diplo_weight_mult = -0.25
+	pop_happiness = -0.1
+}
+
+raided = {
+	country_energy_produces_mult = -0.20
+	country_minerals_produces_mult = -0.20
+}
+
+drone_processing = {
+	planet_jobs_minerals_produces_mult = 0.10
+}
+
+##########################################################################
+# Pop Modifiers
+##########################################################################
+
+mandate_fulfilled_mod = {
+	pop_happiness = 0.15
+}
+
+6_hour_workday = {
+	planet_jobs_minerals_produces_mult = -0.15
+}
+
+hunger_strike = {
+	planet_jobs_minerals_produces_mult = -0.4
+}
+
+peace_strike = {
+	planet_jobs_minerals_produces_mult = -0.2
+	planet_jobs_food_produces_mult = -0.2
+	planet_jobs_energy_produces_mult = -0.2
+	planet_jobs_engineering_research_produces_mult = -0.2
+	planet_jobs_physics_research_produces_mult = -0.2
+	planet_jobs_society_research_produces_mult = -0.2
+}
+
+culture_shock_stone_age = {
+	pop_happiness = -0.10
+	planet_jobs_minerals_produces_mult = -0.75
+	planet_jobs_energy_produces_mult = -0.75
+	planet_jobs_engineering_research_produces_mult = -1
+	planet_jobs_physics_research_produces_mult = -1
+	planet_jobs_society_research_produces_mult = -1
+}
+
+culture_shock_bronze_age = {
+	pop_happiness = -0.10
+	planet_jobs_minerals_produces_mult = -0.50
+	planet_jobs_energy_produces_mult = -0.50
+	planet_jobs_engineering_research_produces_mult = -1
+	planet_jobs_physics_research_produces_mult = -1
+	planet_jobs_society_research_produces_mult = -1
+}
+
+culture_shock_iron_age = {
+	pop_happiness = -0.10
+	planet_jobs_minerals_produces_mult = -0.45
+	planet_jobs_energy_produces_mult = -0.45
+	planet_jobs_engineering_research_produces_mult = -1
+	planet_jobs_physics_research_produces_mult = -1
+	planet_jobs_society_research_produces_mult = -1
+}
+
+culture_shock_late_medieval_age = {
+	pop_happiness = -0.10
+	planet_jobs_minerals_produces_mult = -0.40
+	planet_jobs_energy_produces_mult = -0.40
+	planet_jobs_engineering_research_produces_mult = -1
+	planet_jobs_physics_research_produces_mult = -1
+	planet_jobs_society_research_produces_mult = -1
+}
+
+culture_shock_renaissance_age = {
+	pop_happiness = -0.10
+	planet_jobs_minerals_produces_mult = -0.35
+	planet_jobs_energy_produces_mult = -0.35
+	planet_jobs_engineering_research_produces_mult = -1
+	planet_jobs_physics_research_produces_mult = -1
+	planet_jobs_society_research_produces_mult = -1
+}
+
+culture_shock_steam_age = {
+	pop_happiness = -0.10
+	planet_jobs_minerals_produces_mult = -0.30
+	planet_jobs_energy_produces_mult = -0.30
+	planet_jobs_engineering_research_produces_mult = -1
+	planet_jobs_physics_research_produces_mult = -1
+	planet_jobs_society_research_produces_mult = -1
+}
+
+culture_shock_industrial_age = {
+	pop_happiness = -0.10
+	planet_jobs_minerals_produces_mult = -0.25
+	planet_jobs_energy_produces_mult = -0.25
+	planet_jobs_engineering_research_produces_mult = -0.80
+	planet_jobs_physics_research_produces_mult = -0.80
+	planet_jobs_society_research_produces_mult = -0.80
+}
+
+culture_shock_machine_age = {
+	pop_happiness = -0.10
+	planet_jobs_minerals_produces_mult = -0.20
+	planet_jobs_energy_produces_mult = -0.20
+	planet_jobs_engineering_research_produces_mult = -0.60
+	planet_jobs_physics_research_produces_mult = -0.60
+	planet_jobs_society_research_produces_mult = -0.60
+}
+
+culture_shock_atomic_age = {
+	pop_happiness = -0.10
+	planet_jobs_minerals_produces_mult = -0.15
+	planet_jobs_energy_produces_mult = -0.15
+	planet_jobs_engineering_research_produces_mult = -0.40
+	planet_jobs_physics_research_produces_mult = -0.40
+	planet_jobs_society_research_produces_mult = -0.40
+}
+
+culture_shock_early_space_age = {
+	pop_happiness = -0.10
+	planet_jobs_minerals_produces_mult = -0.10
+	planet_jobs_energy_produces_mult = -0.10
+	planet_jobs_engineering_research_produces_mult = -0.20
+	planet_jobs_physics_research_produces_mult = -0.20
+	planet_jobs_society_research_produces_mult = -0.20
+}
+
+##########################################################################
+# Space Monster Empire Modifiers
+##########################################################################
+
+crystal_hunting_buff = {
+	damage_vs_country_type_crystal_mult = 0.33
+}
+
+crystal_focus = {
+	planet_jobs_energy_produces_mult = 0.05
+}
+
+pacified_crystals = {
+	icon = "gfx/interface/icons/modifiers/mod_planet_border_mult.dds"
+}
+
+flagellating_movement = {
+	ship_evasion_mult = 0.05
+}
+
+amoeba_hunting_buff = {
+	damage_vs_country_type_amoeba_mult = 0.33
+}
+
+pacified_amoebas = {
+	icon = "gfx/interface/icons/modifiers/mod_planet_border_mult.dds"
+}
+
+cloud_hunting_buff = {
+	damage_vs_country_type_cloud_mult = 0.33
+}
+
+void_loops = {
+	planet_jobs_physics_research_produces_mult = 0.10
+}
+
+cosmic_ray_catalysis = {
+	station_gatherers_energy_produces_mult = 0.1
+}
+
+drone_hunting_buff = {
+	damage_vs_country_type_drone_mult = 0.33
+}
+
+drone_mining_techniques = {
+	station_gatherers_minerals_produces_mult = 0.1
+}
+
+grand_design = {
+	pop_happiness = 0.10
+}
+
+malefaction = {
+	pop_happiness = -0.10
+}
+
+prismatic_lenses = {
+	planet_jobs_physics_research_produces_mult = 0.10
+}
+
+amoeba_extirpator = {
+	damage_vs_country_type_amoeba_mult = 0.2
+}
+
+crystal_breaker = {
+	damage_vs_country_type_crystal_mult = 0.2
+}
+
+drone_destroyer = {
+	damage_vs_country_type_drone_mult = 0.1
+}
+
+drone_bounty = {}
+
+cloudbuster = {
+	damage_vs_country_type_cloud_mult = 0.1
+}
+
+dreadnought_power = {
+	ship_shield_mult = 4
+	ship_weapon_damage = 8
+	ship_hull_mult = 4
+}
+
+pirate_power = {
+	ship_fire_rate_mult = 1
+	ship_hull_regen_add_perc = 0.5
+	ship_armor_regen_add_perc = 0.5
+}
+
+cloud_power = {
+	ship_weapon_damage = 2
+	ship_hull_regen_add_static = 10
+	ship_shield_regen_add_static = 30
+}
+
+enigmatic_power = {
+	ship_weapon_damage = 3
+	ship_armor_add = 11
+	ship_tracking_add = 50
+	ship_hull_regen_add_perc = 0.5
+	ship_armor_regen_add_perc = 0.5
+	ship_weapon_range_mult = 0.5
+}
+
+sanctuary_power = {
+	ship_fire_rate_mult = 1
+	ship_hull_regen_add_perc = 0.5
+	ship_armor_regen_add_perc = 0.5
+}
+
+technosphere_power = {
+	ship_weapon_damage = 1.5
+	ship_shield_mult = 5
+}
+
+armistice_power = {
+	ship_fire_rate_mult = 1
+	ship_hull_regen_add_perc = 0.5
+	ship_armor_regen_add_perc = 0.5
+}
+
+vluur_power = {
+	ship_weapon_damage = 3
+	ship_shield_mult = 3
+	ship_fire_rate_mult = 3
+	ship_hull_regen_add_static = 10
+	ship_shield_regen_add_static = 30
+}
+
+##########################################################################
+# Edict Modifiers
+##########################################################################
+
+# Planet modifier
+droning_optimizations = {
+	planet_jobs_minerals_produces_mult = 0.15
+	planet_jobs_energy_produces_mult = -0.10
+}
+
+##########################################################################
+# Machines
+##########################################################################
+syndaw_congregating_robots = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_robots.dds"
+	icon_frame = 3
+	planet_jobs_unity_produces_mult = -0.10
+}
+
+uprising_ai_buff = {
+	country_base_minerals_produces_add = 100
+	country_base_energy_produces_add = 100
+	country_naval_cap_mult = 10
+}
+
+syndaw_patched_systems = {
+	planet_jobs_physics_research_produces_mult = -0.10
+	planet_jobs_society_research_produces_mult = -0.10
+	planet_jobs_engineering_research_produces_mult = -0.10
+}
+
+uprising_player_buff = {
+	country_naval_cap_mult = 10
+}

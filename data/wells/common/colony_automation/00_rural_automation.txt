@@ -1,0 +1,183 @@
+
+automate_rural_planet = {
+	available = {
+		has_designation = col_rural
+		owner = { 
+			NOR = { 
+				has_authority = auth_machine_intelligence
+				has_authority = auth_hive_mind 
+			}
+		}
+		free_jobs < 3
+	}
+
+	prio_districts = {
+		district_generator
+		district_mining
+		district_farming
+	}
+
+	buildings = {
+		1 = {
+			building = building_capital
+			available = {
+				always = yes
+			}
+		}
+
+		2 = {
+			building = building_robot_assembly_plant
+			available = {
+				owner = {
+					robot_assembly_plant_upkeep_affordable = yes
+				}
+			}
+			building = building_temple
+			available = {
+				OR = {
+					owner = { has_ethic = ethic_spiritualist }
+					owner = { has_ethic = ethic_fanatic_spiritualist }
+				}
+				owner = {
+					temple_upkeep_affordable = yes
+				}
+			}
+		}
+
+		3 = {
+			building = building_clinic
+			available = {
+				owner = {
+					clinic_upkeep_affordable = yes
+				}
+			}
+		}
+
+		4 = {
+			building = building_mineral_purification_plant
+			available = {
+				owner = {
+					mineral_purification_plant_upkeep_affordable = yes
+				}
+			}
+		}
+
+		5 = {
+			building = building_holo_theatres
+			available = {
+				owner = {
+					holo_theatres_upkeep_affordable = yes
+				}
+			}
+		}
+
+		6 = {
+			building = building_luxury_residence
+			available = {
+				owner = {
+					luxury_residence_upkeep_affordable = yes
+				}
+			}
+		}
+
+		7 = {
+			building = building_food_processing_facility
+			available = {
+				owner = {
+					food_processing_facility_upkeep_affordable = yes
+				}
+			}
+		}
+
+		8 = {
+			building = building_energy_grid
+			available = {
+				owner = {
+					energy_grid_upkeep_affordable = yes
+				}
+			}
+		}
+
+		9 = {
+			building = building_commercial_zone
+			available = {
+				owner = {
+					commercial_zone_upkeep_affordable = yes
+				}
+			}
+		}
+
+		10 = {
+			building = building_luxury_residence
+			available = {
+				owner = {
+					luxury_residence_upkeep_affordable = yes
+				}
+			}
+		}
+
+		11 = {
+			building = building_luxury_residence
+			available = {
+				owner = {
+					luxury_residence_upkeep_affordable = yes
+				}
+			}
+		}
+
+		12 = {
+			building = building_commercial_zone
+			available = {
+				owner = {
+					commercial_zone_upkeep_affordable = yes
+				}
+			}
+		}
+
+		13 = {
+			building = building_autochthon_monument
+			available = {
+				owner = {
+					autochthon_monument_upkeep_affordable = yes
+				}
+			}
+			building = building_factory_1
+			available = {
+				OR = {
+					owner = { has_ethic = ethic_spiritualist }
+					owner = { has_ethic = ethic_fanatic_spiritualist }
+				}
+				owner = {
+					factory_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		14 = {
+			building = building_refinery
+			available = {
+				owner = {
+					refinery_upkeep_affordable = yes
+				}
+			}
+		}
+
+		15 = {
+			building = building_refinery
+			available = {
+				owner = {
+					refinery_upkeep_affordable = yes
+				}
+			}
+		}
+
+		16 = {
+			building = building_galactic_stock_exchange
+			available = {
+				owner = {
+					galactic_stock_exchange_upkeep_affordable = yes
+				}
+			}
+		}
+	}
+}

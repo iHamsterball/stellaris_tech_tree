@@ -1,0 +1,287 @@
+# site_type_name = {				# Key of the site, used for name and desc lookup etc.
+#	max_instances = <int>			# Max instances of this type a galaxy can have, only checked when using `create_archaeological_site = random`
+#	weight = <scriptable value>		# Weight used for random weight, only used when using `create_archaeological_site = random`. scriptable value type is defined either by '<int>' or `<mean time to happen>`.
+#	stages = <int>					# Should match number of defined stages below.
+#	potential = <trigger>			# Trigger checking if a scope with this=fleet ,prev=archaeological site is potential to excavate (this will add/remove this option without giving the player a reason).
+#	allow = <trigger>				# Trigger checking if a scope with this=fleet ,prev=archaeological site is allowed to excavate (this will toggle enable/disabled mode on buttons etc).
+#	stage = {						# Stage definition, order dependent.
+#		difficulty = <intervall int> 	# min max intervall type. intervall is defined either by '<int>' or '{ min = <int> max=<int> }' where the later will randomize a value between min and max.
+#		icon = <string>			# rune icon gfx type.
+#		event = <string>			# event to fire when finished the state.
+#	}
+#	stage = {...}					# Second stage
+#	on_roll_failed = <effect>			# effect to fire when a roll fails, with scope this=fleet ,from=archaeological site
+#}
+
+# Whispers in the Stone
+lithoids_digsite = {
+	desc = lithoids_digsite_desc
+	picture = GFX_evt_hidden_door
+	stages = 5
+	max_instances = 1
+	weight = 0
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+	stage = {
+		difficulty = 2
+		event = ancrel.4001
+		icon = GFX_archaeology_runes_A1
+	}
+	stage = {
+		difficulty = 2
+		event = ancrel.4002
+		icon = GFX_archaeology_runes_A2
+	}
+	stage = {
+		difficulty = 3
+		event = ancrel.4003
+		icon = GFX_archaeology_runes_A3
+	}
+	stage = {
+		difficulty = 5
+		event = ancrel.4004
+		icon = GFX_archaeology_runes_A4
+	}
+	stage = {
+		difficulty = 5
+		event = ancrel.4005
+		icon = GFX_archaeology_runes_A5
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+# The Rubricator
+rubricator_digsite = {
+	desc = rubricator_digsite_desc
+	picture = GFX_evt_relic_world
+	stages = 5
+	max_instances = 1
+	weight = 0
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		has_country_flag = discovered_rubricator_planet
+		default_site_visible_trigger = yes
+	}
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+	stage = {
+		difficulty = 1
+		event = ancrel.4013
+		icon = GFX_archaeology_runes_E1
+	}
+	stage = {
+		difficulty = 3
+		event = ancrel.4014
+		icon = GFX_archaeology_runes_E2
+	}
+	stage = {
+		difficulty = 4
+		event = ancrel.4015
+		icon = GFX_archaeology_runes_E3
+	}
+	stage = {
+		difficulty = 5
+		event = ancrel.4016
+		icon = GFX_archaeology_runes_E4
+	}
+	stage = {
+		difficulty = 7
+		event = ancrel.4017
+		icon = GFX_archaeology_runes_E5
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+# The Oracle
+oracle_digsite = {
+	desc = oracle_digsite_desc
+	picture = GFX_evt_crashed_station
+	stages = 4
+	max_instances = 1
+	weight = 0
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+	stage = {
+		difficulty = 1
+		event = ancrel.4032
+		icon = GFX_archaeology_runes_B1
+	}
+	stage = {
+		difficulty = 2
+		event = ancrel.4033
+		icon = GFX_archaeology_runes_B2
+	}
+	stage = {
+		difficulty = 2
+		event = ancrel.4034
+		icon = GFX_archaeology_runes_B3
+	}
+	stage = {
+		difficulty = 6
+		event = ancrel.4035
+		icon = GFX_archaeology_runes_B4
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+
+# Church of the Endless Expanse 1
+endless_expanse_digsite = {
+	desc = endless_expanse_digsite_desc
+	picture = GFX_evt_frozen
+	stages = 4
+	max_instances = 1
+	weight = {
+    	base = 100
+		modifier = {
+			factor = 0
+			NOT = {
+				is_planet_class = pc_frozen
+			}
+		}
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	stage = {
+		difficulty = 1
+		event = ancrel.4040
+		icon = GFX_archaeology_runes_F1
+	}
+	stage = {
+		difficulty = 2
+		event = ancrel.4041
+		icon = GFX_archaeology_runes_F2
+	}
+	stage = {
+		difficulty = 2
+		event = ancrel.4042
+		icon = GFX_archaeology_runes_F3
+	}
+	stage = {
+		difficulty = 3
+		event = ancrel.4047
+		icon = GFX_archaeology_runes_F4
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+# Church of the Endless Expanse 2
+endless_expanse_digsite_2 = {
+	desc = endless_expanse_digsite_2_desc
+	picture = GFX_evt_gas_giant_station
+	stages = 4
+	max_instances = 1
+	weight = 0
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	stage = {
+		difficulty = 3
+		event = ancrel.4043
+		icon = GFX_archaeology_runes_F1
+	}
+	stage = {
+		difficulty = 1
+		event = ancrel.4044
+		icon = GFX_archaeology_runes_F2
+	}
+	stage = {
+		difficulty = 4
+		event = ancrel.4045
+		icon = GFX_archaeology_runes_F3
+	}
+	stage = {
+		difficulty = 4
+		event = ancrel.4046
+		icon = GFX_archaeology_runes_F4
+	}
+	
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+# The Sentinels
+sentinels_digsite = {
+	desc = sentinels_digsite_desc
+	picture = GFX_evt_huge_monument
+	stages = 3
+	max_instances = 1
+	weight = 0
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+	stage = {
+		difficulty = 2
+		event = ancrel.4052
+		icon = GFX_archaeology_runes_B1
+	}
+	stage = {
+		difficulty = 3
+		event = ancrel.4053
+		icon = GFX_archaeology_runes_B2
+	}
+	stage = {
+		difficulty = 4
+		event = ancrel.4054
+		icon = GFX_archaeology_runes_B3
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}

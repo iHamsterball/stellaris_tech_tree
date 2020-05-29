@@ -1,0 +1,130 @@
+# Nebulae - Use in System Scope
+create_nebula_1 = {
+	star = {
+		create_ambient_object = {
+			type = "nebula_1"
+			location = this
+		}
+		last_created_ambient_object = {
+			set_location = {
+				target = prev
+				distance = 0
+				angle = random
+			}
+		}
+	}
+}
+
+create_nebula_2 = {
+	star = {
+		create_ambient_object = {
+			type = "nebula_2"
+			location = this
+		}
+		last_created_ambient_object = {
+			set_location = {
+				target = prev
+				distance = 0
+				angle = random
+			}
+		}
+	}
+}
+
+create_nebula_3 = {
+	star = {
+		create_ambient_object = {
+			type = "nebula_3"
+			location = this
+		}
+		last_created_ambient_object = {
+			set_location = {
+				target = prev
+				distance = 0
+				angle = random
+			}
+		}
+	}
+}
+
+create_nebula_4 = {
+	star = {
+		create_ambient_object = {
+			type = "nebula_4"
+			location = this
+		}
+		last_created_ambient_object = {
+			set_location = {
+				target = prev
+				distance = 0
+				angle = random
+			}
+		}
+	}
+}
+
+create_rare_nebula_1 = {
+	star = {
+		create_ambient_object = {
+			type = "rare_nebula_1"
+			location = this
+		}
+		last_created_ambient_object = {
+			set_location = {
+				target = prev
+				distance = 0
+				angle = random
+			}
+		}
+	}
+}
+
+create_rare_nebula_2 = {
+	star = {
+		create_ambient_object = {
+			type = "rare_nebula_2"
+			location = this
+		}
+		last_created_ambient_object = {
+			set_location = {
+				target = prev
+				distance = 0
+				angle = random
+			}
+		}
+	}
+}
+
+create_turbulent_nebula_1 = {
+	star = {
+		create_ambient_object = {
+			type = "turbulent_nebula_1"
+			location = this
+		}
+		last_created_ambient_object = {
+			set_location = {
+				target = prev
+				distance = 0
+				angle = random
+			}
+		}
+	}
+	add_modifier = { modifier = turbulent_nebula }
+}
+
+create_turbulent_nebula_2 = {
+	star = {
+		create_ambient_object = {
+			type = "turbulent_nebula_2"
+			location = this
+		}
+		last_created_ambient_object = {
+			set_location = {
+				target = prev
+				distance = 0
+				angle = random
+			}
+		}
+	}
+	add_modifier = { modifier = turbulent_nebula }
+}

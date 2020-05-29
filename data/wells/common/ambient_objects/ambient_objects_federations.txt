@@ -1,0 +1,87 @@
+### Burned-out Attack Ship Debris
+ambient_object = {
+	name = "attack_ship_01_object"
+	entity = "ancient_battlefield_entity"
+	selectable = yes
+	show_name = no
+	tooltip = "attack_ship_01_object_tooltip"
+	description = "attack_ship_01_object_desc"
+}
+
+### Tannhäuser Gate
+ambient_object = {
+	name = "tannhauser_gate_object"
+	entity = "tannhauser_gate_01_locator_entity"
+	selectable = yes
+	show_name = no
+	tooltip = "tannhauser_gate_object_tooltip"
+	description = "tannhauser_gate_object_desc"
+}
+
+### On the Shoulders of Giants Origin CONTINUED - Fusion Trails
+ambient_object = {
+	name = "fusion_drive_trail_object"
+	entity = "fusion_trail_entity"
+	selectable = yes
+	show_name = yes
+	tooltip = "fusion_drive_trail_object_tooltip"
+	description = "fusion_drive_trail_object_desc"
+}
+
+### On the Shoulders of Giants Origin CONTINUED - Silent Freighter
+ambient_object = {
+	name = "silent_freighter_object"
+	entity = "cargo_transport_containers_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "silent_freighter_object_tooltip"
+	description = "silent_freighter_object_desc"
+}
+
+### On the Shoulders of Giants Origin CONTINUED - Abandoned Space Station
+ambient_object = {
+	name = "abandoned_station_object"
+	entity = "arthropoid_01_observation_station_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "abandoned_station_object_tooltip"
+	description = "abandoned_station_object_desc"
+}
+
+### On the Shoulders of Giants Origin CONTINUED - Mysterious Space Station
+ambient_object = {
+	name = "mysterious_space_station_object"
+	entity = "sensor_station_01_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "mysterious_space_station_object_tooltip"
+	description = "mysterious_space_station_object_desc"
+}
+
+### On the Shoulders of Giants Origin CONTINUED - Fleet Parking Lot
+ambient_object = {
+	name = "old_fleet_parking_lot_object"
+	entity = "old_fleet_parking_lot_entity"
+	selectable = no
+	show_name = no
+}
+
+# Star Lifting Platform
+ambient_object = {
+	name = "federation_hegemony_monument"
+	entity = "station_generic_01_entity"
+	selectable = yes
+	show_name = no
+	tooltip = "federation_hegemony_monument_desc"
+	description = "federation_hegemony_monument_desc"
+}
+
+# Kept Grounds: Groundskeeper
+ambient_object = {
+	name = "wenkwort_keeper"
+	entity = "ai_01_blue_transport_ship_ai_entity"
+	selectable = yes
+	show_name = yes
+	tooltip = "wenkwort_keeper_desc"
+	description = "wenkwort_keeper_desc"
+}

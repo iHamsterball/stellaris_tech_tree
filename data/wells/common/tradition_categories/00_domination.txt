@@ -1,0 +1,29 @@
+tradition_domination = {
+	adoption_bonus = "tr_domination_adopt"
+	finish_bonus = "tr_domination_finish"
+	traditions = {
+		"tr_domination_colonial_viceroys"
+		"tr_domination_imperious_architecture"
+		"tr_domination_judgment_corps"
+		"tr_domination_workplace_motivators"
+		"tr_domination_grand_council"
+	}
+	tradition_swap = {
+		name = tradition_domination_machine
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}
+		weight = {
+			factor = 1
+		}		
+	}
+	tradition_swap = {
+		name = tradition_domination_hive
+		trigger = {
+			has_authority = auth_hive_mind
+		}
+		weight = {
+			factor = 1
+		}		
+	}
+}

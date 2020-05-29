@@ -1,0 +1,245 @@
+#reloadable with 'reload stats'
+# This file is where you start when you want to configure something new, then go to sections
+
+@corvette_collision_radius = 2.0
+
+@destroyer_collision_radius = 2.5
+
+@cruiser_collision_radius = 3
+
+@battleship_collision_radius = 3
+
+@titan_collision_radius = 15
+
+@build_block_radius_none = 0
+@build_block_radius_civilian = 20
+@build_block_radius_military = 200
+
+@speed_very_slow = 80
+@speed_slow = 100
+@speed_default = 120
+@speed_fast = 140
+@speed_very_fast = 160
+
+##########
+# PIRATE #
+##########
+
+pirate_corvette = {
+	graphical_culture = { "pirate_01" }
+
+	max_speed = @speed_very_fast
+	acceleration = 0.35
+	rotation_speed = 0.1
+	collision_radius = @corvette_collision_radius
+	modifier = {
+		ship_armor_add = 3
+		ship_evasion_add = 60
+		ship_piracy_suppression_add = 10
+
+	}
+	max_hitpoints = 350
+	size_multiplier = 1
+	fleet_slot_size = 1
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = no
+	icon_frame = 2
+
+	class = shipclass_military
+	is_designable = no
+
+	required_component_set = "ftl_components"
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+}
+
+pirate_destroyer = {
+	graphical_culture = { "pirate_01" }
+
+	max_speed = @speed_fast
+	acceleration = 0.3
+	rotation_speed = 0.2
+	collision_radius = @destroyer_collision_radius
+	modifier = {
+		ship_evasion_add = 25
+		ship_armor_add = 15
+		ship_piracy_suppression_add = 8
+	}
+	max_hitpoints = 700
+	size_multiplier = 2
+	fleet_slot_size = 2
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	icon_frame = 3
+	is_space_station = no
+
+	class = shipclass_military
+	is_designable = no
+	
+	required_component_set = "ftl_components"
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+}
+
+pirate_cruiser = {
+	graphical_culture = { "pirate_01" }
+
+	max_speed = @speed_fast
+	acceleration = 0.2
+	rotation_speed = 0.2
+	collision_radius = @destroyer_collision_radius
+	modifier = {
+		ship_evasion_add = 10
+		ship_armor_add = 34
+		ship_piracy_suppression_add = 6
+	}
+	max_hitpoints = 2000
+	size_multiplier = 4
+	fleet_slot_size = 4
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	icon_frame = 3
+	is_space_station = no
+	
+	class = shipclass_military
+	is_designable = no
+	
+	required_component_set = "ftl_components"
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+}
+
+pirate_station = {
+	graphical_culture = { "pirate_01" }
+	max_speed = 0.0
+	acceleration = 0.0
+	rotation_speed = 0.0
+	modifier = {
+		ship_evasion_mult = -1
+		ship_armor_add = 35
+		ships_upkeep_mult = -0.25
+	}
+	ship_modifier = {
+		ship_weapon_range_mult = 0.20
+	}
+	max_hitpoints = 2000
+	size_multiplier = 4
+	fleet_slot_size = 4
+	section_slots = { 
+		"west" = { locator = "part1" }
+	}
+	num_target_locators = 0
+	is_space_station = yes
+	build_block_radius = @build_block_radius_civilian
+	
+	class = shipclass_military_station
+	is_designable = no
+}
+
+#####################
+# LATE-GAME PIRATES
+#####################
+
+# Bemat Corvette
+bemat_corvette = {
+	graphical_culture = { "pirate_01" }
+	max_speed = @speed_very_fast
+	acceleration = 0.35
+	rotation_speed = 0.1
+	collision_radius = @corvette_collision_radius
+	modifier = {
+		ship_armor_add = 6
+		ship_evasion_add = 50
+		ship_piracy_suppression_add = 10
+
+	}
+	max_hitpoints = 350
+	size_multiplier = 1
+	fleet_slot_size = 1
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+
+	is_designable = no
+	is_space_station = no
+	is_space_object = no
+
+	icon_frame = 2
+	class = shipclass_military
+	is_designable = no
+
+	required_component_set = "ftl_components"
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+}
+
+# Bemat Destroyer
+bemat_destroyer = {
+	graphical_culture = { "pirate_01" }
+	entity = "humanoid_01_destroyer_entity"
+	max_speed = @speed_fast
+	acceleration = 0.3
+	rotation_speed = 0.35
+	collision_radius = @destroyer_collision_radius
+	modifier = {
+		ship_armor_add = 25
+		ship_evasion_add = 25
+		ship_piracy_suppression_add = 8
+
+	}
+	max_hitpoints = @destroyer_hp
+	size_multiplier = 1
+	fleet_slot_size = 2
+	section_slots = {
+		"bow" = { locator = "part1" }
+		"stern" = { locator = "part2" }
+	}
+	num_target_locators = 0
+	is_designable = no
+	is_space_station = no
+	is_space_object = no
+
+	icon_frame = 3
+	class = shipclass_military
+	is_designable = no
+
+	required_component_set = "ftl_components"
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+}
+
+# Bemat Cruiser
+bemat_cruiser = {
+	graphical_culture = { "pirate_01" }
+	entity = "humanoid_01_cruiser_entity"
+	max_speed = @speed_fast
+	acceleration = 0.25
+	rotation_speed = 0.2
+	collision_radius = @cruiser_collision_radius
+	modifier = {
+		ship_armor_add = 25
+		ship_evasion_add = 15
+		ship_piracy_suppression_add = 3
+
+	}
+	max_hitpoints = @cruiser_hp
+	size_multiplier = 1
+	fleet_slot_size = 3
+	section_slots = {
+		"bow" = { locator = "part1_locator" }
+		"mid" = { locator = "part2_locator" }
+		"stern" = { locator = "part3_locator" }
+	}
+	num_target_locators = 0
+	is_designable = no
+	is_space_station = no
+	is_space_object = no
+
+	icon_frame = 4
+	class = shipclass_military
+	is_designable = no
+
+	required_component_set = "ftl_components"
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+}

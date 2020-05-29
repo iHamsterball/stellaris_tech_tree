@@ -1,0 +1,155 @@
+automate_generator_hive_planet = {
+	available = {
+		has_designation = col_generator
+		owner = {  has_authority = auth_hive_mind }
+		free_jobs < 3
+	}
+
+	prio_districts = {
+		district_generator
+	}
+
+	buildings = {
+		1 = {
+			building = building_hive_capital
+			available = {
+				always = yes
+			}
+		}
+
+		2 = {
+			building = building_spawning_pool
+			available = {
+				owner = {
+					spawning_pool_upkeep_affordable = yes
+				}
+			}
+		}
+
+		3 = {
+			building = building_hive_node
+			available = {
+				owner = {
+					hive_node_upkeep_affordable = yes
+				}
+			}
+		}
+
+		4 = {
+			building = building_energy_grid
+			available = {
+				owner = {
+					energy_grid_upkeep_affordable = yes
+				}
+			}
+		}
+
+		5 = {
+			building = building_refinery
+			available = {
+				owner = {
+					refinery_upkeep_affordable = yes
+				}
+			}
+		}
+
+		6 = {
+			building = building_hive_warren
+			available = {
+				owner = {
+					hive_warren_upkeep_affordable = yes
+				}
+			}
+		}
+
+		7 = {
+			building = building_chemical_plant
+			available = {
+				owner = {
+					chemical_plant_upkeep_affordable = yes
+				}
+			}
+		}
+
+		8 = {
+			building = building_refinery
+			available = {
+				owner = {
+					refinery_upkeep_affordable = yes
+				}
+			}
+		}
+
+		9 = {
+			building = building_crystal_plant
+			available = {
+				owner = {
+					crystal_plant_upkeep_affordable = yes
+				}
+			}
+		}
+
+		10 = {
+			building = building_hive_warren
+			available = {
+				owner = {
+					hive_warren_upkeep_affordable = yes
+				}
+			}
+		}
+
+		11 = {
+			building = building_hive_warren
+			available = {
+				owner = {
+					hive_warren_upkeep_affordable = yes
+				}
+			}
+		}
+
+		12 = {
+			building = building_resource_silo
+			available = {
+				owner = {
+					resource_silo_upkeep_affordable = yes
+				}
+			}
+		}
+
+		13 = {
+			building = building_hive_node
+			available = {
+				owner = {
+					hive_node_upkeep_affordable = yes
+				}
+			}
+		}
+
+		14 = {
+			building = building_crystal_plant
+			available = {
+				owner = {
+					crystal_plant_upkeep_affordable = yes
+				}
+			}
+		}
+
+		15 = {
+			building = building_crystal_plant
+			available = {
+				owner = {
+					crystal_plant_upkeep_affordable = yes
+				}
+			}
+		}
+
+		16 = {
+			building = building_resource_silo
+			available = {
+				owner = {
+					resource_silo_upkeep_affordable = yes
+				}
+			}
+		}
+	}
+}

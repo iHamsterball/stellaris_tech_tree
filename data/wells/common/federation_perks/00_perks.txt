@@ -1,0 +1,424 @@
+#Perks Example
+#<perk_name>={
+#	Modifier for federation scope
+#	federation_modifier = {}
+#	Modifier for all members (leader included)
+#	members_modifier = {}
+#	Modifier for exclusevely leader
+#	leader_modifier = {}
+#	On activate effect in federation scope
+#	on_activate = {}
+#	On deactivate effect in federation scope
+#}
+
+temp_remove = {
+	members_modifier = {
+		country_trust_growth = 0.05
+	}
+}
+
+neutral = {
+	members_modifier = {
+		country_naval_cap_add = 20
+	}
+}
+
+hostile = {
+	members_modifier = {
+		country_starbase_capacity_add = 1
+	}
+}
+
+### Passive, starting bonuses
+
+default_federation_passive = {
+	federation_modifier = {
+		description = default_federation_passive_effect
+		# TODO
+	}
+}
+
+trade_federation_passive = {
+	members_modifier = {
+		description = trade_federation_passive_effect
+	}
+}
+
+research_federation_passive = {
+	federation_modifier = {
+		description = research_federation_passive_effect
+		federation_research_sharing_mult = 0.25
+	}
+	on_activate = {
+		set_federation_settings = {
+			research_sharing = yes
+		}
+	}
+	on_deactivate = {
+		set_federation_settings = {
+			research_sharing = no
+		}
+	}
+}
+
+military_federation_passive = {
+	members_modifier = {
+		ship_starting_experience_add = 100
+		army_starting_experience_add = 100
+		starbase_shipyard_build_speed_mult = 0.25
+	}
+}
+
+hegemony_federation_passive = {
+	members_modifier = {
+		description = hegemony_federation_passive_effect
+	}
+	on_activate = {
+		set_diplomacy_action_setting = {
+			action = action_ask_to_leave_federation
+			settings = {
+				acceptance_type = leader
+			}
+		}
+	}
+	on_deactivate = {
+		set_diplomacy_action_setting = {
+			action = action_ask_to_leave_federation 
+			settings = {
+				acceptance_type = default
+			}
+		}
+	}
+}
+
+### Perks
+
+federation_fleet_size_1 = {
+	members_modifier = {
+		description = federation_fleet_size_effect
+		federation_naval_cap_contribution_mult = 0.25
+	}
+}
+
+federation_fleet_size_2 = {
+	members_modifier = {
+		description = federation_fleet_size_effect
+		federation_naval_cap_contribution_mult = 0.25
+	}
+}
+
+federation_fleet_size_3 = {
+	members_modifier = {
+		description = federation_fleet_size_effect
+		federation_naval_cap_contribution_mult = 0.25
+	}
+}
+
+federation_fleet_speed_1 = {
+	members_modifier = {
+		description = federation_fleet_speed_effect
+		ship_federation_territory_speed_mult = 0.10
+	}
+}
+
+federation_fire_rate_1 = {
+	members_modifier = {
+		ship_fire_rate_mult = 0.10
+	}
+}
+
+admiral_level_cap_1 = {
+	members_modifier = {
+		admiral_skill_levels = 1
+	}
+}
+
+claim_cost_1 = {
+	leader_modifier = {
+		country_claim_influence_cost_mult = -0.10
+	}
+}
+
+job_output_1 = {
+	members_modifier = {
+		planet_jobs_produces_mult = 0.05
+	}
+	leader_modifier = {
+		description = "president_no_effect"
+		planet_jobs_produces_mult = -0.05
+	}
+}
+
+job_output_2 = {
+	members_modifier = {
+		planet_jobs_produces_mult = 0.05
+	}
+	leader_modifier = {
+		description = "president_no_effect"
+		planet_jobs_produces_mult = -0.05
+	}
+}
+
+job_output_3 = {
+	members_modifier = {
+		planet_jobs_produces_mult = 0.05
+	}
+	leader_modifier = {
+		description = "president_no_effect"
+		planet_jobs_produces_mult = -0.05
+	}
+}
+
+research_share_1 = {
+	federation_modifier = {
+		description = research_share_1_effect
+		federation_research_sharing_mult = 0.05
+	}
+}
+
+research_share_2 = {
+	federation_modifier = {
+		description = research_share_1_effect
+		federation_research_sharing_mult = 0.05
+	}
+}
+
+research_share_3 = {
+	federation_modifier = {
+		description = research_share_1_effect
+		federation_research_sharing_mult = 0.05
+	}
+}
+
+research_share_4 = {
+	federation_modifier = {
+		description = research_share_1_effect
+		federation_research_sharing_mult = 0.05
+	}
+}
+
+research_boost_1 = {
+	members_modifier = {
+		all_technology_research_speed = 0.05
+	}
+}
+
+rare_tech_boost = {
+	members_modifier = {
+		description = rare_tech_boost_effect
+	}
+}
+
+crisis_research_1 = {
+	members_modifier = {
+		description = crisis_research_1_effect
+	}
+	member_triggered_modifier = {
+		key = crisis_research_1
+		potential = {
+			has_crisis = yes
+		}
+		all_technology_research_speed = 0.20
+	}
+}
+
+crisis_research_2 = {
+	members_modifier = {
+		description = crisis_research_1_effect
+	}
+	member_triggered_modifier = {
+		key = crisis_research_2
+		potential = {
+			has_crisis = yes
+		}
+		all_technology_research_speed = 0.20
+	}
+}
+
+tech_diplo_weight_1 = {
+	leader_modifier = {
+		diplo_weight_technology_mult = 0.20
+	}
+}
+
+president_option_1 = {
+	leader_modifier = {
+		num_tech_alternatives_add = 1
+	}
+}
+
+president_megastructure_1 = {
+	leader_modifier = {
+		country_megastructure_build_cap_add = 1
+	}
+}
+
+unity_boost_1 = {
+	members_modifier = {
+		country_unity_produces_mult = 0.10
+	}
+}
+
+unity_boost_2 = {
+	members_modifier = {
+		country_unity_produces_mult = 0.10
+	}
+}
+
+president_unity_1 = {
+	leader_modifier = {
+		country_unity_produces_mult = 0.10
+	}
+}
+
+trade_value_1 = {
+	members_modifier = {
+		trade_value_mult = 0.05
+	}
+}
+
+trade_value_2 = {
+	members_modifier = {
+		trade_value_mult = 0.05
+	}
+}
+
+trade_value_3 = {
+	members_modifier = {
+		trade_value_mult = 0.05
+	}
+}
+
+trade_value_4 = {
+	members_modifier = {
+		trade_value_mult = 0.05
+	}
+}
+
+trade_protection_1 = {
+	members_modifier = {
+		local_trade_protection_add = 5
+	}
+}
+
+president_trade_value_1 = {
+	leader_modifier = {
+		trade_value_mult = 0.10
+	}
+}
+
+extra_envoy_1 = {
+	leader_modifier = {
+		envoys_add = 1
+	}
+}
+
+extra_influence_1 = {
+	leader_modifier = {
+		federation_influence_produces_add = 1
+	}
+}
+
+diplo_weight_1 = {
+	leader_modifier = {
+		diplo_weight_mult = 0.1
+	}
+}
+
+damage_crisis_1 = {
+	members_modifier = {
+		description = damage_crisis_1_modifier_desc
+		damage_vs_country_type_swarm_mult = 0.25
+		damage_vs_country_type_extradimensional_mult = 0.25
+		damage_vs_country_type_extradimensional_2_mult = 0.25
+		damage_vs_country_type_extradimensional_3_mult = 0.25
+		damage_vs_country_type_ai_empire_mult = 0.25
+		damage_vs_country_type_gray_goo_mult = 0.25
+	}
+}
+
+damage_crisis_2 = {
+	members_modifier = {
+		description = damage_crisis_1_modifier_desc
+		damage_vs_country_type_swarm_mult = 0.25
+		damage_vs_country_type_extradimensional_mult = 0.25
+		damage_vs_country_type_extradimensional_2_mult = 0.25
+		damage_vs_country_type_extradimensional_3_mult = 0.25
+		damage_vs_country_type_ai_empire_mult = 0.25
+		damage_vs_country_type_gray_goo_mult = 0.25
+	}
+}
+
+envoy_unity_1 = {
+	members_modifier = {
+		description = envoy_unity_1_effect
+	}
+	envoy_modifier = {
+		description = envoy_unity_1_effect
+		country_base_unity_produces_add = 1
+	}
+}
+
+envoy_unity_2 = {
+	members_modifier = {
+		description = envoy_unity_1_effect
+	}
+	envoy_modifier = {
+		country_base_unity_produces_add = 1
+	}
+}
+
+cohesion_join_1 = {
+	federation_modifier = {
+		description = cohesion_join_1_effect
+		federation_join_malus_mult = -0.5
+	}
+}
+cohesion_failed_vote_1 = {
+	federation_modifier = {
+		description = cohesion_failed_vote_1_effect
+	}
+	on_activate = {
+		set_federation_settings = {
+			failed_vote_half_price = yes
+		}
+	}
+	on_deactivate = {
+		set_federation_settings = {
+			failed_vote_half_price = no
+		}
+	}
+}
+
+federation_fleet_unity_1 = {
+	federation_modifier = {
+		description = federation_fleet_unity_1_effect
+		federation_leader_fleet_scale_mult = 0.1
+	}
+}
+
+president_keep_navy_1 = {
+	leader_modifier = {
+		description = president_keep_navy_1_effect
+		country_federation_fleet_contribution_naval_cap_reduction_discount = 1
+	}
+}
+
+president_hegemony_cb_1 = {
+	leader_modifier = {
+		description = president_hegemony_cb_1_effect
+	}
+}
+
+president_diplo_weight_steal_1 = {
+	federation_modifier = {
+		description = president_diplo_weight_steal_1_effect
+		federation_leader_diplo_weight_from_members_mult = 0.10
+	}
+}
+
+diplomacy_upkeep_1 = {
+	members_modifier = {
+		description = diplomacy_upkeep_1_effect
+	}
+}

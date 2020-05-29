@@ -1,0 +1,324 @@
+# Small
+
+@s_t1_cost = 10
+@s_t2_cost = 13
+@s_t3_cost = 17
+@s_t4_cost = 17 #not 22, uses rare goods instead
+@s_t5_cost = 22 #29
+@s_t6_cost = 29 #38
+@s_t7_cost = 38 #49
+
+@s_t1_upkeep_energy = 0.10
+@s_t1_upkeep_alloys = 0.020
+@s_t2_upkeep_energy = 0.13
+@s_t2_upkeep_alloys = 0.026
+@s_t3_upkeep_energy = 0.17
+@s_t3_upkeep_alloys = 0.034
+@s_t4_upkeep_energy = 0.17
+@s_t4_upkeep_alloys = 0.034
+@s_t5_upkeep_energy = 0.22
+@s_t5_upkeep_alloys = 0.044
+@s_t6_upkeep_energy = 0.29
+@s_t6_upkeep_alloys = 0.058
+@s_t7_upkeep_energy = 0.38
+@s_t7_upkeep_alloys = 0.076
+
+# Medium
+
+@m_t1_cost = 20
+@m_t2_cost = 26
+@m_t3_cost = 34
+@m_t4_cost = 34 #not 44, uses rare goods instead
+@m_t5_cost = 44 #57
+@m_t6_cost = 57 #74
+@m_t7_cost = 74 #98
+
+@m_t1_upkeep_energy = 0.20
+@m_t1_upkeep_alloys = 0.040
+@m_t2_upkeep_energy = 0.26
+@m_t2_upkeep_alloys = 0.052
+@m_t3_upkeep_energy = 0.34
+@m_t3_upkeep_alloys = 0.068
+@m_t4_upkeep_energy = 0.34
+@m_t4_upkeep_alloys = 0.068
+@m_t5_upkeep_energy = 0.44
+@m_t5_upkeep_alloys = 0.088
+@m_t6_upkeep_energy = 0.57
+@m_t6_upkeep_alloys = 0.104
+@m_t7_upkeep_energy = 0.74
+@m_t7_upkeep_alloys = 0.148
+
+# Large
+
+@l_t1_cost = 40
+@l_t2_cost = 52
+@l_t3_cost = 68
+@l_t4_cost = 68 #not 88, uses rare goods instead
+@l_t5_cost = 88 #114
+@l_t6_cost = 114 #148
+@l_t7_cost = 148 #192
+
+@l_t1_upkeep_energy = 0.40
+@l_t1_upkeep_alloys = 0.080
+@l_t2_upkeep_energy = 0.52
+@l_t2_upkeep_alloys = 0.104
+@l_t3_upkeep_energy = 0.68
+@l_t3_upkeep_alloys = 0.136
+@l_t4_upkeep_energy = 0.68
+@l_t4_upkeep_alloys = 0.136
+@l_t5_upkeep_energy = 0.88
+@l_t5_upkeep_alloys = 0.196
+@l_t6_upkeep_energy = 1.14
+@l_t6_upkeep_alloys = 0.228
+@l_t7_upkeep_energy = 1.48
+@l_t7_upkeep_alloys = 0.296
+
+# Extra Large
+
+@xl_t5_cost = 176 #not 232, uses rare goods instead
+@xl_t6_cost = 229 #298
+@xl_t7_cost = 298 #387
+
+@xl_t5_upkeep_energy = 1.76
+@xl_t5_upkeep_alloys = 0.352
+@xl_t6_upkeep_energy = 2.29
+@xl_t6_upkeep_alloys = 0.458
+@xl_t7_upkeep_energy = 2.98
+@xl_t7_upkeep_alloys = 0.596
+
+# Titanic
+
+@titanic_t6_cost = 456 #593
+@titanic_t7_cost = 593 #771
+
+@titanic_t6_upkeep_energy = 4.56
+@titanic_t6_upkeep_alloys = 0.912
+@titanic_t7_upkeep_energy = 5.93
+@titanic_t7_upkeep_alloys = 1.186
+
+#################
+# RARE RESOURCES
+#################
+
+@s_t4_rare = 0.25
+@s_t5_rare = 0.33
+@s_t6_rare = 0.43
+@s_t7_rare = 0.55
+      
+@m_t4_rare = 0.50
+@m_t5_rare = 0.65
+@m_t6_rare = 0.85
+@m_t7_rare = 1.10
+      
+@l_t4_rare = 1.0
+@l_t5_rare = 1.3
+@l_t6_rare = 1.69
+@l_t7_rare = 2.2
+
+@xl_t5_rare = 2.6
+@xl_t6_rare = 3.38
+@xl_t7_rare = 4.4
+
+@titanic_t5_rare = 5.2
+@titanic_t6_rare = 6.76
+@titanic_t7_rare = 8.79
+
+#################
+# SHIELDS
+#################
+
+# Small
+
+@shield_s_t1_cost = 5
+@shield_s_t2_cost = 7
+@shield_s_t3_cost = 9
+@shield_s_t4_cost = 9 #not 12, uses rare goods instead
+@shield_s_t5_cost = 12 #16
+@shield_s_t6_cost = 16 #21
+@shield_s_t7_cost = 21 #27
+
+@shield_s_t1_upkeep_energy = 0.05
+@shield_s_t1_upkeep_alloys = 0.010
+@shield_s_t2_upkeep_energy = 0.07
+@shield_s_t2_upkeep_alloys = 0.014
+@shield_s_t3_upkeep_energy = 0.09
+@shield_s_t3_upkeep_alloys = 0.018
+@shield_s_t4_upkeep_energy = 0.09
+@shield_s_t4_upkeep_alloys = 0.018
+@shield_s_t5_upkeep_energy = 0.12
+@shield_s_t5_upkeep_alloys = 0.024
+@shield_s_t6_upkeep_energy = 0.16
+@shield_s_t6_upkeep_alloys = 0.032
+@shield_s_t7_upkeep_energy = 0.21
+@shield_s_t7_upkeep_alloys = 0.042
+
+# Medium
+
+@shield_m_t1_cost = 10
+@shield_m_t2_cost = 13
+@shield_m_t3_cost = 17
+@shield_m_t4_cost = 17 #not 22, uses rare goods instead
+@shield_m_t5_cost = 22
+@shield_m_t6_cost = 29
+@shield_m_t7_cost = 38
+
+@shield_m_t1_upkeep_energy = 0.10
+@shield_m_t1_upkeep_alloys = 0.020
+@shield_m_t2_upkeep_energy = 0.13
+@shield_m_t2_upkeep_alloys = 0.026
+@shield_m_t3_upkeep_energy = 0.17
+@shield_m_t3_upkeep_alloys = 0.034
+@shield_m_t4_upkeep_energy = 0.17
+@shield_m_t4_upkeep_alloys = 0.034
+@shield_m_t5_upkeep_energy = 0.22
+@shield_m_t5_upkeep_alloys = 0.044
+@shield_m_t6_upkeep_energy = 0.29
+@shield_m_t6_upkeep_alloys = 0.058
+@shield_m_t7_upkeep_energy = 0.38
+@shield_m_t7_upkeep_alloys = 0.076
+
+# Large
+
+@shield_l_t1_cost = 20
+@shield_l_t2_cost = 26
+@shield_l_t3_cost = 34
+@shield_l_t4_cost = 34 #not 34, uses rare goods instead
+@shield_l_t5_cost = 44
+@shield_l_t6_cost = 57
+@shield_l_t7_cost = 74
+
+@shield_l_t1_upkeep_energy = 0.20
+@shield_l_t1_upkeep_alloys = 0.040
+@shield_l_t2_upkeep_energy = 0.26
+@shield_l_t2_upkeep_alloys = 0.052
+@shield_l_t3_upkeep_energy = 0.34
+@shield_l_t3_upkeep_alloys = 0.068
+@shield_l_t4_upkeep_energy = 0.34
+@shield_l_t4_upkeep_alloys = 0.068
+@shield_l_t5_upkeep_energy = 0.44
+@shield_l_t5_upkeep_alloys = 0.088
+@shield_l_t6_upkeep_energy = 0.57
+@shield_l_t6_upkeep_alloys = 0.104
+@shield_l_t7_upkeep_energy = 0.74
+@shield_l_t7_upkeep_alloys = 0.148
+
+#############
+#	ARMOR	#
+#############
+
+@armor_1S = 50
+@armor_1M = 125
+@armor_1L = 300
+
+@armor_2S = 65
+@armor_2M = 160
+@armor_2L = 390
+
+@armor_3S = 85
+@armor_3M = 215
+@armor_3L = 510
+
+@armor_4S = 110
+@armor_4M = 275
+@armor_4L = 660
+
+@armor_5S = 145
+@armor_5M = 365
+@armor_5L = 870
+
+@armor_6S = 185
+@armor_6M = 465
+@armor_6L = 1110
+
+
+#############
+#	POWER	#
+#############
+
+@power_S1 = -15
+@power_M1 = -30
+@power_L1 = -60
+             
+@power_S2 = -20
+@power_M2 = -40
+@power_L2 = -80
+             
+@power_S3 = -25
+@power_M3 = -50
+@power_L3 = -100
+             
+@power_S4 = -35
+@power_M4 = -70
+@power_L4 = -140
+             
+@power_S5 = -45
+@power_M5 = -90
+@power_L5 = -180
+ 
+@power_S6 = -55
+@power_M6 = -110
+@power_L6 = -220
+
+@power_S7 = -75
+@power_M7 = -150
+@power_L7 = -300
+
+#############
+#	SHIELD	#
+#############
+
+@shield_S1 = 50
+@shield_M1 = 125
+@shield_L1 = 300
+
+@regen_S1 = 0.50
+@regen_M1 = 1.25
+@regen_L1 = 3.00
+
+@shield_S2 = 65
+@shield_M2 = 160
+@shield_L2 = 390
+
+@regen_S2 = 0.65
+@regen_M2 = 1.60
+@regen_L2 = 4.05
+
+@shield_S3 = 85
+@shield_M3 = 215
+@shield_L3 = 510
+
+@regen_S3 = 0.85
+@regen_M3 = 2.15
+@regen_L3 = 5.10
+
+@shield_S4 = 110
+@shield_M4 = 275
+@shield_L4 = 660
+
+@regen_S4 = 1.10
+@regen_M4 = 2.75
+@regen_L4 = 6.60
+
+@shield_S5 = 145
+@shield_M5 = 365
+@shield_L5 = 870
+
+@regen_S5 = 1.45
+@regen_M5 = 3.65
+@regen_L5 = 8.70
+
+@shield_S6 = 185
+@shield_M6 = 465
+@shield_L6 = 1110
+
+@regen_S6 = 1.85
+@regen_M6 = 4.65
+@regen_L6 = 11.10
+
+@shield_S7 = 240
+@shield_M7 = 600
+@shield_L7 = 1440
+
+@regen_S7 = 2.00
+@regen_M7 = 5.00
+@regen_L7 = 12.50

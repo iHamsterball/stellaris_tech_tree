@@ -1,0 +1,105 @@
+### Anniversary - Event Ship ###
+
+# Ancient Mining Drone Expansion Barge
+ship_design = {
+	name = "NAME_Ancient_Mining_Expansion_Barge"
+	ship_size = ancient_mining_expansion_barge
+	is_event_design = yes
+	
+	section = {
+		template = "ancient_mining_barge_section"
+		slot = "mid"
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_SHIELD_1"
+		}
+		component = {
+			slot = "SMALL_UTILITY_2"
+			template = "SMALL_SHIELD_1"
+		}
+	}
+	required_component = "HYPER_DRIVE_3"
+	required_component = "SHIP_THRUSTER_1"
+	required_component = "SENSOR_2"
+	required_component = "CORVETTE_ZERO_POINT_REACTOR"
+}
+
+# Ancient Mining Drone - Expansion Fleet Edition
+ship_design = {
+	name = "NAME_Ancient_Mining_Expansion_Drone"
+	ship_size = ancient_mining_expansion_drone
+
+	section = {
+		template = "ancient_mining_drone_section"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_MINING_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_MINING_LASER"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "MEDIUM_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_ARMOR_1"
+		}
+	}
+	required_component = "HYPER_DRIVE_3"
+	required_component = "CORVETTE_FUSION_REACTOR"
+	required_component = "SHIP_THRUSTER_2"
+	required_component = "SENSOR_1"
+}
+
+# Large Crystal Entity - Blue - Splitter Fleet Edition
+ship_design = {
+	name = "NAME_Cracked_Crystalline_Shard"
+	ship_size = crystal_splitter_ship_large_blue
+	hide_size = yes
+
+	section = {
+		template = "crystal_ship_large_blue_section"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_CRYSTAL_SHIP_BLUE_LIGHTNING"
+		}		
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_CRYSTAL_SHIP_BLUE_LIGHTNING"
+		}		
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "MEDIUM_CRYSTAL_SHIP_BLUE_LIGHTNING"
+		}		
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "MEDIUM_CRYSTAL_SHIP_BLUE_LIGHTNING"
+		}		
+		component = {
+			slot = "MEDIUM_GUN_04"
+			template = "MEDIUM_CRYSTAL_SHIP_BLUE_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_CRYSTAL_ARMOR_1"
+		}
+		component = {
+			slot = "SMALL_UTILITY_2"
+			template = "SMALL_CRYSTAL_ARMOR_1"
+		}		
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="BIO_DRIVE"
+	required_component="BIO_PROPULSION"
+	required_component="BIO_SENSORS"
+}

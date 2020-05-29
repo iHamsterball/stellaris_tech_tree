@@ -1,0 +1,157 @@
+
+automate_capital_machine_planet = {
+	available = {
+		has_designation = col_capital_machine
+		free_jobs < 3
+	}
+
+	prio_districts = {
+		district_nexus
+		district_generator
+		district_mining
+	}
+
+	buildings = {
+		1 = {
+			building = building_capital
+			available = {
+				always = yes
+			}
+		}
+
+		2 = {
+			building = building_machine_assembly_plant
+			available = {
+				owner = {
+					machine_assembly_plant_upkeep_affordable = yes
+				}
+			}
+		}
+
+		3 = {
+			building = building_research_lab_1
+			available = {
+				owner = {
+					research_lab_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		4 = {
+			building = building_foundry_1
+			available = {
+				owner = {
+					foundry_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		5 = {
+			building = building_drone_storage
+			available = {
+				owner = {
+					drone_storage_upkeep_affordable = yes
+				}
+			}
+		}
+
+		6 = {
+			building = building_foundry_1
+			available = {
+				owner = {
+					foundry_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		7 = {
+			building = building_uplink_node
+			available = {
+				owner = {
+					uplink_node_upkeep_affordable = yes
+				}
+			}
+		}
+
+		8 = {
+			building = building_research_lab_1
+			available = {
+				owner = {
+					research_lab_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		9 = {
+			building = building_foundry_1
+			available = {
+				owner = {
+					foundry_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		10 = {
+			building = building_foundry_1
+			available = {
+				owner = {
+					foundry_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		11 = {
+			building = building_research_lab_1
+			available = {
+				owner = {
+					research_lab_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		12 = {
+			building = building_foundry_1
+			available = {
+				owner = {
+					foundry_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		13 = {
+			building = building_simulation_1
+			available = {
+				owner = {
+					simulation_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		14 = {
+			building = building_foundry_1
+			available = {
+				owner = {
+					foundry_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		15 = {
+			building = building_research_lab_1
+			available = {
+				owner = {
+					research_lab_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		16 = {
+			building = building_energy_grid
+			available = {
+				owner = {
+					energy_grid_upkeep_affordable = yes
+				}
+			}
+		}
+	}
+}

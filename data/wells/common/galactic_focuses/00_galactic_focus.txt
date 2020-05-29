@@ -1,0 +1,170 @@
+#example_focus = {
+#	effect = {} # effect applied to community members if fulfilled, scope is country
+#	potential = {} # potential trigger, no scope check
+#	trigger = {} # trigger to determine if the focus has been fulfilled, no scope check
+#}
+
+galactic_focus_pass_a_resolution = {
+	icon = "GFX_galactic_focus_generic"
+
+	effect = {
+		add_resource = { influence = 100 }
+
+		hidden_effect = {
+			set_global_flag = galactic_focus_pass_a_resolution_completed
+		}
+	}
+
+	potential = {
+		NOT = { has_global_flag = galactic_focus_pass_a_resolution_completed }
+	}
+
+	trigger = {
+		custom_tooltip = {
+			fail_text = "galactic_community_resolution_passed"
+			has_global_flag = galactic_community_resolution_passed
+		}
+	}
+}
+
+galactic_focus_form_the_galactic_market = {
+	icon = "GFX_galactic_focus_galactic_market"
+
+	effect = {
+		add_resource = { influence = 100 }
+	}
+
+	potential = {
+		has_global_flag = ongoing_market_nomination
+	}
+
+	trigger = {
+		custom_tooltip = {
+			fail_text = "galactic_focus_form_the_galactic_market_trigger"
+			has_global_flag = galactic_market_founded
+		}
+	}
+
+}
+
+galactic_focus_crisis_prethoryn = {
+	icon = "GFX_galactic_focus_threat_to_galaxy"
+
+	effect = {
+		add_resource = { influence = 100 }
+		country_event = { id = crisis.211 }
+	}
+
+	potential = {
+		has_global_flag = galactic_focus_crisis_prethoryn
+		NOT = { has_global_flag = prethoryn_invasion_defeated }
+	}
+
+	trigger = {
+		custom_tooltip = {
+			fail_text = "galactic_focus_crisis_prethoryn"
+			has_global_flag = prethoryn_invasion_defeated
+		}
+	}
+}
+
+galactic_focus_crisis_unbidden = {
+	icon = "GFX_galactic_focus_threat_to_galaxy"
+
+	effect = {
+		add_resource = { influence = 100 }
+		country_event = { id = crisis.1271 }
+	}
+
+	potential = {
+		has_global_flag = galactic_focus_crisis_unbidden
+		NOT = { has_global_flag = extradimensional_invasion_defeated }
+	}
+
+	trigger = {
+		custom_tooltip = {
+			fail_text = "galactic_focus_crisis_unbidden"
+			has_global_flag = extradimensional_invasion_defeated
+		}
+	}
+}
+
+galactic_focus_crisis_contingency = {
+	icon = "GFX_galactic_focus_threat_to_galaxy"
+
+	effect = {
+		add_resource = { influence = 100 }
+	}
+
+	potential = {
+		has_global_flag = galactic_focus_crisis_contingency
+		NOT = { has_global_flag = ai_invasion_defeated }
+	}
+
+	trigger = {
+		custom_tooltip = {
+			fail_text ="galactic_focus_crisis_contingency"
+			has_global_flag = ai_invasion_defeated
+		}
+	}
+}
+
+galactic_focus_crisis_nanites = {
+	icon = "GFX_galactic_focus_threat_to_galaxy"
+
+	effect = {
+		add_resource = { influence = 100 }
+	}
+
+	potential = {
+		has_global_flag = galactic_focus_crisis_nanites
+		NOT = { has_global_flag = graygoo_defeated }
+	}
+
+	trigger = {
+		custom_tooltip = {
+			fail_text = "galactic_focus_crisis_nanites"
+			has_global_flag = graygoo_defeated
+		}
+	}
+}
+
+galactic_focus_crisis_war_in_heaven = {
+	icon = "GFX_galactic_focus_war_in_heaven"
+
+	effect = {
+		add_resource = { influence = 100 }
+	}
+
+	potential = {
+		has_global_flag = galactic_focus_war_in_heaven
+		NOT = { has_global_flag = war_in_heaven_ended }
+	}
+
+	trigger = {
+		custom_tooltip = {
+			fail_text = "galactic_focus_crisis_war_in_heaven"
+			has_global_flag = war_in_heaven_ended
+		}
+	}
+}
+
+galactic_focus_crisis_greatkhan = {
+	icon = "GFX_galactic_focus_threat_to_galaxy"
+
+	effect = {
+		add_resource = { influence = 100 }
+	}
+
+	potential = {
+		has_global_flag = galactic_focus_crisis_greatkhan
+		NOT = { has_global_flag = great_khan_dead }
+	}
+
+	trigger = {
+		custom_tooltip = {
+			fail_text = "galactic_focus_crisis_greatkhan"
+			has_global_flag = great_khan_dead
+		}
+	}
+}

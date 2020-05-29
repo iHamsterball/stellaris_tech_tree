@@ -1,0 +1,17 @@
+# Example Resolution Type
+# NOTE: Remember to add Resolutions to a Resolution Category!
+
+#example_resolution = {
+#	icon = "name of the icon key"
+#	resources = {} # cost and category
+#	target = yes/no # if this resolution requires a target country
+#	modifier = {} # modifier to be applied to all community members if passed
+#	effect = {} # effect to be applied if passed, scope is proposer unless there is a target country - then scope is target country, with proposer in from scope
+#	fail_effects = {} # effect to be applied if failed, scope is proposer unless there is a target country - then scope is target country, with proposer in from scope
+#	potential = {} # potential trigger, scope is country
+#	allow = {} # allow trigger, scope is country
+#	active = {} # can be active trigger, scope is country
+#	breach = {} # in breach trigger, scope is country
+#	valid_target = {} # valid target trigger, scope is country
+#	ai_weight = {} # ai weight modifiers, scope is country
+#}

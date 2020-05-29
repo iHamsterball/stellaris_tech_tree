@@ -1,0 +1,20 @@
+ship_section_template = {
+	key = "DEFAULT_COLONIZATION_SECTION"
+	ship_size = colonizer
+	ship_size = sponsored_colonizer
+	fits_on_slot = mid
+	entity = "colony_ship_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	small_utility_slots = 3
+}
+
+ship_section_template = {
+	key = "DEFAULT_COLONIZATION_SECTION2"
+	ship_size = lithoid_colonizer
+	fits_on_slot = mid
+	entity = "lithoid_01_meteor_colonyship_empty_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	small_utility_slots = 3
+}
