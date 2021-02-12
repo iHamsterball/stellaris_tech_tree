@@ -7,11 +7,27 @@ h1,h2,h3,h4,h5,h6 { font-size:100%; font-weight:normal; }
 q:before,q:after { content:''; }
 abbr,acronym { border:0; }
 
-body { background: #DDD; }
+html, body {
+    background: #DDD;
+    height: 100vh;
+    width: 100vw
+}
 /* optional Container STYLES */
-.chart { border: none; overflow: hidden; }
+.chart {
+    border: none;
+    height: calc(100vh - 3rem);
+    width: 100vw;
+    margin-top: -3.25rem;
+    overflow: overlay
+}
+
 .Treant > .node {  }
-.Treant > p { font-family: 'Noto Sans SC Sliced', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: bold; font-size: 12px; }
+
+.Treant > p {
+    font-family: 'Noto Sans SC Sliced', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: bold;
+    font-size: 12px
+}
 
 @font-face {
     font-family: 'Symbola';
@@ -187,4 +203,43 @@ span.physics-research::before {
 
 .Treant > a:link:hover {
     color: #636363;
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    padding-right: 5px;
+    z-index: 10
+}
+
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #868686;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b4b4b4;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #e4e4e4;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-track-piece {
+    background: transparent;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
 }

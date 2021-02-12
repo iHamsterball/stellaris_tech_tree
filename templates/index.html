@@ -111,8 +111,7 @@
         </div>
     </div>
 
-
-    <div class="chart no-select" id="tech-tree" unselectable="on" onselectstart="return false;">
+        <div class="chart no-select" id="tech-tree" unselectable="on" onselectstart="return false;">
             <script rel="preload" as="script" src="{% static "vendor/raphael.js" %}"></script>
             <script rel="preload" as="script" src="{% static "js/Treant.js" %}"></script>
             <script rel="preload" as="script" src="{% static "vendor/jquery.min.js" %}"></script>
@@ -149,7 +148,8 @@
             document.getElementById(version).children[0].classList.add('nav-active');
             let language = "{% get_current_language as CUR_LANGUAGE %}{% get_language_info for CUR_LANGUAGE as cur %}{{ cur.code }}";
             document.getElementById(language).classList.add('nav-active');
-            waitLoadDrag('tech-tree', 100);
+            let chart = document.getElementById('tech-tree');
+            chart.addEventListener('mousedown', mouseDownHandler);
         });
         let search_results = document.getElementById("search-results");
         if (search_results.addEventListener) {
@@ -189,7 +189,6 @@
             document.getElementById(value).children[0].classList.add('nav-active');
             loadTech(value);
             probeSave(value);
-            waitLoadDrag('tech-tree', 100);
         }
         function generateTechList() {
             // Reduce duplicate calculation of techList
