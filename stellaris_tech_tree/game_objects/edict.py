@@ -12,7 +12,6 @@ class Edict:
                 subkey for subkey in edict_data
                 if list(subkey)[0] == 'name'
             ))['name'] if key in ['country_edict', 'planet_edict'] else key
-            print(name)
         except (StopIteration):
             # Where is your name?
             name = ""
