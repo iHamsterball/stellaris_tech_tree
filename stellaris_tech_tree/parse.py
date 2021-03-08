@@ -368,7 +368,7 @@ def generate_localized_tech(locale, version):
                   for entry
                   in parsed_scripts['component']
                   if not next(iter(entry)).startswith('@')]
-    edicts = [Edict(next(iter(entry.values())), loc_data)
+    edicts = [Edict(entry, loc_data)
               for entry
               in parsed_scripts['edict']
               if not next(iter(entry)).startswith('@')]
