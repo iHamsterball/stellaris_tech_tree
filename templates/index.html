@@ -105,7 +105,7 @@
         </div>
         {% include "hamburger.html" %}
         <div class="banner-wrapper hidden">
-            <div class="banner banner-info" id="banner" onclick="hideBanner()">
+            <div class="banner banner-info" id="banner" onclick="Banner._hide()">
                 <div class="banner-inner">Loading...</div>
             </div>
         </div>
@@ -133,7 +133,7 @@
 
         let techList;
         window.addEventListener("DOMContentLoaded", function() {
-            setBanner('banner-info', "{% trans 'Loading...'%}");
+            Banner.info("{% trans 'Loading...'%}");
             let version;
             if (window.localStorage) {
                 version = localStorage.getItem('version');
@@ -182,7 +182,7 @@
             language.addEventListener("change", language.form.submit(), false);
         }
         function switchVersion(self) {
-            setBanner('banner-info', "{% trans 'Loading...'%}");
+            Banner.info("{% trans 'Loading...'%}");
             value = self.getAttribute('value');
             document.getElementById('version').innerText = document.querySelector("li.menulistitem[value='{0}']".format(value)).innerText;
             document.querySelector('li[value] > span.nav-active').classList.remove('nav-active');
