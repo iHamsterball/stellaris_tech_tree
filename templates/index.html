@@ -157,7 +157,7 @@
                 var e = e || window.event;
                 let target = e.target || e.srcElement;
                 target = target.parentNode;
-                if (target.hasAttribute('offset-x')) {
+                if (target.hasAttribute('data-id')) {
                     locateTech(target);
                 }
             }, false);
@@ -165,7 +165,7 @@
             search_results.attachEvent("onclick", function (e) {
                 var e = e || window.event;
                 let target = e.target || e.srcElement;
-                if (target.hasAttribute('offset-x')) {
+                if (target.hasAttribute('data-id')) {
                     locateTech(target);
                 }
             });
@@ -231,13 +231,7 @@
                             for (index in resultList[category]) {
                                 let node = document.createElement('div');
                                 node.classList.add('menuitem', 'search-item');
-                                // It is no longer offset-x or scroll-x any more, but tolerance is acceptable, speed first
-                                let value = resultList[category][index].parentNode.getAttribute('savedstyle').split(',');
-                                node.setAttribute('offset-x', value[0]);
-                                node.setAttribute('offset-y', value[1]);
-                                node.setAttribute('scroll-x', value[2]);
-                                node.setAttribute('scroll-y', value[3]);
-                                //node.setAttribute('onclick', 'locateTech(this);');
+                                node.dataset.id = resultList[category][index].parentNode.id;
                                 let text = document.createElement('span');
                                 text.innerText = resultList[category][index].childNodes[0].data;
                                 node.appendChild(text);
@@ -292,18 +286,9 @@
         }
         function locateTech(self) {
             console.log('excuted');
-            let tech_tree = document.getElementById('tech-tree');
-            let offsetX = self.getAttribute('offset-x');
-            let offsetY = self.getAttribute('offset-y');
-            let scrollX = self.getAttribute('scroll-x');
-            let scrollY = self.getAttribute('scroll-y');
-            let top = (window.innerHeight -48)/2 - offsetY - scrollY*3/2 + 48;
-            top = (top < 0 ? top : 48) + "px";
-            let left = window.innerWidth/2 - offsetX - scrollX/2;
-            left = (left < 0 ? left : 0) + "px";
-            //tech_tree.style.top = top + 'px';
-            //tech_tree.style.left = left + 'px';
-            tech_tree.style.transform = "translate(" + left + "," + top + ")";
+            console.log(self, self.dataset.id);
+            let tech = document.getElementById(self.dataset.id)
+            tech.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
             return false;
         }
         function getNeededCSSList(node) {
