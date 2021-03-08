@@ -61,6 +61,17 @@ let locale_map = {
   'pt-br': 'pt_br',
   'ru': 'ru'
 };
+let observer = new IntersectionObserver((entries, observer) => (
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const image = new Image();
+      const tech = entry.target;
+      image.onload = _ => (tech.style.backgroundImage = 'url(' + image.src +')');
+      image.src = tech.getAttribute('img-url');
+      observer.unobserve(tech);
+    }
+  })
+));
 let tree;
 
 function loadTech(version) {
@@ -68,7 +79,6 @@ function loadTech(version) {
     tree.destroy();
   }
   generateTechTree(locale_map[document.querySelector('option[selected]').value], version);
-  lazyLoadImg(100);
 }
 
 function generateTechTree(locale, version) {
@@ -200,6 +210,7 @@ function generateTechTree(locale, version) {
   .done(function() {
     console.log('success')
     setBanner('banner-success', gettext('Load complete.'));
+    Array.from(document.getElementsByClassName('icon')).forEach((tech) => (observer.observe(tech)));
     //setTimeout(hideBanner(), 200000);
   })
   .fail(function( xhr, textStatus, error ) {
@@ -222,28 +233,6 @@ function generateTechTree(locale, version) {
     console.log(errmsg);
     setBanner('banner-error', errmsg);
   });
-}
-
-function loadImg() {
-  [].map.call(document.querySelectorAll('div[img-url]'), function(div) {
-    return div;
-  }).reverse().forEach(function(tech) {
-    let img = new Image();
-    img.onload = function(){
-      tech.style.backgroundImage = "url(" + img.src + ")";
-      tech.removeAttribute('img-url');
-    }
-    img.src = tech.getAttribute('img-url');
-  });
-}
-function lazyLoadImg(time) {
-  if(document.querySelector('div[img-url]')!=null) {
-    loadImg();
-  } else {
-    setTimeout(function() {
-      lazyLoadImg(time);
-    }, time);
-  }
 }
 
 //Banner actions
