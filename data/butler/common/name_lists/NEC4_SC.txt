@@ -1,0 +1,231 @@
+﻿### Necroid 4
+# Created by Gemma Thomson
+
+NECROID4 = {
+	category = "死灵类"
+
+	language = "l_simp_chinese"
+	
+	ship_names = {
+		generic = {
+			"诱饵机关" "苦涩神经" "刀锋异兽" "崩坏核心" "灼烧季节" "桎梏黎明" "经典拒否" "恒常安魂" "破碎不幸" "幽屈之路" "黑化核心" "至深黑暗" "千面" "憎恶之魂" "病态野心" "永不沦陷" "蹂躏" "压抑感官" "无尽荆棘" "虚假预言" "变幻之怖" "恐惧郁积" "生灵血肉" "丧钟" "鬼魂之魂" "阴郁窝巢" "往日不再" "重度焦躁" "墓地担架" "严酷裁决" "空洞回响" "冰冷拥抱" "杀戮之罐" "灰暗人生" "不毛闪光" "渺小牺牲" "风中讯息" "神话骗子" "嘈杂秘密" "暴力以上" "第N层皮" "彼岸" "淡叶回声" "永久劳碌" "刺骨寒风" "挥霍死亡" "祸患复兴" "深植苦痛" "神圣虚空" "猩红之物" "遮蔽之愿" "噤声之愿" "无声记忆" "沉没之觉" "缓慢淡出" "文火" "奇异智慧" "意志屈服" "弹簧刀" "彼之腐朽" "双重苦难" "扭曲反射" "永眠" "不幸之家" "不速之客" "过遥之梦" "绝望之谷" "虚空渴望" "既存复仇" "卑劣企图" "卑劣诱惑" "暗黑之音"
+		}
+
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+
+		titan = {
+		}
+
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+
+    ship_class_names = {
+        generic = {
+            "屈尊" "焦躁" "贪婪" "恶毒" "自满" "狂妄" "淫欲" "触染" "定罪" "贪婪" "信条" "放荡" "穷困" "教义" "教条" "焦躁" "地方流疾" "饥荒" "愧疚" "忧郁" "不幸" "惩戒" "瘟疫" "分裂" "天灾" "耻辱" "虚荣" "悲伤"
+        }
+    }
+
+	fleet_names = {
+		random_names = {
+			"疼痛船队" "苦痛船队" "剧痛船队" "痛苦船队" "萧瑟船队" "荒芜船队" "贫寒船队" "灾难船队" "惨郁船队" "哀伤船队" "忧伤船队" "凄凉船队" "孤寂船队" "苦修船队" "迫害船队" "恼人船队" "蒙羞船队" "忧郁舰队" "拷打舰队" "动乱舰队" "卑鄙舰队"
+		}
+		sequential_name = "%O%船队"
+	}
+		
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "%O%残余部队"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "%O%末日部队"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "%O%末日部队"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "%O%末日部队"
+		}
+
+		defense_army = {
+			sequential_name = "%O%残余部队"
+		}
+			
+		assault_army = {
+			sequential_name = "%O%末日部队"
+		}
+		
+		slave_army = {
+			sequential_name = "%O%镣铐部队"
+		}
+		
+		clone_army = { 
+			sequential_name = "%O%镜像部队"
+		}
+		
+		undead_army = {
+			sequential_name = "%O%敬畏部队"
+		}
+
+		robotic_army = {
+			sequential_name = "%O%外壳部队"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "%O%壳护部队"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O%敏感部队"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O%厌恶部队"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O%铰接部队"
+		}
+
+		occupation_army = {
+			sequential_name = "%O%占有部队"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O%据壳部队"
+		}
+
+		primitive_army = {
+			sequential_name = "%O%纯洁部队"
+		}
+		industrial_army = {
+			sequential_name = "%O%苦劳部队"
+		}
+		postatomic_army = {
+			sequential_name = "%O%斗争部队"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"至宝" "黑日" "血红" "战车" "天窗" "腐化" "暗黑女祭司" "治权" "黄昏之刃" "达比亚" "堕天使" "热病" "火轮" "水平线" "愚者末路" "违规魔法师" "绞刑架" "心跳" "圣人" "邪恶禁制" "裁决" "克里斯汀" "基里可内尔" "最后出口" "劳拉" "卢克丽霞" "蛆虫" "玛丽琳" "那蒙洛斯" "讣告" "影谵" "寂境" "咒缚" "斯提格马提尔" "特拉库珀尔" "塔楼" "图米尔莱德" "维奥莱丁" "耐希夫" "帕德瑟尔" "非整数"
+			}
+		}
+		
+		pc_desert = {
+			names = {
+                "黑石" "佃户" "爱克斯伏多" "恩内瓦特"
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+                "科普斯提" "花溶" "德拉玛" "帕陌森"
+			}
+		}
+		
+		pc_arid = {
+			names = {
+                "伏尔肯" "欧佛哈泽" "火言" "伊佛"
+			}
+		}
+		
+		pc_continental = {
+			names = {
+                "晴岚" "雾石" "虚幻" "六晓"
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+                "怖峡" "津壳" "西马累斯" "韦克"
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+                "兹伯利亚" "假面" "艾瑟尔" "豪博"
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+                "无尽寒冬" "苍白" "诺斯佛" "欧若雷金"
+			}
+		}
+
+		pc_savannah = {
+			names = {
+                "奴门加尔" "恶意增殖" "兽迫" "莱萨特"
+			}
+		}
+
+		pc_alpine = {
+			names = {
+                "方斯来伯" "莉西亚" "詹姆士" "刚高"
+			}
+		}
+		
+	}
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+                "阿克伦" "贝拉克隆" "硼龙" "布莱辛" "布斯滕" "坎迪亚" "夏尔丹" "康嫩" "达芬" "旦斯隆" "迪永" "迪奥森" "雷霆" "凄凉" "法龙" "贡" "豪恩" "贾尔辛" "科登尼翁" "兰德门" "利伦" "乐客" "马尔森" "梅尔芬" "梅森" "米肯" "莫嫩" "奥泽尔" "奥斯提尔" "佩林" "罗森" "罗贡" "罗琳" "萨布伦" "萨蒙" "颂登" "斯瓜尔夫" "吨" "伏拉蒙" "伟伦" "怀顿"
+			}
+			
+			# Always combined with a second name
+			first_names_male = {
+			}
+			first_names_female = {
+			}
+			
+			# Always combined with a first name
+			second_names = {
+			}
+			
+			regnal_first_names = {
+				"阿玛丁" "波勒布" "艾菲" "曼岑" "麦格法" "莫南" "西莫安" "史铁克" "托内" "亚德士" "义葛"
+			}
+			
+			regnal_second_names = {
+				"阿里" "费雷尔" "洛芙迪" "佩蒂" "里奇" "里彭" "藤蔓"
+			}
+		}
+	}
+}

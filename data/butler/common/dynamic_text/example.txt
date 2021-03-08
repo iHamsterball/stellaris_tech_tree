@@ -1,0 +1,43 @@
+# unique_name = {
+#	This entry will only be considered if all these tags are being looked for
+#	Best use of these are to establish a structure, making it so that any A entry hooks into a B entry etc
+# 	mandatory = {
+#     	any_mandatory_tags
+# 	}
+    
+#	This entry will be considered more relevant the more tags match what is being looked for
+# 	relevant = {
+#     	any_relevant_tags
+# 	}
+
+#	If the entry establishes any themes that are important to keep in mind for any future entries, make sure the tags for them are added
+#	Typically the same as the list in the relevant section
+# 	add = {
+#     	any_relevant_tags
+# 	}
+    
+#	Any tags that should block this entry from being picked.
+#	If any of these are being looked for, this entry will be completely blocked
+# 	blocked = {
+#     	blocked_tags
+# 	}
+
+#	This sets which tags are mandatory for the entry picked AFTER this one.
+#   next_mandatory = {
+#       any_next_mandatory_tags
+#   }
+    
+#	A list of localization keys. If more than one, then a random one will be picked.
+# 	texts = { 
+#       LOCALIZATION_KEY1
+#		LOCALIZATION_KEY1
+#     }
+# }
+
+###
+# In the description part of an event, you can now fill in the following lists in stead of setting a text:
+# mandatory
+# themes
+# blocked
+# All of these are lists of tags. Mandatory is best used to hook on to a starting entry, which then branches off based on themes and blocked.
+# Themes match with "relevant" above.

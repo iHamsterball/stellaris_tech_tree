@@ -1,0 +1,362 @@
+@cooldown = 3600
+
+# Arena Combat Challenge Type
+challenge_type_arena_combat = {
+	potential = { has_federation_law = succession_type_challenge }
+	allow = {
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = challenge_type_arena_combat }
+					has_modifier = federation_law_category_challenge_cooldown
+					has_any_federation_law_in_category = law_category_challenge
+				}
+			}
+		}
+	}
+	on_enact = {
+		if = {
+			limit = {
+				has_federation_flag = challenge_type_no_cooldown
+			}
+			remove_federation_flag = challenge_type_no_cooldown
+		}
+		else_if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_challenge_cooldown
+				days = @cooldown
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 0
+		
+		#Default support
+		modifier = {
+			desc = federation_acceptance_generally_positive
+			add = 51
+		}
+				
+		#Behaviour-specific
+		modifier = {
+			desc = federation_acceptance_ruler_cyborg
+			add = 10
+			exists = ruler
+			ruler = {
+				has_trait = leader_trait_ruler_cyborg
+			}
+		}
+		modifier = {
+			desc = federation_acceptance_ruler_synthetic
+			add = 15
+			exists = ruler
+			ruler = {
+				has_trait = leader_trait_ruler_synthetic
+			}
+		}
+		modifier = {
+			desc = federation_acceptance_ruler_very_strong
+			add = 10
+			exists = ruler
+			ruler = {
+				species = { has_trait = trait_very_strong }
+			}
+		}
+		modifier = {
+			desc = federation_acceptance_ruler_psionic
+			add = 10
+			exists = ruler
+			ruler = {
+				has_trait = leader_trait_ruler_psionic
+			}
+		}
+		modifier = {
+			desc = federation_acceptance_honorbound_warriors
+			add = 25
+			has_ai_personality = honorbound_warriors
+		}
+		modifier = {
+			desc = federation_acceptance_warrior_culture
+			add = 50
+			has_civic = civic_warrior_culture
+		}
+		modifier = {
+			desc = federation_acceptance_peaceful_traders
+			add = -25
+			has_ai_personality = peaceful_traders
+		}
+		modifier = {
+			desc = federation_acceptance_harmonious_hierarchy
+			add = -25
+			has_ai_personality = harmonious_hierarchy
+		}
+		modifier = {
+			desc = federation_acceptance_ruler_chosen
+			add = 100
+			exists = ruler
+			ruler = {
+				has_trait = leader_trait_ruler_chosen
+			}
+		}
+	}
+}
+
+# Psionic Battle Challenge Type
+challenge_type_psionic_battle = {
+	potential = { has_federation_law = succession_type_challenge }
+	allow = { 
+		custom_tooltip = {
+			fail_text = "requires_psionic_pops"
+			any_member = {
+				any_owned_species = {
+					OR = {
+						has_trait = trait_latent_psionic
+						has_trait = trait_psionic
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = challenge_type_psionic_battle }
+					has_modifier = federation_law_category_challenge_cooldown
+					has_any_federation_law_in_category = law_category_challenge
+				}
+			}
+		}
+	}
+	on_enact = {
+		if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_challenge_cooldown
+				days = @cooldown
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 0
+		
+		#Default support
+		modifier = {
+			desc = federation_acceptance_generally_positive
+			add = 26
+		}
+		
+		# Psionic empires should like it
+		modifier = {
+			desc = federation_acceptance_no_psionic
+			add = -100
+			NOT = {
+				any_owned_species = {
+					OR = {
+						has_trait = trait_latent_psionic
+						has_trait = trait_psionic
+					}
+				}			
+			}
+		}
+		modifier = {
+			desc = federation_acceptance_psionic
+			add = 25
+			count_owned_pops = {
+				limit = {
+					OR = {
+						has_trait = trait_psionic
+						has_trait = trait_latent_psionic
+					}
+				}
+				count > 20
+			}
+		}
+		modifier = {
+			desc = federation_acceptance_psionic
+			add = 30
+			count_owned_pops = {
+				limit = {
+					OR = {
+						has_trait = trait_psionic
+						has_trait = trait_latent_psionic
+					}
+				}
+				count > 40
+			}
+		}
+		modifier = {
+			desc = federation_acceptance_psionic
+			add = 35
+			count_owned_pops = {
+				limit = {
+					OR = {
+						has_trait = trait_psionic
+						has_trait = trait_latent_psionic
+					}
+				}
+				count > 60
+			}
+		}
+		modifier = {
+			desc = federation_acceptance_psionic
+			add = 40
+			count_owned_pops = {
+				limit = {
+					OR = {
+						has_trait = trait_psionic
+						has_trait = trait_latent_psionic
+					}
+				}
+				count > 80
+			}
+		}
+		modifier = {
+			desc = federation_acceptance_psionic
+			add = 45
+			count_owned_pops = {
+				limit = {
+					OR = {
+						has_trait = trait_psionic
+						has_trait = trait_latent_psionic
+					}
+				}
+				count > 100
+			}
+		}
+		modifier = {
+			desc = federation_acceptance_chosen
+			#the chosen believes in the people!
+			add = 25
+			exists = ruler
+			ruler = {
+				has_trait = leader_trait_ruler_chosen
+			}
+		}
+				
+		#Behaviour-specific
+		modifier = {
+			desc = federation_acceptance_gestalt
+			add = -100
+			is_gestalt = yes
+		}
+	}
+}
+
+# Bidding War Challenge Type
+challenge_type_bidding_war = {
+	potential = { has_federation_law = succession_type_challenge }
+	allow = {
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = challenge_type_bidding_war }
+					has_modifier = federation_law_category_challenge_cooldown
+					has_any_federation_law_in_category = law_category_challenge
+				}
+			}
+		}
+	}
+	on_enact = {
+		if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_challenge_cooldown
+				days = @cooldown
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 0
+		
+		#Default support
+		modifier = {
+			desc = federation_acceptance_generally_positive
+			add = 26
+		}
+				
+		#Behaviour-specific
+		modifier = {
+			desc = federation_acceptance_trade_league
+			add = 15
+			federation = {
+				has_federation_type = trade_federation
+			}
+		}
+		modifier = {
+			desc = federation_acceptance_ruthless_capitalists
+			add = 25
+			has_ai_personality = ruthless_capitalists
+		}
+		modifier = {
+			desc = federation_acceptance_peaceful_traders
+			add = 25
+			has_ai_personality = peaceful_traders
+		}
+		modifier = {
+			desc = federation_acceptance_president
+			add = 25
+			OR = {
+				has_ai_personality = peaceful_traders
+				has_ai_personality = ruthless_capitalists			
+			}
+			is_federation_leader = yes
+		}
+	}
+}
+
+# Thesis Challenge Type
+challenge_type_thesis = {
+	potential = { has_federation_law = succession_type_challenge }
+	allow = {
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = challenge_type_thesis }
+					has_modifier = federation_law_category_challenge_cooldown
+					has_any_federation_law_in_category = law_category_challenge
+				}
+			}
+		}
+	}
+	on_enact = {
+		if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_challenge_cooldown
+				days = @cooldown
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 0
+		
+		#Default support
+		modifier = {
+			desc = federation_acceptance_generally_positive
+			add = 26
+		}
+		
+		modifier = {
+			desc = federation_acceptance_materialist
+			add = 5
+			is_materialist = yes
+		}
+		
+		modifier = {
+			desc = federation_acceptance_erudite_explorers
+			add = 26
+			has_ai_personality = erudite_explorers
+		}
+				
+		#Technocrats and materialists will relish it
+		modifier = {
+			desc = federation_acceptance_technocracy
+			add = 50
+			has_civic = civic_technocracy
+		}
+	}
+}

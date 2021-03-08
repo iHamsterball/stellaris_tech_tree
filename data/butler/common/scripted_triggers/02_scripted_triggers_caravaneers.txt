@@ -1,0 +1,375 @@
+has_megacorp = {
+	host_has_dlc = "Megacorp"
+}
+
+has_not_megacorp = {
+	NOT = { host_has_dlc = "Megacorp" }
+}
+
+caravaneer_base_active_diplo = {
+	has_active_event = {
+		cara.100 # Main menu
+		cara.150 # CaravanCoinz
+		cara.200 # Slots
+		cara.210 # Slots payout
+		cara.300 # Lootboxes
+		cara.310 # Lootbox payout
+		cara.320 # Galatron
+	}
+}
+
+caravaneer_fleet1_active_diplo = {
+	has_active_event = {
+		cara.1020 # First contact
+		cara.1100 # Menu
+		cara.1200 # Deals
+		cara.1251 # Re-offer deal
+	}
+}
+
+caravaneer_fleet2_active_diplo = {
+	has_active_event = {
+		cara.2020 # First contact
+		cara.2100 # Menu
+		cara.2200 # Deals
+		cara.2251 # Re-offer deal
+	}
+}
+
+caravaneer_fleet3_active_diplo = {
+	has_active_event = {
+		cara.3020 # First contact
+		cara.3100 # Menu
+		cara.3200 # Deals
+		cara.3251 # Re-offer deal
+	}
+}
+
+cara_allow_deal1 = {
+	# Price checks
+	if = {
+		limit = { has_country_flag = fleet1dealcost1 }
+		count_owned_pops = {
+			limit = { is_pop_category = specialist }
+			count >= 4
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = fleet1dealcost2 }
+		resource_stockpile_compare = {
+			resource = alloys
+			value >= 1200
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = fleet1dealcost3 }
+		resource_stockpile_compare = { resource = unity value >= 500 }
+	}
+	else_if = {
+		limit = { has_country_flag = fleet1dealcost4 }
+		# always available
+	}
+	else_if = {
+		limit = { has_country_flag = fleet1dealcost5 }
+		any_owned_ship = { is_ship_class = shipclass_science_ship }
+	}
+	else_if = {
+		limit = { has_country_flag = fleet1dealcost6 }
+		count_owned_pops = {
+			limit = {
+				OR = {
+					has_job = unemployed
+					is_pop_category = worker
+					is_pop_category = simple_drone
+					is_pop_category = slave
+					is_pop_category = criminal
+					is_pop_category = purge
+				}
+			}
+			count >= 4
+		}
+	}
+	else = {
+		custom_tooltip = { # Deal expired
+			text = cara_deal_expired.tooltip
+			always = no
+		}
+	}
+}
+
+cara_allow_deal2 = {
+	# Price checks
+	if = { # Numistic Shrine
+		limit = { has_country_flag = fleet2deal1 }
+		resource_stockpile_compare = { resource = energy value >= 4000 }
+		custom_tooltip = {
+			fail_text = already_bought
+			NOT = { has_country_flag = nuumismatic_shrine }
+		}
+	}
+	else_if = { # Buy pops
+		limit = { has_country_flag = fleet2deal2 }
+		resource_stockpile_compare = { resource = energy value >= 3500 }
+	}
+	else_if = { # Edict
+		limit = { has_country_flag = fleet2deal3 }
+		resource_stockpile_compare = { resource = energy value >= 2500 }
+		custom_tooltip = {
+			fail_text = already_bought
+			NOT = { has_country_flag = nuumismatic_visualization }
+		}
+	}
+	else_if = { # Technology
+		limit = { has_country_flag = fleet2deal4 }
+		resource_stockpile_compare = { resource = energy value >= 3500 }
+		custom_tooltip = {
+			fail_text = already_bought
+			NOT = { has_technology = tech_prescient_data_modeling }
+		}
+	}
+	else_if = { # Leader
+		limit = { has_country_flag = fleet2deal5 }
+		resource_stockpile_compare = { resource = energy value >= 1500 }
+		custom_tooltip = {
+			fail_text = already_bought
+			NOT = { any_owned_leader = { has_leader_flag = nuumismatic_priest } }
+		}
+	}
+	else_if = { # Selling pops for crystals
+		limit = { has_country_flag = fleet2deal6 }
+		count_owned_pops = { count > 2 }
+		custom_tooltip = {
+			fail_text = already_bought
+			NOT = { has_country_flag = sold_pops_for_crystals }
+		}
+	}
+	else_if = { # Cruiser
+		limit = { has_country_flag = fleet2deal7 }
+		resource_stockpile_compare = { resource = energy value >= 2500 }
+		custom_tooltip = {
+			fail_text = already_bought
+			NOT = { has_country_flag = bought_numistic_cruiser }
+		}
+	}
+	else_if = { # Planetary deposit
+		limit = { has_country_flag = fleet2deal8 }
+		resource_stockpile_compare = { resource = minerals value >= 200 }
+		custom_tooltip = {
+			fail_text = already_bought
+			NOT = {
+				any_owned_planet = {
+					has_deposit = d_numas_breath
+				}
+			}
+		}
+	}
+	else_if = { # MI upkeep mod
+		limit = { has_country_flag = fleet2deal9 }
+		resource_stockpile_compare = { resource = influence value >= 100 }
+		custom_tooltip = {
+			fail_text = already_bought
+			NOT = {
+				any_owned_planet = {
+					has_modifier = numistic_magnetostrips
+				}
+			}
+		}
+	}
+	else_if = { # MI decision
+		limit = { has_country_flag = fleet2deal10 }
+		resource_stockpile_compare = { resource = minerals value >= 2000 }
+		custom_tooltip = {
+			fail_text = already_bought
+			NOT = { has_country_flag = divine_algorithm }
+		}
+	}
+	else_if = { # Minor Artifacts
+		limit = { has_country_flag = fleet2deal12 }
+		resource_stockpile_compare = { resource = alloys value >= 300 }
+	}
+	else_if = { # Repeatable cruiser
+		limit = { has_country_flag = fleet2deal11.a }
+		resource_stockpile_compare = { resource = energy value >= 2500 }
+	}
+	else_if = { # Repeatable exotic gases
+		limit = { has_country_flag = fleet2deal11.b }
+		resource_stockpile_compare = { resource = energy value >= 1700 }
+	}
+	else_if = { # Repeatable energy
+		limit = { has_country_flag = fleet2deal11.c }
+		resource_stockpile_compare = { resource = alloys value >= 500 }
+	}
+	else = {
+		custom_tooltip = { # Deal expired
+			text = cara_deal_expired.tooltip
+			always = no
+		}
+	}
+}
+
+cara_allow_deal3 = {
+	# Price checks
+	if = {
+		limit = { has_country_flag = fleet3deal1cost1 }
+		resource_stockpile_compare = { resource = food value >= 200 }
+	}
+	else_if = {
+		limit = { has_country_flag = fleet3deal1cost2 }
+		resource_stockpile_compare = { resource = food value >= 200 }
+	}
+	else_if = {
+		limit = { has_country_flag = fleet3deal1cost3 }
+		resource_stockpile_compare = { resource = food value >= 4000 }
+	}
+	else_if = {
+		limit = { has_country_flag = fleet3deal2cost1 }
+		resource_stockpile_compare = { resource = energy value >= 300 }
+	}
+	else_if = {
+		limit = { has_country_flag = fleet3deal2cost2 }
+		resource_stockpile_compare = { resource = food value >= 200 }
+	}
+	else_if = {
+		limit = { has_country_flag = fleet3deal2cost3 }
+		resource_stockpile_compare = {
+			resource = consumer_goods
+			value >= 150
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = fleet3deal3 }
+		resource_stockpile_compare = {
+			resource = alloys
+			value >= 500
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = fleet3deal4cost1 }
+		resource_stockpile_compare = {
+			resource = sr_dark_matter
+			value >= 15
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = fleet3deal4cost2 }
+		resource_stockpile_compare = {
+			resource = rare_crystals
+			value >= 55
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = fleet3deal4cost3 }
+		resource_stockpile_compare = {
+			resource = sr_zro
+			value >= 15
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = fleet3deal5 }
+		count_owned_pops = {
+			limit = {
+				OR = {
+					has_job = unemployed
+					is_pop_category = worker
+					is_pop_category = simple_drone
+					is_pop_category = slave
+					is_pop_category = criminal
+				}
+			}
+			count >= 6
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = fleet3deal6cost1 }
+		resource_stockpile_compare = { resource = energy value >= 1000 }
+
+	}
+	else_if = {
+		limit = { has_country_flag = fleet3deal6cost2 }
+		resource_stockpile_compare = { resource = minerals value >= 300 }
+
+	}
+	else_if = {
+		limit = { has_country_flag = fleet3deal6cost3 }
+		resource_stockpile_compare = {
+			resource = consumer_goods
+			value >= 800
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = fleet3deal7cost1 }
+		resource_stockpile_compare = { resource = influence value >= 70 }
+	}
+	else_if = {
+		limit = { has_country_flag = fleet3deal7cost2 }
+		resource_stockpile_compare = {
+			resource = exotic_gases
+			value >= 15
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = fleet3deal7cost3 }
+		resource_stockpile_compare = {
+			resource = consumer_goods
+			value >= 100
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = fleet3deal8cost1 }
+		resource_stockpile_compare = {
+			resource = consumer_goods
+			value >= 300
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = fleet3deal8cost2 }
+		resource_stockpile_compare = {
+			resource = influence
+			value >= 70
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = fleet3deal9 }
+		resource_stockpile_compare = {
+			resource = minerals
+			value >= 200
+		}
+	}
+	else = {
+		custom_tooltip = { # Deal expired
+			text = cara_deal_expired.tooltip
+			always = no
+		}
+	}
+}
+
+caravaneer_fleet_events_valid = {
+	is_homicidal = no
+	is_at_war = no
+	any_system_within_border = { caravaneer_fleet_in_system = yes }
+	NOR = {
+		AND = {
+			exists = event_target:caravaneer_home_country
+			is_hostile = event_target:caravaneer_home_country
+		}
+		AND = {
+			exists = event_target:caravaneer_fleet1_country
+			is_hostile = event_target:caravaneer_fleet1_country
+		}
+		AND = {
+			exists = event_target:caravaneer_fleet2_country
+			is_hostile = event_target:caravaneer_fleet2_country
+		}
+		AND = {
+			exists = event_target:caravaneer_fleet3_country
+			is_hostile = event_target:caravaneer_fleet3_country
+		}
+	}
+}
+
+caravaneer_fleet_in_system = {
+	any_fleet_in_system = {
+		exists = owner
+		owner = { is_country_type = caravaneer_fleet }
+	}
+}

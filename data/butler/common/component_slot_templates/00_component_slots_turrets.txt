@@ -1,0 +1,81 @@
+point_defence_turret = {
+	size = point_defence
+	component = weapon
+	entities = {
+		weapon_type_kinetic = "small_kinetic_gun_entity"
+		weapon_type_energy = "turret_point_defence_entity"
+		
+	}
+}
+
+invisible_point_defence_turret = {
+	size = point_defence
+	component = weapon
+}
+
+small_turret = {
+	size = small
+	component = weapon
+	entities = {
+		weapon_type_kinetic = "small_kinetic_gun_entity"
+		weapon_type_energy =  "small_laser_gun_entity"
+	}
+}
+
+invisible_small_turret = {
+	size = small
+	component = weapon
+}
+
+medium_turret = {
+	size = medium
+	component = weapon
+	entities = {
+		weapon_type_kinetic = "medium_kinetic_gun_entity"
+		weapon_type_energy =  "medium_laser_gun_entity"
+		weapon_type_explosive = "turret_missile_medium_entity" # Failsafe for saved "invalid designs"
+	}
+}
+
+invisible_medium_turret = {
+	size = medium
+	component = weapon
+}
+
+large_turret = {
+	size = large
+	component = weapon
+	entities = {
+		weapon_type_kinetic = "large_kinetic_gun_entity"
+		weapon_type_energy =  "large_laser_gun_entity"
+	}
+}
+
+extra_large_turret = {
+	size = extra_large
+	component = weapon
+	entities = {
+		weapon_type_kinetic = "turret_xl_entity"
+		weapon_type_energy = "turret_xl_entity"
+	}
+}
+
+invisible_titanic_turret = {
+	size = titanic
+	component = weapon
+}
+
+invisible_missile_turret = {
+	size = torpedo
+	component = weapon
+}
+
+medium_missile_turret = {
+	size = torpedo
+	component = weapon
+	entities = {
+		weapon_type_explosive = "turret_missile_medium_entity"
+		weapon_type_kinetic = "medium_kinetic_gun_entity" # Failsafe for saved "invalid designs"
+		weapon_type_energy =  "medium_laser_gun_entity" # Failsafe for saved "invalid designs"
+	}
+}

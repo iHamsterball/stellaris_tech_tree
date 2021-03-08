@@ -1,0 +1,276 @@
+### Federations - Arc Site Event Ship ###
+
+# Lesser Messenger - The Lessenger
+ship_design = {
+	name = "NAME_Lessenger"
+	ship_size = lesser_messenger_01
+	is_event_design = yes
+	
+	section = {
+		template = "lesser_messenger_section"
+		slot = "mid"
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_PLASMA_3"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_PLASMA_3"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "SMALL_MASS_DRIVER_4"
+		}
+		component = {
+			slot = "SMALL_GUN_04"
+			template = "SMALL_MASS_DRIVER_4"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_SHIELD_5"
+		}
+		component = {
+			slot = "SMALL_UTILITY_2"
+			template = "SMALL_SHIELD_5"
+		}
+		component = {
+			slot = "SMALL_UTILITY_3"
+			template = "SMALL_ARMOR_5"
+		}
+		component = {
+			slot = "SMALL_UTILITY_4"
+			template = "SMALL_ARMOR_5"
+		}	
+	}
+	required_component="HYPER_DRIVE_3"
+	required_component="SHIP_THRUSTER_5"
+	required_component="SENSOR_2"
+	required_component = "CORVETTE_ZERO_POINT_REACTOR"
+}
+
+
+ship_design = {
+	name = "NAME_Warder_of_the_Ruins"
+	ship_size = large_ship_fallen_empire
+	is_event_design = yes
+	
+	section = {
+		template = "fallen_empire_large_warship_key"
+		slot = "mid"
+	
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "STRIKE_CRAFT_HANGAR_3"	
+		}		
+		component = {
+			slot = "STRIKE_CRAFT_02"
+			template = "STRIKE_CRAFT_HANGAR_3"	
+		}	
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "ENERGY_LANCE_2"
+		}		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_GAMMA_LASER"
+		}		
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "LARGE_GAMMA_LASER"
+		}		
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_DISRUPTOR_3"
+		}		
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "MEDIUM_DISRUPTOR_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "MEDIUM_DISRUPTOR_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_04"
+			template = "MEDIUM_DISRUPTOR_3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_ARMOR_5"
+		}		
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "SHIELD_BOOSTER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "SHIELD_BOOSTER"
+		}		
+	}
+	required_component="SENSOR_4"
+	required_component="JUMP_DRIVE_1"
+	required_component="COMBAT_COMPUTER_LINE_SAPIENT"
+	required_component="BATTLESHIP_DARK_MATTER_REACTOR"
+	required_component="BATTLESHIP_SHIP_THRUSTER_5"
+}
+
+# Wenkwort Gardener Drones
+ship_design = {
+	name = "NAME_Gardener_Drone"
+	ship_size = wenkwort_drone
+    is_event_design = yes
+
+	section = {
+		template = "wenkwort_drone_section"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_MINING_LASER"
+		}
+		
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "MEDIUM_ARMOR_1"
+		}
+	}
+
+	required_component = "SHIP_THRUSTER_1"
+	required_component = "SENSOR_2"
+	required_component = "CORVETTE_FISSION_REACTOR"
+    required_component = "AUTO_REPAIR"
+}
+
+# Wenkwort Cruisers
+ship_design = {
+	name = "NAME_Wenkwort_Enforcer"
+	ship_size = wenkwort_enforcer
+    is_event_design = yes
+
+	section = {
+		template = "eventship_01_section"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_DISRUPTOR_3"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_DISRUPTOR_3"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "SMALL_DISRUPTOR_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_GAMMA_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "MEDIUM_GAMMA_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "MEDIUM_GAMMA_LASER"
+		}		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "ENERGY_TORPEDO_2"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "ENERGY_TORPEDO_2"
+		}		
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "MEDIUM_SHIELD_4"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "MEDIUM_SHIELD_4"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "MEDIUM_SHIELD_4"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_4"
+			template = "MEDIUM_SHIELD_4"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_5"
+			template = "MEDIUM_SHIELD_4"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_6"
+			template = "MEDIUM_SHIELD_4"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_7"
+			template = "MEDIUM_ARMOR_4"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_8"
+			template = "MEDIUM_ARMOR_4"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "SHIELD_BOOSTER"
+		}			
+	}
+	required_component = "HYPER_DRIVE_3"
+	required_component = "COMBAT_COMPUTER_LINE_ADVANCED"
+	required_component = "SHIP_THRUSTER_3"
+	required_component = "SENSOR_3"
+	required_component = "CRUISER_ANTIMATTER_REACTOR"
+}
+
+# Space Probe
+ship_design = {
+	name = "NAME_Elusive_Craft"
+	ship_size = training_target
+
+	section = {
+		template = "probe_section"
+		slot = "mid"
+		
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_PROBE_LIGHTNING"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "MEDIUM_PROBE_LIGHTNING"
+		}
+	}
+}

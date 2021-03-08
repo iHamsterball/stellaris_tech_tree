@@ -1,0 +1,230 @@
+﻿### Plantoid 3
+### Created by Rufus Tronde, Miranda van den Brink
+PLANT3 = {	
+	### SHIPS
+	
+	category = "Plantoid"
+
+	language = "l_simp_chinese"
+	
+	ship_names = {
+	
+		generic = {
+			五月花 富饶 慷慨的 幸福 希望 机会 宁静 统一 命运 不列颠 拜占庭 苏格兰  "埃尔多拉多 " 克诺索斯 孟菲斯 
+		}
+	
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+		
+		titan = {
+		}
+		
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+		
+		ion_cannon = {
+		}
+	}
+	
+	fleet_names = {
+		random_names = {
+			"开花生物舰队" "繁荣生物舰队" "征服生物舰队" "漩涡生物舰队" "萌发生物舰队"
+		}
+		sequential_name = "生物舰队﻿ %C%"
+	}
+
+	### ARMIES
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "咆哮护盾 %C%"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "脊柱之矛 %C%"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "脊柱之矛 %C%"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "脊柱之矛 %C%"
+		}
+		
+		defense_army = {
+			sequential_name = "咆哮护盾 %C%"
+		}
+			
+		assault_army = {
+			sequential_name = "脊柱之矛 %C%"
+		}
+		
+		slave_army = {
+			sequential_name = "收获粮食 %C%"
+		}
+
+		undead_army = {
+			sequential_name = "%O%深根之锤"
+		}
+
+		clone_army = { 
+			sequential_name = "麝猫 %R%"
+		}
+		
+		robotic_army = {
+			sequential_name = "雏菊花环 %R%"
+		}
+
+		robotic_deense_army = {
+			sequential_name = "雏菊花环 %R%"
+		}
+		
+		psionic_army = { 
+			sequential_name = "信息素部队 %C%"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "外星基元部队 %C%"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "嗜极部队 %C%"
+		}
+		occupation_army = {
+			sequential_name = "%O% 加里森波德"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% 安卓 加里森波德"
+		}
+		primitive_army = {
+			sequential_name = "原始军队 %C%"
+		}
+		industrial_army = {
+			sequential_name = "工业军队 %C%"
+		}
+		postatomic_army = {
+			sequential_name = "后原子军 %C%"
+		}
+	}
+
+		
+	
+	### PLANETS
+	
+	planet_names = {
+	
+		generic = {
+			names = {
+				利萨 南希 海伦 桑德拉 唐娜 卡罗 露丝 莎伦 米歇尔 金佰利 底波拉 阿米莉亚 夏洛特 伊莎贝拉 露比 艾迪森 艾丽莎
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+	
+	### CHARACTERS
+	
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+			}
+			
+			# Always combined with a second name
+			first_names_female = {
+				芬福斯 芬德吉姆 芬利维姆 芬德芙 芬阿琳 芬欧布 芬艾尔 芬乌姆 芬阿布 芬布拉 芬阿尔维 芬欧斯
+			}
+
+			first_names_male = {
+				根 球茎 发芽 叶 果实 刺针 花蜜 野草 发芽 豆荚 球果
+			}
+			
+			# Always combined with a first name
+			second_names = {
+				努卡特博 托耶麦克 塔卡拉 尼诺米 海达卡 塔卡马 欧凯科 托什科
+			}
+
+			regnal_first_names_male = {
+				弗塔克 寇米隆 “穆拉斯科罗”瑟珀克 瑟可汗 容卡尔 约里尔 亚斯卡 隆多拉克 布维克 卡拉纳克 容沃洛克
+			}
+
+			regnal_first_names_female = {
+				伯尼斯 伯内特 布什 巴特勒 弗兰奇 英格兰 卡罗尔 卡特尔 卡瓦诺 查芬 蔡斯 钱宁 查普曼 阿诺 弗赖伊 米尔顿
+			}
+			
+			regnal_second_names = {
+				林奈
+			}
+		}
+	}
+}

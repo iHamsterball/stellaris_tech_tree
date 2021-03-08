@@ -1,0 +1,235 @@
+﻿### Necroid 1
+# Created by Gemma Thomson
+# (British spellings intentional)
+
+NECROID1 = {
+	category = "Necroid"
+	ship_names = {
+		generic = {
+			"Anton" "Bassetter" "Beacon" "Boldre" "Brooker" "Broxhead" "Butser" "Coppice" "Elvett" "Farleigh" "Farley" "Goleigh" "Hackett" "Henrood" "Hocombe" "Hoybourne" "Nately" "Netley" "Noar" "Oaker" "Pidham" "Pilot" "Portsdown" "Selborne" "Sidown" "Tadburn" "Waltham" "Wardown" "Wealder" "Wether" "Wheater" "Yoell"
+		}
+
+		corvette = {
+            "Aglance" "Bell-ringer" "Brazen" "Carom" "Chopper" "Coaster" "Crest" "Culler" "Deathly Seed" "Derivator" "Discriminator" "Elicitor" "Extortionist" "Extricator" "Gleaner" "Grand Tor" "Leeward" "Minikin" "Optate" "Pryer" "Ricochet" "Rising Swell" "Runner" "Sifter" "Siphoner" "Skater" "Skimmer" "Skirrer" "Skitterer" "Soaring Mote" "Torrentine" "Toxic Seed" "Uprooter" "Vorpal" "Windward" "Winnower"
+		}
+		
+		destroyer = {
+            "Acquirer" "Amasser" "Bootlegger" "Corraler" "Dreaded Cur" "Dregling" "Gangster" "Garnerer" "Gatherer" "Harrower" "Harvester" "Hoarder" "Mobster" "Outcast" "Plough" "Possessor" "Profligator" "Rabble-rouser" "Raker" "Re-distributor" "Reaper" "Retriever" "Riff-raff" "Scatterer" "Smuggler" "Squanderer" "Stowaway" "Tabernacle" "Undesirable" "Unwashable" "Vagrant" "Wanderer" "Wangler" "Warrener" "Wastrel"
+		}
+		
+		cruiser = {
+            "Arroyo" "Buzzing Void" "Cavernous Deep" "Dark Gathering" "Elementalist" "Empty Fathoms" "Excelsia" "Glorious Endeavour" "Glowering Mote" "Grand Historia" "Impure Ravine" "Lit Furnace" "Parliamentarian" "Slicked Lightning" "Sooted Carbine" "Stark Edifice" "Swift Enterprise" "Thunder Resounding" "Vanishing Cleft" "Voluminous Rift" "Majestic Fissure" "Great Clough" "Cracked Moon" "Gentle Beast" "Riven Plough" "Ruinous Wedge"
+		}
+		
+		battleship = {
+            "Ample Ardence" "Articulate Destiny" "Articulated Worth" "Bloodied Reputation" "Bright Impaler" "Conspicuous Glare" "Defalted Values" "Defined Gaze" "Ethereal Warrior" "Explicit Longing" "Exuberant Aim" "Genial Purpose" "Grave Philosophy" "Great Ebullience" "Grim Cultivator" "Hallowed Bulwark" "Haven's Wrath" "Illuminated Purpose" "Impaler of the Heavens" "Incomprehensible" "Lanced Destiny" "Limpid Wreck" "Manifest Urge" "Perforated Being" "Perpetual Sting" "Piercing Vision" "Precise Doom" "Prophetic Exactitude" "Purity of Purpose" "Ready Unfeigned" "Robust Position" "Salient Promise" "Secret Yearning" "Starboard Protector" "Stark Realisation" "Stellar Gleanings" "Stoic Breakwater" "Storm-lashed Naze" "Stunned Clarity" "Titanic Ambition" "Transfixed Might" "Unnatural Order" "Vigorous Might"
+		}
+
+		titan = {
+			"Bukovia" "Carpenthia" "Sirentia" "Morenia" "Assertia" "Girhennia" "Tulopia" "Dessernia"
+		}
+
+		colossus = {
+			"Grim Wreaker" "Ethereal Judgement" "Dark Treasure" "Terminal Flash" "Ashen Void" "Harbinger's Loom" "Phenomenal Might"
+		}
+		
+		science = {
+            "Hearkener" "Illuminator" "Observer" "Auditor" "Auscultator" "Tuning Fork" "Perlustrator" "Lens-bringer" "Firm Likeness" "Photostat" "Chroma" "Mimeographer" "Transcriber" "Miniaturist" "Modeller" "Garnerer" "Accumulator"
+		}
+		
+		colonizer = {
+            "Accented Purpose" "Caronis" "Exentris" "Grand Ambition" "High Enterprise" "Horizon" "Novel Purpose" "Propagator" "Novoreplica" "Proliferator" "Facsimile" "Mimeos"
+		}
+		
+		constructor = {
+            "Varna" "Stevedore" "Linkern" "Malissay" "Demeter" "Berberus" "Jerebow" "Nevant" "Peckard" "Trondike" "Puxin" "Parvo" "Tellomere" "Kristham"
+		}
+		
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+
+    ship_class_names = {
+        generic = {
+            "Ambassador" "Arcola" "Broxy" "Craftsbury" "Dominion" "Donmar" "Garrick" "Gelgud" "Haggler" "Laudeville" "Loxton" "Lury" "Nivella" "Pentameter" "Quarterhouse" "Quester" "Sartican" "Shore" "Sotoy" "Strandheim" "Termyn" "Wyndham"
+        }
+    }
+
+	fleet_names = {
+		random_names = {
+			"Amontillo Fleet" "Anabella Fleet" "Benicent Fleet" "Brainard Fleet" "Braulster Fleet" "Breathless Fleet" "Calvertous Fleet" "Conqueror Fleet" "Duganne Fleet" "Eldritch Fleet" "Feather-whisp Fleet" "Fossdyke Fleet" "Gilder Fleet" "Griswold Fleet" "Lenorous Fleet" "Lighthouse Fleet" "Maelstrom Fleet" "Politician Fleet" "Purloined Rumour Fleet" "Pymmous Fleet" "Ravenous Fleet" "Scarrolous Fleet" "Tarrier Fleet" "Valdemar Fleet" 
+		}
+		sequential_name = "%O% Fleet"
+	}
+		
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "%O% Home Regiment"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "%O% Procurers Regiment"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "%O% Procurers Regiment"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "%O% Procurers Regiment"
+		}
+
+		defense_army = {
+			sequential_name = "%O% Home Regiment"
+		}
+			
+		assault_army = {
+			sequential_name = "%O% Procurers Regiment"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Captive Regiment"
+		}
+		
+		clone_army = { 
+			sequential_name = "%O% Doppel Regiment"
+		}
+		
+		undead_army = {
+			sequential_name = "%O% Dread Regiment"
+		}
+
+		robotic_army = {
+			sequential_name = "%O% Automata Regiment"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "%O% Home Automata Regiment"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O% Mentalist Regiment"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Exotica Regiment"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% Chemiker Regiment"
+		}
+
+		occupation_army = {
+			sequential_name = "%O% Frontier Regiment"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% Frontier Automata Regiment"
+		}
+
+		primitive_army = {
+			sequential_name = "%O% Primitive Regiment"
+		}
+		industrial_army = {
+			sequential_name = "%O% Proletariat Regiment"
+		}
+		postatomic_army = {
+			sequential_name = "%O% Crepuscular Regiment"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"Albury" "Bertrant" "Brammen" "Bunin" "Canbury" "Causten" "Charludden" "Churtsey" "Clandon" "Cutler" "De Gorka" "De Helsing" "Dolbrecht" "Downe" "Dutchen" "Eadleton" "Ewust" "Fetcham" "Fitzer" "Fogg" "Grinn" "Hagner" "Horsley" "Hunro" "Kaulkner" "Kroker" "Kroltein" "Lacre" "Lamott" "Larter" "Latenin" "Lightwater" "Loudon" "Lugmere" "Luincey" "Moffat" "Morris" "Nartt" "Naurier" "Neane" "Newis" "Nugo" "Peake" "Pracq" "Pradliffe" "Quarence" "Quelley" "Ralpole" "Renfield" "Sade" "Saylor" "Schiller" "Seward" "Shorving" "Showard" "Sonte" "Sorelli" "Taiken" "Talpole" "Tiess" "Towenson" "Tyron" "Weckford" "Welty" "Westenra" "Whitley" "Woking" "Wonersh" "Worsdon" "Xacob" "Ytton"
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+			}
+			
+			# Always combined with a second name
+			first_names_male = {
+				"Bislen" "Canto" "Cynoed" "Dunvey" "Ely" "Fagan" "Gabalf" "Gorsein" "Gufella" "Heath" "Lhanish" "Lougher" "Mayal" "Morston" "Munytha" "Mynach" "Neprheol" "Osyter" "Pender" "Pentwa" "Radyr" "Rhuwbin" "Richmond" "Roath" "Rumney" "Sploe" "Thommin" "Trowber" "Tuppney"
+			}
+			first_names_female = {
+				"Amadd" "Bircha" "Bonyma" "Caera" "Cathay" "Clyda" "Cosha" "Cumbra" "Dullai" "Faira" "Gowen" "Killay" "Landore" "Lhanda" "Lhansa" "Lisvane" "Mawra" "Mella" "Pencloda" "Pengaer" "Pentru" "Peny" "Pontenna" "Sketta" "Stellon" "Thorna" "Tongwyn" "Whincha" "Wynlett"
+			}
+			
+			# Always combined with a first name
+			second_names = {
+				"Alford" "Anfel" "Archford" "Belgarve" "Blunsbury" "Boxley" "Bronley" "Caddington" "Canley" "Charnham" "Cotting" "Crydon" "Fayner" "Fonnord" "Gasforth" "Gealin" "Greenord" "Hobblorn" "Honslett" "Ixbridge" "Konning" "Krickston" "Martlebone" "Namnden" "Nelow" "Newbley" "Nightsedge" "Peshard" "Ponnico" "Sandworth" "Sarking" "Shepminter" "Soulark" "Stutton" "Thoso" "Vauxin" "Walford" "Wessend"
+			}
+			
+			regnal_first_names_male = {
+				"Addlen" "Alnerwick" "Candridge" "Carlail" "Chesser" "Clerken" "Darber" "Durrer" "Guilder" "Hearten" "Hutting" "Ipsen" "Lancre" "Lester" "Missel" "Nother" "Oakener" "Redder" "Somert" "Sotourner" "Trober" "Warsick" 
+			}
+
+            regnal_first_names_female = {
+                "Abinda" "Bedha" "Brenta" "Chelma" "Dorcas" "Ellex" "Esseta" "Glosstina" "Herra" "Lewene" "Maida" "Norrah" "Nortah" "Offah" "Shruda" "Sterra" "Tauna" "Trurah" "Willah" "Wintah" "Worsena" "Yawn"
+            }
+			
+			regnal_second_names = {
+				"Befford" "Berken" "Bucken" "Camber" "Cheshen" "Corner" "Cumber" "Deckon" "Derben" "Dofham" "Dorpeth" "Glossom" "Hampin" "Harcord" "Helford" "Hunton" "Kanter" "Lancoln" "Lincoll" "Linton" "Norhunder" "Norpin" "Nortolk" "Nottern" "Oxkin" "Rulan" "Somer" "Starfod" "Stropp" "Sullened" "Sullock" "Vestern" "Warten" "Westmott" "Worsten" "Yolkin"
+			}
+		}
+	}
+}

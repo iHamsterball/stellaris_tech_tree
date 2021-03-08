@@ -1,0 +1,218 @@
+﻿### Arthropoid 4
+### Created by Henrik Thyrwall
+
+ART4 = {
+
+	category = "Arthropoid"
+	
+	language = "l_simp_chinese"
+
+	ship_names = {
+	
+		generic = {
+			西克伊卜阿尔 西克拉图 西克瓦巴 西克努库 西克萨萨 西克维托 西克瑞拉 西克维瓦 西克夸瑞 西克艾尔瑞 西克托巴 西克厄冦 默克塔维 默克祖拉 默克泽瓦 默克维塔 默克伊卜伽 默克巴莱 默克奥派 默克拉塔 默克萨拉 默克因维 巴克塔塔 巴克尼瓦 巴克伊尔扎 巴克乌玛 巴克维塔 巴克伊尔巴 巴克玛纳 巴克塔茨 巴克莱维 巴克伊尔耶 伊巴萨尼 伊巴卡托 伊巴克祖 伊巴因维 伊巴赛塔 伊巴丘图 伊巴基瓦 伊巴诺卡 伊巴纳比 伊巴坡佐 伊巴伊尔提 克尔尼比 克尔萨茨 克尔提巴 克尔努维 克尔迪扎 克尔比泽 克尔尼奥 克尔帕里 克尔赛塔 克尔乌达 克尔提亚 克尔比克 克尔迪派 克尔特冦 克尔勒塔 普克纳萨 普克维瓦 普克波里 普克泽纳 普克米派 普克比纳 普克伊尔乌尔 普克特米 普克斯塔 普克丘莱 普克丘夸 普克比维 普克厄伊尔 普克安塔 普克维扎
+		}
+	
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+
+		titan = {
+		}
+
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	
+	}
+	
+	fleet_names = {
+		random_names = {
+			"深空舰队" "特殊反应舰队" "惩罚反应舰队" "快速追击舰队" "边境巡逻舰队"
+		}
+		sequential_name = "%O%突击舰队"
+	}
+
+	army_names = {
+
+		machine_defense = {
+			sequential_name =  "%O%防御舱"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "%O%突击舱"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "%O%突击舱"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "%O%突击舱"
+		}
+	
+		defense_army = {
+			sequential_name = "%O%防御舱"
+		}
+			
+		assault_army = {
+			sequential_name = "%O%突击舱"
+		}
+		
+		slave_army = {
+			sequential_name = "%O%奴隶舱"
+		}
+		
+		clone_army = {
+			sequential_name = "%O%克隆舱"
+		}
+
+		undead_army = {
+			sequential_name = "%O%恐惧荚舱"
+		}
+
+		robotic_army = {
+			sequential_name = "%O%机器人舱"
+		}
+		
+		robotic_defense_army = {
+			sequential_name = "%O%机器人防御舱"
+		}
+
+		psionic_army = {
+			sequential_name = "%O%灵能特种兵舱"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O%异形舱"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O%基因特种兵舱"
+		}
+
+		occupation_army = {
+			sequential_name = "%O%占领舱"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O%占领机器人舱"
+		}
+
+		primitive_army = {
+			sequential_name = "原始军队 %C%"
+		}
+		industrial_army = {
+			sequential_name = "工业军队 %C%"
+		}
+		postatomic_army = {
+			sequential_name = "后原子军 %C%"
+		}
+	}
+	
+	planet_names = {
+	
+		generic = {
+			names = {
+				斯瓦克恩塔 格维克艾茨 伊比克维提 布尼奥提卡 布金阿比 布瑞恩克扎 斯提克姆奇 斯纳奥乌布 斯维奥恩维 格塔奥拉艾布 格提奥普图 格扎克维尼 格皮克格洛 格比克伊萨 伊维奥恩泽安 伊特奥地纳 伊泽奥维戈 伊瑞恩奥安 伊萨布斯奥普 斯卡斯提伊克 斯奇尔普安 斯伊玛卡因 普安泽维 普托奥维纳 普莱恩奥维 普拉克尤伽 普尼克阿提
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+	
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+			}
+			
+			# Always combined with a second name
+			first_names = {
+				伊尔布 安卡 苏维 特卡 因迪 阿尔艾 比卡 比维 维卡 维提 阿奥迪 德布 艾奥提 拉布 拉艾 布斯 赛卡 斯维
+			}
+			
+			# Always combined with a first name
+			second_names = {
+				塞斯卡 巴莱伍 奥托布 尼瓦尔 齐拉维 斯冦尔 瓦比尔 拉托维 伊奥特克 波卡尔 图瓦克 尔比克
+			}
+			
+			regnal_first_names = {
+				伊尔布 安卡 苏维 特卡 因迪 阿尔艾 比卡
+			}
+			
+			regnal_second_names = {
+				塞斯卡
+			}
+		}
+	}
+}

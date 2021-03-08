@@ -1,0 +1,275 @@
+##########################################################################
+# Sacrifice Edicts
+##########################################################################
+
+@Edict1Cost = 50
+@Edict2Cost = 100
+
+@sacrificeDuration = 1800
+
+@sacrificeReward1 = 0.15
+
+sacrifice_togetherness = {
+	length = @sacrificeDuration
+	icon = "GFX_edict_type_time"
+	
+	resources = {
+		category = edicts
+		cost = { influence = @Edict1Cost }
+	}
+
+	modifier = {
+		custom_tooltip = "edict_sacrifice_togetherness_tooltip" #This string should be updated if the values below are changed
+		show_only_custom_tooltip = no
+		country_unity_produces_mult = 0.10
+		pop_growth_speed = 0.05
+	}
+	
+	potential = {
+        OR = {
+		    has_valid_civic = civic_death_cult
+            has_valid_civic = civic_death_cult_corporate
+        }
+		has_technology = tech_cultural_heritage
+		any_owned_planet = {
+			count_pops = {
+            	limit = { has_job = mortal_initiate }
+            	count >= 1
+        	}
+		}
+	}
+
+	allow = {
+		NOR = {
+			has_edict = sacrifice_harmony
+			has_edict = sacrifice_bounty
+		}
+	}
+
+	prerequisites = { "tech_cultural_heritage" }
+
+	show_tech_unlock_if = {
+		is_spiritualist = yes
+		OR = {
+			has_valid_civic = civic_death_cult
+			has_valid_civic = civic_death_cult_corporate
+		}
+	}
+
+	effect = {
+		country_event = { id = necroids.200 days = 0 }
+	}
+	
+	ai_weight = {
+		weight = 0
+        modifier = {
+            weight = @EdictLowPrio
+			AND = {
+				years_passed > 60
+				any_owned_planet = {
+					count_pops = {
+						limit = { has_job = mortal_initiate }
+						count >= 3
+					}
+				}
+				has_monthly_income = {
+					resource = unity
+					value <= 60
+				}
+			}
+        }
+        modifier = {
+            weight = @EdictMedPrio
+			AND = {
+				years_passed > 100
+				any_owned_planet = {
+					count_pops = {
+						limit = { has_job = mortal_initiate }
+						count >= 3
+					}
+				}
+				has_monthly_income = {
+					resource = unity
+					value <= 80
+				}
+			}
+        }
+	}
+}
+
+sacrifice_harmony = {
+	length = @sacrificeDuration
+	icon = "GFX_edict_type_time"
+	
+	resources = {
+		category = edicts
+		cost = { influence = @Edict1Cost }
+	}
+
+	modifier = {
+		custom_tooltip = "edict_sacrifice_harmony_tooltip" #This string should be updated if the values below are changed
+		show_only_custom_tooltip = no
+		pop_happiness = 0.10
+		pop_growth_speed = 0.05
+	}
+	
+	potential = {
+        OR = {
+		    has_valid_civic = civic_death_cult
+            has_valid_civic = civic_death_cult_corporate
+        }
+		has_technology = tech_cultural_heritage
+		any_owned_planet = {
+			count_pops = {
+            	limit = { has_job = mortal_initiate }
+            	count >= 1
+        	}
+		}
+	}
+
+	allow = {
+		NOR = {
+			has_edict = sacrifice_togetherness
+			has_edict = sacrifice_bounty
+		}
+	}
+
+	prerequisites = { "tech_cultural_heritage" }
+
+	show_tech_unlock_if = {
+		is_spiritualist = yes
+		OR = {
+			has_valid_civic = civic_death_cult
+			has_valid_civic = civic_death_cult_corporate
+		}
+	}
+
+	effect = {
+		country_event = { id = necroids.201 days = 0 }
+	}
+	
+	ai_weight = {
+		weight = 0
+        modifier = {
+            weight = @EdictLowPrio
+			AND = {
+				years_passed > 60
+				any_owned_planet = {
+					count_pops = {
+						limit = { has_job = mortal_initiate }
+						count >= 3
+					}
+				}
+				has_monthly_income = {
+					resource = unity
+					value <= 60
+				}
+			}
+        }
+        modifier = {
+            weight = @EdictMedPrio
+			AND = {
+				years_passed > 100
+				any_owned_planet = {
+					count_pops = {
+						limit = { has_job = mortal_initiate }
+						count >= 3
+					}
+				}
+				has_monthly_income = {
+					resource = unity
+					value <= 80
+				}
+			}
+        }
+	}
+}
+
+sacrifice_bounty = {
+	length = @sacrificeDuration
+	icon = "GFX_edict_type_time"
+	
+	resources = {
+		category = edicts
+		cost = { influence = @Edict2Cost }
+	}
+
+	modifier = {
+		custom_tooltip = "edict_sacrifice_bounty_tooltip" #This string should be updated if the values below are changed
+		show_only_custom_tooltip = no
+		country_minerals_produces_mult = 0.05
+		country_energy_produces_mult = 0.05
+		pop_growth_speed = 0.05
+	}
+	
+	potential = {
+        OR = {
+		    has_valid_civic = civic_death_cult
+            has_valid_civic = civic_death_cult_corporate
+        }
+		has_technology = tech_cultural_heritage
+		any_owned_planet = {
+			count_pops = {
+            	limit = { has_job = mortal_initiate }
+            	count >= 1
+        	}
+		}
+	}
+
+	allow = {
+		NOR = {
+			has_edict = sacrifice_togetherness
+			has_edict = sacrifice_harmony
+		}
+	}
+
+	prerequisites = { "tech_cultural_heritage" }
+
+	show_tech_unlock_if = {
+		is_spiritualist = yes
+		OR = {
+			has_valid_civic = civic_death_cult
+			has_valid_civic = civic_death_cult_corporate
+		}
+	}
+
+	effect = {
+		country_event = { id = necroids.202 days = 0 }
+	}
+	
+	ai_weight = {
+		weight = 0
+        modifier = {
+            weight = @EdictLowPrio
+			AND = {
+				years_passed > 60
+				any_owned_planet = {
+					count_pops = {
+						limit = { has_job = mortal_initiate }
+						count >= 3
+					}
+				}
+				has_monthly_income = {
+					resource = unity
+					value <= 60
+				}
+			}
+        }
+        modifier = {
+            weight = @EdictMedPrio
+			AND = {
+				years_passed > 100
+				any_owned_planet = {
+					count_pops = {
+						limit = { has_job = mortal_initiate }
+						count >= 3
+					}
+				}
+				has_monthly_income = {
+					resource = unity
+					value <= 80
+				}
+			}
+        }
+	}
+}

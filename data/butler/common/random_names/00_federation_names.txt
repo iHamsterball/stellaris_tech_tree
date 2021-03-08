@@ -1,0 +1,335 @@
+# Galactic Union
+
+federation_name_parts_list = {
+	key = "default_federation_names_1_1"
+	parts = {
+		"Pan-Galactic" = 1
+		"Galactic" = 1
+		"Interstellar" = 1
+		"Star" = 1
+		"Stellar" = 1
+		"Cosmic" = 1
+		"Mutual Assistance" = 1
+	}
+}
+
+federation_name_parts_list = {
+	key = "default_federation_names_1_2"
+	parts = {
+		"Alliance" = 1
+		"League" = 1
+		"Federation" = 1
+		"Pact" = 1
+		"Coalition" = 1
+		"Compact" = 1
+		"Concord" = 1
+		"Entente" = 1
+		"Partnership" = 1
+		"Treaty Organization" = 1
+		"Accord" = 1
+		"Assembly" = 1
+	}
+}
+
+federation_name_parts_list = {
+	key = "default_federation_names_2_1"
+	parts = {
+		"Coalition of" = 1
+		"League of" = 1
+		"Alliance of" = 1
+		"Union of" = 1
+		"Allied" = 1
+		"United" = 1
+		"Federal" = 1
+		"Federated" = 1
+		"Confederated" = 1
+	}
+}
+
+federation_name_parts_list = {
+	key = "default_federation_names_2_2"
+	parts = {
+		"Star Nations" = 1
+		"Interlinked Systems" = 1
+		"Independent Systems" = 1
+		"Sovereign Nations" = 1
+		"Autonomous Powers" = 1
+		"Galactic Powers" = 1
+		"Sovereign Stars" = 1
+		"Civilized Worlds" = 1
+		"Associated Nations" = 1
+		"Sapient Nations" = 1
+	}
+}
+
+federation_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_federation_type = default_federation
+		}
+	}
+	format = "<default_federation_names_1_1> <default_federation_names_1_2>"
+}
+
+federation_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_federation_type = default_federation
+		}
+	}
+	format = "<default_federation_names_2_1> <default_federation_names_2_2>"
+}
+
+# Trade League
+
+federation_name_parts_list = {
+	key = "trade_federation_names_1_1"
+	parts = {
+		"Pan-Galactic" = 1
+		"Galactic" = 1
+		"Interstellar" = 1
+		"Star" = 1
+		"Stellar" = 1
+		"Cosmic" = 1
+		"United" = 1
+		"Free" = 1
+		"Consolidated" = 1
+		"Harmonious" = 1
+		"Golden" = 1
+		"Favorable" = 1
+	}
+}
+
+federation_name_parts_list = {
+	key = "trade_federation_names_1_2"
+	parts = {
+		"Prosperity" = 1
+		"Commerce" = 1
+		"Trade" = 1
+		"Mercantile" = 1
+		"Monetary" = 1
+		"Co-Prosperity" = 1
+		"Economic" = 1
+		"Free Trade" = 1
+		"Trading" = 1
+		"Merchant" = 1
+	}
+}
+
+federation_name_parts_list = {
+	key = "trade_federation_names_1_3"
+	parts = {
+		"Sphere" = 1
+		"Coalition" = 1
+		"Alliance" = 1
+		"Federation" = 1
+		"Pact" = 1
+		"Coalition" = 1
+		"Compact" = 1
+		"Concord" = 1
+		"Entente" = 1
+		"Partnership" = 1
+		"Accord" = 1
+		"Assembly" = 1
+		"Exchange" = 1
+		"Network" = 1
+	}
+}
+
+federation_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_federation_type = trade_federation
+		}
+	}
+	format = "<trade_federation_names_1_1> <trade_federation_names_1_2> <trade_federation_names_1_3>"
+}
+
+
+# Research Cooperative
+
+federation_name_parts_list = {
+	key = "research_federation_names_1_1"
+	parts = {
+		"Pan-Galactic" = 1
+		"Galactic" = 1
+		"Interstellar" = 1
+		"Star" = 1
+		"Stellar" = 1
+		"Cosmic" = 1
+		"United" = 1
+		"Free" = 1
+		"Harmonious" = 1
+	}
+}
+
+federation_name_parts_list = {
+	key = "research_federation_names_1_2"
+	parts = {
+		"Science" = 1
+		"Research" = 1
+		"Information" = 1
+		"Knowledge" = 1
+		"Technologist" = 1
+		"Academy" = 1
+		"Advancement" = 1
+	}
+}
+
+federation_name_parts_list = {
+	key = "research_federation_names_1_3"
+	parts = {
+		"Cooperative" = 1
+		"Sphere" = 1
+		"Coalition" = 1
+		"Alliance" = 1
+		"Federation" = 1
+		"Pact" = 1
+		"Coalition" = 1
+		"Compact" = 1
+		"Concord" = 1
+		"Entente" = 1
+		"Partnership" = 1
+		"Accord" = 1
+		"Assembly" = 1
+		"Exchange" = 1
+		"Network" = 1
+		"Association" = 1
+	}
+}
+
+federation_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_federation_type = research_federation
+		}
+	}
+	format = "<research_federation_names_1_1> <research_federation_names_1_2> <research_federation_names_1_3>"
+}
+
+
+# Martial Alliance
+
+federation_name_parts_list = {
+	key = "military_federation_names_1_1"
+	parts = {
+		"Pan-Galactic" = 1
+		"Galactic" = 1
+		"Interstellar" = 1
+		"Star" = 1
+		"Stellar" = 1
+		"Cosmic" = 1
+	}
+}
+
+federation_name_parts_list = {
+	key = "military_federation_names_1_2"
+	parts = {
+		"Treaty Organization" = 1
+		"Defense Force" = 1
+		"Pact" = 1
+		"Defense League" = 1
+		"Strategic Alliance" = 1
+		"Entente" = 1
+		"Security Partnership" = 1
+		"Defense Initiative" = 1
+		"Security Organization" = 1
+		"Combined Forces" = 1
+		"Military Bloc" = 1
+		"Defense Axis" = 1
+		"Mutual Assistance Pact" = 1
+	}
+}
+
+federation_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_federation_type = military_federation
+		}
+	}
+	format = "<military_federation_names_1_1> <military_federation_names_1_2>"
+}
+
+# Hegemony
+
+federation_name_parts_list = {
+	key = "hegemony_federation_names_1_1"
+	parts = {
+		"Star Hegemony" = 1
+		"Star Hierarchy" = 1
+		"Security Pact" = 1
+		"Star Dominion" = 1
+		"Affiliation Bloc" = 1
+		"Galactic Domain" = 1
+		"Galactic Order" = 1
+		"Influence Sphere" = 1
+		"Partnership Alliance" = 1
+		"Friendship Sphere" = 1
+		"Control Zone" = 1
+		"Protection Sphere" = 1
+		"Dependancy Union" = 1
+	}
+}
+
+federation_name_parts_list = {
+	key = "hegemony_federation_names_2_1"
+	parts = {
+		"New" = 1
+		"Greater" = 1
+		"Great" = 1
+		"Grand" = 1
+		"Exalted" = 1
+		"Glorious" = 1
+		"Supreme" = 1
+		"United" = 1
+	}
+}
+
+federation_name_parts_list = {
+	key = "hegemony_federation_names_2_2"
+	parts = {
+		"Order" = 1
+		"Hegemony" = 1
+		"Hierarchy" = 1
+		"Domain" = 1
+		"Dominion" = 1
+		"Sphere" = 1
+		"Authority" = 1
+		"Pact" = 1
+		"Bloc" = 1
+		"Coalition" = 1
+		"League" = 1
+	}
+}
+
+federation_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_federation_type = hegemony_federation
+		}
+	}
+	format = "[This.Leader.GetSpeciesName] <hegemony_federation_names_1_1>"
+}
+
+federation_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_federation_type = hegemony_federation
+		}
+	}
+	format = "<hegemony_federation_names_2_1> [This.Leader.GetSpeciesName] <hegemony_federation_names_2_2>"
+}

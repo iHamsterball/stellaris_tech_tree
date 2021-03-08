@@ -1,0 +1,168 @@
+
+automate_capital_planet = {
+	available = {
+		has_designation = col_capital
+		free_jobs < 3
+	}
+
+	prio_districts = {
+		district_city
+		district_generator
+		district_mining
+		district_farming
+	}
+
+	buildings = {
+		1 = {
+			building = building_capital
+			available = {
+				always = yes
+			}
+		}
+
+		2 = {
+			building = building_research_lab_1
+			available = {
+				owner = {
+					research_lab_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		3 = {
+			building = building_factory_1
+			available = {
+				owner = {
+					factory_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		4 = {
+			building = building_foundry_1
+			available = {
+				owner = {
+					foundry_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		5 = {
+			building = building_foundry_1
+			available = {
+				owner = {
+					foundry_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		6 = {
+			building = building_factory_1
+			available = {
+				owner = {
+					factory_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		7 = {
+			building = building_autochthon_monument
+			available = {
+				owner = {
+					autochthon_monument_upkeep_affordable = yes
+				}
+			}
+			building = building_temple
+			available = {
+				OR = {
+					owner = { has_ethic = ethic_spiritualist }
+					owner = { has_ethic = ethic_fanatic_spiritualist }
+				}
+				owner = {
+					temple_upkeep_affordable = yes
+				}
+			}
+		}
+
+		8 = {
+			building = building_research_lab_1
+			available = {
+				owner = {
+					research_lab_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		9 = {
+			building = building_foundry_1
+			available = {
+				owner = {
+					foundry_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		10 = {
+			building = building_factory_1
+			available = {
+				owner = {
+					factory_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		11 = {
+			building = building_research_lab_1
+			available = {
+				owner = {
+					research_lab_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		12 = {
+			building = building_foundry_1
+			available = {
+				owner = {
+					foundry_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		13 = {
+			building = building_holo_theatres
+			available = {
+				owner = {
+					holo_theatres_upkeep_affordable = yes
+				}
+			}
+		}
+
+		14 = {
+			building = building_factory_1
+			available = {
+				owner = {
+					factory_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		15 = {
+			building = building_research_lab_1
+			available = {
+				owner = {
+					research_lab_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		16 = {
+			building = building_galactic_stock_exchange
+			available = {
+				owner = {
+					galactic_stock_exchange_upkeep_affordable = yes
+				}
+			}
+		}
+	}
+}

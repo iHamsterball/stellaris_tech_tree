@@ -1,0 +1,248 @@
+﻿### Avian 2
+### Created by Maximilian Olbers
+### Based on a template by Henrik Thyrwall
+
+AVI2 = {
+
+	category = "Avian"
+	
+	language = "l_simp_chinese"
+	
+	ship_names = {
+		generic = {
+			"警戒羽翼" "顽固羽翼" "桀骜羽翼" "倔强羽翼" "古怪羽翼" "乖僻羽翼"
+			"专注羽翼" "瞭望羽翼" "顽皮羽翼"
+			"敏捷羽翼" "活泼羽翼" "固执羽翼" "坚定羽翼" "执拗羽翼" "果敢羽翼"
+			"任性羽翼" "无常羽翼" "善变羽翼" "活跃羽翼" "无忧羽翼" "快乐羽翼"
+			"自信羽翼" "聪明羽翼" "狡猾羽翼" "挥霍羽翼" "欢悦羽翼" "粗鲁羽翼"
+			"疯狂羽翼" "敏锐羽翼" "复仇羽翼" "刻毒羽翼" "报复羽翼" "暴躁羽翼"
+			"错乱羽翼" "发狂羽翼" "急躁羽翼" "叛逆羽翼" "鲁莽羽翼" "轻率羽翼"
+			"轻傲羽翼" "骄傲羽翼" "鄙夷羽翼" "蔑视羽翼" "自大羽翼" "吟唱羽翼"
+			"粗心羽翼" "健忘羽翼" "暴力羽翼" "散漫羽翼" "凶狠羽翼" "刚愎羽翼"
+			"欢乐之羽" "欢愉之羽" "繁荣之羽" "焕发之羽" "快乐之羽" "轻之羽"
+			"好运之羽" "无畏之羽" "毛躁之羽" "鲁莽之羽" "信赖之羽" "生机之羽"
+			"执拗之羽" "顽固之羽" "愤怒之羽" "狂暴之羽" "躁动之羽" "动乱之羽"
+			"敏锐之羽" "莫测之羽" "鲁莽之羽" "邪恶之羽" "曲折之羽" "优雅之羽"
+			"贪婪之羽" "英勇之羽" "不屈之羽" "坚实之羽" "不洁之羽" "自然之羽"
+			"贪婪之羽" "无情之羽" "英勇之羽" "无畏之羽" "快活之羽" "愤慨之羽"
+			"鲁莽之羽" "萨之羽" "自在之羽" "骚乱之羽" "疯狂之羽" "活力之羽"
+			"凶暴之羽" "喧闹之羽" "执着之羽" "暴烈之羽" "狂热之羽" "热诚之羽"
+			"狡诈之羽" "糊涂之羽" "快乐之羽" "易变之羽" "明智之羽" "独行之羽" 
+			"翱翔之羽" "战斗之羽" "迅捷之羽" "挑衅之羽" "弹性之羽" "狂怒之羽"
+			"阴沉小队" "暴躁小队" "不祥小队" "黑暗小队" "顽强小队" "专横小队" 
+			"不屈幼羽" "耐心幼羽" "强壮幼羽" "凶猛幼羽" "无情幼羽" "坚固幼羽"
+			"野性幼体" "活泼幼体" "热心幼体" "旺盛幼体" "勇猛幼体" "活跃幼体"
+			"愤怒幼体" "直率幼体" "粗鲁幼体" "无礼幼体" "野蛮幼体" "执拗幼体"
+		}
+
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+		
+		titan = {
+		}
+
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+
+	ship_class_names = {
+		generic = {
+			普罗透斯 皮拉德斯 塞拉皮斯 斯提吉安 坦塔罗斯 忒勒马科斯 忒修斯 索尔 图拉真 特里同 维纳斯 阿达曼特 阿尔当 阿塞尔 奥斯特 执政官 阿卓特 宙斯盾 安佳
+		}		
+	}
+
+	fleet_names = {
+		random_names = {
+			"达卢考特星尾" "托达利特星尾" "考达蒂亚星尾" "萨克罗斯塔星尾" "伊卡拉蒂亚星尾" "基托拉尔星尾" "布特克斯星尾" "雅托里星尾" "克劳尼亚星尾" "蒂奇斯科星尾" "洛卡拉克星尾" "凡诺克星尾" "吉鲁斯星尾"
+		}
+		sequential_name = "星尾 %C%"
+	}
+	
+	### ARMIES
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "防御部队 %C%"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "突击军团"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "突击军团"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "突击军团"
+		}
+
+		defense_army = {
+			sequential_name = "防御部队 %C%"
+		}
+			
+		assault_army = {
+			sequential_name = "突击军团"
+		}
+		
+		slave_army = {
+			sequential_name = "劳工战士 %C%"
+		}
+		
+		clone_army = { 
+			sequential_name = "克隆突击队 %C%"
+		}
+
+		undead_army = {
+			sequential_name = "%O%恐惧战队"
+		}
+		
+		robotic_army = {
+			sequential_name = "智能人部队 %C%"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "智能人部队 %C%"
+		}
+		
+		psionic_army = { 
+			sequential_name = "灵能之翼 %C%"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "异星人翼 %C%"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "上升之翼 %C%"
+		}
+		occupation_army = {
+			sequential_name = "%O% 加里森波德"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% 安卓 加里森波德"
+		}
+		primitive_army = {
+			sequential_name = "原始军队 %C%"
+		}
+		industrial_army = {
+			sequential_name = "工业军队 %C%"
+		}
+		postatomic_army = {
+			sequential_name = "后原子军 %C%"
+		}
+	}
+
+	### PLANETS
+
+	planet_names = {
+
+		generic = {
+			names = {
+				葵尼哈巴拉 葵尼埃芬古 葵尼格拉姆 萨拉弗鲁格 萨拉马芬姆 萨拉肯让拉 杰姆卡拉那葛 杰姆芬葛莱姆 杰姆卡克斯德 斯鲁卡拉雷曼 斯鲁耶托鲁姆
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+
+	### CHARACTERS
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+				不那 塔拉达 咯克塔拉 尤路雷克 克罗体育 拉塔斯 西多 打那克 库特罗 特拉克 凯鲁多 泰卡德 德鲁兰特 科洛特斯特 塔布霍克 克托伊克 布哈德拉克拉斯 特勒德克 达鲁寇特
+			}
+			
+			# Always combined with a second name
+			first_names = {
+			}
+			
+			# Always combined with a first name
+			second_names = {
+			}
+			
+			regnal_first_names = {
+				不那 塔拉达 咯克塔拉 尤路雷克 克罗体育 拉塔斯 西多 打那克 库特罗 特拉克
+			}
+			
+			regnal_second_names = {
+				卡尔沃斯
+			}
+		}
+	}
+}

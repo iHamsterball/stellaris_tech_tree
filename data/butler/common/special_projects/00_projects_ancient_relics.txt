@@ -1,0 +1,584 @@
+# Available requirements:
+#
+#	SKILLS
+#	#skill = 2
+#
+#	LEADER
+#	leader = scientist
+#	leader = admiral
+#	leader = general
+#	leader = ruler
+#	leader = governor
+#	
+#	MILITARY SHIPS
+#	shipclass_military = 1
+#	
+#	CIVILIAN SHIPS
+#	shipclass_constructor = 2
+#	shipclass_science_ship = 1
+#	shipclass_colonizer = 2
+#	
+#	ARMIES
+#	shipclass_transport = 1
+#	assault_armies = 2
+#	defense_armies = 1
+#	
+#	STATIONS
+#	research_station = yes
+#	mining_station = yes
+#	observation_station = yes
+#
+#	SCOPES
+#	abort_trigger
+#	this = country (project owner)
+#	from = event scope (planet or ship, MIGHT NOT EXIST)
+#	fromfrom = project creation scope (usually equals location)
+#	
+#	on_success
+#	this = event scope (ship or planet)
+#	from = project creation scope (usually equals location)
+#	
+#	on_cancel 
+#	this = country (project owner)
+#	from = event scope (planet or ship, MIGHT NOT EXIST)
+#	fromfrom = project creation scope (usually equals location)
+#
+#	on_fail
+#	this = country (project owner)
+#	from = project creation scope (usually equals location)
+
+special_project = {
+	key = "BAOL_COLONY_1"
+	event_chain = baol_chain
+	cost = 0
+	days_to_research = 30
+	tech_department = society_technology
+	picture = GFX_evt_baol_datacrystals
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		#skill = 3
+	}
+	
+	on_success = {
+		ship_event = { id = ancrel.2003 }
+	}
+	
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "BAOL_COLONY_2"
+	event_chain = baol_chain
+	cost = 0
+	days_to_research = 30
+	tech_department = society_technology
+	picture = GFX_evt_baol_datacrystals
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		#skill = 3
+	}
+	
+	on_success = {
+		from = {
+			save_event_target_as = baol_colony_2
+		}
+		ship_event = { id = ancrel.2007 }
+	}
+	
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "BAOL_COLONY_3"
+	event_chain = baol_chain
+	cost = 0
+	days_to_research = 30
+	tech_department = society_technology
+	picture = GFX_evt_baol_datacrystals
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		#skill = 3
+	}
+	
+	on_success = {
+		from = {
+			save_event_target_as = baol_colony_3
+		}
+		ship_event = { id = ancrel.2012 }
+	}
+	
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "THE_LAST_BAOL"
+	event_chain = baol_chain
+	cost = 0
+	days_to_research = 30
+	tech_department = society_technology
+	picture = GFX_evt_star_chart
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		#skill = 3
+	}
+	
+	on_success = {
+		ship_event = { id = ancrel.2016 }
+	}
+	
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "FERROPHAGE_CURE"
+	cost = 0
+	days_to_research = 3600
+	tech_department = society_technology
+	picture = GFX_evt_society_research
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+	
+	on_success = {
+		owner = {
+			country_event = { id = ancrel.2066 }
+		}
+	}
+	
+	on_fail = {
+	}
+}
+
+# Investigate Irassian Secrets
+special_project = {
+	key = "IRASSIAN_SECRETS"
+	picture = GFX_evt_star_chart
+	icon = "gfx/interface/icons/situation_log/situation_log_radar.dds"
+	cost = @tier1cost3
+	sound = no
+	tech_department = society_technology
+	days_to_research = 0
+	location = no
+	timelimit = -1
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	abort_trigger = {
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = ancrel.9001 }
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# Investigate Yuht Secrets
+special_project = {
+	key = "YUHT_SECRETS"
+	picture = GFX_evt_star_chart
+	icon = "gfx/interface/icons/situation_log/situation_log_radar.dds"
+	cost = @tier1cost3
+	sound = no
+	tech_department = society_technology
+	days_to_research = 0
+	location = no
+	timelimit = -1
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	abort_trigger = {
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = ancrel.10050 }
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# Investigate Vultaum Secrets
+special_project = {
+	key = "VULTAUM_SECRETS"
+	picture = GFX_evt_star_chart
+	icon = "gfx/interface/icons/situation_log/situation_log_radar.dds"
+	cost = @tier1cost3
+	sound = no
+	tech_department = physics_technology
+	days_to_research = 0
+	location = no
+	timelimit = -1
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	abort_trigger = {
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = ancrel.10100 }
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "VULTAUM_SECRETS_2"
+	picture = GFX_evt_star_chart
+	icon = "gfx/interface/icons/situation_log/situation_log_radar.dds"
+	cost = @tier3cost3
+	sound = no
+	tech_department = physics_technology
+	days_to_research = 0
+	location = no
+	timelimit = -1
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	abort_trigger = {
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = ancrel.10110 }
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# Investigate First League Secrets
+special_project = {
+	key = "LEAGUE_SECRETS"
+	picture = GFX_evt_star_chart
+	icon = "gfx/interface/icons/situation_log/situation_log_radar.dds"
+	cost = @tier2cost3
+	sound = no
+	tech_department = engineering_technology
+	days_to_research = 0
+	location = no
+	timelimit = -1
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	abort_trigger = {
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = ancrel.10200 }
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# Investigate Cybrex Secrets
+special_project = {
+	key = "CYBREX_SECRETS"
+	picture = GFX_evt_star_chart
+	icon = "gfx/interface/icons/situation_log/situation_log_radar.dds"
+	cost = @tier3cost3
+	sound = no
+	tech_department = engineering_technology
+	days_to_research = 0
+	location = no
+	timelimit = -1
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	abort_trigger = {
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = ancrel.10250 }
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# Investigate Baol Secrets
+special_project = {
+	key = "BAOL_SECRETS"
+	picture = GFX_evt_star_chart
+	icon = "gfx/interface/icons/situation_log/situation_log_radar.dds"
+	cost = @tier1cost3
+	sound = no
+	tech_department = society_technology
+	days_to_research = 0
+	location = no
+	timelimit = -1
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	abort_trigger = {
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = ancrel.10300 }
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# Investigate Zroni Secrets
+special_project = {
+	key = "ZRONI_SECRETS"
+	picture = GFX_evt_star_chart
+	icon = "gfx/interface/icons/situation_log/situation_log_radar.dds"
+	cost = @tier2cost3
+	sound = no
+	tech_department = society_technology
+	days_to_research = 0
+	location = no
+	timelimit = -1
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	abort_trigger = {
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = ancrel.10350 }
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# Grand Herald Repair
+special_project = {
+	key = "Herald_repair"
+	picture = GFX_evt_relic_shipyard
+	icon = "gfx/interface/icons/situation_log/situation_log_engineering.dds"
+	cost = 25000
+	sound = no
+	tech_department = engineering_technology
+	location = no
+	timelimit = -1
+
+	event_scope = ship_event
+
+	requirements = {
+	}
+
+	abort_trigger = {
+	}
+
+	on_success = {
+		if = {
+			limit = {
+				exists = owner
+			}
+			owner = { 
+				country_event = { id = ancrel.150 }
+			}
+		}
+		else = {
+			from.owner = {
+				country_event = { id = ancrel.150 }
+			}
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = RUBRICATOR_SPACECRAFT
+	event_chain = "rubricator_chain"
+	cost = 0
+	days_to_research = 90
+	tech_department = society_technology
+	picture = GFX_evt_archaeological_dig #TODO
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		#skill = 3
+	}
+	
+	on_success = {
+		ship_event = { id = ancrel.4011 }
+	}
+	
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = DESTROY_SENTINELS
+	cost = 1000
+	tech_department = engineering_technology
+	picture = GFX_evt_archaeological_dig #TODO
+	location = no
+
+	event_scope = planet_event
+	
+	on_success = {
+		if = {
+			limit = {
+				has_planet_flag = destroy_sentinels
+			}
+			planet_event = { id = ancrel.4055 }
+		}
+		if = {
+			limit = {
+				has_planet_flag = investigate_sentinels
+			}
+			planet_event = { id = ancrel.4058 }
+		}
+		if = {
+			limit = {
+				has_planet_flag = dismantle_sentinels
+			}
+			planet_event = { id = ancrel.4058 }
+		}
+	}
+	
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = SECRET_TOMB
+	days_to_research = 180
+	tech_department = engineering_technology
+	picture = GFX_evt_archaeological_dig #TODO
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				FROM = { NOT = { has_planet_flag = sentinels_purged } }
+			}
+			ship_event = { id = ancrel.4056 }
+		}
+		if = {
+			limit = {
+				FROM = { has_planet_flag = sentinels_purged }
+			}
+			ship_event = { id = ancrel.4076 }
+		}
+	}
+	
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = REPLICATE_THE_EVERMORE
+	days_to_research = 200
+	tech_department = engineering_technology
+	picture = GFX_evt_archaeological_dig #TODO
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+	
+	on_success = {
+		ship_event = { id = ancrel.4061 }
+	}
+	
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = REPURPOSE_THE_EVERMORE
+	days_to_research = 200
+	tech_department = engineering_technology
+	picture = GFX_evt_archaeological_dig #TODO
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+	
+	on_success = {
+		ship_event = { id = ancrel.4077 }
+	}
+	
+	on_fail = {
+	}
+}

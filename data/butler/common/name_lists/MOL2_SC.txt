@@ -1,0 +1,217 @@
+﻿### Molluscoid 2
+### Created by Maximilian Olbers
+MOL2 = {
+
+	category = "Molluscoid"
+	
+	language = "l_simp_chinese"
+
+	ship_names = {
+	
+		generic = {
+			约姆古约格 约姆法拉汉 约姆齐格德 约姆佩德翁 约姆塔格德 约姆尼罗格 约姆图拉兹 约姆修特尔 约姆休特德 约姆英拉德 约姆鲁格鲁 约姆提奎克 约姆达明特 约姆特拉古德 约姆沃特南 约姆拉斯格 约姆雷姆 约姆纳古德 约姆弗英布 约姆拉苏德 约姆普罗斯 约姆弗利普 约姆普特利格 约姆沙鲁夫 约姆卡纳布 约姆特郎柯德 约姆加法棱 约姆尤德蒙 约姆蒙达 约姆图哈姆 约姆贝英德 约姆提帕许 约姆苏格拉德 约姆费戈弗 约姆布伊朵
+		}
+
+		corvette = {}
+		
+		destroyer = {}
+		
+		cruiser = {	}
+		
+		battleship = {	}
+		
+		titan = {
+		}
+
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			"深海" "海岸" "海滨" "船锚" "波涛汹涌" "潮汐" "乘风破浪" "码头" "船帆" "黑暗深渊" "核心" "暗礁" "大风" "微风" "川流" "河流" "湖泊" "海洋"
+		}
+		sequential_name = "游击队 %C%"
+	}
+
+	### ARMIES
+	army_names = {
+		
+		machine_defense = {
+			sequential_name = "海岸护卫 %C%"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "波动兵团 %C%"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "波动兵团 %C%"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "波动兵团 %C%"
+		}
+
+		defense_army = {
+			sequential_name = "海岸护卫 %C%"
+		}
+			
+		assault_army = {
+			sequential_name = "波动兵团 %C%"
+		}
+		
+		slave_army = {
+			sequential_name = "束缚军团 %C%"
+		}
+		
+		clone_army = { 
+			sequential_name = "试管战队 %C%"
+		}
+
+		undead_army = {
+			sequential_name = "%O%恐怖军团"
+		}
+		
+		robotic_army = {
+			sequential_name = "机械兵团﻿ %C%"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "机械兵团﻿ %C%"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "机械兵团﻿ %C%"
+		}
+
+		psionic_army = { 
+			sequential_name = "战争思维 %C%"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "龙虾人 %C%"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "操控军队 %C%"
+		}
+		occupation_army = {
+			sequential_name = "%O% 加里森波德"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% 安卓 加里森波德"
+		}
+		primitive_army = {
+			sequential_name = "原始军队 %C%"
+		}
+		industrial_army = {
+			sequential_name = "工业军队 %C%"
+		}
+		postatomic_army = {
+			sequential_name = "后原子军 %C%"
+		}
+	}
+	### PLANETS
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"深海星" "克斯特" "哲枭安" "阿克诺" "可雷斯特威孚" "缇达" "布睿赤" "杰剃" "赛欧" "黑暗深渊" "真核星" "瑞伏" "温德" "极寒" "斯缇姆" "锐仸" "雷克" "欧参"
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+
+	### CHARACTERS
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+				素格隆 卡加舒拉 奥格萨斯 奥戈拉加 吉施 萨洛普 佩欧格 库多格 卡萨巴拉斯 伊戈斯 安哥加 安格鲁加 阿拉戈加 布夫戈恩 瓦德格斯 巴库格斯 里德布斯 马伦戈德 乌格拉姆
+			}
+			
+			# Always combined with a second name
+			first_names = {
+			}
+			
+			# Always combined with a first name
+			second_names = {
+			}
+			
+			regnal_first_names = {
+				素格隆 卡加舒拉 奥格萨斯 奥戈拉加 吉施 萨洛普 佩欧格 库多格
+			}
+			
+			regnal_second_names = {
+				达斯查
+			}
+		}
+	}
+}

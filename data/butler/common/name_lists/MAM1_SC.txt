@@ -1,0 +1,226 @@
+﻿### Mammalian 1
+MAM1 = {
+	### SHIPS
+	
+	category = "Mammalian"
+
+	language = "l_simp_chinese"
+	
+	ship_names = {
+
+		generic = {
+			特里加姆 多图纳克 特寇巴克 多图玛 特托克 雅特拉克 雅格拉 雅夫斯克 雅科诺 雅加加姆 雅兰巴克 雅诺罗 雅罗拉姆
+			逊加姆 奥德纳尔 阿德里加 坎达格 图浪加 舒德斯 威戈图姆 达古斯 斯鲁格拉布 马鲁格布 布弗格亨 沃达哈格斯 利度巴斯 巴克加斯 多舒格 马鲁加德 巴哈格菲尔 塔乌施 乌戈拉姆 阿什格拉姆 
+			萨瑟兰 萨顿 塔格特 汤森 特雷纳 斯塔克 斯特拉德威克 麦克阿瑟 巴恩斯 阿特金斯 巴拉德 比格斯 贝尔德 弗雷德里克斯 汉弗莱 
+			克多西奇 奇米扎尔 祖拉克利 齐布克罗克 西弗拉尼姆 克罗拉利克 科姆扎冯 泽德克拉克
+			交叉骨 微笑者 "野人" "飞行魔鬼" 扁鼻子 "沙场老将" "黄色上将" "死亡船长" "痛苦上校"
+			独眼巨人 半人马 敌手 刺客 匕首 气魄 责任 破坏 英雄 猎手 正义 无暇 拦截者 火海 忠诚 无敌 拳击家 伤害 恶意
+			德布利斯 德班纳 德轱轳 德马洛夫 德萨格力 特博姆卡 特萨里斯
+			德欧罗姆 德欧 德伊利姆 特宜家 特多家 特乌加纳 伊雷斯马 伊索罗木 伊帕家 特哈力克 特西罗姆 伊加拉 德那卡特米莉
+		}
+
+		corvette = { }
+		
+		destroyer = { }
+		
+		cruiser = { }
+		
+		battleship = { }
+		
+		titan = {
+		}
+
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			"克里姆 星舰" "撕裂 星舰" "弗泰娜 星舰" "波立米 星舰" "格罗多 星舰" "弗凡 星舰" "可达那 星舰" "郝罗拓 星舰" "迪斯尼 星舰" "瓦娜啦 星舰" "康纳拉 星舰" "司米妮 星舰" "玛塔诺 星舰" "凡缇 星舰" "格罗格尼 星舰"
+		}
+		sequential_name = "星舰 %C%"
+	}
+		
+	### ARMIES
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "防御纵队 %C%"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "入侵者纵队 %C%"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "入侵者纵队 %C%"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "入侵者纵队 %C%"
+		}
+		
+		defense_army = {
+			sequential_name = "防御纵队 %C%"
+		}
+			
+		assault_army = {
+			sequential_name = "入侵者纵队 %C%"
+		}
+		
+		slave_army = {
+			sequential_name = "修正纵队 %C%"
+		}
+
+		undead_army = {
+			sequential_name = "%O%恐惧纵队"
+		}
+
+		clone_army = { 
+			sequential_name = "成型部队 %R%"
+		}
+		
+		robotic_army = {
+			sequential_name = "机器步兵 %R%"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "机器步兵 %R%"
+		}
+		
+		psionic_army = { 
+			sequential_name = "幽能步兵 %R%"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "异星蜂巢 %R%"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "改良战队 %C%"
+		}
+		occupation_army = {
+			sequential_name = "%O% 加里森波德"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% 安卓 加里森波德"
+		}
+		primitive_army = {
+			sequential_name = "原始军队 %C%"
+		}
+		industrial_army = {
+			sequential_name = "工业军队 %C%"
+		}
+		postatomic_army = {
+			sequential_name = "后原子军 %C%"
+		}
+	}
+	
+	### PLANETS
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"克里姆" "卡尔丹之拳" "瑞文之穴" "拉提雅" "弗泰娜" "波立米" "菲尔任" "卡里毛" "麦娜娜" "菲通" "罗琳之林" "福塔利亚" "比罗伊" "瓦尼亚" "卡迪利亚" "戈姆利" "大浦教会" "迪斯萨蒂亚" "艾尔提亚的庇护所" "曼妮之穴" "菲尔提尔之网" "果物柜" "莫婷的精华" "途锐瓦" "卓探底尔" "拉菲克" "克罗尼亚的家园" "尤提尼亚的圣地" "福分" "卡娜洛" "拉得兰的避难所" "好提尔的天堂" "维克特的追寻" "尤坦" "保多" "那格里姆" "福德斯特" "瑙蓝" "于都" "塔梅斯" "葛丹" "格罗个礼" "巴利塔纳" "帕里缇娜"
+			}
+		}
+		
+		pc_desert = {
+			names = {
+				"蒂莉的黄玉"
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+				"艾姆丽的翡翠"
+			}
+		}
+		
+		pc_arid = {
+			names = {
+				"孩子的石榴"
+			}
+		}
+		
+		pc_continental = {
+			names = {
+				"蓝道之红宝石"
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+				"尚达娜之塞夫那" "福伦之堡"
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+				"夏里昂的水晶"
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+				"迪奥娜的钻石"
+			}
+		}
+
+		pc_savannah = {
+			names = { }
+		}
+
+		pc_alpine = {
+			names = { }
+		}
+		
+	}
+
+	### CHARACTERS
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = { }
+			
+			# Always combined with a second name
+			first_names = {
+				特斯拉瑞普 特斯奥达卡罕 特斯巴汉赫尔 特斯贾瓦拉德 特斯奥普鲁多 特斯库芬兰 特斯卡安多 特斯奎普里姆 特斯尼施奎姆 特斯帕拉路德
+			}
+			
+			# Always combined with a first name
+			second_names = {
+				伊维哈拉瑞姆-尼 伊恩多瑞姆-尼 艾尔格蕾姆-尼 伊瓦科姆-尼 艾瑞欧斯伊姆-尼 卡巴迪姆-萨 马特恩尼姆-萨 沃克罗尼姆-萨 斯拉克诺瑞姆-萨
+			}
+			
+			regnal_first_names = {
+				伊维哈拉瑞姆-尼 伊恩多瑞姆-尼 艾尔格蕾姆-尼 伊瓦科姆-尼
+			}
+			
+			regnal_second_names = {
+				萨克里
+			}
+		}
+	}
+}

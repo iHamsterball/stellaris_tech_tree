@@ -1,0 +1,871 @@
+@ARCHAEOLOGICAL_SITE_XP_0_CLUE = 10
+@ARCHAEOLOGICAL_SITE_XP_1_CLUE = 25
+@ARCHAEOLOGICAL_SITE_XP_2_CLUE = 40
+
+# Rewards
+
+small_artifact_reward = {
+	custom_tooltip = minor_artifacts_found
+	locked_random_list = {
+		33 = {
+			owner = { add_resource = { minor_artifacts = 1 } }
+		}
+		33 = {
+			owner = { add_resource = { minor_artifacts = 3 } }
+		}
+		33 = {
+			owner = { add_resource = { minor_artifacts = 5 } }
+		}
+	}
+	hidden_effect = {
+		owner = { country_event = { id = tutorial.1337 days = 5 } }
+	}
+}
+
+medium_artifact_reward = {
+	custom_tooltip = minor_artifacts_found
+	locked_random_list = {
+		33 = {
+			owner = { add_resource = { minor_artifacts = 6 } }
+		}
+		33 = {
+			owner = { add_resource = { minor_artifacts = 8 } }
+		}
+		33 = {
+			owner = { add_resource = { minor_artifacts = 10 } }
+		}
+	}
+	hidden_effect = {
+		owner = { country_event = { id = tutorial.1337 days = 5 } }
+	}
+}
+
+large_artifact_reward = {
+	custom_tooltip = minor_artifacts_found
+	locked_random_list = {
+		33 = {
+			owner = { add_resource = { minor_artifacts = 10 } }
+		}
+		33 = {
+			owner = { add_resource = { minor_artifacts = 20 } }
+		}
+		33 = {
+			owner = { add_resource = { minor_artifacts = 30 } }
+		}
+	}
+	hidden_effect = {
+		owner = { country_event = { id = tutorial.1337 days = 5 } }
+	}
+}
+
+great_artifact_reward = {
+	custom_tooltip = minor_artifacts_found
+	locked_random_list = {
+		33 = {
+			owner = { add_resource = { minor_artifacts = 50 } }
+		}
+		33 = {
+			owner = { add_resource = { minor_artifacts = 75 } }
+		}
+		33 = {
+			owner = { add_resource = { minor_artifacts = 100 } }
+		}
+	}
+	hidden_effect = {
+		owner = { country_event = { id = tutorial.1337 days = 5 } }
+	}
+}
+
+create_grand_herald = {
+	custom_tooltip = get_herald
+	hidden_effect = {
+		owner = {
+			create_fleet = {
+				name = "NAME_Grand_Herald"
+				settings = {
+					spawn_debris = no
+				}
+				effect = {
+					set_owner = prev
+					create_ship_design = {
+						design = "NAME_Herald"
+					}
+					random_list = {
+						10 = {
+							create_ship = {
+								name = "NAME_Grand_Herald"
+								design = last_created_design
+								graphical_culture = "humanoid_01"
+								prefix = no
+								upgradable = no
+							}
+						}
+						10 = {
+							create_ship = {
+								name = "NAME_Grand_Herald"
+								design = last_created_design
+								graphical_culture = "plantoid_01"
+								prefix = no
+								upgradable = no
+							}
+						}
+						10 = {
+							create_ship = {
+								name = "NAME_Grand_Herald"
+								design = last_created_design
+								graphical_culture = "mammalian_01"
+								prefix = no
+								upgradable = no
+							}
+						}
+						10 = {
+							create_ship = {
+								name = "NAME_Grand_Herald"
+								design = last_created_design
+								graphical_culture = "reptilian_01"
+								prefix = no
+								upgradable = no
+							}
+						}
+						10 = {
+							create_ship = {
+								name = "NAME_Grand_Herald"
+								design = last_created_design
+								graphical_culture = "avian_01"
+								prefix = no
+								upgradable = no
+							}
+						}
+						10 = {
+							create_ship = {
+								name = "NAME_Grand_Herald"
+								design = last_created_design
+								graphical_culture = "molluscoid_01"
+								prefix = no
+								upgradable = no
+							}
+						}
+						10 = {
+							create_ship = {
+								name = "NAME_Grand_Herald"
+								design = last_created_design
+								graphical_culture = "fungoid_01"
+								prefix = no
+								upgradable = no
+							}
+						}
+						10 = {
+							create_ship = {
+								name = "NAME_Grand_Herald"
+								design = last_created_design
+								graphical_culture = "arthropoid_01"
+								prefix = no
+								upgradable = no
+							}
+						}
+					}
+					set_location = fromfrom.planet
+					set_herald_damage = yes
+				}
+			}
+		}
+	}
+}
+
+set_herald_damage = {
+	random_list = {
+		5 = {
+			#
+		}
+		25 = {
+			add_modifier = {
+				modifier = herald_75
+				days = -1
+			}
+			enable_special_project = {
+				name = "Herald_repair"
+				owner = this.owner
+				location = this
+			}
+		}
+		50 = {
+			add_modifier = {
+				modifier = herald_50
+				days = -1
+			}
+			enable_special_project = {
+				name = "Herald_repair"
+				owner = this.owner
+				location = this
+			}
+		}
+		20 = {
+			add_modifier = {
+				modifier = herald_25
+				days = -1
+			}
+			enable_special_project = {
+				name = "Herald_repair"
+				owner = this.owner
+				location = this
+			}
+		}
+	}
+}
+
+remove_herald_damage = {
+	every_owned_fleet = {
+		remove_modifier = herald_75
+		remove_modifier = herald_50
+		remove_modifier = herald_25
+	}
+}
+
+# Site Random Events
+
+# List of Events
+
+# ancrel.8000 - Laser Grid Trap, Scientist Dies
+# ancrel.8001 - Laser Grid Trap, Set back
+# ancrel.8002 - Laser Grid Trap, Positive Outcome
+# ancrel.8003 - Laser Grid Trap, Option to Pay
+# ancrel.8010 - Sentry Gun Trap, Scientist Dies
+# ancrel.8011 - Sentry Gun Trap, Set back
+# ancrel.8012 - Sentry Gun Trap, Positive Outcome
+# ancrel.8013 - Sentry Gun Trap, Option to Pay
+# ancrel.8020 - Crusher-Droid Trap, Scientist Dies
+# ancrel.8021 - Crusher-Droid Trap, Set back
+# ancrel.8022 - Crusher-Droid Trap, Positive Outcome
+# ancrel.8023 - Crusher-Droid Trap, Option to Pay
+# ancrel.8030 - Guardian Droid Trap, Scientist Dies
+# ancrel.8031 - Guardian Droid Trap, Set back
+# ancrel.8032 - Guardian Droid Trap, Positive Outcome
+# ancrel.8033 - Guardian Droid Trap, Option to Pay
+# ancrel.8040 - Resource Cache
+# ancrel.8045 - Hidden Passage
+# ancrel.8050 - Lost Previous Expedition
+# ancrel.8055 - Bickering among your Archaeologists
+# ancrel.8060 - Small Treasure Chamber
+# ancrel.8065 - Illness among your Archaeologists - Organics only
+# ancrel.8070 - Equipment Malfunction
+# ancrel.8075 - Scientist Vanishes
+# ancrel.8080 - Minor Artifacts Discovered
+# ancrel.8090 - Hostile Wildlife, Scientist Dies
+# ancrel.8091 - Hostile Wildlife, Set back
+# ancrel.8092 - Hostile Wildlife, Positive Outcome
+# ancrel.8093 - Hostile Wildlife, Option to Pay
+# ancrel.8100 - Collapsed Roof, Scientist Dies
+# ancrel.8101 - Collapsed Roof, Set back
+# ancrel.8102 - Collapsed Roof, Positive Outcome
+# ancrel.8103 - Collapsed Roof, Option to Pay
+# ancrel.8110 - Ancient Research Records
+
+
+all_random_events = {
+	random_list = {
+		10 = { site_laser_grid_trap = yes }
+		10 = { site_sentry_guns_trap = yes }
+		10 = { site_crusher_droids_trap = yes }
+		10 = { site_guardian_droids_trap = yes }
+		10 = { 
+			modifier = {
+				factor = 0
+				from = {
+					planet = { habitable_planet = no }
+				}
+			}
+			site_wildlife = yes 
+		}
+		10 = { site_collapsed_roof = yes }
+		10 = { fleet_event = { id = ancrel.8040 } }
+		10 = { fleet_event = { id = ancrel.8045 } }
+		10 = { fleet_event = { id = ancrel.8050 } }
+		10 = { fleet_event = { id = ancrel.8055 } }
+		10 = { fleet_event = { id = ancrel.8060 } }
+		10 = {
+			modifier = {
+				factor = 0
+				owner = { is_machine_empire = yes }
+			}
+			fleet_event = { id = ancrel.8065 } # Organics only
+		}
+		10 = { fleet_event = { id = ancrel.8070 } }
+		2 = { fleet_event = { id = ancrel.8075 } } # Scientist vanishes
+		10 = { fleet_event = { id = ancrel.8080 } }
+		10 = { fleet_event = { id = ancrel.8110 } }
+		10 = {
+			modifier = {
+				factor = 0
+				OR = {
+					from.planet = {
+						NOT = { is_planet_class = pc_nuked }
+					}
+					leader.species = {
+						has_trait = trait_pc_nuked_preference
+					}
+					owner = { is_machine_empire = yes }
+				}
+			}
+			fleet_event = { id = federations2.701 }
+		}
+		# Bespoke Random Events
+		20 = { # Whispers in the Stone
+			modifier = {
+				factor = 0
+				NOT = { 
+					From = {
+						is_site_type = lithoids_digsite
+					}
+				}
+				Owner = {
+					has_country_flag = triggered_lithoids_special_event
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { exists = leader }
+			}
+			fleet_event = { id = ancrel.4006 }
+		}
+		20 = { # The Rubricator
+			modifier = {
+				factor = 0
+				NOT = { 
+					From = {
+						is_site_type = rubricator_digsite
+					}
+				}
+				Owner = { 
+					
+					has_country_flag = triggered_rubricator_random_event
+				}
+			}
+			fleet_event = { id = ancrel.4021 }
+		}
+		20 = { # The Sentinels
+			modifier = {
+				factor = 0
+				NOT = { 
+					From = {
+						is_site_type = sentinels_digsite
+					}
+				}
+				Owner = { 
+					
+					has_country_flag = triggered_sentinels_random_event
+				}
+			}
+			fleet_event = { id = ancrel.4078 }
+		}
+	}
+}
+
+site_traps = {
+	random_list = {
+		25 = { site_laser_grid_trap = yes }
+		25 = { site_sentry_guns_trap = yes }
+		25 = { site_crusher_droids_trap = yes }
+		25 = { site_guardian_droids_trap = yes }
+	}
+}
+
+site_laser_grid_trap = {
+	random_list = {
+		5 = { fleet_event = { id = ancrel.8000 } }
+		25 = { fleet_event = { id = ancrel.8001 } }
+		25 = { fleet_event = { id = ancrel.8002 } }
+		25 = { fleet_event = { id = ancrel.8003 } }
+	}
+}
+
+site_sentry_guns_trap = {
+	random_list = {
+		5 = { fleet_event = { id = ancrel.8010 } }
+		25 = { fleet_event = { id = ancrel.8011 } }
+		25 = { fleet_event = { id = ancrel.8012 } }
+		25 = { fleet_event = { id = ancrel.8013 } }
+	}
+}
+
+site_crusher_droids_trap = {
+	random_list = {
+		5 = { fleet_event = { id = ancrel.8020 } }
+		25 = { fleet_event = { id = ancrel.8021 } }
+		25 = { fleet_event = { id = ancrel.8022 } }
+		25 = { fleet_event = { id = ancrel.8023 } }
+	}
+}
+
+site_guardian_droids_trap = {
+	random_list = {
+		5 = { fleet_event = { id = ancrel.8030 } }
+		25 = { fleet_event = { id = ancrel.8031 } }
+		25 = { fleet_event = { id = ancrel.8032 } }
+		25 = { fleet_event = { id = ancrel.8033 } }
+	}
+}
+
+site_wildlife = {
+	random_list = {
+		5 = { fleet_event = { id = ancrel.8090 } }
+		25 = { fleet_event = { id = ancrel.8091 } }
+		25 = { fleet_event = { id = ancrel.8092 } }
+		25 = { fleet_event = { id = ancrel.8093 } }
+	}
+}
+
+site_collapsed_roof = {
+	random_list = {
+		5 = { fleet_event = { id = ancrel.8100 } }
+		25 = { fleet_event = { id = ancrel.8101 } }
+		25 = { fleet_event = { id = ancrel.8102 } }
+		25 = { fleet_event = { id = ancrel.8103 } }
+	}
+}
+
+standard_archaeological_site_on_roll_failed_range_entry = {
+	custom_tooltip_with_params = {
+		description = "ARCHAEOLOGICAL_SITE_ON_ROLL_FAILED_RANGE"
+		description_parameters = {
+			"MIN" = $MIN$
+			"MAX" = $MAX$
+			"CLUES" = $CLUES$
+			"CHANCE" = @\[( 2 + ( $MAX$ + $DIE_MAX$ - |$MAX$ - $SCORE$ - $DIE_MAX$| ) - ( $MIN$ + $DIE_MIN$ + |$MIN$ - $SCORE$ - $DIE_MIN$| ) ) / ( 2*( $DIE_MAX$ -  $DIE_MIN$ + 1 ) )]
+			"SCORE" = $SCORE$
+		}
+	}
+}
+
+standard_archaeological_site_on_roll_failed_greater_than_eq_entry = {
+	custom_tooltip_with_params = {
+		description = "ARCHAEOLOGICAL_SITE_ON_ROLL_FAILED_GREATER_THAN_EQ"
+		description_parameters = {
+			"MIN" = $MIN$
+			"CHANCE" = @\[( $SCORE$ - $MIN$ + $DIE_MAX$ + 1 ) / ( $DIE_MAX$ -  $DIE_MIN$ + 1 )]
+			"SCORE" = $SCORE$
+		}
+	}
+}
+
+standard_archaeological_site_on_roll_failed_less_than_eq_entry = {
+	custom_tooltip_with_params = {
+		description = "ARCHAEOLOGICAL_SITE_ON_ROLL_FAILED_LESS_THAN_EQ"
+		description_parameters = {
+			"MAX" = $MAX$
+			"CLUES" = $CLUES$
+			"CHANCE" = @\[( 2 + ( $MAX$ + $DIE_MAX$ - |$MAX$ - $SCORE$ - $DIE_MAX$| ) - ( $DIE_MIN$ + |-$SCORE$ - $DIE_MIN$| ) ) / ( 2*( $DIE_MAX$ -  $DIE_MIN$ + 1 ) )]
+			"SCORE" = $SCORE$
+		}
+	}
+}
+
+standard_archaeological_site_on_roll_failed_case = {
+	custom_tooltip = archaeology_roll_header
+	standard_archaeological_site_on_roll_failed_less_than_eq_entry = { MAX=5 CLUES=0 SCORE=$SCORE$ DIE_MIN=1 DIE_MAX=10 }
+	standard_archaeological_site_on_roll_failed_range_entry = { MIN=6 MAX=10 CLUES=1 SCORE=$SCORE$ DIE_MIN=1 DIE_MAX=10 }
+	standard_archaeological_site_on_roll_failed_range_entry = { MIN=11 MAX=13 CLUES=2 SCORE=$SCORE$ DIE_MIN=1 DIE_MAX=10 }
+	standard_archaeological_site_on_roll_failed_greater_than_eq_entry = { MIN=14 SCORE=$SCORE$ DIE_MIN=1 DIE_MAX=10 }
+}
+
+standard_archaeological_site_on_roll_failed = {
+	switch = {
+		trigger = is_site_current_stage_score_no_die
+		-8 = { standard_archaeological_site_on_roll_failed_case = { SCORE=-8 } }
+		-7 = { standard_archaeological_site_on_roll_failed_case = { SCORE=-7 } }
+		-6 = { standard_archaeological_site_on_roll_failed_case = { SCORE=-6 } }
+		-5 = { standard_archaeological_site_on_roll_failed_case = { SCORE=-5 } }
+		-4 = { standard_archaeological_site_on_roll_failed_case = { SCORE=-4 } }
+		-3 = { standard_archaeological_site_on_roll_failed_case = { SCORE=-3 } }
+		-2 = { standard_archaeological_site_on_roll_failed_case = { SCORE=-2 } }
+		-1 = { standard_archaeological_site_on_roll_failed_case = { SCORE=-1 } }
+		0 = { standard_archaeological_site_on_roll_failed_case = { SCORE=0 } }
+		1 = { standard_archaeological_site_on_roll_failed_case = { SCORE=1 } }
+		2 = { standard_archaeological_site_on_roll_failed_case = { SCORE=2 } }
+		3 = { standard_archaeological_site_on_roll_failed_case = { SCORE=3 } }
+		4 = { standard_archaeological_site_on_roll_failed_case = { SCORE=4 } }
+		5 = { standard_archaeological_site_on_roll_failed_case = { SCORE=5 } }
+		6 = { standard_archaeological_site_on_roll_failed_case = { SCORE=6 } }
+		7 = { standard_archaeological_site_on_roll_failed_case = { SCORE=7 } }
+		8 = { standard_archaeological_site_on_roll_failed_case = { SCORE=8 } }
+		9 = { standard_archaeological_site_on_roll_failed_case = { SCORE=9 } }
+		10 = { standard_archaeological_site_on_roll_failed_case = { SCORE=10 } }
+		11 = { standard_archaeological_site_on_roll_failed_case = { SCORE=11 } }
+		12 = { standard_archaeological_site_on_roll_failed_case = { SCORE=12 } }
+		13 = { standard_archaeological_site_on_roll_failed_case = { SCORE=13 } }
+		14 >= { standard_archaeological_site_on_roll_failed_case = { SCORE=14 } }
+	}
+	hidden_effect ={
+		switch = {
+			trigger = is_site_current_stage_score
+			5 <= {
+				prev = {
+					leader = { add_experience = @ARCHAEOLOGICAL_SITE_XP_0_CLUE }
+					random_list = {
+						120 = {}
+						10 = {
+							modifier = {
+								factor = 0
+								from = {
+									is_current_stage_clues = 0
+								}
+							}
+							$RANDOM_EVENTS$ = yes
+						}
+					}
+				}
+			}
+			10 <= { add_stage_clues = 1 prev = { leader = { add_experience = @ARCHAEOLOGICAL_SITE_XP_1_CLUE } } }
+			13 <= { add_stage_clues = 2 prev = { leader = { add_experience = @ARCHAEOLOGICAL_SITE_XP_2_CLUE } } }
+		}
+	}
+}
+
+relic_world_deposits = {
+	reset_planet = yes
+	clear_deposits = yes
+	add_deposit = d_relic_dense_ruins
+	add_deposit = d_collapsed_spire
+	add_deposit = d_massive_crevice
+	add_deposit = d_shattered_solar_array
+	add_deposit = d_flooded_reactor_pits
+	add_deposit = d_crumbling_mining_tunnels
+	add_deposit = d_relic_metal_boneyard
+	prevent_anomaly = yes
+}
+
+# SPECIFIC SITES RANDOM EVENTS
+site_moon_bump_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8040} }
+		10 = { fleet_event = { id = ancrel.8080} }
+		10 = { fleet_event = { id = ancrel.8070} }
+		10 = { fleet_event = { id = ancrel.8100} }
+		10 = { fleet_event = { id = ancrel.8101} }
+		10 = { fleet_event = { id = ancrel.8102} }
+		10 = { fleet_event = { id = ancrel.8103} }
+	}
+}
+
+site_echoes_inside_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8050} }
+		10 = { fleet_event = { id = ancrel.8055} }
+		10 = { fleet_event = { id = ancrel.8075} }
+	}
+}
+
+site_target_from_orbit_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8000} }
+		10 = { fleet_event = { id = ancrel.8001} }
+		10 = { fleet_event = { id = ancrel.8002} }
+		10 = { fleet_event = { id = ancrel.8003} }
+		10 = { fleet_event = { id = ancrel.8030} }
+		10 = { fleet_event = { id = ancrel.8031} }
+		10 = { fleet_event = { id = ancrel.8032} }
+		10 = { fleet_event = { id = ancrel.8033} }
+		10 = { fleet_event = { id = ancrel.8040} }
+		10 = { fleet_event = { id = ancrel.8045} }
+		10 = { fleet_event = { id = ancrel.8050} }
+		10 = { fleet_event = { id = ancrel.8055} }
+		10 = { fleet_event = { id = ancrel.8060} }
+		10 = { fleet_event = { id = ancrel.8070} }
+		10 = { fleet_event = { id = ancrel.8075} }
+		10 = { fleet_event = { id = ancrel.8080} }
+		10 = { fleet_event = { id = ancrel.8100} }
+		10 = { fleet_event = { id = ancrel.8101} }
+		10 = { fleet_event = { id = ancrel.8102} }
+		10 = { fleet_event = { id = ancrel.8103} }
+		10 = { fleet_event = { id = ancrel.8110} }
+	}
+}
+
+site_shot_into_the_ground_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8100} }
+		10 = { fleet_event = { id = ancrel.8101} }
+		10 = { fleet_event = { id = ancrel.8102} }
+		10 = { fleet_event = { id = ancrel.8103} }
+		10 = { fleet_event = { id = ancrel.8050} }
+	}
+}
+
+site_cut_to_fit_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8070} }
+	}
+}
+
+site_deja_vu_dig_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8030} }
+		10 = { fleet_event = { id = ancrel.8031} }
+		10 = { fleet_event = { id = ancrel.8032} }
+		10 = { fleet_event = { id = ancrel.8033} }
+		10 = { fleet_event = { id = ancrel.8040} }
+		10 = { fleet_event = { id = ancrel.8045} }
+		10 = { fleet_event = { id = ancrel.8050} }
+		10 = { fleet_event = { id = ancrel.8055} }
+		10 = { fleet_event = { id = ancrel.8060} }
+		10 = { fleet_event = { id = ancrel.8075} }
+		10 = { fleet_event = { id = ancrel.8080} }
+		10 = { fleet_event = { id = ancrel.8100} }
+		10 = { fleet_event = { id = ancrel.8101} }
+		10 = { fleet_event = { id = ancrel.8102} }
+		10 = { fleet_event = { id = ancrel.8103} }
+		10 = { fleet_event = { id = ancrel.8110} }
+	}
+}
+
+site_trench_world_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8090} }
+		10 = { fleet_event = { id = ancrel.8091} }
+		10 = { fleet_event = { id = ancrel.8092} }
+		10 = { fleet_event = { id = ancrel.8093} }
+	}
+}
+
+site_ebb_and_flow_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8040} }
+		10 = { fleet_event = { id = ancrel.8045} }
+		10 = { fleet_event = { id = ancrel.8050} }
+		10 = { fleet_event = { id = ancrel.8055} }
+		10 = { fleet_event = { id = ancrel.8060} }
+		10 = { fleet_event = { id = ancrel.8070} }
+		10 = { fleet_event = { id = ancrel.8075} }
+		10 = { fleet_event = { id = ancrel.8080} }
+		10 = { fleet_event = { id = ancrel.8100} }
+		10 = { fleet_event = { id = ancrel.8101} }
+		10 = { fleet_event = { id = ancrel.8102} }
+		10 = { fleet_event = { id = ancrel.8103} }
+		10 = { fleet_event = { id = ancrel.8110} }
+	}
+}
+
+site_sky_glow_hymn_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8040} }
+		10 = { fleet_event = { id = ancrel.8045} }
+		10 = { fleet_event = { id = ancrel.8080} }
+		10 = { fleet_event = { id = ancrel.8090} }
+		10 = { fleet_event = { id = ancrel.8091} }
+		10 = { fleet_event = { id = ancrel.8092} }
+		10 = { fleet_event = { id = ancrel.8093} }
+		10 = { fleet_event = { id = ancrel.8110} }
+	}
+}
+
+site_warmer_climates_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8040} }
+		10 = { fleet_event = { id = ancrel.8045} }
+		10 = { fleet_event = { id = ancrel.8060} }
+		10 = { fleet_event = { id = ancrel.8070} }
+		10 = { fleet_event = { id = ancrel.8075} }
+		10 = { fleet_event = { id = ancrel.8080} }
+		10 = { fleet_event = { id = ancrel.8100} }
+		10 = { fleet_event = { id = ancrel.8101} }
+		10 = { fleet_event = { id = ancrel.8102} }
+		10 = { fleet_event = { id = ancrel.8103} }
+		10 = { fleet_event = { id = ancrel.8110} }
+	}
+}
+
+site_phoenix_collective_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8040} }
+		10 = { fleet_event = { id = ancrel.8055} }
+		10 = { fleet_event = { id = ancrel.8060} }
+		10 = { fleet_event = { id = ancrel.8070} }
+		10 = { fleet_event = { id = ancrel.8075} }
+		10 = { fleet_event = { id = ancrel.8080} }
+		10 = { fleet_event = { id = ancrel.8090} }
+		10 = { fleet_event = { id = ancrel.8091} }
+		10 = { fleet_event = { id = ancrel.8092} }
+		10 = { fleet_event = { id = ancrel.8093} }
+		10 = { fleet_event = { id = ancrel.8110} }
+	}
+}
+
+site_grand_herald_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8040} }
+		10 = { fleet_event = { id = ancrel.8045} }
+		10 = { fleet_event = { id = ancrel.8055} }
+		10 = { fleet_event = { id = ancrel.8060} }
+		10 = { fleet_event = { id = ancrel.8070} }
+		10 = { fleet_event = { id = ancrel.8075} }
+		10 = { fleet_event = { id = ancrel.8080} }
+		10 = { fleet_event = { id = ancrel.8110} }
+	}
+}
+
+site_ocean_sites_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8055} }
+		10 = { fleet_event = { id = ancrel.8075} }
+		10 = { fleet_event = { id = ancrel.8090} }
+		10 = { fleet_event = { id = ancrel.8091} }
+		10 = { fleet_event = { id = ancrel.8092} }
+		10 = { fleet_event = { id = ancrel.8093} }
+	}
+}
+
+site_popular_rock_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8030} }
+		10 = { fleet_event = { id = ancrel.8031} }
+		10 = { fleet_event = { id = ancrel.8032} }
+		10 = { fleet_event = { id = ancrel.8033} }
+		10 = { fleet_event = { id = ancrel.8040} }
+		10 = { fleet_event = { id = ancrel.8045} }
+		10 = { fleet_event = { id = ancrel.8070} }
+		10 = { fleet_event = { id = ancrel.8080} }
+		10 = { fleet_event = { id = ancrel.8110} }
+	}
+}
+
+site_strange_flows_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8055} }
+		10 = { fleet_event = { id = ancrel.8070} }
+	}
+}
+
+site_from_gateway_sent_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8040} }
+		10 = { fleet_event = { id = ancrel.8045} }
+		10 = { fleet_event = { id = ancrel.8050} }
+		10 = { fleet_event = { id = ancrel.8055} }
+		10 = { fleet_event = { id = ancrel.8060} }
+		10 = { fleet_event = { id = ancrel.8065} }
+		10 = { fleet_event = { id = ancrel.8070} }
+		10 = { fleet_event = { id = ancrel.8075} }
+		10 = { fleet_event = { id = ancrel.8080} }
+		10 = { fleet_event = { id = ancrel.8100} }
+		10 = { fleet_event = { id = ancrel.8101} }
+		10 = { fleet_event = { id = ancrel.8102} }
+		10 = { fleet_event = { id = ancrel.8103} }
+		10 = { fleet_event = { id = ancrel.8110} }
+	}
+}
+
+site_ex_gravitas_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8055} }
+		10 = { fleet_event = { id = ancrel.8070} }
+		10 = { fleet_event = { id = ancrel.8075} }
+	}
+}
+
+site_something_waiting_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8040} }
+		10 = { fleet_event = { id = ancrel.8045} }
+		10 = { fleet_event = { id = ancrel.8055} }
+		10 = { fleet_event = { id = ancrel.8070} }
+		10 = { fleet_event = { id = ancrel.8075} }
+		10 = { fleet_event = { id = ancrel.8080} }
+		10 = { fleet_event = { id = ancrel.8100} }
+		10 = { fleet_event = { id = ancrel.8101} }
+		10 = { fleet_event = { id = ancrel.8102} }
+		10 = { fleet_event = { id = ancrel.8103} }
+		10 = { fleet_event = { id = ancrel.8110} }
+	}
+}
+
+site_buried_deep_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8040} }
+		10 = { fleet_event = { id = ancrel.8055} }
+		10 = { fleet_event = { id = ancrel.8070} }
+		10 = { fleet_event = { id = ancrel.8100} }
+		10 = { fleet_event = { id = ancrel.8101} }
+	}
+}
+
+site_in_memoriam_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8000} }
+		10 = { fleet_event = { id = ancrel.8001} }
+		10 = { fleet_event = { id = ancrel.8040} }
+		10 = { fleet_event = { id = ancrel.8045} }
+		10 = { fleet_event = { id = ancrel.8060} }
+		10 = { fleet_event = { id = ancrel.8075} }
+		10 = { fleet_event = { id = ancrel.8080} }
+		10 = { fleet_event = { id = ancrel.8100} }
+		10 = { fleet_event = { id = ancrel.8101} }
+		10 = { fleet_event = { id = ancrel.8102} }
+		10 = { fleet_event = { id = ancrel.8103} }
+	}
+}
+
+site_the_last_stand_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8000} }
+		10 = { fleet_event = { id = ancrel.8001} }
+		10 = { fleet_event = { id = ancrel.8040} }
+		10 = { fleet_event = { id = ancrel.8045} }
+		10 = { fleet_event = { id = ancrel.8055} }
+		10 = { fleet_event = { id = ancrel.8060} }
+		10 = { fleet_event = { id = ancrel.8070} }
+		10 = { fleet_event = { id = ancrel.8075} }
+		10 = { fleet_event = { id = ancrel.8080} }
+		10 = { fleet_event = { id = ancrel.8110} }
+	}
+}
+
+site_dark_secret_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8055} }
+		10 = { fleet_event = { id = ancrel.8070} }
+		10 = { fleet_event = { id = ancrel.8075} }
+		10 = { fleet_event = { id = ancrel.8100} }
+		10 = { fleet_event = { id = ancrel.8101} }
+		10 = { fleet_event = { id = ancrel.8102} }
+		10 = { fleet_event = { id = ancrel.8103} }
+	}
+}
+
+
+site_ruins_of_shallash_random_events = {
+	random_list = {
+		10 = { site_guardian_droids_trap = yes }
+		10 = { fleet_event = { id = ancrel.8040 } }
+		10 = { fleet_event = { id = ancrel.8055 } }
+		10 = { fleet_event = { id = ancrel.8070 } }
+		2 = { fleet_event = { id = ancrel.8075 } }
+		10 = { fleet_event = { id = ancrel.8080 } }
+		10 = { fleet_event = { id = ancrel.8100 } }
+		10 = { fleet_event = { id = ancrel.8110 } }
+		10 = {
+			modifier = {
+				factor = 0
+				OR = {
+					from.planet = {
+						NOT = { is_planet_class = pc_nuked }
+					}
+					leader.species = {
+						has_trait = trait_pc_nuked_preference
+					}
+					owner = { is_machine_empire = yes }
+				}
+			}
+			fleet_event = { id = federations2.701 }
+		}
+		40 = { fleet_event = { id = federations2.702 } }
+	}
+}
+
+site_relicrails_random_events = {
+	random_list = {
+		10 = { fleet_event = { id = ancrel.8040 } }
+		10 = { fleet_event = { id = ancrel.8055 } }
+		10 = { fleet_event = { id = ancrel.8065 } }
+		10 = { fleet_event = { id = ancrel.8070 } }
+		10 = { fleet_event = { id = ancrel.8080 } }
+	}
+}

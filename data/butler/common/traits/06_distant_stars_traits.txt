@@ -1,0 +1,204 @@
+
+
+####################
+# Scientist Traits #
+####################
+
+leader_trait_scientist_brainslug = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_brainslugged.dds"
+	modifier = {
+		all_technology_research_speed = 0.10
+		science_ship_survey_speed = 0.15
+		ship_anomaly_research_speed_mult = 0.15
+	}
+	initial = no
+	randomized = no
+
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+##################
+# General Traits #
+##################
+
+leader_trait_general_brainslug = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_brainslugged.dds"
+	modifier = {
+		armies_upkeep_mult = -0.15
+	}
+	initial = no
+	randomized = no
+
+	leader_trait = { general }
+	leader_class = { general }
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+#####################
+# Admiral Traits    #
+#####################
+
+leader_trait_admiral_brainslug = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_brainslugged.dds"
+	modifier = {
+		ship_fire_rate_mult = 0.05
+		ship_evasion_mult = 0.05
+		ships_upkeep_mult = -0.1
+	}
+	initial = no
+	randomized = no
+
+	leader_trait = { admiral }
+	leader_class = { admiral }
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+leader_trait_admiral_hells_heart = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_hells_heart.dds"
+	modifier = {
+		ship_fire_rate_mult = 0.10
+		ship_weapon_damage = 0.10
+		ship_speed_mult = 0.10
+		ship_evasion_mult = -0.05
+		ship_disengage_chance_mult = -0.33
+	}
+	initial = no
+	randomized = no
+
+	leader_trait = { admiral }
+	leader_class = { admiral }
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+###################
+# Governor Traits #
+###################
+
+leader_trait_governor_brainslug = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_brainslugged.dds"
+	modifier = {
+		planet_building_build_speed_mult = 0.10
+		planet_jobs_engineering_research_produces_mult = 0.15
+		planet_jobs_physics_research_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.15
+	}
+	initial = no
+	randomized = no
+
+	leader_trait = { governor }
+	leader_class = { governor }
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+leader_trait_governor_gray = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_psionic_chosen_one.dds"
+	immortal_leaders = yes
+	modifier = {
+		planet_buildings_cost_mult = -0.4
+		planet_building_build_speed_mult = 0.4
+		planet_jobs_energy_produces_mult = 0.15
+		planet_jobs_minerals_produces_mult = 0.15
+		deposit_blockers_cost_mult = -0.4
+		planet_clear_blocker_time_mult = -0.4
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no
+}
+
+#################
+#  Ruler Traits #
+#################
+
+leader_trait_ruler_brainslug = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_brainslugged.dds"
+	modifier = {
+		country_naval_cap_mult = 0.10
+		country_physics_research_produces_mult = 0.10
+		country_society_research_produces_mult = 0.10
+		country_engineering_research_produces_mult = 0.10
+	}
+	initial = no
+	randomized = no
+
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+################
+#  Pop Traits  #
+################
+
+trait_brainslug = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/trait_brainslugged.dds"
+	initial = no
+	randomized = no
+	modification = no
+
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.10
+		planet_jobs_physics_research_produces_mult = 0.10
+		planet_jobs_society_research_produces_mult = 0.10
+		planet_jobs_unity_produces_mult = 0.10
+		pop_growth_speed = -0.25
+	}
+}
+
+trait_nivlac = {
+	cost = 2
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_resilient.dds"
+	initial = no
+	randomized = no
+	modification = no
+	potential_crossbreeding_chance = 1.0
+
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		pop_environment_tolerance = 0.50
+		pop_growth_speed = 0.15
+	}
+	slave_cost = {
+		energy = 100
+	}	
+}

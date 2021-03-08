@@ -1,0 +1,268 @@
+﻿### Plantoid 1
+### Created by Rufus Tronde Miranda van den Brink
+PLANT = {	
+	### SHIPS
+	
+	category = "Plantoid"
+
+	language = "l_simp_chinese"
+	
+	ship_names = {
+	
+		generic = {}
+	
+		corvette = {  
+			"刺" "银刺" "铁刺" "穿刺" "翠刺" "金刺" "藻丝" "银藻丝" "铁藻丝" "玉藻丝" "翠藻丝" "金藻丝" "针" "银针" "铁针" "玉针" "金针" "穿针" "翠针" "疹子" 
+		}
+		
+		destroyer = { 
+			"花瓣" "银色 花瓣" "钢铁花瓣" "玉花瓣" "翡翠花瓣" "金色花瓣" "尖刺" "银色之尖刺" "金色之尖刺" "钢铁之尖刺" "翡翠之尖刺" "银色 针刺" "针刺" "钢刺" "锐利针刺" "杀人狂魔" "切割者"
+		}
+		
+		cruiser = { 
+			"刀" "银刀" "铁刀" "玉刀" "翡翠刀" "金刀" "切刀" "砍刀" "刺刀"
+		}
+		
+		battleship = { 
+			斯帕戈姆 达歌特姆 闪布棱戈姆 辛格洛 瓦戈罗戈 马许格里格 伊戈里姆 艾格斯姆 霍布罗格 古加那 瑟马格 沙班赫 威戈里姆 沃格西纳 斯普棱格 胡米格尔 库达特 卡戈姆 卡斯弗路德 科瓦布兰
+		}
+
+		titan = { 
+			斯帕戈姆 达歌特姆 闪布棱戈姆 辛格洛 瓦戈罗戈 马许格里格 伊戈里姆 艾格斯姆 霍布罗格 古加那 瑟马格 沙班赫 威戈里姆 沃格西纳 斯普棱格 胡米格尔 库达特 卡戈姆 卡斯弗路德 科瓦布兰
+		}
+
+		colossus = { 
+			斯帕戈姆 达歌特姆 闪布棱戈姆 辛格洛 瓦戈罗戈 马许格里格 伊戈里姆 艾格斯姆 霍布罗格 古加那 瑟马格 沙班赫 威戈里姆 沃格西纳 斯普棱格 胡米格尔 库达特 卡戈姆 卡斯弗路德 科瓦布兰
+		}
+		
+		juggernaut = {
+			"亘古根须" "命运之藤蔓" "天命之根须"
+		}
+		
+		science = {
+			"漂流之叶" "漂浮之叶" "寻觅之叶" "飘扬之叶" "翱翔之叶"
+		}
+		
+		colonizer = {
+			"种子太空舱" "果实携带者"
+		}
+
+		sponsored_colonizer = {
+			"种子太空舱" "果实携带者"
+		}
+		
+		constructor = {
+			"分生组织"
+		}
+
+		transport = {
+			"运输"
+		}
+		
+		mining_station = {
+			"根"
+		}
+		research_station = {
+			"绿雕塑术"
+		}
+		observation_station = {
+			"感知之藤" "攀登之藤" "贪婪之藤" "缠绕之藤" "生长之藤" "封闭之藤" "蒲公英之藤"
+		}
+	
+		military_station_small = { "翼·"  }
+	
+		ion_cannon = { "翼·"  }
+	}
+	
+	fleet_names = {
+		random_names = {
+			"开花花冠" "繁荣花冠" "征服花冠" "漩涡花冠" "萌发花冠"
+		}
+		sequential_name = "花冠﻿ %C%"
+	}
+
+	### ARMIES
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "防护花环 %C%"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "葬礼花圈 %C%"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "葬礼花圈 %C%"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "葬礼花圈 %C%"
+		}
+		
+		defense_army = {
+			sequential_name = "防护花环 %C%"
+		}
+			
+		assault_army = {
+			sequential_name = "葬礼花圈 %C%"
+		}
+		
+		slave_army = {
+			sequential_name = "边界花环﻿ %C%"
+		}
+
+		undead_army = {
+			sequential_name = "%O%恐怖花冠"
+		}
+		
+		clone_army = { 
+			sequential_name = "胶印花环 %R%"
+		}
+		
+		robotic_army = {
+			sequential_name = "黄铜花环 %R%"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "黄铜花环 %R%"
+		}
+		
+		psionic_army = { 
+			sequential_name = "橡木花环 %C%"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "鲜肉花环 %C%"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "转基因花环 %C%"
+		}
+		occupation_army = {
+			sequential_name = "%O% 加里森波德"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% 安卓 加里森波德"
+		}
+		primitive_army = {
+			sequential_name = "原始军队 %C%"
+		}
+		industrial_army = {
+			sequential_name = "工业军队 %C%"
+		}
+		postatomic_army = {
+			sequential_name = "后原子军 %C%"
+		}
+	}
+
+		
+	
+	### PLANETS
+	
+	planet_names = {
+	
+		generic = {
+			names = {
+				"美丽星" "凯勒星" "纽斯塔特" "锐萨特" "纳特" "霍普希德" "巴丁缀姆" "霍普涅克塔" "霍普特纳" "福禄特" "斯普林春" "春雨" "新莱特" "维克特利" "斯普劳特" "抽芽" "绿意盎然星" "艳星" "布鲁名"
+			}
+		}
+		
+		pc_desert = {
+			names = {
+				"仙人掌之眠" "棕榈绿洲" "无尽饥渴" "焦黄" "沙丘" "红土地" "红色沙丘" "黄色" "旱地" "希望" "永恒之阳" "沙子" "沙尘暴" "燃烧平原" "沙漠之花" "焦黄树叶" "焦干" "枯萎之梦" "树叶炙烤" "燃烧灌木"
+			}
+		}
+
+		pc_savannah = {
+			names = {
+				"太阳平原" "远方草原" "大平原" "平原" "草原" "光辉" "太阳泪" "狂嚎平原" "黄色草原" "多风草原" "金色田野" "茂草原" "独孤求树"
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+				"云雾森林" "热带雨林" 茂盛 叶原 绿野 "不朽花草" "永恒绿带" "迷雾森林" "欣喜" "树外桃源" "菌带" "天蓬" "大湿地" 天堂
+			}
+		}
+		
+		pc_arid = {
+			names = {
+				"干叶" "阳炎审视" "干涸" "岩石" "深根" "忍耐" "大干旱" "永不安生" "叶之愚行" "荒凉" "贫瘠土壤" 无树 胜利 灌木地 林缘地  "树叶恐惧" "大榭树" 努力 
+			} 
+		}
+		
+		pc_continental = {
+			names = {tem
+				"多林" "丰草" 绿宝石 "沃土" "绿光" 季节 "绿林" "黄金王冠" "果园" "翡翠天地" "诚信过时" "美景" 繁荣
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+				"大堡礁" "珊瑚之家" 永恒之海 蓝色 海洋 靛蓝 "蓝色希望" "靛蓝之梦" 丰富 "蓝色珍珠" 液滴 水草 "浮花" "蓝色之家"  
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+				"北风之缘" "苔藓平原" "普鲁登斯" "冰霜" "春天" "岩石" "冷夜" "霜冻苔藓" "灰坚果" "岩石坚果" "苔藓云杉" "淤泥土壤" "石头森林" "晚开植物"			
+			}
+		}
+
+		pc_alpine = {
+			names = {
+				"开花斜坡" 霜冻 "鲜花谷" "山谷" "波涛山脉" "巍峨山岭" "凹凸土地" "撕裂土地" "白色峭壁" "春之谷" 松林地 "冷杉峡谷" "白色山岭"	"荣耀峡谷"		
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+				"常青" "坚毅" "忍耐" "雪原" "白毛风" "冬之国" "永冬"	"白毯"	"雪球" "霜根" "银原" "银装大地" "冰花" "冰叶" "霜花" "迪斯沃贝"
+			}
+		}
+		
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+	
+	### CHARACTERS
+	
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+			}
+			
+			# Always combined with a second name
+			first_names = {
+				"花瓣"
+				"叶子·"
+				"根茎"
+				"茎"
+			}
+			
+			# Always combined with a first name
+			second_names = {
+				沃德 霍华德 劳埃德 塔纳 尼古拉斯 马修斯 埃里斯 惠尔鑫 惠特克 巴顿 霍金斯 加洛维克 斯佩克特 里弗斯 弗农 尼文
+			}
+
+			regnal_first_names = {
+				"躯干·"
+			}
+			
+			regnal_second_names = {
+				约姆古约格 约姆法拉汉 约姆齐格德 约姆佩德翁 约姆塔格德 约姆尼罗格 约姆图拉兹 约姆修特尔 约姆休特德 约姆英拉德 约姆鲁格鲁 约姆提奎克 约姆达明特 约姆特拉古德 约姆沃特南 约姆拉斯格 约姆雷姆 约姆纳古德 约姆弗英布 约姆拉苏德 约姆普罗斯 约姆弗利普 约姆普特利格 约姆沙鲁夫 约姆卡纳布 约姆特郎柯德 约姆加法棱 约姆尤德蒙 约姆蒙达 约姆图哈姆 约姆贝英德 约姆提帕许 约姆苏格拉德 约姆费戈弗 约姆布伊朵
+			}
+		}
+	}
+}

@@ -1,0 +1,81 @@
+@cooldown = 3600
+
+federation_build_fleets_everyone = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = federation_build_fleets_everyone }
+					has_modifier = federation_law_category_build_fleets_cooldown
+					has_any_federation_law_in_category = law_category_build_fleets
+				}
+			}
+		}
+	}
+	on_enact = {
+		set_only_leader_builds_fleets = no
+		if = {
+			limit = { has_federation_flag = no_federation_fleet_build_right_cooldown }
+			remove_federation_flag = no_federation_fleet_build_right_cooldown
+		}
+		else_if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_build_fleets_cooldown
+				days = @cooldown
+			}
+		}
+	}
+	
+	ai_weight = {
+		base = 51
+	}
+}
+
+federation_build_fleets_only_leader = {
+	potential = {
+		host_has_dlc = Federations		
+		NOT = {
+			has_federation_law = fleet_contribution_none
+		}
+	}
+	allow = {
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = federation_build_fleets_only_leader }
+					has_modifier = federation_law_category_build_fleets_cooldown
+					has_any_federation_law_in_category = law_category_build_fleets
+				}
+			}
+		}
+	}
+	required_centralization = {
+		base = 2
+	}
+	on_enact = {
+		set_only_leader_builds_fleets = yes
+		if = {
+			limit = { has_federation_flag = no_federation_fleet_build_right_cooldown }
+			remove_federation_flag = no_federation_fleet_build_right_cooldown
+		}
+		else_if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_build_fleets_cooldown
+				days = @cooldown
+			}
+		}
+	}
+	
+	ai_weight = {
+		base = 0
+		
+		#Default support
+		modifier = {
+			desc = federation_acceptance_generally_positive
+			add = 51
+		}
+	}
+}

@@ -1,0 +1,232 @@
+﻿### Hive Mind 2
+### Created by Douglas Furen
+
+HIVE2 = {
+	category = "Hive Mind"
+	randomized = no
+	should_name_home_system_planets = no
+
+	ship_names = {
+		generic = {
+		}
+
+		corvette = {
+			"Minor Battle Unit"
+		}
+		
+		destroyer = {
+			"Battle Unit"
+		}
+		
+		cruiser = {
+			"Battle Unit"
+		}
+		
+		battleship = {
+			"Major Battle Unit"
+		}
+
+		titan = {
+			"Significant Battle Unit"
+		}
+
+		colossus = {
+			"Pillar Battle Unit "
+		}
+
+		juggernaut = {
+			"Pinnacle Battle Unit"
+		}
+		
+		science = {
+			"Searcher Unit"
+		}
+		
+		colonizer = {
+			"Expansion Unit"
+		}
+		
+		constructor = {
+			"Construction Unit"
+		}
+	
+		transport = {
+			"Carrier Unit"
+		}
+	
+		military_station_small = {
+			"Orbital Defense Unit"
+		}
+
+		ion_cannon = {
+			"Ion Defense Unit"
+		}
+	}
+
+	ship_class_names = {
+		generic = {
+			"Entity Alef" "Entity Bet" "Entity Gimel" "Entity Vav" "Entity Zayin" "Entity Dalet" "Entity Lamed" "Entity Samech" "Entity Tsade" "Entity Shin" "Entity Tav" "Entity Chet" "Entity Tet" "Entity Yod" "Entity Kaf" "Entity Mem" "Entity Ayin" "Entity Qof" "Entity Resh"
+		}		
+	}
+
+	fleet_names = {
+		random_names = {
+			"Intention Throng" "Purpose Throng" "Design Throng" "Function Throng" "Determination Throng" "Direction Throng" "Principle Throng" "Target Throng" "Aim Throng" "Goal Throng" "Correction Throng" "Decision Throng" "Dedication Throng" "Tenacity Throng" "Resolve Throng" "Resolute Throng" "Objective Throng" "Target Throng" "Solution Throng"
+		}
+		sequential_name = "Battle Throng %CC%"
+	}
+	
+	army_names = {
+	
+		machine_defense = {
+			sequential_name = "%O% Protection Extremity"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "%O% Assault Extremity"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "%O% Assault Extremity"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "%O% Assault Extremity"
+		}
+
+		defense_army = {
+			sequential_name = "%O% Protection Extremity"
+		}
+			
+		assault_army = {
+			sequential_name = "%O% Assault Extremity"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Forfeit Extremity"
+		}
+		
+		clone_army = { 
+			sequential_name = "%O% Replicate Extremity"
+		}
+		
+		undead_army = {
+			sequential_name = "%O% Dread Extremity"
+		}
+
+		robotic_army = {
+			sequential_name = "%O% Machine Extremity"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "%O% Defense Machine Extremity"
+		}
+	
+		psionic_army = { 
+			sequential_name = "%O% Weaponized Thought Extremity"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Morphed Extremity"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% Enhanced Extremity"
+		}
+
+		primitive_army = {
+			sequential_name = "%C% Primitive Extremity"
+		}
+		industrial_army = {
+			sequential_name = "%C% Industrial Extremity"
+		}
+		postatomic_army = {
+			sequential_name = "%C% Ruined Extremity"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"Cluster Mak" "Grip Tak" "Acquisition Gim" "Procurement Voph" "Obtainment Fir" "Appropriation Yig" "Amendment Jud" "Gain Oep" "Addition Thet" "Attainment Shu" "Retrieval Ahin" "Inclusion Chak" "Extension Hemi" "Annexation Treh" "Addendum Egr" "Increment Pann" "Dividend Byel" "Advancement Sek" "Step Kyn" "Alef Cluster" "Bet Grip" "Gimel Acquisition" "Vav Procurement" "Zayin Obtainment" "Dalet Appropriation" "Samech Gain" "Tsade Attainment" "Tav Inclusion" "Chet Extension" "Tet Annexation" "Yod Expansion" "Kaf Addendum" "Mem Increment" "Ayin Dividend" "Qof Advancement" "Resh Step"
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+	}
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+				"Motile Organ 1" "Motile Organ 2" "Motile Organ 3" "Motile Organ 4" "Motile Organ 5" "Motile Organ 6" "Motile Organ 7" "Motile Organ 8" "Motile Organ 9" "Motile Organ 10" "Motile Organ 11" "Motile Organ 12" "Motile Organ 13" "Motile Organ 14" "Motile Organ 15" "Motile Organ 16" "Motile Organ 17" "Motile Organ 18" "Motile Organ 19" "Motile Organ 20" "Motile Organ 21" "Motile Organ 22" "Motile Organ 23" "Motile Organ 24" "Motile Organ 25" "Motile Organ 26" "Motile Organ 27" "Motile Organ 28" "Motile Organ 29" "Motile Organ 30" "Motile Organ 31" "Motile Organ 32" "Motile Organ 33" "Motile Organ 34" "Motile Organ 35" "Motile Organ 36" "Motile Organ 37" "Motile Organ 38" "Motile Organ 39" "Motile Organ 40" "Motile Organ 41" "Motile Organ 42" "Motile Organ 43" "Motile Organ 44" "Motile Organ 45" "Motile Organ 46" "Motile Organ 47" "Motile Organ 48" "Motile Organ 49" "Motile Organ 50" "Motile Organ 51" "Motile Organ 52" "Motile Organ 53" "Motile Organ 54" "Motile Organ 55" "Motile Organ 56" "Motile Organ 57" "Motile Organ 58" "Motile Organ 59" "Motile Organ 60" "Motile Organ 61" "Motile Organ 62" "Motile Organ 63" "Motile Organ 64" "Motile Organ 65" "Motile Organ 66" "Motile Organ 67" "Motile Organ 68" "Motile Organ 69" "Motile Organ 70" "Motile Organ 71" "Motile Organ 72" "Motile Organ 73" "Motile Organ 74" "Motile Organ 75" "Motile Organ 76" "Motile Organ 77" "Motile Organ 78" "Motile Organ 79" "Motile Organ 80"
+			}
+			
+			# Always combined with a second name
+			first_names = {
+			}
+			
+			# Always combined with a first name
+			second_names = {
+			}
+			
+			regnal_first_names = {
+			}
+			
+			regnal_second_names = {
+			}
+		}
+	}
+
+	ruler_names = {
+		default = {
+			full_names = {
+				"Consciousness" "Mind" "Legion" "Source" "Wellspring"
+			}
+		}
+	}
+}

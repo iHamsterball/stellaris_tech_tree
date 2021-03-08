@@ -1,0 +1,143 @@
+################################
+#
+# Federations - Archaeological Sites
+# Written by Pierre du Plessis
+#
+###############################
+
+# Ruins of Shallash
+site_ruins_of_shallash = {
+	desc = "site_ruined_starsystem_intro"
+	picture = GFX_evt_tomb_world
+	stages = 4
+	weight = 0 #set via initialiser
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_E1
+		event = federations2.2
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_E2
+		event = federations2.3
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_E3
+		event = federations2.4
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_E4
+		event = federations2.5
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_ruins_of_shallash_random_events }
+		}
+	}
+}
+
+################################
+#
+# Federations - Archaeological Sites
+# Written by Gemma Thomson
+#
+###############################
+
+# Relic Rails
+relicrails_digsite = {
+	desc = relicrails_digsite_desc
+	picture = GFX_evt_archaeological_dig
+	stages = 4
+	max_instances = 1
+	weight = 0 # Generated from an event
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = { default_site_visible_trigger = yes }
+	stage = {
+		difficulty = 1
+		event = federations3.1010
+		icon = GFX_archaeology_runes_D1
+	}
+	stage = {
+		difficulty = 2
+		event = federations3.1015
+		icon = GFX_archaeology_runes_D2
+	}
+	stage = {
+		difficulty = 3
+		event = federations3.1020
+		icon = GFX_archaeology_runes_D3
+	}
+	stage = {
+		difficulty = 3
+		event = federations3.1025
+		icon = GFX_archaeology_runes_D4
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_relicrails_random_events } }
+	}
+}
+
+# Genius Caeli (Joint Operation)
+leylines_digsite = {
+	desc = leylines_digsite_desc
+	picture = GFX_evt_clocks
+	stages = 4
+	max_instances = 200
+	weight = 0 # Generated from an event
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = { default_site_visible_trigger = yes }
+	stage = {
+		difficulty = 2
+		event = federations3.2105
+		icon = GFX_archaeology_runes_A1
+	}
+	stage = {
+		difficulty = 3
+		event = federations3.2110 #Split path
+		icon = GFX_archaeology_runes_A2
+	}
+	stage = {
+		difficulty = 3
+		event = federations3.2115 #Split path
+		icon = GFX_archaeology_runes_A3
+	}
+	stage = {
+		difficulty = 4
+		event = federations3.2120
+		icon = GFX_archaeology_runes_A4
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = {
+				RANDOM_EVENTS = site_warmer_climates_random_events
+			}
+		}
+	}
+}

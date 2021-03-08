@@ -1,0 +1,226 @@
+﻿### Molluscoid 3
+### Created by Alexander Oltner
+MOL3 = {
+
+	category = "Molluscoid"
+
+	language = "l_simp_chinese"
+	
+	ship_names = {
+		generic = {
+			加百拉 娜欧米 罗伦 克拉拉 罗拉 卡拉 尼可 斯凯 伊利扎 帕翠夏 琳达 芭芭拉 詹妮弗 马瑞亚 苏珊 玛格丽特 朵罗西
+			手杖刀 费朗格 塔沃尔 帕塔 卡斯坦 马卡南 寇佩施 阿西娜斯 马克胡特尔 贝拉瓦 尼姆恰 舒特尔 卡拉比 帕拉格 科勒王 苏里克 尼尔波 曼度 卡姆匹兰 加里
+			道格拉斯 基思 霍华德 罗素 克莱顿 李 史蒂夫 汤姆 科雷 奥利弗 肯尼思 拉夫 安迪 东尼 泰隆 劳伦斯 帕特里克 哈里 艾伦
+			弗拉瑞 毕安奇 瑞奇 马瑞欧 "迪·卢卡" 克斯塔 吉欧达诺
+			纳提吉尔 纳达尔 彼得乔斯克 彼得雷斯姆 阿塔维利斯茨 阿塔普德萨 潘达萨克 潘克斯查 法尔塔拉姆 法尔卡博斯 米尔苏斯卡 米尔弗尔德拉克 拉塔加斯 拉博斯诺尔 加尔苏波斯克 加尔卡拉斯卡 什塔纳斯克 什普尔坦 罗多马恩 罗伊斯克 卡坦纳布 卡萨罗斯 伊拉莫诺斯克 伊拉欧巴斯
+			尼曼 布拉恩 斯茨瓦特 库鲁格 斯特恩 凯勒尔 斯初博特 布奥曼 兹格勒尔 布拉恩德 索尔 克莱特兹 布尔格米斯特 安德博特
+			格拉戈巴斯 格拉戈拉格 格拉戈欧德尔 格鲁格恩加尔 格鲁加斯 格鲁加本 格鲁戈杜尔 格鲁戈梅姆 格鲁果尔 格鲁德海 格鲁格索 格鲁谷德 哈格哏 赫尔格梅姆  布赫恩拘尔 布哈格斯 布哈德果博 布哈弗斯 布哈格罗斯 布赫德加尔博
+			索尔迪戈 索尔贾维斯 索尔胡尼斯 索尔奥里巴 索尔拉瑞沙 索尔博尔 索尔希瓦 索尔奥本 索尔弗吉 索尔阿哈斯 索尔乌亚巴 索尔阿姆 索尔奥巴拉 索尔艾维姆 索尔拉提 索尔加恩 索尔弗雷斯 索尔加林 索尔埃恩 索尔阿拉巴
+		}
+
+		corvette = {}
+		
+		destroyer = {}
+		
+		cruiser = {}
+		
+		battleship = {}
+		
+		titan = {
+		}
+
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			"那里科夫 虚空旅行者" "戈壁 虚空旅行者" "余思 虚空旅行者" "哈斯 虚空旅行者" "斯拉木斯 虚空旅行者" "依巴斯 虚空旅行者" "奥斯伊姆 虚空旅行者" "格尔罗哥 虚空旅行者" "格莱斯 虚空旅行者" "戈尔韦 虚空旅行者" "索瓦里 虚空旅行者" "奥比亚斯 虚空旅行者" "杜索 虚空旅行者" "芬奥尔 虚空旅行者"
+		}
+		sequential_name = "深渊舰队 %C%"
+	}
+
+	### ARMIES
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "防御工事旅 %C%"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "突击旅 %C%"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "突击旅 %C%"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "突击旅 %C%"
+		}
+	
+		defense_army = {
+			sequential_name = "防御工事旅 %C%"
+		}
+			
+		assault_army = {
+			sequential_name = "突击旅 %C%"
+		}
+		
+		slave_army = {
+			sequential_name = "劳工群体 %C%"
+		}
+		
+		clone_army = { 
+			sequential_name = "幽灵旅 %C%"
+		}
+
+		undead_army = {
+			sequential_name = "%O%恐怖旅团"
+		}
+
+		robotic_army = {
+			sequential_name = "钢铁旅 %C%"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "钢铁旅 %C%"
+		}
+		
+		psionic_army = { 
+			sequential_name = "思想鞭策者 %C%"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "憎恶 %C%"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "生物强化旅 %C%"
+		}
+		occupation_army = {
+			sequential_name = "%O% 加里森波德"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% 安卓 加里森波德"
+		}
+		primitive_army = {
+			sequential_name = "原始军队 %C%"
+		}
+		industrial_army = {
+			sequential_name = "工业军队 %C%"
+		}
+		postatomic_army = {
+			sequential_name = "后原子军 %C%"
+		}
+	}
+	### PLANETS
+
+	planet_names = {
+
+		generic = {
+			names = {
+				格雷陈 海尔德 海尔德加德 格特鲁德 维尔赫米娜 利斯贝斯 科斯汀 乔汉娜 安尼塔 弗南德兹 萨恩彻兹 罗泊兹 马汀 普罗兹 格恩扎勒兹 阿尔瓦瑞兹 格美兹 迪阿兹 芬恩 奥斯卡 西德尼 埃尔隆 文森特 安格斯 格兰特 卢克 麦尔斯 莫顿 兰达尔 雷金纳德 赫博特 卫斯理 尼吉尔 亚历山大 多米尼克 布拉德利 斯卡达利昂 穆卡达利昂 沃曼隆 潘德那敏 奥德拉吉 卡吉昂 维尼顿 拉卡里昂 杜克鲁姆昂 纳斯塔昂 尼索格昂 塔格昂
+			}
+		}
+		
+		pc_desert = {
+			names = {
+				格雷陈 海尔德 海尔德加德 格特鲁德 维尔赫米娜 利斯贝斯 科斯汀 乔汉娜 安尼塔
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+				弗南德兹 萨恩彻兹 罗泊兹 马汀 普罗兹 格恩扎勒兹 阿尔瓦瑞兹 格美兹 迪阿兹
+			}
+		}
+		
+		pc_arid = {
+			names = {
+				格伊斯 格局姆 格赫瓦 格哈拉 格赫索 格赫雷比 格赫罗格 格赫斯罗维 格赫德维 格赫姆尼 格赫瓦尔 格赫姆尔
+			}
+		}
+		
+		pc_continental = {
+			names = {
+				芬恩 奥斯卡 西德尼 埃尔隆 文森特 安格斯 格兰特 卢克 麦尔斯 莫顿 兰达尔 雷金纳德 赫博特 卫斯理 尼吉尔 亚历山大 多米尼克 布拉德利
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+				丹尼尔 蒂博 吕克 多米尼克 塞巴斯蒂安 雨果
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+				斯卡达利昂 穆卡达利昂 沃曼隆 潘德那敏 奥德拉吉 卡吉昂 维尼顿 拉卡里昂 杜克鲁姆昂 纳斯塔昂 尼索格昂 塔格昂
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+				云雀 麻雀 蜘蛛 海星 魔鬼鱼 鹳 鲟鱼 剑鱼 貘 老虎 “虎鲨”秃鹰 海象 金刚狼 阿帕奇 阿兹特克 哥萨克 德尔维希
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+
+	### CHARACTERS
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+				法拉吉 伊玛姆 吉拉尼 吉恩果 巨马恩 克哈米斯 科万勒 勒恩斯维 勒斯博 勒特斯瓦罗 卢特恩多 马荷卢巴恩德尔 马卡罗 马勒卡
+			}
+			
+			# Always combined with a second name
+			first_names = {
+			}
+			
+			# Always combined with a first name
+			second_names = {
+			}
+			
+			regnal_first_names = {
+				福特曼 嘉德纳尔 加略特 盖茨 加菲尔德 加百利 丹尼尔斯 达令 伊斯特布鲁克 埃德沃德 艾德艾尔斯坦 艾利亚特 埃默森 艾瑞克森
+			}
+			
+			regnal_second_names = {
+				尤里里
+			}
+		}
+	}
+}

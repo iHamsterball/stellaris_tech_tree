@@ -1,0 +1,130 @@
+
+
+# Subsidiary
+subsidiary = {
+	can_expand = yes
+	can_be_integrated = no
+	joins_overlord_wars = yes
+	calls_overlord_to_war = yes
+	can_do_diplomacy = yes
+	
+	diplo_threat = 1.5
+	
+	subject_tax_rate = {
+		energy = 0.25
+	}
+	
+	potential = {
+		is_country_type = default
+		from = { has_authority = auth_corporate }
+	}
+	
+	effect = {
+		if = {
+			limit = {
+				from = { 	
+					is_country_type_with_subjects = no
+				}
+			}
+			set_subject_of = {
+				who = none
+			}
+			break = yes
+		}		
+		if = {
+			limit = {
+				from = { has_valid_civic = civic_inwards_perfection }
+			}
+			set_subject_of = {
+				who = from
+				subject_type = tributary
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				from = { 	
+					has_valid_civic = civic_hive_devouring_swarm
+				}
+			}
+			set_subject_of = {
+				who = none
+			}
+			break = yes
+		}			
+		if = {
+			limit = {
+				NOT = { is_same_species = from }
+				from = { 
+					has_valid_civic = civic_fanatic_purifiers
+				}
+			}
+			set_subject_of = {
+				who = none
+			}
+			break = yes
+		}		
+		if = {
+			limit = {
+				from = { 
+					is_country_type = awakened_fallen_empire
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+			set_subject_of = {
+				who = from
+				subject_type = satellite
+			}
+			break = yes
+		}	
+		if = {
+			limit = {
+				from = { 
+					is_country_type = awakened_fallen_empire
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+			set_subject_of = {
+				who = from
+				subject_type = dominion
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				from = { 
+					is_country_type = awakened_fallen_empire
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+			set_subject_of = {
+				who = from
+				subject_type = signatory
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				from = { 
+					is_country_type = awakened_fallen_empire
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+			set_subject_of = {
+				who = from
+				subject_type = thrall
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				from = { NOT = { has_authority = auth_corporate } }
+			}
+			set_subject_of = {
+				who = from
+				subject_type = vassal
+			}
+			break = yes
+		}			
+	}
+}

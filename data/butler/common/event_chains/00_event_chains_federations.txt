@@ -1,0 +1,42 @@
+### FEDERATIONS EVENT CHAINS
+
+# On the Shoulders of Giants Origin CONTINUED Event Chain
+intercepting_history_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_society.dds"
+	picture = GFX_evt_huge_monument
+}
+relentless_pursuit_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_society.dds"
+	picture = GFX_evt_huge_monument
+}
+
+# Kept Grounds
+wenkwort_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	picture = GFX_evt_continental
+}
+
+# Federation Joint Operations
+dismembered_cloud_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_federation.dds"
+	picture = GFX_evt_atmospheric_entry
+}
+leylines_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_federation.dds"
+	picture = GFX_evt_ship_in_orbit
+}
+hegemony_joint_project_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_federation.dds"
+	picture = GFX_evt_diplomatic_visit
+}
+
+### Example
+### rubricator_chain_2 = {
+### 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+### 	picture = GFX_evt_space_dragon
+### 	counter = {
+###      	rubricator_dragon_defeated = {
+###      		max = 1
+###      	}
+###     }
+### }

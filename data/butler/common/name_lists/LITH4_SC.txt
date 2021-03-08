@@ -1,0 +1,220 @@
+﻿### Lithoid 4
+### Created by Gemma Thomson
+
+LITHOID4 = {
+
+	language = "l_simp_chinese"
+	
+	category = "Lithoid"
+	
+	ship_names = {
+
+		generic = {
+			 "突兀" "坚斑" "艰辛" "八月岩" "山崩" "岸目" "惑堕" "峻岭" "晶锻" "坍岩" "宙盾" "峭燧" "大斜" "深边" "边目" "蚀终" "崇熔" "燧刀" "燧屑" "锻滑" "荣边" "荣痛" "谷划" "大析出者" "大海脊" "强滚" "率屑" "重崖" "激目" "不屈" "傲谷" "知核" "铅灰梳" "寄清" "寄目" "耸至" "魁岩" "壮柱" "巨尘" "纪核" "尊核" "欧康砾" "稀边" "净面" "纯望" "高升" "滨峭" "河碎" "峭述" "审目" "硅洪" "野望" "素岩" "斯班尼特王座" "立边" "碎星使" "星斑" "星痛" "巉岩" "静流" "铁望" "厉目" "坚尘" "石潮" "庄岩" "终浸" "终堕" "潮舷" "落危" "不屈磐岩" "颠屑" "甄运" "深空边缘"
+		}
+
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+
+		titan = {
+		}
+
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			"崎壁" "嵌壁" "坠壁" "点壁" "霜壁" "固着壁" "根基壁" "背风壁" "掷击壁" "移形壁" "凹壁" "斑壁" "礁壁" "灼壁" "创壁" "陡壁" "跃光壁" "攲斜壁" "星铸壁" "侵蚀壁" "切风壁"
+		}
+		sequential_name = "%O% 壁"
+	}
+
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "%O% 不蚀者"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "%O% 穿刺者"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "%O% 穿刺者"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "%O% 穿刺者"
+		}
+		
+		defense_army = {
+			sequential_name = "%O% 不蚀者"
+		}
+			
+		assault_army = {
+			sequential_name = "%O% 穿刺者"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% 固着"
+		}
+		
+		clone_army = {
+			sequential_name = "%O% 镜"
+		}
+		
+		undead_army = {
+			sequential_name = "%O%熔炼战岩"
+		}
+
+		robotic_army = {
+			sequential_name = "%O% 岩械兵"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "%O% 卫戍岩械兵"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O% 岩灵"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% 岩魔"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% 风华岩兵"
+		}
+
+		occupation_army = {
+			sequential_name = "%O% 储备岩兵"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% 储备岩械兵"
+		}
+
+		primitive_army = {
+			sequential_name = "%O% 碎砾"
+		}
+		industrial_army = {
+			sequential_name = "%O% 火石"
+		}
+		postatomic_army = {
+			sequential_name = "%O% 岩精"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"平板岩" "平坦峰" "障碍峰" "板岩" "石峰" "滚轮" "兽石" "山峡" "坂石" "门坎石" "埃斯克里克克" "法尔希德" "破铸" "咆啸岩" "阴寒峰" "伊玛尔之岩" "方峰" "窟边" "窟岩" "克赖尔" "拉孔坝" "拉戈尔" "筋条峰" "拉于哈姆" "莱峰" "细岩" "莱文坝" "魔岩" "莫泰坝" "新地" "奥斯滕" "皮滕" "皮泰诺克克" "拉斯克" "拉特伦" "拉托尔" "勒欣岩" "勒欣峰" "里布哈姆" "里克塞特" "斯卡内斯" "斯哈林" "谢内" "斯莱伊格赫茨" "斯塔珀" "斯泰洛克坝" "斯特里纳尔" "塔克岩" "于莱斯赫克" "温迪隆" "鲸石" "冬岩"
+			}
+		}
+		
+		pc_desert = {
+			names = {
+				"布里德莱崖" "火岩地" "福斯巴克" "斯卡本" "风崖"
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+				"加洛斯哈尔" "格洛松岩" "鞍石" "马雷孔伯" "扭崖"
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+				"贝恩许尔" "埃申平地" "菲嫩" "塔岩平地" "韦伊石"
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+			}
+			
+			# Always combined with a second name
+			first_names = {
+				阿昆 巴尔东 巴尔斯赫尔 布拉夫克 邦敦 邦斯赫尔 多特 迪普-特伦 弗莱克特 弗伦特 格亨特 格利姆 戈内 伊马特 因塔克 伊哈格 克拉格 克拉夫克 奥布岩 奥克克滕 奥普斯亨 佩布伦 佩特伦 佩特吕斯 雷斯托克 里布吕克克 里尼德 吕孔 斯哈尔 夏尔 斯泰奥克克 斯特林托克克 温于阿恩 温于奥夫
+			}
+			
+			# Always combined with a first name
+			second_names = {
+				阿登莫斯特 阿登塞特 布莱蒂孔 多克克-夫拉斯特 多克克-纳埃斯特 戈雷格诺克克 格林诺克克 伊马滕 因特兰塞克克 孔普利纳特 拉皮登 嫩斯瓦于 诺克克 诺克克-斯亨 诺斯赫克 奥布德约斯 奥布迪罗斯 翁普赫罗斯 佩特龙 雷伦廷厄 雷斯托尔 斯塔内夫 斯泰尔夫罗斯特 斯泰尔哈姆 斯泰吕奥尔德 叙布勒 温迪罗斯 温龙
+			}
+			
+			regnal_first_names = {
+				多洛内 盖于尔敦 格雷彭 哈斯伦 因什马尔 伊塞特 克洛内 梅滕 蒙夫罗肯 尼奥本 奥斯蒙 帕拉德 普霍内 勒亨托克 里诺斯赫 吕滕特 萨伦 萨姆塔尔 于龙 沃托克
+			}
+			
+			regnal_second_names = {
+				"斯哈-阿克滕" "斯哈-阿尔肯" "斯哈-阿吕姆" "斯哈-阿斯塔滕" "斯哈-贝吕尔" "斯哈-比斯门" "斯哈-布罗姆" "斯哈-卡埃斯瓦于" "斯哈-克兰伯" "斯哈-哈夫恩" "斯哈-哈森" "斯哈-兰坦" "斯哈-伦斯" "斯哈-曼贡" "斯哈-诺克克" "斯哈-平地" "斯哈-波尔瓦于" "斯哈-萨马尔" "斯哈-斯特拉特" "斯哈-瓦纳登"
+			}
+		}
+	}
+}

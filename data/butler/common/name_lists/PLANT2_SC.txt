@@ -1,0 +1,237 @@
+﻿### Plantoid 2
+### Created by Maximilian Olbers, Miranda van den Brink
+PLANT2 = {	
+	### SHIPS
+	
+	category = "Plantoid"
+
+	language = "l_simp_chinese"
+	
+	ship_names = {
+	
+		generic = {}
+	
+		corvette = { 
+			阿图拉 塔尔提索斯 阿加莎 "圣纳奇布尔" "圣卡斯帕" 特鲁特 "圣霍萨克" 弗莱辛顿 格德伍德 芬卡斯尔 
+		}
+		
+		destroyer = { 
+			"林之傲" "草原之傲" "沼泽之傲" 天潜者 "绿色潜行者" 潜行者 "绿光" "绿之傲" "荒野之傲" "林中空地" "海洋之傲" "峡谷之傲" "亚克西米澈之傲" "卡尔帕瑞沙之傲" "波之傲" "阿卡沙雅瓦特之傲" "努克密斯·季智格之傲" "伊尔迷苏之傲" "苏波之傲" "图莱之傲" "艾史瓦塔之傲" "扶桑之傲" 
+		}
+		
+		cruiser = { 
+			"峡谷守护者" "沼泽守护者" "森林守护者" "海洋守护者" "河流守护者" "林之守护者"
+		}
+		
+		battleship = { 
+			"世界树守护者" "雅·伊米克斯·彻守护者" "卡帕弗里克沙守护者" "波之守护者" "阿克沙亚瓦特守护者" "伊尔敏苏守护者" "索伯守护者" "图尔守护者" "艾史瓦沙守护者" "夫桑守护者"
+		}
+
+		titan = { 
+			"世界树守护者" "雅·伊米克斯·彻守护者" "卡帕弗里克沙守护者" "波之守护者" "阿克沙亚瓦特守护者" "伊尔敏苏守护者" "索伯守护者" "图尔守护者" "艾史瓦沙守护者" "夫桑守护者"
+		}
+
+		colossus = { 
+			"世界树守护者" "雅·伊米克斯·彻守护者" "卡帕弗里克沙守护者" "波之守护者" "阿克沙亚瓦特守护者" "伊尔敏苏守护者" "索伯守护者" "图尔守护者" "艾史瓦沙守护者" "夫桑守护者"
+		}
+		
+		juggernaut = {
+			"光辉灌木" "坚忍灌木" "强韧灌木" "英勇灌木" "仇怨灌木" "愤怒灌木"
+		}
+		
+		science = { 
+			黎巴嫩  泰尔  安提阿  锡尔河  阿姆河  图兰  阿科恩娜  巴德纳斯  拉扎克  奥尔泰尼亚  贝尔纳斯  阿塔卡马  塔那米
+		}
+		
+		colonizer = { 
+			末梢 波纹机 锭盘 叶柄
+		}
+
+		sponsored_colonizer = { 
+			末梢 波纹机 锭盘 叶柄
+		}
+		
+		constructor = { 
+			"绿创造者" "褐创造者" "金创造者"
+		}
+
+		transport = { 
+			"运输"
+		}
+	
+		military_station_small = { "冻原之傲" "河流之傲" "世界树之傲"}
+	
+		ion_cannon = { "冻原之傲" "河流之傲" "世界树之傲" }
+	}
+	
+	fleet_names = {
+		random_names = {
+			"开花花束" "繁荣花束" "征服花束" "漩涡花束" "萌发花束"
+		}
+		sequential_name = "花束﻿ %C%"
+	}
+
+	### ARMIES
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "防护花茎 %C%"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "剧毒花茎 %C%"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "剧毒花茎 %C%"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "剧毒花茎 %C%"
+		}
+		
+		defense_army = {
+			sequential_name = "防护花茎 %C%"
+		}
+			
+		assault_army = {
+			sequential_name = "剧毒花茎 %C%"
+		}
+		
+		slave_army = {
+			sequential_name = "边界花茎﻿ %C%"
+		}
+
+		undead_army = {
+			sequential_name = "%O%恐惧树干"
+		}
+		
+		clone_army = { 
+			sequential_name = "诸茎 %R%"
+		}
+		
+		robotic_army = {
+			sequential_name = "钢铁之茎 %R%"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "钢铁之茎 %R%"
+		}
+		
+		psionic_army = { 
+			sequential_name = "浅裂花茎 %C%"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "奇异花茎 %C%"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "混种花茎 %C%"
+		}
+		occupation_army = {
+			sequential_name = "%O% 加里森波德"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% 安卓 加里森波德"
+		}
+		primitive_army = {
+			sequential_name = "原始军队 %C%"
+		}
+		industrial_army = {
+			sequential_name = "工业军队 %C%"
+		}
+		postatomic_army = {
+			sequential_name = "后原子军 %C%"
+		}
+	}
+
+		
+	
+	### PLANETS
+	
+	planet_names = {
+	
+		generic = {
+			names = {
+				莫莉 康斯坦斯 珍妮 彭妮 梅丽尔 朱迪 维罗妮卡 阿普欧 西格妮 吉利安 阿诺
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+	
+	### CHARACTERS
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+			}
+			
+			# Always combined with a second name
+			first_names = {
+				沃德 霍华德 劳埃德 塔纳 尼古拉斯 马修斯 埃里斯 惠尔鑫 惠特克 巴顿 霍金斯 加洛维克 斯佩克特 里弗斯 弗农 尼文
+				布伦达 布里奇特 卡洛琳 卡桑德拉 查莉蒂 塞西莉亚 安妮 克拉丽莎 克里斯特贝尔 谢里尔 辛西娅 凯登思 科黛拉 达芙妮 迪安娜
+			}
+			
+			# Always combined with a first name
+			second_names = {
+				罗德里奥 格拉里格 摩德里格 维拉里格 约里姆 巴里姆 维皮姆
+			}
+
+			regnal_first_names = {
+				"花之"
+			}
+			
+			regnal_second_names = {
+				约姆古约格 约姆法拉汉 约姆齐格德 约姆佩德翁 约姆塔格德 约姆尼罗格 约姆图拉兹 约姆修特尔 约姆休特德 约姆英拉德 约姆鲁格鲁 约姆提奎克 约姆达明特 约姆特拉古德 约姆沃特南 约姆拉斯格 约姆雷姆 约姆纳古德 约姆弗英布 约姆拉苏德 约姆普罗斯 约姆弗利普 约姆普特利格 约姆沙鲁夫 约姆卡纳布 约姆特郎柯德 约姆加法棱 约姆尤德蒙 约姆蒙达 约姆图哈姆 约姆贝英德 约姆提帕许 约姆苏格拉德 约姆费戈弗 约姆布伊朵
+			}
+		}
+	}
+}

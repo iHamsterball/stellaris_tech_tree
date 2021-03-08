@@ -1,0 +1,106 @@
+@cooldown = 3600
+
+free_migration_no = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = free_migration_no }
+					has_modifier = federation_law_category_free_migration_cooldown
+					has_any_federation_law_in_category = law_category_free_migration
+				}
+			}
+		}
+	}
+	on_enact = {
+		set_free_migration = no
+		if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_free_migration_cooldown
+				days = @cooldown
+			}
+		}
+		add_cohesion = -5
+	}
+	
+	ai_weight = {
+		base = 0
+		
+		#Default support
+		modifier = {
+			desc = federation_acceptance_generally_positive
+			add = 51
+		}
+		
+		#Behaviour-specific	
+		modifier = {
+			desc = federation_acceptance_xenophobe
+			add = 50
+			is_xenophobe = yes
+		}
+	}
+}
+
+free_migration_yes = {
+	potential = { host_has_dlc = Federations }
+	allow = {
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = free_migration_yes }
+					has_modifier = federation_law_category_free_migration_cooldown
+					has_any_federation_law_in_category = law_category_free_migration
+				}
+			}
+		}
+	}
+	required_centralization = {
+		base = 3
+	}
+	on_enact = {
+		set_free_migration = yes
+		if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_free_migration_cooldown
+				days = @cooldown
+			}
+		}
+		add_cohesion = -5
+	}
+	
+	ai_weight = {
+		base = 0
+		
+		#Default support
+		modifier = {
+			desc = federation_acceptance_generally_positive
+			add = 51
+		}
+				
+		modifier = {
+			desc = federation_acceptance_weaker
+			add = 25
+			relative_power = { who = from value >= superior }
+		}
+		
+		#Behaviour-specific	
+		modifier = {
+			desc = federation_acceptance_xenophile
+			add = 50
+			is_xenophile = yes
+		}
+		modifier = {
+			desc = federation_acceptance_federation_builders
+			add = 25
+			has_ai_personality = federation_builders
+		}
+		modifier = {
+			desc = federation_acceptance_xenophobe
+			add = -25
+			is_xenophobe = yes
+		}
+	}
+}

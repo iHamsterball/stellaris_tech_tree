@@ -1,0 +1,232 @@
+﻿### Mammalian 2
+MAM2 = {
+	### SHIPS
+	
+	category = "Mammalian"
+
+	language = "l_simp_chinese"
+	
+	ship_names = {
+
+		generic = {
+			乌马拉 费德拉 纳格拉玛 尼迪拉 摩罗加里玛 沃巴 兰帕拉 里加拉 腾特拉莫达 塔沃卡拉巴 帕拉吉玛 芬利塔罗拉 卡莫皮拉
+			安娜 艾尔莎 艾玛 海尔加 乌苏拉 吉塞拉 英格丽 伊尔莎 杰西卡 珊德拉 斯特法妮 安德里亚 安雅 卡特琳 比吉特 马丁娜 黑柯 萨宾 埃丽卡
+			奇克莫加 卡波雷托 "诺门罕" 加查拉 "蒙特卡西诺" 塞班 布雷斯劳
+			 汉森 哈林顿 哈特 亨德里克斯 福尔摩斯 希金斯 霍夫曼 胡德 哈钦森 海兰 骑士 柯克 科恩 肯威 甘乃迪 凯莉
+			萨尼薇 安雅 阿达哈雅 阿拉德哈 安妮娅 帕里 阿尼卡 娜雅 迪亚 阿瓦尼 米拉 伊拉 阿哈娜 安薇 普丽沙 莉亚 阿罗哈 安雅 阿珂沙拉
+			科尔巴蒂姆-恰 卡恩加蕾姆-恰 乔克伊姆-恰 萨利姆-恰 乌克瑞姆-恰 索特利姆-布 加蒂姆-布 伊萨蕾姆-布 纳格蕾姆-布 佩斯蕾姆-布
+			巴莱蒂 毕安可内利 安东内利 科尔西尼 德亚历山德罗 德阿戈斯蒂诺 "德罗萨" "德希利奥" "迪·奇亚拉" "迪·巴托洛梅" 德尔维奇奥
+			杰克逊  德怀特  哈伦  亚瑟  珀西瓦尔  蒙哥马利  克莱德  罗德尼  杰拉尔德  富兰克林  杰克  贺拉斯  欧文  塞思  伦道夫  弗洛依德  卡尔
+			笨手笨脚 白痴 "发脾气" 讨人厌 "出其不意" 腹部破坏技 "讨厌一切" 拦路强盗 不法之徒 "聒噪牧师" "水马骝"
+			次郎  浩志  吉田  满江  奎介  萨布罗  纯一  耀西  松本  健太郎  一郎
+			伊塔拉多
+		}
+
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+		
+		titan = {
+		}
+
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+	
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			"波斯卡特遣队" "乌塔里斯特遣队" "贾德拉特遣队" "米拉司马特遣队" "岳多拉特遣队" "坎帕斯特遣队"
+		}
+		sequential_name = "特遣队 %C%"
+	}
+	
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "防御正规军 %C%"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "攻击龙骑兵团﻿ %C%"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "攻击龙骑兵团﻿ %C%"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "攻击龙骑兵团﻿ %C%"
+		}
+		
+		defense_army = {
+			sequential_name = "防御正规军 %C%"
+		}
+			
+		assault_army = {
+			sequential_name = "攻击龙骑兵团﻿ %C%"
+		}
+		
+		slave_army = {
+			sequential_name = "战斗劳工﻿ %C%"
+		}
+		
+		clone_army = { 
+			sequential_name = "战斗克隆人 %C%"
+		}
+		
+		undead_army = {
+			sequential_name = "%O%恐惧战队"
+		}
+
+		robotic_army = {
+			sequential_name = "战斗智能人军团﻿ %C%"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "战斗智能人军团﻿ %C%"
+		}
+		
+		psionic_army = { 
+			sequential_name = "灵能骨干 %C%"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "防御正规军 %C%"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "强化先锋﻿ %C%"
+		}
+		occupation_army = {
+			sequential_name = "%O% 加里森波德"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% 安卓 加里森波德"
+		}
+		primitive_army = {
+			sequential_name = "原始军队 %C%"
+		}
+		industrial_army = {
+			sequential_name = "工业军队 %C%"
+		}
+		postatomic_army = {
+			sequential_name = "后原子军 %C%"
+		}
+	}
+		
+
+	### PLANETS
+
+	planet_names = {
+
+		generic = {
+			names = {
+				佳兰 纳德克斯 格法拉克 库特尔 古莱克 法拉德克斯 拉勒弗克斯 格拉德 德罗克姆 德克萨隆  克塔多  杜卡勒克斯 克鲁克萨雷德 多鲁克
+				格克雷尔 弗雷克索德  弗特克索姆  达拉库恩 特拉格勒克 克雷古克斯 帕拉基姆 非林塔罗格 卡皮拉
+				 
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+
+	### CHARACTERS
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+			
+			}
+			
+			# Always combined with a second name
+			first_names = {
+				罗伯森 罗斯威尔 瑞安 赛林杰 塞缪尔斯 桑德勒 萨维奇 萨克斯顿 施耐德 斯康利 赛克维克 沙仑 弗林特 希贝特 西尔弗曼
+			}
+			
+			# Always combined with a first name
+			second_names = {
+				"克帕单" "克万登" "克哈瑟" "克于浩" "克发哥" "克亚林" "多福" "多禄" "多甲" "多汉" "多吉鲁" "多塔" "哈通" "哈刹" "哈满" "哈无极" "哈富乐" "哈洛伦" "奥等" "奥古"
+			}
+			
+			regnal_first_names = {
+				罗伯森 罗斯威尔 瑞安 赛林杰 塞缪尔斯 桑德勒 萨维奇 萨克斯顿
+			}
+			
+			regnal_second_names = {
+				"克帕单" "克万登" "克哈瑟" "克于浩" "克发哥" "克亚林" "多福" "多禄" "多甲" "多汉" "多吉鲁" "多塔" "哈通" "哈刹" "哈满" "哈无极" "哈富乐" "哈洛伦" "奥等" "奥古"
+			}
+		}
+	}
+}

@@ -1,0 +1,911 @@
+################################
+#
+# Ancient Relics - Archaeological Sites
+#
+# Written by Douglas Furen
+#
+###############################
+
+# Moon Bump
+site_moon_bump = {
+	desc = "site_moon_bump_intro"
+	picture = GFX_evt_relic_world_street
+	stages = 2
+	weight = {
+		base = 0
+		modifier = {
+			add = 100
+			uninhabitable_regular_planet = yes
+			has_ancrel = yes
+		}
+	}
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_A1
+		event = ancrel.9000
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A2
+		event = ancrel.9005
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_moon_bump_random_events }
+		}
+	}
+}
+
+# Echoes Inside
+site_echoes_inside = {
+	desc = "site_echoes_inside_intro"
+	picture = GFX_evt_arid
+	stages = 4
+	weight = {
+		base = 0
+		modifier = {
+			add = 100
+			is_planet_class = pc_barren
+			has_ancrel = yes
+		}
+	}
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_B1
+		event = ancrel.9025
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_B2
+		event = ancrel.9030
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_B3
+		event = ancrel.9035
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_B4
+		event = ancrel.9040
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_echoes_inside_random_events }
+		}
+	} 
+}
+
+# The Puzzle Box - A.k.a. Target From Orbit
+site_target_from_orbit = {
+	desc = "site_target_from_orbit_intro"
+	picture = GFX_evt_ship_in_orbit
+	stages = 3
+	weight = {
+		base = 0
+		modifier = {
+			add = 100
+			uninhabitable_regular_planet = yes
+			has_ancrel = yes
+		}
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A1
+		event = ancrel.9045
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_A2
+		event = ancrel.9050
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A6
+		event = ancrel.9051
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_target_from_orbit_random_events }
+		}
+	}
+}
+
+# Shot into the Ground
+site_shot_into_the_ground = {
+	desc = "site_shot_into_the_ground_intro"
+	picture = GFX_evt_big_landing_ship
+	stages = 3
+	weight = {
+		base = 0
+		modifier = {
+			add = 100
+			uninhabitable_regular_planet = yes
+			has_ancrel = yes
+		}
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_E3
+		event = ancrel.9070
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_E5
+		event = ancrel.9075
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_E2
+		event = ancrel.9076
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_shot_into_the_ground_random_events }
+		}
+	}
+}
+
+# Cut to Fit
+site_cut_to_fit = {
+	desc = "site_cut_to_fit_intro"
+	picture = GFX_evt_ship_in_orbit
+	stages = 3
+	weight = {
+		base = 0
+		modifier = {
+			add = 100
+			uninhabitable_regular_planet = yes
+			has_ancrel = yes
+		}
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_D1
+		event = ancrel.9095
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_D2
+		event = ancrel.9100
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_D3
+		event = ancrel.9101
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_cut_to_fit_random_events }
+		}
+	}
+}
+
+# Déjà Vu Dig
+site_deja_vu_dig = {
+	desc = "site_deja_vu_dig_intro"
+	picture = GFX_evt_archaeology_camp
+	stages = 3
+	weight = {
+		base = 0
+		modifier = {
+			add = 100
+			uninhabitable_regular_planet = yes
+			has_ancrel = yes
+		}
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_C1
+		event = ancrel.9120
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_C2
+		event = ancrel.9125
+	}
+
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_C3
+		event = ancrel.9126
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_deja_vu_dig_random_events }
+		}
+	}
+}
+
+# Trench World
+site_trench_world = {
+	desc = "site_trench_world_intro"
+	picture = GFX_evt_tundra
+	stages = 2
+	weight = {
+		base = 0
+		modifier = {
+			add = 100
+			is_planet_class = pc_barren
+			has_ancrel = yes
+		}
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_D1
+		event = ancrel.9145
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_D3
+		event = ancrel.9146
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_trench_world_random_events }
+		}
+	}
+}
+
+# Ebb & Flow
+site_ebb_and_flow = {
+	desc = "site_ebb_and_flow_intro"
+	picture = GFX_evt_warm_barren
+	stages = 4
+	weight = {
+		base = 0
+		modifier = {
+			add = 100
+			is_planet_class = pc_molten
+			has_ancrel = yes
+		}
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_B1
+		event = ancrel.9165
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_B2
+		event = ancrel.9170
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_B3
+		event = ancrel.9175
+	}
+
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_B4
+		event = ancrel.9176
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_ebb_and_flow_random_events }
+		}
+	}
+}
+
+# Sky Glow Hymn
+site_sky_glow_hymn = {
+	desc = "site_sky_glow_hymn_intro"
+	picture = GFX_evt_big_landing_ship
+	stages = 3
+	weight = {
+		base = 0
+		modifier = {
+			add = 100
+			uninhabitable_regular_planet = yes
+			has_ancrel = yes
+		}
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A1
+		event = ancrel.9190
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A2
+		event = ancrel.9195
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_A3
+		event = ancrel.9196
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_sky_glow_hymn_random_events }
+		}
+	}
+}
+
+# Warmer Climates
+site_warmer_climates = {
+	desc = "site_warmer_climates_intro"
+	picture = GFX_evt_alien_ruins
+	stages = 3
+	weight = {
+		base = 0
+		modifier = {
+			add = 100
+			uninhabitable_regular_planet = yes
+			has_ancrel = yes
+		}
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_B6
+		event = ancrel.9215
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_B5
+		event = ancrel.9220
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_B4
+		event = ancrel.9221
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_warmer_climates_random_events }
+		}
+	}
+}
+
+# The Phoenix Collective
+site_phoenix_collective = {
+	desc = "site_phoenix_collective_intro"
+	picture = GFX_evt_overgrown_city
+	stages = 4
+	weight = {
+		base = 0
+		modifier = {
+			add = 100
+			uninhabitable_regular_planet = yes
+			has_ancrel = yes
+		}
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_E1
+		event = ancrel.9240
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_E4
+		event = ancrel.9245
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_E6
+		event = ancrel.9250
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_E5
+		event = ancrel.9251
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_phoenix_collective_random_events }
+		}
+	}
+}
+
+# The Grand Herald
+site_grand_herald = {
+	desc = "site_grand_herald_intro"
+	picture = GFX_evt_ancient_alien_temple
+	stages = 6
+	weight = {
+		base = 0
+		modifier = {
+			add = 50
+			OR = {
+				is_planet_class = pc_nuked
+				is_planet_class = pc_desert
+				is_planet_class = pc_arid
+				is_planet_class = pc_savannah
+			}
+			has_ancrel = yes
+			NOT = { has_planet_flag = nuked_planet_anomalies_disabled }
+		}
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_C1
+		event = ancrel.9270
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_C6
+		event = ancrel.9275
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_C3
+		event = ancrel.9280
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C4
+		event = ancrel.9285
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C5
+		event = ancrel.9290
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_C2
+		event = ancrel.9291
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_grand_herald_random_events }
+		}
+	}
+}
+
+# Hive Coral
+site_hive_coral = {
+	desc = "site_hive_coral_intro"
+	picture = GFX_evt_ship_in_orbit_2
+	stages = 3
+	weight = {
+		base = 0
+		modifier = {
+			add = 100
+			is_planet_class = pc_ocean
+			has_ancrel = yes
+		}
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_B1
+		event = ancrel.9310
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_B2
+		event = ancrel.9315
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_B3
+		event = ancrel.9316
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_ocean_sites_random_events }
+		}
+	}
+}
+
+# Orbital Rain
+site_orbital_rain = {
+	desc = "site_orbital_rain_intro"
+	picture = GFX_evt_ship_in_orbit
+	stages = 3
+	weight = {
+		base = 0
+		modifier = {
+			add = 100
+			is_planet_class = pc_ocean
+			has_ancrel = yes
+		}
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_A1
+		event = ancrel.9335
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A2
+		event = ancrel.9340
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A3
+		event = ancrel.9341
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_ocean_sites_random_events }
+		}
+	}
+}
+
+# Fossilized Jellyfish
+site_fossilized_jellyfish = {
+	desc = "site_fossilized_jellyfish_intro"
+	picture = GFX_evt_ocean
+	stages = 3
+	weight = {
+		base = 0
+		modifier = {
+			add = 100
+			is_planet_class = pc_ocean
+			has_ancrel = yes
+		}
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_B6
+		event = ancrel.9360
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_B5
+		event = ancrel.9365
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_B4
+		event = ancrel.9366
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_ocean_sites_random_events }
+		}
+	}
+}
+
+# Popular Rock
+site_popular_rock = {
+	desc = "site_popular_rock_intro"
+	picture = GFX_evt_ice_asteroids
+	stages = 2
+	weight = {
+		base = 0
+		modifier = {
+			add = 100
+			is_planet_class = pc_asteroid
+			has_ancrel = yes
+		}
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_D6
+		event = ancrel.9385
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_D4
+		event = ancrel.9386
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_popular_rock_random_events }
+		}
+	}
+}
+
+# Strange Flows
+site_strange_flows = {
+	desc = "site_strange_flows_intro"
+	picture = GFX_evt_glitchy_matrix
+	stages = 3
+	weight = {
+		base = 0
+		modifier = {
+			add = 100
+			is_planet_class = pc_molten
+			has_ancrel = yes
+		}
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A5
+		event = ancrel.9405
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A3
+		event = ancrel.9410
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A2
+		event = ancrel.9411
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_strange_flows_random_events }
+		}
+	}
+}

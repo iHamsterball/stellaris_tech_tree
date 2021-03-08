@@ -1,0 +1,100 @@
+##########################################################################
+# Caravaneer Decisions
+##########################################################################
+decision_caravaneer_bunkbeds = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources
+	
+	resources = {
+		category = decisions
+		cost = {
+		}
+	}
+	
+	potential = {
+		owner = {
+			is_regular_empire = yes
+			has_country_flag = bunkbeds_ready
+		}
+	}
+	
+	allow = {
+		NOT = { has_modifier = bunkbeds_deployed }
+	}	
+	
+	effect = {
+		hidden_effect = { owner = { remove_country_flag = bunkbeds_ready } }
+		add_modifier = { modifier = bunkbeds_deployed days = 28800 }
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+decision_caravaneer_tupperware = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources
+	
+	resources = {
+		category = decisions
+		cost = {
+		}
+	}
+	
+	potential = {
+		owner = {
+			is_regular_empire = yes
+			has_country_flag = tupperware_ready
+		}
+	}
+	
+	allow = {
+		NOT = { has_modifier = tupperware_deployed }
+	}	
+	
+	effect = {
+		hidden_effect = { owner = { remove_country_flag = tupperware_ready } }
+		add_modifier = { modifier = tupperware_deployed days = 28800 }
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+decision_caravaneer_atmospheric_deodorizer = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources
+	
+	resources = {
+		category = decisions
+		cost = {
+		}
+	}
+	
+	potential = {
+		owner = {
+			is_regular_empire = yes
+			has_country_flag = atmospheric_deodorizer_ready
+		}
+	}
+	
+	allow = {
+		NOT = { has_modifier = atmospheric_deodorizer_deployed }
+	}	
+	
+	effect = {
+		hidden_effect = { owner = { remove_country_flag = atmospheric_deodorizer_ready } }
+		add_modifier = { modifier = atmospheric_deodorizer_deployed days = 28800 }
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+###

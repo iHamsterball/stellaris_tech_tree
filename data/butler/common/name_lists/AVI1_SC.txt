@@ -1,0 +1,247 @@
+﻿### Template
+AVI1 = {
+	### SHIPS
+	
+	category = "Avian"
+
+	language = "l_simp_chinese"
+	
+	ship_names = {
+
+		generic = {
+			"翱翔之雏" "战斗之雏" "迅捷之雏" "挑衅之雏" "弹性之雏" "狂怒之雏"
+			"自信幼雏" "聪明幼雏" "狡猾幼雏" "挥霍幼雏" "欢悦幼雏" "粗鲁幼雏"
+			"疯狂幼雏" "敏锐幼雏" "复仇幼雏" "刻毒幼雏" "报复幼雏" "暴躁幼雏"
+			"轻傲幼雏" "骄傲幼雏" "鄙夷幼雏" "蔑视幼雏" "自大幼雏" "吟唱幼雏"
+			"粗心幼雏" "健忘幼雏" "暴力幼雏" "散漫幼雏" "凶狠幼雏" "刚愎幼雏"
+			"欢乐之雏" "欢愉之雏" "繁荣之雏" "焕发之雏" "快乐之雏" "轻之雏"
+			"好运之雏" "无畏之雏" "毛躁之雏" "鲁莽之雏" "信赖之雏" "生机之雏"
+			"执拗之雏" "顽固之雏" "愤怒之雏" "狂暴之雏" "躁动之雏" "动乱之雏"
+			"怪异之雏" "异常之雏" "暴躁之雏" "恼怒之雏" "易怒之雏" "坏脾气之雏"
+			"敏锐之雏" "莫测之雏" "鲁莽之雏" "邪恶之雏" "曲折之雏" "优雅之雏"
+			"贪婪之雏" "英勇之雏" "不屈之雏" "坚实之雏" "不洁之雏" "自然之雏"
+			"贪婪之雏" "无情之雏" "英勇之雏" "无畏之雏" "快活之雏" "愤慨之雏"
+			"鲁莽之雏" "萨瓦之雏" "自在之雏" "骚乱之雏" "疯狂之雏" "活力之雏"
+			"凶暴之雏" "喧闹之雏" "执着之雏" "暴烈之雏" "狂热之雏" "热诚之雏"
+			"狡诈之雏" "糊涂之雏" "快乐之雏" "易变之雏" "明智之雏" "独行之雏"
+			"翱翔之雏" "战斗之雏" "迅捷之雏" "挑衅之雏" "弹性之雏" "狂怒之雏"
+			"阴沉幼体" "暴躁幼体" "不祥幼体" "黑暗幼体" "顽强幼体" "专横幼体"
+			"不屈幼体" "耐心幼体" "强壮幼体" "凶猛幼体" "无情幼体" "坚固幼体"
+			"任性的孩子" 人才的流失 "不显眼的小行星" "黔驴技穷" "加大号" "恕不退换" 骑墙派 盲点 "很丑不温柔" "表演结束" "四盏灯"
+			"翼·"
+			"警戒幼雏" "顽固幼雏" "桀骜幼雏" "倔强幼雏" "古怪幼雏" "乖僻幼雏"
+			"专注幼雏" "守望幼雏" "顽皮幼雏"
+			"敏捷幼雏" "活泼幼雏" "固执幼雏" "坚定幼雏" "执拗幼雏" "果敢幼雏"
+			"任性幼雏" "无常幼雏" "善变幼雏" "活跃幼雏" "无忧幼雏" "快乐幼雏"
+		}
+
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+		
+		titan = {
+		}
+
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+
+	ship_class_names = {
+		generic = {
+			弗宾达科 约洛克 卡拉克 德克利 特塔拉 库孔诺 瑟佩克鲁 博里克 提瓦多拉 科娃科克 容米德 容伊克 瑟瓦克 特瑟德克 帕托克 穆鲁特 瑟瓦布 特布克德 德瓦拉尔 克马哈里尔 瓦特克 弗瓦拉克
+		}		
+	}
+
+	fleet_names = {
+		random_names = {
+			"镀金星群" "羽流星群" "崇敬星群" "光荣星群" "翱翔星群" "栖息星群" "伊萨卡星群" "乌鲁苏星群" "萨罗娜星群" "聪纳星群" "伊特拉纳星群" "斯坦尼斯星群" "伊索尼星群"
+		}
+		sequential_name = "星群 %C%"
+	}
+	
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "安保部门 %C%"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "太空生命 %C%"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "太空生命 %C%"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "太空生命 %C%"
+		}
+
+		defense_army = {
+			sequential_name = "安保部门 %C%"
+		}
+			
+		assault_army = {
+			sequential_name = "太空生命 %C%"
+		}
+		
+		slave_army = {
+			sequential_name = "劳工军队 %C%"
+		}
+		
+		clone_army = { 
+			sequential_name = "克隆前锋 %C%"
+		}
+
+		undead_army = {
+			sequential_name = "%O%恐惧大军"
+		}
+		
+		robotic_army = {
+			sequential_name = "机械纵队 %C%"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "机械纵队 %C%"
+		}
+		
+		psionic_army = { 
+			sequential_name = "心灵感应团 %R%"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "外星生物群 %C%"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "无畏突击队 %C%"
+		}
+		occupation_army = {
+			sequential_name = "%O% 加里森波德"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% 安卓 加里森波德"
+		}
+		primitive_army = {
+			sequential_name = "原始军队 %C%"
+		}
+		industrial_army = {
+			sequential_name = "工业军队 %C%"
+		}
+		postatomic_army = {
+			sequential_name = "后原子军 %C%"
+		}
+	}
+		
+
+	### PLANETS
+
+	planet_names = {
+
+		generic = {
+			names = {
+				斯普雷吉尔 杰卡纳尔 斯纳吉尔 卡卡罗姆 "斯凯林 瓦克" "索斯卡 弗塔" 斯巴克里 伊斯克里 布瓦卡尔 维迪尔 姆拉客沃 卡卡拉尔
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+
+	### CHARACTERS
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+				克里马克 布拉克伊 雷特瑞尔 耶迪克 利克拉米 厄尔卡尔 伊萨克伊 伊赫塔克 拉格拉克 斯克拉克 阿纳克 凯达 斯科里德 德卡那 里达克
+			}
+			
+			# Always combined with a second name
+			first_names = {
+			}
+			
+			# Always combined with a first name
+			second_names = {
+			}
+			
+			regnal_first_names = {
+				克里马克 布拉克伊 雷特瑞尔 耶迪克 利克拉米 厄尔卡尔 伊萨克伊 伊赫塔克 拉格拉克 斯克拉克
+			}
+			
+			regnal_second_names = {
+				科瑞克
+			}
+		}
+	}
+}

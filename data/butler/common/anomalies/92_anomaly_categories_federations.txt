@@ -1,0 +1,59 @@
+
+strange_signal_category = {
+	desc = "strange_signal_category_desc"
+	picture = GFX_evt_cold_barren
+	level = 2
+	
+	spawn_chance = {	
+		modifier = {
+			add = 2
+			OR = {
+				is_planet_class = pc_barren
+				is_planet_class = pc_barren_cold
+			}
+			has_any_strategic_resource = no
+			NOT = { from.owner = { has_ethic = ethic_gestalt_consciousness } }
+			NOT = { years_passed = 300 } #year minus 600 must be pre-1900
+		}
+	}
+	
+	on_success = federations2.1
+}
+
+SEA_CRYSTAL_CAT = {
+    desc = "SEA_CRYSTAL_CAT_DESC"
+    picture = GFX_evt_ship_in_orbit
+    level = 3
+
+    max_once_global = yes
+
+    spawn_chance = {
+        modifier = {
+			add = 2
+			is_planet_class = pc_ocean
+			from.owner = {
+				NOT = {
+					has_ethic = ethic_gestalt_consciousness
+			    }
+            }
+        }
+    }
+
+    on_success = federations3.100
+}
+
+WENKWORT_CAT = {
+    desc = "WENKWORT_CAT_DESC"
+    picture = GFX_evt_continental
+    level = 4
+
+    max_once_global = yes
+	
+	spawn_chance = {
+		modifier = {
+			factor = 0 #Set in federations3_initializers.txt
+		}
+	}
+
+    on_success = federations3.115
+}

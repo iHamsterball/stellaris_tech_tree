@@ -1,0 +1,280 @@
+﻿### Avian Predator
+### Created by Johan Andersson 2015-07-31
+
+AVI3 = {
+
+	category = "Avian"
+	
+	language = "l_simp_chinese"
+	
+	ship_names = {
+		generic = {
+			"种子太空舱" "果实携带者"
+			"翱翔" "提升" "崛起" "升级" "飞翔"
+			"漂流之叶" "漂浮之叶" "寻觅之叶" "飘扬之叶" "翱翔之叶"
+			"飞掠" "俯冲"
+		}
+		
+		corvette = {
+			"尚达娜之塞夫那" "福伦之堡"
+			"凝血" "残害" "撕咬" "重创" "伤害"
+			"斩" "抓" "尖刻" "残害" "伤害"
+			"跛行者" "毁容者" "悲痛者" "变形者" "穿刺者"
+		}
+		
+		constructor = {
+			"巢之制作者" "巢之建造者" "巢之创造者" "巢之生产者" "巢之制造者"
+			"栖之制作者" "栖之建造者" "栖之创造者" "栖之生产者" "栖之制造者"
+		}
+		
+		colonizer = {
+			"携卵载体 I" "携卵载体 II" "携卵载体 III" "携卵载体 IV" "携卵载体 V"
+			"携卵载体 VI" "携卵载体 VII" "携卵载体 VIII" "携卵载体 IX" "携卵载体 X"
+			"携卵载体 XI" "携卵载体 XII" "携卵载体 XIII" "携卵载体 XIV" "携卵载体 XV"
+			"携卵载体 XVI" "携卵载体 XVII" "携卵载体 XVIII" "携卵载体 XIX" "携卵载体 XX"
+		}
+		
+		science = {
+			"内在之眼" "第三眼" "查看之眼" "检视之眼" "分析之眼"
+			"审查之眼" "研究之眼" "调查之眼" "探查之眼" "观察之眼"
+			"沉思之眼" "思索之眼" "评估之眼" "思考之眼"
+			"突击军团" "第一军团" "攻击军团" "星际军团" "外骨骼军团" "虚空军团" "以太军团" "视界军团" "战斗军团" "银河军团" "星界军团"
+		}
+		
+		destroyer = {
+			"锐利之爪" "迅快之爪" "狂暴之爪" "血迹之爪" "伤痕之爪"
+			"血腥之爪" "恐怖之爪" "残杀之爪" "撕咬之爪" "重创之爪"
+			"斩之爪" "抓之爪" "尖刻之爪" "残害之爪" "伤害之爪"
+			"跛行之爪" "毁容之爪" "悲痛之爪" "变形之爪" "穿刺之爪"
+		}
+		
+		cruiser = {
+			"锐利之喙" "快之喙" "狂暴之喙" "血迹之喙" "伤痕之喙"
+			"血腥之喙" "恐怖之喙" "残忍之喙" "撕咬之喙" "重创之喙"
+			"斩之喙" "抓之喙" "尖刻喙" "残害之喙" "伤害之喙"
+			"跛行之喙" "毁容之喙" "悲痛之喙" "变形之喙" "穿刺之喙"
+		}
+		
+		battleship = {
+			"荣耀麦色柯" "荣耀布拉德贝斯" "荣耀卡尼极" "荣耀斯拉特" "荣耀布拉德赛德"
+			"华丽麦色柯" "华丽布拉德贝斯" "华丽卡尼极" "华丽斯拉特" "华丽布拉德赛德"
+			"振奋麦色柯" "振奋布拉德贝斯" "振奋卡尼极" "振奋斯拉特" "振奋布拉德赛德"
+			"愉悦麦色柯" "愉悦布拉德贝斯" "愉悦卡尼极" "愉悦斯拉特" "愉悦布拉德赛德"
+		}
+		
+		titan = {
+			"荣耀麦色柯" "荣耀布拉德贝斯" "荣耀卡尼极" "荣耀斯拉特" "荣耀布拉德赛德"
+			"华丽麦色柯" "华丽布拉德贝斯" "华丽卡尼极" "华丽斯拉特" "华丽布拉德赛德"
+			"振奋麦色柯" "振奋布拉德贝斯" "振奋卡尼极" "振奋斯拉特" "振奋布拉德赛德"
+			"愉悦麦色柯" "愉悦布拉德贝斯" "愉悦卡尼极" "愉悦斯拉特" "愉悦布拉德赛德"
+		}
+
+		colossus = {
+			"荣耀麦色柯" "荣耀布拉德贝斯" "荣耀卡尼极" "荣耀斯拉特" "荣耀布拉德赛德"
+			"华丽麦色柯" "华丽布拉德贝斯" "华丽卡尼极" "华丽斯拉特" "华丽布拉德赛德"
+			"振奋麦色柯" "振奋布拉德贝斯" "振奋卡尼极" "振奋斯拉特" "振奋布拉德赛德"
+			"愉悦麦色柯" "愉悦布拉德贝斯" "愉悦卡尼极" "愉悦斯拉特" "愉悦布拉德赛德"
+		}
+		
+		juggernaut = {
+			"崇高碎浪" "崇高裂口" "崇高裂痕" "崇高裂隙" "崇高裂谷" "崇高废墟"
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+
+		sponsored_colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+
+		transport = {
+		}
+	
+		military_station_small = {
+			"锐利之爪" "迅快之爪" "狂暴之爪" "血迹之爪" "伤痕之爪"
+		}
+
+		ion_cannon = {
+			"荣耀麦色柯" "荣耀布拉德贝斯" "荣耀卡尼极" "荣耀斯拉特" "荣耀布拉德赛德"
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			"菲吉特凶者" "特拉斯特凶者" "克罗凶者" "卡坎凶者" "崔帕托凶者" "富士凶者" "伍亚凶者" "拉里凶者" "咖维咖凶者" "弗洛凶者" "特塔呀凶者" "李克特凶者" "巴洛凶者" "卡塔瓦凶者"
+		}
+		sequential_name = "凶者 %C%"
+	}
+
+	### ARMIES
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "防御军团 %C%"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "突击战群 %C%"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "突击战群 %C%"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "突击战群 %C%"
+		}
+
+		defense_army = {
+			sequential_name = "防御军团 %C%"
+		}
+			
+		assault_army = {
+			sequential_name = "突击战群 %C%"
+		}
+		
+		slave_army = {
+			sequential_name = "联结部队﻿ %C%"
+		}
+		
+		clone_army = { 
+			sequential_name = "克隆军团 %R%"
+		}
+
+		undead_army = {
+			sequential_name = "%O%恐惧飞禽"
+		}
+
+		robotic_army = {
+			sequential_name = "智能人部队 %R%"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "智能人部队 %R%"
+		}
+		
+		psionic_army = { 
+			sequential_name = "心灵者 %C%"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "外星生物群 %C%"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "孢子携带者 %C%"
+		}
+		occupation_army = {
+			sequential_name = "%O% 加里森波德"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% 安卓 加里森波德"
+		}
+		primitive_army = {
+			sequential_name = "原始军队 %C%"
+		}
+		industrial_army = {
+			sequential_name = "工业军队 %C%"
+		}
+		postatomic_army = {
+			sequential_name = "后原子军 %C%"
+		}
+	}
+
+	planet_names = {
+
+		# Names that can be assigned to all planet types
+		generic = {
+			names = {
+				"特拉斯" "费继特" "米考" "克罗的" "高单" "克拉草的巢穴" "菲拉考的巢穴" "利吉的巢穴" "雷池的巢穴" "克鲁的巢穴" "卡卡那" "菲比" "乌塔" "法韶" "起塔" "菲特" "德拉库" "佛索的巢穴" "兀立" "特拉无" "柯路" "克拉夫" "哔哩哔" "卢奇" "特批提" "特罗毕" "特提塔" "付世罗" "五里台"
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+
+
+	### CHARACTERS
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+			}
+			
+			# Always combined with a second name
+			first_names = {
+			    "爪·"
+				"喙·"
+				"翼·" 
+				"羽毛·" 
+				"翎" 
+				"眼·"
+			}
+			
+			# Always combined with a first name
+			second_names = {
+				沃德 霍华德 劳埃德 塔纳 尼古拉斯 马修斯 埃里斯 惠尔鑫 惠特克 巴顿 霍金斯 加洛维克 斯佩克特 里弗斯 弗农 尼文
+			}
+			
+			regnal_first_names = {
+				"黑翼" "白翼" "红翼" "星翼" "天翼" "云翼" 
+			}
+			
+			regnal_second_names = {
+				伊塔拉多
+			}
+		}
+	}
+}

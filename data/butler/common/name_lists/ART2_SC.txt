@@ -1,0 +1,219 @@
+﻿### Arthropoid 2
+### Created by Maximilian Olbers
+
+ART2 = {
+
+	category = "Arthropoid"
+	
+	language = "l_simp_chinese"
+	
+	ship_names = {
+		generic = {
+			莱茵  底格里斯 撒哈拉 孟加拉 梅里马克 波托马克 萨斯奎哈娜 奥里诺科 谢楠多亚
+		}
+	
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+		
+		titan = {
+		}
+
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+	
+	fleet_names = {
+		random_names = {
+			"左磊菲拉攻击群" "古藤无攻击群" "格老梅沃攻击群" "罗拉青翼攻击群" "李昆瑟旗攻击群" "恩利租卡攻击群" "破雾帕攻击群" "莫新罗攻击群" 
+		}
+		sequential_name = "攻击群 %C%"
+	}
+
+	###ARMIES
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "内力 %C%"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "外力 %C%"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "外力 %C%"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "外力 %C%"
+		}
+	
+		defense_army = {
+			sequential_name = "内力 %C%"
+		}
+			
+		assault_army = {
+			sequential_name = "外力 %C%"
+		}
+		
+		slave_army = {
+			sequential_name = "劳力部队 %C%"
+		}
+		
+		clone_army = {
+			sequential_name = "油印小队 %C%"
+		}
+
+		undead_army = {
+			sequential_name = "%O%恐惧战队"
+		}
+
+		robotic_army = {
+			sequential_name = "机械小队 %C%"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "机械小队 %C%"
+		}
+
+		
+		psionic_army = {
+			sequential_name = "灵能领主 %R%"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "掠夺者 %C%"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "超越者 %R%"
+		}
+		occupation_army = {
+			sequential_name = "%O% 加里森波德"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% 安卓 加里森波德"
+		}
+		primitive_army = {
+			sequential_name = "原始军队 %C%"
+		}
+		industrial_army = {
+			sequential_name = "工业军队 %C%"
+		}
+		postatomic_army = {
+			sequential_name = "后原子军 %C%"
+		}
+	}
+	
+	### PLANETS
+	
+	planet_names = {
+	
+		generic = {
+			names = {
+				沃德卡多布 米拉格夫卡帕 容戈瑟卡普 罗德特赫克 帕格奇托普 特克巴彭特 沃姆里加德 拉姆杰奥塔克 拉布提达姆 乌特姆容波姆
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+	
+	### CHARACTERS
+	
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+				伊格维-艾诺 伊格维-阿祖特 伊格维-威尔 伊格维-雷纳德 伊格维-雷伊姆 奎尔-坦 奎尔-雷格 奎尔-阿格 奎尔-博克斯 奎尔-鲁兹 奎尔-雷恩 奎尔-伊努 奎尔-雷利 奎尔-叶特里得 奎尔-沃克斯 奎尔-萨沃 奥伯-弗鲁格 奥伯-塞 奥伯-连德 奥伯-菲克斯 奥伯-乌恩 奥伯-菲 奥伯-皮沃特 奥伯-库德 奥伯-塔祖 奥伯-泽夫 奥伯-萨兹 奥伯-鲁特 奥伯-凯 奥伯-裘德  
+			}
+			
+			# Always combined with a second name
+			first_names = {
+			}
+			
+			# Always combined with a first name
+			second_names = {
+			}
+			
+			regnal_first_names = {
+				伊格维-艾诺 伊格维-阿祖特 伊格维-威尔 伊格维-雷纳德 伊格维-雷伊姆 奎尔-坦 奎尔-雷格
+			}
+			
+			regnal_second_names = {
+				扎孔
+			}
+		}
+	}
+}

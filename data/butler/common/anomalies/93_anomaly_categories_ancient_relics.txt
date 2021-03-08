@@ -1,0 +1,52 @@
+@precursor_easy = 6
+@precursor_medium = 8
+@precursor_hard = 10
+
+ANCREL_RUBRICATOR_CAT = {
+	desc = "ANCREL_RUBRICATOR_CAT_DESC"
+	picture = "GFX_evt_space_debris"
+	level = 4
+
+	null_spawn_chance = 0.6
+	
+	spawn_chance = {
+		modifier = {
+			add = 1
+			has_ancrel = yes
+		}
+	}
+	max_once_global = yes
+	max_once = yes
+	on_success = ancrel.4010
+}
+
+ANCREL_ARC_CAT = {
+	desc = "ANCREL_ARC_CAT_DESC"
+	picture = "GFX_evt_alien_cavemen"
+	level = 3
+	
+	spawn_chance = {
+		modifier = {
+			add = 0 #Added by arc site event
+		}
+	}
+	
+	on_success = ancrel.107
+}
+
+ANCREL_MECHANO_CAT = {
+	desc = "ANCREL_MECHANO_CAT_DESC"
+	picture = "GFX_evt_relic_world"
+	level = 5
+	
+	spawn_chance = {
+		modifier = {
+			add = 0 #Called in initializer
+		}
+	}
+
+	on_spawn = {
+	}
+	
+	on_success = ancrel.2050
+}

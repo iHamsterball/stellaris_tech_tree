@@ -1,0 +1,85 @@
+
+default_site_visible_trigger = {
+	OR = {
+		intel_level = { 
+			level >= low
+			system = from.solar_system 
+		}
+		from.planet = { is_within_borders_of = root }
+	}	
+}
+
+# Surveyor
+
+energy_candidate = {
+	OR = {
+		is_planet_class = pc_a_star
+		is_planet_class = pc_b_star
+		is_planet_class = pc_f_star
+		is_planet_class = pc_g_star
+		is_planet_class = pc_k_star
+		is_planet_class = pc_m_star
+		is_planet_class = pc_m_giant_star
+		is_planet_class = pc_t_star
+		is_planet_class = pc_gas_giant
+		is_planet_class = pc_molten
+		is_planet_class = pc_ice_asteroid
+	}
+}
+
+mineral_candidate = {
+	NOT = { has_deposit_for = shipclass_research_station }
+	OR = {
+		is_planet_class = pc_asteroid
+		is_planet_class = pc_molten
+		is_planet_class = pc_toxic
+		is_planet_class = pc_frozen
+		is_planet_class = pc_barren
+		is_planet_class = pc_barren_cold
+		is_planet_class = pc_broken
+		is_planet_class = pc_shattered	
+	}
+}
+
+research_candidate = {
+	NOT = { has_deposit_for = shipclass_mining_station }
+	habitable_planet = no
+}
+
+alloy_candidate = {
+	NOT = { has_deposit_for = shipclass_research_station }
+	OR = {
+		is_planet_class = pc_asteroid
+		is_planet_class = pc_molten
+		is_planet_class = pc_toxic
+		is_planet_class = pc_frozen
+		is_planet_class = pc_barren
+		is_planet_class = pc_barren_cold
+		is_planet_class = pc_broken
+		is_planet_class = pc_shattered	
+	}
+}
+
+exotic_gas_candidate = {
+	NOT = { has_deposit_for = shipclass_research_station }
+	OR = {
+		is_planet_class = pc_gas_giant
+		is_planet_class = pc_toxic
+	}	
+}
+
+rare_crystal_candidate = {
+	NOT = { has_deposit_for = shipclass_research_station }
+	OR = {
+		is_planet_class = pc_frozen
+		is_planet_class = pc_ice_asteroid
+	}
+}
+
+volatile_motes_candidate = {
+	NOT = { has_deposit_for = shipclass_research_station }
+	OR = {			
+		is_planet_class = pc_molten
+		is_planet_class = pc_asteroid
+	}
+}

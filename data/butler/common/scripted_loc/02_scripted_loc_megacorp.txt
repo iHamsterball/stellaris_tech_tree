@@ -1,0 +1,279 @@
+defined_text = {
+	name = GetFleet1DealProduct
+	text = {
+		trigger = { has_country_flag = fleet1dealproduct1 }
+		localization_key = fleet1product1
+	}
+	text = {
+		trigger = { has_country_flag = fleet1dealproduct2 }
+		localization_key = fleet1product2
+	}
+	text = {
+		trigger = { has_country_flag = fleet1dealproduct3 }
+		localization_key = fleet1product3
+	}
+	text = {
+		trigger = { has_country_flag = fleet1dealproduct4 }
+		localization_key = fleet1product4
+	}
+	text = {
+		trigger = { has_country_flag = fleet1dealproduct5 }
+		localization_key = fleet1product5
+	}
+	text = {
+		trigger = { has_country_flag = fleet1dealproduct6 }
+		localization_key = fleet1product6
+	}
+	text = {
+		trigger = { has_country_flag = fleet1dealproduct7 }
+		localization_key = fleet1product7
+	}
+}
+
+defined_text = {
+	name = GetFleet1DealCost
+	text = {
+		trigger = { has_country_flag = fleet1dealcost1 }
+		localization_key = fleet1cost1
+	}
+	text = {
+		trigger = { has_country_flag = fleet1dealcost2 }
+		localization_key = fleet1cost2
+	}
+	text = {
+		trigger = { has_country_flag = fleet1dealcost3 }
+		localization_key = fleet1cost3
+	}
+	text = {
+		trigger = { has_country_flag = fleet1dealcost4 }
+		localization_key = fleet1cost4
+	}
+	text = {
+		trigger = { has_country_flag = fleet1dealcost5 }
+		localization_key = fleet1cost5
+	}
+	text = {
+		trigger = { has_country_flag = fleet1dealcost6 }
+		localization_key = fleet1cost6
+	}
+}
+
+defined_text = {
+	name = GetFleet1DealProductAddendum
+	text = {
+		trigger = { has_country_flag = fleet1dealproduct1 }
+		localization_key = fleet1product1_addendum
+	}
+	text = {
+		trigger = { has_country_flag = fleet1dealproduct2 }
+		localization_key = fleet1product2_addendum
+	}
+	text = {
+		trigger = { has_country_flag = fleet1dealproduct3 }
+		localization_key = fleet1product3_addendum
+	}
+	text = {
+		trigger = { has_country_flag = fleet1dealproduct4 }
+		localization_key = fleet1product4_addendum
+	}
+	text = {
+		trigger = { has_country_flag = fleet1dealproduct5 }
+		localization_key = fleet1product5_addendum
+	}
+	text = {
+		trigger = { has_country_flag = fleet1dealproduct6 }
+		localization_key = fleet1product6_addendum
+	}
+	text = {
+		trigger = { has_country_flag = fleet1dealproduct7 }
+		localization_key = fleet1product7_addendum
+	}
+}
+
+#Fleet 3
+defined_text = { #Buying Food
+	name = GetFleet3ScaledCostDeal1
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal1cost1
+		}
+		localization_key = fleet3deal1cost1
+	}
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal1cost2
+		}
+		localization_key = fleet3deal1cost2
+	}
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal1cost3
+		}
+		localization_key = fleet3deal1cost3
+	}
+}
+
+defined_text = { #Selling Minerals
+	name = GetFleet3ScaledProductDeal1
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal1product1
+		}
+		localization_key = fleet3deal1product1
+	}
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal1product2
+		}
+		localization_key = fleet3deal1product2
+	}
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal1product3
+		}
+		localization_key = fleet3deal1product3
+	}
+}
+
+defined_text = { #Buying Energy/Food/Luxury Goods
+	name = GetFleet3CostDeal2
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal2cost1
+		}
+		localization_key = fleet3deal2cost1
+	}
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal2cost2
+		}
+		localization_key = fleet3deal2cost2
+	}
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal2cost3
+		}
+		localization_key = fleet3deal2cost3
+	}
+}
+
+defined_text = { #Selling Engineers/Governor
+	name = GetFleet3ProductDeal2
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal2product1
+		}
+		localization_key = fleet3deal2product1
+	}
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal2product2
+		}
+		localization_key = fleet3deal2product2
+	}
+}
+
+defined_text = { #Buying Dark Matter/Rare Crystals/Zro Dust
+	name = GetFleet3CostDeal4
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal4cost1
+		}
+		localization_key = fleet3deal4cost1
+	}
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal4cost2
+		}
+		localization_key = fleet3deal4cost2
+	}
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal4cost3
+		}
+		localization_key = fleet3deal4cost3
+	}
+}
+
+defined_text = { #Selling Alloy/Exotic Gases/Living Metal
+	name = GetFleet3ProductDeal4
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal4product1
+		}
+		localization_key = fleet3deal4product1
+	}
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal4product2
+		}
+		localization_key = fleet3deal4product2
+	}
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal4product3
+		}
+		localization_key = fleet3deal4product3
+	}
+}
+
+defined_text = { #Buying Energy/Minerals/Luxury Goods
+	name = GetFleet3CostDeal6
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal6cost1
+		}
+		localization_key = fleet3deal6cost1
+	}
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal6cost2
+		}
+		localization_key = fleet3deal6cost2
+	}
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal6cost3
+		}
+		localization_key = fleet3deal6cost3
+	}
+}
+
+defined_text = { #Buying Energy/Minerals/Luxury Goods
+	name = GetFleet3CostDeal7
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal7cost1
+		}
+		localization_key = fleet3deal7cost1
+	}
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal7cost2
+		}
+		localization_key = fleet3deal7cost2
+	}
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal7cost3
+		}
+		localization_key = fleet3deal7cost3
+	}
+}
+
+defined_text = { #Buying Goods/Influence
+	name = GetFleet3CostDeal8
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal8cost1
+		}
+		localization_key = fleet3deal8cost1
+	}
+	text = {
+		trigger = {
+			has_country_flag = fleet3deal8cost2
+		}
+		localization_key = fleet3deal8cost2
+	}
+}
+

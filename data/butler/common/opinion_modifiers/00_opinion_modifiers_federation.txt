@@ -1,0 +1,323 @@
+##########
+# OPINION MODIFIERS
+##########
+
+# Fallen Empire Scion
+opinion_scion = {
+	opinion = {
+		base = 100
+	}
+}
+
+opinion_common_ground = {
+	opinion = {
+		base = 100
+	}
+}
+
+opinion_wanted_to_leave_hegemony = {
+	opinion = {
+		base = -15
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_denied_to_leave_hegemony = {
+	opinion = {
+		base = -30
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_tried_to_secede = {
+	opinion = {
+		base = -20
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_forced_to_remain = {
+	opinion = {
+		base = -20
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+triggered_opinion_diplo_stance_supremacy = {
+	trigger = {
+		OR = {
+			is_country_type = default
+			is_country_type = awakened_fallen_empire
+		}
+
+		has_policy_flag = diplo_stance_supremacist
+		FROM = {
+			has_policy_flag = diplo_stance_supremacist
+		}
+	}
+
+	opinion = {
+		base = -100
+	}
+}
+
+# Galactic Community -------------------------------------------------
+opinion_fellow_galcom_member = {
+	opinion = {
+		base = 10
+	}
+}
+
+opinion_galactic_community_supported_resolution = {
+	opinion = {
+		base = 10
+	}
+
+	accumulative = yes
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_galactic_community_opposed_resolution = {
+	opinion = {
+		base = -10
+	}
+
+	accumulative = yes
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_galactic_community_veto_resolution = {
+	opinion = {
+		base = -50
+	}
+
+	accumulative = yes
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_galactic_community_emergency_measure_resolution = {
+	opinion = {
+		base = 30
+	}
+
+	accumulative = yes
+
+	decay = {
+		base = 1
+	}
+}
+
+triggered_opinion_galactic_community_in_breach = {
+	trigger = {
+		OR = {
+			is_country_type = default
+			is_country_type = awakened_fallen_empire
+		}
+
+		is_in_breach_of_any = no
+		is_galactic_community_member = yes
+
+		FROM = {
+			is_in_breach_of_any = yes
+			is_galactic_community_member = yes
+		}
+	}
+
+	opinion = {
+		base = -20
+	}
+}
+
+triggered_opinion_galactic_community_left = {
+	trigger = {
+		OR = {
+			is_country_type = default
+			is_country_type = awakened_fallen_empire
+		}
+
+		is_galactic_community_member = yes
+		FROM = {
+			has_modifier = left_galactic_community
+		}
+	}
+
+	opinion = {
+		base = -30
+	}
+}
+
+triggered_opinion_federation_midas = {
+	trigger = {
+		is_in_federation_with = FROM
+		FROM = {
+			has_modifier = midas_stigma
+		}
+	}
+
+	opinion = {
+		base = -100
+	}
+}
+
+
+# Anniversary Patch ------------------------------------------------------------
+
+opinion_envoy_insult_taken = {
+	opinion = {
+		base = -25
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_envoy_insult_laughed_at = {
+	opinion = {
+		base = 25
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_kills_envoys = {
+	opinion = {
+		base = -50
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_extradited_envoy = {
+	opinion = {
+		base = 20
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_refused_extradited_envoy = {
+	opinion = {
+		base = -30
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_special_ops_vs_us = {
+	opinion = {
+		base = -30
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_feline_affection = {
+	opinion = {
+		base = 25
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_hegemony_joint_action_agreed = {
+	opinion = {
+		base = 30
+	}
+
+	decay = {
+		base = 3
+	}
+}
+
+opinion_hegemony_joint_action_refused = {
+	opinion = {
+		base = -50
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_hegemony_joint_action_completed = {
+	opinion = {
+		base = 50
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_military_joint_action_agreed = {
+	opinion = {
+		base = 50
+	}
+
+	decay = {
+		base = 3
+	}
+}
+
+opinion_military_joint_action_refused = {
+	opinion = {
+		base = -50
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_ideological_dispute = {
+	opinion = {
+		base = -30
+	}
+	decay = {
+		base = 1
+	}
+}
+
+opinion_executed_galcom_envoys = {
+	opinion = {
+		base = -50
+	}
+
+	decay = {
+		base = 1
+	}
+}

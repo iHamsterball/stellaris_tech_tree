@@ -1,0 +1,28 @@
+
+special_project = {
+	key = "CARAVAN_HULK_PROJECT"
+	days_to_research = 180
+	tech_department = engineering_technology
+	timelimit = 3600
+	picture = GFX_evt_unknown_ships
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	
+	event_scope = ship_event
+	
+	requirements = {
+		shipclass_constructor = 1
+	}
+	
+	on_success = {
+		owner = { country_event = { id = cara.4025 } }
+	}
+
+	on_fail = {
+		if = {
+			limit = { exists = event_target:caravan_hulk_object }
+			event_target:caravan_hulk_object = {
+				destroy_ambient_object = this
+			}
+		}
+	}
+}

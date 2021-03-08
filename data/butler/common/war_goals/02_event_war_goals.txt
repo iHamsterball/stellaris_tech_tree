@@ -1,0 +1,231 @@
+wg_machine_uprising = {
+	casus_belli = cb_event
+	
+	total_war = yes
+
+	allowed_peace_offers = {
+		status_quo
+	}
+	
+	surrender_acceptance = -1000
+	war_exhaustion = 0.5
+	
+	set_defender_wargoal = wg_machine_uprising
+
+	potential = {
+		always = no # event only
+	}
+	possible = {
+		always = yes
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+wg_war_in_heaven = {
+	casus_belli = cb_event
+
+	total_war = yes
+
+	allowed_peace_offers = {
+		status_quo
+	}
+	
+	surrender_acceptance = -1000
+	war_exhaustion = 0.25
+	
+	set_defender_wargoal = wg_war_in_heaven
+
+	potential = {
+		always = no # event only
+	}
+	possible = {
+		always = yes
+	}
+	
+	on_accept  = {
+		hidden_effect = {
+			if = {
+				limit = {
+					is_country_type = awakened_fallen_empire
+				}
+				save_event_target_as = WarInHeavenFEOne
+				remove_global_flag = war_in_heaven_ongoing
+				set_global_flag = war_in_heaven_ended
+				every_playable_country = {
+					country_event = { id = war_in_heaven.5 }
+				}	
+				observer_event = { id = observer.77 }		
+				from = {
+					if = {
+						limit = {
+							any_war = {
+								NOT = { is_war_participant = { who = root } }
+								any_war_participant = {
+									prev = {
+										using_war_goal = {
+											type = wg_war_in_heaven
+											owner = prev
+										}
+									}
+								}
+							}
+						}
+						every_war = { #End War in Heaven
+							limit = {
+								NOT = { is_war_participant = { who = root } }
+								any_war_participant = {
+									prev = {
+										using_war_goal = {
+											type = wg_war_in_heaven
+											owner = prev
+										}
+									}
+								}
+							}
+							end_war_effect = yes
+						}
+					}
+				}
+			}
+		}
+	}	
+	
+	on_status_quo = {
+		hidden_effect = {
+			save_event_target_as = WarInHeavenFEOne
+			from = { save_event_target_as = WarInHeavenFETwo }
+			every_playable_country = {
+				country_event = { id = war_in_heaven.6 }
+			}
+			observer_event = { id = observer.78 }	
+		}
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+wg_assert_overlordship = {
+	casus_belli = cb_event
+	
+	cede_claims = occupied_only
+
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+	
+	potential = {
+		always = no # event only
+	}
+	possible = {
+		always = yes
+	}
+	
+	on_accept = {
+		custom_tooltip = wg_assert_overlordship_accept
+		hidden_effect = {
+			from = {
+				every_system_within_border = {
+					limit = {
+						root = { has_claim = prev }
+					}
+					remove_claims = { who = root }
+				}				
+			}		
+		}
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+wg_assert_hegemony = {
+	casus_belli = cb_event
+	
+	cede_claims = occupied_only
+
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+	
+	potential = {
+		always = no # event only
+	}
+	possible = {
+		always = yes
+	}
+	
+	on_accept = {
+		custom_tooltip = wg_assert_hegemony_accept
+		hidden_effect = {
+			from = {
+				every_system_within_border = {
+					limit = {
+						root = { has_claim = prev }
+					}
+					remove_claims = { who = root }
+				}
+				join_alliance = { who = root override_requirements = yes }
+			}
+			if = {
+				limit = {
+					has_opinion_modifier = {
+						who = from
+						modifier = opinion_broke_federation
+					}
+				}
+				remove_opinion_modifier = {
+					who = from
+					modifier = opinion_broke_federation
+				}
+			}
+			if = {
+				limit = {
+					from = {
+						federation = {
+							check_variable = {
+								which = federation_secession_war
+								value > 0
+							}
+						}
+					}
+				}
+				from = {
+					federation = {
+						change_variable = {
+							which = federation_secession_war
+							value = -1
+						}
+					}
+				}
+			}
+			add_opinion_modifier = {
+				who = from
+				modifier = opinion_tried_to_secede
+			}
+			from = {
+				add_opinion_modifier = {
+					who = root
+					modifier = opinion_forced_to_remain
+				}
+				set_timed_country_flag = {
+					flag = failed_hegemony_rebellion
+					days = 7200
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}

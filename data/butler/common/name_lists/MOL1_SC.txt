@@ -1,0 +1,211 @@
+﻿### Molluscoid 1
+MOL1 = {
+	### SHIPS
+	
+	category = "Molluscoid"
+
+	language = "l_simp_chinese"
+	
+	ship_names = {
+
+		generic = {
+			长钉 "银钉" "铁钉" "翡翠长钉" "翠绿长钉" "黄金长钉" "刺钉" "狂怒" "翠绿怒意" "荆棘之怒" "怒焰之钉" "惩罚者"
+			超新星 "雷电之子" 雷鸣
+			艾利西亚 安东尼娅 卡拉 卡门 卡特琳娜 多洛雷斯 马丁娜 茹列塔 安东内拉 雷娜塔
+			尤利西斯 塞诺芬 薛西斯 纳尔逊 大力神 伊卡洛斯 阿特拉斯 阿波罗 阿贾克斯 伯勒罗丰 王者之剑 阿古利巴 亚历山大 贝利撒留 汉尼拔 华盛顿 萨拉丁
+			奥斯普里 潘瑟 皮科克 佩利肯 企鹅镇 彼得雷尔 鸭嘴兽 臭鼬 波丘派恩 普马 巨蟒 响尾蛇 雷文 火蜥蜴 沙丁鱼 天蝎 鲨鱼 伯劳
+			沃克斯 "赛夫缇" 野兽 创造者 开发者 铸造者 铸造厂
+			奥多-拉克斯-阿瑞 蕾姆-比尔-托尔 拉尔-伊斯-伊恩 欧斯-福尔-达斯
+			杜兰波 维斯维克 破哈加 菲达易马 费翁错 詹达伊拉 金钟站 皮佐措 特拉诺 席多碧 艾提德安 
+		}
+
+		corvette = { }
+		
+		destroyer = { }
+		
+		cruiser = { }
+		
+		battleship = { }
+		
+		titan = {
+		}
+
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			"博格沃斯空中小组" "雷加姆空中小组" "肖格尔空中小组" "帕吉里姆空中小组" "梅吉施空中小组" "卢尔加姆空中小组"  
+			"伊萨克中队" "侏洛纪中队"
+		}
+		sequential_name = "鹦鹉螺空中小队 %C%"
+	}
+	
+	### ARMIES
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "防御炮弹 %C%"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "入侵鱼群 %C%"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "入侵鱼群 %C%"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "入侵鱼群 %C%"
+		}
+
+		defense_army = {
+			sequential_name = "防御炮弹 %C%"
+		}
+			
+		assault_army = {
+			sequential_name = "入侵鱼群 %C%"
+		}
+		
+		slave_army = {
+			sequential_name = "劳工部队 %C%"
+		}
+
+		undead_army = {
+			sequential_name = "%O%恐怖虫群"
+		}
+
+		clone_army = {
+			sequential_name = "克隆群 %C%"
+		}
+		
+		robotic_army = {
+			sequential_name = "头部智能人﻿ %C%"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "头部智能人﻿ %C%"
+		}
+
+		psionic_army = { 
+			sequential_name = "通灵部队 %C%"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "吞噬虫群﻿ %C%"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "上升者 %C%"
+		}
+		occupation_army = {
+			sequential_name = "%O% 加里森波德"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% 安卓 加里森波德"
+		}
+		primitive_army = {
+			sequential_name = "原始军队 %C%"
+		}
+		industrial_army = {
+			sequential_name = "工业军队 %C%"
+		}
+		postatomic_army = {
+			sequential_name = "后原子军 %C%"
+		}
+	}
+
+	### PLANETS
+
+	planet_names = {
+
+		generic = {
+			names = {
+				斯其瓦 拉嘎尼 "卢基" 乌耳基姆 乌尔达姆 玛格拉缇 伽伯格 古拉斯齐姆 "马格 卢托奇" 盖布拉 里布拉格 图格姆 斯拉帼斯 维格里 芭坎尼 谷瑟 埃斯科 阿格 
+			}
+		}
+		
+		pc_desert = {
+			names = { }
+		}
+		
+		pc_tropical = {
+			names = { }
+		}
+		
+		pc_arid = {
+			names = { }
+		}
+		
+		pc_continental = {
+			names = { }
+		}
+		
+		pc_ocean = {
+			names = { }
+		}
+		
+		pc_tundra = {
+			names = { }
+		}
+		
+		pc_arctic = {
+			names = { }
+		}
+
+		pc_savannah = {
+			names = { }
+		}
+
+		pc_alpine = {
+			names = { }
+		}
+		
+	}
+
+	### CHARACTERS
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+				斯其瓦 拉嘎尼 "卢基" 乌耳基姆 乌尔达姆 玛格拉缇 伽伯格 古拉斯齐姆 "马格 卢托奇" 盖布拉 里布拉格 图格姆 斯拉帼斯 维格里 芭坎尼 谷瑟 埃斯科 阿格
+			}
+			
+			# Always combined with a second name
+			first_names = { }
+			
+			# Always combined with a first name
+			second_names = { }
+			
+			regnal_first_names = {
+				斯其瓦 拉嘎尼 乌耳基姆 乌尔达姆 玛格拉缇 伽伯格 古拉斯齐姆 盖布拉 
+			}
+			
+			regnal_second_names = {
+				舒拉许
+			}
+		}
+	}
+}

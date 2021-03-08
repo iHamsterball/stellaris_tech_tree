@@ -1,0 +1,817 @@
+##########################################################################
+# Empire edicts
+##########################################################################
+
+@Edict1Cost = 100
+@Edict2Cost = 200
+@Edict3Cost = 300
+
+@EdictPerpetual = -1
+
+#################
+# Toggle Edicts
+#################
+evacuation_protocols = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = {
+			influence = @Edict1Cost
+		}
+	}
+
+	modifier = {
+		planet_colony_development_speed_mult = 1.00
+		pop_resettlement_cost_mult = -0.50
+	}
+
+	potential = {
+		has_origin = origin_doomsday
+		any_owned_planet = {
+			OR = {
+				has_modifier = doomsday_1
+				has_modifier = doomsday_2
+				has_modifier = doomsday_3
+				has_modifier = doomsday_4
+				has_modifier = doomsday_5
+			}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_doomsday_colony"			
+			any_owned_planet = {
+				habitable_planet = yes
+				NOR = {
+					has_modifier = doomsday_1
+					has_modifier = doomsday_2
+					has_modifier = doomsday_3
+					has_modifier = doomsday_4
+					has_modifier = doomsday_5
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+fortify_the_border = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = {
+			influence = @Edict1Cost
+		}
+	}
+
+	modifier = {
+		starbase_upgrade_speed_mult = 0.50
+		country_starbase_capacity_add = 2
+		empire_size_systems_mult = 0.10
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+nutritional_plenitude = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = { #Activation Cost
+			trigger = {
+				NOT = { has_edict = nutritional_plenitude }			
+			}
+			influence = 200
+		}
+		cost = { #Deactivation Cost
+			trigger = {
+				has_edict = nutritional_plenitude
+			}
+			influence = 100
+		}
+	}
+
+	modifier = {
+		pop_growth_speed = 0.10
+		biological_pop_happiness = 0.05
+		lithoid_pop_happiness = 0.05
+		empire_size_pops_mult = 0.10
+		planet_pops_organics_food_upkeep_mult = 0.25
+		planet_pops_organics_minerals_upkeep_mult = 0.25
+	}
+
+	potential = {
+		is_gestalt = no
+	}
+
+	prerequisites = {
+		"tech_gene_crops"
+	}
+
+	show_tech_unlock_if = {
+		is_gestalt = no
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+nutritional_plenitude_hive = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = { #Activation Cost
+			trigger = {
+				NOT = { has_edict = nutritional_plenitude_hive }			
+			}
+			influence = 200
+		}
+		cost = { #Deactivation Cost
+			trigger = {
+				has_edict = nutritional_plenitude_hive
+			}
+			influence = 100
+		}
+	}
+
+	modifier = {
+		pop_growth_speed = 0.10
+		empire_size_pops_mult = 0.10
+		planet_pops_organics_food_upkeep_mult = 0.25
+		planet_pops_organics_minerals_upkeep_mult = 0.25	
+	}
+
+	potential = {
+		is_hive_empire = yes
+	}
+
+	prerequisites = {
+		"tech_gene_crops"
+	}
+
+	show_tech_unlock_if = {
+		is_hive_empire = yes
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+expanded_breeding_program_servitor = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = { #Activation Cost
+			trigger = {
+				NOT = { has_edict = expanded_breeding_program_servitor }			
+			}
+			influence = 200
+		}
+		cost = { #Deactivation Cost
+			trigger = {
+				has_edict = expanded_breeding_program_servitor
+			}
+			influence = 100
+		}
+	}
+
+	modifier = {
+		pop_growth_speed = 0.10
+		biological_pop_happiness = 0.05
+		lithoid_pop_happiness = 0.05
+		empire_size_pops_mult = 0.10
+		planet_pops_organics_food_upkeep_mult = 0.25
+		planet_pops_organics_minerals_upkeep_mult = 0.25
+	}
+
+	potential = {
+		has_valid_civic = civic_machine_servitor
+	}
+
+	prerequisites = {
+		"tech_gene_crops"
+	}
+
+	show_tech_unlock_if = {
+		has_valid_civic = civic_machine_servitor
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+fleet_supremacy = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = {
+			influence = @Edict1Cost
+		}
+	}
+
+	prerequisites = {
+		"tech_doctrine_fleet_size_1"
+	}
+
+	modifier = {
+		ship_starting_experience_add = 100
+		starbase_shipyard_build_speed_mult = 0.10
+		diplo_weight_naval_mult = 0.10
+		ships_upkeep_mult = 0.1
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+diplomatic_grants = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = {
+			influence = @Edict1Cost
+		}
+	}
+
+	modifier = {
+		envoys_add = 1
+	}
+
+	potential = {
+		has_non_swapped_tradition = tr_diplomacy_adopt
+		has_comms_with_alien_empire = yes
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+extended_shifts = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = { #Activation Cost
+			trigger = {
+				NOT = { has_edict = extended_shifts }			
+			}
+			influence = 200
+		}
+		cost = { #Deactivation Cost
+			trigger = {
+				has_edict = extended_shifts
+			}
+			influence = 100
+		}
+	}
+
+	modifier = {
+		planet_jobs_worker_produces_mult = 0.10
+		planet_jobs_slave_produces_mult = 0.10
+		pop_cat_worker_happiness = -0.10
+		pop_cat_slave_happiness = -0.10
+	}
+
+	potential = {
+		has_non_swapped_tradition = tr_domination_workplace_motivators
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_fanatic_authoritarian
+		}
+	}
+}
+
+drone_overdrive = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = { #Activation Cost
+			trigger = {
+				NOT = { has_edict = drone_overdrive }			
+			}
+			influence = 200
+		}
+		cost = { #Deactivation Cost
+			trigger = {
+				has_edict = drone_overdrive
+			}
+			influence = 100
+		}
+	}
+
+	modifier = {
+		planet_jobs_simple_drone_produces_mult = 0.10
+		pop_amenities_usage_no_happiness_mult = 0.10
+	}
+
+	potential = {
+		is_gestalt = yes
+		has_swapped_tradition = tr_domination_drone_network
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_fanatic_authoritarian
+		}
+	}
+}
+
+capacity_subsidies = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = { #Activation Cost
+			trigger = {
+				NOT = { has_edict = capacity_subsidies }			
+			}
+			influence = 200
+		}
+		cost = { #Deactivation Cost
+			trigger = {
+				has_edict = capacity_subsidies
+			}
+			influence = 100
+		}
+	}
+
+	modifier = {
+		planet_technician_produces_mult = 0.20
+		custom_tooltip = edict_capacity_subsidies_tooltip
+		show_only_custom_tooltip = no
+	}
+
+	prerequisites = {
+		"tech_power_hub_1"
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+mining_subsidies = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = { #Activation Cost
+			trigger = {
+				NOT = { has_edict = mining_subsidies }			
+			}
+			influence = 200
+		}
+		cost = { #Deactivation Cost
+			trigger = {
+				has_edict = mining_subsidies
+			}
+			influence = 100
+		}
+	}
+
+	modifier = {
+		planet_miners_produces_mult = 0.20 # Note: Also affects organic special resource miners!
+		custom_tooltip = edict_mining_subsidies_tooltip
+		show_only_custom_tooltip = no
+	}
+
+	prerequisites = {
+		"tech_mineral_purification_1"
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+farming_subsidies = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = { #Activation Cost
+			trigger = {
+				NOT = { has_edict = farming_subsidies }			
+			}
+			influence = 200
+		}
+		cost = { #Deactivation Cost
+			trigger = {
+				has_edict = farming_subsidies
+			}
+			influence = 100
+		}
+	}
+
+	modifier = {
+		planet_farmers_produces_mult = 0.20
+		custom_tooltip = edict_farming_subsidies_tooltip
+		show_only_custom_tooltip = no
+	}
+
+	prerequisites = {
+		"tech_food_processing_1"
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+industrial_subsidies = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = { #Activation Cost
+			trigger = {
+				NOT = { has_edict = industrial_subsidies }			
+			}
+			influence = 200
+		}
+		cost = { #Deactivation Cost
+			trigger = {
+				has_edict = industrial_subsidies
+			}
+			influence = 100
+		}
+	}
+
+	modifier = {
+		planet_artisans_produces_mult = 0.10
+		custom_tooltip = edict_industrial_subsidies_tooltip
+		show_only_custom_tooltip = no
+	}
+
+	potential = {
+		country_uses_consumer_goods = yes
+	}
+	
+	prerequisites = {
+		tech_global_production_strategy
+	}
+	
+	show_tech_unlock_if = {
+		country_uses_consumer_goods = yes
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+forge_subsidies = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = { #Activation Cost
+			trigger = {
+				NOT = { has_edict = forge_subsidies }			
+			}
+			influence = 200
+		}
+		cost = { #Deactivation Cost
+			trigger = {
+				has_edict = forge_subsidies
+			}
+			influence = 100
+		}
+	}
+
+	modifier = {
+		planet_metallurgists_produces_mult = 0.10
+		custom_tooltip = edict_forge_subsidies_tooltip
+		show_only_custom_tooltip = no
+	}
+	
+	prerequisites = {
+		tech_global_production_strategy
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+research_subsidies = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = { #Activation Cost
+			trigger = {
+				NOT = { has_edict = research_subsidies }			
+			}
+			influence = 200
+		}
+		cost = { #Deactivation Cost
+			trigger = {
+				has_edict = research_subsidies
+			}
+			influence = 100
+		}
+	}
+
+	modifier = {
+		planet_researchers_produces_mult = 0.10
+		custom_tooltip = edict_research_subsidies_tooltip
+		show_only_custom_tooltip = no
+	}
+
+	potential = {
+		has_tradition = tr_discovery_databank_uplinks
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+veneration_of_saints = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = {
+			influence = @Edict1Cost
+		}
+	}
+
+	modifier = {
+		planet_priests_produces_mult = 0.20
+		pop_ethic_spiritualist_attraction_mult = 0.25
+	}
+
+	potential = {
+		is_spiritualist = yes
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+peace_festivals = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = { #Activation Cost
+			trigger = {
+				NOT = { has_edict = peace_festivals }			
+			}
+			influence = 100
+		}
+		cost = { #Deactivation Cost
+			trigger = {
+				has_edict = peace_festivals
+			}
+			influence = 200
+		}
+	}
+
+	modifier = {
+		pop_happiness = 0.10
+		pop_ethic_pacifist_attraction_mult = 0.25
+	}
+
+	potential = {
+		is_pacifist = yes
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+information_quarantine = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = { #Activation Cost
+			trigger = {
+				NOT = { has_edict = information_quarantine }			
+			}
+			influence = 200
+		}
+		cost = { #Deactivation Cost
+			trigger = {
+				has_edict = information_quarantine
+			}
+			influence = 100
+		}
+	}
+
+	modifier = {
+		planet_stability_add = 5
+		pop_government_ethic_attraction = 0.5
+	}
+
+	potential = {
+		is_authoritarian = yes
+	}
+
+	ai_weight = {
+		weight = @EdictLowPrio
+	}
+}
+
+encourage_free_thought = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = {
+			influence = @Edict1Cost
+		}
+	}
+
+	modifier = {
+		pop_ethics_shift_speed_mult = 1
+	}
+
+	potential = {
+		is_egalitarian = yes
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+map_the_stars = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = { #Activation Cost
+			trigger = {
+				NOT = { has_edict = map_the_stars }			
+			}
+			influence = 200
+		}
+		cost = { #Deactivation Cost
+			trigger = {
+				has_edict = map_the_stars
+			}
+			influence = 100
+		}
+	}
+
+	modifier = {
+		science_ship_survey_speed = 0.25
+		ship_anomaly_generation_chance_mult = 0.10
+	}
+
+	potential = {
+		has_tradition = tr_discovery_adopt
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictHighPrio
+			years_passed < 50
+		}
+	}
+}
+
+land_of_opportunity = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = {
+			influence = @Edict2Cost
+		}
+	}
+
+	modifier = {
+		planet_immigration_pull_mult = 1
+		pop_growth_from_immigration = 0.25
+	}
+
+	potential = {
+		is_xenophile = yes
+		has_comms_with_alien_empire = yes
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+greater_than_ourselves = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = { #Activation Cost
+			trigger = {
+				NOT = { has_edict = greater_than_ourselves }			
+			}
+			influence = 300
+		}
+		cost = { #Deactivation Cost
+			trigger = {
+				has_edict = greater_than_ourselves
+			}
+			influence = 200
+		}
+	}
+
+	modifier = {
+	}
+
+	potential = {
+		is_galactic_community_member = yes
+		OR = {
+			is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+			is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+			is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+		}
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}

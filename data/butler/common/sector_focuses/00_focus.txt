@@ -1,0 +1,3454 @@
+
+# Basic is inherited by all. It has:
+#	- high base weights for vital things, like amenities, housing and countering crime
+#	- low base weights for other buildings, which the other plans will fall back on if they can't do what they are
+#	  meant to for whatever reason (also so it knows how to update buildings you plant there)
+# Other plans overwrite weights for their special field so that the sector will favour these
+# Whether the planet can get pops to work the jobs from the building, and whether the owner can afford the upkeep,
+# are now checked in code (this doesn't cover upkeep from jobs)
+
+
+# Basic 
+basic = {
+	hidden = yes
+
+	clear_blockers = yes
+	
+	# Housing Districts
+
+	district = {
+		key = district_city
+		weight = {
+			weight = 1.5
+			modifier = {
+				factor = 10
+				free_housing < 0
+			}
+
+			# Let's not go full spam on this.
+			modifier = {
+				factor = 0
+				free_housing >= 0
+			}
+		}
+	}
+
+	district = {
+		key = district_hive
+		weight = {
+			weight = 1.5
+			modifier = {
+				factor = 12
+				OR = {
+					free_housing < 0
+					free_amenities < 0
+				}
+			}
+
+			# Let's not go full spam on this.
+			modifier = {
+				factor = 0
+				free_housing >= 0
+				free_amenities >= 0
+			}
+		}
+	}
+
+	district = {
+		key = district_hab_housing
+		weight = {
+			weight = 1.5
+			modifier = {
+				factor = 10
+				free_housing < 0
+			}
+
+			# Let's not go full spam on this.
+			modifier = {
+				factor = 0
+				free_housing >= 0
+			}
+
+			modifier = {
+				factor = 0
+				if = {
+					limit = {
+						NOT = { has_planet_flag = advanced_habitat }
+					}
+					num_districts = {
+						type = district_hab_housing
+						value >= 1
+					}
+				}
+				else = {
+					num_districts = {
+						type = district_hab_housing
+						value >= 2
+					}
+				}
+			}
+		}
+	}
+
+	district = {
+		key = district_rw_city
+		weight = {
+			weight = 1.5
+			modifier = {
+				factor = 10
+				free_housing < 0
+			}
+
+			# Let's not go full spam on this.
+			modifier = {
+				factor = 0
+				free_housing >= 0
+			}
+		}
+	}
+
+	district = {
+		key = district_rw_hive
+		weight = {
+			weight = 1.5
+			modifier = {
+				factor = 12
+				OR = {
+					free_housing < 0
+					free_amenities < 0
+				}
+			}
+
+			# Let's not go full spam on this.
+			modifier = {
+				factor = 0
+				free_housing >= 0
+				free_amenities >= 0
+			}
+		}
+	}
+
+	district = {
+		key = district_arcology_housing
+		weight = {
+			weight = 1.5
+			modifier = {
+				factor = 10
+				free_housing < 0
+			}
+
+			# Let's not go full spam on this.
+			modifier = {
+				factor = 0
+				free_housing >= 0
+			}
+		}
+	}
+
+	district = {
+		key = district_nexus
+		weight = {
+			weight = 1.5
+			modifier = {
+				factor = 5
+				free_housing < 0
+			}
+
+			# Let's not go full spam on this.
+			modifier = {
+				factor = 0
+				free_housing >= 0
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value > 50
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 10
+					}
+				}
+			}
+		}
+	}
+
+	district = {
+		key = district_rw_nexus
+		weight = {
+			weight = 1.5
+			modifier = {
+				factor = 5
+				free_housing < 0
+			}
+
+			# Let's not go full spam on this.
+			modifier = {
+				factor = 0
+				free_housing >= 0
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value > 50
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 10
+					}
+				}
+			}
+		}
+	}
+
+	# Energy Districts
+
+	district = {
+		key = district_generator
+		weight = {
+			weight = 4
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 20
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 0
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+		}
+	}
+
+	district = {
+		key = district_generator_uncapped
+		weight = {
+			weight = 4
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 20
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 0
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+		}
+	}
+	
+	district = {
+		key = district_rw_generator
+		weight = {
+			weight = 6
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 30
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 0
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+		}
+	}
+
+	district = {
+		key = district_rw_commercial
+		weight = {
+			weight = 6
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 30
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 0
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_amenities < 0
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+		}
+	}
+
+	district = { #too good to not build
+		key = district_hab_energy
+		weight = {
+			weight = 15
+
+			# Let's not go full spam on this.
+			modifier = {
+				factor = 0
+				free_housing >= 5
+				has_unemployed_or_servants = no
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 0
+					}
+				}
+			}
+		}
+	}
+
+	district = { #too good to not build
+		key = district_hab_commercial
+		weight = {
+			weight = 8
+
+			# Let's not go full spam on this.
+			modifier = {
+				factor = 0
+				free_housing >= 5
+				has_unemployed_or_servants = no
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 0
+					}
+				}
+			}
+		}
+	}
+
+
+	# Farming Districts
+
+	district = {
+		key = district_farming
+		weight = {
+			weight = 4
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value < 10
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value < -10
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value > 50
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+
+			modifier = { # MI and Synth. Asc. don't build food unless they need it
+				factor = 0
+				owner = { country_uses_food = no }
+			}
+		}
+	}
+
+	district = {
+		key = district_farming_uncapped
+		weight = {
+			weight = 4
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value < 10
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value < -10
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value > 50
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+
+			modifier = { # MI and Synth. Asc. don't build food unless they need it
+				factor = 0
+				owner = { country_uses_food = no }
+			}
+		}
+	}
+
+	district = {
+		key = district_rw_farming
+		weight = {
+			weight = 4
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value < 15
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value < -10
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value > 80
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+
+			modifier = { # MI and Synth. Asc. don't build food unless they need it
+				factor = 0
+				owner = { country_uses_food = no }
+			}
+		}
+	}
+
+
+	# Mineral Districts
+
+	district = {
+		key = district_mining
+		weight = {
+			weight = 4
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = minerals
+						value < 25
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = minerals
+						value < 0
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+		}
+	}
+
+	district = {
+		key = district_mining_uncapped
+		weight = {
+			weight = 4
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = minerals
+						value < 25
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = minerals
+						value < 0
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+		}
+	}
+
+	district = { #too good to not build
+		key = district_hab_mining
+		weight = {
+			weight = 15
+
+			# Let's not go full spam on this.
+			modifier = {
+				factor = 0
+				free_housing >= 5
+				has_unemployed_or_servants = no
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = minerals
+						value < 0
+					}
+				}
+			}
+		}
+	}
+	
+	# Science Districts
+
+	district = { #too good to not build
+		key = district_hab_science
+		weight = {
+			weight = 15
+
+			# Let's not go full spam on this.
+			modifier = {
+				factor = 0
+				free_housing >= 5
+				has_unemployed_or_servants = no
+			}
+		}
+	}
+	
+	district = {
+		key = district_rw_science
+		weight = {
+			weight = 8
+
+			modifier = {
+				factor = 5
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value > 50
+					}
+					has_monthly_income = {
+						resource = minerals
+						value > 50
+					}
+					has_monthly_income = {
+						resource = food
+						value > 10
+					}
+				}
+			}
+		}
+	}
+
+	# Arcology Districts
+
+	district = {
+		key = district_arcology_arms_industry
+		weight = {
+			weight = 3
+			modifier = {
+				factor = 2
+				free_housing < 0
+				num_districts = {
+					type = district_arcology_housing
+					value > 1
+				}
+			}
+
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = alloys
+						value < 30
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = alloys
+						value < 0
+					}
+				}
+			}
+		}
+	}
+
+	district = {
+		key = district_arcology_civilian_industry
+		weight = {
+			weight = 3
+			modifier = {
+				factor = 2
+				free_housing < 0
+				num_districts = {
+					type = district_arcology_housing
+					value > 1
+				}
+			}
+
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = consumer_goods
+						value < 15
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = consumer_goods
+						value < 0
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				owner = { country_uses_consumer_goods = yes }
+			}
+		}
+	}
+
+	district = {
+		key = district_arcology_leisure
+		weight = {
+			weight = 3
+			modifier = {
+				factor = 2
+				free_housing < 0
+				num_districts = {
+					type = any
+					value > 5
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_amenities < 0
+			}
+		}
+	}
+
+	# Capital Buildings
+
+	building = { # in case it's been demolished for some reason
+		key = building_colony_shelter
+		weight = {
+			weight = 15
+		}
+	}
+
+	building = {
+		key = building_capital
+		weight = {
+			weight = 100
+		}
+	}
+
+	building = {
+		key = building_major_capital
+		weight = {
+			weight = 5
+		}
+	}
+
+	building = {
+		key = building_system_capital
+		weight = {
+			weight = 5
+		}
+	}
+
+	building = { # in case it's been demolished for some reason
+		key = building_deployment_post
+		weight = {
+			weight = 15
+		}
+	}
+
+	building = {
+		key = building_machine_capital
+		weight = {
+			weight = 100
+		}
+	}
+
+	building = {
+		key = building_machine_major_capital
+		weight = {
+			weight = 5
+		}
+	}
+
+	building = {
+		key = building_machine_system_capital
+		weight = {
+			weight = 5
+		}
+	}
+
+	building = {
+		key = building_hive_capital
+		weight = {
+			weight = 15
+		}
+	}
+
+	building = {
+		key = building_hive_major_capital
+		weight = {
+			weight = 5
+		}
+	}
+
+	building = {
+		key = building_hab_capital
+		weight = {
+			weight = 100
+		}
+	}
+
+	building = {
+		key = building_hab_major_capital
+		weight = {
+			weight = 5
+		}
+	}
+
+	building = {
+		key = building_resort_capital
+		weight = {
+			weight = 100
+		}
+	}
+
+	building = {
+		key = building_resort_major_capital
+		weight = {
+			weight = 5
+		}
+	}
+
+	building = {
+		key = building_slave_capital
+		weight = {
+			weight = 100
+		}
+	}
+
+	building = {
+		key = building_slave_major_capital
+		weight = {
+			weight = 5
+		}
+	}
+
+	# Pop assembly
+
+	building = {
+		key = building_robot_assembly_plant
+		weight = {
+			weight = 15
+
+			modifier = {
+				factor = 0
+				free_housing <= 0
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_building = building_clone_vats
+					has_building = building_spawning_pool
+				}
+			}
+			modifier = {
+				factor = 0.75
+				owner = { has_policy_flag = ai_servitude }
+			}
+			modifier = {
+				factor = 0.5
+				owner = { is_spiritualist = yes }
+			}
+		}
+	}
+
+	building = {
+		key = building_machine_assembly_plant
+		weight = {
+			weight = 20
+
+			modifier = {
+				factor = 0
+				free_housing <= 0
+			}
+		}
+	}
+
+	building = {
+		key = building_machine_assembly_complex
+		weight = {
+			weight = 10
+
+			modifier = {
+				factor = 0
+				free_housing <= 0
+			}
+		}
+	}
+
+	building = {
+		key = building_clone_vats
+		weight = {
+			weight = 12
+
+			modifier = {
+				factor = 2
+				has_building = building_spawning_pool
+			}
+			modifier = {
+				factor = 0
+				free_housing <= 0
+			}
+		}
+	}
+
+	building = {
+		key = building_spawning_pool
+		weight = {
+			weight = 12
+
+			modifier = {
+				factor = 2
+				has_building = building_clone_vats
+			}
+			modifier = {
+				factor = 0
+				free_housing <= 0
+			}
+		}
+	}
+
+	building = {
+		key = building_necrophage_elevation_chamber
+		weight = {
+			weight = 15
+
+			modifier = {
+				factor = 2
+				OR = {
+					num_assigned_jobs = {
+						job = unemployed
+						value > 5
+					}
+					num_assigned_jobs = {
+						job = servant
+						value > 5
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				planet_stability <= 30
+			}
+		}
+	}
+
+	building = {
+		key = building_clinic
+		weight = {
+			weight = 8
+
+			modifier = {
+				factor = 2
+				free_amenities < 0
+			}
+
+			modifier = {
+				factor = 2
+				num_free_districts = {
+					type = any
+					value > 2
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_hospital
+		weight = {
+			weight = 6
+
+			modifier = {
+				factor = 2
+				free_amenities < 0
+			}
+
+			modifier = {
+				factor = 2
+				num_free_districts = {
+					type = any
+					value > 2
+				}
+			}
+		}
+	}
+
+	# Bureaucracy Buildings
+
+	building = {
+		key = building_bureaucratic_1
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 0
+				owner = { empire_sprawl_over_cap <= 0 }
+			}
+			modifier = {
+				factor = 5
+				owner = { empire_sprawl_cap_fraction >= 0.1 }
+			}
+			modifier = {
+				factor = 2
+				owner = { empire_sprawl_cap_fraction >= 0.2 }
+			}
+			modifier = {
+				factor = 1.5
+				owner = { empire_sprawl_cap_fraction >= 0.3 }
+			}
+			modifier = {
+				factor = 1.5
+				owner = { empire_sprawl_cap_fraction >= 0.4 }
+			}
+		}
+	}
+
+	building = {
+		key = building_bureaucratic_2
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 0
+				owner = { empire_sprawl_over_cap <= 0 }
+			}
+			modifier = {
+				factor = 5
+				owner = { empire_sprawl_cap_fraction >= 0.1 }
+			}
+			modifier = {
+				factor = 2
+				owner = { empire_sprawl_cap_fraction >= 0.2 }
+			}
+			modifier = {
+				factor = 1.5
+				owner = { empire_sprawl_cap_fraction >= 0.3 }
+			}
+			modifier = {
+				factor = 1.5
+				owner = { empire_sprawl_cap_fraction >= 0.4 }
+			}
+		}
+	}
+
+	building = {
+		key = building_uplink_node
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 0
+				owner = { empire_sprawl_over_cap <= 0 }
+			}
+			modifier = {
+				factor = 5
+				owner = { empire_sprawl_cap_fraction >= 0.1 }
+			}
+			modifier = {
+				factor = 2
+				owner = { empire_sprawl_cap_fraction >= 0.2 }
+			}
+			modifier = {
+				factor = 1.5
+				owner = { empire_sprawl_cap_fraction >= 0.3 }
+			}
+			modifier = {
+				factor = 1.5
+				owner = { empire_sprawl_cap_fraction >= 0.4 }
+			}
+		}
+	}
+
+	building = {
+		key = building_network_junction
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 0
+				owner = { empire_sprawl_over_cap <= 0 }
+			}
+			modifier = {
+				factor = 5
+				owner = { empire_sprawl_cap_fraction >= 0.1 }
+			}
+			modifier = {
+				factor = 2
+				owner = { empire_sprawl_cap_fraction >= 0.2 }
+			}
+			modifier = {
+				factor = 1.5
+				owner = { empire_sprawl_cap_fraction >= 0.3 }
+			}
+			modifier = {
+				factor = 1.5
+				owner = { empire_sprawl_cap_fraction >= 0.4 }
+			}
+		}
+	}
+
+	building = {
+		key = building_system_conflux
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 0
+				owner = { empire_sprawl_over_cap <= 0 }
+			}
+			modifier = {
+				factor = 5
+				owner = { empire_sprawl_cap_fraction >= 0.1 }
+			}
+			modifier = {
+				factor = 2
+				owner = { empire_sprawl_cap_fraction >= 0.2 }
+			}
+			modifier = {
+				factor = 1.5
+				owner = { empire_sprawl_cap_fraction >= 0.3 }
+			}
+			modifier = {
+				factor = 1.5
+				owner = { empire_sprawl_cap_fraction >= 0.4 }
+			}
+		}
+	}
+
+	# Other Government buildings
+
+	building = {
+		key = building_noble_estates
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 10
+				planet_stability <= 30
+			}
+		}
+	}
+
+	building = {
+		key = building_slave_processing
+		weight = {
+			weight = 10
+			modifier = {
+				factor = 0
+				OR = {
+					pop_percentage = {
+						percentage < 0.5
+						limit = { is_enslaved = yes }
+					}
+					num_pops < 20
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_precinct_house
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_building = building_precinct_house
+					has_building = building_hall_judgment
+				}
+				NAND = {
+					exists = branch_office_owner
+					branch_office_owner = { has_valid_civic = civic_criminal_heritage }
+				}
+			}
+
+			modifier = {
+				factor = 0
+				planet_crime < 10
+			}
+
+			modifier = {
+				factor = 3
+				planet_crime >= 10
+			}
+
+			modifier = {
+				factor = 3
+				planet_crime >= 25
+			}
+
+			modifier = {
+				factor = 3
+				planet_crime >= 50
+			}
+		}
+	}
+	
+	building = {
+		key = building_hall_judgment
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 0
+				planet_crime < 10
+			}
+
+			modifier = {
+				factor = 3
+				planet_crime >= 10
+			}
+
+			modifier = {
+				factor = 3
+				planet_crime >= 25
+			}
+
+			modifier = {
+				factor = 3
+				planet_crime >= 50
+			}
+		}
+	}
+
+	building = {
+		key = building_overseer_homes
+		weight = {
+			weight = 2
+			modifier = {
+				factor = 0
+				has_building = building_overseer_homes
+				NAND = {
+					exists = branch_office_owner
+					branch_office_owner = { has_valid_civic = civic_criminal_heritage }
+				}
+			}
+
+			modifier = {
+				factor = 0
+				planet_crime < 10
+			}
+
+			modifier = {
+				factor = 3
+				planet_crime >= 10
+			}
+
+			modifier = {
+				factor = 3
+				planet_crime >= 25
+			}
+
+			modifier = {
+				factor = 3
+				planet_crime >= 50
+			}
+		}
+	}
+	
+	building = {
+		key = building_sentinel_posts
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 0
+				has_building = building_sentinel_posts
+				NAND = {
+					exists = branch_office_owner
+					branch_office_owner = { has_valid_civic = civic_criminal_heritage }
+				}
+			}
+
+			modifier = {
+				factor = 0
+				planet_crime < 10
+			}
+
+			modifier = {
+				factor = 3
+				planet_crime >= 10
+			}
+
+			modifier = {
+				factor = 3
+				planet_crime >= 25
+			}
+
+			modifier = {
+				factor = 3
+				planet_crime >= 50
+			}
+		}
+	}
+
+	# Production buildings
+
+	building = {
+		key = building_hydroponics_farm
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 5
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value < 5
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value > 50
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					country_uses_food = no
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_food_processing_facility
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 5
+				planet_resource_compare = {
+					resource = food
+					type = produces
+					value > 30
+				}
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value > 50
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					country_uses_food = no
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_food_processing_center
+		weight = {
+			weight = 5
+			modifier = {
+				factor = 0
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value > 50
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_mineral_purification_plant
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 5
+				planet_resource_compare = {
+					resource = minerals
+					type = produces
+					value > 30
+				}
+			}
+			modifier = {
+				factor = 5
+				owner = {
+					has_monthly_income = {
+						resource = minerals
+						value < 5
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					is_lithoid = yes
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_mineral_purification_hub
+		weight = {
+			weight = 5
+			modifier = {
+				factor = 5
+				owner = {
+					has_monthly_income = {
+						resource = minerals
+						value < 15
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					is_lithoid = yes
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_energy_grid
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 5
+				planet_resource_compare = {
+					resource = energy
+					type = produces
+					value > 30
+				}
+			}
+			modifier = {
+				factor = 5
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 15
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					is_synthetic_empire = yes
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_energy_nexus
+		weight = {
+			weight = 5
+			modifier = {
+				factor = 5
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 15
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					is_synthetic_empire = yes
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_betharian_power_plant
+		weight = {
+			weight = 5
+			modifier = {
+				factor = 5
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 15
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					is_synthetic_empire = yes
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_bio_reactor
+		weight = {
+			weight = 3
+			modifier = {
+				factor = 0
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value < 50
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 20
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					is_synthetic_empire = yes
+				}
+			}
+		}
+	}
+
+
+	# Research buildings
+
+	building = {
+		key = building_research_lab_1
+		weight = {
+			weight = 5
+		}
+	}
+
+	building = {
+		key = building_research_lab_2
+		weight = {
+			weight = 5
+		}
+	}
+
+	building = {
+		key = building_research_lab_3
+		weight = {
+			weight = 5
+		}
+	}
+
+	building = {
+		key = building_institute
+		weight = {
+			weight = 10
+
+			# No one to be boosted
+			modifier = {
+				factor = 0
+				NOR = {
+					num_assigned_jobs = {
+						job = researcher
+						value >= 6
+					}
+					num_assigned_jobs = {
+						job = brain_drone
+						value >= 6
+					}
+					num_assigned_jobs = {
+						job = calculator
+						value >= 6
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_supercomputer
+		weight = {
+			weight = 10
+
+			# No one to be boosted
+			modifier = {
+				factor = 0
+				NOT = {
+					num_assigned_jobs = {
+						job = calculator
+						value >= 6
+					}
+				}
+			}
+		}
+	}
+
+
+	# Commerce Buildings
+	
+	# get lots of jobs to prevent high unemployment
+	building = {
+		key = building_commercial_zone
+		weight = {
+			weight = 5
+			modifier = {
+				factor = 0
+				num_assigned_jobs = {
+					job = unemployed
+					value < 10
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_commercial_forum
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_commercial_megaplex
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_galactic_stock_exchange
+		weight = {
+			weight = 10
+			# No one to be boosted
+			modifier = {
+				factor = 0
+				NOT = {
+					num_assigned_jobs = {
+						job = clerk
+						value >= 15
+					}
+				}
+			}
+		}
+	}
+
+	# Factory Buildings
+
+	building = {
+		key = building_foundry_1
+		weight = {
+			weight = 5
+			
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = alloys
+						value < 25
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = alloys
+						value < 0
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_foundry_2
+		weight = {
+			weight = 4
+
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = alloys
+						value < 25
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = alloys
+						value < 0
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_foundry_3
+		weight = {
+			weight = 3
+
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = alloys
+						value < 25
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = alloys
+						value < 0
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_factory_1
+		weight = {
+			weight = 5
+
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = consumer_goods
+						value < 0
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_factory_2
+		weight = {
+			weight = 3
+
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = consumer_goods
+						value < 0
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_factory_3
+		weight = {
+			weight = 3
+
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = consumer_goods
+						value < 0
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_ministry_production
+		weight = {
+			weight = 1
+
+			modifier = {
+				factor = 8
+				OR = {
+					planet_resource_compare = {
+						resource = consumer_goods
+						type = produces
+						value >= 36
+					}
+					planet_resource_compare = {
+						resource = alloys
+						type = produces
+						value >= 18
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_production_center
+		weight = {
+			weight = 1
+
+			modifier = {
+				factor = 8
+				OR = {
+					planet_resource_compare = {
+						resource = consumer_goods
+						type = produces
+						value >= 36
+					}
+					planet_resource_compare = {
+						resource = alloys
+						type = produces
+						value >= 18
+					}
+				}
+			}
+		}
+	}
+
+	# Special Resource Buildings
+	
+	building = {
+		key = building_mote_harvesters
+		weight = {
+			weight = 25
+		}
+	}
+
+	building = {
+		key = building_gas_extractors
+		weight = {
+			weight = 25
+		}
+	}
+
+	building = {
+		key = building_crystal_mines
+		weight = {
+			weight = 25
+		}
+	}
+
+	building = {
+		key = building_refinery
+		weight = {
+			weight = 1
+
+			modifier = {
+				factor = 5
+				owner = {
+					has_monthly_income = {
+						resource = exotic_gases
+						value < 2
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = exotic_gases
+						value < 4
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_chemical_plant
+		weight = {
+			weight = 1
+
+			modifier = {
+				factor = 5
+				owner = {
+					has_monthly_income = {
+						resource = volatile_motes
+						value < 2
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = volatile_motes
+						value < 4
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_crystal_plant
+		weight = {
+			weight = 1
+
+			modifier = {
+				factor = 5
+				owner = {
+					has_monthly_income = {
+						resource = rare_crystals
+						value < 2
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = rare_crystals
+						value < 4
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_nanite_transmuter
+		weight = {
+			weight = 10
+		}
+	}
+
+	# Housing Buildings
+	
+	building = {
+		key = building_slave_huts
+		weight = {
+			weight = 5
+			modifier = {
+				factor = 0
+				OR = {
+					num_free_districts = {
+						type = any
+						value > 0
+					}
+					free_housing > 1
+				}
+			}
+			modifier = {
+				factor = 4
+				free_housing < -10
+			}
+		}
+	}
+	
+	building = {
+		key = building_luxury_residence
+		weight = {
+			weight = 5
+			modifier = {
+				factor = 0
+				OR = {
+					num_free_districts = {
+						type = any
+						value > 0
+					}
+					free_housing > 1
+				}
+			}
+			modifier = {
+				factor = 4
+				free_housing < -10
+			}
+		}
+	}
+	
+	building = {
+		key = building_paradise_dome
+		weight = {
+			weight = 5
+			modifier = {
+				factor = 0
+				free_housing > 0
+			}
+		}
+	}
+
+	building = {
+		key = building_communal_housing
+		weight = {
+			weight = 5
+			modifier = {
+				factor = 0
+				OR = {
+					num_free_districts = {
+						type = any
+						value > 0
+					}
+					free_housing > 1
+				}
+			}
+			modifier = {
+				factor = 4
+				free_housing < -10
+			}
+		}
+	}
+	
+	building = {
+		key = building_communal_housing_large
+		weight = {
+			weight = 5
+			modifier = {
+				factor = 0
+				free_housing > 0
+			}
+		}
+	}
+
+	building = {
+		key = building_drone_storage
+		weight = {
+			weight = 5
+			modifier = {
+				factor = 0
+				OR = {
+					num_free_districts = {
+						type = any
+						value > 0
+					}
+					free_housing > 1
+				}
+			}
+			modifier = {
+				factor = 4
+				free_housing < -10
+			}
+		}
+	}
+	
+	building = {
+		key = building_drone_megastorage
+		weight = {
+			weight = 5
+			modifier = {
+				factor = 0
+				free_housing > 0
+			}
+		}
+	}
+	
+	building = {
+		key = building_hive_warren
+		weight = {
+			weight = 5
+			modifier = {
+				factor = 0
+				OR = {
+					num_free_districts = {
+						type = any
+						value > 0
+					}
+					free_housing > 1
+				}
+			}
+			modifier = {
+				factor = 4
+				free_housing < -10
+			}
+		}
+	}
+	
+	building = {
+		key = building_expanded_warren
+		weight = {
+			weight = 5
+			modifier = {
+				factor = 0
+				free_housing > 0
+			}
+		}
+	}
+
+	# Amenity Buildings
+
+	building = {
+		key = building_holo_theatres
+		weight = {
+			weight = 1
+
+			modifier = {
+				factor = 5
+				free_amenities < 0
+			}
+
+			modifier = {
+				factor = 10
+				free_amenities < -10
+			}
+
+			modifier = {
+				factor = 0
+				free_amenities >= 0
+			}
+		}
+	}
+
+	building = {
+		key = building_hyper_entertainment_forum
+		weight = {
+			weight = 1
+
+			modifier = {
+				factor = 5
+				free_amenities < 0
+			}
+
+			modifier = {
+				factor = 10
+				free_amenities < -10
+			}
+
+			modifier = {
+				factor = 0
+				free_amenities >= 0
+			}
+		}
+	}
+
+	# Unity Buildings
+
+	building = {
+		key = building_autochthon_monument
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_heritage_site
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_hypercomms_forum
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_temple
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_holotemple
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_sacred_nexus
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_sacrificial_temple_1
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_sacrificial_temple_2
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_sacrificial_temple_3
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_galactic_memorial_1
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_galactic_memorial_2
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_galactic_memorial_3
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_hive_node
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_hive_cluster
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_hive_confluence
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_simulation_1
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_simulation_2
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_simulation_3
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_corporate_monument
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_corporate_site
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_corporate_forum
+		weight = {
+			weight = 1
+		}
+	}
+
+	building = {
+		key = building_citadel_of_faith
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 5
+				planet_resource_compare = {
+					resource = unity
+					value > 25
+					type = produces
+				}
+			}
+		}
+	}
+
+	# Misc
+
+	building = { #so it knows how to upgrade any strongholds put on the planet
+		key = building_fortress
+		weight = {
+			weight = 1
+		}
+	}
+	
+	building = {
+		key = building_organic_sanctuary
+		weight = {
+			weight = 5
+		}
+	}
+	
+	building = {
+		key = building_organic_paradise
+		weight = {
+			weight = 5
+		}
+	}
+}
+
+#############
+# BALANCED FOCUS
+#############
+
+balanced = {
+
+	ai_weight = {
+		weight = 100
+	}
+
+	#inherits base weights. Base is now balanced.
+}
+
+#############
+# PRODUCTION FOCUS
+#############
+
+production = {
+
+	ai_weight = {
+		weight = 0
+	}
+
+	#production districts
+
+	district = {
+		key = district_nexus
+		weight = {
+			weight = 2
+			modifier = {
+				factor = 8
+				free_housing < 0
+			}
+
+			# Let's not go full spam on this.
+			modifier = {
+				factor = 0
+				free_housing >= 0
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value > 50
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 10
+					}
+				}
+			}
+		}
+	}
+
+	district = {
+		key = district_rw_nexus
+		weight = {
+			weight = 2
+			modifier = {
+				factor = 8
+				free_housing < 0
+			}
+
+			# Let's not go full spam on this.
+			modifier = {
+				factor = 0
+				free_housing >= 0
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value > 50
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 10
+					}
+				}
+			}
+		}
+	}
+
+	# Energy Districts
+
+	district = {
+		key = district_generator
+		weight = {
+			weight = 10
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 20
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 0
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+		}
+	}
+
+	district = {
+		key = district_generator_uncapped
+		weight = {
+			weight = 10
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 20
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 0
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+		}
+	}
+	
+	district = {
+		key = district_rw_generator
+		weight = {
+			weight = 15
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 30
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 0
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+		}
+	}
+
+	district = {
+		key = district_rw_commercial
+		weight = {
+			weight = 12
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 30
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 0
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_amenities < 0
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+		}
+	}
+
+	district = { #too good to not build
+		key = district_hab_energy
+		weight = {
+			weight = 20
+
+			# Let's not go full spam on this.
+			modifier = {
+				factor = 0
+				free_housing >= 5
+				has_unemployed_or_servants = no
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 0
+					}
+				}
+			}
+		}
+	}
+
+	district = { #too good to not build
+		key = district_hab_commercial
+		weight = {
+			weight = 12
+
+			# Let's not go full spam on this.
+			modifier = {
+				factor = 0
+				free_housing >= 5
+				has_unemployed_or_servants = no
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 0
+					}
+				}
+			}
+		}
+	}
+
+
+	# Farming Districts
+
+	district = {
+		key = district_farming
+		weight = {
+			weight = 10
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value < 10
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value < -10
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value > 50
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+
+			modifier = { # MI and Synth. Asc. don't build food unless they need it
+				factor = 0
+				owner = { country_uses_food = no }
+			}
+		}
+	}
+
+	district = {
+		key = district_farming_uncapped
+		weight = {
+			weight = 10
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value < 10
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value < -10
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value > 50
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+
+			modifier = { # MI and Synth. Asc. don't build food unless they need it
+				factor = 0
+				owner = { country_uses_food = no }
+			}
+		}
+	}
+
+	district = {
+		key = district_rw_farming
+		weight = {
+			weight = 10
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value < 15
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value < -10
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value > 80
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+
+			modifier = { # MI and Synth. Asc. don't build food unless they need it
+				factor = 0
+				owner = { country_uses_food = no }
+			}
+		}
+	}
+
+
+	# Mineral Districts
+
+	district = {
+		key = district_mining
+		weight = {
+			weight = 10
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = minerals
+						value < 25
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = minerals
+						value < 0
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+		}
+	}
+
+	district = {
+		key = district_mining_uncapped
+		weight = {
+			weight = 10
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = minerals
+						value < 25
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = minerals
+						value < 0
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				free_housing < 0
+			}
+		}
+	}
+
+	district = { #too good to not build
+		key = district_hab_mining
+		weight = {
+			weight = 20
+
+			# Let's not go full spam on this.
+			modifier = {
+				factor = 0
+				free_housing >= 5
+				has_unemployed_or_servants = no
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = minerals
+						value < 0
+					}
+				}
+			}
+		}
+	}
+
+
+
+	#production buildings
+	
+	building = {
+		key = building_hydroponics_farm
+		weight = {
+			weight = 5
+			modifier = {
+				factor = 5
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value < 5
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value > 50
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					country_uses_food = no
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_food_processing_facility
+		weight = {
+			weight = 5
+			modifier = {
+				factor = 5
+				planet_resource_compare = {
+					resource = food
+					type = produces
+					value > 30
+				}
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value > 50
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					country_uses_food = no
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_food_processing_center
+		weight = {
+			weight = 10
+			modifier = {
+				factor = 0
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value > 50
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_mineral_purification_plant
+		weight = {
+			weight = 5
+			modifier = {
+				factor = 5
+				planet_resource_compare = {
+					resource = minerals
+					type = produces
+					value > 30
+				}
+			}
+			modifier = {
+				factor = 5
+				owner = {
+					has_monthly_income = {
+						resource = minerals
+						value < 5
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					is_lithoid = yes
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_mineral_purification_hub
+		weight = {
+			weight = 10
+			modifier = {
+				factor = 5
+				owner = {
+					has_monthly_income = {
+						resource = minerals
+						value < 15
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					is_lithoid = yes
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_energy_grid
+		weight = {
+			weight = 5
+			modifier = {
+				factor = 5
+				planet_resource_compare = {
+					resource = energy
+					type = produces
+					value > 30
+				}
+			}
+			modifier = {
+				factor = 5
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 15
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					is_synthetic_empire = yes
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_energy_nexus
+		weight = {
+			weight = 10
+			modifier = {
+				factor = 5
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 15
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					is_synthetic_empire = yes
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_betharian_power_plant
+		weight = {
+			weight = 10
+			modifier = {
+				factor = 5
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 15
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					is_synthetic_empire = yes
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_bio_reactor
+		weight = {
+			weight = 6
+			modifier = {
+				factor = 0
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value < 50
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 20
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					is_synthetic_empire = yes
+				}
+			}
+		}
+	}
+}
+
+#############
+# MANUFACTURING FOCUS
+#############
+
+manufacturing = {
+	ai_weight = {
+		weight = 0
+	}
+
+	# Manufacturing Districts
+
+	district = {
+		key = district_arcology_arms_industry
+		weight = {
+			weight = 10
+			modifier = {
+				factor = 2
+				free_housing < 0
+				num_districts = {
+					type = district_arcology_housing
+					value > 1
+				}
+			}
+
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = alloys
+						value < 30
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = alloys
+						value < 0
+					}
+				}
+			}
+		}
+	}
+
+	district = {
+		key = district_arcology_civilian_industry
+		weight = {
+			weight = 10
+			modifier = {
+				factor = 2
+				free_housing < 0
+				num_districts = {
+					type = district_arcology_housing
+					value > 1
+				}
+			}
+
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = consumer_goods
+						value < 15
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = consumer_goods
+						value < 0
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				owner = { country_uses_consumer_goods = yes }
+			}
+		}
+	}
+
+	# Factory Buildings
+
+	building = {
+		key = building_foundry_1
+		weight = {
+			weight = 10
+			
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = alloys
+						value < 25
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = alloys
+						value < 0
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_foundry_2
+		weight = {
+			weight = 8
+
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = alloys
+						value < 25
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = alloys
+						value < 0
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_foundry_3
+		weight = {
+			weight = 8
+
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = alloys
+						value < 25
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					has_monthly_income = {
+						resource = alloys
+						value < 0
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_factory_1
+		weight = {
+			weight = 9
+
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = consumer_goods
+						value < 0
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_factory_2
+		weight = {
+			weight = 6
+
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = consumer_goods
+						value < 0
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_factory_3
+		weight = {
+			weight = 6
+
+			modifier = {
+				factor = 3
+				owner = {
+					has_monthly_income = {
+						resource = consumer_goods
+						value < 0
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_ministry_production
+		weight = {
+			weight = 2
+
+			modifier = {
+				factor = 8
+				OR = {
+					planet_resource_compare = {
+						resource = consumer_goods
+						type = produces
+						value >= 36
+					}
+					planet_resource_compare = {
+						resource = alloys
+						type = produces
+						value >= 18
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_production_center
+		weight = {
+			weight = 2
+
+			modifier = {
+				factor = 8
+				OR = {
+					planet_resource_compare = {
+						resource = consumer_goods
+						type = produces
+						value >= 36
+					}
+					planet_resource_compare = {
+						resource = alloys
+						type = produces
+						value >= 18
+					}
+				}
+			}
+		}
+	}
+}
+
+#############
+# RESEARCH FOCUS
+#############
+
+research = {
+
+	ai_weight = {
+		weight = 0
+	}
+
+	# research districts
+	
+	district = {
+		key = district_rw_science
+		weight = {
+			weight = 20
+
+			modifier = {
+				factor = 5
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value > 50
+					}
+					has_monthly_income = {
+						resource = minerals
+						value > 50
+					}
+					has_monthly_income = {
+						resource = food
+						value > 10
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				free_housing > 5
+			}
+		}
+	}
+
+	district = {
+		key = district_hab_science
+		weight = {
+			weight = 20
+
+			modifier = {
+				factor = 0
+				free_housing > 3
+				has_unemployed_or_servants = no
+			}
+		}
+	}
+
+	# research buildings
+
+	building = {
+		key = building_research_lab_1
+		weight = {
+			weight = 20
+		}
+	}
+
+	building = {
+		key = building_research_lab_2
+		weight = {
+			weight = 15
+		}
+	}
+
+	building = {
+		key = building_research_lab_3
+		weight = {
+			weight = 15
+		}
+	}
+
+	building = {
+		key = building_institute
+		weight = {
+			weight = 25
+
+			# No one to be boosted
+			modifier = {
+				factor = 0
+				NOR = {
+					planet_resource_compare = {
+						resource = engineering_research
+						value > 30
+					}
+					planet_resource_compare = {
+						resource = society_research
+						value > 30
+					}
+					planet_resource_compare = {
+						resource = physics_research
+						value > 30
+					}
+				}
+			}
+		}
+	}
+
+	building = {
+		key = building_supercomputer
+		weight = {
+			weight = 25
+
+			# No one to be boosted
+			modifier = {
+				factor = 0
+				NOR = {
+					planet_resource_compare = {
+						resource = engineering_research
+						value > 30
+					}
+					planet_resource_compare = {
+						resource = society_research
+						value > 30
+					}
+					planet_resource_compare = {
+						resource = physics_research
+						value > 30
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,157 @@
+
+automate_foundry_machine_planet = {
+	available = {
+		has_designation = col_foundry
+		owner = { has_authority = auth_machine_intelligence	}
+		free_jobs < 3
+	}
+
+	prio_districts = {
+		district_nexus
+	}
+
+	buildings = {
+		1 = {
+			building = building_deployment_post
+			available = {
+				always = yes
+			}
+		}
+
+		2 = {
+
+			building = building_machine_assembly_plant
+			available = {
+				owner = {
+					machine_assembly_plant_upkeep_affordable = yes
+				}
+			}
+		}
+
+		3 = {
+			building = building_foundry_1
+			available = {
+				owner = {
+					foundry_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		4 = {
+			building = building_foundry_1
+			available = {
+				owner = {
+					foundry_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		5 = {
+			building = building_foundry_1
+			available = {
+				owner = {
+					foundry_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		6 = {
+			building = building_sentinel_posts
+			available = {
+				owner = {
+					sentinel_posts_upkeep_affordable = yes
+				}
+			}
+		}
+
+		7 = {
+			building = building_foundry_1
+			available = {
+				owner = {
+					foundry_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		8 = {
+			building = building_production_center
+			available = {
+				owner = {
+					production_center_upkeep_affordable = yes
+				}
+			}
+		}
+
+		9 = {
+			building = building_foundry_1
+			available = {
+				owner = {
+					foundry_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		10 = {
+			building = building_foundry_1
+			available = {
+				owner = {
+					foundry_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		11 = {
+			building = building_foundry_1
+			available = {
+				owner = {
+					foundry_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		12 = {
+			building = building_foundry_1
+			available = {
+				owner = {
+					foundry_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		13 = {
+			building = building_uplink_node
+			available = {
+				owner = {
+					uplink_node_upkeep_affordable = yes
+				}
+			}
+		}
+
+		14 = {
+			building = building_foundry_1
+			available = {
+				owner = {
+					foundry_1_upkeep_affordable = yes
+				}
+			}
+		}
+
+		15 = {
+			building = building_sentinel_posts
+			available = {
+				owner = {
+					sentinel_posts_upkeep_affordable = yes
+				}
+			}
+		}
+
+		16 = {
+			building = building_foundry_1
+			available = {
+				owner = {
+					foundry_1_upkeep_affordable = yes
+				}
+			}
+		}
+	}
+}

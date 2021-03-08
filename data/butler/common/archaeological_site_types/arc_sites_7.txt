@@ -1,0 +1,615 @@
+################################
+#
+# Federations - Archaeological Sites
+#
+# Written by Douglas Furen
+#
+###############################
+
+# Tribute to Lost Moments
+site_lost_moments = {
+	desc = "site_lost_moments_intro"
+	picture = GFX_evt_tomb_world
+	stages = 3
+	weight = {
+		base = 0
+		modifier = {
+			add = 100
+			uninhabitable_regular_planet = yes
+			has_ancrel = yes
+		}
+	}
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_A1
+		event = fedev.9430
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_A2
+		event = fedev.9435
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_A2
+		event = fedev.9440
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_echoes_inside_random_events }
+		}
+	}
+}
+
+# The Lesser Messenger
+site_lesser_messenger = {
+	desc = "site_lesser_messenger_intro"
+	picture = GFX_evt_ship_in_orbit
+	stages = 5
+	weight = {
+		base = 0
+		modifier = {
+			add = 50
+			OR = {
+				is_planet_class = pc_nuked
+				is_planet_class = pc_desert
+				is_planet_class = pc_arid
+				is_planet_class = pc_savannah
+			}
+			has_ancrel = yes
+			NOT = { has_planet_flag = nuked_planet_anomalies_disabled }
+		}
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_A1
+		event = fedev.9445
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_A6
+		event = fedev.9450
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_A3
+		event = fedev.9455
+	}
+
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_A5
+		event = fedev.9460
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A2
+		event = fedev.9461
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_grand_herald_random_events }
+		}
+	}
+}
+
+# Galactic Doorstep Origin - Arc Site - From Gateway Sent
+site_from_gateway_sent = {
+	desc = "site_from_gateway_sent_intro"
+	picture = GFX_evt_atmospheric_entry
+	stages = 4
+	max_instances = 999
+	weight = 0
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	on_visible = {
+    	country_event = { id = story.5 days = 30 }
+	}
+
+	# Beyond Impact
+	stage = {
+		difficulty = -2
+		icon = GFX_archaeology_runes_B5
+		event = origin.1100
+	}
+
+	# Temporal Dissonance
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_B1
+		event = origin.1105
+	}
+
+	# Room Without A View
+	stage = {
+		difficulty = -1
+		icon = GFX_archaeology_runes_B6
+		event = origin.1110
+	}
+
+	# The Gatekeeper Memoirs
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_B4
+		event = origin.1115
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_from_gateway_sent_random_events }
+		}
+	}
+}
+
+# On the Shoulders of Giants Origin - Arc Site 1 - Ex Gravitas
+site_ex_gravitas = {
+ 	desc = "site_ex_gravitas_intro"
+ 	picture = GFX_evt_cold_barren
+ 	stages = 4
+ 	max_instances = 999
+ 	weight = {
+ 		base = 0
+ 	}
+
+ 	allow = {
+ 		exists = leader
+ 		leader = { leader_class = scientist }
+		hidden_trigger = {
+			owner = {
+				has_country_flag = shoulders_origin_@from.planet
+			}
+		}
+ 	}
+
+ 	visible = {
+ 		default_site_visible_trigger = yes
+		owner = {
+			has_country_flag = shoulders_origin_@from.planet
+		}
+ 	}
+ 
+ 	on_visible = {
+     	country_event = { id = story.5 days = 30 }
+ 	}
+ 
+ 	stage = {
+ 		difficulty = 1
+ 		icon = GFX_archaeology_runes_A6 
+ 		event = origin.1200
+ 	}
+ 
+ 	stage = {
+ 		difficulty = 1
+ 		icon = GFX_archaeology_runes_A5
+ 		event = origin.1205
+ 	}
+
+ 	stage = {
+ 		difficulty = 2
+ 		icon = GFX_archaeology_runes_A4
+ 		event = origin.1210
+ 	}
+ 
+ 	stage = {
+ 		difficulty = 1
+ 		icon = GFX_archaeology_runes_A3
+ 		event = origin.1215
+ 	}
+ 
+ 	on_roll_failed = {
+ 		from = {
+ 			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_ex_gravitas_random_events }
+ 		}
+ 	}
+ }
+
+# On the Shoulders of Giants Origin - Arc Site 2 - Something Waiting
+site_something_waiting = {
+	desc = "site_something_waiting_intro"
+ 	picture = GFX_evt_ship_in_orbit
+ 	stages = 4
+ 	max_instances = 999
+ 	weight = {
+ 		base = 0
+ 	}
+
+ 	allow = {
+ 		exists = leader
+ 		leader = { leader_class = scientist }
+		hidden_trigger = {
+			owner = {
+				has_country_flag = shoulders_origin_@from.planet
+			}
+		}
+ 	}
+
+ 	visible = {
+ 		default_site_visible_trigger = yes
+		owner = {
+			has_country_flag = shoulders_origin_@from.planet
+		}
+ 	}
+
+ 	stage = {
+ 		difficulty = 1
+ 		icon = GFX_archaeology_runes_A1 
+ 		event = origin.1220
+ 	}
+ 
+ 	stage = {
+ 		difficulty = 2
+ 		icon = GFX_archaeology_runes_A2
+ 		event = origin.1225
+ 	}
+
+ 	stage = {
+ 		difficulty = 2
+ 		icon = GFX_archaeology_runes_A3
+ 		event = origin.1230
+ 	}
+ 
+ 	stage = {
+ 		difficulty = 1
+ 		icon = GFX_archaeology_runes_A4
+ 		event = origin.1235
+ 	}
+ 
+ 	on_roll_failed = {
+ 		from = {
+ 			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_something_waiting_random_events }
+ 		}
+ 	}
+}
+
+# On the Shoulders of Giants Origin - Arc Site 3 - Buried Deep
+site_buried_deep = {
+	desc = "site_buried_deep_intro"
+	picture = GFX_evt_ship_in_orbit
+	stages = 2
+	max_instances = 999
+	weight = {
+ 		base = 0
+ 	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+		hidden_trigger = {
+			owner = {
+				has_country_flag = shoulders_origin_@from.planet
+			}
+		}
+	}
+	
+	visible = {
+		default_site_visible_trigger = yes
+		owner = {
+			has_country_flag = shoulders_origin_@from.planet
+		}
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_A5 
+		event = origin.1240
+	}
+	
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_A2
+		event = origin.1245
+	}
+	
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_buried_deep_random_events }
+		}
+	}
+}
+
+# On the Shoulders of Giants Origin - Arc Site 4 - In Memoriam
+site_in_memoriam = {
+	desc = "site_in_memoriam_intro"
+ 	picture = GFX_evt_ship_in_orbit
+ 	stages = 4
+ 	max_instances = 999
+ 	weight = {
+ 		base = 0
+ 	}
+
+ 	allow = {
+ 		exists = leader
+ 		leader = { leader_class = scientist }
+		hidden_trigger = {
+			owner = {
+				has_country_flag = shoulders_origin_@from.planet
+			}
+		}
+ 	}
+ 	
+ 	visible = {
+ 		default_site_visible_trigger = yes
+		owner = {
+			has_country_flag = shoulders_origin_@from.planet
+		}
+ 	}
+ 
+ 	stage = {
+ 		difficulty = 1
+ 		icon = GFX_archaeology_runes_A3 
+ 		event = origin.1250
+ 	}
+ 
+ 	stage = {
+ 		difficulty = 1
+ 		icon = GFX_archaeology_runes_A5
+ 		event = origin.1255
+ 	}
+
+ 	stage = {
+ 		difficulty = 1
+ 		icon = GFX_archaeology_runes_A2
+ 		event = origin.1260
+ 	}
+ 
+ 	stage = {
+ 		difficulty = 1
+ 		icon = GFX_archaeology_runes_A4
+ 		event = origin.1265
+ 	}
+ 
+ 	on_roll_failed = {
+ 		from = {
+ 			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_in_memoriam_random_events }
+ 		}
+ 	}
+}
+
+# On the Shoulders of Giants Origin - Arc Site 5 - The Last Stand
+site_the_last_stand = {
+	desc = "site_the_last_stand_intro"
+ 	picture = GFX_evt_ship_in_orbit
+ 	stages = 4
+ 	max_instances = 999
+ 	weight = {
+ 		base = 0
+ 	}
+
+ 	allow = {
+ 		exists = leader
+ 		leader = { leader_class = scientist }
+		hidden_trigger = {
+			owner = {
+				has_country_flag = shoulders_origin_@from.planet
+			}
+		}
+ 	}
+
+ 	visible = {
+ 		default_site_visible_trigger = yes
+		owner = {
+			has_country_flag = shoulders_origin_@from.planet
+		}
+ 	}
+ 
+ 	stage = {
+ 		difficulty = 1
+ 		icon = GFX_archaeology_runes_A1 
+ 		event = origin.1270
+ 	}
+ 
+ 	stage = {
+ 		difficulty = 1
+ 		icon = GFX_archaeology_runes_A2
+ 		event = origin.1275
+ 	}
+
+ 	stage = {
+ 		difficulty = -2
+ 		icon = GFX_archaeology_runes_A4
+ 		event = origin.1280
+ 	}
+ 
+ 	stage = {
+ 		difficulty = 1
+ 		icon = GFX_archaeology_runes_A3
+ 		event = origin.1285
+ 	}
+ 
+ 	on_roll_failed = {
+ 		from = {
+ 			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_the_last_stand_random_events }
+ 		}
+ 	}
+}
+
+# On the Shoulders of Giants Origin - Arc Site 6 - Dark Secret
+site_dark_secret = {
+	desc = "site_dark_secret_intro"
+ 	picture = GFX_evt_cold_barren
+ 	stages = 4
+ 	max_instances = 999
+ 	weight = {
+ 		base = 0
+ 	}
+
+ 	allow = {
+ 		exists = leader
+ 		leader = { leader_class = scientist }
+		hidden_trigger = {
+			owner = {
+				has_country_flag = shoulders_origin_@from.planet
+			}
+		}
+ 	}
+
+ 	visible = {
+ 		default_site_visible_trigger = yes
+		owner = {
+			has_country_flag = shoulders_origin_@from.planet
+		}
+ 	}
+ 
+ 	stage = {
+ 		difficulty = 1
+ 		icon = GFX_archaeology_runes_A5 
+ 		event = origin.1290
+ 	}
+ 
+ 	stage = {
+ 		difficulty = -1
+ 		icon = GFX_archaeology_runes_A1
+ 		event = origin.1295
+ 	}
+
+ 	stage = {
+ 		difficulty = 1
+ 		icon = GFX_archaeology_runes_A6
+ 		event = origin.1296
+ 	}
+
+ 	stage = {
+ 		difficulty = -1
+ 		icon = GFX_archaeology_runes_A2
+ 		event = origin.1297
+ 	}
+ 
+ 	on_roll_failed = {
+ 		from = {
+ 			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_dark_secret_random_events }
+ 		}
+ 	}
+}
+
+# On the Shoulders of Giants Origin - Arc Site 7 - Benign Cover-Up
+site_benign_cover_up = {
+	desc = "site_benign_cover_up_intro"
+ 	picture = GFX_evt_cold_barren
+ 	stages = 2
+ 	max_instances = 999
+ 	weight = {
+ 		base = 0
+ 	}
+
+ 	allow = {
+ 		exists = leader
+ 		leader = { leader_class = scientist }
+		hidden_trigger = {
+			owner = {
+				has_country_flag = shoulders_origin_@from.planet
+			}
+		}
+ 	}
+
+ 	visible = {
+ 		default_site_visible_trigger = yes
+		owner = {
+			has_country_flag = shoulders_origin_@from.planet
+		}
+ 	}
+ 
+ 	stage = {
+ 		difficulty = -1
+ 		icon = GFX_archaeology_runes_A2 
+ 		event = origin.1365
+ 	}
+ 
+ 	stage = {
+ 		difficulty = 2
+ 		icon = GFX_archaeology_runes_A4
+ 		event = origin.1370
+ 	}
+ 
+ 	on_roll_failed = {
+ 		from = {
+ 			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_dark_secret_random_events }
+ 		}
+ 	}
+}
+
+# On the Shoulders of Giants Origin - Arc Site 7 - Bury The Hatchet
+site_bury_the_hatchet = {
+	desc = "site_bury_the_hatchet_intro"
+ 	picture = GFX_evt_cold_barren
+ 	stages = 2
+ 	max_instances = 999
+ 	weight = {
+ 		base = 0
+ 	}
+
+ 	allow = {
+ 		exists = leader
+ 		leader = { leader_class = scientist }
+		hidden_trigger = {
+			owner = {
+				has_country_flag = shoulders_origin_@from.planet
+			}
+		}
+ 	}
+
+ 	visible = {
+ 		default_site_visible_trigger = yes
+		owner = {
+			has_country_flag = shoulders_origin_@from.planet
+		}
+ 	}
+ 
+ 	stage = {
+ 		difficulty = -1
+ 		icon = GFX_archaeology_runes_A2 
+ 		event = origin.1410
+ 	}
+ 
+ 	stage = {
+ 		difficulty = 1
+ 		icon = GFX_archaeology_runes_A4
+ 		event = origin.1415
+ 	}
+ 
+ 	on_roll_failed = {
+ 		from = {
+ 			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_dark_secret_random_events }
+ 		}
+ 	}
+}

@@ -1,0 +1,449 @@
+#############
+# Machine buildings
+#############
+
+building_robot_assembly_plant = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+
+	category = pop_assembly
+	
+	potential = {
+		exists = owner
+		OR = {
+			owner = { is_ai = no }
+			free_building_slots > 0
+		}
+		owner = { 
+			is_regular_empire = yes 
+			NOT = { has_policy_flag = robots_outlawed }
+		}
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	convert_to = {
+		building_machine_assembly_plant
+	}
+	
+	allow = {
+		OR = {
+			owner = { is_ai = no }
+			AND = {
+				num_buildings = { type = any value <= 14 }
+				NOT = { is_planet_class = pc_habitat }
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				OR = {
+					is_regular_empire = no 
+					has_policy_flag = robots_outlawed
+				}
+			}
+			has_modifier = slave_colony
+			AND = {
+				owner = { is_ai = yes }
+				free_jobs < 1
+				OR = {
+					num_buildings = {
+						type = any
+						value = 16
+					}
+					is_planet_class = pc_habitat
+				}
+			}
+		}
+	}
+	
+	planet_modifier = {
+		job_roboticist_add = 1
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+	}
+	
+	triggered_desc = {
+		text = job_roboticist_effect_desc
+	}	
+	
+	prerequisites = {
+		"tech_robotic_workers"
+	}
+	
+	ai_weight = {
+		weight = 50000
+		modifier = {
+			factor = 0
+			OR = {
+				is_planet_class = pc_habitat
+				is_planet_class = pc_city
+				num_buildings = { type = any value >= 14 }
+			}
+		}
+	}
+}
+
+#############
+# Machine buildings
+#############
+
+building_machine_assembly_plant = {
+	icon = building_robot_assembly_plant
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+
+	category = pop_assembly
+	
+	potential = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+	
+	convert_to = {
+		building_robot_assembly_plant
+	}
+	
+	allow = {
+		OR = {
+			owner = { is_ai = no }
+			AND = {
+				num_buildings = { type = any value <= 14 }
+				NOT = { is_planet_class = pc_habitat }
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_robot_empire = no
+			}
+			AND = {
+				owner = { is_ai = yes }
+				free_jobs < 1
+				OR = {
+					num_buildings = { type = any value = 16 }
+					is_planet_class = pc_habitat
+				}
+			}
+		}
+	}
+	
+	planet_modifier = {
+		job_replicator_add = 1
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+	
+	upgrades = {
+		building_machine_assembly_complex
+	}
+	
+	prerequisites = {
+
+	}
+	
+	triggered_desc = {
+		text = job_replicator_effect_desc
+	}	
+	
+	ai_weight = {
+		weight = 50000
+		modifier = {
+			factor = 0
+			OR = {
+				is_planet_class = pc_habitat
+				num_buildings = { type = any value >= 14 }
+			}
+		}
+	}
+}
+
+building_machine_assembly_complex = {
+	base_buildtime = @b3_time
+	can_build = no
+
+	category = pop_assembly
+	
+	potential = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+	
+	convert_to = {
+		building_robot_assembly_plant
+	}
+	
+	allow = {
+		OR = {
+			owner = { is_ai = no }
+			AND = {
+				num_buildings = { type = any value <= 14 }
+				NOT = { is_planet_class = pc_habitat }
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			buildings_no_crystals = yes
+			owner = {
+				is_robot_empire = no
+			}
+			AND = {
+				owner = { is_ai = yes }
+				free_jobs < 1
+				OR = {
+					num_buildings = { type = any value = 16 }
+					is_planet_class = pc_habitat
+				}
+			}
+		}
+	}
+	
+	planet_modifier = {
+		job_replicator_add = 3
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			rare_crystals = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			rare_crystals = @b3_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		tech_mega_assembly
+	}	
+	
+	triggered_desc = {
+		text = job_replicator_effect_desc
+	}	
+	
+	ai_weight = {
+		weight = 50000
+		modifier = {
+			factor = 0
+			OR = {
+				is_planet_class = pc_habitat
+				num_buildings = { type = any value >= 14 }
+			}
+		}
+	}
+}
+
+#######################################
+# Necrophage "consumption" buildings
+#######################################
+
+building_necrophage_elevation_chamber = {
+	icon = building_chamber_of_elevation_1
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	add_to_first_building_slot = yes
+
+	category = pop_assembly
+	
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_necrophage
+			has_trait = trait_necrophage
+			NOT = { has_valid_civic = civic_fanatic_purifiers }
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = NO_CULTURE_SHOCK
+			NOT = { has_modifier = planet_culture_shock }
+		}
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+		}
+		OR = {
+			owner = { is_ai = no }
+			any_owned_species = {
+				species_can_be_necrophaged = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				OR = {
+					NOT = { has_origin = origin_necrophage }
+					NOT = { has_trait = trait_necrophage }
+				}
+			}
+			AND = {
+				owner = { is_ai = yes }
+				NOT = {
+					any_owned_species = {
+						species_can_be_necrophaged = yes
+					}
+				}
+			}
+		}
+	}
+	
+	planet_modifier = {
+		planet_stability_add = 5
+		job_necro_apprentice_add = 3
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+	
+	upgrades = {
+		building_necrophage_house_of_apotheosis
+	}
+	
+	prerequisites = {
+	}
+	
+	triggered_desc = {
+		text = job_necro_apprentice_effect_desc
+		trigger = {
+			exists = owner
+			owner = { is_lithoid_empire = no }
+		}
+	}
+	triggered_desc = {
+		text = job_necro_apprentice_effect_lithoid_desc
+		trigger = {
+			exists = owner
+			owner = { is_lithoid_empire = yes }
+		}
+	}
+	
+	ai_weight = {
+		weight = 50000
+	}
+
+	#this tells the AI that building the building will give it this in a way it doesn't understand. Made the number nice and high to try and force the AI to build this.
+	ai_resource_production = {
+		trigger = { always = yes }
+		alloys = 8
+		consumer_goods = 8
+	}
+}
+
+building_necrophage_house_of_apotheosis = {
+	icon = building_chamber_of_elevation_2
+	base_buildtime = @b3_time
+	can_build = no
+	add_to_first_building_slot = yes
+
+	category = pop_assembly
+	
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_necrophage
+			has_trait = trait_necrophage
+			NOT = { has_valid_civic = civic_fanatic_purifiers }
+			is_ai = no #the AI will just kill all its necrophytes
+		}
+	}
+	
+	allow = {
+		OR = {
+			owner = { is_ai = no }
+			any_owned_species = {
+				species_can_be_necrophaged = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOT = { has_origin = origin_necrophage }
+			}
+			AND = {
+				owner = { is_ai = yes }
+				OR = {
+					buildings_no_exotic_gases = yes
+					NOT = {
+						any_owned_species = {
+							species_can_be_necrophaged = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	planet_modifier = {
+		planet_stability_add = 10
+		job_necro_apprentice_add = 6
+		job_necro_apprentice_per_pop = 0.02 # 1 per 50
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			exotic_gases = @b2_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		tech_glandular_acclimation
+	}	
+	
+	show_tech_unlock_if = {
+		has_origin = origin_necrophage
+		has_trait = trait_necrophage
+	}
+	
+	triggered_desc = {
+		text = job_necro_apprentice_effect_desc
+	}	
+	
+	ai_weight = {
+		weight = 50000
+	}
+}

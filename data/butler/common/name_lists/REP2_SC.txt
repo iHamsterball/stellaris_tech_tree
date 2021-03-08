@@ -1,0 +1,218 @@
+﻿### Reptilian 1
+REP2 = {
+	### SHIPS
+	
+	category = "Reptilian"
+
+	language = "l_simp_chinese"
+	
+	ship_names = {
+
+		generic = {
+			柯德纳克 柯德勒克 扎德海克斯 克诺特可 柯达马克 柯德希奥 希英 扎达克哈特 希马纳格 扎拉科斯 奇拿柯德 科达拉 希舒密 宗科斯 扎拉西姆 奇迪克斯 扎达科昂 奇科姆 西密辛 瑟利马克斯 卡萨拉科斯 科多沃克斯 希德 科姆巴 卡达克斯 卡迪科斯 克伯 奇迪尼克斯 扎拉克 奇迪马克斯 扎特拉克斯 辛迪贾科斯 辛姆帕 卡拉克 克戈 克纳 奇加尔 德托科斯 奇尼瓦 奇贾科斯 佐利科昂 德拉奇科 多乐佐 达拉昂 达比科斯 达拉夏 蒂诺佐 德巴扎克斯 佐卡洛斯 祖塔拉克 科姆布拉克 克里莫克 克卡洛克斯 祖达科特 佐德加拉克 迪加扎克 扎巴拉克斯 瑟斯拉佐 科诺巴克斯 卡洛克斯 德兹哈利姆 达克斯埃德弗 奇布令诺克斯 扎帕佐 扎克托 扎德马克 奇卡拉克 祖多洛克斯 扎希莫克 扎提克斯 可达格罗斯 希利扎加 克波扎吉卡多立克 卡斯柯 德希拉玛 德祖扎里克 迪利克斯 德斯克拉克斯 迪孚克蒙 卡尼克斯 扎卡拉克斯 奇里克 卡布拉科斯 克拉卡兹 克佩兹 克拉利克斯 达蒙尼克 德克佐 达克利姆 扎卡蒂姆
+			克格里斯 卡希克斯 齐尔 扎拉克丝 罗卡希尔 卡克斯 奇狄拉克斯 卡布洛奇 泽拉西姆 摩兹 兆兹 扎克斯 扎卡迪斯 寇斯希尔 克巴拉吉斯 雷奇卡科斯 莫勒扎克 米德克西格里斯 卡斯克斯 齐尔 扎拉科斯 雷卡希尔 卡克斯 奇达拉克 卡波罗希 西德罗 泽拉西姆 摩兹 兆兹
+		}
+
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+		
+		titan = {
+		}
+		
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		transport = {
+		}
+		
+		military_station_small = {
+		}
+		
+		ion_cannon = {
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			"芬尼克斯星球猎人" "贪婪星球猎人" "滑行星球猎人" "等待星球猎人" "跳跃星球猎人" "无情星球猎人" "卡托伊奇星球猎人" "格罗尔赏金星球猎人" "迅捷星球猎人" "吞噬星球猎人" "希欧阿蒂什星球猎人" "齐克拉什星球猎人" "煎熬星球猎人" "恶毒星球猎人" "粉碎星球猎人"
+		}
+		sequential_name = "星球猎人 %C%"
+	}
+	
+	### ARMIES
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "行星巡逻队 %C%"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "行星入侵者 %C%"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "行星入侵者 %C%"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "行星入侵者 %C%"
+		}
+		
+		defense_army = {
+			sequential_name = "行星巡逻队 %C%"
+		}
+			
+		assault_army = {
+			sequential_name = "行星入侵者 %C%"
+		}
+		
+		slave_army = {
+			sequential_name = "连锁部队 %R%"
+		}
+		
+		clone_army = { 
+			sequential_name = "镜子护卫 %C%"
+		}
+
+		undead_army = {
+			sequential_name = "%O%不死入侵军"
+		}
+
+		robotic_army = {
+			sequential_name = "战斗建筑﻿ %C%"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "战斗建筑﻿ %C%"
+		}
+		
+		psionic_army = { 
+			sequential_name = "宇宙编织者﻿ %C%"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "灭绝装置 %C%"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "变种精英 %C%"
+		}	
+		occupation_army = {
+			sequential_name = "%O% 加里森波德"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% 安卓 加里森波德"
+		}
+		primitive_army = {
+			sequential_name = "原始军队 %C%"
+		}
+		industrial_army = {
+			sequential_name = "工业军队 %C%"
+		}
+		postatomic_army = {
+			sequential_name = "后原子军 %C%"
+		}
+	}
+	### PLANETS
+
+	planet_names = {
+
+		generic = {
+			names = {
+				法拉提尔 海弗聂尔 提码逢 利斯荷姆 杰斯勒 印丹 卡什纳克 贝马龙 卡格纳特
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+
+	### CHARACTERS
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+				西格里斯 卡西克斯 泽尔 泽拉克斯 雷卡希尔 凯克斯 泽德拉西 卡勃西 西德洛 泽拉西姆 莫兹 佐兹 沙兹 扎克斯 扎卡德利斯 科萨希尔 佐巴吉斯 雷兹卡克斯 莫雷扎克 米德洛谢克
+			}
+			
+			# Always combined with a second name
+			first_names = {
+			}
+			
+			# Always combined with a first name
+			second_names = {
+			}
+			
+			regnal_first_names = {
+				西格里斯 卡西克斯 泽尔 泽拉克斯 雷卡希尔 凯克斯 泽德拉西 卡勃西 西德洛 泽拉西姆 莫兹 佐兹
+			}
+			
+			regnal_second_names = {
+				西扎
+			}
+		}
+	}
+}

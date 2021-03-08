@@ -1,0 +1,217 @@
+﻿### Reptilian 3
+### Created by Maximilian Olbers
+REP3 = {
+
+	category = "Reptilian"
+
+	language = "l_simp_chinese"
+	
+	ship_names = {
+		generic = {
+			洛雷塔 洛娜 路易莎 雷尼特 露辛达 梅布尔 玛西亚 玛丽莲 玛丽莎 马乔里 莫德 梅兰妮 米恩娜 梅维斯 纳丁 宝拉 佩内洛普 
+		}
+
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+		
+		titan = {
+		}
+		
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		transport = {
+		}
+		
+		military_station_small = {
+		}
+		
+		ion_cannon = {
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			"干叶" "阳炎审视" "干涸" "岩石" "深根" "忍耐" "大干旱" "永不安生" "叶之愚行" "荒凉" "贫瘠土壤" 无树 胜利 灌木地 林缘地  "树叶恐惧" "大榭树" 努力
+		}
+		sequential_name = "空虚游荡 %C%"
+	}
+	
+	### ARMIES
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "防御炮弹 %C%"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "攻击军团﻿ %C%"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "攻击军团﻿ %C%"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "攻击军团﻿ %C%"
+		}
+		
+		defense_army = {
+			sequential_name = "防御炮弹 %C%"
+		}
+			
+		assault_army = {
+			sequential_name = "攻击军团﻿ %C%"
+		}
+		
+		slave_army = {
+			sequential_name = "劳工舱 %C%"
+		}
+
+		undead_army = {
+			sequential_name = "%O%不死战群"
+		}
+
+		clone_army = { 
+			sequential_name = "智能人突击队 %C%"
+		}
+		
+		robotic_army = {
+			sequential_name = "自动化部队﻿ %C%"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "自动化部队﻿ %C%"
+		}
+		
+		psionic_army = { 
+			sequential_name = "思想鞭策者 %C%"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "混沌变节者﻿ %C%"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "劳工部队 %C%"
+		}
+		occupation_army = {
+			sequential_name = "%O% 加里森波德"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% 安卓 加里森波德"
+		}
+		primitive_army = {
+			sequential_name = "原始军队 %C%"
+		}
+		industrial_army = {
+			sequential_name = "工业军队 %C%"
+		}
+		postatomic_army = {
+			sequential_name = "后原子军 %C%"
+		}
+	}
+
+	### PLANETS
+
+	planet_names = {
+
+		generic = {
+			names = {
+				加百拉 娜欧米 罗伦 克拉拉 罗拉 卡拉 尼可 斯凯 伊利扎 帕翠夏 琳达 芭芭拉 詹妮弗 马瑞亚 粟衫 玛格丽特 多罗西
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+
+	### CHARACTERS
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+				法那克斯特 塔克萨兹 兹尼克斯 菲克萨什 格克萨什 提克萨什 提萨克 罗伊驰骋 爱克萨提 艾克梭特什 弗瑟什 达克萨什 弗利萨克 卡特克斯 瑟提什 彻缇兹 尼查什  帕拉什 巴菲什 瑞拉什 维慈克斯 弗利查兹 兹瑞驰 佐尔驰 兹查什 格罗 格洛罗 格兹 斯查 拉兹特 拉弗兹特 格拉弗特茨 格罗茨特 海斯茨 茨拉茨特 施克斯 科瑟特 科萨恩什 克瑟什 赫瑟克斯 弗卡什 利克斯什 吉什特 贾兹克斯 吉克斯 艾尔克斯 雷克萨斯 弗克斯
+			}
+			
+			# Always combined with a second name
+			first_names = {
+			}
+			
+			# Always combined with a first name
+			second_names = {
+			}
+			
+			regnal_first_names = {
+				法那克斯特 塔克萨兹 兹尼克斯 菲克萨什 格克萨什 提克萨什 提萨克 罗伊驰骋 爱克萨提 艾克梭特什 卢卡吉克斯 托卡谢格
+			}
+			
+			regnal_second_names = {
+				雷克斯格
+			}
+		}
+	}
+}

@@ -1,0 +1,277 @@
+## Categories used in this file must have use_for_ai_budget = yes defined in economic_categories ##
+## It is possible to have multiple entries with the same category and resource ##
+
+#################
+## Expenditure ##
+#################
+minerals_expenditure_buffer = { # Buffer, will not be spent
+	resource = minerals
+	type = expenditure
+	category = buffer
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.05
+	}
+}
+
+minerals_expenditure_planets_low = {
+	resource = minerals
+	type = expenditure
+	category = planets
+
+	potential = {
+		resource_stockpile_compare = { resource = minerals value < 1000 }
+	}
+
+	fraction = {
+		weight = 1.0
+	}
+}
+
+minerals_expenditure_planets_med = {
+	resource = minerals
+	type = expenditure
+	category = planets
+
+	potential = {
+		resource_stockpile_compare = { resource = minerals value >= 1000 }
+		resource_stockpile_compare = { resource = minerals value < 2000	}
+	}
+
+	fraction = {
+		weight = 0.8
+	}
+}
+
+minerals_expenditure_planets_high = {
+	resource = minerals
+	type = expenditure
+	category = planets
+
+	potential = {
+		resource_stockpile_compare = { resource = minerals value >= 2000 }
+	}
+
+	fraction = {
+		weight = 0.6
+	}
+}
+
+minerals_expenditure_stations_low = {
+	resource = minerals
+	type = expenditure
+	category = stations
+
+	potential = {
+		always = yes
+		resource_stockpile_compare = { resource = minerals value < 1000 }
+	}
+
+	fraction = {
+		weight = 0.2
+	}
+}
+
+minerals_expenditure_stations_med = {
+	resource = minerals
+	type = expenditure
+	category = stations
+
+	potential = {
+		always = yes
+		resource_stockpile_compare = { resource = minerals value >= 1000 }
+		resource_stockpile_compare = { resource = minerals value < 2000 }
+	}
+
+	fraction = {
+		weight = 0.1
+	}
+}
+
+minerals_expenditure_stations_high = {
+	resource = minerals
+	type = expenditure
+	category = stations
+
+	potential = {
+		always = yes
+		resource_stockpile_compare = { resource = minerals value >= 2000 }
+	}
+
+	fraction = {
+		weight = 0.05
+	}
+}
+
+minerals_expenditure_armies = {
+	resource = minerals
+	type = expenditure
+	category = armies
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.01
+	}
+}
+
+minerals_expenditure_armies_threatened = {
+	resource = minerals
+	type = expenditure
+	category = armies
+
+	potential = {
+		highest_threat > 20
+	}
+
+	fraction = {
+		weight = 0.10
+	}
+}
+
+minerals_expenditure_stations_expand = {
+	resource = minerals
+	type = expenditure
+	category = stations
+
+	potential = {
+		exploitable_planets >= 1
+	}
+
+	fraction = {
+		weight = 0.05
+	}
+
+	static_min = {
+		base = 100
+	}
+}
+
+minerals_expenditure_colonies_lithoid_expand = {
+	resource = minerals
+	type = expenditure
+	category = colonies
+
+	potential = {
+		is_machine_empire = no
+		is_lithoid_empire = yes
+		ai_colonize_plans > 0
+		has_resource = { type = minerals amount > 400 }
+		has_monthly_income = {
+			resource = minerals
+			value > 0
+		}
+	}
+
+	fraction = {
+		weight = 0.5
+	}
+
+	static_max = {
+		base = 550
+	}
+}
+
+minerals_expenditure_campaigns = {
+	resource = minerals
+	type = expenditure
+	category = campaigns
+
+	potential = {
+		is_hive_empire = yes
+		is_lithoid_empire = yes
+	}
+
+	fraction = {
+		weight = 0.10
+	}
+}
+
+############
+## Upkeep ##
+############
+minerals_upkeep_buffer = {	# Buffer, will not be spent
+	resource = minerals
+	type = upkeep
+	category = buffer
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.30
+	}
+}
+
+minerals_upkeep_planets = {
+	resource = minerals
+	type = upkeep
+	category = planets
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.70
+	}
+}
+
+minerals_expenditure_deposit_blockers = {
+	resource = minerals 
+	type = expenditure
+	category = deposit_blockers
+	
+	potential = {
+		any_owned_planet = {
+			OR = {
+				has_deposit = d_ruined_arcology
+				AND = {
+					OR = {
+						has_deposit = d_buried_lithoids
+						has_deposit = d_hibernating_lithoids
+					}
+					is_homeworld = yes
+				}
+			}
+		}
+	}
+	
+	fraction = {
+		weight = 0.3
+		modifier = {
+			factor = 5
+
+			# if we have any planet that is currently completely blocked
+			any_owned_planet = {
+				OR = {
+					has_deposit = d_ruined_arcology
+					AND = {
+						OR = {
+							has_deposit = d_buried_lithoids
+							has_deposit = d_hibernating_lithoids
+						}
+						is_homeworld = yes
+					}
+				}
+				num_free_districts = { type = any value < 1 }
+			}
+		}
+	}
+
+	# base remove blocker cost
+	static_min = {
+		base = 250
+	}
+
+	static_max = {
+		base = 1000
+	}
+}

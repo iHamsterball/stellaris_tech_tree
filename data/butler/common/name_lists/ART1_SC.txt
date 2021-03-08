@@ -1,0 +1,212 @@
+﻿### Arthropoid 1
+ART1 = {	
+	### SHIPS
+	
+	category = "Arthropoid"
+
+	language = "l_simp_chinese"
+	
+	ship_names = {
+	
+		generic = {
+			沃图 利马罗格 乌特阿莫 阿拉法尔 芬克玛 伯克佐 雷提克 巴克塔斯 蕾姆苏克 乌拉冯 斐济班 拉克塔 米克祖尔 瓦德巴克 亨塔斯 莫克伊姆
+			韦弗拉 芬纳 马格诺利 杰尼托 布罗约 罗修特 斯特皮斯 维塔尼克斯 阿拉波罗 拉迪科斯 赞拉波 罗特科斯 阿诺玛 萨洛 梅休斯
+			日夫科夫 卡札科夫 克鲁托福 伊万尼科夫 克鲁索夫 拉里诺夫 马可斯姆斯基 马科夫 奥斯特洛夫斯基 葆拉车夫 里陈可夫 罗曼诺夫
+			巴克斯代尔 波尔克 吉本斯 阿彻 皮克特 休斯顿 惠特菲尔德 皮尔逊 卢卡斯 霍纳 班布里奇 罗林斯 卡西 科克伦 默钱特
+			世界之树 “雅科仕拉米科斯切” 卡帕富力夏 波 阿卡莎瓦特 “努克米斯格扎格” 里明苏尔 苏布 特勒 阿斯瓦特 扶桑
+			提尼布 阿金基德 阿奇罗伊 阿德伊米 瑟奇波 班科尔 纳玛尼 奥卡迪波 伊洛斯 奥容科夫 恰克弗梅里 伊维兰 奥孔容 加巴达摩斯 奥兰里瓦荣
+			奎凡特 克洛腾 卡拉卡特 雷吉德 帕拉迪卡 布卡拉 克伦恩 卡拉特 拉祖卡特 金蒂特 博科特斯 卡拉吉 鲁克 耶多鲁 伊特拉克 斯图克 巴克拉特 柯德卢德 宋迪奎 伊克拉特 提克奎 布托奎 奎达特 萨奎拉特 耶特鲁
+			大卫 洛根 卡特 本杰明 安德鲁 亨利 尼古拉斯 加文 欧文 杰克 怀亚特 韦恩 怀特 查理斯 路易斯 梅里特 厄尔 艾弗雷德 弗农
+			游 永 义 雄 吴
+			古温多林 亨丽埃塔 伊莫金 虹膜 伊梅尔达 杰奎琳 简 珍娜 乔安娜 约瑟芬 朱丽安 凯思琳 基拉  凯利 利亚 洛伊丝
+			迭戈 路易斯 佩德罗 华金 何塞 埃米利奥 爱德华多 亚历杭德罗 卡洛斯 费尔南多 弗朗西斯科 朱利奥 "何塞·安东尼奥" "何塞·曼努埃尔" 胡安
+			欧博朗 安姆布雷尔 阿瑞尔 米兰达 崔顿 普鲁多 查伦	
+		}
+	
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+		
+		titan = {
+		}
+
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+	
+	fleet_names = {
+		random_names = {
+			"塔器武星海舰群" "帕勘叶星海舰群" "洛基法星海舰群" "乌塔卡萨星海舰群" "瓦加也星海舰群"
+			"伊尼尔卡-帕星海舰群"
+		}
+		sequential_name = "星海舰群 %C%"
+	}
+
+
+	###ARMIES
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "防御舱 %C%"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "突击舱 %C%"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "突击舱 %C%"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "突击舱 %C%"
+		}
+
+		defense_army = {
+			sequential_name = "防御舱 %C%"
+		}
+	
+		assault_army = {
+			sequential_name = "突击舱 %C%"
+		}
+		
+		slave_army = {
+			sequential_name = "劳工舱 %C%"
+		}
+		
+		clone_army = {
+			sequential_name = "克隆舱﻿ %C%"
+		}
+
+		undead_army = {
+			sequential_name = "%O%恐惧荚舱"
+		}
+
+		robotic_army = {
+			sequential_name = "智能人舱 %C%"
+		}
+		
+		psionic_army = {
+			sequential_name = "灵能突击舱 %C%"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "异星人舱 %C%"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "基因突击队舱 %C%"
+		}
+	}
+	
+	### PLANETS
+	
+	planet_names = {
+	
+		generic = {
+			names = {
+				沃卡托 米务卡 乔瑟科 雷德特赫克 帕其托 特克巴珀特 沃姆里干德 艾朗叶奥托 拉博提达姆 乌塔亚波姆
+				平德拉沃思克 沃姆特比格 伊特萨道博 乌拉克菲唐德 乌巴塔那科 奥瑞尔尤巴克 里格那科姆 提克提达博 苏特瑞伯德 斯科英阿塔
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+	
+	### CHARACTERS
+	
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+				威利克 里布 阿祖 蒙瓦尔 利兹塔 英普特 科诺瓦 塞托盘尼 “科夫里奥” 格拉布 勒普特 菲利克斯 斐隆 阿祖利 威斯托尼 诺西 米卢斯 克泽普斯 伊德克
+			}
+			
+			# Always combined with a second name
+			first_names = {
+			}
+			
+			# Always combined with a first name
+			second_names = {
+			}
+			
+			regnal_first_names = {
+				威利克 里布 阿祖 蒙瓦尔 利兹塔 英普特 科诺瓦 塞托盘尼
+			}
+			
+			regnal_second_names = {
+				梅扎克
+			}
+		}
+	}
+}

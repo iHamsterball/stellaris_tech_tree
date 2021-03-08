@@ -1,0 +1,219 @@
+﻿### Arthropoid 3
+### Created by Alexander Oltner
+
+ART3 = {
+
+	category = "Arthropoid"
+	
+	language = "l_simp_chinese"
+
+	ship_names = {
+		generic = {
+			"胡克莱伯·穆克西" "因克拉克·穆克西" "欧帕尔克·穆克西" "扎克蒂兹·穆克西" "克纳克·穆克西" "胡克莱伯·斯派克特拉克" "因克拉克·斯派克特拉克" "欧帕尔克·斯派克特拉克" "扎克蒂兹·斯派克特拉克" "克纳克·斯派克特拉克" "胡克莱伯·尼克斯派克" "因克拉克·尼克斯派克" "欧帕尔克·尼克斯派克" "扎克蒂兹·尼克斯派克" "克纳克·尼克斯派克" "胡克莱伯·特罗布贾克斯" "因克拉克·特罗布贾克斯" "欧帕尔克·特罗布贾克斯" "扎克蒂兹·特罗布贾克斯" "克纳克·特罗布贾克斯" "胡克莱伯·马克特拉克" "因克拉克·马克特拉克" "欧帕尔克·马克特拉克" "扎克蒂兹·马克特拉克" "克纳克·马克特拉克" "胡克莱伯·克拉布拉克斯" "因克拉克·克拉布拉克斯" "欧帕尔克·克拉布拉克斯" "扎克蒂兹·克拉布拉克斯" "克纳克·克拉布拉克斯" "胡克莱伯·乌普希克斯" "因克拉克·乌普希克斯" "欧帕尔克·乌普希克斯" "扎克蒂兹·乌普希克斯" "克纳克·乌普希克斯" "胡克莱伯·伊巴克斯" "因克拉克·伊巴克斯" "欧帕尔克·伊巴克斯" "扎克蒂兹·伊巴克斯" "克纳克·伊巴克斯" "胡克莱伯·洛巴尔" "因克拉克·洛巴尔" "欧帕尔克·洛巴尔" "扎克蒂兹·洛巴尔" "克纳克·洛巴尔" "胡克莱伯·梅佐迪克斯" "因克拉克·梅佐迪克斯" "欧帕尔克·梅佐迪克斯" "扎克蒂兹·梅佐迪克斯" "克纳克·梅佐迪克斯" "胡克莱伯·珀尔贾克" "因克拉克·珀尔贾克" "欧帕尔克·珀尔贾克" "扎克蒂兹·珀尔贾克" "克纳克·珀尔贾克" "胡克莱伯·贝特洛克斯" "因克拉克·贝特洛克斯" "欧帕尔克·贝特洛克斯" "扎克蒂兹·贝特洛克斯" "克纳克·贝特洛克斯" "胡克莱伯·维科珀克" "因克拉克·维科珀克" "欧帕尔克·维科珀克" "扎克蒂兹·维科珀克" "克纳克·维科珀克" "胡克莱伯·布拉托克斯" "因克拉克·布拉托克斯" "欧帕尔克·布拉托克斯" "扎克蒂兹·布拉托克斯" "克纳克·布拉托克斯" "胡克莱伯·杜恩伊布" "因克拉克·杜恩伊布" "欧帕尔克·杜恩伊布" "扎克蒂兹·杜恩伊布" "克纳克·杜恩伊布" "胡克莱伯斯特罗克斯坦杜恩伊布" "因克拉克斯特罗克斯坦杜恩伊布" "欧帕尔克斯特罗克斯坦杜恩伊布" "扎克蒂兹斯特罗克斯坦杜恩伊布" "克纳克斯特罗克斯坦杜恩伊布"
+		}
+	
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+		
+		titan = {
+		}
+
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+	
+	fleet_names = {
+		random_names = {
+			"巴达克斯甲壳空中小组" "卡布洛克甲壳空中小组" "瓦克提斯甲壳空中小组" "波拉特里考甲壳空中小组" "加托克斯甲壳空中小组" "梅卡丹克甲壳空中小组" "鲁特拉克甲壳空中小组" "普拉特里克甲壳空中小组" "赛卡戴克斯甲壳空中小组"
+		}
+		sequential_name = "甲壳空中小组 %C%"
+	}
+
+	###ARMIES
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "防御特征 %C%"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "攻击特征 %C%"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "攻击特征 %C%"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "攻击特征 %C%"
+		}
+	
+		defense_army = {
+			sequential_name = "防御特征 %C%"
+		}
+			
+		assault_army = {
+			sequential_name = "攻击特征 %C%"
+		}
+		
+		slave_army = {
+			sequential_name = "劳工虫群 %C%"
+		}
+		
+		clone_army = {
+			sequential_name = "克隆虫群﻿ %C%"
+		}
+
+		undead_army = {
+			sequential_name = "%O%恐惧虫群"
+		}
+
+		robotic_army = {
+			sequential_name = "机器运行 %C%"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "机器运行 %C%"
+		}
+		
+		psionic_army = {
+			sequential_name = "术士 %C%"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "外星特征 %C%"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "蛮夷﻿ %C%"
+		}
+		occupation_army = {
+			sequential_name = "%O% 加里森波德"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% 安卓 加里森波德"
+		}
+		primitive_army = {
+			sequential_name = "原始军队 %C%"
+		}
+		industrial_army = {
+			sequential_name = "工业军队 %C%"
+		}
+		postatomic_army = {
+			sequential_name = "后原子军 %C%"
+		}
+	}
+	
+	### PLANETS
+	
+	planet_names = {
+	
+		generic = {
+			names = {
+				"帕尔克莱克 奥福柯" "斯沃克 奥福柯" "伊克斯坎特 奥福柯" "祖博克斯 奥福柯" "爱威力克 乍克斯" "犹他堡 乍克斯" "扎克缇可 乍克斯" "科奥科斯 乍克斯" "威客坡 伊巴斯巴" "阿克莱克 伊巴斯巴" "奎尔科 伊巴斯巴" "奥麦克斯 伊巴斯巴" "波米克 卡拉克" "阿耐克 卡拉克" "克赛淄博 卡拉克" "默克 卡拉克" "阿洛克斯 哈希乍巴" "西科西夫 哈希乍巴" "哈坡克 哈希乍巴" "威客叟克 哈希乍巴" "巴克利克斯 拉克希崔克" "诺博哈克斯 拉克希崔克" "斯伯克特 拉克希崔克" "鲍勃比克 拉克希崔克" "塔勃斯科尔 泰姆崔克" "阿威科所 泰姆崔克" "鲍勃尼克 泰姆崔克" "布克特莱克斯 泰姆崔克" "莫科斯福柯 奥克苏克道尔夫" "哈尔帕克斯 奥克苏克道尔夫" "莱克斯勃 奥克苏克道尔夫" "查立白客 奥克苏克道尔夫"
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+	
+	### CHARACTERS
+	
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+			}
+			
+			# Always combined with a second name
+			first_names = {
+				罗罗德-卡兰 罗罗德-克鲁文 罗罗德-德雷克索姆 罗罗德-库克瑟 罗罗德-杜加尔 罗罗德-卡德罗姆 罗罗德-肯德瑞尔 罗罗德-弗拉德 罗罗德-德弗 罗罗德-多科尔加 罗罗德-库恩德克斯 罗罗德-克拉德特 罗罗德-克罗诺尔 罗罗德-雷卡德 罗罗德-加克萨德 罗罗德-法尔德尔 罗罗德-加克兰 罗罗德-茨尔达仑 罗罗德-德克洛 罗罗德-德罗克萨格 罗罗德-内加尔 罗罗德-弗伊克仑 罗罗德-纳德里格 
+			}
+			
+			# Always combined with a first name
+			second_names = {
+				巨里姆-炬 米克蕾姆-卡 卡什马德姆-卡 拉什巴蒂姆-卡 科恩蒂姆-卡 伊恩达吉姆-卡 克利姆-卡 维格蒂姆-卡 欧萨弗姆-卡
+			}
+			
+			regnal_first_names = {
+				潘道夫 仙道夫 兰道夫 西道夫 提道夫 瑟西道夫 洛普道夫 寇道夫
+			}
+			
+			regnal_second_names = {
+				莱德劳 兰克希尔 莱萨德 罗弗 麦肯齐 麦克内文 麦克恩尼斯 马迪根 马洛尼 沼泽 麦考利斯特 班恩 梅尔斯 尼克尔森 奥尔森 
+			}
+		}
+	}
+}

@@ -1,0 +1,206 @@
+﻿### Humanoid 1
+### Created by Maximilian Olbers
+
+MAM3 = {
+
+	category = "Mammalian"
+
+	language = "l_simp_chinese"
+	
+	ship_names = {
+
+		generic = {
+			斯克鲁玛 帕格鲁 格罗姆 萨格罗 埃斯格 巴格罗什 里格罗 伽马 巴哈格 塔格罗拉 里布罗格 格洛施 施拉格姆 许史克 阿洛里格 阿巴格洛 舒格勒姆 帕拉什 格斯玛 格拉博舒
+		}
+
+		corvette = { }
+		
+		destroyer = { }
+		
+		cruiser = { }
+		
+		battleship = { }
+		
+		titan = {
+		}
+
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			"突击军团" "第一军团" "攻击军团" "星际军团" "外骨骼军团" "虚空军团" "以太军团" "视界军团" "战斗军团" "银河军团" "星界军团"
+		}
+		sequential_name = "轨外军团 %C%"
+	}
+	
+	### ARMIES
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "防御部队 %C%"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "突击部队 %C%"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "突击部队 %C%"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "突击部队 %C%"
+		}
+
+		defense_army = {
+			sequential_name = "防御部队 %C%"
+		}
+			
+		assault_army = {
+			sequential_name = "突击部队 %C%"
+		}
+		
+		slave_army = {
+			sequential_name = "劳力大军 %C%"
+		}
+		
+		clone_army = { 
+			sequential_name = "克隆师﻿ %C%"
+		}
+
+		undead_army = {
+			sequential_name = "%O%恐惧师团"
+		}
+
+		robotic_army = {
+			sequential_name = "机器人师 %C%"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "机器人师 %C%"
+		}
+		
+		psionic_army = { 
+			sequential_name = "灵能军队 %C%"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "异星人师 %C%"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "基因战士师 %C%"
+		}
+		occupation_army = {
+			sequential_name = "%O% 加里森波德"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% 安卓 加里森波德"
+		}
+		primitive_army = {
+			sequential_name = "原始军队 %C%"
+		}
+		industrial_army = {
+			sequential_name = "工业军队 %C%"
+		}
+		postatomic_army = {
+			sequential_name = "后原子军 %C%"
+		}
+	}
+
+	### PLANETS
+
+	planet_names = {
+
+		generic = {
+			names = {
+				萨尼薇 安雅 阿达哈雅 阿拉德哈 安妮娅 普林卡 迪亚 玛海玛 希梵格
+			}
+		}
+		
+		pc_desert = {
+			names = { }
+		}
+		
+		pc_tropical = {
+			names = { }
+		}
+		
+		pc_arid = {
+			names = { }
+		}
+		
+		pc_continental = {
+			names = { }
+		}
+		
+		pc_ocean = {
+			names = { }
+		}
+		
+		pc_tundra = {
+			names = { }
+		}
+		
+		pc_arctic = {
+			names = { }
+		}
+
+		pc_savannah = {
+			names = { }
+		}
+
+		pc_alpine = {
+			names = { }
+		}
+		
+	}
+
+	### CHARACTERS
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = { }
+			
+			# Always combined with a second name
+			first_names = {
+				梁 罗 况 路 郑 林 徐 谢 王 祝 杨 毛 神 胡 谭 何 邓 吴 程 高 万 孔 潘 司马 诸葛 欧阳 司徒
+			}
+			
+			# Always combined with a first name
+			second_names = {
+				"科帕丹" "科万多姆" "科赫瑟" "科于哈" "科法格斯" "科雅利姆" "道福尔姆" "道勒奇" "道格希" "道哈那" "道吉鲁" "道萨得" "哈德托德" "哈德索德" "哈德玛恩" "哈德乌格里特" "哈德富勒斯" "哈德罗纳特" "欧德恩" "欧戈特"
+			}
+			
+			regnal_first_names = {
+				利亚姆  德克  "本杰明爵士"  "杰姆斯爵士"  "沃尔特爵士"  "奈吉尔爵士"  "蒙哥马利爵士"  "道格拉斯爵士"  "安得烈爵士"  万斯  凯尔  切斯特 
+			}
+			
+			regnal_second_names = {
+				科帕丹
+			}
+		}
+	}
+}

@@ -1,0 +1,99 @@
+@cooldown = 3600
+
+allow_subjects_to_join_no = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = {
+			fail_text = disabled_for_hegemony
+			NOT = { has_federation_type = hegemony_federation }
+		}
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = allow_subjects_to_join_no }
+					has_modifier = federation_law_category_allow_subjects_to_join_cooldown
+					has_any_federation_law_in_category = law_category_allow_subjects_to_join
+				}
+			}
+		}
+	}
+	on_enact = {
+		set_allow_subjects_to_join = no
+		if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_allow_subjects_to_join_cooldown
+				days = @cooldown
+			}
+		}
+		random_member = {
+			country_event = { id = action.213 } # Boot all subjects
+		}
+	}
+	
+	ai_weight = {
+		base = 0
+				
+		#Default support
+		modifier = {
+			desc = federation_acceptance_generally_positive
+			add = 26
+		}
+		
+		modifier = {
+			add = 25
+			relative_power = { who = from value >= superior }
+		}
+	}
+}
+
+allow_subjects_to_join_yes = {
+	potential = { host_has_dlc = Federations }
+	allow = {
+		custom_tooltip = {
+			NOT = {
+				AND = {
+					NOT = { has_federation_law = allow_subjects_to_join_yes }
+					has_modifier = federation_law_category_allow_subjects_to_join_cooldown
+					has_any_federation_law_in_category = law_category_allow_subjects_to_join
+				}
+			}
+		}
+	}
+	on_enact = {
+		set_allow_subjects_to_join = yes
+		if = {
+			limit = { has_federation_flag = enable_federation_cooldowns }
+			add_modifier = {
+				modifier = federation_law_category_allow_subjects_to_join_cooldown
+				days = @cooldown
+			}
+		}
+		random_member = {
+			country_event = { id = action.212 } # Let all subjects join
+		}
+	}
+	
+	ai_weight = {
+		base = 0
+		
+		#Default support
+		modifier = {
+			desc = federation_acceptance_generally_positive
+			add = 26
+		}
+		
+		modifier = {
+			desc = federation_acceptance_weaker
+			add = 25
+			relative_power = { who = from value >= superior }
+		}
+		
+		#Behaviour-specific
+		modifier = {
+			desc = federation_acceptance_has_subjects
+			add = 75
+			vassals > 0
+		}
+	}
+}

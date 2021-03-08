@@ -1,0 +1,224 @@
+﻿### Reptilian 1
+REP1 = {
+	### SHIPS
+	
+	category = "Reptilian"
+
+	language = "l_simp_chinese"
+	
+	ship_names = {
+
+		generic = {
+			托洛斯 温格 泰萨拉 维斯 维加斯 英尼克 梵 维克 博克 温 卡普 尼克 芬 塔拉斯 温格拉斯 米康
+			开拓者 流浪者 旅人 大使 间谍 游牧者 探路者 漫游者 旅客 
+			特鲁姆福金 特鲁姆法拉斯 特鲁姆洛马斯 特鲁姆默松 特鲁姆迪罗姆 特鲁姆博得努克 特鲁姆巴索尔 特鲁姆佐约姆 特鲁姆阿巴纳 特鲁姆里肯
+			爱 碧 莲 琳 美 娜 妮 秀 雪 燕 颖 玉 圆
+			阿尔努卡拉 阿尔卡拉克 阿尔马塔巴 "拉斯贝雷达斯" "圣卢卡斯" "圣费尔南多" "圣克立托巴" "新索诺拉" 
+			阿兰比思那 阿兰屠隆 阿兰塔拉塔 阿兰提斯卡阿兰普林 阿兰苏斯 阿兰帕拉纳 阿兰乔笋 阿兰格罗 阿兰莘塔
+			平德拉沃斯克 害虫特布里格 伊蒂尔萨东布 飓风铁托德 乌尔瓦塔纳克  沃洛尔容巴克 里格那寇姆 提力克帝达布 苏特雷波特 西斯科英阿塔布
+		}
+
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+		
+		titan = {
+		}
+		
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		transport = {
+		}
+		
+		military_station_small = {
+		}
+		
+		ion_cannon = {
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			"拉夫提撒的战斗部队" "阿拉客'萨拉的战斗部队" "西里戈萨的战斗部队" "库福里加的战斗部队" "马可提萨姆的战斗部队"
+		}
+		sequential_name = "战斗小组﻿ %O%"
+	}
+	
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "地面守卫 %O%"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "利爪﻿ %O%"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "利爪﻿ %O%"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "利爪﻿ %O%"
+		}
+	
+		defense_army = {
+			sequential_name = "地面守卫 %O%"
+		}
+			
+		assault_army = {
+			sequential_name = "利爪﻿ %O%"
+		}
+		
+		slave_army = {
+			sequential_name = "联结仆从﻿ %O%"
+		}
+		
+		clone_army = { 
+			sequential_name = "复制军团 %O%"
+		}
+
+		undead_army = {
+			sequential_name = "%O%不死军团"
+		}
+
+		robotic_army = {
+			sequential_name = "突击联结 %O%"
+		}
+		
+		robotic_defense_army = {
+			sequential_name = "突击联结 %C%"
+		}
+
+		psionic_army = { 
+			sequential_name = "思想观察者 %O%"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "战争虫巢 %O%"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "勇士命令 %O%"
+		}
+		occupation_army = {
+			sequential_name = "%O% 加里森波德"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% 安卓 加里森波德"
+		}
+		primitive_army = {
+			sequential_name = "原始军队 %C%"
+		}
+		industrial_army = {
+			sequential_name = "工业军队 %C%"
+		}
+		postatomic_army = {
+			sequential_name = "后原子军 %C%"
+		}
+	}
+		
+
+	### PLANETS
+
+	planet_names = {
+
+		generic = {
+			names = {
+				火炽 阀劳 朦谷 里肯巴克 "约翰保罗琼斯" 德布斯特伊 斯特古什弃尼 苏布拉兹特尔尼 "小罗杰" "疯马" 希霍芬 博伊恩格顿
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+
+	### CHARACTERS
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+				哈萨瑞恩 帕克哈瑞恩 加萨瑞恩 旁德来恩 瓦萨吉恩 迪拉米恩 弗迪拉吉恩 哈拉米恩 巴斯拉杜瑞恩 加纳瑞恩 皮娜塔瑞恩 胡纳斯塔瑞恩
+			}
+			
+			# Always combined with a second name
+			first_names = {
+			}
+			
+			# Always combined with a first name
+			second_names = {
+			}
+			
+			regnal_first_names = {
+				榛名  樱花  美咲  苍井  美羽  美优  玲  七海  唯  汉能  穗花  瑞科  俞娜  小春  日菜太  崎  一花  日世里  幽介  
+			}
+			
+			regnal_second_names = {
+				梅扎克
+			}
+		}
+	}
+}
